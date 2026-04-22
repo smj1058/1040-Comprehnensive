@@ -293,6 +293,51 @@ Three Files & Links rows exist for this account; only one has URLs populated —
 | Core tax workbooks not linked to the Account | 5 (PBC Workbook, Insights Delivery, Tax Analysis, Tax Memo, Meeting Prep) | `[Accounts:Spring Bengtzen]` |
 | Reconciliation flags | 2 (Spring-vs-Brian EL signer ambiguity · Files & Links URLs not synced to Account top-level fields) | derived |
 
+---
+
+## §6. Claude Work Product
+
+**Scope of this refresh:** Queried the Notion **Claude Summaries** database (`collection://86dca8a4…`) and the **Claude Activity Log** database (`collection://f9cc7d05…`) filtered on the Spring Bengtzen Account relation (`30d49172…2df0`). **Zero rows matched** on either side. A broader full-text scan across Claude Summaries for the substring `spring` produced one false positive (the `Sadie Halliday (4/7, $5K insights, source: Spring Break)` referral in the 2026-04-08 Aidan McIsaac research thread — unrelated). `[Claude 2026-04-08 Aidan McIsaac Research + New Client Alert Review §Clients]`
+
+That means **today's 2026-04-22 refresh is the first Claude session against this account.** Every downstream refresh will append to this log append-only, so the history shows whose analysis produced what, when. `[Claude Summaries DB]` `[Claude Activity Log DB]`
+
+### 6.1 Prior Claude sessions tied to this account
+
+| Date | Thread Title | Topics | Files Reviewed | Notion Pages Created | Source |
+| --- | --- | --- | --- | --- | --- |
+
+**(none — first run)**
+
+### 6.2 Prior Claude sessions that mentioned Spring Bengtzen or Brian Charlesworth in passing
+
+None. The 2026-04-08 "Aidan McIsaac Research + New Client Alert Review" session surfaced on a substring scan only because it references a "Spring Break" referral source in a different client's intake — not this household. `[Claude 2026-04-08 Aidan McIsaac Research + New Client Alert Review]`
+
+### 6.3 This refresh (2026-04-22) — pending log row
+
+Upon Turn 11 completion, the generator will **write a new Claude Summary row** with the following shape so the next refresh sees this run on its ingest:
+
+| Field | Value |
+| --- | --- |
+| Thread Title | `Spring Bengtzen — Client Intelligence Dossier Refresh — 2026-04-22` |
+| Date | 2026-04-22 |
+| Account | relation → Spring Bengtzen (`30d49172…2df0`) |
+| Clients | `Spring Bengtzen; Brian Charlesworth` |
+| Topics | `File Review`, `Notion Build`, `Compliance`, `Tax Planning` |
+| Files Reviewed | Advisory Exec Summary · thin Exec Summary · Email thread `Re: Spring B - Open Items` · Joiin noise thread · `📧 Email Intelligence` subpage · 4 Meetings Tracker rows (2025-10-24, 2025-10-29, 2025-11-26, 2025-12-03) · 2 Engagement Letter tracker rows (Spring, Brian) · 3 Files & Links rows |
+| Notion Pages Created/Updated | `dossiers/SpringBengtzen/dossier.md` (local) · `G:\…\ExecSumm-Emails\dossiers\SpringBengtzen_Client_Intelligence_2026-04-22.md` (Drive) · Exec Summary DB row `3424917287518119…f263b2` (body + every property populated) |
+| Summary | First comprehensive refresh — compliance track HIGH risk (rejected extension + EL reconciliation + MangoShare visibility gap), 5 Advisory issues carried over from Nov 2025, 11 QBO entities / $3.4M combined, 5 core tax workbooks unlinked to Account and flagged for backfill. §0 Changed Since Last Refresh carries 9 initial findings. |
+
+### 6.4 Cross-stream notes
+
+- **No prior Spring-specific Claude analysis** means the narrative in §1–§5 derives entirely from the primary Notion records (Advisory exec summary, thin exec summary, email threads, meeting tracker, engagement letter tracker, Files & Links). No secondary Claude-generated interpretations are being carried forward and therefore nothing in §2 Client Profile or §3 Email Intelligence needs the usual "Claude said X on date Y, revisit" reconciliation pass.
+- **Opportunity** — once the PBC, Insights, and Tax Analysis workbooks are linked to the Account (per §5.4 gap list), a dedicated Claude pass focused on entity reconciliation + §8a Cost Seg / S-Corp opportunity flag generation will produce the first substantive Claude Summary row. That pass should cite the exact PBC tab/row for every entity in §4 and every property in §5 of the updated dossier.
+
+### 6.5 Gaps to backfill on next refresh
+
+- **Turn 11 logbook write-back.** Verify the Claude Summary row is created successfully and that the Account relation resolves — the generator should run a read-after-write check.
+- **Brian-side Account** — Brian Charlesworth is tracked as a Partner relation on Spring's Account rather than as a separate Accounts row. Any Claude session that analyzes Brian's Sisu SAFE-note position, Ventura Pointe diligence, or QSBS checklist should log its Claude Summary row against Spring's account (this dossier) until / unless a separate Brian Charlesworth Accounts row is created.
+
+
 
 
 
