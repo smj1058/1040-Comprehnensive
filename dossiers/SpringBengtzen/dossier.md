@@ -337,6 +337,77 @@ Upon Turn 11 completion, the generator will **write a new Claude Summary row** w
 - **Turn 11 logbook write-back.** Verify the Claude Summary row is created successfully and that the Account relation resolves — the generator should run a read-after-write check.
 - **Brian-side Account** — Brian Charlesworth is tracked as a Partner relation on Spring's Account rather than as a separate Accounts row. Any Claude session that analyzes Brian's Sisu SAFE-note position, Ventura Pointe diligence, or QSBS checklist should log its Claude Summary row against Spring's account (this dossier) until / unless a separate Brian Charlesworth Accounts row is created.
 
+---
+
+## §7. Action Items — Rolled Up
+
+**Scope of this refresh:** Aggregates every open / in-progress action item discovered across §3 Email Intelligence, §2 Client Profile cross-refs to the Advisory exec summary's 6 issues, §4 Meeting History pending-meeting cleanup, §5 Document Inventory reconciliation flags, §6 Claude Work Product follow-ups, the Engagement Inquiries DB (INQ-3), the Meeting Action Items DB, the Service Requests DB, and the Intake Requests DB. Closed items are retained with strikethrough until the next quarterly archive pass (first run — none yet). **Append-only** on subsequent refreshes: new items insert; closed items flip to strikethrough; owners/targets/status change in place with a source tag showing the delta date.
+
+**Rollup counts.** 22 open items across 7 owners. Oldest open item is **56 days** (1587 Hidden Springs bank account, open since 2026-02-18). Compliance-track items (Apr-15 extension, engagement letter reconciliation, MangoShare visibility, QBO cleanup) = **HIGH urgency**. Advisory-track items (Ventura Pointe response, JD Capital status, Utah PTET owner, IRS notice response) = **HIGH relationship risk**.
+
+### 7.1 Master Action Items table
+
+| # | Action | Owner | Target | Source | Priority | Opened | Last Activity | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | **Reconcile engagement-letter status** — Spring tracker row says Signed but thread + thin exec summary list EL as unsigned (URGENT). Confirm whether the unsigned EL is actually Brian's row (`Nothing Received Yet`) or Spring's row was marked Signed prematurely. Resolve before further return prep. | Seth / Sophia | **ASAP (pre-return-prep)** | `[EL:Spring §Engagement Letter Status]` `[EL:Brian §Engagement Letter Status]` `[ThinExec §Open blockers]` `[EI:Re: Spring B - Open Items §Action Items]` | 🔴 HIGH | 2026-03-11 | 2026-04-13 | 🔴 Open |
+| 2 | **Resolve Spring's rejected 2025 extension** — Brian's was accepted; Spring's rejected. Root cause possibly prior-CPA attribution. Must be addressed before any 2025 filings proceed. | Accruity (Deontae / Seth) | ASAP | `[EL:Spring §Extension]` `[EI:Re: Spring B - Open Items §Key Points]` | 🔴 HIGH | 2026-03-11 | 2026-03-11 | 🔴 Open |
+| 3 | **Spring — confirm 1587 Hidden Springs Pkwy LLC has its own bank account** (required to support 2025 in-service determination for cost-seg timing) | Spring | ASAP | `[AdvExec §Issue 1]` `[EI:Re: Spring B - Open Items §Action Items]` | 🔴 HIGH | 2026-02-18 | 2026-02-18 | 🔴 Open · **56 days old** |
+| 4 | **Determine if 1587 Hidden Springs can be booked in-service for 2025** (depends on Action #3 answer) | Seth / Tax Team | Before 2025 return filing | `[AdvExec §Issue 1]` | 🔴 HIGH | 2026-01-19 | 2026-02-18 | 🔴 Open (pending #3) |
+| 5 | **Evaluate cost-seg opportunity on 1587 Hidden Springs** — intake form link was shared; confirm study commissioning | Seth | Post #4 | `[AdvExec §Issue 1]` | 🟡 MED | 2026-01-19 | 2026-02-18 | 🔴 Open (pending #4) |
+| 6 | **Triage open IRS notice** previously owned by Dave Haynie; Accruity vs. Haynie coverage split must be formally assigned | Seth | ASAP | `[AdvExec §Issue 2]` | 🔴 HIGH | 2025-11-19 | 2025-11-19 | 🔴 Open · unassigned |
+| 7 | **Remove deceased / old partner from Utah Life LLC IRS filings** | Seth / Tax Team | — | `[AdvExec §Issue 2]` | 🟡 MED | 2025-11-19 | 2025-11-19 | 🔴 Open · not started |
+| 8 | **Advise Spring on 2025 Utah PTET payment for SNB entity** (Dave Haynie made prior-year payment; neither firm owns 2025) | Seth | Before PTET deadline | `[AdvExec §Issue 3]` | 🔴 HIGH | 2025-11 | 2025-11 | 🔴 Open · **at risk — no response** |
+| 9 | **Coordinate with Allen Woiwode (Haynie)** on 2025 PTET to avoid duplication | Seth | Before PTET deadline | `[AdvExec §Issue 3]` | 🟡 MED | 2025-11 | 2025-11 | 🔴 Open · not started |
+| 10 | **Respond to Brian on Ventura Pointe deal** — either deliver review or formally scope out under flat-fee. No reply since Dec 7 2025; deal likely already closed. | Seth | **Overdue** | `[AdvExec §Issue 4]` | 🔴 HIGH (relationship risk) | 2025-12-07 | 2025-12-09 | 🔴 Open · overdue 136 days |
+| 11 | **Determine flat-fee scope for Brian's deal-review asks** (Ventura Pointe is symptomatic — need a durable policy, not a one-off) | Seth / Jeff / Stacy | — | `[AdvExec §Issue 4]` | 🟡 MED (policy) | 2025-12-08 | 2025-12-09 | 🔴 Open · internal |
+| 12 | **Follow up with John Dinkjian (JD Capital) on Sisu SAFE note status** — is JD Capital investing? | Seth | — | `[AdvExec §Issue 5]` | 🟡 MED | 2025-12-04 | 2025-12-04 | 🔴 Open · status unknown |
+| 13 | **Sign engagement letter** (URGENT label from Apr-13 thread — owner = Spring if her row is actually unsigned; owner = Brian if the Brian row is the real gap; resolves under Action #1) | Spring or Brian (TBD post-#1) | ASAP | `[EI:Re: Spring B - Open Items §Action Items]` | 🔴 HIGH | 2026-03-11 | 2026-04-13 | 🔴 Open |
+| 14 | **Spring — confirm Be Collective LLC / Forum Mastermind LLC activity status** (both added at $0 — 2026 formations vs 2025-active) | Spring | Before return prep | `[Email 2026-03-11 Seth→Spring "Open Items"]` | 🟡 MED | 2026-03-11 | 2026-03-11 | 🔴 Open |
+| 15 | **Spring — confirm Montana LLC structure** (disregarded under Significant LLC?) | Spring | Before return prep | `[Email 2026-03-11 Seth→Spring "Open Items"]` | 🟡 MED | 2026-03-11 | 2026-03-11 | 🔴 Open |
+| 16 | **Spring — upload docs to MangoShare** portal (visibility gap confirmed Apr 13; link resent) | Spring | — | `[Email 2026-04-13 Sophia→Spring "Mangoshare resent"]` | 🟡 MED | 2026-02-05 | 2026-04-13 | 🟡 In Progress |
+| 17 | **Sophia — send February and March financial packets to Spring** (Spring never received them) | Sophia | ASAP | `[Email 2026-04-13 Spring→Stacy]` | 🟡 MED | 2026-04-13 | 2026-04-13 | 🟡 In Progress (Stacy looking into) |
+| 18 | **Team — complete QSBS checklist items for Brian's Sisu position** — closing statement, cap table, basis by tranche, company-level proof (8-folder request) | Accruity team | — | `[Email 2026-03-11 Seth→Spring "Open Items"]` | 🟡 MED | 2026-03-11 | 2026-03-11 | 🔴 Open · partially complete |
+| 19 | **Team — QBO cleanup** on SNB Inc (deletions), Shepard Creek (cost basis), Zenworth (depreciation), Utah Mortgage (expenses-only scope), TRLF Endeavors (access needed) | Accruity team | Before return prep | `[Email 2026-03-11 Seth→Spring "Open Items"]` | 🟡 MED | 2026-03-11 | 2026-03-11 | 🔴 Open · 5 entities |
+| 20 | **Confirm Spring + Brian Mango onboarding** — portal links sent 2026-02-05, status unknown beyond 2026-04-13 resend | Sophia | — | `[AdvExec §Issue 6]` | 🟢 LOW | 2026-02-05 | 2026-04-13 | 🟡 In Progress |
+| 21 | **Meetings tracker cleanup** — 2025-11-26 Tax Strategy/Structure row is **Pending** with a bare "LINK" recap; confirm happened/canceled/rescheduled, attach URL or delete | Seth / tracker owner | — | `[Meeting 2025-11-26 Tax Strategy]` | 🟢 LOW | 2026-04-22 (flagged today) | — | 🔴 Open · dossier-gen flagged |
+| 22 | **Accruity — sync Files & Links URLs up to Accounts record top-level fields** (Document Inventory, PBC PDF Package SharePoint folders exist on Files & Links row but Account record shows empty) | Accruity ops | — | `[FL:Spring §Document Inventory]` `[FL:Spring §PBC PDF Package]` `[Accounts:Spring Bengtzen]` | 🟢 LOW (plumbing) | 2026-04-22 (flagged today) | — | 🔴 Open · dossier-gen flagged |
+| 23 | **Locate and link PBC Workbook · Insights Delivery Workbook · Tax Analysis Workbook · Tax Planning Memo · Tax Meeting Prep** to the Account record so the next dossier refresh can ingest them | Accruity ops / Seth | Before next refresh | `[Accounts:Spring Bengtzen]` (5 empty URL fields) | 🟢 LOW (plumbing) | 2026-04-22 (flagged today) | — | 🔴 Open · dossier-gen flagged |
+| 24 | **INQ-3 resolution** — Engagement Inquiry INQ-3 submitted 2026-03-31 by Sophia (Tax side), Request Type "Engagement Recap & Meeting Prep". Body empty, no proposed response. Clarify / close / route. | Seth (Inquiry owner) | — | `[Inquiry #INQ-3]` | 🟢 LOW | 2026-03-31 | 2026-03-31 | 🔴 Open · 22 days |
+
+### 7.2 Owner rollup
+
+| Owner | Open | In Progress | HIGH priority | Oldest open |
+| --- | --- | --- | --- | --- |
+| **Spring** | 5 (#3, #13, #14, #15, #16) | 1 (#16) | 2 (#3, #13) | #3 — 56 days |
+| **Brian** | 1 (#13 — if Brian-side) | — | 1 (#13) | — |
+| **Seth** | 8 (#1, #2, #4–#12) | — | 5 (#1, #2, #4, #6, #8, #10) | #6 — 155 days |
+| **Sophia** | 2 (#1, #17, #20) | 2 (#17, #20) | 1 (#1) | 2026-02-05 |
+| **Deontae** | 1 (#2 w/ Seth) | — | 1 | 2026-03-11 |
+| **Stacy** | — (in-flight on #17) | 1 (#17) | — | — |
+| **Accruity ops / team** | 5 (#18, #19, #21, #22, #23) | — | — | #18 — 42 days |
+
+### 7.3 Source count
+
+| Source | Items contributed |
+| --- | --- |
+| Email thread `Re: Spring B - Open Items` (§3) | 9 |
+| Advisory exec summary 6 issues (§1 / §2 cross-ref) | 10 |
+| Meetings tracker cleanup (§4) | 1 |
+| Document inventory reconciliation (§5) | 2 |
+| Engagement Inquiries DB (INQ-3) | 1 |
+| Claude Work Product follow-ups (§6) | 1 (implicit in #23 plumbing) |
+| Meeting Action Items DB | 0 (none tied to account) |
+| Service Requests DB | 0 (none tied to account) |
+| Intake Requests DB | 0 (none tied to account) |
+
+### 7.4 Gaps / not-yet-captured
+
+- **No Meeting Action Items rows exist** for any of the 4 logged Spring meetings in the Meetings Tracker. The Dec-3 Tax Strategy meeting clearly produced action items (the 6 Advisory issues are effectively its output) — those items are currently only in the Advisory exec summary page body, not as DB rows. On next refresh, **back-fill Meeting Action Items DB rows** so they're queryable by owner + due date.
+- **Brian's side is undercounted**. The JD Capital / Ventura Pointe / QSBS items are on Brian's operational track, but because Brian is a Partner relation on Spring's Account (not his own Account), Service Requests and Intake Requests queries scoped to the Account miss anything routed exclusively to Brian. Cross-check next refresh once either a Brian Accounts row exists or the generator learns to walk the Partner relation into parallel searches.
+- **INQ-3 has no body and no proposed response** — unknown what Sophia was asking. Needs a follow-up with Sophia to capture intent before it's actionable.
+- **Safe harbor / 2025 estimated-tax position not in the action list** because the Tax Analysis workbook is not linked (§5.4) — once linked, expect 1–3 more action items re: estimated payments / balance due.
+
+
 
 
 
