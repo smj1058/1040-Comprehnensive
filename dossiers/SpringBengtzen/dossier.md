@@ -223,6 +223,77 @@ Two meeting touches are referenced in the email log / Advisory exec summary but 
 - **Insights Delivery meeting** — locate or create the November 2025 Insights Delivery row, attach the delivery transcript, and cross-reference it to the (empty) Tax Extraction URL on the Account once the workbook is linked.
 - **Meeting cadence gap** — 140 days since last meeting; consider whether the compliance-track HIGH-risk status (Spring's unsigned engagement letter + rejected extension + MangoShare visibility gap) warrants a direct synchronous touch before Apr 15 next year's extension deadline cycle.
 
+---
+
+## §5. Document Inventory
+
+**Scope of this refresh:** 2 engagement-letter rows (Compliance Engagement Letters tracker) + 3 Files & Links rows surfaced from the Account. External document platforms referenced: **ImagineTime** (PBC client folder), **SharePoint / seth@accruity.com OneDrive** (document inventory + PBC PDF package + open-items emails + PBC lists), **MangoShare** (signed EL + client upload portal). Every file enumerated carries its source-platform URL. `[Accounts:Spring Bengtzen.Engagement Letters]` `[Accounts:Spring Bengtzen.Files & Links]`
+
+### 5.1 Engagement Letters tracker
+
+| Party | EL Status | Extension | Docusign | Mango Engagement | Mango Portal | PBC list | Price | Tracker row | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Spring Bengtzen** | ✅ **Signed** | **Rejected** | Delivered · To Do | Project Created | Invite Sent (chk 03/16) | Received PBC items (list sent 2026-03-11) | **$41,100** | `2ef49172…ad36` | `[EL:Spring 2ef49172…ad36]` |
+| **Brian Charlesworth** | ⚠️ **Nothing received yet** | Accepted | To Do | Not started | To check | (blank) | — | `31e49172…f617` | `[EL:Brian 31e49172…f617]` |
+
+> **⚠️ Reconciliation flag — carry into §0 Changed Since Last Refresh.** The thin Exec Summary child page states `"Engagement letter unsigned"` under `§Open blockers` for Spring `[ThinExec §Open blockers]`, and the April "Re: Spring B - Open Items" email thread lists `"Sign engagement letter (URGENT)"` as an action item `[EI:Re: Spring B - Open Items §Action Items]`. The Compliance Engagement Letters tracker row for Spring shows **Signed** with a signed-EL Mangoshare link. The two signals contradict. Plausible resolutions: (a) Spring's EL is signed but **Brian's is the unsigned one** (the thread referenced Spring as signer but actually meant the Charlesworth-side EL that's still "Nothing received yet"), or (b) the tracker row was marked Signed prematurely and Spring has never actually signed. Either way, **the March-11 email scoped `"engagement letter"` without disambiguating which of the two rows** — someone on the Accruity team needs to reconcile. Promoted to §7 Action Items as `Seth/Sophia — reconcile EL status across tracker + thread (Spring row shows Signed, Brian row shows Nothing Received)`.
+
+**Signed Spring engagement letter on file (Mangoshare):**
+- [app.mangoshare.com/share/4511dae6929a2cd66e9d1a6c](https://app.mangoshare.com/share/4511dae6929a2cd66e9d1a6c) — `[EL:Spring §Signed EL mangoshare]`
+
+**PBC workflow artifacts (from the Spring tracker row):**
+- **PBC folder (ImagineTime):** [app.imaginetime.com/firm/5331/workspaces/937753/files](https://app.imaginetime.com/firm/5331/workspaces/937753/files) — workspace id matches Mango Client ID **937753** `[EL:Spring §PBC Folder Link]`
+- **PBC list (SharePoint xlsx):** [subledgesl-my.sharepoint.com · IQBNfjkPEQ2rTZrBySnYtBNvAYuOJB2_CtUdqfEz9rOjFEo](https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBNfjkPEQ2rTZrBySnYtBNvAYuOJB2_CtUdqfEz9rOjFEo?e=fvOfHO) — status "Sent" on 2026-03-11 `[EL:Spring §PBC list link]`
+- **Open-items email package (SharePoint):** [subledgesl-my.sharepoint.com · IQALuJfa_6AmS4qdABygJh2VAQnt6UgUPdObTb2tAMpY4hY](https://subledgesl-my.sharepoint.com/:u:/g/personal/seth_accruity_com/IQALuJfa_6AmS4qdABygJh2VAQnt6UgUPdObTb2tAMpY4hY?e=W5mMzG) — status Sent `[EL:Spring §Open Items Email]`
+- **Outlook attachment:** `Spring_B.msg` — preserved in the tracker row for provenance `[EL:Spring §Outlook Email Msg]`
+
+### 5.2 Files & Links DB rows tied to the Account
+
+Three Files & Links rows exist for this account; only one has URLs populated — the rest are **empty placeholders** awaiting population.
+
+| Row | Name | URLs populated | Source |
+| --- | --- | --- | --- |
+| `33b49172…81cb` | "Spring Bengtzen" | ✓ Document Inventory · ✓ PBC PDF Package | `[FL:Spring 33b49172…81cb]` |
+| `33b49172…816b` | "Engagement Letter" | ✗ placeholder row — all URL fields blank | `[FL:EL placeholder 33b49172…816b]` |
+| `33b49172…8108` | "Executive Summary" | ✗ placeholder row — all URL fields blank | `[FL:ExecSum placeholder 33b49172…8108]` |
+
+**URLs from the populated "Spring Bengtzen" Files & Links row:**
+- **Document Inventory (SharePoint folder):** [subledgesl-my.sharepoint.com · IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw](https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua) — `[FL:Spring §Document Inventory]`
+- **PBC PDF Package (SharePoint folder):** [subledgesl-my.sharepoint.com · IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA](https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u) — `[FL:Spring §PBC PDF Package]`
+
+> **📌 Discovery flag — carry into §0 Changed Since Last Refresh.** The main Accounts record has **empty** values for `Document Inventory`, `PBC Workbook`, `SharePoint Drive`, `Tax Extraction`, and `Tax Planning Memo`, but the **Files & Links DB row for this account DOES have a Document Inventory SharePoint folder and a PBC PDF Package SharePoint folder** populated. On the next refresh the generator should **sync these Files & Links URLs up to the matching fields on the Accounts record** so downstream readers (PBC workbook parser, document inventory indexer) can find them. Promoted to §7 Action Items as `Accruity — sync Files & Links URLs to the Accounts record top-level fields (Document Inventory, PBC PDF Package)`.
+
+### 5.3 External document platforms in play
+
+| Platform | Purpose | Entry point(s) | Source |
+| --- | --- | --- | --- |
+| **ImagineTime** | PBC client workspace (file drop from the firm to the client) | [app.imaginetime.com/firm/5331/workspaces/937753/files](https://app.imaginetime.com/firm/5331/workspaces/937753/files) | `[EL:Spring §PBC Folder Link]` |
+| **MangoShare** | Client upload portal + signed EL repository | [app.mangoshare.com/share/4511dae6929a2cd66e9d1a6c](https://app.mangoshare.com/share/4511dae6929a2cd66e9d1a6c) · Portal link distributed 2026-02-05, accessed but 0 files uploaded as of 2026-04-13 (Sophia resent) | `[EL:Spring §Signed EL mangoshare]` `[AdvExec §Issue 6]` |
+| **SharePoint (seth@accruity.com OneDrive)** | Document Inventory folder · PBC PDF Package folder · PBC list workbook · Open-items email package | 4 URLs above | `[FL:Spring §Document Inventory]` `[FL:Spring §PBC PDF Package]` `[EL:Spring §PBC list link]` `[EL:Spring §Open Items Email]` |
+
+### 5.4 Files still missing (gap to backfill)
+
+| File | Expected location | Account field | Status | Next-step |
+| --- | --- | --- | --- | --- |
+| **PBC Workbook** (xlsx) | Drive or SharePoint linked on Account.PBC Workbook | empty ❌ | Not linked to the Account record; may exist inside the ImagineTime workspace 937753 or the SharePoint `PBC PDF Package` folder | Scan the ImagineTime workspace + the SharePoint PBC PDF Package folder next refresh and link the xlsx URL into Account.PBC Workbook |
+| **Insights Delivery Workbook** (Tax Extraction) | Account.Tax Extraction URL | empty ❌ | Not linked; likely sits in seth@accruity.com SharePoint with the November 2025 planning deliverables | Locate + link next refresh |
+| **Tax Analysis Workbook** | Account.Tax Extraction (shared) or its own Account field | empty ❌ | Not linked | Locate + link next refresh |
+| **Tax Planning Memo** (.docx) | Account.Tax Planning Memo URL | empty ❌ | Not linked; November 2025 joint planning output should exist — locate the deliverable | Locate + link next refresh |
+| **Tax Meeting Prep** doc | Account.Meeting Prep Notes URL | empty ❌ | Not linked; each of the 4 meetings in §4 likely had a prep doc | Locate + link next refresh |
+| **Insights Delivery transcript (Nov 2025)** | Not tracked | — | Referenced in Advisory exec summary but absent from Meetings Tracker and Meeting Transcripts DB | Create Meeting Transcripts row + attach Fathom/Fellow recap on next refresh |
+
+### 5.5 Rollup
+
+| Metric | Value | Source |
+| --- | --- | --- |
+| Engagement Letters on file | 2 (Spring Signed ✓ · Brian Nothing Received ⚠️) | `[Accounts:Spring Bengtzen.Engagement Letters]` |
+| Compliance engagement fee | **$41,100** | `[EL:Spring §Price]` |
+| Files & Links rows | 3 (1 populated · 2 empty placeholders) | `[Accounts:Spring Bengtzen.Files & Links]` |
+| External platforms in use | ImagineTime · MangoShare · SharePoint (seth) | derived |
+| Core tax workbooks not linked to the Account | 5 (PBC Workbook, Insights Delivery, Tax Analysis, Tax Memo, Meeting Prep) | `[Accounts:Spring Bengtzen]` |
+| Reconciliation flags | 2 (Spring-vs-Brian EL signer ambiguity · Files & Links URLs not synced to Account top-level fields) | derived |
+
+
 
 
 
