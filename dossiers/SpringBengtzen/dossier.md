@@ -147,5 +147,82 @@ Joiin marketing blast auto-matched to the Spring account by the word "spring" in
 - **Brian-side inbox** — the Advisory exec summary references Brian's Dec 7 2025 Ventura Pointe email, the Oct 30 2025 Sisu data-room grant, and Dec 4 2025 John Dinkjian introduction. None are currently in the Client Email Log. Pull them when Outlook is live. `[AdvExec §Issue 4–5]`
 - **Sophia / Deontae Mango threads** beyond the Apr 13 touch — Feb 5 2026 MangoShare link distribution was referenced but not logged. `[AdvExec §Issue 6]`
 
+---
+
+## §4. Meeting History
+
+**Scope of this refresh:** 4 meetings on file in the Notion Meetings Tracker tied to the joint Spring B + Brian Charlesworth account. All four are unrestricted and captured verbatim below with their Fathom/Fellow recap links. Append-only — prior meetings preserved verbatim; new meetings insert in chronological position. Meeting **action items are promoted into §7 Action Items (rolled up)** on Turn 7; decisions and numbers anchored here feed §8 Tax Strategies and §10 Operations. `[Accounts:Spring Bengtzen.Meetings]`
+
+### 4.1 Chronological log (newest → oldest)
+
+| Date | Type | Time (EST) | Duration | Status | Recap | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| **2025-12-03** | Tax Strategy / Structure | 12:00 – 12:30 PM | 30 min | Done ✓ | [Fathom recap](https://fathom.video/share/us6SUXbJFMSdrfU7NxSeo3zy1DpwHBLU) | `[Meeting 2025-12-03 Tax Strategy]` |
+| **2025-11-26** | Tax Strategy / Structure | 10:30 – 11:00 AM | 30 min | **Pending** ⚠️ | LINK (URL missing on record — follow up) | `[Meeting 2025-11-26 Tax Strategy]` |
+| **2025-10-29** | Ad Hoc | 12:00 – 12:45 PM | 45 min | Done ✓ | [Fathom recap](https://fathom.video/share/KnsHcJzjVKCbRdJErdWkBaRxxyqyzJV3) | `[Meeting 2025-10-29 Ad Hoc]` |
+| **2025-10-24** | Ad Hoc | 3:00 – 3:15 PM | 15 min | Done ✓ | [Fellow recap](https://fellow.link/4wkbJu7k) | `[Meeting 2025-10-24 Ad Hoc]` |
+
+### 4.2 Meeting-by-meeting detail
+
+---
+
+#### 🎙 **2025-12-03 · Tax Strategy / Structure** · Done
+**Attendees:** Seth Johnson (Accruity), Spring Bengtzen + Brian Charlesworth. **Recap:** [Fathom — us6SUXbJFMSdrfU7NxSeo3zy1DpwHBLU](https://fathom.video/share/us6SUXbJFMSdrfU7NxSeo3zy1DpwHBLU). `[Meeting 2025-12-03 Tax Strategy]`
+
+This was the **delivery-window joint tax-planning session** referenced in the Advisory exec summary. It closed the November 2025 planning track and seeded five of the six open Advisory issues now being tracked: 1587 Hidden Springs in-service timing, the open IRS notice + Utah Life old-partner cleanup handed off from Dave Haynie, the 2025 Utah PTET on SNB, Brian's Ventura Pointe deal-review ask (forwarded Dec 7, four days later), and the Sisu SAFE-note data-room position. The Fathom transcript should be re-ingested on the next refresh to pull exact quotes and decision points into §10 Operations and §11 Individual Profiles. `[AdvExec §Executive Overview]` `[AdvExec §Issue 1–5]`
+
+**Ingestion status:** transcript URL captured; full Fathom pull deferred to next Drive-mounted refresh when the Granola / Fathom MCP reader is live. `[Gap: Fathom transcript ingestion]`
+
+---
+
+#### 🎙 **2025-11-26 · Tax Strategy / Structure** · **Pending ⚠️**
+**Attendees:** Seth Johnson, Spring + Brian (implied). **Recap URL:** missing from the Meetings Tracker record (field shows bare "LINK"). `[Meeting 2025-11-26 Tax Strategy]`
+
+This is the only meeting in the log with status **Pending** — it either (a) never actually happened and the record is stale, (b) happened but the recap was not linked, or (c) was rescheduled into the 12-03 session above. Action item: Seth or the meeting-tracker owner to confirm, close the record, and either attach the recap URL or flag the row for deletion. Promoted to §7 as an internal cleanup item.
+
+---
+
+#### 🎙 **2025-10-29 · Ad Hoc** · Done
+**Attendees:** Seth Johnson, Spring + Brian. **Recap:** [Fathom — KnsHcJzjVKCbRdJErdWkBaRxxyqyzJV3](https://fathom.video/share/KnsHcJzjVKCbRdJErdWkBaRxxyqyzJV3). `[Meeting 2025-10-29 Ad Hoc]`
+
+The longer of the two October ad-hoc touches (45 min). Timing sits between the Oct 24 15-min check-in and the Oct 30 Sisu SAFE-note data-room grant referenced in the Advisory exec summary — likely the session where the data-room access and JD Capital introduction path was first discussed. `[AdvExec §Issue 5]` Full Fathom transcript pending re-ingestion.
+
+---
+
+#### 🎙 **2025-10-24 · Ad Hoc** · Done
+**Attendees:** Seth Johnson, Spring + Brian. **Recap:** [Fellow — 4wkbJu7k](https://fellow.link/4wkbJu7k). `[Meeting 2025-10-24 Ad Hoc]`
+
+Short 15-minute ad-hoc touch (the only meeting on file using Fellow rather than Fathom — the tooling shifted to Fathom starting 10-29). Full Fellow recap pending re-ingestion.
+
+### 4.3 Meetings referenced in other sources but NOT in the Meetings Tracker
+
+Two meeting touches are referenced in the email log / Advisory exec summary but do not appear as rows in the Meetings Tracker. These should be backfilled on the next refresh so the log is canonical:
+
+- **Insights Delivery / November 2025 Joint Tax Planning** — the Advisory exec summary opens with "Joint tax planning was completed by Seth in November 2025" (`[AdvExec §Executive Overview]`). Likely aggregated into the 2025-11-26 Pending record + 2025-12-03 Done record, but the standalone insights-delivery call is not logged.
+- **2026-03-18 Tax Planning 30-min Review with Chante D Martin** — referenced in the Jeremy Martin email intelligence cross-stream and mentioned in broader team recaps; check whether a Spring-side record was created or if this is a different client's meeting misattributed. `[ThinExec §Recent activity]`
+
+### 4.4 Rollup
+
+| Metric | Value | Source |
+| --- | --- | --- |
+| Total meetings on file | 4 | `[Accounts:Spring Bengtzen.Meetings]` |
+| Status breakdown | 3 Done · 1 Pending ⚠️ | derived |
+| Meeting cadence | ~quarterly (4 touches Oct 24 → Dec 3 = 40-day active strategy window) | derived |
+| Meeting types | 2 Ad Hoc · 2 Tax Strategy/Structure | derived |
+| Recap platforms | 2 Fathom · 1 Fellow · 1 missing | derived |
+| Transcripts ingested this refresh | 0 (URLs captured; full pull deferred to Granola/Fathom MCP) | `[Gap: transcript ingestion]` |
+| Meetings with Restricted flag | 0 | `[Meetings Tracker.Restricted]` |
+| Last meeting (any status) | 2025-12-03 Tax Strategy/Structure | derived |
+| Days since last meeting | 140 days (as of 2026-04-22 refresh) | derived |
+
+### 4.5 Gaps to backfill on next refresh
+
+- **Full Fathom transcripts** for 2025-12-03, 2025-10-29 — pull exact quotes and decision points into §10 Operations and §11 Individual Profiles.
+- **Fellow recap** for 2025-10-24 — same.
+- **2025-11-26 status resolution** — close-out Pending → Done or Canceled with reason, attach URL if the recap exists.
+- **Insights Delivery meeting** — locate or create the November 2025 Insights Delivery row, attach the delivery transcript, and cross-reference it to the (empty) Tax Extraction URL on the Account once the workbook is linked.
+- **Meeting cadence gap** — 140 days since last meeting; consider whether the compliance-track HIGH-risk status (Spring's unsigned engagement letter + rejected extension + MangoShare visibility gap) warrants a direct synchronous touch before Apr 15 next year's extension deadline cycle.
+
+
 
 
