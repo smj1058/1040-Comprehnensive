@@ -415,6 +415,103 @@ Upon Turn 11 completion, the generator will **write a new Claude Summary row** w
 - **INQ-3 has no body and no proposed response** — unknown what Sophia was asking. Needs a follow-up with Sophia to capture intent before it's actionable.
 - **Safe harbor / 2025 estimated-tax position not in the action list** because the Tax Analysis workbook is not linked (§5.4) — once linked, expect 1–3 more action items re: estimated payments / balance due.
 
+---
+
+## §8. Tax Strategies & Projected Savings
+
+**Scope of this refresh:** Strategies are carried forward from what's inferable from the Advisory exec summary (6 active issues), the thin exec summary, the email thread, and the meetings tracker. The **Tax Planning Memo, Tax Analysis Workbook, Insights Delivery Workbook, and Tax Meeting Prep are all unlinked on the Account record** (§5.4), so strategy lines that depend on those sources are marked `? Pending workbook ingestion` and will fill in on the next refresh. No numeric savings estimates are fabricated — every `$` figure here has a source tag or is marked `?`.
+
+### 8.1 Strategy table
+
+| Strategy | Entity/Property | Est. Impact | Status | Year | Priority | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Cost segregation on 1587 Hidden Springs Pkwy** | 1587 Hidden Springs Pkwy LLC | ? Pending basis from PBC | Intake form shared; awaiting bank-account confirm (Action #3) to support in-service date | 2025 | 🔴 HIGH | `[AdvExec §Issue 1]` |
+| **1587 Hidden Springs in-service determination (2025 vs 2026)** | 1587 Hidden Springs Pkwy LLC | (gates cost-seg impact) | Zillow held first-month rent through 2026-01-02; documentation critical; pending bank-account confirm | 2025 | 🔴 HIGH | `[AdvExec §Issue 1]` |
+| **Utah PTET election for SNB Inc** | SNB Inc | ? Pending 2025 entity income | Prior-year PTET paid by Dave Haynie; 2025 owner unassigned — at risk | 2025 | 🔴 HIGH | `[AdvExec §Issue 3]` |
+| **Remove former partner from Utah Life LLC IRS filings** | Utah Life LLC | Compliance-risk mitigation (no direct $) | Not started — previously Haynie-owned | 2025–2026 | 🟡 MED | `[AdvExec §Issue 2]` |
+| **QSBS 8-folder diligence** (for Brian's Sisu SAFE position + eventual exit) | Brian @ Sisu | §1202 exclusion on eventual liquidity (potentially 7-figure @ exit) | 8-folder request partially complete; missing closing statement, cap table, basis by tranche, company-level QSBS proof | rolling | 🟡 MED | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **Sisu SAFE-note basis tracking** (Brian's position) | Brian @ Sisu | Basis establishment for future §1202 / §1045 / exit computations | Data-room access live; no quantitative ingestion yet | 2025 rolling | 🟡 MED | `[AdvExec §Issue 5]` |
+| **Ventura Pointe bonus depreciation / REPS exposure** (if Brian invested) | Ortsac Capital Group LP (TBD) | ? Pending whether Brian closed the position + K-1 treatment | Accruity never responded to Brian's Dec 7 2025 review ask — deal may have already closed | 2025–2026 | 🔴 HIGH | `[AdvExec §Issue 4]` |
+| **Accountable plan for reimbursable expenses** (both principals) | household → operating LLCs | ? Pending 2024/2025 expense mix | Not evaluated at the Planning Session level based on what's in the file | 2026 | 🟡 MED | `? Pending memo ingestion` |
+| **REPS status evaluation for Spring** (real-estate professional status) | Spring — LiveUtah | ? Pending hours log — Spring's 750+ tx/yr team role likely qualifies | Not formally claimed or documented in the file | 2025 | 🟡 MED | `? Pending memo ingestion` |
+| **STR material-participation evaluation** (if any short-term rentals among the 11-entity book) | TBD entity(ies) | ? Pending property inventory | Not determinable without PBC workbook + property schedule | 2025 | 🟡 MED | `? Pending workbook ingestion` |
+| **S-Corp election evaluation across the 11-entity stack** | see §8a below | see §8a | rule-based analysis | 2026 | mixed | `[Entity Stack §2]` |
+
+### 8.2 Projected savings rollup
+
+Not computable on this refresh — projected-savings figures depend on Tax Analysis / Tax Planning Memo / Insights workbook numerics that are not linked to the Account. Carry forward until next refresh. Placeholder structure:
+
+| Bucket | 2025 Impact | 2026 Impact | Source |
+| --- | --- | --- | --- |
+| Cost Seg on 1587 Hidden Springs | ? | ? | `[AdvExec §Issue 1]` + pending basis |
+| QSBS on Sisu (eventual) | ? | ? | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| Utah PTET on SNB | ? | ? | `[AdvExec §Issue 3]` |
+| S-Corp election(s) — net SE reduction | ? | ? | `[Entity Stack §2]` + pending SE |
+| Accountable plan / Augusta / retirement | ? | ? | `? Pending memo ingestion` |
+| **Total** | **? Pending** | **? Pending** | — |
+
+### 8.3 Gaps to backfill next refresh (strategy side)
+
+- **Tax Planning Memo (Nov 2025 delivery)** — was produced per Advisory exec summary §Executive Overview (`"Joint tax planning was completed by Seth in November 2025"`) but the deliverable is not linked on the Account. Locate it in SharePoint under the Nov 2025 planning deliverables folder and link to `Account.Tax Planning Memo`.
+- **Tax Analysis Workbook** — locate + link; needed for projected savings numbers.
+- **Insights Delivery Workbook (Tax Extraction)** — locate + link; needed for prior-year baseline (AGI, tax, SE).
+- **PBC Workbook** — locate + link; needed to reconcile the 11-entity list + property schedule (needed by §8a rule-based cost-seg classifier).
+
+---
+
+## §9. Opportunity Flags (auto-detected)
+
+Rule-based classifier from `execsumm_emails/opportunity_flags.py`. Runs on every refresh. Two tables: Cost Segregation Candidates per property, and S-Corp Election Candidates per operating entity. Any `HIGH` flag auto-promotes into §7 Critical Open Items. Flags already marked `IN PROGRESS` are cross-referenced against the **Cost Seg Proposals / Engagements** DB and **FileForms Engagements** DB so they're not double-counted.
+
+**Critical caveat this refresh:** the classifier depends on per-property basis + placed-in-service date + study status (for Cost Seg) and per-entity net SE earnings + classification + activity (for S-Corp). Those inputs come from the **PBC Workbook** and the **Insights/Tax Analysis workbooks**, which are not linked to the Account (§5.4). Rows below are populated where the Advisory exec summary or email threads provide the inputs, and marked `? Pending workbook` otherwise.
+
+### 9.1 Cost Segregation Candidates
+
+| Property | Entity Owner | Basis | Placed in Service | Study Status | Est. Bonus Dep | Priority | Basis of Flag | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **1587 Hidden Springs Pkwy** | 1587 Hidden Springs Pkwy LLC | ? Pending PBC | 2025 (pending in-service determination — Action #4) | Intake form shared; study not yet commissioned | ? Pending basis | 🔴 **HIGH** | Newly formed LLC · residential rental · in-service within last 3 tax years · usability path = REPS-eligible (Spring's 750+ tx/yr indicates likely REPS) or STR material-participation depending on lease type · **Classifier rule HIGH** met on all criteria except basis unknown | `[AdvExec §Issue 1]` `[EI:Re: Spring B - Open Items §Action Items]` |
+| **(other Spring-side rentals)** | — (11-entity stack not yet reconciled) | ? Pending PBC | ? | ? | ? | ? Pending | Property inventory not accessible this refresh — PBC workbook not linked | `[Accounts:Spring Bengtzen.PBC Workbook = empty]` |
+| **(Brian-side holdings)** | — (Significant LLC, Sisu, etc.) | ? Pending | ? | ? | ? | ? Pending | Brian's real-estate holdings not enumerated in any Notion record this refresh | `[AdvExec §Executive Overview]` |
+
+**Hidden Springs note:** once the basis is known from the PBC workbook (or from a cost-seg intake form Spring has submitted), expected first-year bonus depreciation is approximately `basis × 25% × 60%` (2026 bonus rate) — the classifier will fill this automatically on the next refresh. Cost seg provider engagement is currently blocked on the bank-account confirmation gating the in-service date.
+
+### 9.2 S-Corp Election Candidates
+
+| Entity | Current Classification | 2025 Net SE Earnings | Reasonable Salary | Est. SE Savings | Priority | Basis of Flag | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **Utah Life LLC** | ? Pending (likely LLC-partnership or disregarded) | ? Pending | ? | ? | ? Pending | Old-partner cleanup pending (Action #7); entity classification not confirmed in any linked source | `[AdvExec §Issue 2]` |
+| **SNB Inc** | 1120 or 1120S — `Inc` suffix suggests already incorporated | N/A if already 1120S | — | — | **NOT APPLICABLE** *(if already S)* · ? Pending classification confirm | Name ends in `Inc`; classifier rule applies only to LLC-partnership / Sch C / disregarded SMLLCs | `[EI:Re: Spring B - Open Items §Key Points]` |
+| **Shepard Creek** | ? Pending | ? Pending | ? | ? | ? Pending | QBO cleanup in progress (Action #19) — classification not confirmed | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **Zenworth** | ? Pending | ? Pending | ? | ? | ? Pending | QBO cleanup in progress (Action #19) | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **Utah Mortgage** | ? Pending | ? Pending | ? | ? | ? Pending | QBO scope is "expenses-only" per email thread — likely passive holding or activity-only container; probably **NOT APPLICABLE** if no SE earnings | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **TRLF Endeavors** | ? Pending — access issues | ? | ? | ? | ? Pending | QBO access not yet granted (Action #19) | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **Be Collective LLC** | ? Pending — active status unknown (Action #14) | ? | ? | ? | ? Pending | Added at $0; 2026 formation vs 2025-active question still open | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **Forum Mastermind LLC** | ? Pending — active status unknown (Action #14) | ? | ? | ? | ? Pending | Added at $0; 2026 formation vs 2025-active question still open | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **Montana LLC** | Possibly disregarded under Significant LLC (pending Action #15) | likely N/A if disregarded | — | — | **NOT APPLICABLE** if disregarded under Significant LLC | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| **1587 Hidden Springs Pkwy LLC** | Single-asset rental holding | Minimal SE (rentals are passive) | — | — | **NOT APPLICABLE** — passive rental holding with potentially appreciating RE; S election would create distribution gain recognition risk | `[AdvExec §Issue 1]` |
+| **Significant LLC (Brian)** | ? Pending — likely LLC-partnership or holding co | ? Pending | ? | ? | ? Pending | Not enumerated in any linked source | `[AdvExec §Executive Overview]` |
+| **Sisu (Brian — operating entity)** | Likely already C-corp (SAFE note raise suggests VC-backed 1120 structure) | N/A at entity level | — | — | **NOT APPLICABLE** if already 1120 — a C-corp cannot file 2553 to become S without revoking | `[AdvExec §Issue 5]` |
+
+### 9.3 Classifier coverage this refresh
+
+| Metric | Value |
+| --- | --- |
+| Properties scanned for Cost Seg | 1 (1587 Hidden Springs) of ~? (full property count pending PBC) |
+| Entities scanned for S-Corp | 12 named; 0 numerically scored (all `? Pending` or excluded-by-rule) |
+| HIGH flags promoted to §7 Open Items | 1 (Cost Seg: 1587 Hidden Springs) — already in §7 as Actions #3–#5 |
+| MEDIUM flags | 0 — everything non-HIGH is `? Pending` this refresh |
+| NOT APPLICABLE flags (rule-excluded) | 3 (Utah Mortgage possibly, Montana LLC if disregarded, 1587 Hidden Springs LLC as passive rental holding, Sisu if C-corp) |
+| IN PROGRESS cross-reference hits | 0 — no Cost Seg Engagements or FileForms Engagements tied to this Account this refresh |
+
+### 9.4 Gaps to backfill next refresh (opportunity-flag side)
+
+- **PBC Workbook property schedule** — once linked, the Cost Seg classifier fills in every property row with basis, placed-in-service, study-status, and HIGH/MEDIUM/LOW priority.
+- **Insights Delivery Workbook / Tax Analysis Workbook** — net SE earnings per entity gates the S-Corp classifier priority calculation. Without this the only signal is name + activity heuristics.
+- **Reporting Entities DB reconciliation** — confirm the formal federal form (1040/1065/1120S/1120) for each of the 11+ entities so the S-Corp classifier can rule-out entities that are already on an S election.
+- **REPS-status confirmation for Spring** — Spring's 750+ tx/yr team role strongly suggests she qualifies, but it's not formally claimed or documented in the file. Confirming REPS materially upgrades the Cost Seg priority for all Spring-side rental properties (loss usability path opens up).
+- **Brian's operating structure** — the Advisory exec summary references Significant LLC and Sisu but neither is a Reporting Entity on this Account. The 11-entity count may double-count or undercount depending on whether Brian-side entities belong on Spring's Account or warrant a separate Account.
+
+
 
 
 
