@@ -146,6 +146,14 @@ Joiin marketing blast auto-matched to the Spring account by the word "spring" in
 - **Live Outlook scan** for `spring@liveutah.com` + `brian@sisu.co` + `significant-llc@*` + `sisu.co` domains over the last 18 months to catch threads never logged in Notion.
 - **Brian-side inbox** — the Advisory exec summary references Brian's Dec 7 2025 Ventura Pointe email, the Oct 30 2025 Sisu data-room grant, and Dec 4 2025 John Dinkjian introduction. None are currently in the Client Email Log. Pull them when Outlook is live. `[AdvExec §Issue 4–5]`
 - **Sophia / Deontae Mango threads** beyond the Apr 13 touch — Feb 5 2026 MangoShare link distribution was referenced but not logged. `[AdvExec §Issue 6]`
+- **Accruity shared-inbox scan (NEW — scope expansion).** This refresh did **not** search the four Accruity shared inboxes where a large share of client-generated action items and internal-triage threads land. The expanded email reader covers them on the next refresh:
+  - `operations@accruitytax.com` — back-office bookkeeping questions, Mango onboarding, portal issues
+  - `team@accruitytax.com` — cross-team routing / assignment threads
+  - `ask@accruitytax.com` — general tax questions from the client (Spring or Brian may have written in directly)
+  - `tax@accruity.com` — tax-team inbox referenced in the EL tracker + meeting recaps
+  For each inbox, scan by (a) `query="Spring Bengtzen"` / `"Brian Charlesworth"` in subject+body, and (b) `sender=spring@liveutah.com` / `brian@sisu.co`. Requires `Mail.Read.Shared` delegation on each mailbox.
+  - **Fallback**: if the shared-inbox scans return zero, widen to the advisor personal inboxes (`seth@accruity.com`, `sophia@accruity.com`, `deontae.lafayette@accruity.com`, `stacy@accruity.com`, `bryan@accruity.com`) — noisier, but catches threads that never hit a team inbox.
+  - Threads surfaced from a shared/advisor inbox carry a `[SharedInbox:<inbox> <date> "<subject>"]` source tag distinct from the normal `[Email …]` tag, so the dossier shows which Accruity-side inbox surfaced the thread.
 
 ---
 
