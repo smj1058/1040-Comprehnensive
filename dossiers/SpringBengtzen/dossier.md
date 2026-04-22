@@ -698,6 +698,69 @@ Every non-obvious fact in this dossier carries an inline source tag. This index 
 - `[SharedInbox:<inbox> <date> "<subject>"]` — template tag shape for the next refresh once the shared-inbox scan is live
 - `[Email …]` — unresolved back-reference shape (resolves to an Email Log row once the next refresh pulls via Outlook)
 
+---
+
+## §13. Changed Since Last Refresh
+
+**This is the first comprehensive refresh.** No prior dossier existed for Spring Bengtzen + Brian Charlesworth; the existing Notion state was (a) an empty Executive Summaries DB row (`General` / Last Synthesized null / every URL property blank), (b) a thin child page under the `📋 Client Executive Summaries` index, and (c) a separately-maintained Advisory exec summary page covering 6 active issues.
+
+Every subsequent refresh will append a new block at the head of this section enumerating only the delta against the most recent prior dossier. For this initial run, the block below is the **initial-synthesis baseline** — everything below is what this refresh materially added or surfaced that was not previously visible as a single integrated record.
+
+### 13.1 · 2026-04-22 · First-run baseline
+
+**New — factual integrations assembled across sources:**
+- Account record facts aligned with Advisory + thin exec summary narrative into one canonical profile (Client # `19070214-01`, Mango `937753`, MFJ, Utah residency, Spring=LiveUtah 750+tx/yr, Brian=Sisu CEO). `[Accounts:Spring Bengtzen]` `[AdvExec §Executive Overview]`
+- Engagement scope quantified: **20 returns · 11 QBO entities · $3.4M combined 7-month financials · 8 QSBS document folders** · **$41,100 compliance fee** · flat-fee (Brian). `[EI:Re: Spring B - Open Items §Key Numbers]` `[EL:Spring §Price]`
+- All 4 Meetings Tracker rows fetched and narrated with Fathom / Fellow recap URLs; **140-day cadence gap** (last meeting 2025-12-03) surfaced against the HIGH-risk compliance track. `[§4.4 Rollup]`
+- Consolidated Action Items table rolled up from 7 different Notion DBs + the email thread into a single owner-tagged master list of **24 items** across 7 owners. `[§7.1 Master Action Items table]`
+
+**New — discoveries that had not previously been flagged:**
+- **Engagement-letter reconciliation flag** — Spring's tracker row is `Signed` but the thin exec summary + Mar-11 email both say `EL unsigned (URGENT)`. Most likely explanation: Brian's row (`Nothing Received Yet`) is the actually-unsigned EL, and the email thread never disambiguated which spouse. Promoted to Action #1 (HIGH). `[EL:Spring §Engagement Letter Status]` `[EL:Brian §Engagement Letter Status]` `[ThinExec §Open blockers]`
+- **Files & Links sync gap** — the `Spring Bengtzen` Files & Links row has both `Document Inventory` and `PBC PDF Package` SharePoint folders populated, but those URLs are **not** on the Account record's top-level fields. Promoted to Action #22 (LOW plumbing). `[FL:Spring §Document Inventory]` `[FL:Spring §PBC PDF Package]`
+- **5 core tax workbooks unlinked** — PBC Workbook, Insights Delivery Workbook, Tax Analysis Workbook, Tax Planning Memo, Tax Meeting Prep — all missing from Account record even though the Nov 2025 joint planning was delivered. Action #23 (LOW plumbing). `[Accounts:Spring Bengtzen]` `[§5.4]`
+- **Zero Meeting Action Items DB rows** for Spring despite 4 logged meetings and the Dec-3 Tax Strategy session clearly producing the 6 Advisory-exec-summary issues. Flagged as back-fill-on-next-refresh in §7.4. `[§7.4 Gaps]`
+- **2025-11-26 "Tax Strategy/Structure" meeting is status = Pending with a bare LINK recap** — needs resolution (happened / canceled / rescheduled). Action #21. `[Meeting 2025-11-26 Tax Strategy]`
+- **INQ-3 Engagement Inquiry from Sophia 2026-03-31** with empty body and no proposed response — open 22 days. Action #24. `[Inquiry #INQ-3]`
+
+**New — rule-based auto-detected flags (§9):**
+- **1 HIGH Cost-Seg candidate**: 1587 Hidden Springs Pkwy — promoted to §7 as Actions #3–#5; full basis / in-service determination blocked on Action #3 bank-account confirm (open 56 days). `[§9.1 Cost Seg]`
+- **0 scored S-Corp candidates** — 12 entities enumerated, all `? Pending` until PBC / Insights / Tax Analysis workbooks are linked. `[§9.2 S-Corp]`
+- **Exclusions noted**: SNB Inc (likely already incorporated), Montana LLC (likely disregarded), 1587 Hidden Springs LLC (passive rental holding — distribution-gain issue), Sisu (likely already C-corp). `[§9.2 S-Corp]`
+
+**New — strategic themes surfaced for the first time in an integrated record:**
+- **Asymmetric service depth** between Spring's priced 20-return engagement and Brian's flat-fee arrangement is actively suppressing advisory coverage on Brian's side and is the single most important strategic risk in the file. `[§11.2 Relationship-risk read]`
+- **Outsized referral capacity vs engagement revenue** — LiveUtah (750+ tx/yr) + Sisu (high-visibility RE-tech) carry household brand/referral value disproportionate to the current scope. `[§10.4 Referral & brand value]`
+- **Haynie CPAs coverage gap** — Dave Haynie died Nov 2025; Utah PTET SNB + open IRS notice + Utah Life partner cleanup were in his scope and have no confirmed successor at either firm. `[§10.3 CPA transition]` `[AdvExec §Issue 2–3]`
+- **Ventura Pointe relationship risk** — Brian's Dec 7 2025 deal-review ask has gone unanswered for **136 days**; deal may have already closed without Accruity input. `[§7.1 Action #10]` `[AdvExec §Issue 4]`
+- **Sisu SAFE-note COI management** is active — Seth has personal data-room access and introduced John Dinkjian / JD Capital; needs ongoing posture. `[§7.1 Action #12]` `[AdvExec §Issue 5]`
+
+**New — dossier-generation plumbing items flagged:**
+- Scope expansion in the email reader to include Accruity shared inboxes (operations@ / team@ / ask@ / tax@ at accruitytax.com — the owned domain) for the next refresh. `[execsumm_emails/readers/emails.py SHARED_INBOXES]`
+- External accruity.com mailboxes are not directly readable; Make scenarios already capture the major ones into Notion Client Email Log, which is the primary ingestion path. `[execsumm_emails/readers/emails.py EXTERNAL_INBOXES_TO_FORWARD_FROM]`
+
+### 13.2 Carry-over summary (for next refresh)
+
+| Count | Bucket | Reference |
+| --- | --- | --- |
+| 24 | Open / In-progress action items | §7.1 |
+| 9 | Items listed as "gaps to backfill next refresh" across sections | §3.4 · §4.5 · §5.4 · §6.5 · §7.4 · §8.3 · §9.4 |
+| 11 | Strategy lines with `? Pending workbook` | §8.1 |
+| 12 | S-Corp candidates awaiting numeric scoring | §9.2 |
+| 1 | HIGH Cost-Seg candidate already promoted to Critical Open Items | §9.1 |
+| 5 | Core tax workbooks not linked to Account | §5.4 |
+
+### 13.3 What a reader should look at first on next refresh
+
+1. **§13.1 block dated 2026-04-22** — this baseline. Anything marked "new" here is not in the prior dossier because there isn't one.
+2. **§7.1 Actions #1, #3, #10** — the three most time-sensitive items in the file.
+3. **§5.4 gap list** — the five workbooks that need to be linked to unlock half of §8 and almost all of §9.
+
+---
+*Internal document — not for client distribution.*
+*Accruity · www.accruity.com*
+*Source: [dossiers/SpringBengtzen/dossier.md](.) on branch `claude/update-exec-summary-notion-118m7`*
+*First generated: 2026-04-22 · Next scheduled refresh: TBD (trigger on email delta or manual)*
+
 
 
 
