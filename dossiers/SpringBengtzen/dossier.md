@@ -511,6 +511,105 @@ Rule-based classifier from `execsumm_emails/opportunity_flags.py`. Runs on every
 - **REPS-status confirmation for Spring** — Spring's 750+ tx/yr team role strongly suggests she qualifies, but it's not formally claimed or documented in the file. Confirming REPS materially upgrades the Cost Seg priority for all Spring-side rental properties (loss usability path opens up).
 - **Brian's operating structure** — the Advisory exec summary references Significant LLC and Sisu but neither is a Reporting Entity on this Account. The 11-entity count may double-count or undercount depending on whether Brian-side entities belong on Spring's Account or warrant a separate Account.
 
+---
+
+## §10. Operations Analysis
+
+**Scope this refresh:** derived from the Advisory exec summary, the March–April email thread, the Meetings Tracker, and the Engagement Letter tracker. This is a **joint household** managed as one Accruity client with two distinct operating footprints — Spring's Utah real-estate brokerage/investment stack and Brian's software company. The Accruity coverage model spans both tracks.
+
+### 10.1 Spring's operating footprint
+
+**Business engine.** Spring leads **LiveUtah**, a high-volume Utah real-estate team closing **750+ transactions per year** `[AdvExec §Executive Overview]`. That transaction volume is the top of the funnel that feeds everything below: brokerage commissions into a primary income entity, rental acquisitions into the holding entities (1587 Hidden Springs, Shepard Creek, Zenworth, TRLF Endeavors, etc.), and wholesale/flip activity through entities like Be Collective and Forum Mastermind (both added at $0, formation-year status still open — Action #14) `[Email 2026-03-11 Seth→Spring "Open Items"]`.
+
+**Entity stack.** Approximately **11 QBO-tracked entities** on Spring's side with **$3.4M combined 7-month financials** at the March 2026 status point `[EI:Re: Spring B - Open Items §Key Numbers]`. Active QBO cleanup in-flight across 5 of them: SNB Inc (deletions), Shepard Creek (cost basis), Zenworth (depreciation), Utah Mortgage (scope reduced to expenses-only), TRLF Endeavors (access still pending). Action #19 in §7 tracks the rollup.
+
+**Tooling stack.** QBO for books · ImagineTime workspace (firm `5331`, workspace `937753` — matches the Mango Client ID) for PBC file drops · MangoShare for client upload portal + signed-EL repository · SharePoint (seth@accruity.com OneDrive) for Document Inventory, PBC PDF Package, PBC list xlsx, and open-items email packages `[FL:Spring §Document Inventory]` `[FL:Spring §PBC PDF Package]` `[EL:Spring §PBC Folder Link]`. MangoShare upload visibility issue flagged 2026-04-13 is the current ops blocker (Action #16).
+
+**Cadence.** 4 documented touches in the Meetings Tracker between Oct 24 – Dec 3 2025 (`~quarterly` but active during the Q4 planning cycle), then a **140-day gap** to today's refresh `[§4.4 Rollup]`. The planning track concluded with joint tax planning in November 2025 `[AdvExec §Executive Overview]`. The compliance track is HIGH risk right now — rejected extension + engagement-letter reconciliation (Action #1) + MangoShare visibility gap.
+
+**KPIs / risk posture.** The business-level risk Spring carries is transaction-volume capacity at the brokerage level (750+ tx/yr is high-touch and dependent on her team); the tax-side risk is a compounding compliance stack (extension rejected + EL reconciliation + portal visibility + QBO cleanup across 11 entities + 8-folder QSBS diligence). Any one item is recoverable; all together signal the engagement needs a synchronous Seth-to-Spring touch, not another round of email `[§3.1 Active Threads §Risk flags]`.
+
+### 10.2 Brian's operating footprint
+
+**Business engine.** Brian is **Founder & CEO of Sisu**, a real-estate performance software company headquartered in Kaysville, UT `[AdvExec §Executive Overview]`. Sisu is actively running an **exclusive SAFE-note raise** targeted at customers and partners; Seth received personal data-room access 2025-10-30 and facilitated a data-room grant for John Dinkjian / JD Capital on 2025-12-04 `[AdvExec §Issue 5]`. Structurally Sisu is very likely already a C-corporation (SAFE-note instruments are standard YC-style C-corp primitives), so it is excluded from the S-corp classifier in §9.2.
+
+**Capital allocation.** Brian is an active LP / deal-flow recipient beyond Sisu. The Ventura Pointe referral from Brandon Brittingham / MDDE Group (sponsors: Ortsac Capital Group — Bobby & Jennifer Castro) is the visible 2025 example — a Class A multifamily in South Florida with zero acquisition/disposition fees and a 1% asset-management fee, targeted close mid-to-late Nov 2025, forwarded to Seth on 2025-12-07 and **never answered** `[AdvExec §Issue 4]`. Action #10 (overdue 136 days) is the live relationship risk. The existence of this flow pattern suggests more deals may arrive mid-engagement — the flat-fee scope decision (Action #11) is the meta-fix, not a one-off response.
+
+**Entities.** The Advisory exec summary names Significant LLC as Brian's primary operating holding (with Montana LLC possibly disregarded beneath it — Action #15) plus Sisu itself. Neither is currently a Reporting Entity on the Spring Account `[§9.4 Gaps]`. Whether to spin up a separate Brian Charlesworth Account or keep the stack on the Spring Account is a call for the next refresh.
+
+**Tooling stack.** Sisu's own data room is the primary Brian-side platform touchpoint. All other portals (Mango, ImagineTime, SharePoint) are Spring-side. MangoShare upload link was re-sent to Brian along with Spring 2026-02-05 — Brian's onboarding status is tracked under Action #20.
+
+### 10.3 Joint / household-level operations
+
+**Filing.** Married Filing Jointly, Utah residency `[AdvExec §Executive Overview]`.
+
+**Engagement model.** Asymmetric: Spring is on a standard 20-return compliance + tax planning engagement priced at **$41,100** `[EL:Spring §Price]`; Brian is on a **flat-fee** arrangement `[AdvExec §Executive Overview]`. The asymmetry is the root cause of Action #11 (Ventura Pointe-style deal-review scope ambiguity) — flat-fee is suppressing advisory depth for the higher-capital-allocation spouse.
+
+**CPA transition.** Dave Haynie (Haynie CPAs) handled a meaningful portion of prior-year work — specifically the Utah PTET SNB payment and an open IRS notice on Spring's side. Dave passed away **November 2025** `[AdvExec §Issue 2]`. Allen Woiwode is his successor contact. Accruity's scope-vs-Haynie split has not been formally assigned; coverage gaps are live (Actions #6, #8, #9).
+
+**Third-party orbit.** John Dinkjian (JD Capital) — Seth-introduced investor into Sisu's SAFE note; conflict-of-interest management posture is active (`[AdvExec §Issue 5]`). Bobby & Jennifer Castro / Ortsac Capital Group — sponsors of Ventura Pointe. Brandon Brittingham / MDDE Group — Ventura Pointe referrer. Allen Woiwode / Haynie CPAs — Dave's successor. Frank Felice — Sisu finance/IR contact who granted data-room access.
+
+### 10.4 Referral & brand value (operational context)
+
+**Spring** — LiveUtah is a **showcase 750-tx/yr** team; the brand radius inside Utah real estate is high.
+**Brian** — Sisu is one of the most visible real-estate-tech companies in the market; CEO standing is outsized referral value.
+
+The household has **outsized referral capacity** relative to engagement revenue `[AdvExec §Strategic Themes]`. Operationally this means the Ventura Pointe no-response (Action #10) and the flat-fee scope question (Action #11) are not just transactional — they affect whether the household actively refers future Accruity clients or quietly stops.
+
+---
+
+## §11. Individual Profile(s)
+
+### 11.1 Spring Bengtzen
+
+| Dimension | Detail | Source |
+| --- | --- | --- |
+| Role | Team lead, **LiveUtah** — Utah real-estate team | `[AdvExec §Executive Overview]` |
+| Scale | **750+ transactions per year** | `[AdvExec §Executive Overview]` |
+| Email | `spring@liveutah.com` | `[Accounts:Spring Bengtzen.Primary Contact]` |
+| Tax filing status | MFJ w/ Brian Charlesworth | `[AdvExec §Executive Overview]` |
+| Utah residency | ✓ | `[AdvExec §Executive Overview]` |
+| Operating entities on her side | 11 QBO entities · $3.4M 7-month combined · 20 returns on engagement | `[EI:Re: Spring B - Open Items §Key Numbers]` |
+| Engagement letter status | Tracker shows Signed ✓ — but Action #1 reconciliation is open (thread says unsigned) | `[EL:Spring §Engagement Letter Status]` |
+| Extension status | **Rejected** (Brian's accepted) | `[EL:Spring §Extension]` |
+| 2024 planning | Joint planning delivered Nov 2025 by Seth | `[AdvExec §Executive Overview]` |
+| Wealth picture | Primarily commission income (LiveUtah brokerage) + active rental acquisition footprint across the entity stack + a fresh rental LLC (1587 Hidden Springs) being brought online 2025–2026 | derived |
+| REPS posture | Likely qualifies (750+ tx/yr in RE services) but not formally claimed or documented in the file — `? Pending confirmation` in §8.1 | derived |
+
+**Life events / third-party context.** Dave Haynie (prior CPA for IRS/PTET work) passed away in November 2025, during the same window as the joint Accruity planning delivery. That created a coverage gap on two specific items (open IRS notice + Utah Life old-partner filings + 2025 SNB PTET) that Spring has been flagging in to Accruity while formally working with Allen Woiwode (Haynie) for the successor transition `[AdvExec §Issue 2–3]`.
+
+**Stated priorities (verbatim or direct paraphrase from the file).**
+- The 1587 Hidden Springs LLC needs to be in-service for 2025 for depreciation / cost seg — Spring flagged this to Seth 2026-01-18 `[AdvExec §Issue 1]`
+- She has been uploading docs to MangoShare and wants the Feb/March financial packets she never received `[Email 2026-04-13 Spring→Sophia]`
+
+**Outstanding to Spring personally.** 5 open action items (§7 owner rollup): #3 (Hidden Springs bank account — 56 days old), #13 (EL signature if hers is the actually-unsigned one), #14 (entity status confirmations), #15 (Montana LLC structure), #16 (MangoShare upload). One in-progress: #16.
+
+### 11.2 Brian Charlesworth
+
+| Dimension | Detail | Source |
+| --- | --- | --- |
+| Role | **Founder & CEO, Sisu** — real-estate performance software, Kaysville UT | `[AdvExec §Executive Overview]` |
+| Email | `brian@sisu.co` | `[Accounts:Spring Bengtzen.Partner]` `[AdvExec §Executive Overview]` |
+| Tax filing status | MFJ w/ Spring Bengtzen | `[AdvExec §Executive Overview]` |
+| Engagement model | **Flat fee** (asymmetric vs. Spring's 20-return compliance) | `[AdvExec §Executive Overview]` |
+| Engagement letter | **Nothing Received Yet ⚠️** | `[EL:Brian §Engagement Letter Status]` |
+| Extension status | **Accepted** | `[EL:Brian §Extension]` |
+| Operating entities on his side | Significant LLC (primary holding) + Sisu (operating C-corp, SAFE-note raise active) · possibly Montana LLC disregarded under Significant | `[AdvExec §Issue 5]` `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+| Sisu capital event in-flight | Exclusive SAFE-note raise targeting customers + partners · Seth has data-room access (granted 2025-10-30) · Seth facilitated John Dinkjian (JD Capital) access (2025-12-04) | `[AdvExec §Issue 5]` |
+| Active deal flow | Ventura Pointe (Ortsac Capital / Bobby & Jennifer Castro) forwarded 2025-12-07 — **Accruity never responded**, possibly already closed | `[AdvExec §Issue 4]` |
+| Wealth picture | Software-equity concentrated (Sisu founder position → QSBS §1202 potential on eventual exit) + capital deployer into real-estate LP positions (Ventura Pointe-pattern flow) · active-LP-side unknown outside Ventura Pointe | derived |
+| QSBS diligence | 8-folder request partially complete — closing statement, cap table, basis by tranche, and company-level QSBS proof still missing | `[Email 2026-03-11 Seth→Spring "Open Items"]` |
+
+**Life events / third-party context.** No known life events this refresh. Brian's operational orbit has three active external relationships that affect the Accruity engagement: Frank Felice (Sisu finance/IR contact — granted data-room access), John Dinkjian (JD Capital — Seth-introduced investor, requires ongoing COI management), and Brandon Brittingham (MDDE Group — active deal referrer).
+
+**Stated priorities (verbatim or direct paraphrase from the file).**
+- Dec 7, 2025 to Seth: *"requesting Accruity's thoughts"* on Ventura Pointe — unanswered `[AdvExec §Issue 4]`
+
+**Outstanding to Brian personally.** 1 open action item (§7 owner rollup): #13 (EL signature if his is the actually-unsigned one). The Sisu QSBS diligence (#18), Ventura Pointe response (#10), JD Capital status check (#12), and flat-fee scope policy (#11) are Accruity-owned but Brian-facing.
+
+**Relationship-risk read.** Brian is the higher-capital-allocation spouse with more concentrated wealth events on the horizon (Sisu exit → QSBS; ongoing LP deals). The combination of (a) unanswered Dec 7 deal-review request and (b) asymmetric flat-fee vs Spring's priced compliance engagement is actively suppressing Accruity's advisory depth on Brian's side — and the relationship-risk for the household if Brian notices he's getting thinner service than his wife is meaningful. This is the single most important strategic theme in the file this refresh.
+
+
 
 
 
