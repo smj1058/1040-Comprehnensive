@@ -1,0 +1,117 @@
+{
+  "client": "Spring Bengtzen",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751819a991dd6c08fba2df0",
+    "page_id": "30d491728751819a991dd6c08fba2df0",
+    "account_name": "Spring Bengtzen",
+    "client_number": "19070214-01",
+    "mango_client_id": "937753",
+    "mango_display_name": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null,
+    "executive_summary_url": null,
+    "primary_contact_url": "https://www.notion.so/30d491728751815bb5cdc1feb5a345f4",
+    "relationship_manager_url": "https://www.notion.so/30d49172875181909e91ea3af300fdda",
+    "partner_url": "https://www.notion.so/30d4917287518141bf8acf3dca2654a7",
+    "tax_ascend_url": "https://www.notion.so/2f0491728751802a98c3ed78aa973a8c"
+  },
+  "household": {
+    "principals": [
+      {"name": "Spring Bengtzen", "email": "spring@liveutah.com", "role": "Team lead, LiveUtah (750+ transactions/yr)"},
+      {"name": "Brian Charlesworth", "email": "brian@sisu.co", "role": "Founder & CEO, Sisu (real estate performance software, Kaysville UT)"}
+    ],
+    "filing_status": "Married Filing Jointly (household managed as combined client)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/3424917287518119aae6eeaf1cf263b2",
+      "summary_title": "Spring Bengtzen",
+      "summary_type": "General",
+      "state": "empty shell — needs full populate"
+    },
+    {
+      "url": "https://www.notion.so/30c491728751810bbaf6eb75946bb252",
+      "summary_title": "📋 Advisory — Spring Bengtzen + Brian Charlesworth",
+      "summary_type": "Advisory",
+      "state": "has existing body (6 active issues) — preserve & fold in"
+    }
+  ],
+  "thin_exec_summary_child_page": {
+    "url": "https://www.notion.so/3424917287518194abb1fac35bf798de",
+    "role": "prior synthesized narrative under the Client Executive Summaries index"
+  },
+  "sidecars": {
+    "advisory_exec_summary": "https://www.notion.so/30c491728751810bbaf6eb75946bb252",
+    "thin_exec_summary": "https://www.notion.so/3424917287518194abb1fac35bf798de",
+    "email_thread_open_items": "https://www.notion.so/34249172875181e89961c979f942b020",
+    "email_thread_joiin_noise": "https://www.notion.so/3424917287518105b9d9f263d4255b95",
+    "email_intelligence_subpage": "https://www.notion.so/3424917287518120b614d19cb656a3ff",
+    "engagement_inquiry": "https://www.notion.so/3344917287518188bf97ef86306b797a",
+    "engagement_letters": [
+      "https://www.notion.so/2ef49172875180428765cb0b6f75ad36",
+      "https://www.notion.so/31e491728751805ab36edef16a02f617"
+    ],
+    "files_and_links": [
+      "https://www.notion.so/33b491728751816ba890cb7e4f5b4dba",
+      "https://www.notion.so/33b4917287518108a36ad75776864c0d",
+      "https://www.notion.so/33b49172875181cb9220f4d9881bf983"
+    ],
+    "meetings": [
+      "https://www.notion.so/2fb491728751807bb4bdeffab3f53706",
+      "https://www.notion.so/2fb4917287518087b7a3fc28a055e47f",
+      "https://www.notion.so/2fb49172875180a3ac93f000b749ac46",
+      "https://www.notion.so/2fb49172875180a5a9a6f93df175cd5c"
+    ]
+  },
+  "entities_known": [
+    "Be Collective LLC",
+    "Forum Mastermind LLC",
+    "Montana LLC (possibly disregarded under Significant LLC)",
+    "1587 Hidden Springs Pkwy LLC",
+    "Utah Life LLC",
+    "SNB Inc",
+    "Shepard Creek",
+    "Zenworth",
+    "Utah Mortgage",
+    "TRLF Endeavors",
+    "Significant LLC (Brian)",
+    "Sisu (Brian — CEO)"
+  ],
+  "notes": {
+    "engagement_scope": "20 returns on engagement, 11 QBO entities, $3.4M combined 7-month financials, 8 QSBS document folders requested",
+    "extension_status": "Spring's extension REJECTED; Brian's extension accepted",
+    "engagement_letter_status": "Per thin exec summary: unsigned (critical). Per Account record: 2 engagement letter rows exist (resolve — possibly Brian's is signed, Spring's pending).",
+    "prior_cpa": "Dave Haynie (Haynie CPAs) — DECEASED Nov 2025. Successor contact: Allen Woiwode.",
+    "third_parties": {
+      "John Dinkjian (JD Capital)": "Investor introduced by Seth into Brian's Sisu SAFE note",
+      "Frank Felice (Sisu)": "Granted Seth + JD Capital data room access",
+      "Bobby & Jennifer Castro (Ortsac Capital Group)": "Sponsors of Ventura Pointe deal Brian forwarded Dec 7 2025",
+      "Brandon Brittingham (MDDE Group)": "Referred Ventura Pointe deal to Brian"
+    }
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook — not on Account record",
+    "Insights Delivery Workbook — Tax Extraction URL empty on Account",
+    "Tax Analysis Workbook — not on Account record",
+    "Tax Planning Memo — not on Account record",
+    "Tax Meeting Prep — Meeting Prep Notes URL empty on Account"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "pending",
+    "turn_3_email": "pending",
+    "turn_4_meetings": "pending",
+    "turn_5_documents": "pending",
+    "turn_6_claude_work": "pending",
+    "turn_7_action_items": "pending",
+    "turn_8_strategies_flags": "pending",
+    "turn_9_operations_individuals": "pending",
+    "turn_10_provenance_changelog": "pending",
+    "turn_11_push_notion": "pending"
+  }
+}

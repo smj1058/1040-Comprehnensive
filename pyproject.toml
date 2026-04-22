@@ -1,0 +1,24 @@
+[project]
+name = "execsumm-emails"
+version = "0.1.0"
+description = "Comprehensive Client Intelligence Dossier Generator — synthesises every workbook, transcript, email thread, and Claude chat on file into a living dossier per client, mirrored into the Notion Executive Summaries database."
+requires-python = ">=3.11"
+dependencies = [
+  "notion-client>=2.2",
+  "openpyxl>=3.1",
+  "python-docx>=1.1",
+  "requests>=2.31",
+  "msal>=1.27",
+  "markdown-it-py>=3.0",
+  "pydantic>=2.6",
+]
+
+[project.scripts]
+execsumm = "execsumm_emails.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["execsumm_emails"]
