@@ -18,11 +18,40 @@ from typing import Any
 # client (e.g. an `ask@accruitytax.com` question about SNB PTET that gets
 # triaged internally before a reply goes out to the client) are still
 # captured for the dossier.
+# OWNED DOMAIN — accruitytax.com. The pipeline runs inside this tenant
+# and has Mail.Read.Shared delegation on these mailboxes. This is where
+# forwards should land.
 SHARED_INBOXES = (
     "operations@accruitytax.com",
     "team@accruitytax.com",
     "ask@accruitytax.com",
+    "tax@accruitytax.com",  # create if it doesn't already exist
+)
+
+# EXTERNAL DOMAIN — accruity.com. Not owned by this tenant. Historical and
+# current client threads routinely land here (e.g. tax@accruity.com on CC,
+# advisor personal mailboxes seth@ / sophia@ / deontae.lafayette@ /
+# stacy@ / bryan@ at accruity.com). The generator cannot monitor these
+# directly via Mail.Read.Shared delegation.
+#
+# Workaround — set an auto-forward rule on each relevant accruity.com
+# mailbox that copies incoming mail to the matching accruitytax.com
+# mailbox (e.g. seth@accruity.com auto-forwards to seth@accruitytax.com,
+# tax@accruity.com auto-forwards to tax@accruitytax.com). Once those
+# forwards are live, the scanner in SHARED_INBOXES will pick up the
+# threads automatically.
+#
+# Short-term: tax@accruity.com is currently readable by the relationship
+# owner as a delegate (confirmed 2026-04-22), so threads on that inbox
+# can be manually forwarded into one of the accruitytax.com mailboxes
+# while the auto-forward rules are being set up.
+EXTERNAL_INBOXES_TO_FORWARD_FROM = (
     "tax@accruity.com",
+    "seth@accruity.com",
+    "sophia@accruity.com",
+    "deontae.lafayette@accruity.com",
+    "stacy@accruity.com",
+    "bryan@accruity.com",
 )
 
 # Individual-advisor mailboxes routinely forwarded from or cc'd on
@@ -61,8 +90,10 @@ def read(account) -> dict[str, Any]:  # pragma: no cover - MCP
          thin Exec Summary child page (carry forward its synthesized threads).
       3. Live-search Outlook (`outlook_email_search`) for threads involving the
          client's primary/secondary contact emails over the last 18 months.
-      4. **Scan the Accruity shared inboxes** in `SHARED_INBOXES` for threads
-         mentioning the client's name or any of the client's contact emails.
+      4. **Scan the Accruity shared inboxes** in `SHARED_INBOXES` (new,
+         accruitytax.com) and `LEGACY_SHARED_INBOXES` (read-only coverage
+         of historical threads at tax@accruity.com) for threads mentioning
+         the client's name or any of the client's contact emails.
          For each inbox, issue two parallel searches:
            a) `mailboxOwnerEmail=<shared_inbox>` + `query="<Client Name>"`
               — catches threads where the client is named in subject/body.
