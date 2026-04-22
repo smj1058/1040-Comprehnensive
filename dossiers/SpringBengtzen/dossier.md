@@ -609,6 +609,95 @@ The household has **outsized referral capacity** relative to engagement revenue 
 
 **Relationship-risk read.** Brian is the higher-capital-allocation spouse with more concentrated wealth events on the horizon (Sisu exit → QSBS; ongoing LP deals). The combination of (a) unanswered Dec 7 deal-review request and (b) asymmetric flat-fee vs Spring's priced compliance engagement is actively suppressing Accruity's advisory depth on Brian's side — and the relationship-risk for the household if Brian notices he's getting thinner service than his wife is meaningful. This is the single most important strategic theme in the file this refresh.
 
+---
+
+## §12. Provenance Index
+
+Every non-obvious fact in this dossier carries an inline source tag. This index lists every tag used above with a direct link to the canonical Notion record or external URL. Alphabetical within each category.
+
+### 12.1 Notion — Account record
+
+- `[Accounts:Spring Bengtzen]` — main record → [notion.so/30d491728751819a991dd6c08fba2df0](https://www.notion.so/30d491728751819a991dd6c08fba2df0)
+- `[Accounts:Spring Bengtzen.Client #]` — 19070214-01 (same page, property)
+- `[Accounts:Spring Bengtzen.Mango Client ID]` — 937753 (same page, property)
+- `[Accounts:Spring Bengtzen.Primary Contact]` → [notion.so/30d491728751815bb5cdc1feb5a345f4](https://www.notion.so/30d491728751815bb5cdc1feb5a345f4)
+- `[Accounts:Spring Bengtzen.Relationship Manager]` → [notion.so/30d49172875181909e91ea3af300fdda](https://www.notion.so/30d49172875181909e91ea3af300fdda)
+- `[Accounts:Spring Bengtzen.Partner]` — Brian Charlesworth → [notion.so/30d4917287518141bf8acf3dca2654a7](https://www.notion.so/30d4917287518141bf8acf3dca2654a7)
+- `[Accounts:Spring Bengtzen.Email Log]` — 2 rows (see §12.3)
+- `[Accounts:Spring Bengtzen.Engagement Letters]` — 2 rows (see §12.4)
+- `[Accounts:Spring Bengtzen.Files & Links]` — 3 rows (see §12.5)
+- `[Accounts:Spring Bengtzen.Meetings]` — 4 rows (see §12.6)
+- `[Accounts:Spring Bengtzen.PBC Workbook = empty]` — property is null on this refresh
+- `[Entity Stack §2]` — §2.4 entity stack table in this dossier
+
+### 12.2 Notion — existing exec-summary pages
+
+- `[AdvExec …]` → [notion.so/30c491728751810bbaf6eb75946bb252](https://www.notion.so/30c491728751810bbaf6eb75946bb252) — *📋 Advisory — Spring Bengtzen + Brian Charlesworth*
+- `[ThinExec …]` → [notion.so/3424917287518194abb1fac35bf798de](https://www.notion.so/3424917287518194abb1fac35bf798de) — *Spring Bengtzen* (thin child page under the Exec Summaries index)
+- `[EISub:Spring Bengtzen]` → [notion.so/3424917287518120b614d19cb656a3ff](https://www.notion.so/3424917287518120b614d19cb656a3ff) — *📧 Email Intelligence* subpage
+
+### 12.3 Notion — Client Email Log rows
+
+- `[EI:Re: Spring B - Open Items …]` → [notion.so/34249172875181e89961c979f942b020](https://www.notion.so/34249172875181e89961c979f942b020) — [Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADBmZjg2NGQ4LTFhNTgtNGI2Mi05MmJmLTlhMWZkNDVkMjVkZQBGAAAAAAAY75o7uPA2RpuX8UEo5dXBBwBwW9uyQOvRTKnXOw4wkwFeAAAAAAEMAABwW9uyQOvRTKnXOw4wkwFeAAQ8oglsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+- `[Email 2026-03-11 Seth→Spring "Open Items"]` — 1st msg of same thread ↑
+- `[Email 2026-04-13 Sophia→Spring "Mangoshare resent"]` — later msg of same thread ↑
+- `[Email 2026-04-13 Spring→Sophia]` — Spring reply in same thread ↑
+- `[Email 2026-04-13 Spring→Stacy]` — Spring reply in same thread ↑
+- `[Email 2026-04-13 Stacy→Spring "Financials in progress"]` — Stacy reply in same thread ↑
+- `[Email 2026-04-09 Joiin→Seth "webinars"]` → [notion.so/3424917287518105b9d9f263d4255b95](https://www.notion.so/3424917287518105b9d9f263d4255b95) (noise)
+
+### 12.4 Notion — Engagement Letters tracker rows
+
+- `[EL:Spring 2ef49172…ad36]` / `[EL:Spring §*]` → [notion.so/2ef49172875180428765cb0b6f75ad36](https://www.notion.so/2ef49172875180428765cb0b6f75ad36)
+- `[EL:Brian 31e49172…f617]` / `[EL:Brian §*]` → [notion.so/31e491728751805ab36edef16a02f617](https://www.notion.so/31e491728751805ab36edef16a02f617)
+
+### 12.5 Notion — Files & Links rows
+
+- `[FL:Spring 33b49172…81cb]` / `[FL:Spring §*]` → [notion.so/33b49172875181cb9220f4d9881bf983](https://www.notion.so/33b49172875181cb9220f4d9881bf983)
+- `[FL:EL placeholder 33b49172…816b]` → [notion.so/33b491728751816ba890cb7e4f5b4dba](https://www.notion.so/33b491728751816ba890cb7e4f5b4dba) (empty row)
+- `[FL:ExecSum placeholder 33b49172…8108]` → [notion.so/33b4917287518108a36ad75776864c0d](https://www.notion.so/33b4917287518108a36ad75776864c0d) (empty row)
+
+### 12.6 Notion — Meetings Tracker rows
+
+- `[Meeting 2025-10-24 Ad Hoc]` → [notion.so/2fb491728751807bb4bdeffab3f53706](https://www.notion.so/2fb491728751807bb4bdeffab3f53706) — [Fellow recap](https://fellow.link/4wkbJu7k)
+- `[Meeting 2025-10-29 Ad Hoc]` → [notion.so/2fb49172875180a5a9a6f93df175cd5c](https://www.notion.so/2fb49172875180a5a9a6f93df175cd5c) — [Fathom recap](https://fathom.video/share/KnsHcJzjVKCbRdJErdWkBaRxxyqyzJV3)
+- `[Meeting 2025-11-26 Tax Strategy]` → [notion.so/2fb4917287518087b7a3fc28a055e47f](https://www.notion.so/2fb4917287518087b7a3fc28a055e47f) *(pending — no recap URL)*
+- `[Meeting 2025-12-03 Tax Strategy]` → [notion.so/2fb49172875180a3ac93f000b749ac46](https://www.notion.so/2fb49172875180a3ac93f000b749ac46) — [Fathom recap](https://fathom.video/share/us6SUXbJFMSdrfU7NxSeo3zy1DpwHBLU)
+
+### 12.7 Notion — Engagement Inquiries & adjacent DBs
+
+- `[Inquiry #INQ-3]` → [notion.so/3344917287518188bf97ef86306b797a](https://www.notion.so/3344917287518188bf97ef86306b797a) *(submitted 2026-03-31 by Sophia, Request Type "Engagement Recap & Meeting Prep", body empty)*
+- `[Tax Ascend:2f049172…]` → [notion.so/2f0491728751802a98c3ed78aa973a8c](https://www.notion.so/2f0491728751802a98c3ed78aa973a8c)
+- `[Claude Summaries DB]` — data source `collection://86dca8a4-3522-40c4-a568-b99bc98fc756`
+- `[Claude Activity Log DB]` — data source `collection://f9cc7d05-26b0-4c77-b29c-af974a234b77`
+- `[Claude 2026-04-08 Aidan McIsaac Research + New Client Alert Review]` → [notion.so/33c4917287518117994fe68400dcdc76](https://www.notion.so/33c4917287518117994fe68400dcdc76) *(false-positive match on "Spring Break" substring — unrelated)*
+- `[Meetings Tracker.Restricted]` — Meetings Tracker column
+
+### 12.8 SharePoint / Drive / Portals
+
+- `[EL:Spring §PBC Folder Link]` — [app.imaginetime.com/firm/5331/workspaces/937753/files](https://app.imaginetime.com/firm/5331/workspaces/937753/files) *(ImagineTime PBC workspace; `937753` = Mango Client ID)*
+- `[EL:Spring §PBC list link]` — [SharePoint xlsx](https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBNfjkPEQ2rTZrBySnYtBNvAYuOJB2_CtUdqfEz9rOjFEo?e=fvOfHO)
+- `[EL:Spring §Open Items Email]` — [SharePoint email package](https://subledgesl-my.sharepoint.com/:u:/g/personal/seth_accruity_com/IQALuJfa_6AmS4qdABygJh2VAQnt6UgUPdObTb2tAMpY4hY?e=W5mMzG)
+- `[EL:Spring §Signed EL mangoshare]` — [app.mangoshare.com/share/4511dae6929a2cd66e9d1a6c](https://app.mangoshare.com/share/4511dae6929a2cd66e9d1a6c)
+- `[FL:Spring §Document Inventory]` — [SharePoint folder](https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua)
+- `[FL:Spring §PBC PDF Package]` — [SharePoint folder](https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u)
+- `[EL:Spring §Outlook Email Msg]` — `Spring_B.msg` attachment retained on the EL tracker row for provenance
+- `[EL:Spring §Extension]` / `[EL:Brian §Extension]` / `[EL:Spring §Engagement Letter Status]` / `[EL:Brian §Engagement Letter Status]` / `[EL:Spring §Price]` — properties on the tracker rows in §12.4
+
+### 12.9 In-dossier back-references
+
+- `[ThinExec §What matters]` / `[ThinExec §Open blockers]` / `[ThinExec §Engagement stage]` / `[ThinExec §Recent activity]` — sections within the thin Exec Summary page (§12.2)
+- `[AdvExec §Executive Overview]` / `[AdvExec §Issue 1]` / `[AdvExec §Issue 2]` / `[AdvExec §Issue 3]` / `[AdvExec §Issue 4]` / `[AdvExec §Issue 5]` / `[AdvExec §Issue 6]` / `[AdvExec §Issue 2–3]` / `[AdvExec §Issue 4–5]` / `[AdvExec §Strategic Themes]` — sections within the Advisory Exec Summary page (§12.2)
+- `[EI:Re: Spring B - Open Items §*]` — sub-sections within the Client Email Log page (§12.3)
+- `[§3.1 Active Threads §Risk flags]` / `[§4.4 Rollup]` / `[§9.4 Gaps]` — internal cross-references to other sections of this dossier
+
+### 12.10 Gap markers (not real sources; carry-forward reminders)
+
+- `[Gap: Outlook live scan deferred]` — no live Outlook scan was run this refresh
+- `[Gap: Fathom transcript ingestion]` / `[Gap: transcript ingestion]` — transcript URLs captured but not ingested this refresh
+- `[SharedInbox:<inbox> <date> "<subject>"]` — template tag shape for the next refresh once the shared-inbox scan is live
+- `[Email …]` — unresolved back-reference shape (resolves to an Email Log row once the next refresh pulls via Outlook)
+
 
 
 
