@@ -50,7 +50,16 @@
     "filing_status": "Married Filing Jointly (Tyler & Renee Mueller per 1040 Mango project)",
     "primary_state": "NE (Nebraska)"
   },
-  "exec_summary_db_rows": [],
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/359491728751810cb587ddd44cd27fac",
+      "id": "35949172-8751-810c-b587-ddd44cd27fac",
+      "summary_title": "Rene Mueller Personal",
+      "summary_type": "General",
+      "tax_engagement_type": "Compliance",
+      "state": "created 2026-05-07; dossier URL + section anchors populated"
+    }
+  ],
   "sidecars": {
     "engagement_letter_personal": "https://www.notion.so/31449172875180298f55fcb97b3ba0ed",
     "tax_ascend_personal": "https://www.notion.so/314491728751800086d7efd18368a63b",
@@ -117,8 +126,8 @@
     "turn_10_provenance_changed": "done",
     "turn_11_push_notion": "done"
   },
-  "notion_exec_summary_row_url": null,
-  "notion_claude_summary_row_url": null,
+  "notion_exec_summary_row_url": "https://www.notion.so/359491728751810cb587ddd44cd27fac",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181ad9160fac08ff4b348",
   "notes": {
     "solo_vs_joint": "DISTINCT accounts. Solo = personal/portfolio track (compliance $9,900 EL + back-office Silver). Joint = ERS-side tax planning + compliance ($16,650 EL). Both share client Renee Mueller and same Insights Project.",
     "tyler_name_collision": "Tyler = MFJ spouse on 1040 AND Tyler = Renee's son on farm payroll. Same first name. Data integrity issue. Must clarify on next contact.",
