@@ -122,8 +122,9 @@
     "turn_8_strategies_opportunities": "done",
     "turn_9_operations_individuals": "done",
     "turn_10_provenance_changes": "done",
-    "turn_11_push_notion": "pending"
+    "turn_11_push_notion": "done"
   },
   "notion_exec_summary_row_url": "https://www.notion.so/33a49172875181918346e9e33abef1c3",
-  "notion_claude_summary_row_url": null
+  "notion_exec_summary_row_action": "updated_in_place",
+  "notion_claude_summary_row_url": "https://www.notion.so/3594917287518104b55ec4e4a436d69e"
 }
