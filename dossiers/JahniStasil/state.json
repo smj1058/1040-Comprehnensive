@@ -1,0 +1,86 @@
+{
+  "client": "Jahni Stasil",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751811ab383e507c1ed6a24",
+    "client_number": "10091912-01",
+    "mango_client_id": "939154",
+    "mango_display_name": "Jahni Stasil"
+  },
+  "household": {
+    "principals": ["Jahni M. Stasil", "Kevin Regan"],
+    "dependents": ["Baby Liam (born Feb 2026 — 2026 dependent only, not 2025)"],
+    "filing_status": "MFS (current) — MFJ UNRESOLVED (Vialto conflict with Kevin's employer BP)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181fe8235cf0e5b6e4cee",
+      "title": "Jahni Stasil",
+      "status": "existing row — properties populated this refresh"
+    }
+  ],
+  "sidecars": {
+    "tax_ascend": "https://www.notion.so/2f049172875180e1987beb34bcec529b",
+    "engagement_letter": "https://www.notion.so/3114917287518046aec2fe26f7b49dac",
+    "insights_project": "https://www.notion.so/2fb491728751808db614dce4cbfa7b4c",
+    "tax_planning_session": "https://www.notion.so/31949172875180ed84b9d93638b3c88a",
+    "claude_activity_log": "https://www.notion.so/33b4917287518187a795ee24a6bbfa58",
+    "files_links_main": "https://www.notion.so/33b491728751818bbb06f687f8d08840",
+    "files_links_el": "https://www.notion.so/33b49172875181dabd69f4664a0b52bd",
+    "files_links_exec": "https://www.notion.so/33b491728751816da20cd134472f3156",
+    "client_contact": "https://www.notion.so/30d49172875181c19b4df63a785b3b50",
+    "meeting_kickoff_2026-01-13": "https://www.notion.so/2fb491728751809f9876d5360777cf20",
+    "meeting_clarification_2026-01-23": "https://www.notion.so/2fb49172875180f6845be974fd010e6a",
+    "meeting_working_2026-01-28_rescheduled": "https://www.notion.so/2fb49172875180819fb7fbdee12c6814",
+    "meeting_delivery_2026-02-02_rescheduled": "https://www.notion.so/2fb491728751805a85b7de0268830bd9",
+    "meeting_delivery_2026-02-06_done": "https://www.notion.so/2ff49172875180c28311cd0350a4e094",
+    "meeting_taxplanning_2026-03-11_done": "https://www.notion.so/32249172875180f1aee2f7d706035ba1",
+    "meeting_action_ai24": "https://www.notion.so/33549172875181b7a6e5fdb0161ae872",
+    "meeting_action_ai25": "https://www.notion.so/335491728751819eb0b3fa0e4b582c61",
+    "meeting_action_ai31": "https://www.notion.so/33549172875181169d20c16f593eb506"
+  },
+  "entities_known": [
+    {"name": "Jahni M. Stasil", "type": "Individual", "notes": "Primary taxpayer"},
+    {"name": "Kevin Regan", "type": "Individual", "notes": "Spouse; Vialto CPA mandate; zero data on file"},
+    {"name": "440 WNY LLC", "type": "LLC", "formed": "2024-03-04", "notes": "Jahni + Kevin; not yet holding property"},
+    {"name": "Crosswind Properties LLC", "type": "LLC", "EIN": "33-4789497", "formed": "2025-04-24", "notes": "Kevin sole member; not yet holding property"},
+    {"name": "Rincon N104 LLC", "type": "LLC/Partnership", "notes": "50% Jahni, 50% Kevin's father-in-law; K-1 not received"},
+    {"name": "Henricksen-New York LLC", "type": "Employer", "EIN": "37-1711460", "notes": "Jahni's W-2 employer"}
+  ],
+  "properties_known": [
+    {"address": "71 71st St, NJ", "type": "triplex split-use", "purchased": "2022-04-08", "basis_est": 935000, "use": "Apt1=personal, Apt2=LTR, Basement=STR"},
+    {"address": "114 70th St, NJ", "type": "triplex", "purchased": "2025-07-02", "basis_est": 922000, "use": "LTR Section8 + Airbnb + basement PIS deferred to 2026"},
+    {"address": "Rincon N104, PR", "type": "condo STR", "purchased": "2024-06-25", "ownership_pct": 50, "basis_est": 207000},
+    {"address": "725 Martin St, Houston TX", "type": "personal residence", "purchased": "2025-07-02", "basis_est": 669000, "use": "personal only — NOT rental"}
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook (Google Sheets — URL on Account but not ingested)",
+    "Tax Planning Memo (SharePoint Word — URL on Tax Ascend but not ingested)",
+    "Tax Extraction (blank on Account top-level; Extraction 1040 on Insights Project not fully read)",
+    "Prior CPA Form 4562 / depreciation schedules"
+  ],
+  "flags": {
+    "fl_url_collision": false,
+    "css_engaged": false,
+    "mfj_resolved": false,
+    "str_hours_log_confirmed": false,
+    "extension_filed": "likely (per 4/7 session 4/15 in 8 days)",
+    "duplicate_account_row": "34249172-8751-8180-9840-dc6c5edf7d61 (John Stasil — same email/phone as Jahni; probable contact erroneously created as Account)"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opps": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changes": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181fe8235cf0e5b6e4cee",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181deb2ebca34628bbaea"
+}
