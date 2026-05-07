@@ -1,0 +1,81 @@
+{
+  "client": "Greg Whitmire",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "MEDIUM",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181cf8f69e7ac95707dcd",
+    "client_number": "07072305-01",
+    "mango_client_id": "937698"
+  },
+  "household": {
+    "principals": ["Greg Whitmire"],
+    "filing_status": "? Pending — workbook ingestion required",
+    "primary_email": "greg.whitmire@summerlinfinancial.com",
+    "phone": "928-208-6258"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/3424917287518194964cd68ad98d5cf4",
+      "status": "existing — updated Turn 11"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/32049172875180d787d4f0408ae5899a",
+    "tax_ascend": "https://www.notion.so/318491728751808781e2d6bf7da2929b",
+    "insights_project": "https://www.notion.so/2f54917287518033a418c11e8ec6a92c",
+    "email_thread_fileforms": "https://www.notion.so/342491728751810ca44df3cd6e687fef",
+    "email_thread_voicemail": "https://www.notion.so/34249172875181f999b5fbd820f2a878",
+    "meeting_2026_01_19_kickoff": "https://www.notion.so/2fb49172875180149c4de0b14599a68b",
+    "meeting_2026_02_17_clarification": "https://www.notion.so/30b491728751806b86ebe23b4da3854b",
+    "meeting_2026_02_26_clarification2": "https://www.notion.so/314491728751805487f6fdc6c2d234e7",
+    "meeting_2026_03_12_delivery": "https://www.notion.so/32249172875180cb8ab5fc70e6902ee6",
+    "fl_engagement_letter": "https://www.notion.so/33b49172875181a98c2cdfbcb1bcb8d6",
+    "fl_executive_summary": "https://www.notion.so/33b4917287518154b61bd885fcfe95d1",
+    "fl_greg_whitmire": "https://www.notion.so/33b49172875181689be3ef3ac5763bac",
+    "client_contact": "https://www.notion.so/30d4917287518101ac5fea9c703c89f7"
+  },
+  "entities_known": [
+    {
+      "name": "OPM Real Estate Investments LLC",
+      "aka": "OPM Real Estate LLC",
+      "type": "Real estate LLC",
+      "source": "Email:Fileforms Onboarding"
+    },
+    {
+      "name": "Summerlin Financial",
+      "type": "Operating entity / employer (inferred)",
+      "source": "ClientContact email domain + Insights workbook filename"
+    }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Account.Tax Extraction (empty)",
+    "Account.PBC Workbook (empty)",
+    "Account.Tax Planning Memo (empty)",
+    "Account.Meeting Prep Notes (empty)",
+    "Tax Memo SharePoint docx (2 URLs — not parsed)"
+  ],
+  "flags": {
+    "fl_url_collision": true,
+    "fl_url_collision_note": "Greg Whitmire F&L row Document Inventory + PBC PDF Package URLs identical to Spring Bengtzen + Alex Dykes — confirmed 3rd instance of system-wide template-default issue",
+    "meeting_status_inconsistency": "2026-02-17 meeting shows Pending despite Fathom recap existing",
+    "dual_el_mangoshare_links": "Two signed EL Mangoshare URLs — scope unclear (individual vs. entity vs. duplicate)",
+    "dual_tax_memo_urls": "Two Tax Memo SharePoint docx URLs — draft vs. final unclear",
+    "voicemail_jamie_gregson": "Missed voicemail 2026-04-10 from Jamie Gregson (484) 788-2822 — identity unresolved"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_index_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/3424917287518194964cd68ad98d5cf4",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751812eabb9d5fd3c04bd55"
+}
