@@ -1,0 +1,87 @@
+{
+  "client": "Greg Smith",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d4917287518147bfbfdc9c30745223",
+    "client_number": "07071908-01",
+    "mango_client_id": "937697",
+    "primary_email": "office@theroiguys.com",
+    "alt_email": "greg@theroiguys.com",
+    "business": "The ROI Guys (implied by email domain)"
+  },
+  "household": {
+    "principals": ["Greg Smith"],
+    "filing_status": "unknown",
+    "spouse": null
+  },
+  "exec_summary_db_rows": [],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2f14917287518081a3acf3407ab39a6c",
+    "tax_ascend": "https://www.notion.so/2f049172875180209a2ee2c9842372e7",
+    "tax_planning_session": "https://www.notion.so/304491728751807698bdcf3ac569d392",
+    "reporting_entity_smith_properties_llc": "https://www.notion.so/30b4917287518174a541cf35030766c6",
+    "reporting_entity_greg_smith_1040": "https://www.notion.so/30b49172875181ceb9b3d6a8a85e8c7f",
+    "tax_engagement_smith_properties_2024": "https://www.notion.so/30b491728751815aa9c7fa4f04062310",
+    "tax_engagement_greg_smith_1040_2024": "https://www.notion.so/30b4917287518112aefefc501cc40be3",
+    "tax_compliance_platinum_2024": "https://www.notion.so/dde49172875182c483b6012291c93471",
+    "tax_compliance_platinum_2025": "https://www.notion.so/e98491728751824985b301593d6ab339",
+    "mango_planning_old": "https://www.notion.so/33a491728751810ea7adfd337814b90d",
+    "mango_planning_new_tax_planning": "https://www.notion.so/34249172875181759249cadf36d5083d",
+    "mango_planning_new_platinum": "https://www.notion.so/3424917287518179acfbd5f9c7284c96",
+    "client_contact": "https://www.notion.so/30d491728751812ca07cfc5d90b0f6ba",
+    "email_address": "https://www.notion.so/2fc4917287518045b642c499f2c5a672"
+  },
+  "entities_known": [
+    {
+      "name": "Greg Smith",
+      "type": "1040",
+      "industry": "LT Rentals",
+      "reporting_entity_url": "https://www.notion.so/30b49172875181ceb9b3d6a8a85e8c7f",
+      "compliance_status": "2024 Complete (Tax Engagements)"
+    },
+    {
+      "name": "Smith Properties LLC",
+      "type": "1065",
+      "industry": "LT Rentals",
+      "reporting_entity_url": "https://www.notion.so/30b4917287518174a541cf35030766c6",
+      "compliance_status": "2024 Phase 1 In Progress (Tax Engagements)"
+    },
+    {
+      "name": "Platinum Property Holdings",
+      "type": "1065",
+      "industry": "LT Rentals",
+      "reporting_entity_url": null,
+      "compliance_status": "2024 Done (2026-04-24); 2025 04 Internal WP Preparation, ext 2026-09-15"
+    }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Planning Memo (URL on Tax Ascend, not parsed)",
+    "Analysis Workbook / Tax Extraction (not linked on Account)",
+    "PBC Workbook Platinum 2025 (PBC sent, nothing received)",
+    "Smith Properties LLC 2024 workbook (no link found)",
+    "Greg Smith 1040 workbook (no compliance project workbook linked)"
+  ],
+  "cross_client_flags": {
+    "daniel_huffman_outsourcing_workspace_gap": "Old SOW found in Greg Smith Mango workspace 937697 — referenced in Daniel Huffman Outsourcing row. Action: Stacy to resolve."
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/3594917287518177aac4cf98187e6df0",
+  "notion_claude_summary_row_url": "https://www.notion.so/3594917287518148988ece8948b36c0d",
+  "depth_mode": "medium",
+  "depth_rationale": "Tax Ascend active, tax memo sent, EL signed, 3 entities across 2 LLCs, no meetings on tracker, no email log. Rich compliance data via Tax Compliance Projects; planning layer stalled.",
+  "f_and_l_collision_check": "NOT PRESENT — no Files & Links rows found for Greg Smith Account",
+  "generated_at": "2026-05-07"
+}
