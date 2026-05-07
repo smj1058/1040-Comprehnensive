@@ -1,0 +1,72 @@
+{
+  "client": "GianCarlo Lies",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181cfb584db6379a9eee1",
+    "client_number": "07151219-01",
+    "mango_client_id": "937694",
+    "account_name": "GianCarlo Lies"
+  },
+  "household": {
+    "principals": ["GianCarlo Lies"],
+    "filing_status": "? — not confirmed; single individual on account",
+    "email": "giancarlo.lies@gmail.com",
+    "phone": "(412) 657-8454"
+  },
+  "exec_summary_db_rows": [
+    {
+      "title": "GianCarlo Lies",
+      "url": "https://www.notion.so/33b491728751816d99b4c7e58b557ad1",
+      "status": "existing row — properties populated in Turn 11"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef491728751808bbd35ffd2d1cd1119",
+    "tax_ascend": "https://www.notion.so/2f049172875180e58076da6174c51497",
+    "insights_project": "https://www.notion.so/2fd49172875180d0bb19fd427a2d90ed",
+    "tax_planning_session": "https://www.notion.so/31949172875180b9be5ae539dc9e6be0",
+    "tax_compliance_1040": "https://www.notion.so/d6b491728751823ab5ba8182997d7e7d",
+    "extension_tracker": "https://www.notion.so/342491728751815ea483ed7b8d4aaca9",
+    "contact_primary": "https://www.notion.so/30d49172875181328c83dcd9172bf702",
+    "email_address_record": "https://www.notion.so/2fc49172875180399ea4d69cdef5033b",
+    "mango_planning_project": "https://www.notion.so/34249172875181a99b13d3dd38e3e12b",
+    "mango_compliance_project": "https://www.notion.so/34249172875181e2ae98feeca34b2016"
+  },
+  "meetings": [
+    {"date": "2026-01-20", "type": "Full Insights - Clarification call", "status": "Cancelled", "url": "https://www.notion.so/2fb4917287518054b12beb7e70424dca"},
+    {"date": "2026-01-21", "type": "Full Insights - Clarification call", "status": "Cancelled", "url": "https://www.notion.so/2fb49172875180a1b5bff47b975af518"},
+    {"date": "2026-01-23", "type": "Full Insights - Clarification call", "status": "Cancelled", "url": "https://www.notion.so/2fb491728751804cb382fcd03f16a042"},
+    {"date": "2026-02-04", "type": "Full Insights - Clarification call", "status": "Done", "recap": "https://fathom.video/share/7bTsJQQueiaibKC3EfabjKCxMh-RjhCx", "url": "https://www.notion.so/2fb4917287518012a4a5cfd47796a226"},
+    {"date": "2026-02-11", "type": "Tax Insights - Delivery Call", "status": "Done", "recap": "https://fathom.video/share/W5gTyFwUDNT-qNffGVvJuEwVPzZbispm", "url": "https://www.notion.so/304491728751809d8a29ca6ea5a02ca7"}
+  ],
+  "entities_known": [],
+  "workbooks_not_accessed_this_refresh": [
+    "Analysis Workbook — URL accessible via Insights project (SharePoint xlsx) but not parsed",
+    "Extraction 1040 — URL accessible via Insights project (SharePoint xlsx) but not parsed",
+    "Tax Planning Memo — URL accessible via Tax Ascend (SharePoint Word doc) but not parsed"
+  ],
+  "flags": {
+    "fl_url_collision": false,
+    "fl_url_collision_note": "0 Files & Links rows — N/A",
+    "reporting_entities_count": 0,
+    "email_threads_count": 0,
+    "prior_claude_sessions": 0,
+    "depth_mode": "MEDIUM"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b491728751816d99b4c7e58b557ad1",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181b4b7b0c176b44d26a5"
+}
