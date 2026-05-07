@@ -1,0 +1,155 @@
+{
+  "client": "Brad Kanouse",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "Insights DELIVERED + Tax Memo SENT + Tax Planning Session DELIVERED with full transcript + 2 Cost Seg Proposal rows + 2 emails (1 active) + 6 Meeting Action Items + 4 meetings + S-Corp/Cost Seg/REPS/Solo 401k all in scope",
+  "account": {
+    "canonical_page_url": "https://www.notion.so/30d4917287518144a26add85b37ae335",
+    "canonical_client_number": "02041105-02",
+    "canonical_mango_client_id": "937668",
+    "canonical_to_delete_flag": true,
+    "sibling_page_url": "https://www.notion.so/30b49172875181c4bfb0d9130c9854a1",
+    "sibling_client_number": "02041105-01",
+    "sibling_icon": "🔴",
+    "sibling_holds_exec_summary": true,
+    "duplicate_reconciliation_flag": "HIGH"
+  },
+  "household": {
+    "principals": ["Brad Kanouse"],
+    "spouse_w2": true,
+    "children": ["age 8", "age 5"],
+    "filing_status_assumed": "MFJ",
+    "domicile": "MO (assumed per TPS state-allocation discussion)",
+    "rental_state": "KS"
+  },
+  "primary_contact": {
+    "name": "Brad Kanouse",
+    "email": "brad@gowithbreeze.com",
+    "phone": "(817) 726-2775",
+    "portal_access_flag_contact": "NO",
+    "portal_access_flag_el": "Customer Accessed",
+    "mismatch": true
+  },
+  "engagement": {
+    "tax_ascend_type": ["TAX INSIGHTS", "TAX PLANNING", "TAX COMPLIANCE"],
+    "planning_cadence": "Bi-Annual",
+    "el_status": "Signed",
+    "compliance_group_status": "Executed",
+    "deposit_paid": true,
+    "extension": "Accepted",
+    "el_price": 3275,
+    "mango_portal_invite": "Customer Accessed",
+    "pbc_list_status": "Received PBC items",
+    "pbc_list_sent_date": "2026-02-25",
+    "el_batch_added": "2026-01-30",
+    "tax_ascend_signed": "2026-02-02",
+    "insights_status": "DELIVERED",
+    "insights_delivered_date": "2026-01-29",
+    "tax_memo_status": "SENT",
+    "tax_memo_sent_date": "2026-02-10",
+    "planning_status": "Tax Planning Delivered",
+    "tps_mango_status": "step 6 (meeting delivered)",
+    "tps_delivered_date": "2026-02-19",
+    "cost_seg_proposal_status": "New - Enter in Portal (Approve: NO on both rows)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181bc8c41ffb62a1f16c9",
+      "id": "33b49172-8751-81bc-8c41-ffb62a1f16c9",
+      "parent_account": "sibling 30b49172...0c9854a1",
+      "summary_title": "Brad Kanouse",
+      "summary_type": "General",
+      "activity_log_entries": 1,
+      "note": "parented to sibling record, not canonical — see §10 #1"
+    }
+  ],
+  "sidecars": {
+    "el_tracker": "https://www.notion.so/2fb491728751803dbd3cf2c8a5e8503e",
+    "tax_ascend": "https://www.notion.so/2f049172875180368aecd8367c9edb3d",
+    "insights_project": "https://www.notion.so/2f549172875180478a54e6ee96b195b6",
+    "tax_planning_session": "https://www.notion.so/2fc49172875180d29b57cbe56238ec4e",
+    "contact": "https://www.notion.so/30d4917287518135ba15d18c8af18991",
+    "cost_seg_parent": "https://www.notion.so/34a4917287518098986cc369bacccae1",
+    "cost_seg_5420_juniper": "https://www.notion.so/35249172875180278426f8547484b7d9",
+    "email_2026_04_11": "https://www.notion.so/342491728751815d9c11edd67e7f8b9a",
+    "email_2026_04_13_costseg": "https://www.notion.so/34249172875181408b7cde75ff493b69",
+    "meeting_2026_01_21_clarification": "https://www.notion.so/2fb4917287518000863ac66c95f3a979",
+    "meeting_2026_01_28_delivery": "https://www.notion.so/2fb4917287518045b15bfedeb92f479f",
+    "meeting_2026_02_19_tps": "https://www.notion.so/30c49172875180ddad4af400255bbd9b",
+    "meeting_2026_03_31_touchbase": "https://www.notion.so/3344917287518045aa0cc2f501434fb5",
+    "ai_50_send_budgets": "https://www.notion.so/3354917287518167a7d0f56faed60241",
+    "ai_51_w2_adjust": "https://www.notion.so/335491728751819a817af95c0926c018",
+    "ai_52_solo401k_doc": "https://www.notion.so/33549172875181ce8facc79956244b87",
+    "ai_53_costseg_intake": "https://www.notion.so/33549172875181b18a57e84ac10f1934",
+    "ai_54_solo401k_setup": "https://www.notion.so/3354917287518173ba8cc9718b38c674",
+    "ai_55_portal_verify": "https://www.notion.so/3354917287518177b427c935838af193",
+    "fl_engagement_letter": "https://www.notion.so/33b4917287518198b2e2e5d6bff08730",
+    "fl_executive_summary": "https://www.notion.so/33b49172875181cdbd5dec54fdf2b0ef",
+    "fl_brad_kanouse_main": "https://www.notion.so/33b49172875181ae957bc39d30d5aa96",
+    "tax_memo_sharepoint_docx": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQCxhhBRRLWoSbs2AM4qMakDAXJqNyMd8cNfUzI28nFL7Gg?e=4OwZ4G",
+    "counting_file_xlsx": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBEJ0Vr_xRHT4a_AscSiEi7AR7BOVdeGOwA47ArKvPJMyw?e=JPXksJ",
+    "extraction_1040_xlsx": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQCWo4zl9FbLQpi27pG11VV1ATNe6U5oCCyYZoKl-rqsXnM?e=1NCDmQ",
+    "pbc_list_xlsx": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQApagVi_XcjSJudnsEEF9KAAeqbc4yqEVMMQ1IfDvSKlOk?e=IDz2Zg",
+    "signed_el_mangoshare": "https://app.mangoshare.com/share/feddbf4584607d8b0fd47445",
+    "pbc_folder_imaginetime": "https://app.imaginetime.com/firm/5331/workspaces/937668/files/18524212/folder",
+    "fellow_tps_recap": "https://fellow.link/5sgXNOvP",
+    "fathom_clarification_2026_01_21": "https://fathom.video/share/zs_S261jTjV4vpGBr6Z_Qx7srxK4q8BF",
+    "fathom_delivery_2026_01_28": "https://fathom.video/share/sCdBuQxe1rTA_im37HF3Ekiz2zQvFzWy"
+  },
+  "entities_known": [
+    {"name": "Wilhar LLC", "type": "S-Corp", "status": "Active", "notes": "Brad's brokerage operating co (DBA Go With Breeze); 2025 net profit $21K on $765K expenses; $48K paid to Brad"},
+    {"name": "Go With Breeze", "type": "DBA", "status": "Active", "notes": "Wilhar LLC d/b/a brokerage brand"},
+    {"name": "5420 Juniper Drive, Roeland Park KS 66205", "type": "Rental property", "status": "Cost Seg Estimate phase", "purchase_date": "2025-02-19", "purchase_price": 230000, "down_payment": 52000, "mortgage": 178000, "improvements": "$11K new roof", "estimated_bonus_dep": 40000, "study_fee": 750}
+  ],
+  "tax_strategy_stack": {
+    "total_projected_savings_2025": 10000,
+    "savings_breakdown": {"income_tax": 5460, "payroll_tax": 2540},
+    "strategies": [
+      {"id": 1, "name": "W-2 reduction (Wilhar) $6K→$4K/mo", "savings": 2500, "type": "payroll", "status": "AI-51 Open HIGH"},
+      {"id": 2, "name": "Solo 401k ~$12K/yr", "savings": null, "type": "deferral", "status": "AI-52 + AI-54 Open"},
+      {"id": 3, "name": "Cost Seg 5420 Juniper Dr ~$40K bonus dep", "savings": 5460, "type": "income tax", "status": "Proposal drafted Approve:NO; AI-53 Open"},
+      {"id": 4, "name": "Accountable plan / home office 10% mortgage", "savings": null, "type": "design", "status": "in design"},
+      {"id": 5, "name": "Hire kids (8 & 5) up to $15K/each via 1099", "savings": null, "type": "income shift", "status": "presented not implemented"},
+      {"id": 6, "name": "REPS election + rental loss unlock", "savings": null, "type": "qualifier", "status": "qualifying"},
+      {"id": 7, "name": "Augusta Rule (14-day rental)", "savings": null, "type": "optional", "status": "on-hold per IRS scrutiny"},
+      {"id": 8, "name": "State allocation MO + KS", "savings": null, "type": "compliance", "status": "in 2025 prep"},
+      {"id": 9, "name": "Separate LLC for RE (split from Wilhar S-Corp)", "savings": null, "type": "structural", "status": "proposed"}
+    ]
+  },
+  "high_opportunity_flags": [
+    {"flag": "S-Corp wage calibration", "status": "elected; W-2 adjustment AI-51 HIGH"},
+    {"flag": "Cost Seg eligibility", "status": "MET - $230K basis Juniper Dr"},
+    {"flag": "REPS qualification", "status": "MET - real estate broker hours"},
+    {"flag": "Solo 401k unfunded", "status": "MET - $12K capacity"}
+  ],
+  "open_action_items": {
+    "high": 3,
+    "med": 8,
+    "low": 5,
+    "total": 16
+  },
+  "files_links_url_collision_triggered": true,
+  "files_links_url_collision_clients_confirmed": ["Spring Bengtzen", "Alex Dykes & Mark Ferguson", "Brad Kanouse"],
+  "workbooks_not_accessed_this_refresh": [
+    "Counting File xlsx (linked on Insights project, not parsed this refresh)",
+    "Extraction 1040 xlsx (linked on Insights project, not parsed this refresh)",
+    "Tax Memo .docx (linked on Tax Ascend, not parsed this refresh)",
+    "Cost Seg Estimate Fellow recap (Apr 13 forwarded email body truncated)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude": "done",
+    "turn_7_actions": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_ops_individuals": "done",
+    "turn_10_provenance_changes": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181bc8c41ffb62a1f16c9",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181ec972de4e23b002810"
+}
