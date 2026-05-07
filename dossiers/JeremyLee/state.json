@@ -1,0 +1,107 @@
+{
+  "client": "Jeremy Lee",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181d49847c35e987722f4",
+    "client_number": "10251205-01",
+    "mango_client_id": "937649",
+    "mango_display_name": "Jeremy Lee"
+  },
+  "household": {
+    "principals": [
+      { "name": "Jeremy Lee", "role": "Primary", "email": "jeremy@realestategoto.com", "phone": "502-664-6256" },
+      { "name": "Ashley B. Lee", "role": "Spouse", "employer": "American National Red Cross", "w2": 71439 }
+    ],
+    "filing_status": "MFJ"
+  },
+  "exec_summary_db_rows": [
+    {
+      "title": "Jeremy Lee (empty body)",
+      "url": "https://www.notion.so/33b491728751819b889efadbe4f44568",
+      "note": "Existing empty row — populated by Turn 11 of this refresh"
+    },
+    {
+      "title": "📋 Tax Planning — Gary Aronov & Jeremy Lee — 2026-04-13",
+      "url": "https://www.notion.so/341491728751816aa67fd94ecef22128",
+      "note": "Joint row with Gary Aronov — do not amend; cross-reference only"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2f14917287518018973df5814702beea",
+    "tax_ascend": "https://www.notion.so/2f049172875180cca2caf89ea8977a8b",
+    "tax_planning_session": "https://www.notion.so/2ea491728751816793c9d573435f9529",
+    "meeting_2025_09_15_delivery": "https://www.notion.so/2fb4917287518057a7f5c3e76ce97d6b",
+    "meeting_2025_11_14_touchbase": "https://www.notion.so/2fb4917287518063a755fa117f00175c",
+    "meeting_2026_01_19_touchbase": "https://www.notion.so/2fb49172875180ad81e6fb4aded89afa",
+    "meeting_2026_01_23_tax_planning": "https://www.notion.so/2fb4917287518040b895d329ea3d11d8",
+    "email_fw_revised_extension": "https://www.notion.so/342491728751814eb1c5e7d5a29ccdb5",
+    "email_re_extension_gary": "https://www.notion.so/342491728751818dbf95cfe638f708e9",
+    "fl_engagement_letter": "https://www.notion.so/33b4917287518140a74ae1baf7bd2c33",
+    "fl_executive_summary": "https://www.notion.so/33b49172875181749bebd1267aa53b6d",
+    "fl_jeremy_lee": "https://www.notion.so/33b49172875181e19fabcadae99b3e3b",
+    "engagement_inquiry_inq2": "https://www.notion.so/333491728751816b9155fffc367755a3",
+    "service_request_sr1": "https://www.notion.so/32249172875181619a9bee63f1a9aaed",
+    "extensions_tracker": "https://www.notion.so/3424917287518102b175ed8a98719d96",
+    "insights_project": "https://www.notion.so/34149172875180a18cc1d6f62c4662aa",
+    "reporting_entity": "https://www.notion.so/30b491728751811ca62cdc7dbb330092",
+    "meeting_action_item_ai64": "https://www.notion.so/33549172875181da88add469de9ff05c",
+    "meeting_action_item_ai65": "https://www.notion.so/33549172875181878446edd1e2636f3e",
+    "meeting_action_item_ai66": "https://www.notion.so/33549172875181e9b9ebc37a9904946b",
+    "mango_planning_db": "https://www.notion.so/342491728751810696aff955fabbf032"
+  },
+  "entities_known": [
+    { "name": "Jeremy Lee (1040)", "type": "1040", "interest": "100%", "in_el": true },
+    { "name": "Millennial Movement Realty", "type": "S-Corp", "interest": "100%", "in_el": "assumed", "note": "Active S-Corp; payroll $11,400/yr; commissions ~$252K 1099-NEC" },
+    { "name": "Millennial Movement Investments", "type": "S-Corp → revoke → SMLLC", "interest": "100%", "in_el": "assumed", "note": "S-Corp election to be revoked; storage property" },
+    { "name": "REGT Holdings LLC", "type": "1120-S", "interest": "50% joint w/ Gary Aronov", "in_el": "TBD", "note": "K-1 (50%) $185K 2025; W-2 $27,100" },
+    { "name": "REGT Rentals LLC", "type": "1065", "interest": "50% joint w/ Gary Aronov", "in_el": "TBD", "note": "K-1 (50%) $30K; $622K building improvements" },
+    { "name": "Real Estate Go To LLC", "type": "1065/pass-through", "interest": "50% joint w/ Gary Aronov", "in_el": "TBD", "note": "K-1 (50%) $20K" },
+    { "name": "Aronov Holdings II LLC", "type": "1120-S", "interest": "50% joint w/ Gary Aronov", "in_el": "TBD", "note": "K-1 (50%) $23,573; K-1 discrepancy flagged" },
+    { "name": "We Buy Houses Louisville LLC", "type": "1120-S", "interest": "50% joint w/ Gary Aronov", "in_el": "TBD", "note": "K-1 (50%) ($26,952) loss" },
+    { "name": "Aronov Holdings III LLC", "type": "1120-S", "interest": "TBD", "in_el": false, "note": "S-Corp election dropped 2024 by prior preparer; EIN 88-0801814; amendment needed" }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "JeremyLee.xlsx (PBC Workbook — filename known, URL not hyperlinked on Account)",
+    "Tax Extraction — blank on Account",
+    "Tax Planning Memo (SharePoint Word — URL on Tax Ascend but requires auth)",
+    "Analysis Workbook (on Insights project but not fetched)"
+  ],
+  "key_numbers": {
+    "agi_2025_est": "622000+",
+    "federal_tax_without_cost_seg": "115000",
+    "federal_tax_with_cost_seg": "45000-55000",
+    "cost_seg_deductions_10_props": "170000-180000",
+    "cost_seg_deductions_louisville_office": "~100000",
+    "payments_on_file": "27643",
+    "safe_harbor_gap": "604",
+    "extension_payment": "complete",
+    "engagement_fee": "5225"
+  },
+  "opportunity_flags": {
+    "cost_seg_HIGH": true,
+    "s_corp_optimization_HIGH": true,
+    "entity_restructuring_MED": true,
+    "children_payroll_MED": true
+  },
+  "url_collision_check": {
+    "fl_document_inventory_collision": true,
+    "fl_pbc_pdf_package_collision": true,
+    "note": "Files & Links 'Jeremy Lee' row URLs identical to Spring Bengtzen — confirmed system-wide template-default issue"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b491728751819b889efadbe4f44568",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751819a831ef322f1af6d8c"
+}
