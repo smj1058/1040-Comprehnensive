@@ -1,0 +1,162 @@
+{
+  "client": "Sean Kennedy",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "full",
+  "depth_mode_reason": "Tax Planning advisory exemplar — TYPE A Tax Planning Memo SENT 2026-04-16, ~$89K projected savings across 8 strategies + REPS-via-partner posture + entity restructure (Hybrid Option 3 preferred). Insights DELIVERED 2026-03-11. Active 2025 extension thread + engagement decision pending.",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181b08a05f793da2e110b",
+    "page_id": "30d49172875181b08a05f793da2e110b",
+    "account_name": "Sean Kennedy",
+    "client_number": "19141125-01",
+    "mango_client_id": null,
+    "mango_display_name": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQAaeCNJkaS3TK1plGWlMskfAU_SjQg0T5oLknpMZiHK6ZM?e=SVP8ee",
+    "meeting_prep_notes_url": null,
+    "executive_summary_url": "https://www.notion.so/34149172875181bba47df34b88c2ba0c",
+    "primary_contact_url": "https://www.notion.so/30d49172875181c1b1d9db120f0ffd29",
+    "primary_contact_email": "seank154@hotmail.com",
+    "primary_contact_phone": "(412) 735-3926",
+    "primary_contact_address": null,
+    "portal_access": false,
+    "relationship_manager": "Seth Johnson (inferred from source inbox + Tax Ascend chain)",
+    "tax_ascend_url": "https://www.notion.so/2f049172875180dbba36e072d3bdc917",
+    "duplicate_account_url": "https://www.notion.so/33c49172875181d4a5c9f3c883ea21b9",
+    "duplicate_account_status": "fully empty record — log to cleanup queue, do NOT auto-delete (CLAUDE.md hard rule #8)"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Sean Kennedy",
+        "email": "seank154@hotmail.com",
+        "phone": "(412) 735-3926",
+        "role": "Real estate operator (flipping + rentals + property management + construction services), single filer"
+      },
+      {
+        "name": "Amy",
+        "last_name": null,
+        "role": "Significant other; REPS qualifier (per IRC §469(c)(7)) — not a joint filer; REPS strategy routes through partner-level filings",
+        "tax_compliance": "files her own return (separate from Sean per absence of MFJ flags)"
+      }
+    ],
+    "filing_status": "Single (Sean filed solo; Amy is significant other not joint filer)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/34149172875181bba47df34b88c2ba0c",
+      "summary_title": "Sean Kennedy — Tax Planning Memo",
+      "summary_type": "Tax Planning",
+      "tax_engagement_type": "Planning",
+      "state": "EXISTING ROW — populated with TL;DR + memo deliverable reference; needs 📄 Dossier URL + 5 emoji-anchor URLs + Last Synthesized 2026-04-22 on Turn 11"
+    }
+  ],
+  "sidecars": {
+    "tax_planning_memo_exec_summary": "https://www.notion.so/34149172875181bba47df34b88c2ba0c",
+    "claude_summary_memo_production": "https://www.notion.so/341491728751813d8c08f83a75a068d4",
+    "tax_ascend": "https://www.notion.so/2f049172875180dbba36e072d3bdc917",
+    "insights_project": "https://www.notion.so/2fd4917287518007bf42e30ec358e103",
+    "client_contact_primary": "https://www.notion.so/30d49172875181c1b1d9db120f0ffd29",
+    "email_thread_2025_extension": "https://www.notion.so/34249172875181a6870bc3353f61fd22",
+    "meeting_insights_clarification_2026_03_04": "https://www.notion.so/319491728751802a83b5fa3918fb91d5",
+    "meeting_insights_delivery_2026_03_11": "https://www.notion.so/322491728751804e9c83edb65f5a23d1",
+    "fathom_delivery_recap": "https://fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka",
+    "tax_memo_docx_sharepoint": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQAaeCNJkaS3TK1plGWlMskfAU_SjQg0T5oLknpMZiHK6ZM?e=SVP8ee",
+    "extraction_1040_xlsx": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQB_6jMCJXATSY1s-rc-9yrNAVqhXgx5yJlXdjB7pDw7iJM?e=9Ya8Rd",
+    "counting_file_xlsx": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBXaGK26juXQp815w3QBLp6AY-XmINWC6l-OBhWrKzgXsA?e=VLrV3h",
+    "tax_returns_folder": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgAVjlkkerURRq9Cw8cXF0g8Ad6ri9NWAF34uvJ7aSKvBUg?e=LvU2gc",
+    "insights_sharepoint_root": "https://subledgesl.sharepoint.com/sites/Insights/_layouts/15/viewer.aspx?sourcedoc=%7Bef4c312f-2585-49b5-bb1e-5758d24e81f1%7D",
+    "request_list_tracker": "https://subledgesl.sharepoint.com/:x:/r/sites/Insights/_layouts/15/Doc.aspx?sourcedoc=%7B0DA9DC18-B216-4329-9F6E-E33B8A494BAC%7D&file=Template%20for%20Tax%20Insight%20Request%20List%20Tracker.xlsx&action=default&mobileredirect=true"
+  },
+  "engagement_status": {
+    "tax_ascend_type": ["TAX INSIGHTS", "TAX PLANNING"],
+    "tax_ascend_date_signed": "2026-01-22",
+    "tax_ascend_date_ascended": "2026-04-06",
+    "insights_status": "DELIVERED",
+    "insights_delivered_date": "2026-03-11",
+    "insights_received_files": "5/5",
+    "insights_checked_by_tax_team": true,
+    "tax_memo_status": "SENT",
+    "tax_memo_sent_date": "2026-04-16",
+    "planning_status": "Tax Memo - Created not sent (NOTE: Tax Ascend `Planning Status` field still says 'Created not sent' but `TAX MEMO STATUS` was bumped to SENT and `date:Tax Memo Sent` populated to 2026-04-16 — internal inconsistency on Tax Ascend record, flagged for fix in next refresh)",
+    "compliance_status": "To Check (gap)",
+    "mango_compliance_engagement": "To check (gap)",
+    "mango_planning_projects": "To Check (gap)",
+    "engagement_letters_count": 0,
+    "engagement_letter_decision_pending": "Hybrid Option 3 preferred per memo notes",
+    "files_and_links_count": 0,
+    "reporting_entities_count": 0,
+    "engagement_inquiries_count": 0,
+    "tax_engagements_count": 0,
+    "cost_seg_engagements_count": 0,
+    "cost_seg_proposals_count": 0
+  },
+  "entities_proposed_not_formed": [
+    "S-Corp holding co (TBD name)",
+    "RE Holding Co (TBD name)",
+    "Flipping LLC (TBD name)",
+    "PM (Property Management) LLC (TBD name)",
+    "Construction LLC (TBD name)"
+  ],
+  "tax_strategies_summary": {
+    "total_projected_annual_savings_usd": 89000,
+    "total_identified_deductions_usd": 464000,
+    "strategies": [
+      {"name": "Cost Seg — 3 properties", "savings_usd": 45000, "status": "memo-only"},
+      {"name": "§179 dump truck", "savings_usd": 20000, "status": "memo-only"},
+      {"name": "REPS via Amy", "savings_usd_floor": 11000, "status": "posture-documentation-needed"},
+      {"name": "Solo 401(k)", "savings_usd": 6000, "status": "memo-only (sequencing-dep on S-Corp)"},
+      {"name": "Hiring children", "savings_usd": 6000, "status": "future-state"},
+      {"name": "Accountable plan", "savings_usd": null, "status": "memo-only"},
+      {"name": "Augusta Rule §280A(g)", "savings_usd": null, "status": "memo-only"},
+      {"name": "Entity restructure", "savings_usd": null, "status": "structural backbone — Hybrid Option 3 preferred"}
+    ]
+  },
+  "action_items_summary": {
+    "high_count": 5,
+    "med_count": 10,
+    "low_count": 8,
+    "total": 23,
+    "blockers": ["SK-001 (4868 confirmation)", "SK-003 (Hybrid Option 3 EL signature)", "SK-005 (Amy REPS posture)"]
+  },
+  "opportunity_flags_summary": {
+    "high_confidence_active": ["Cost Seg 3 properties ($45K)", "S-Corp election", "§179 dump truck ($20K)", "REPS via Amy ($11K+)"],
+    "compliance_exposure_high": ["2025 extension verification gap", "Engagement letter gap", "Amy REPS exposure"],
+    "compliance_exposure_med": ["Mango plumbing not wired"],
+    "compliance_exposure_low": ["Account-record duplicate"]
+  },
+  "files_and_links_url_collision_triggered": true,
+  "files_and_links_url_collision_detail": "Insights Project record has `Analysis Workbook` and `Tax Returns Folder Link` both resolving to the same SharePoint folder URL (IgAVjlkkerURRq9Cw8cXF0g8Ad6ri9NWAF34uvJ7aSKvBUg). Adds to running 5/9 collision tally per pre-flight.",
+  "workbooks_not_accessed_this_refresh": [
+    "Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx — body not pulled",
+    "Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx — body not pulled",
+    "2024 1040 Extraction xlsx — body not pulled",
+    "Counting File xlsx — body not pulled",
+    "Tax Returns Folder — folder listing not pulled",
+    "Fathom delivery call transcript — not pulled",
+    "Fellow clarification call recap — not pulled",
+    "Outlook full body of 2026-04-10 extension thread — only truncated Notion Exec Summary captured"
+  ],
+  "rate_limited_queries_this_refresh": [
+    "Files & Links DB query (collection://4432a66e-8f29-480b-8bae-9b88525ae841) — 429 rate limit; verified 0 rows via Account record's empty Files & Links relation property",
+    "Reporting Entities DB query (collection://9c91286b-e233-45f2-98b0-f065544fb89c) — 429 rate limit; verified 0 rows via Account record's empty Reporting Entities relation property",
+    "Engagement Letters DB query (collection://2ef49172-8751-8056-99e0-000ba1b5dd54) — completed; returned 0 rows"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done (consolidated)",
+    "turn_2_overview_profile": "done (consolidated)",
+    "turn_3_email": "done (consolidated)",
+    "turn_4_meetings": "done (consolidated)",
+    "turn_5_documents": "done (consolidated)",
+    "turn_6_claude_work": "done (consolidated)",
+    "turn_7_action_items": "done (consolidated)",
+    "turn_8_strategies_flags": "done (consolidated)",
+    "turn_9_operations_individuals": "done (consolidated)",
+    "turn_10_provenance_changelog": "done (consolidated)",
+    "turn_11_push_notion": "done",
+    "notion_exec_summary_row_url": "https://www.notion.so/34149172875181bba47df34b88c2ba0c",
+    "notion_claude_summary_row_url": "https://www.notion.so/359491728751810488fee4d2821e4ef3"
+  }
+}
