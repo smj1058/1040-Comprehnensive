@@ -1,0 +1,201 @@
+{
+  "client": "Andy Karabinos",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "Full",
+  "depth_mode_reason": "Tommy-class 8-entity partnership stack + Tax Memo SENT 2026-02-18 + 3 ELs ($38,325 committed) + Insights DELIVERED + 4 meetings + active HIGH-Escalation email thread (Nosky 3-yr unfiled) + 11 structured Tax Planning Action Items DB rows + cost seg quantified ~$935K Andy share",
+
+  "account": {
+    "page_url": "https://www.notion.so/30b4917287518189a538f9ce46408e57",
+    "page_id": "30b49172-8751-8189-a538-f9ce46408e57",
+    "client_number": "01251119-01",
+    "mango_client_id": "939156",
+    "mango_display_name": null
+  },
+  "joint_account": {
+    "page_url": "https://www.notion.so/30d49172875181ddb232f4b70fb47e04",
+    "page_id": "30d49172-8751-81dd-b232-f4b70fb47e04",
+    "client_number": "20250125-01",
+    "mango_client_id": "939156",
+    "name": "Tommy Harr & Andy Karabinos",
+    "resolution_note": "Confirmed as the legitimate joint partnership Account — RESOLVES Tommy dossier §4.2 dual-Account flag (NOT a duplicate)."
+  },
+
+  "household": {
+    "primary": "Andy Karabinos",
+    "ssn": "294-92-9041",
+    "current_address": "7097 Harlem Road, Westerville OH 43082",
+    "filing_status": "Files separately (not MFJ)",
+    "spouse": null,
+    "partner_50_50": "Tommy Harr (across LHI, COGS ULTD, Real Side; 0.05% on LHG)",
+    "operations_principal": "Samantha Bates (sami@legacyohiohomes.com) — corrected from Tommy §11.1 inference",
+    "prior_preparer": "Donald J. Miskinis, CPA — Cornerstone Legacy Financial Advisors, Chagrin Falls OH"
+  },
+
+  "exec_summary_db_rows": {
+    "joint_tax_planning": {
+      "page_url": "https://www.notion.so/31249172875181a4adc3d6396b434c86",
+      "title": "📋 Tax Planning — Tommy Harr & Andy Karabinos",
+      "summary_type": "Tax Planning",
+      "linked_account": "joint (30d49172…7e04) — Action #26: also link to Andy individual"
+    },
+    "andy_individual": "to be created or surfaced via this refresh's Notion push"
+  },
+
+  "sidecars": {
+    "andy_account": "https://www.notion.so/30b4917287518189a538f9ce46408e57",
+    "joint_account": "https://www.notion.so/30d49172875181ddb232f4b70fb47e04",
+    "el_andy": "https://www.notion.so/303491728751808f986dcc940d44ede4",
+    "el_tommy_personal": "https://www.notion.so/310491728751801481f1d6294f637b5a",
+    "el_joint": "https://www.notion.so/30449172875180259d0be0482ab4af89",
+    "joint_tax_planning_exec_summary": "https://www.notion.so/31249172875181a4adc3d6396b434c86",
+    "tax_ascend_andy": "https://www.notion.so/304491728751806d9a2cd31ff4116cfa",
+    "insights_project_joint": "https://www.notion.so/2f5491728751808f9d93cb71abebe0e3",
+    "reporting_entity_andy_1040": "https://www.notion.so/30b491728751810490f3f385f4db6455",
+    "client_contact_andy": "https://www.notion.so/30d49172875180d69eb5fae6b3197909",
+    "meeting_2025_12_29_kickoff": "https://www.notion.so/2fb49172875180888e73e9c986397020",
+    "meeting_2026_01_21_clarification": "https://www.notion.so/2fb491728751804f816cc957a06b3501",
+    "meeting_2026_02_04_delivery": "https://www.notion.so/30c4917287518068a7a2fc82fda23bbe",
+    "meeting_2026_02_11_joint_tommy_andy": "https://www.notion.so/30449172875180ed92f8e8f541eeb727",
+    "email_2026_04_13_open_items": "https://www.notion.so/34249172875181f8a4dad09e3ff17268",
+    "claude_summary_cost_seg_pipeline": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "fl_joint_engagement_letter": "https://www.notion.so/33b49172875181e2b842c0a1d91e6f1f",
+    "fl_joint_main": "https://www.notion.so/33b49172875181f3bbd0eb6ccb9c8a58",
+    "fl_joint_third": "https://www.notion.so/33b49172875181d1b9acf0c7cb8d3974",
+    "action_item_AI_41": "https://www.notion.so/3354917287518190a66cd38657f43802",
+    "action_item_AI_42": "https://www.notion.so/33549172875181d3b1edd5f375e2a9c1",
+    "tax_memo_url_andy_sharepoint": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQBZVc8MoaF6SbOdZ34d2XlpAUt0glQu5Ixb9vJ_qn5G62E?e=OMIhRV",
+    "extraction_1040_andy": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQD4HsOr-Df_TayhF4Zn3XIdAXXb4TkarMDzYuI9wBox9m8?e=hDRXAF",
+    "extraction_1040_tommy": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBYuP-caIMQS4bFdjWtjmCAAUnOisU-9YDX3XM5pP0YjhI?e=bb8aDU",
+    "counting_file": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQDS6TDT-VaXR5MV0psqqPm7ATyHOAIf0_5PfPN8dsuj_5g?e=J3oSLb",
+    "client_folder_sharepoint": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDDHPn5hsuoSYh7rsMSaIUFAZvF2rUXskXkp0Yb8XffUs8?e=wkWFz7",
+    "request_list_tracker": "https://subledgesl.sharepoint.com/:x:/s/Insights/IQA9BwNF3CBdTYo-QQ-6yiPOAe-_UAm7YuKyt3AqD0Kl8gE?e=a1fhh2",
+    "lhi_lhg_property_inventory_subpage": "https://www.notion.so/33c49172875181ca8320ff9c903a9769"
+  },
+
+  "engagement_letters": [
+    {"role": "Andy personal", "status": "Signed/Executed", "price": 2300, "deposit_paid": true, "extension": null, "url": "https://www.notion.so/303491728751808f986dcc940d44ede4"},
+    {"role": "Tommy personal", "status": "Nothing Received Yet (mid-flow inconsistency — Action #22)", "compliance_group_status": "Executed", "price": 2300, "deposit_paid": true, "extension": null, "url": "https://www.notion.so/310491728751801481f1d6294f637b5a"},
+    {"role": "Joint partnership compliance", "status": "Signed", "compliance_group_status": "Pending Check (Action #23)", "price": 33725, "deposit_paid": true, "extension": "Accepted", "url": "https://www.notion.so/30449172875180259d0be0482ab4af89"}
+  ],
+  "total_engagement_value": 38325,
+
+  "entities_known": [
+    {"name": "Legacy Home Investments LLC", "ein": "85-2307708", "form": "1065", "andy_pct": 50, "tommy_pct": 50, "activity": "Active flips/wholesale + 44 rentals; office 199 E Welch Ave"},
+    {"name": "COGS ULTD LLC", "ein": "87-3096327", "form": "1065", "andy_pct": 50, "tommy_pct": 50, "andy_role": "Partnership Representative", "activity": "Flip/wholesale $14M gross; 1% gross margin"},
+    {"name": "Real Side Real Estate Education LLC", "ein": "92-2134029", "form": "1065", "andy_pct": 50, "tommy_pct": 50, "activity": "RE education $619K revenues"},
+    {"name": "Legacy Home Group LLC", "ein": "84-3644170", "form": "1065", "andy_pct": 0.05, "tommy_pct": 99.95, "activity": "Pure rental portfolio 9 props"},
+    {"name": "B&M Management Company LLC", "ein": "88-3155590", "form": "1065", "andy_pct": "TBD", "tommy_pct": "TBD", "activity": "Property management — at center of mgmt-fee netting amendment"},
+    {"name": "Legacy Ohio Homes LLC", "ein": "88-3155939", "form": "1065", "andy_pct": "TBD", "tommy_pct": "TBD", "activity": "Active income; $69K ordinary income 2024"},
+    {"name": "4900 Reed LLC", "ein": "99-5047537", "form": "1065", "andy_pct": "TBD~50", "tommy_pct": "TBD~50", "activity": "RE rental; ($78,629) loss 2024"},
+    {"name": "Like Home LLC", "ein": "88-3066096", "form": "1065", "andy_pct": "TBD", "tommy_pct": "TBD", "activity": "Dormant"},
+    {"name": "Nosky LLC", "ein": "TBD", "form": "TBD", "andy_pct": "TBD", "tommy_pct": "TBD", "activity": "⚠️ 3 YRS UNFILED 2022/2023/2024; last filed 2021 (prior accountant Miskinis failure)"},
+    {"name": "Hanford Brownstone LLC", "ein": "in hand 3/12/2026", "form": "TBD", "activity": "2025 formation; first-year return"},
+    {"name": "Legacy x Blimpton LLC", "ein": "in hand 3/12/2026", "form": "TBD", "activity": "2025 formation; first-year return"}
+  ],
+
+  "key_numbers": {
+    "amendment_savings_andy_share": 45000,
+    "amendment_savings_tommy_share": 65000,
+    "amendment_savings_combined": 110000,
+    "amendment_cycle_years": [2022, 2023, 2024],
+    "amendment_pricing_surcharge_pct": 20,
+    "tommy_2024_se_income": 532565,
+    "tommy_2024_se_tax": 29217,
+    "tommy_2024_amt": 23156,
+    "tommy_2024_total_tax": 52981,
+    "tommy_2024_balance_due": 48585,
+    "tommy_2024_agi": -25570,
+    "andy_2024_se_income_estimated_50pct": "~520K (LHI 50% + COGS 50% + Real Side 50% — excludes LHG which is Tommy 99.95%)",
+    "lhi_buildings_gross": 7960000,
+    "lhg_basis_estimated": 2000000,
+    "lhi_cost_seg_potential_post_2022": 1870000,
+    "andy_lhi_cost_seg_share_50pct": 935000,
+    "lhi_partners_capital_2024_end": -3833560,
+    "lhi_distributions_2024": 3400000,
+    "cogs_ultd_gross_receipts": 14023337,
+    "cogs_ultd_cogs": 13861635,
+    "cogs_ultd_gross_margin_pct": 1,
+    "cogs_ultd_total_assets_2023": 4770000,
+    "cogs_ultd_total_assets_2024": 13970000,
+    "199_e_welch_zero_rents": true,
+    "199_e_welch_total_expenses_2024": 657394,
+    "64_e_college_ave_rental_loss_2024": -14760,
+    "se_savings_combined_per_entity_s_corp_election": "36000-70000+/yr",
+    "rent_charging_combined_savings_at_50K_market_rent": 7000,
+    "reps_grouping_combined_potential": "100000-200000+/yr",
+    "mangoshare_workspace_original": "firm/5331/workspaces/939156",
+    "mangoshare_workspace_new": "firm/5331/workspaces/991320"
+  },
+
+  "discoveries_this_refresh": [
+    "Joint Account 30d49172…7e04 confirmed legitimate (RESOLVES Tommy §4.2 dual-Account flag)",
+    "Tommy §11.1 Sami-Bates-as-spouse INCORRECT — Madison B. Harr is spouse; Sami is operations",
+    "Nosky LLC 3-yr unfiled returns ESCALATION (2022/2023/2024)",
+    "Hanford Brownstone + Legacy x Blimpton 2025 formations",
+    "Mangoshare workspace split: 939156 → 991320",
+    "Bryan Szpindor inferred as Andy's attorney (handling S-corp formation)",
+    "64 E College Ave personal-use risk for Andy",
+    "Files & Links system-wide URL collision — 3rd-client confirmation (Spring + Alex + joint Tommy/Andy)",
+    "Tommy personal EL mid-flow inconsistency (status conflicts)",
+    "Andy-personal extension status unknown (no Extension field set on his EL)",
+    "AMT issue is Tommy-only (Andy AMT was correct)",
+    "Andy is COGS ULTD Partnership Representative",
+    "Asymmetric service depth: 2/25 Tax Planning was Tommy-only; 4/9-4/14 extension thread was Tommy-only; 4/13 Mangoshare/Nosky thread is Andy-primary",
+    "Cost seg quantified at $935K Andy share (vs Tommy §9.1 qualitative-only)"
+  ],
+
+  "open_action_items_count": {
+    "total": 26,
+    "ESCALATION": 1,
+    "HIGH": 11,
+    "MED": 9,
+    "LOW": 5
+  },
+  "open_action_items_top_5": [
+    "#2 Nosky LLC unfiled returns 2022/2023/2024 (HIGH ESCALATION)",
+    "#5 Confirm S-corp formation handler (Andy's attorney vs FileForm)",
+    "#6 Amendment savings analysis Andy $45K + Tommy $65K",
+    "#13 Cost seg engagement on LHI ~$935K Andy share",
+    "#21 System-wide Files & Links URL collision sweep (3-client confirmed)"
+  ],
+
+  "workbooks_not_accessed_this_refresh": [
+    "Andy_Karabinos_Tax_Planning_Memorandum_2026.docx (Tax Memo SENT — URL captured, content not parsed)",
+    "Andy 2022/2023/2024 Extraction xlsx files (URLs captured, content not parsed)",
+    "Tommy 2022/2023/2024 Extraction + Analysis xlsx files (URLs captured)",
+    "Counting File xlsx (URL captured)",
+    "Request List Tracker xlsx (URL captured)",
+    "Harr+Karabinos_Transcript.docx (URL captured)",
+    "TaxMeeting_26.02.25_Harr.docx (URL captured)",
+    "OneDrive_1_2-25-2026.zip (URL captured)",
+    "LHI & LHG Property Inventory subpage 33c49172…9769 (referenced from joint Exec Summary; not pulled)"
+  ],
+
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done — Exec Summary row 35949172…de28 created (Andy individual); Claude Summary log row 35949172…105a created"
+  },
+
+  "notion_exec_summary_row_url": "https://www.notion.so/35949172875181d999cdea1a6562de28",
+  "notion_exec_summary_row_id": "35949172-8751-81d9-99cd-ea1a6562de28",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181dda723e4d65edf105a",
+  "notion_claude_summary_row_id": "35949172-8751-81dd-a723-e4d65edf105a",
+
+  "cross_dossier_propagation_to_tommy_next_refresh": [
+    "Resolve §4.2 dual-Account flag — `30d49172…7e04` is the legitimate joint Account, not a duplicate",
+    "Correct §11.1 — Sami Bates is operations, NOT Tommy's spouse; Madison B. Harr is the spouse",
+    "Update §7 Action #17 with Bryan Szpindor inference: likely Andy's attorney handling S-corp formation",
+    "Quantify §9.1 LHI cost seg — Tommy 50% share = ~$935K incremental deductions per 4/8 Claude session",
+    "Cross-link to dossiers/AndyKarabinos/dossier.md as the partner reference"
+  ]
+}
