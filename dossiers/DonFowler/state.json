@@ -1,0 +1,94 @@
+{
+  "client": "Don & Christina Fowler",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30b4917287518140a497eadeb0956108",
+    "client_number": "04140618-01",
+    "mango_client_id": "937686",
+    "canonical_note": "Canonical account. A to-delete duplicate exists at notion.so/30d49172875181a3af5ad2fb9bd8f656 (Client #04140618-02, To Delete: YES) — sidecar records (EL, Files & Links, Tax Ascend, Tax Planning Session, 1 meeting) are still linked to the to-delete row; migration required before deletion."
+  },
+  "household": {
+    "principals": ["Don Fowler", "Christina Fowler"],
+    "filing_status": "MFJ (implied by joint EL)",
+    "primary_email": "dfowler@realeflow.com",
+    "primary_phone": "(954) 554-9134"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b4917287518182af1ccf406d897743",
+      "status": "existing — populated by Turn 11 of this refresh"
+    }
+  ],
+  "sidecars": {
+    "exec_summary_existing_row": "https://www.notion.so/33b4917287518182af1ccf406d897743",
+    "engagement_letter": "https://www.notion.so/2ef491728751805d9800c2727ff3b36c",
+    "insights_project": "https://www.notion.so/329491728751801b8fe0cfce6237e184",
+    "tax_ascend": "https://www.notion.so/2f0491728751802b95e5d46aaf1d028a",
+    "tax_planning_session": "https://www.notion.so/2ea49172875181f99864ee2ef50f64b1",
+    "tax_planning_meeting_1": "https://www.notion.so/32f4917287518029a4b5cc6af1f45bb7",
+    "tax_planning_meeting_2": "https://www.notion.so/32f491728751808ba1c9ea216469875b",
+    "reporting_entity": "https://www.notion.so/30b4917287518148a3fef94e9a5dc6af",
+    "tax_engagement_planning_2024": "https://www.notion.so/30b4917287518155b73df0c82f72bb77",
+    "tax_engagement_compliance_2024": "https://www.notion.so/30b4917287518159ad6dcfc0ad186de4",
+    "outsourcing_assignment": "https://www.notion.so/30c491728751804d9b32df9f9c6c68ca",
+    "tax_compliance_project": "https://www.notion.so/a9a491728751827d9bb401d244b365e5",
+    "contact_record": "https://www.notion.so/30d4917287518156bed4dd9a76fe71e8",
+    "fl_engagement_letter": "https://www.notion.so/33b49172875181b3926cf211f123ac2f",
+    "fl_executive_summary": "https://www.notion.so/33b491728751815ebb32eef1a15825c1",
+    "fl_don_fowler": "https://www.notion.so/33b491728751811aaf78ffb047f5c0d6",
+    "meeting_2025-10-16_insights_delivery": "https://www.notion.so/2fb49172875180838d79d10c572bafe0",
+    "meeting_2026-01-07_rescheduled": "https://www.notion.so/2fb49172875180949da8e7c5d021b40b",
+    "meeting_2026-01-15_tax_planning_1": "https://www.notion.so/2fb4917287518051892df7688f72fa09",
+    "meeting_2026-03-26_tax_planning_2": "https://www.notion.so/33049172875180d1a638c5899f5594ce"
+  },
+  "entities_known": [
+    { "name": "Don & Christina Fowler (1040)", "type": "Personal return", "status": "In Progress" },
+    { "name": "Waterside Advisors", "type": "S Corp", "status": "Active since Oct/Nov 2025" },
+    { "name": "Waterside Re LLC", "type": "LLC (forming)", "status": "To be established" },
+    { "name": "Tax Professionals LLC", "type": "LLC", "status": "Active — $6K/mo royalty income" },
+    { "name": "Real Flow", "type": "Employer + K-1 investment", "status": "Active — K-1 pending (August)" },
+    { "name": "Seven Diamonds", "type": "Investment K-1", "status": "Active — K-1 pending (August)" }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Ascend Analysis File (omitted in Notion fetch)",
+    "Tax Ascend Extraction File (omitted in Notion fetch)",
+    "PBC Workbook (not linked on Account top-level)",
+    "Tax Extraction (not linked on Account top-level)",
+    "Tax Planning Memo (not linked on Account top-level)",
+    "Outsourcing Missing Information xlsx (attachment — not downloaded)"
+  ],
+  "open_action_items_count": {
+    "total": 24,
+    "HIGH": 5,
+    "MED": 13,
+    "LOW": 6
+  },
+  "opportunity_flags": {
+    "cost_seg_HIGH": "STR acquisition ~$1M in pipeline (FL/GA/SC/NC); Seth committed to cost seg study on purchase",
+    "s_corp_MED": "Waterside Advisors S Corp active; Tax Professionals LLC royalty income classification to confirm",
+    "augusta_rule_active": "~$2,500-$3,000 deduction in draft return",
+    "solo_401k_active": "Waterside Advisors plan to be established (Action M1-5 open)"
+  },
+  "data_integrity_flags": [
+    "Duplicate Account: to-delete row 30d49172875181a3af5ad2fb9bd8f656 still has EL + Files & Links + Tax Ascend + Tax Planning Session linked — must migrate before deletion",
+    "Files & Links rows linked to to-delete Account, not canonical",
+    "Files & Links 'Don Fowler' row Document Inventory + PBC PDF Package URLs are template defaults (identical to Spring Bengtzen and Alex Dykes) — third occurrence of system-wide flag",
+    "Engagement Letter TEMP FILTER: NOT IN ACCELO? — confirm"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunities": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b4917287518182af1ccf406d897743",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751817e9837c1391fb5695b"
+}
