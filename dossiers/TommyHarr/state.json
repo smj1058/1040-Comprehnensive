@@ -1,0 +1,107 @@
+{
+  "client": "Tommy Harr",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/3424917287518141812be02393d26cb1",
+    "page_id": "3424917287518141812be02393d26cb1",
+    "account_name": "Tommy Harr",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_display_name": "Tommy Harr",
+    "primary_contact_email": "realsiderealestate@gmail.com",
+    "primary_contact_phone": "(614) 406-0997",
+    "alt_contact_email": "tom@legacyohiohomes.com",
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null
+  },
+  "household": {
+    "principals": [
+      {"name": "Tom (Tommy) Harr", "email": "tom@legacyohiohomes.com", "role": "Operator/principal — Legacy Ohio Homes + COGS ULTD"},
+      {"name": "Andy Karabinos", "email": null, "role": "50/50 partner with Tommy on multi-entity stack (LHI rentals, COGS ULTD, Legacy Ohio Homes, B&M Management)"}
+    ],
+    "filing_status": "Unknown — likely MFJ given W-2 + multi-entity K-1 structure (Sami Bates referenced as CC'd in thread, possibly spouse)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/34249172875181859bb5c392c42ac4a2",
+      "summary_title": "Tommy Harr",
+      "state": "shell — needs full populate"
+    }
+  ],
+  "sidecars": {
+    "email_thread_april_15_extension": "https://www.notion.so/34249172875181ae9397f58a504e0957",
+    "cost_seg_proposals": [
+      "https://www.notion.so/3484917287518040b69af7cc6bdb7344",
+      "https://www.notion.so/34849172875180d682e8f1692927f51a",
+      "https://www.notion.so/348491728751805dbdf3e2fb6b92371c",
+      "https://www.notion.so/34849172875180c499b7c5dd7d6bfa3a",
+      "https://www.notion.so/34849172875180d691b9fbd812807347",
+      "https://www.notion.so/34849172875180d1978ed85383074d6f",
+      "https://www.notion.so/34849172875180e2a1a8f0cedc99c7ee",
+      "https://www.notion.so/348491728751806486b1c1f3b6fed00b",
+      "https://www.notion.so/3484917287518032803ce63b16046ae5",
+      "https://www.notion.so/34849172875180ec9e3cd41b039947fc",
+      "https://www.notion.so/34849172875180568f80f33584d34a59",
+      "https://www.notion.so/348491728751806a8cc8c82a432651bd",
+      "https://www.notion.so/34849172875180e2bbc4d307522d9b0b"
+    ]
+  },
+  "entities_known": [
+    "Legacy Ohio Homes (active operating entity — K-1 partnership)",
+    "COGS ULTD (active operating entity — K-1 partnership)",
+    "LHI (Legacy Holdings/Investments? — rental portfolio entity, K-1 partnership)",
+    "B&M Management (loss entity — K-1 partnership)"
+  ],
+  "key_numbers_from_email_thread": {
+    "as_of": "2026-04-09 to 2026-04-14 thread",
+    "w2_wages": 48000,
+    "cogs_ultd_k1_50pct_of_520356": 260178,
+    "legacy_ohio_homes_k1_50pct_of_624943": 312472,
+    "lhi_rental_losses_50pct": -922000,
+    "lhi_mortgage_interest_total": 1500000,
+    "bm_management_loss_50pct": -71000,
+    "estimated_agi_2025": "Negative",
+    "income_tax_2025": 0,
+    "se_tax_2025": 35000,
+    "w2_withholding": 6480,
+    "estimated_payments": 0,
+    "balance_due_2025_extension": 28520,
+    "tom_proposed_payment": 6000,
+    "safe_harbor_100pct_py": 52981,
+    "irs_balance_total": 196000,
+    "irs_balance_2023": 141000,
+    "irs_balance_2025": 55000,
+    "monthly_payment_plan": 12000,
+    "amendment_savings_combined": 110000,
+    "amendment_savings_tommy": 65000,
+    "amendment_savings_andy": 45000,
+    "office_dep_reclass": 400000,
+    "amt_issue_py": 23000
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook — not on Account record",
+    "Tax Extraction (Insights Delivery) — not on Account",
+    "Tax Analysis Workbook — not on Account",
+    "Tax Planning Memo — not on Account",
+    "Meeting Prep Notes — not on Account"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "pending",
+    "turn_3_email": "pending",
+    "turn_4_meetings": "pending",
+    "turn_5_documents": "pending",
+    "turn_6_claude_work": "pending",
+    "turn_7_action_items": "pending",
+    "turn_8_strategies_flags": "pending",
+    "turn_9_operations_individuals": "pending",
+    "turn_10_provenance_changelog": "pending",
+    "turn_11_push_notion": "pending"
+  },
+  "notion_exec_summary_row_url": null,
+  "notion_claude_summary_row_url": null
+}
