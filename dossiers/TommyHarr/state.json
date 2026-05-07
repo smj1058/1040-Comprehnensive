@@ -92,7 +92,7 @@
   "plan_turn_progress": {
     "turn_1_bootstrap": "done",
     "turn_2_overview_profile": "done",
-    "turn_3_email": "pending",
+    "turn_3_email": "done",
     "turn_4_meetings": "pending",
     "turn_5_documents": "pending",
     "turn_6_claude_work": "pending",

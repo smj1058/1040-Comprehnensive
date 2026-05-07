@@ -95,3 +95,79 @@ The four K-1 entities net to roughly `$312K + $260K - $922K - $71K = -$421K` on 
 | Sami Bates — `sami@legacyohiohomes.com` | CC'd on extension thread; same domain as Tommy | Likely spouse / operations principal `[EI:Re: April 15 - Extension & 2025 Tax Status §Participants]` |
 | Andy Karabinos | 50/50 partner across the operating stack | Separate Accruity client — own Account row pending creation `[CLAUDE.md §Remaining queue]` |
 | `tax@accruity.com` | Team inbox CC'd on extension thread | Standard team-inbox routing `[EI:Re: April 15 - Extension & 2025 Tax Status §Participants]` |
+
+---
+
+## §3. Email Intelligence
+
+**Scope of this refresh:** 1 email thread on the Account (Notion Client Email Log). HIGH risk · ACTIVE · 5 messages over 5 days · time-critical (April 15 extension cycle). No noise threads found this refresh. Append-only on subsequent refreshes. `[Accounts:Tommy Harr.Email Log]`
+
+**Rollup:** 1 active multi-party HIGH-risk thread, 8 open action items, $28,520 + $196K + $110K + $400K + $35K + $23K of distinct dollar exposure quantified inside the thread. Broader Outlook scan for `tom@legacyohiohomes.com` / `realsiderealestate@gmail.com` / `sami@legacyohiohomes.com` over the last 18 months is **flagged pending** — generator's email reader will backfill on next refresh. `[Gap: Outlook live scan deferred]`
+
+### 3.1 Active Threads
+
+---
+
+#### 🔴 **Re: April 15 - Extension & 2025 Tax Status** · HIGH risk · ACTIVE
+**Conversation ID:** `AAMkADBmZjg2NGQ4…AAQ8ogn2AAA=` · **Source inbox:** `seth@accruity.com` · **Messages:** 5 · **Date range:** 2026-04-09 → 2026-04-14 · **Direction:** Outbound-initiated (Accruity → Tommy) · **Outlook:** [Open in Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADBmZjg2NGQ4LTFhNTgtNGI2Mi05MmJmLTlhMWZkNDVkMjVkZQBGAAAAAAAY75o7uPA2RpuX8UEo5dXBBwBwW9uyQOvRTKnXOw4wkwFeAAAAAAEMAABwW9uyQOvRTKnXOw4wkwFeAAQ8ogn2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem) `[Email 2026-04-09 Accruity→Tom "April 15 - Extension"]`
+
+**Participants:**
+- **Tom Harr** (`tom@legacyohiohomes.com`) — Client (initiator of replies)
+- **Deontae Lafayette** (`deontae.lafayette@accruity.com`) — Accruity Tax Compliance (active thread owner)
+- **Sophia Leonardo** (`sophia@accruity.com`) — Accruity Tax Admin
+- **Seth Johnson** (`seth@accruity.com`) — Relationship Manager (CC'd)
+- **Stacy Cvengros** (`stacy@accruity.com`) — Accruity (CC'd)
+- **Samantha Bates / Sami** (`sami@legacyohiohomes.com`) — Tommy-side ops (CC'd)
+- `tax@accruity.com` — team inbox (CC'd)
+
+**Synopsis.** On **April 9, 2026**, Accruity sent Tom a detailed 2025 income estimate showing **negative AGI** driven by `$922K` in LHI rental losses (driven by `$1.5M` mortgage interest on the LHI portfolio) which fully offset active business income from COGS ULTD (`$260K` at 50%) and Legacy Ohio Homes (`$312K` at 50%). **Income tax: `$0`. SE tax: `$35K`** (rental losses don't reduce SE income; SE applies to active K-1 earnings). Only `$6,480` in W-2 withholding confirmed; no estimated payments were made. Estimated balance due: **`$28,520`**. `[Email 2026-04-09 Accruity→Tom "April 15 - Extension"]`
+
+On **April 10**, Tom confirmed no payments were made, said he wants to pay with the extension, and asked that the **`$23K` AMT issue from a prior year** be addressed in the amendment work. `[Email 2026-04-10 Tom→Accruity]`
+
+On **April 14**, Tom asked what Accruity needed from him. **Deontae** explained the payment options: (a) Tom pays online via the IRS Direct Pay portal, or (b) Tom provides bank info to Accruity, who will process the extension payment when the extension is filed. Tom asked if `$6,000` was a recommended payment, and offered his bank info. `[Email 2026-04-14 Deontae→Tom]` `[Email 2026-04-14 Tom→Deontae]`
+
+**Separately tracked in this thread (post-4/15 deliverables):**
+- IRS balance management: **`$196K`** total (`$141K` for 2023 + `$55K` accruing on 2025) on a **`$12,000/month` payment plan** — adding the `$28,520` extension balance compounds against this unless paid with the extension. `[EI §Key Numbers]`
+- **Amendment work**: `$110K` combined savings (`$65K` Tommy + `$45K` Andy), including resolution of the `$23K` AMT issue. `[EI §Key Numbers]`
+- **Office depreciation reclass**: `$400K` basis adjustment — separate post-4/15 deliverable. `[EI §Key Numbers]`
+- **Cost seg study** (post-4/15) — connects to the 13 Cost Seg Proposal rows on Account. `[Accounts:Tommy Harr.Cost Seg Proposals]`
+- **S-corp restructure** (pipeline) — entity-by-entity scope and timing not yet committed. `[EI §Action Items]`
+
+**Key numbers anchored in this thread (full inventory):**
+- W-2 wages: `$48,000` · COGS ULTD K-1 (50% of $520,356): `$260,178` · Legacy Ohio Homes K-1 (50% of $624,943): `$312,472` · LHI rental losses (50%, nonpassive): `($922,000)` · B&M Management loss (50%): `($71,000)` · Estimated AGI: **Negative** · Income tax: `$0` · SE tax (on $572K active SE earnings): `$35,000` · W-2 withholding: `$6,480` · Estimated payments: `$0` · Balance due: **`$28,520`** · Safe harbor (100% PY tax): `$52,981` · IRS balance: **`$196,000`** (`$141K` 2023 + `$55K` 2025) · Payment plan: `$12,000/month` · Amendment savings: **`$110,000` combined** (`$65K` Tommy + `$45K` Andy) · Office dep reclass: `$400,000` · AMT issue: `$23,000` · Mortgage interest (LHI portfolio): `$1,500,000` · Tom mentioned: `$6,000` proposed payment. `[EI §Key Numbers]`
+
+**Action items generated by this thread** *(owner · status — promoted to §7 Action Items on Turn 7):*
+- Tommy — Provide bank info for extension payment (URGENT — pre Apr 15) — In Progress
+- Deontae — Process extension payment with Tommy's bank info before deadline — In Progress
+- Accruity (Deontae) — File extension before April 15 — Open
+- Accruity — Address `$23K` AMT issue in prior-year amendment — Open (post-4/15)
+- Accruity — Complete cost seg study (post-4/15) — Open
+- Accruity — Process amendments (`$110K` combined savings — `$65K` Tommy + `$45K` Andy) — Open (post-4/15)
+- Accruity — Office dep reclass (`$400K`) post-4/15 — Open
+- Accruity — S-Corp restructure (pipeline) — Open
+
+**Risk flags:** HIGH (Money). `$28,520` extension balance + `$196K` IRS balance + `$110K` amendment savings + `$400K` office reclass at stake. Apr 15 deadline is the immediate gate; amendment + cost-seg + S-corp work follows. `[EI §Flags]`
+
+### 3.2 Noise Threads (Filtered)
+
+None this refresh.
+
+### 3.3 Thread Rollup
+
+| Metric | Value | Source |
+| --- | --- | --- |
+| Substantive threads this refresh | 1 | `[Accounts:Tommy Harr.Email Log]` |
+| Noise threads filtered | 0 | — |
+| Open action items from email | 8 | `[EI §Action Items]` |
+| Unique Accruity participants in flight | Deontae · Sophia · Seth · Stacy | `[EI §Participants]` |
+| Most recent inbound | Tom — 2026-04-14 (offering bank info, asking $6,000 confirm) | `[Email 2026-04-14 Tom→Deontae]` |
+| Most recent outbound | Deontae — 2026-04-14 (payment-options explanation) | `[Email 2026-04-14 Deontae→Tom]` |
+| Days to extension deadline (as of refresh date) | -7 (deadline already passed at refresh date 2026-04-22 — confirm extension was filed with payment) | derived |
+| Risk profile | HIGH — Money flag with $28,520 + $196K + $110K + $400K stakes | `[EI §Flags]` |
+
+### 3.4 Gaps to backfill on next refresh
+
+- **Live Outlook scan** for `tom@legacyohiohomes.com` / `realsiderealestate@gmail.com` / `sami@legacyohiohomes.com` / `legacyohiohomes.com` domain over the last 18 months. Substantial likelihood that engagement-letter, prior-year-return, IRS-notice, and cost-seg-onboarding threads exist that aren't yet in the Notion log.
+- **Andy Karabinos parallel scan** — Andy is the 50/50 partner on the same entities and may have his own threads on the Accruity side that affect Tommy's positions.
+- **Confirm extension filing happened on or before 2026-04-15** with payment processed — this thread ended 2026-04-14 still gathering bank info. Update status next refresh.
+- **Make-scenario-captured threads** — confirm whether the user's Make scenarios that pipe accruity.com inboxes into the Client Email Log have run for tax@accruity.com / seth@accruity.com / sophia@accruity.com / deontae.lafayette@accruity.com / stacy@accruity.com on Tommy-mentioned threads. If yes, backfill those rows next refresh.
