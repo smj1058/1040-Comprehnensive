@@ -1,0 +1,130 @@
+{
+  "client": "Rene Mueller Personal",
+  "account_name": "Rene Mueller Personal",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "SPARSE",
+  "depth_reason": "Solo Account record is minimally populated: no Client #, no Mango Client ID, no Email Log, no Meetings, no Files & Links, no Claude Summaries, no Executive Summaries, no Client Contacts. Only 1 EL row ($9,900 signed) and 1 Tax Ascend row. Tax planning substance already fully documented in joint account (FULL mode, same date). Two Tax Compliance Projects DB rows exist (1040 + 1120-S). Delivery Call Fathom transcript available. 2026-03-30 tax planning session transcript available. No fabricated figures introduced.",
+  "account": {
+    "page_url": "https://www.notion.so/337491728751800882b6f944d6b7fbac",
+    "page_id": "33749172-8751-8008-82b6-f944d6b7fbac",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_display_name": null,
+    "primary_contact_url": null,
+    "tax_ascend_url": "https://www.notion.so/314491728751800086d7efd18368a63b",
+    "engagement_letter_url": "https://www.notion.so/31449172875180298f55fcb97b3ba0ed",
+    "insights_project_url": "https://www.notion.so/2fd49172875180ecb463d053d615f7fe",
+    "executive_summary_url": null,
+    "tax_planning_session_url": "https://www.notion.so/319491728751807180edc16c3312dfad"
+  },
+  "joint_account": {
+    "note": "The joint Account 'Renee Mueller and Jeff Cohn' (30d49172-8751-81b4-a960-ff221f9a14c2) is a DISTINCT record, not a duplicate of this solo Account. Joint dossier completed 2026-05-07 at dossiers/ReneeMuellerJeffCohn/dossier.md.",
+    "page_url": "https://www.notion.so/30d49172875181b4a960ff221f9a14c2",
+    "client_number": "18051006-01",
+    "mango_client_id": "937741"
+  },
+  "is_duplicate_of_joint": false,
+  "duplicate_determination": "NOT a duplicate. Solo Account covers personal/portfolio back-office + 1040/1120-S compliance track (EL $9,900). Joint Account covers ERS-side tax planning + entity compliance (EL $16,650). Different ELs, different ImagineTime workspaces, different Mango projects. Shared Insights Project and shared underlying client (Renee Mueller).",
+  "household": {
+    "principals": [
+      {
+        "name": "Renee Mueller",
+        "email": "renee@eliterealestatesystems.com",
+        "phone": "(402) 910-0178",
+        "role": "Primary client; ERS operator; Columbus NE"
+      },
+      {
+        "name": "Tyler Mueller (spouse)",
+        "email": null,
+        "phone": null,
+        "role": "MFJ co-filer on 1040 (Tyler & Renee Mueller); identity confirmed only by 1040 Mango project name — full name/SSN not in source"
+      },
+      {
+        "name": "Tyler (son)",
+        "email": null,
+        "phone": null,
+        "role": "Farm bookkeeping + K-1 issuance (prior CPA); ~12 years old; on farm payroll; NOTE: same first name as spouse — data integrity issue"
+      }
+    ],
+    "filing_status": "Married Filing Jointly (Tyler & Renee Mueller per 1040 Mango project)",
+    "primary_state": "NE (Nebraska)"
+  },
+  "exec_summary_db_rows": [],
+  "sidecars": {
+    "engagement_letter_personal": "https://www.notion.so/31449172875180298f55fcb97b3ba0ed",
+    "tax_ascend_personal": "https://www.notion.so/314491728751800086d7efd18368a63b",
+    "tax_planning_session": "https://www.notion.so/319491728751807180edc16c3312dfad",
+    "transcript_part1": "https://www.notion.so/3344917287518099abc4da5e88dc1afe",
+    "transcript_part2": "https://www.notion.so/334491728751805c8d71da34e670d6ad",
+    "meeting_summary_and_action_items": "https://www.notion.so/3344917287518130b726d8d92c1c3ff1",
+    "delivery_call_fathom": "https://fathom.video/share/jCscBaYxT-ehUgHrzoh-uHhJyw2sfgmS",
+    "tax_analysis_file": "TaxReturn_Mueller_2024_Analysis.xlsm (attachment on Tax Ascend:Personal)",
+    "tax_memo_sharepoint": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQCZKdlGiD2SSaJw6UdSUXvnATghYW9djiC70_xQ4EqdpmE?e=ytm5Eo",
+    "pbc_list_sharepoint": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQC2MlfpP9hHR5MaW3UPd2HxAeOK6hSAyKEPMu6q2DyZpFc?e=qDTKY3",
+    "imaginetime_workspace": "https://app.imaginetime.com/firm/5331/workspaces/961366/files",
+    "signed_el_mangoshare": "https://app.mangoshare.com/share/bbd8ea4c5a7a95209ff9de7",
+    "tax_compliance_1040_row": "https://www.notion.so/5c349172875183058e4c81d6b59b3674",
+    "tax_compliance_1120s_row": "https://www.notion.so/7f849172875182318ada81b651d898f7"
+  },
+  "entities_in_scope_solo_account": [
+    "Tyler & Renee Mueller 1040 (form 1040, Mango 1850650, extended 2026-10-15)",
+    "Renee Mueller PC 1120-S (form 1120-S, Mango 1850656, CCH 2601-0302.03, extended 2026-09-15)",
+    "ATM Acquisitions LLC (portfolio RE holding; personal bookkeeping in QB)",
+    "Elite Wealth Management LLC (holds 4471 41st Ave Parkway Plaza; consolidated QB with ATM)",
+    "Farm Schedule F (Tyler keeping prior CPA; K-1 to Accruity)"
+  ],
+  "entities_not_in_scope_solo": [
+    "ERS LLP and disregarded entities (joint Account)",
+    "Real Services (joint Account)",
+    "MTBAB LC (joint Account — K-1 flows to 1040 from there)",
+    "Premier 1031 Exchange (joint Account — final K-1 2025)",
+    "RM PC (brokerage PC — joint Account; note: different from personal 1040 scope)",
+    "Verli/VRLY LLC (joint Account / ERS)",
+    "Verli Foundation (external specialist)",
+    "PaySimply, Elite Real Estate Investors 2020, Exarbin Real Estate Group (scope TBD)"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "TaxReturn_Mueller_2024_Analysis.xlsm — attachment on Tax Ascend:Personal, not directly opened",
+    "Tax Memo (SharePoint .docx) — URL known, not opened",
+    "QuickBooks for ATM Acquisitions + Elite Wealth Management — not linked to Account",
+    "Farm Credit financials — Renee to upload; not yet in system",
+    "Retirement plan documents — Renee to upload; not yet in system",
+    "EIDL loan schedules (ATM + PC) — in Dropbox per Renee; not confirmed as received",
+    "Capital improvements GL detail 2025 — not yet available"
+  ],
+  "open_action_items_count": {
+    "HIGH": 3,
+    "MED": 10,
+    "LOW": 4
+  },
+  "high_opportunity_flags": [
+    "Retirement plan optimization: Solo 401K contributions potentially under-maximized — check against earned income from PC/S-Corp; potential $20K-$50K additional deduction",
+    "Itemization vs. standard deduction: prior year used standard; Seth flagged potential itemizing benefit (mortgage interest, property taxes, Verley Foundation contributions)"
+  ],
+  "files_and_links_url_collision": false,
+  "files_and_links_url_collision_note": "N/A — zero Files & Links rows on this solo Account",
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_individual": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": null,
+  "notion_claude_summary_row_url": null,
+  "notes": {
+    "solo_vs_joint": "DISTINCT accounts. Solo = personal/portfolio track (compliance $9,900 EL + back-office Silver). Joint = ERS-side tax planning + compliance ($16,650 EL). Both share client Renee Mueller and same Insights Project.",
+    "tyler_name_collision": "Tyler = MFJ spouse on 1040 AND Tyler = Renee's son on farm payroll. Same first name. Data integrity issue. Must clarify on next contact.",
+    "tax_memo_status_discrepancy": "Solo Account TAX MEMO STATUS = SENT (2026-03-05). Joint Account TAX MEMO STATUS = CLARIFY WITH STACY. Personal-stack memo is complete; ERS-stack memo is not.",
+    "back_office_onboarding_unknown": "Silver package agreed Feb 2026. Kickoff target March 1. Hypercare target May 31. Onboarding status unconfirmed as of 2026-03-30 call.",
+    "account_record_hygiene": "Solo Account is sparse: no Client #, no Mango ID, no Email Log, no Meetings, no Files & Links, no Client Contacts, no Exec Summary, no Claude Summaries. Priority cleanup item.",
+    "f_l_url_collision": "Not applicable — no F&L rows on solo Account."
+  }
+}
