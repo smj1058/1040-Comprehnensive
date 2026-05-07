@@ -1,0 +1,112 @@
+{
+  "client": "Gary Aronov",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "Full",
+  "depth_mode_reason": "Multi-entity stack (4+ entities, S-Corp remediation live), $13,550 compliance EL signed + planning delivered, 10-property cost seg engine, 2 HIGH/Critical risk threads, 3 meetings, prior preparer error, KY annual-report blocker, Tate-Cline dossier surfaces a misfiled Aronov email.",
+  "account": {
+    "page_url": "https://www.notion.so/329491728751803ab485f9c1ce682d3e",
+    "account_id": "32949172-8751-803a-b485-f9c1ce682d3e",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_compliance_id": "1866782",
+    "imaginetime_workspace": "5331/942957"
+  },
+  "household": {
+    "principals": ["Gary Aronov", "Nicole Aronov"],
+    "filing_status": "MFJ",
+    "joint_business_partner": "Jeremy Lee (separate Account 30d49172875181d49847c35e987722f4)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "row_id": "341491728751816aa67fd94ecef22128",
+      "title": "📋 Tax Planning — Gary Aronov & Jeremy Lee — 2026-04-13",
+      "type": "Tax Planning"
+    }
+  ],
+  "sidecars": {
+    "tax_planning_exec_summary": "https://www.notion.so/341491728751816aa67fd94ecef22128",
+    "thin_exec_summary": "https://www.notion.so/34249172875181ca82ffc31fe789d248",
+    "engagement_letter": "https://www.notion.so/2ef49172875180fca30ec48528dde471",
+    "tax_ascend": "https://www.notion.so/2f04917287518005abb3f757a9aeffe4",
+    "tax_planning_session": "https://www.notion.so/2ea49172875181758d2ddfc20fe2d0d4",
+    "compliance_project_1040": "https://www.notion.so/62a49172875182dbb93c8139e4f3e238",
+    "scorp_election_tracker": "https://www.notion.so/34a49172875181fca695eae46ef9cb1c",
+    "mango_planning_row": "https://www.notion.so/342491728751815488accd1bf6e16ba9",
+    "mango_compliance_row": "https://www.notion.so/34249172875181eaafbcda9956bada53",
+    "email_intelligence_jeremy": "https://www.notion.so/342491728751812e8ab9e527e3961f06",
+    "email_log_rows": [
+      "https://www.notion.so/34249172875181bdb4d6d970f2790704",
+      "https://www.notion.so/3424917287518147b1d6e4b755a9d457",
+      "https://www.notion.so/342491728751811bbb01ef1942bd09e6",
+      "https://www.notion.so/34249172875181e59dbdef6362c7e497",
+      "https://www.notion.so/34249172875181c589d8ce731f234059"
+    ],
+    "email_log_misfiled_on_tate_cline": "https://www.notion.so/34249172875181dca589ecb01817fe48",
+    "meeting_rows": [
+      "https://www.notion.so/2fb491728751807496c7fec59edfd5f0",
+      "https://www.notion.so/2fb49172875180a68a48df707fcbed5c",
+      "https://www.notion.so/2fb49172875180c8891ee1a43a165b78"
+    ],
+    "files_and_links_rows": [
+      "https://www.notion.so/33b4917287518142bea9fad7e81f5e6b",
+      "https://www.notion.so/33b49172875181ea8048d1bf8bc44043",
+      "https://www.notion.so/33b49172875181c68311e02fc7e2451f"
+    ],
+    "tax_planning_action_items": [
+      "https://www.notion.so/33549172875181749e40d8993e901019",
+      "https://www.notion.so/33549172875181219c2fc826d8f53eb6",
+      "https://www.notion.so/335491728751819e8272e918c57c0157"
+    ],
+    "tax_memo_url": "https://subledgesl.sharepoint.com/:w:/s/JeremyLee/IQBsM7CNSUDwRIcFOfuNzjHiAdzuwEN3vbuGpi6BhTieCx0?e=PsSZrd",
+    "mangoshare_signed_el": "https://app.mangoshare.com/share/ab1249bcbef0f019ba37299a",
+    "imaginetime_pbc_folder": "https://app.imaginetime.com/firm/5331/workspaces/942957/files/19153046/folder"
+  },
+  "entities_known": [
+    {"name": "REAL ESTATE GO TO, LLC", "ein": null, "ky_org": "1184969", "type": "LLC (likely Partnership)"},
+    {"name": "Aronov Holdings, LLC (Holdings I)", "ein": "84-3980947", "ky_org": "1080555", "type": "Partnership"},
+    {"name": "Aronov Holdings II, LLC", "ein": null, "type": "1120-S (per Mango task)"},
+    {"name": "Aronov Holdings III, LLC", "ein": "88-0801814", "type": "S-Corp (election dropped 2024 in error - REMEDIATION CRITICAL)", "address": "7806 Spring Farm Pointe Place, Prospect KY 40059"},
+    {"name": "RGT Holdings", "ein": null, "type": "Partnership likely", "ownership": "Gary 50% / Jeremy 50%"},
+    {"name": "REGT Rentals", "ein": null, "type": "Partnership likely"},
+    {"name": "MM Investments", "ein": null, "type": "Partnership"},
+    {"name": "Millennial Movement Realty", "ein": null, "type": "S-Corp (Gary's individual)"}
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Memo Word doc (URL captured)",
+    "Aronov / Lee 2025 Tax Organizer & Estimate (Google Sheet)",
+    "Aronov_Lee_Meeting_Prep_v2.html / docx (2026-04-13)",
+    "Aronov_Lee_Reconciliation.html / docx (2026-04-13)",
+    "Aronov_Lee_Improvement_Costs.html (2026-04-13)",
+    "ImagineTime PBC folder",
+    "Original Form 2553 for Aronov Holdings III (need from Terri Ollis or via 4506-T)",
+    "KPKG cost seg reports",
+    "Fw_ Aronov student loan interest.msg",
+    "RE__Questions_for_business_and_personal_taxes.msg"
+  ],
+  "tate_cline_misfiled_email_surfaced": true,
+  "fl_url_collision_detected": false,
+  "high_priority_action_items_count": 7,
+  "medium_priority_action_items_count": 10,
+  "low_priority_action_items_count": 11,
+  "high_opportunity_flags": [
+    "Cost seg cluster (10 properties + office condo + $622K REGT Rentals improvements)",
+    "Aronov Holdings III S-Corp restoration",
+    "REP status candidacy (not formally claimed in file)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done (rate-limited query; recheck next refresh)",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "in progress"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/341491728751816aa67fd94ecef22128",
+  "notion_claude_summary_row_url": null
+}
