@@ -1,0 +1,90 @@
+{
+  "client": "Becky Mead",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "Medium",
+  "depth_mode_reason": "9 sidecars: Account + Primary Contact + EL + Insights + Meetings(1) + Tax Ascend + 3 Files & Links rows; 0 emails / 0 inquiries / 0 prior Claude / 0 reporting entities. Insights DELIVERED but Compliance gated on missing 1040 extraction + missing PBC artifact.",
+  "account": {
+    "page_url": "https://www.notion.so/30d4917287518117a499d55acbb92fda",
+    "page_id": "30d49172-8751-8117-a499-d55acbb92fda",
+    "client_number": "02251304-01",
+    "mango_client_id": "",
+    "account_name": "Becky Mead",
+    "primary_contact_url": "https://www.notion.so/30d491728751819cba2dfe80f5441ec7"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Becky Mead",
+        "role": "Primary Contact (only contact)",
+        "email": "becky.mead@1sourcetitle.com",
+        "phone": "",
+        "portal_access": false,
+        "employer_inferred": "1Source Title"
+      }
+    ],
+    "filing_status": "not stated — single-principal Account, TAX COMPLIANCE engagement"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b4917287518127a321e0abc2e264b4",
+      "id": "33b49172-8751-8127-a321-e0abc2e264b4",
+      "summary_type": "General",
+      "title": "Becky Mead"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/30a4917287518042b58dfe1718087bf2",
+    "insights_project": "https://www.notion.so/329491728751809d8ec5f2b10f207ed1",
+    "tax_ascend": "https://www.notion.so/32249172875180daa75eda29b0ccb055",
+    "meetings": [
+      "https://www.notion.so/2fb49172875180ec86c7f8bf8f2fe334"
+    ],
+    "files_and_links": [
+      "https://www.notion.so/33b491728751816aad88fb5208f0d347",
+      "https://www.notion.so/33b491728751810f9ea9daf6981f96d7",
+      "https://www.notion.so/33b49172875181109bbbe66734aadd9f"
+    ],
+    "primary_contact": "https://www.notion.so/30d491728751819cba2dfe80f5441ec7",
+    "advisory_exec_summary": null,
+    "thin_exec_summary": "https://www.notion.so/33b4917287518127a321e0abc2e264b4",
+    "email_threads": [],
+    "engagement_inquiries": [],
+    "claude_summaries_prior": [],
+    "claude_activity_log_prior": [],
+    "reporting_entities": [],
+    "meeting_action_items": []
+  },
+  "entities_known": [],
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook (Account.PBC Workbook empty; EL Notes confirm none saved to OneDrive)",
+    "Tax Extraction (Account.Tax Extraction empty; EL Notes: 'no extraction found in folder'; Insights Analysis: Waiting on Extraction)",
+    "Tax Planning Memo (Account.Tax Planning Memo empty; Tax Insights stage Not started)",
+    "SharePoint Drive (Account.SharePoint Drive empty)",
+    "Document Inventory at Account level (Account.Document Inventory empty; Files & Links has templated URL only)"
+  ],
+  "system_wide_flags": {
+    "files_and_links_template_default_urls": {
+      "status": "CONFIRMED across 3 clients (Spring + Alex + Becky)",
+      "document_inventory_share_id": "IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw",
+      "pbc_pdf_package_share_id": "IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA",
+      "severity": "MED-HIGH",
+      "action_item_ref": "§7 #2"
+    }
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intel": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_workproduct": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_ops_individual": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b4917287518127a321e0abc2e264b4",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751812d9744e6e56126cda1"
+}
