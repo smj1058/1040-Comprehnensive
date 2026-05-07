@@ -1,0 +1,94 @@
+{
+  "client": "Nick Denillo",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181a0bdc5f8f877ba040b",
+    "client_number": "14110415-01",
+    "mango_client_id": "937731",
+    "mango_display_name": "Nick Denillo"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Nick Denillo",
+        "email": "nick@denillo.com",
+        "phone": "(412) 608-4761",
+        "role": "Primary / S-Corp owner"
+      },
+      {
+        "name": "Alexandra Denillo",
+        "email": "alexandra@denillo.com",
+        "role": "Spouse / co-filer — preferred tax email"
+      }
+    ],
+    "filing_status": "MFJ (assumed)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181b3bbaee98f710189fc",
+      "title": "Nick Denillo",
+      "status": "existing — properties populated in Turn 11"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef491728751808c9167cabc34e3c138",
+    "tax_ascend": "https://www.notion.so/2f0491728751803cbe49f9d6cf3b3428",
+    "insights_project": "https://www.notion.so/2fd49172875180d5a5bbcf96d88ada0f",
+    "meeting_2026_01_22": "https://www.notion.so/2fb4917287518057bb32c91c61215b82",
+    "fl_engagement_letter": "https://www.notion.so/33b491728751814da1add1e191b9ee1f",
+    "fl_exec_summary": "https://www.notion.so/33b49172875181daa723ca005dcfbe91",
+    "fl_nick_denillo": "https://www.notion.so/33b49172875181cfbcd7e9f77d532291",
+    "tcp_1040": "https://www.notion.so/d2a49172875182d2b90a01d124aa2484",
+    "tcp_1120s": "https://www.notion.so/4f74917287518222bab101e74d55e419",
+    "oat_1120s": "https://www.notion.so/30c49172875180c280b5e5bf6ef5d590",
+    "contact_nick": "https://www.notion.so/30d4917287518112a107f3a01977384f",
+    "mai_ai75": "https://www.notion.so/335491728751811a8ed6ed6e8cfae1fc",
+    "mai_ai76": "https://www.notion.so/3354917287518110ad90d080806998c9",
+    "mai_ai77": "https://www.notion.so/33549172875181cb8ff7ebf7834846ba",
+    "mai_ai78": "https://www.notion.so/33549172875181d8bd8be7506f7240ad",
+    "mai_ai79": "https://www.notion.so/3354917287518167a9a7d839e4f3116c"
+  },
+  "entities_known": [
+    {
+      "name": "Nick & Alexandra Denillo",
+      "form": "1040",
+      "status": "Extended to 2026-10-15 · Stage: Collect K-1s",
+      "mango_id": 1799852
+    },
+    {
+      "name": "Denillo Heating and Cooling",
+      "form": "1120-S",
+      "status": "Extended to 2026-09-15 · Stage: L1 Revisions External · With Xpitax",
+      "mango_id": 1799854
+    }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Planning Memo (SharePoint link present but not parsed — NickDenillo site)",
+    "Analysis File (Insights — link present but not rendered as accessible URL)",
+    "PBC Workbook (Account field empty)"
+  ],
+  "key_flags": {
+    "fl_url_collision": true,
+    "fl_url_collision_note": "Nick Denillo F&L row has Document Inventory + PBC PDF Package URLs identical to Spring Bengtzen and Alex Dykes — template defaults (third confirmed instance)",
+    "open_action_items_count": 16,
+    "high_priority_items": 4,
+    "s_corp_w2_optimization_savings_est": "~$7,000/yr SE tax",
+    "possible_unlogged_meeting": "2026-04-29 (Tax Ascend Temp Filter note — verify)"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changes": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181b3bbaee98f710189fc",
+  "notion_claude_summary_row_url": "https://www.notion.so/3594917287518196b903f1f087562761"
+}
