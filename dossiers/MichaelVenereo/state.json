@@ -1,0 +1,136 @@
+{
+  "client": "Michael Venereo",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run (with 2026-04-07 + 2026-04-08 Activity Log entries existing on Exec Summary row)",
+  "depth_mode": "FULL (parallel sidecar fetch)",
+  "account": {
+    "page_url": "https://www.notion.so/3374917287518094b7dbd1d9cd1f4c64",
+    "page_id": "3374917287518094b7dbd1d9cd1f4c64",
+    "account_name": "Michael Venereo",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_display_name": null,
+    "primary_contact_email": "mike@rockwoodig.com",
+    "primary_contact_phone": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": "https://subledgesl.sharepoint.com/sites/MichaelVereo (referenced in Tax Memo URL)",
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": "https://subledgesl.sharepoint.com/:w:/s/MichaelVereo/IQADQYUh1Sk1Sr5Q8kybJfo3ATlEzb5vjl9BS2hO0jnWUBM",
+    "meeting_prep_notes_url": null,
+    "document_inventory_url": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw",
+    "pbc_pdf_package_url": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA",
+    "pbc_folder_imaginetime": "https://app.imaginetime.com/firm/5331/workspaces/937634/files/18417629/folder",
+    "pbc_list_link_excel": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQA95-Ey63UfSoB16RGS7wQ3AQobtrUmheQIaiDxb9LwV7Y",
+    "signed_el_mangoshare": "https://app.mangoshare.com/share/16b5e794b123b5b76dfeb808"
+  },
+  "household": {
+    "principals": [
+      {"name": "Michael Venereo", "email": "mike@rockwoodig.com", "role": "Principal — President 100% of Rockwood Investments Inc.; multi-entity real-estate operator"},
+      {"name": "Gianna M. Venereo", "ssn_last4": "6651 (per 2023 1040)", "role": "Daughter — qualifies HoH filing for Mike per 2023 return"}
+    ],
+    "filing_status": "Head of Household (per 2023 Form 1040 — venereo 2_23i_FC3.pdf)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181cb8eced582e12f919f",
+      "summary_title": "Michael Venereo",
+      "state": "CANONICAL — has Activity Log entries from 2026-04-07 + 2026-04-08 cost seg review; subpages: Cost Seg Properties Review + Business Model Deep Dive",
+      "role": "canonical"
+    },
+    {
+      "url": "https://www.notion.so/342491728751812fbcb7e8676ca2fc6e",
+      "summary_title": "🗑️ DELETE — Michael Venereo (duplicate)",
+      "state": "BLANK; already flagged for deletion",
+      "role": "duplicate — DO NOT auto-delete; logged to cleanup queue per CLAUDE.md hard rule"
+    }
+  ],
+  "duplicate_status": "RESOLVED at row level — duplicate row already named '🗑️ DELETE — Michael Venereo (duplicate)' and is empty. Canonical row 33b49172875181cb8eced582e12f919f is active. No auto-deletion performed (CLAUDE.md hard rule). Logged here for cleanup queue.",
+  "sidecars": {
+    "email_thread_profytz_schumm": "https://www.notion.so/342491728751817a9141c45429b4129c",
+    "engagement_letter_tracker": "https://www.notion.so/2f14917287518017ba7fccbb093fdc90",
+    "tax_ascend": "https://www.notion.so/2f049172875180f4ab26e10554612f4d",
+    "files_links_engagement_letter": "https://www.notion.so/33b4917287518141bcc3f159ea5fdfd4",
+    "files_links_executive_summary": "https://www.notion.so/33b491728751816abef2f3886d221a87",
+    "files_links_michael_venereo": "https://www.notion.so/33b4917287518127b6fde565759178f5",
+    "claude_summary_cost_seg_pipeline_2026_04_08": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "exec_summary_subpage_cost_seg_props": "https://www.notion.so/33c491728751817a92e8c1b57c2cbaf6",
+    "exec_summary_subpage_business_deep_dive": "https://www.notion.so/33c4917287518162b4b9f0f08b935778"
+  },
+  "entities_known": [
+    "Rockwood Investments Inc. — 1120-S, EIN 81-4433788, FIX-AND-FLIP (dealer property — NOT cost seg eligible)",
+    "MLL Rentals LLC — 1065, EIN 87-3200178, RENTAL ENTITY (cost seg eligible target)",
+    "Rockwood Development — entity type/EIN UNKNOWN; ~$11M+ activity per open items workbook; on Chase *0585; ground-up construction (35 SW 22 Rd Miami)",
+    "Profytz Coaching — third-party entity (Michael Schumm/Lisa Messina) — not Mike Venereo's; appeared in email thread coincidentally bucketed under his Account due to email log mis-association"
+  ],
+  "key_numbers_from_sources": {
+    "as_of_year": 2023,
+    "filing_status": "HoH",
+    "agi_2023": 232167,
+    "w2_from_rockwood_2023": 50000,
+    "schedule_c_net_2023": 14985,
+    "schedule_c_gross_re_commission_2023": 40350,
+    "schedule_e_mll_rentals_2023": 38208,
+    "schedule_e_rockwood_k1_2023": 132732,
+    "total_tax_2023": 51551,
+    "se_tax_2023": 7516,
+    "rockwood_2023_sales_total": 5153000,
+    "rockwood_2023_cogs_total": 4850062,
+    "el_price_compliance_engagement": 5000
+  },
+  "rockwood_2023_property_sales": [
+    {"property": "121 NW 41st St, Miami FL", "sales_price": 1800000, "cogs": 481929},
+    {"property": "445 NW 76th, Miami FL", "sales_price": 1300000, "cogs": 699111},
+    {"property": "918 NW/SW 10th St, Miami FL", "sales_price": 1700000, "cogs": 412792},
+    {"property": "2454 NW 86th, Miami FL", "sales_price": 353000, "cogs": 189076}
+  ],
+  "active_2024_2025_properties": [
+    {"property": "2110 SW 24th Terrace, Miami FL 33145", "year": 2024, "status": "In rehab (Builders Risk + 12/31/2024 refi)", "loan_new": 544000, "kiavi_payoff": 549316, "lender": "CL-LM RESI PURCHASER TRUST 1", "entity": "Rockwood Investments (likely)", "cost_seg_eligible": false, "reason": "dealer property"},
+    {"property": "35 SW 22 Rd, Miami FL", "year": 2025, "status": "Ground-up construction (Edgar Stucco $37,151 May 2025)", "entity": "Rockwood Development (likely)", "cost_seg_eligible": false},
+    {"property": "439 SW 17 Terr, Miami FL", "year": 2025, "status": "Rehab project — multiple vendors", "entity": "TBD", "cost_seg_eligible": false}
+  ],
+  "mll_rentals_cost_seg_targets_addresses_unknown": [
+    {"description": "18-unit complex", "purchase_year": 2024, "purchase_price": 2600000, "entity_assumed": "MLL Rentals LLC", "address": "UNKNOWN", "expected_impact": "Eliminate 2024 tax liability"},
+    {"description": "SFH", "purchase_year": 2024, "purchase_price": 450000, "entity_assumed": "TBD (likely MLL Rentals)", "address": "UNKNOWN"},
+    {"description": "20-unit complex", "purchase_year": 2025, "purchase_price": 3600000, "entity_assumed": "TBD (likely MLL Rentals)", "address": "UNKNOWN", "expected_impact": "Eliminate 2025 tax liability"}
+  ],
+  "open_items_critical": [
+    "MangoShare access issue — Mike asked Mar 18 2026 (couldn't open folder); NEVER RESOLVED — likely blocking all client-side progress",
+    "ADP/W-2 payroll setup never confirmed executed (Seth recommended Dec 23 2025: reduce to $35K YE bonus; child payroll via MLLC Rentals)",
+    "Cost seg property addresses + land values + entity assignments — requested Dec 15 2025, NEVER RECEIVED",
+    "MLL Rentals LLC 1065 extension status — was unfiled past 3/15 deadline as of 3/9/2026 — must confirm late-filing penalty exposure",
+    "Rockwood Development entity classification — type/EIN unknown; ~$11M activity flowing through it — must clarify before any return filed",
+    "All 2024 returns confirmed UNFILED — penalties accruing — DO NOT FILE until cost seg studies + QBO entity separation + complete LLC list received",
+    "Pattern of missed meetings (Oct 14 + Nov 18 2025) — client responsiveness concern"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Venereo_Open_Items_FINAL.xlsx — referenced in cost seg subpage but contents not directly fetched this turn (used as a derived source via the subpage summaries)",
+    "Michael Venereo Cost Tracker Expenses.xlsx — referenced in business deep dive subpage",
+    "Rockwood_Development_2025_WP.xlsx — uploaded to SharePoint per business deep dive subpage; not directly opened",
+    "venereo 2_23i_FC3.pdf (2023 1040) — referenced but PDF not fetched this turn",
+    "rock3788_23s_FC3.pdf (2023 1120-S) — referenced but PDF not fetched this turn",
+    "2110 HUD purchase.pdf — referenced but not fetched"
+  ],
+  "rate_limited_queries_this_refresh": [
+    "Meetings Tracker by Account",
+    "Meeting Action Items by Account",
+    "Claude Activity Log by Account",
+    "Engagement Inquiries by Account",
+    "Reporting Entities by Account",
+    "Client Email Log by Account (full enumeration — 1 row already known via Account.Email Log)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_work": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "pending"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181cb8eced582e12f919f",
+  "notion_claude_summary_row_url": null
+}

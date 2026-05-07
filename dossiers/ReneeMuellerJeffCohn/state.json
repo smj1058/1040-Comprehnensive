@@ -1,0 +1,117 @@
+{
+  "client": "Renee Mueller and Jeff Cohn",
+  "account_name": "Renee Mueller and Jeff Cohn",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "Rich content base — existing Exec Summary subpage (2026-04-07 Tax Estimate Workbook + 2026-04-08 Cost Seg Property List), Tax Ascend with Tax Planning DELIVERED + memo PDF link, signed EL ($16,650, deposit paid), Insights Project FULL INSIGHTS Delivered, full 1-hour 3/30 tax planning recap with action items, 7 Email Log threads (mixed: 3 substantive + 4 mis-filed/internal), 4 meetings (1 unrecorded due to Zoom failure), 9-property SREO with $2M Parkway Plaza commercial as primary cost seg target, ~$107K projected federal tax, complex multi-entity stack (ATM Acquisitions, Elite Wealth Management, MTBAB LC, Verli/VRLY, ERS, RM PC, farm Schedule F, Premier 1031 winding down). Spring/Tommy class.",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181b4a960ff221f9a14c2",
+    "page_id": "30d49172-8751-81b4-a960-ff221f9a14c2",
+    "client_number": "18051006-01",
+    "mango_client_id": "937741",
+    "mango_display_name": null,
+    "primary_contact_url": "https://www.notion.so/30d4917287518158b371d7fce8767ee2",
+    "tax_ascend_url": "https://www.notion.so/314491728751809d91eaf4d2481bb351",
+    "engagement_letter_url": "https://www.notion.so/314491728751802fa8bad4a0406c0c05",
+    "insights_project_url": "https://www.notion.so/2fd49172875180ecb463d053d615f7fe",
+    "executive_summary_url": "https://www.notion.so/33b491728751813dbff6e31c99d3410b"
+  },
+  "household": {
+    "principals": [
+      {"name": "Renee Mueller", "email": "renee@eliterealestatesystems.com", "phone": "(402) 910-0178", "role": "Operator (ERS / Elite Real Estate Systems brokerage); Columbus NE; spouse Tyler (farm partner)"},
+      {"name": "Jeff Cohn", "email": null, "phone": null, "role": "Listed in Account Name; ZERO source records substantively reference him; Tax Ascend / EL spell as 'Jeff Cohen' — spelling discrepancy to resolve"}
+    ],
+    "filing_status": "Married Filing Jointly (assumed; Renee+Tyler couple per 3/30 meeting recap; Jeff Cohn role unclear)",
+    "primary_state": "NE (Nebraska)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b491728751813dbff6e31c99d3410b",
+      "id": "33b49172-8751-813d-bff6-e31c99d3410b",
+      "summary_title": "Renee Mueller & Jeff Cohn",
+      "summary_type": "General",
+      "state": "shell with Activity Log + 2 child subpages (Tax Estimate Workbook + Cost Seg Property List); needs full populate"
+    }
+  ],
+  "sidecars": {
+    "executive_summary": "https://www.notion.so/33b491728751813dbff6e31c99d3410b",
+    "tax_estimate_workbook_subpage": "https://www.notion.so/33b491728751810f8c85d9e8d732dd80",
+    "cost_seg_property_list_subpage": "https://www.notion.so/33c491728751815ea19bf479595ade7b",
+    "tax_ascend": "https://www.notion.so/314491728751809d91eaf4d2481bb351",
+    "tax_planning_session": "https://www.notion.so/319491728751804fa0bbe10165ecfc0b",
+    "tax_planning_meeting_summary": "https://foregoing-cilantro-a21.notion.site/Meeting-Summary-Action-Items-3344917287518130b726d8d92c1c3ff1?source=copy_link",
+    "engagement_letter": "https://www.notion.so/314491728751802fa8bad4a0406c0c05",
+    "insights_project": "https://www.notion.so/2fd49172875180ecb463d053d615f7fe",
+    "documents_master_input": "https://www.notion.so/32149172875181869c87dd19486d4d0d",
+    "files_links_rows": [
+      "https://www.notion.so/33b491728751814e9aaefb07b2f8eccd",
+      "https://www.notion.so/33b49172875181b488aafade65748d11",
+      "https://www.notion.so/33b49172875181cc8596f989260b5dec"
+    ],
+    "meetings": [
+      {"date": "2025-12-22", "type": "Full Insights Clarification call", "status": "Pending", "url": "https://www.notion.so/2fb49172875180d58feceb36bb5558b1", "recap": null, "notes": "Ask Bryan if required to be on this call"},
+      {"date": "2026-01-15", "type": "Full Insights Clarification call", "status": "Done", "url": "https://www.notion.so/2fb49172875180699679e56baa40120d", "recap": "https://fathom.video/share/2yWBkAQagwJabrja-mhGLzeZD6Zkf5ee"},
+      {"date": "2026-02-25", "type": "Full Insights Delivery call", "status": "Pending", "url": "https://www.notion.so/31a49172875180a19accf414a977e936", "recap": "https://fathom.video/share/jCscBaYxT-ehUgHrzoh-uHhJyw2sfgmS", "notes": "NO CALENDAR"},
+      {"date": "2026-03-30", "type": "Tax Planning Session", "status": "Done", "url": "https://www.notion.so/33349172875180669719d2877c24f295", "recap": "https://foregoing-cilantro-a21.notion.site/Meeting-Summary-Action-Items-3344917287518130b726d8d92c1c3ff1", "notes": "ZOOM RECORDING FAILED 3/31 — Stacy forwarded backup; 2-part recording w/4.5min gap"}
+    ],
+    "email_log_rows": [
+      {"url": "https://www.notion.so/34249172875181339853ce02cbf1c70a", "subject": "Re: Mortgage units and ERS changes in 2025", "date": "2026-04-14", "relevance": "ON-ACCOUNT — ERS Mortgage entity restructure"},
+      {"url": "https://www.notion.so/342491728751816d91d9dd33f269301d", "subject": "Re: April 15 - Extension & 2025 Tax Estimate", "date": "2026-04-14", "relevance": "MIS-FILED — actually about Jennifer Stickler / Jen's Real Estate / KS Surfacing; flag for re-link"},
+      {"url": "https://www.notion.so/34249172875181c29d92d807ccc5eb8d", "subject": "FW: Recap for 'Jeff'", "date": "2026-04-13", "relevance": "MIS-FILED — internal Seth+Jeff Boscaino meeting (not Jeff Cohn); flag for re-link"},
+      {"url": "https://www.notion.so/3424917287518143960feb83ce5c281e", "subject": "FW: ZOOM MEETING: Rene Mueller Tax Planning on Mar 31 could not be recorded", "date": "2026-04-13", "relevance": "ON-ACCOUNT — Zoom recording failure notification"},
+      {"url": "https://www.notion.so/342491728751815780ebfa233051b632", "subject": "FW: 📝 JEFF<>SETH on Mar 19 — Key decisions inside", "date": "2026-04-13", "relevance": "MIS-FILED — internal Seth+Jeff Boscaino; flag for re-link"},
+      {"url": "https://www.notion.so/3424917287518156bc1ae606a1f6a015", "subject": "FW: 📝 Tax Planning (30min review) - Renee Mueller on Mar 25 — Key decisions inside", "date": "2026-04-13", "relevance": "ON-ACCOUNT — Renee tax planning recap"},
+      {"url": "https://www.notion.so/3424917287518186957cec21828b1356", "subject": "FW: You have an upcoming 1-on-1 with Jeff on Fellow - Jeff/Seth", "date": "2026-04-13", "relevance": "MIS-FILED — Fellow reminder for Seth+Jeff Boscaino; flag for re-link"}
+    ]
+  },
+  "entities_known": [
+    "ATM Acquisitions LLC (real estate holding; Renee + Tyler; owns Elite Wealth Mgmt; 8 of 9 SREO properties)",
+    "Elite Wealth Management LLC (holds 4471 41st Ave / Parkway Plaza commercial bldg, $1.6M acq, $4.4M valuation)",
+    "MTBAB LC (C-Corp; coffee/bagel shop; tenant in commercial building; semi-retired accountant partner issues K-1)",
+    "Premier 1031 Exchange (winding down; last K-1 expected 2025; extension already filed)",
+    "Verli (Burley) Foundation (non-profit; 990 handled by external specialist)",
+    "Verli LLC / VRLY LLC (for-profit media arm; now under ERS — does NOT flow through personal 1040 in 2025)",
+    "Elite Real Estate Systems (ERS) LLP (parent entity; disregarded entities roll up here)",
+    "Real Services (disregarded entity; minimal 2025 income)",
+    "Elite Real Estate Investors 2020 / KW Elite (prior brokerage; outstanding notes payable; transitioned to eXp)",
+    "RM PC (-$74K loss 2024; EIDL loan)",
+    "Farm (Schedule F — Tyler keeping with prior CPA; ~$300K net expected; son on payroll via Sch F)",
+    "Stamm Estate (K-1 D067 issued to Cora — confirm if on MFJ)"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook — empty on Account record; Insights Project has Counting File SharePoint links",
+    "Tax Extraction URL — empty on Account record",
+    "Tax Planning Memo URL — empty on Account record (memo presumably under Tax Ascend; TAX MEMO STATUS = 'CLARIFY WITH STACY')",
+    "Meeting Prep Notes — empty on Account record",
+    "SharePoint Drive — empty on Account record",
+    "Mango Display Name — empty on Account record",
+    "ReneeMueller_TaxEstimate.xlsx — referenced in Workbook subpage, not directly accessible from Notion",
+    "SREO workbook (Copy_of_SREORenee_Mueller.xlsx) — referenced, not directly accessible",
+    "Request List Tracker ERS Holdings.xlsx + Request List Tracker Renee Mueller.xlsx (Insights SharePoint)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_individual": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "pending"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b491728751813dbff6e31c99d3410b",
+  "notion_claude_summary_row_url": null,
+  "notes": {
+    "spelling_discrepancy": "Account Name = 'Renee Mueller and Jeff Cohn'; Tax Ascend Client = 'Rene Mueller & Jeff Cohen ERS' (note: 'Cohen' not 'Cohn', and 'Rene' missing one 'e'); EL Client = 'Renee Mueller + Jeff Cohen ERS'; Meetings 'Rene Mueller'. Pick canonical spelling.",
+    "asymmetric_service_depth": "Jeff Cohn appears in NO source data substantively — all meetings, emails, Tax Ascend recap, EL focus on Renee + Tyler (her actual spouse per 3/30 recap). Either Jeff is a silent partner in ERS, or the Account Name is misleading. Confirm.",
+    "tyler_role": "Tyler is Renee's spouse per 3/30 recap (farm partner; keeping prior CPA for farm books). Tyler does NOT appear in Account Name.",
+    "primary_contact": "Renee Mueller (renee@eliterealestatesystems.com); no separate Jeff Cohn or Tyler Mueller contact on record.",
+    "el_signed": "Yes — 'Signed', deposit paid, mangoshare share = https://app.mangoshare.com/share/92a9b4d05819e6765cb049b8; Price $16,650",
+    "files_links_url_collision": "YES — Files & Links 'Renee Mueller and Jeff Cohn' row uses the same defaulted SharePoint URLs (IgCqkxeMjXQoTZO + IgDL0pq68xE1RK) seen on Spring + Alex + Becky + Brad + Brett + Andy + Matt. Confirms system-wide template-default issue; NOT client-specific.",
+    "sympli_mortgage_cross_reference_resolution": "RESOLVED: The 'Mortgage' entity in the 4/14 ERS email = ERS's internal Mortgage subsidiary (Renee/Nick partnership in Elite Real Estate Systems brokerage stack). It is DISTINCT from AnnMarie/Felice's Sympli Mortgage LLC (Sisu-related entity stack). Nick = Renee's brokerage partner (distinct from any Sisu/Sympli party). The email is correctly filed on Mueller/Cohn; NO re-link to AnnMarie needed; AnnMarie's dossier flag #2 (re-link to AnnMarie) can be downgraded to 'investigated — no overlap'."
+  }
+}
