@@ -357,3 +357,70 @@ Upon Turn 11 completion, the generator will write a new Claude Summary row with 
 - **Link the 2 prior Claude Summaries to Tommy's Account via the Account relation** — they are searchable but not structurally linked, so any future query scoped to `Account = Tommy Harr` will miss them. Promoted to §7 Action Items as a plumbing item.
 - **Pull the full body of the 2026-04-08 Cost Seg Pipeline summary** to populate §9.1 Cost Seg Candidates with the property-level findings that session produced.
 - **Read-after-write check on Turn 11** — verify the new Claude Summary row created this refresh resolves the Account relation correctly.
+
+---
+
+## §7. Action Items — Rolled Up
+
+**Scope of this refresh:** Aggregates every open / in-progress action item discovered across §3 Email Intelligence, §4 Meetings, §5 Document Inventory, §6 Claude Work Product, and the dossier-gen plumbing flags. Append-only on subsequent refreshes — closed items flip to strikethrough. **First run — no prior items to carry forward.**
+
+**Rollup counts.** 22 open items across 4 owner-buckets. Oldest dollar-stake item is the **$28,520 April 15 extension balance** (date of write 2026-04-22 — the deadline already passed; first action is to confirm the extension was actually filed with payment processed). Compliance + IRS balance + amendment + cost-seg + S-corp tracks all simultaneously active.
+
+### 7.1 Master Action Items table
+
+| # | Action | Owner | Target | Source | Priority | Opened | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | **Confirm extension was filed before April 15 with the $28,520 payment processed** — the 2026-04-14 thread ended awaiting Tom's bank info; refresh date 2026-04-22 is post-deadline. | Deontae | **Immediate — verify** | `[Email 2026-04-14 Deontae→Tom]` | 🔴 HIGH | 2026-04-14 | 🟡 In Progress (status unknown post-4/15) |
+| 2 | **Tommy — provide bank info for extension payment** (or confirm direct online payment was made) | Tommy | Pre-Apr 15 (overdue) | `[Email 2026-04-14 Tom→Deontae]` | 🔴 HIGH | 2026-04-14 | 🟡 In Progress |
+| 3 | **Address $23K AMT issue from prior year** in the amendment | Accruity Tax Team | Post-4/15 | `[Email 2026-04-10 Tom→Accruity]` | 🔴 HIGH | 2026-04-10 | 🔴 Open |
+| 4 | **Process amendments — $110K combined savings ($65K Tommy + $45K Andy)** | Accruity Tax Team | Post-4/15 | `[EI:Re: April 15 - Extension §Action Items]` | 🔴 HIGH | 2026-02-25 (planning session implied origin) | 🔴 Open |
+| 5 | **Office depreciation reclass — $400K basis adjustment** | Accruity Tax Team | Post-4/15 | `[EI:Re: April 15 - Extension §Action Items]` | 🔴 HIGH | 2026-02-25 (planning session implied origin) | 🔴 Open |
+| 6 | **S-Corp restructure pipeline** — entity-by-entity scope and timing not yet committed | Seth / Tax Team | Pipeline (post-4/15) | `[EI:Re: April 15 - Extension §Action Items]` | 🟡 MED | 2026-02-25 | 🔴 Open · scope not committed |
+| 7 | **Complete cost seg study + populate the 13 Cost Seg Proposal Intake rows** with property addresses, basis, EINs, placed-in-service dates, study fees | Accruity / Tommy | Post-4/15 | `[Accounts:Tommy Harr.Cost Seg Proposals]` `[EI §Action Items]` | 🔴 HIGH | 2026-02-25 (planning session origin) · 2026-04-08 (Cost Seg Pipeline session) | 🔴 Open · 13 placeholder rows awaiting data |
+| 8 | **Manage IRS balance** — $196K total ($141K 2023 + $55K 2025) on $12K/month payment plan; $28,520 extension balance compounds against this unless paid with the extension | Tommy / Deontae | Ongoing | `[EI §Key Numbers]` | 🔴 HIGH | (legacy — pre-this-engagement) | 🟡 In Progress · $12K/mo plan |
+| 9 | **Resolve dual-Account question** — fetch page `30d49172875181ddb232f4b70fb47e04` (linked to the Feb 11 Tommy + Andy K meeting) and confirm whether it's a duplicate Tommy Account or Andy Karabinos's Account | Accruity ops / Seth | — | `[Meeting 2026-02-11 Tommy + Andy K]` | 🟡 MED (plumbing) | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 10 | **Set Account relation on 2026-02-25 "Thomas Harr" meeting row** — currently empty | Accruity ops | — | `[Meeting 2026-02-25 Thomas Harr]` | 🟢 LOW (plumbing) | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 11 | **Resolve Pending status on 2026-02-11 meeting** — close-out Done/Canceled with reason | Seth / tracker owner | — | `[Meeting 2026-02-11 Tommy + Andy K]` | 🟢 LOW | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 12 | **Locate or originate Tommy Harr engagement letter** — 0 ELs on Account record | Accruity ops / Sophia | ASAP | `[Accounts:Tommy Harr.Engagement Letters]` | 🟡 MED | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 13 | **Originate Files & Links rows for Tommy** — 0 rows currently; Document Inventory + PBC PDF Package URLs need a tracker home as those get populated | Accruity ops | — | `[Accounts:Tommy Harr.Files & Links]` | 🟢 LOW (plumbing) | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 14 | **Locate + link the 5 core tax workbooks to Account** — PBC Workbook, Tax Extraction, Tax Analysis, Tax Memo, Meeting Prep Notes (all empty on Account record) | Accruity ops / Seth | Before next refresh | `[Accounts:Tommy Harr]` | 🟢 LOW (plumbing) | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 15 | **Pull Fellow transcript** for 2026-02-25 Tax Planning Session — extract decision framework | Generator / next refresh | — | `[Meeting 2026-02-25 Thomas Harr]` | 🟢 LOW | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 16 | **Pull MS Teams recording** for 2026-02-10 "Call with Bryan Szpindor" — clarify Bryan's role | Generator / next refresh | — | `[Meeting 2026-02-11 Tommy + Andy K]` | 🟢 LOW | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 17 | **Identify Bryan Szpindor's role** in the engagement (CPA / attorney / lender / investor / other) | Seth | — | `[Meeting 2026-02-11 Tommy + Andy K]` | 🟡 MED | 2026-04-22 (flagged today) | 🔴 Open · third-party orbit gap |
+| 18 | **Confirm Sami Bates relationship** — CC'd on April thread, same domain as Tommy; likely spouse/operations partner — confirm | Sophia | — | `[EI §Participants]` | 🟢 LOW | 2026-04-22 (flagged today) | 🔴 Open |
+| 19 | **Link 2 prior Claude Summaries to Tommy's Account via structured relation** — currently only searchable by name | Accruity ops / Generator | — | `[Claude 2026-04-08 Cost Seg Pipeline]` `[Claude 2026-04-08 Aidan McIsaac]` | 🟢 LOW (plumbing) | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 20 | **Pull full body of 2026-04-08 Cost Seg Pipeline summary** to populate §9.1 Cost Seg Candidates with property-level findings | Generator / next refresh | — | `[Claude 2026-04-08 Cost Seg Pipeline]` | 🟡 MED | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+| 21 | **Andy Karabinos dossier creation** — Andy is the 50/50 partner across all 4 operating entities, currently in the missing-rows queue at `docs/BATCH_REFRESH_PROMPT.md`. Generate his dossier and cross-reference this one. | Generator / next refresh | — | `[CLAUDE.md §Remaining queue]` | 🟡 MED | 2026-04-22 (flagged today) | 🔴 Open · queued |
+| 22 | **Outlook live scan** for `tom@legacyohiohomes.com` / `realsiderealestate@gmail.com` / `sami@legacyohiohomes.com` / `legacyohiohomes.com` domain over the last 18 months — backfill missing email threads | Generator / next refresh | — | `[Gap §3.4]` | 🟡 MED | 2026-04-22 (flagged today) | 🔴 Open · dossier-gen flagged |
+
+### 7.2 Owner rollup
+
+| Owner | Open | In Progress | HIGH priority | Notes |
+| --- | --- | --- | --- | --- |
+| **Tommy** | 1 (#2) | 1 (#2) | 1 | Bank info / extension payment confirmation |
+| **Deontae (Tax Compliance)** | 2 (#1, #8) | 2 | 1 | Active thread owner |
+| **Sophia (Tax Admin)** | 2 (#12, #18) | — | 0 | EL origination + Sami confirmation |
+| **Accruity Tax Team** | 4 (#3, #4, #5, #7) | — | 4 | Amendment + dep reclass + cost seg + AMT |
+| **Seth (RM)** | 2 (#6, #17) | — | 0 | S-corp scope + Bryan ID |
+| **Accruity ops / Generator** | 11 (#9, #10, #11, #13, #14, #15, #16, #19, #20, #21, #22) | — | 0 | All plumbing / dossier-gen flagged |
+
+### 7.3 Source count
+
+| Source | Items contributed |
+| --- | --- |
+| Email thread `Re: April 15 - Extension & 2025 Tax Status` (§3) | 8 (#1–#8) |
+| Meetings (§4) | 3 (#9, #10, #11) |
+| Document Inventory (§5) | 3 (#12, #13, #14) |
+| Claude Work Product (§6) | 2 (#19, #20) |
+| Operations / cross-refs (§3 Sami, §4 Bryan) | 2 (#17, #18) |
+| Generator/queue plumbing | 4 (#15, #16, #21, #22) |
+| Meeting Action Items DB | 0 (none tied to Tommy account) |
+| Engagement Inquiries DB | 0 |
+| Service Requests DB | 0 |
+| Intake Requests DB | 0 |
+
+### 7.4 Gaps / not-yet-captured
+
+- **No Meeting Action Items DB rows exist** for either of Tommy's 2 logged meetings. The 02-25 Tax Planning Session clearly produced action items (the amendment + dep reclass + cost-seg + S-corp pipeline are effectively its output) — those items live in the email thread today, not as DB rows. On next refresh, **back-fill Meeting Action Items DB rows** so they're queryable by owner + due date.
+- **Andy-side action items not captured here.** Andy's $45K share of the amendment savings, his side of the cost-seg pipeline, and his S-corp structure are Tommy-parallel but Tommy's Account doesn't surface them. Pick up on Andy's dossier when generated.
+- **Engagement Inquiries / Service Requests / Intake Requests** — all return zero for Tommy this refresh. Either no requests have been filed, or they exist but aren't linked to the Account. Verify next refresh.
