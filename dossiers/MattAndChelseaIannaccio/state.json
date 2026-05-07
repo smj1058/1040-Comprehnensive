@@ -1,0 +1,129 @@
+{
+  "client": "Matt & Chelsea Iannaccio",
+  "account_name": "Matt Iannaccio",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "Rich existing Notion exec summary (2026-04-06, 8 sections), 4 meetings on tracker, signed EL ($4,200), active Tax Ascend (Build+Compliance+Planning), Cost Seg pipeline membership (Tier 2, $37,639 est), 3 active action items, 4-property multi-state RE portfolio, Schedule C vs S-Corp critical issue with $49,376 annual savings — Spring/Tommy class.",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181069fc2c246ca57a756",
+    "page_id": "30d49172-8751-8106-9fc2-c246ca57a756",
+    "client_number": "13200915-01",
+    "mango_client_id": "937726",
+    "relationship_manager": "Seth Johnson",
+    "billing_partner": "Deontae Lafayette"
+  },
+  "household": {
+    "principals": [
+      {"name": "Matt Iannaccio", "role": "Realtor / Operator OHS S-Corp", "email": "matt.hirealtor@gmail.com", "phone": "(808) 222-0478"},
+      {"name": "Chelsea Iannaccio", "role": "Joint filer / future $25K W-2 from OHS", "email": null, "phone": null}
+    ],
+    "filing_status": "Married Filing Jointly",
+    "states": ["Hawaii (primary)", "Tennessee", "Nevada"]
+  },
+  "entity_stack": [
+    {"name": "Oahu Home Solutions Inc", "type": "S-Corp (1120-S)", "jurisdiction": "Hawaii", "established": "2018"},
+    {"name": "Summit Group Investors LLC", "type": "LLC", "jurisdiction": "Tennessee", "purpose": "Occasional flipping (2025 flip ran through OHS instead)"},
+    {"name": "Iannaccio Living Trust", "type": "Living Trust", "jurisdiction": "—", "purpose": "Holds 711 Wailepo Pl HI condo + 5376 Swenson St NV condo"},
+    {"name": "Additional TN LLCs", "type": "LLC", "jurisdiction": "TN", "confidence": "estimated — count not in current sources"}
+  ],
+  "exec_summary_db_rows": [
+    {
+      "id": "33a49172-8751-8191-8346-e9e33abef1c3",
+      "url": "https://www.notion.so/33a49172875181918346e9e33abef1c3",
+      "title": "📋 Tax Planning — Matt & Chelsea Iannaccio",
+      "summary_type": "Tax Planning",
+      "last_synthesized": "2026-04-06",
+      "action": "update_in_place"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef49172875180e496b4d5aa5ef4c4fe",
+    "tax_ascend": "https://www.notion.so/2f049172875180fa851cff402c1236ce",
+    "tax_memo_sharepoint": "https://subledgesl.sharepoint.com/:w:/s/Insights/IQDLrk1S5XfSR7D-2xAlMji7AROVYcEKzGHvrUX2T68UrDg?e=IUlJnO",
+    "insights_project": "https://www.notion.so/333491728751803382e7df9b8760a8ac",
+    "reporting_entity": "https://www.notion.so/30b49172875181f3bdbdfacd1b0264f8",
+    "primary_contact": "https://www.notion.so/30d49172875181b386beee444db27ac4",
+    "files_links_rows": [
+      "https://www.notion.so/33b49172875181e3970bff34f41dfc21",
+      "https://www.notion.so/33b491728751813f8d8ee22c0bfdd61f",
+      "https://www.notion.so/33b4917287518199b863ca47666c91fe"
+    ],
+    "meetings": [
+      {"date": "2025-11-25", "type": "Full Insights Delivery", "status": "Cancelled", "url": "https://www.notion.so/2fb491728751808bb77be42b89fdadef"},
+      {"date": "2025-12-01", "type": "Full Insights Delivery", "status": "Done", "url": "https://www.notion.so/2fb4917287518094b4a5c5c1a06a1548", "recap": "https://fathom.video/share/nh5-QcbpM26cQkTWnURwy-b6UFvRNs5V"},
+      {"date": "2025-12-09", "type": "Tax Discussion", "status": "Done", "url": "https://www.notion.so/2fb491728751802088c1dd2e56073396", "recap": "https://fathom.video/share/K84u6MJE3J4D4yLbBk7zz5TNbsYy-uec"},
+      {"date": "2026-01-21", "type": "Tax Planning Session", "status": "Done", "url": "https://www.notion.so/2fb491728751801482dac2bfca4cbf86"}
+    ],
+    "action_items": [
+      {"id": "AI-83", "url": "https://www.notion.so/335491728751817a97a9f9ffa5d94829", "title": "Set up QBO Payroll for $25K each S-Corp salaries", "owner": "Accruity", "priority": "High", "status": "Not started"},
+      {"id": "AI-84", "url": "https://www.notion.so/33549172875181dbbec2e16abb1a1e25", "title": "Finish cost seg studies + spreadsheet", "owner": "Client", "priority": "High", "status": "Not started"},
+      {"id": "AI-85", "url": "https://www.notion.so/335491728751815a9b21d0aad1a58535", "title": "Schedule end-of-Feb follow-up", "owner": "Accruity", "priority": "Normal", "status": "Not started — OVERDUE"}
+    ],
+    "mango_planning_compliance_new": "https://www.notion.so/342491728751814bbe52e7d7ef684497",
+    "mango_planning_compliance_old_1120s": "https://www.notion.so/33a491728751816e8672cec756e181db",
+    "extensions_tracker": "https://www.notion.so/342491728751817e8620eec9064eb2dc",
+    "claude_summary_cost_seg": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "cost_seg_pipeline_tracker": "https://www.notion.so/33c49172875181749ad2e27c356002bc"
+  },
+  "email_log": {
+    "rows_on_account": 0,
+    "plumbing_gap": "Make.com scenario not capturing Iannaccio threads; do NOT modify scenario; escalate to ops"
+  },
+  "engagement_inquiries": {"rows_on_account": 0},
+  "claude_activity_log": {"rows_on_account": 0},
+  "files_not_accessed_this_refresh": [
+    "PBC Workbook (Account-record URL empty)",
+    "Tax Extraction (Account-record URL empty)",
+    "Tax Planning Memo URL on Account (empty; memo PDF accessible via Tax Ascend SharePoint link)",
+    "Meeting Prep Notes (URL empty)",
+    "SharePoint Drive (URL empty on Account)",
+    "Document Inventory (URL empty on Account proper; populated on Files & Links row 3)",
+    "2025 GL Workbook (referenced in exec summary §1 but not linked to Account)",
+    "2024 complete 1040 PDF from prior CPA Terry Tannura (not on file — open item DG-04)"
+  ],
+  "data_hygiene_flags": [
+    "Reporting Entity Industry mistagged Construction (should be Real Estate)",
+    "Two Files & Links rows are empty placeholder stubs",
+    "EL signed by Matt on Chelsea's behalf (internal-control flag — Jane comment)",
+    "Tax Ascend Mango Compliance Engagement = 'To Check'"
+  ],
+  "tax_strategies_summary": {
+    "total_estimated_savings": 102963,
+    "strategies": [
+      {"name": "S-Corp SE elimination", "savings": 49376, "status": "In Progress", "priority": "CRITICAL"},
+      {"name": "Cost Segregation", "savings": 37639, "status": "Studies Initiated (DIY on primary)", "priority": "HIGH"},
+      {"name": "Solo 401(k)", "savings": 23464, "status": "Established", "priority": "HIGH"},
+      {"name": "QBI Optimization", "savings": 10499, "status": "Auto with S-Corp", "priority": "MEDIUM"},
+      {"name": "Accountable Plan", "savings": 968, "status": "Planned", "priority": "MEDIUM"},
+      {"name": "Augusta Rule", "savings": 976, "status": "Planned", "priority": "LOW"}
+    ]
+  },
+  "real_estate_portfolio": [
+    {"address": "1235 Maunaulani St", "state": "HI", "type": "Primary / 70% rental", "value": 1500000, "cost_seg_status": "DIY underway — methodology unverified", "improvements_2025": 80000},
+    {"address": "711 Wailepo Pl #304", "state": "HI", "type": "Rental Condo", "value": 475000, "cost_seg_status": "Unknown", "in_living_trust": true},
+    {"address": "5376 Swenson St #20", "state": "NV", "type": "Rental Condo", "value": 40000, "cost_seg_status": "Unknown", "in_living_trust": true},
+    {"address": "Hickson Pike", "state": "TN", "type": "Rental (renovating)", "value": 265000, "cost_seg_status": "Unknown"}
+  ],
+  "tax_position": {
+    "2024_as_filed": {"gross_income": 376000, "taxable_income": 245121, "total_tax": 75454, "effective_rate": 0.2007, "se_tax": 30808, "gci": 1127000},
+    "2025_memo_scenario_STALE": {"gross_income": 376000, "taxable_income": 13709, "total_tax": 7359, "effective_rate": 0.0912},
+    "2025_actual_income_estimate": 800000,
+    "2025_es_paid": {"federal": 66000, "state_hi": 18000, "total": 84000, "q4_skipped": true, "underpayment_risk": "HIGH at $800K actual"}
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changes": "done",
+    "turn_11_push_notion": "pending"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33a49172875181918346e9e33abef1c3",
+  "notion_claude_summary_row_url": null
+}
