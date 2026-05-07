@@ -1,0 +1,118 @@
+{
+  "client": "Lacey Blackman",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751816fa43cc6da693a1222",
+    "client_number": "12250214-01",
+    "mango_client_id": "937716",
+    "account_name": "Lacey Blackman"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Lacey Blackman",
+        "role": "Primary",
+        "email": "lacey@northwest-holdings.com",
+        "phone": "(509) 947-1918"
+      },
+      {
+        "name": "Husband (unnamed in file)",
+        "role": "Spouse / Co-filer",
+        "notes": "Joining Lacey's business ~April 2026; 50-50 partner on partnership entity"
+      }
+    ],
+    "filing_status": "~MFJ (confirmed joint household)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181ac8b0ed82e525860fb",
+      "label": "Lacey Blackman — Exec Summary (existing row, populated this refresh)"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2f149172875180b384afc17e247f8d93",
+    "tax_ascend": "https://www.notion.so/2f0491728751802f98fdcc19d130bc85",
+    "tax_planning_session": "https://www.notion.so/31949172875180788fdefed64cfe678b",
+    "insights_delivery_transcript": "https://www.notion.so/318491728751808ba21dc9f5f63542a2",
+    "good_standing_subpage": "https://www.notion.so/32c491728751817e9c29ca8b1df6656a",
+    "reporting_entity": "https://www.notion.so/30b49172875181a9bcf2da58a6a5a9ac",
+    "client_contact": "https://www.notion.so/30d4917287518177ac92f1ba56d74599",
+    "cost_seg_950aaron": "https://www.notion.so/314491728751812e80c6d55b1d303ff2",
+    "files_and_links_lacey": "https://www.notion.so/33b49172875181ea96cfcb43131be607",
+    "files_and_links_el": "https://www.notion.so/33b49172875181feba20fc5d6ffd97d3",
+    "files_and_links_execsum": "https://www.notion.so/33b49172875181f69bc4df5a1074259c",
+    "meeting_2025_11_21": "https://www.notion.so/2fb491728751800482ccebbb12e11477",
+    "meeting_2025_12_12": "https://www.notion.so/2fb491728751802ea2b0ca13e1ce8850",
+    "meeting_2025_12_17": "https://www.notion.so/2fb491728751803eaac6d70789238891",
+    "meeting_2025_12_18": "https://www.notion.so/2fb4917287518034a007c100e7f8dbb6",
+    "meeting_2026_02_16": "https://www.notion.so/30b49172875180cc8b9cdbd69e689699",
+    "meeting_2026_03_12": "https://www.notion.so/32249172875180a38647f6f1c920cefc"
+  },
+  "entities_known": [
+    {
+      "name": "Lacey Blackman",
+      "type": "1040",
+      "status": "Active",
+      "el_fee": 1275
+    },
+    {
+      "name": "Homes by Lacey LLC",
+      "type": "1120-S",
+      "status": "Active — dissolution risk (WA annual report missed; Fileforms engaged)",
+      "el_fee": 2575
+    },
+    {
+      "name": "Northwest Holdings LLC",
+      "type": "1120-S (CRITICAL: should be partnership)",
+      "status": "Active — $593K suspended losses; conversion to partnership recommended",
+      "el_fee": 2000
+    }
+  ],
+  "irs_liability": {
+    "total_approximate": 440000,
+    "penalties": 78000,
+    "payment_plan_monthly": 5300,
+    "years": ["2020", "2021", "2022", "2023", "2024"],
+    "form_843_status": "Rejected (missing signature) — resubmission status unknown",
+    "levy_risk": true
+  },
+  "amendment_opportunity": {
+    "unclaimed_losses": "~$500K-$600K",
+    "projected_savings": ">$150K",
+    "amendable_years": ["2022", "2023", "2024"],
+    "barred_years": ["2020", "2021"],
+    "el_status": "Not yet issued — due after Apr 15 2026"
+  },
+  "cost_seg_proposals_count": 15,
+  "meeting_action_items_count": 10,
+  "meeting_action_items_status": "All 'Not started' as of 2026-05-07",
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Memo (SharePoint link exists but not fetched)",
+    "PBC Workbook (Account field empty)",
+    "Tax Extraction (Account field empty)",
+    "Analysis Workbook (linked on Sean Kennedy Insights Project — wrong client)",
+    "Cost Seg proposals 2-15 (only #1 fetched in detail)"
+  ],
+  "data_integrity_flags": [
+    "Insights Project on Tax Ascend row links to Sean Kennedy (2fd4917287518007bf42e30ec358e103) — wrong client",
+    "Files & Links 'Lacey Blackman' row has Document Inventory + PBC PDF Package URLs identical to Spring Bengtzen — template defaults",
+    "Tax Analysis attachment filename: TaxReturn_Kennedy_2024_Extracted.xlsm — possible wrong file"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opps": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181ac8b0ed82e525860fb",
+  "notion_claude_summary_row_url": "pending"
+}
