@@ -1,0 +1,95 @@
+{
+  "client": "Monica Hayes",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d4917287518174a682cb8c3c4cc9e2",
+    "client_number": "13010819-01",
+    "mango_client_id": "937729",
+    "account_name": "Monica Hayes"
+  },
+  "household": {
+    "principals": ["Monica Hayes"],
+    "filing_status": "? Single or HoH — confirm"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/34249172875181bf9000d663e2f50065",
+      "title": "Monica Hayes",
+      "status": "CANONICAL — target for this dossier",
+      "summary_populated": true
+    },
+    {
+      "url": "https://www.notion.so/33b49172875181ada1e3f4bd49a3a3c1",
+      "title": "🗑️ DELETE — Monica Hayes (duplicate, empty)",
+      "status": "DUPLICATE — empty; log to cleanup queue; do NOT auto-delete",
+      "summary_populated": false
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2fb4917287518056b0b6c1c072a219bb",
+    "insights_project": "https://www.notion.so/2f64917287518034ac4ddd8158ad511b",
+    "tax_ascend": "https://www.notion.so/2f649172875180e19f3afc22514ba7f0",
+    "tax_planning_session": "https://www.notion.so/2f649172875180f8b6b1cb7a7f209f7b",
+    "email_thread_1_urgent_extension": "https://www.notion.so/34249172875181b3b334f9e5915a4945",
+    "contact_primary": "https://www.notion.so/30d49172875181579806e11f3399db4a",
+    "files_links_el": "https://www.notion.so/33b49172875181a68841fb3083590f4b",
+    "files_links_execsum": "https://www.notion.so/33b4917287518177952cde582875a537",
+    "files_links_monica": "https://www.notion.so/33b49172875181bfae05cf097197bd39",
+    "meeting_2026_01_07_clarification": "https://www.notion.so/2fb49172875180aca268d891770ba538",
+    "meeting_2026_01_26_delivery": "https://www.notion.so/2fb491728751808c92a8d184713061c7",
+    "meeting_2026_02_10_taxplan_missed": "https://www.notion.so/30449172875180cf9f4af644e78a7344",
+    "meeting_2026_02_11_taxplan_done": "https://www.notion.so/3044917287518071b4d9f63418daa32b",
+    "meeting_pending_clarification": "https://www.notion.so/2fb4917287518041b388c44d943cb379",
+    "action_item_AI56": "https://www.notion.so/3354917287518140b2b6f81cb76d9b2b",
+    "action_item_AI57": "https://www.notion.so/33549172875181afaf22ea9c2d5f79c5",
+    "action_item_AI58": "https://www.notion.so/3354917287518180af73f8fdb5566a07",
+    "action_item_AI59": "https://www.notion.so/33549172875181fbb70dd798366a7019",
+    "action_item_AI60": "https://www.notion.so/3354917287518139a431de74b94d9eb4",
+    "action_item_AI61": "https://www.notion.so/33549172875181be88f1efbb05b404a6",
+    "action_item_AI62": "https://www.notion.so/3354917287518199af88cf7709afbcde",
+    "action_item_AI63": "https://www.notion.so/335491728751815caa25d5a77abbb0d3"
+  },
+  "entities_known": [
+    "Monica Hayes Team / Monica Hayes Realtor (sole prop/LLC — rebranding to Impact Real Estate Group)",
+    "Mo Knows (LLC — investment)",
+    "MMH Properties (LLC — rental portfolio, 3 properties)",
+    "Lepic Kroger (external partnership — Schedule E)",
+    "Impact Companies (new S-Corp parent — formation in progress)",
+    "Impact Real Estate Group (rebranded from Monica Hayes Realtor)",
+    "Impact Move Management (new multi-member LLC — downsizing/estate sales)",
+    "Impact Builders (new LLC — flipping/contracting)"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Analysis Workbook (Insights record field omitted/not surfaced)",
+    "PBC Workbook (not linked on Account top-level)",
+    "Account.Tax Extraction (empty — Extraction 1040 linked on Insights record only)",
+    "QuickBooks back-office data (external)",
+    "13 of 14 requested Insights files not received"
+  ],
+  "duplicate_row_flag": {
+    "duplicate_url": "https://www.notion.so/33b49172875181ada1e3f4bd49a3a3c1",
+    "canonical_url": "https://www.notion.so/34249172875181bf9000d663e2f50065",
+    "action": "Log to cleanup queue. Do NOT auto-delete. Canonical row updated in Turn 11."
+  },
+  "fal_url_collision": {
+    "detected": true,
+    "row": "https://www.notion.so/33b49172875181bfae05cf097197bd39",
+    "note": "Document Inventory and PBC PDF Package SharePoint URLs identical to Spring Bengtzen and Alex Dykes — confirmed system-wide template default"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/34249172875181bf9000d663e2f50065",
+  "notion_claude_summary_row_url": "pending — created in Turn 11"
+}
