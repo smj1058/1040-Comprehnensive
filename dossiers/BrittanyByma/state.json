@@ -1,0 +1,77 @@
+{
+  "client": "Brittany Byma",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/32f4917287518031823eebd396475bb0",
+    "client_number": null,
+    "mango_client_id": null,
+    "account_name": "Brittany Byma",
+    "filing_unit": "1040 — Brittany & Josh Byma"
+  },
+  "household": {
+    "principals": [
+      { "name": "Brittany Byma", "role": "primary client / business owner" },
+      { "name": "Josh Byma", "role": "spouse / co-filer" }
+    ],
+    "filing_status": "MFJ (Married Filing Jointly — confirmed via Mango Project Name + Extension Payment Request)"
+  },
+  "exec_summary_db_rows": [],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/30a491728751801c9fa1f19b2331f41f",
+    "tax_ascend": "https://www.notion.so/31f49172875180398e69d5e6e51c361c",
+    "insights_project": "https://www.notion.so/2ff491728751805891b0ef02c9142129",
+    "tax_planning_session": "https://www.notion.so/3204917287518088a293ffddbabf89a7",
+    "advisory_exec_summary_subpage": "https://www.notion.so/34249172875181699f6eff3fd7369d7f",
+    "meeting_2026-02-18_insights_kickoff": "https://www.notion.so/33549172875180a18f89c4416387b422",
+    "meeting_2026-04-01_tax_planning": "https://www.notion.so/335491728751801faef1eedf27492c53",
+    "email_thread_apr1_planning": "https://www.notion.so/342491728751814386edcf3d55e9181a",
+    "extensions_tracker": "https://www.notion.so/342491728751811bad37ce344174d5cc",
+    "outsourcing_assignment": "https://www.notion.so/3204917287518002ad2cd5b29bece9b1",
+    "mango_planning_new_db": "https://www.notion.so/34249172875181828ee3e20f6083d23d",
+    "mango_planning_old_db": "https://www.notion.so/33b49172875180c9bc35fa087c06a755",
+    "fl_engagement_letter": "https://www.notion.so/33b4917287518156b307e83fef20ca46",
+    "fl_executive_summary": "https://www.notion.so/33b49172875181d5b8acfccb1aa1e941",
+    "fl_brittany_byma_main": "https://www.notion.so/33b49172875181f0a5edda40dedcfcf3"
+  },
+  "entities_known": [
+    { "name": "Rise Up Real Estate", "type": "LLC → S-Corp election pending", "note": "Owns commercial building + food truck park; S-Corp election approved in Apr 1 session" },
+    { "name": "Complete Wellness", "type": "Sole prop / Schedule C", "note": "Massage therapy; declining income; children payroll vehicle" },
+    { "name": "Buy My Properties", "type": "LLC/RE entity", "note": "EIN needed; minimal detail" }
+  ],
+  "properties_known": [
+    { "name": "Commercial building + food truck park", "parcels": 2, "purchase_price": "~$325K", "purchased": "end 2022", "note": "Cost seg study approved for 2024 (~$65K deduction); LED sign ~$40K" },
+    { "name": "Airbnb property", "purchase_price": "~$420K", "purchased": "fall 2024", "note": "Cost seg deferred to 2025; standard 39-yr depreciation for 2024" },
+    { "name": "Primary residence (Brittany)", "note": "14-day Augusta rule rental planned; mortgage statements needed" }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Account.PBC Workbook (not linked on Account record)",
+    "Account.Tax Extraction (not linked on Account record)",
+    "Account.Tax Planning Memo (not linked on Account record)"
+  ],
+  "url_collision_flag": {
+    "confirmed": true,
+    "fl_row": "https://www.notion.so/33b49172875181f0a5edda40dedcfcf3",
+    "document_inventory_url_fragment": "IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw",
+    "pbc_pdf_package_url_fragment": "IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA",
+    "same_as": ["Spring Bengtzen", "Alex Dykes & Mark Ferguson"],
+    "note": "System-wide template-default URL collision — confirmed on 3rd client"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intel": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opps": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/359491728751819b9c7ffdfa1f5794c9",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181bda278e9c19009f6f4",
+  "depth_mode": "full",
+  "depth_mode_reason": "Rich April 1 Tax Planning Session transcript with comprehensive strategy detail; multi-entity multi-property client; Insights delivered; extension filed; outsourcing assigned; 10+ active strategies"
+}
