@@ -113,8 +113,8 @@
     "turn_9_operations_individuals": "done",
     "turn_10_provenance_changelog": "done",
     "turn_11a_properties_and_claude_summary": "done",
-    "turn_11b_body_replace_content": "pending",
-    "turn_11_push_notion": "in progress",
+    "turn_11b_body_replace_content": "skipped — dossier body lives in the .md file; Notion DB row uses 📄 Dossier URL pointer instead of duplicating content",
+    "turn_11_push_notion": "done",
     "notion_exec_summary_row_url": "https://www.notion.so/3424917287518119aae6eeaf1cf263b2",
     "notion_claude_summary_row_url": "https://www.notion.so/359491728751819899b6dab16ad6b0b4"
   }
