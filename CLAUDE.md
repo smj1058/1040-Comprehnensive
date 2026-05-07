@@ -6,11 +6,22 @@ You (Claude) have just been launched in the `1040-Comprehnensive` repo. This fil
 
 ## What this project does
 
-Generates a comprehensive **Client Intelligence Dossier** per client by synthesising every workbook, transcript, email thread, meeting recap, Notion record, and Claude session on file. Output for each client:
+Generates a comprehensive **Client Intelligence Dossier** per client by synthesising every workbook, transcript, email thread, meeting recap, Notion record, and Claude session on file.
 
-1. A `dossier.md` in the local repo at `dossiers/<ClientFolder>/dossier.md`
-2. A row in the Notion **Executive Summaries** database where the body is empty and the `📄 Dossier` URL property points to the markdown file (pointer-only — do not duplicate the body content into Notion).
-3. A row in the Notion **Claude Summaries** database logging the refresh.
+**Two locations matter — keep them straight:**
+
+| Path | What it is |
+| --- | --- |
+| `C:\Users\SethJohnson\MCP_Projects\ExecSumm-Dossiers\` | **Instructions only.** Project spec / how-to / approved plan. **READ-ONLY.** Do not write here. |
+| `G:\Shared drives\_SMJ\___Product Development\ExecSumm-Emails\dossiers\` | **Deliverable location.** Where each client's `<Client>_Client_Intelligence_<YYYY-MM-DD>.md` file actually gets saved on Drive. **WRITE HERE.** |
+| `dossiers/<ClientFolder>/` (in this repo) | **Local mirror only.** Working copy for PR review and as a fallback if Drive is offline. Do not treat as the canonical deliverable. |
+
+Output for each client (each refresh):
+
+1. **Drive deliverable** — `G:\Shared drives\_SMJ\___Product Development\ExecSumm-Emails\dossiers\<Client>_Client_Intelligence_<YYYY-MM-DD>.md`. Prior dated versions retained forever (cumulative / living-document rules).
+2. **Local repo mirror** — `dossiers/<ClientFolder>/dossier.md` + `state.json` (committed for PR review).
+3. **Notion Exec Summaries DB row** — body stays empty; the `📄 Dossier` URL property points to the Drive file (pointer-only — do not duplicate the body content into Notion).
+4. **Notion Claude Summaries DB row** — logs the refresh.
 
 The reference implementation is **Spring Bengtzen**, fully completed at:
 - `dossiers/SpringBengtzen/dossier.md` (771 lines, §1–§13 + Provenance Index)
@@ -27,7 +38,23 @@ Match its depth, structure, and source-tagging style for every other client.
 C:\Users\SethJohnson\MCP_Projects\ExecSumm-Dossiers\
 ```
 
-That folder on the user's local machine is the canonical instruction folder. **At session start, list and read every `.md` file in that folder** — it contains the approved plan, design spec, and any per-client overrides that supersede this CLAUDE.md.
+That folder on the user's local machine is the canonical **instruction** folder (project spec, approved plan, any per-client overrides that supersede this CLAUDE.md). **At session start, list and read every `.md` file in that folder.** Read-only — do not write deliverables here.
+
+## Where deliverables live
+
+```
+G:\Shared drives\_SMJ\___Product Development\ExecSumm-Emails\dossiers\
+```
+
+This is where **each client's dossier markdown file actually gets saved**. File naming:
+
+```
+<ClientNameNoSpaces>_Client_Intelligence_<YYYY-MM-DD>.md
+```
+
+Prior dated versions stay forever (cumulative living-document rules — readers can see how the narrative evolved).
+
+The local repo path `dossiers/<ClientFolder>/dossier.md` is a **mirror for PR review and as a fallback if the Drive mount is offline**, NOT the canonical deliverable.
 
 Repo-internal references (read these too):
 - `docs/BATCH_REFRESH_PROMPT.md` — the per-client invocation contract (used to be a copy-paste prompt; now this CLAUDE.md does that job, but the spec still lives there)
@@ -66,7 +93,7 @@ Do not start a new client until the current one is fully through Turn 11. Do not
 | 8 | §8 Tax Strategies + §9 Opportunity Flags (rule-based Cost Seg + S-Corp classifier from `execsumm_emails/opportunity_flags.py`) | append — split into 2 sub-turns if size risks timeout |
 | 9 | §10 Operations Analysis + §11 Individual Profile(s) | append — split if needed |
 | 10 | §12 Provenance Index + §13 Changed Since Last Refresh | append — split if needed |
-| 11 | **Notion write — pointer-only model.** `notion-update-page update_properties` on the Exec Summaries DB row to populate Summary (TL;DR pulled from §1) / Summary Type / Tax Engagement Type / date:Last Synthesized:start / 📄 Dossier (GitHub blob URL on the working branch) / 📧 / 🎙 / ⚡ / 📁 / 🤖 (each = same blob URL with section anchor). Then `notion-create-pages` into Claude Summaries DB to log the refresh. **DO NOT** push the markdown into the Notion page body via `replace_content` — the body lives in the .md and is referenced via the 📄 Dossier URL. | Notion write |
+| 11 | **Drive write + Notion write — pointer-only Notion model.** Steps in order: (a) **Save the deliverable to Drive** at `G:\Shared drives\_SMJ\___Product Development\ExecSumm-Emails\dossiers\<Client>_Client_Intelligence_<YYYY-MM-DD>.md`. (b) `notion-update-page update_properties` on the Exec Summaries DB row to populate Summary (TL;DR pulled from §1) / Summary Type / Tax Engagement Type / date:Last Synthesized:start / 📄 Dossier (Drive URL of the file just saved) / 📧 / 🎙 / ⚡ / 📁 / 🤖 (each = same Drive URL with section anchor where Drive supports it; otherwise same Drive URL). (c) `notion-create-pages` into Claude Summaries DB to log the refresh. **DO NOT** push the markdown into the Notion page body via `replace_content` — the body lives in the .md and is referenced via the 📄 Dossier URL. | Drive + Notion write |
 
 ---
 
@@ -164,4 +191,4 @@ Default running order: pilots first (Spring ✓ done, Tommy Harr next), then alp
 
 ## When in doubt
 
-Read the canonical instructions at `C:\Users\SethJohnson\MCP_Projects\ExecSumm-Dossiers\` and ask the user before deviating. Do not invent process. Do not skip turns. Do not duplicate content into Notion bodies.
+Read the canonical instructions at `C:\Users\SethJohnson\MCP_Projects\ExecSumm-Dossiers\` (read-only) and ask the user before deviating. Do not invent process. Do not skip turns. Do not duplicate content into Notion bodies. Save deliverables to Drive at `G:\Shared drives\_SMJ\___Product Development\ExecSumm-Emails\dossiers\` — not into the MCP_Projects folder.
