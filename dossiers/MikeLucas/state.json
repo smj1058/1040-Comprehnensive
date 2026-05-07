@@ -1,0 +1,106 @@
+{
+  "client": "Mike Lucas",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181ceaf89d68ae88e21bb",
+    "client_number": "13051219-01",
+    "mango_client_id": "937728",
+    "partner": "Ryan Walsh",
+    "relationship_manager": "Kendra Snyder"
+  },
+  "household": {
+    "principals": ["Mike Lucas"],
+    "related_parties": ["Veronica (identity unknown — K-1 submitted 2026-04-10)"],
+    "filing_status": "? Pending — Veronica K-1 suggests possible MFJ or related party"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/34249172875181189a53cecfbaafbb01",
+      "title": "Mike Lucas",
+      "status": "existing row — body empty; populated Turn 11"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter_personal": "https://www.notion.so/2ef491728751804d92e3d3c1296922f0",
+    "engagement_letter_revive_flooring": "https://www.notion.so/334491728751806c8c55ec8c6560e735",
+    "insights_project": "https://www.notion.so/33a49172875180fd874cf9301fb42faf",
+    "tax_ascend": "https://www.notion.so/33a49172875180838a64cc4cb580a1d3",
+    "email_thread_lucas_prop_holdings_2024": "https://www.notion.so/34249172875181ac813fe933d15f3561",
+    "email_thread_2025_tax_papers": "https://www.notion.so/342491728751810fa309e13349ad7b2d",
+    "files_links_engagement_letter": "https://www.notion.so/33b491728751815d890ad8f2d979d548",
+    "files_links_executive_summary": "https://www.notion.so/33b49172875181a8af16f67372e05982",
+    "files_links_mike_lucas": "https://www.notion.so/33b4917287518173b71cf9ad3a0ad7ee",
+    "contact_primary": "https://www.notion.so/30d491728751813081cddf4de3835922"
+  },
+  "entities_known": [
+    {
+      "name": "Mike Lucas (Personal)",
+      "type": "Individual 1040",
+      "el_covered": true,
+      "el_url": "https://www.notion.so/2ef491728751804d92e3d3c1296922f0",
+      "fee": 3500
+    },
+    {
+      "name": "Revive Flooring",
+      "type": "Business entity (type TBD)",
+      "el_covered": true,
+      "el_url": "https://www.notion.so/334491728751806c8c55ec8c6560e735",
+      "fee": 2000
+    },
+    {
+      "name": "Lucas Prop Holdings",
+      "type": "Real property holding entity",
+      "el_covered": false,
+      "el_url": null,
+      "fee": null,
+      "flag": "HIGH — docs received 2026-04-10 but NO EL coverage"
+    }
+  ],
+  "insights_workbooks": {
+    "analysis_workbook": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQASxR-gUlzBQrwgA4qOGbP2AfOoTNgYJS16bDRn9euT9Fw?e=Haxnc9",
+    "extraction_1040": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQChUTjD5cucSb52l9a9ImMhAbNbiXwodsovVJipNYnVyck?e=aHM2PA",
+    "counting_file": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQDGssd-1_viQ7pn52nKLs1OAXmr0VCWZrWiHEs6cc3odH4?e=RjshQb",
+    "tax_returns_folder": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgBO3C-YXguBR6olWpt6Mw1tAQkgs273fEOkMDPo-ebMjzk?e=LV4rta"
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Account.PBC Workbook — empty on Account record",
+    "Account.Tax Extraction — empty on Account record",
+    "Account.Tax Planning Memo — empty on Account record",
+    "Account.Meeting Prep Notes — empty on Account record"
+  ],
+  "fl_url_collision_flag": {
+    "detected": true,
+    "row_url": "https://www.notion.so/33b4917287518173b71cf9ad3a0ad7ee",
+    "document_inventory_url": "IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw",
+    "pbc_pdf_package_url": "IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA",
+    "matches_spring_bengtzen": true,
+    "matches_alex_dykes": true,
+    "note": "Third confirmed instance of template-default URL collision"
+  },
+  "depth_mode": "medium",
+  "depth_reason": "2 ELs signed, Insights DELIVERED, 2 email threads with docs, 0 meetings, 3 HIGH open items (unfiled 2024, Lucas Prop Holdings EL gap, Veronica K-1)",
+  "open_action_items": {
+    "high": 3,
+    "med": 6,
+    "low": 4,
+    "total": 13
+  },
+  "opportunity_flags_high": 0,
+  "opportunity_flags_possible": ["S-Corp (Revive Flooring)", "Cost Seg (Lucas Prop Holdings)", "REPS (City Life Realty PGH)"],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/34249172875181189a53cecfbaafbb01",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751819b9b8be821ecee5651"
+}
