@@ -1,0 +1,87 @@
+{
+  "client": "Jason Michelle Bowles",
+  "display_name": "Michelle (& Jason) Bowles",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/329491728751806799d2f1c4471ce13b",
+    "account_name": "Jason Michelle Bowles",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_id_note": "WARNING: imaginetime workspace 937719 in EL PBC folder matches Logan Bowles Mango ID — verify if this is Michelle's ID or an entry error",
+    "tax_ascend_url": "https://www.notion.so/314491728751802f9e12f0760e62c2b7",
+    "el_url": "https://www.notion.so/2ef49172875180c2af03f3c21c76ac76",
+    "exec_summary_url": "https://www.notion.so/33d4917287518117a5cef78a3b01819d"
+  },
+  "household": {
+    "principals": [
+      {"name": "Michelle Bowles", "role": "Primary taxpayer / 50% Clayhouse K-1 partner"},
+      {"name": "Jason Bowles", "role": "Spouse / co-filer / 50% Clayhouse K-1 partner"}
+    ],
+    "filing_status": "MFJ",
+    "disambiguation": "DISTINCT from Logan Bowles (separate account: notion.so/30d491728751816d9949f6a4a7f23141). Both are 50% Clayhouse Mortgage LLC partners but file separately."
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33d4917287518117a5cef78a3b01819d",
+      "title": "Jason Michelle Bowles",
+      "summary_type": "General",
+      "status": "existing — empty body; Activity Log pre-populated from 4/9/2026 Claude session; to be updated Turn 11"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef49172875180c2af03f3c21c76ac76",
+    "tax_ascend": "https://www.notion.so/314491728751802f9e12f0760e62c2b7",
+    "email_log_1": "https://www.notion.so/342491728751816a911edda241785a0e",
+    "claude_activity_log_1": "https://www.notion.so/33d4917287518110adc7d8076a84d8d9",
+    "claude_activity_log_2": "https://www.notion.so/33e4917287518184b1adcd8855a92c66",
+    "orphan_meeting_row": "https://www.notion.so/349491728751807e964de541607dd502",
+    "logan_exec_summary_cross_ref": "https://www.notion.so/33b49172875181789ea0d7e9101ee49d",
+    "tax_memo_sharepoint_url1": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQD9rbWDMxRqSolklj0o7s6LAXl_lwVofg4X-CY0jkk3kCc?e=5c4sW5",
+    "tax_memo_sharepoint_url2": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQBf4C6HuNzmQ6WfTPv2Ni8QAYyQJMMnVb5sEa3yiSv2kUM?e=nYHQ6L"
+  },
+  "entities_known": [
+    {"name": "Clayhouse Mortgage LLC", "type": "LLC / Partnership", "role": "Operating entity; 50% K-1 to Michelle household; ~$178K K-1 income"},
+    {"name": "Clay Construction", "type": "Passive investment", "role": "~$75K passive loss offsets Clayhouse K-1; classification questionable"},
+    {"name": "CHMMB Holdings LLC", "type": "Proposed new holding co", "role": "Michelle's S-Corp election vehicle; formation in progress; EIN pending"}
+  ],
+  "financial_snapshot_2025": {
+    "clayhouse_k1_income": "~$178,000",
+    "clay_construction_passive_loss": "~($75,000)",
+    "se_tax_base_per_spouse": "~$51,500",
+    "estimated_total_tax_mfj": "~$19,490",
+    "extension_email_overstated": "~$65,000 (incorrect — caused client shock)",
+    "amendment_2024_se_error": "~$6,545 overpayment",
+    "k1_mismatch_with_logan": "$6,303"
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Analysis File (Tax Ascend — omitted)",
+    "Extraction File (Tax Ascend — omitted)",
+    "PBC Workbook (Account field empty)",
+    "Tax Extraction (Account field empty)",
+    "Tax Memo SharePoint docs (linked but not fetched)"
+  ],
+  "data_integrity_flags": [
+    "Mango Client ID missing on Account; imaginetime workspace 937719 in EL PBC link matches Logan Bowles — verify",
+    "Tax Memo SharePoint URLs identical between Michelle and Logan Tax Ascend rows — verify if intentional",
+    "Orphan meeting row 2026-04-17 'Michelle R Bowles' not linked to account"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33d4917287518117a5cef78a3b01819d",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181e2b68cf564c8977928",
+  "dossier_github_url": "https://github.com/smj1058/1040-comprehnensive/blob/claude/update-exec-summary-notion-118m7/dossiers/MichelleBowles/dossier.md",
+  "depth_mode": "MEDIUM",
+  "depth_mode_reason": "2 substantive Claude Activity Log sessions (cross-account, 4/9/2026); EL executed; Tax Ascend active with memo sent; 0 direct meetings linked to account; 1 email thread (internal Notion notification only); 0 Files & Links rows; no accessible workbooks"
+}
