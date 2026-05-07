@@ -239,3 +239,66 @@ The April 9 → April 14 extension thread does not reference any specific synchr
 - **Pull Fellow transcript** for 2026-02-25 — extract the strategic framework discussed (amendment scope, dep reclass, S-corp plan, cost-seg pipeline) into §10 Operations.
 - **Pull MS Teams recording** for 2026-02-10 (the "Call with Bryan Szpindor" referenced in the 02-11 meeting row) — clarify Bryan's role and whether he should be added to §3 third-party orbit.
 - **Backfill any Tax Planning Session meeting prior to 2026-02-11** — the amendment/dep-reclass/S-corp scope discussed in the April thread implies earlier planning sessions; locate them next refresh.
+
+---
+
+## §5. Document Inventory
+
+**Scope of this refresh:** 0 Engagement Letters · 0 Files & Links rows · 13 Cost Seg Proposal Intake rows (mostly empty placeholders — see §5.2) · 5 core tax workbooks unlinked on Account record. External document platforms in play: SharePoint (`seth@accruity.com` OneDrive — implied via meeting recap URL), MS Teams (recording for the Bryan Szpindor call), Fellow.app. `[Accounts:Tommy Harr]`
+
+### 5.1 Engagement Letters
+
+**None linked to Account record.** This is a meaningful gap given the engagement is HIGH-urgency (April 15 extension cycle + $196K IRS balance + active amendment + cost-seg + S-corp restructure tracks). Either:
+- (a) Engagement letter exists on file but is not linked to the Account in the Engagement Letters Tracker DB, or
+- (b) No formal EL has been signed yet and the engagement is operating informally.
+
+Promoted to §7 Action Items as `Accruity ops — locate or originate Tommy Harr engagement letter`.
+
+### 5.2 Cost Seg Proposal Intake rows — important nuance
+
+Tommy's Account references **13 rows** in the Cost Seg Proposal Intake DB (`collection://741deb78-a449-408f-a388-8676d7b319bb`). On the surface this looks like an exceptionally active cost-seg pipeline — **but on inspection the rows are mostly empty placeholders.**
+
+| Row | Title | Status | Property Address | Entity Name | Placed in Service | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| `3484…7344` (parent) | "Tommy Harr - Cost Seg" | **New - Enter in Portal** | (empty) | (empty) | (empty) | Parent row · 12 sub-items below |
+| `3484…b0b` (sample child) | (untitled — "New page" / deleted) | New - Enter in Portal | (empty) | (empty) | (empty) | Sub-item; deleted-flag in Notion |
+| 11 other sub-items | (sampled — same shape) | New - Enter in Portal | (empty) | (empty) | (empty) | Same shape, all empty |
+
+**Read:** these 13 rows are an **intake-form skeleton** that was created (likely from a Make scenario or a portal-onboarding template) but **never filled in with actual property details**. Status = "New - Enter in Portal" on all. They represent **intent to run cost seg** on something between 1 and 13 properties — but the actual property addresses, basis, EINs, placed-in-service dates, and study fees are not yet captured.
+
+**Implication for §8 / §9:** the §9.1 Cost Seg Candidates table cannot be populated from these rows this refresh — the data is empty. The "post-4/15 cost-seg study" referenced in the April email thread `[EI §Action Items]` is the work that will populate these intake rows; once filled, the §9 classifier will run normally.
+
+Promoted to §7 Action Items as `Accruity / Tommy — populate the 13 Cost Seg Proposal Intake rows with actual property addresses, basis, and placed-in-service dates (post-4/15 deliverable referenced in the April extension thread)`.
+
+### 5.3 External document platforms in play
+
+| Platform | Purpose | Entry point(s) | Source |
+| --- | --- | --- | --- |
+| **MS Teams** | Recording of the 2026-02-10 "Call with Bryan Szpindor" referenced in the 02-11 meeting tracker row | [Teams meeting recap link](https://teams.microsoft.com/l/meetingrecap?…) | `[Meeting 2026-02-11 Tommy + Andy K]` |
+| **Fellow.app** | Recap of the 2026-02-25 Tax Planning Session | [Fellow recap link](https://sg5.fellow.app/uni/ls/click?…) | `[Meeting 2026-02-25 Thomas Harr]` |
+| **SharePoint (`seth@accruity.com` OneDrive)** | Implied — the MS Teams recording redirects to a SharePoint-hosted .mp4 file under `/personal/seth_accruity_com/Documents/Recordings/` | (URL inside the Teams recap link) | derived |
+| **Cost Seg Portal** (TBD platform) | Where the 13 intake rows are intended to be entered (Status: "New - Enter in Portal") | — | `[Cost Seg Proposal status]` |
+
+### 5.4 Files still missing (gap to backfill)
+
+| File | Expected location | Account field | Status | Next-step |
+| --- | --- | --- | --- | --- |
+| **PBC Workbook** (xlsx) | Drive or SharePoint linked on Account.PBC Workbook | empty ❌ | Not linked | Locate + link next refresh — needed to reconcile the 4-entity stack and full property schedule |
+| **Tax Extraction (Insights Delivery Workbook)** | Account.Tax Extraction URL | empty ❌ | Not linked | Locate + link next refresh — needed for prior-year baseline + the $48K W-2 source confirmation |
+| **Tax Analysis Workbook** | Account.Tax Extraction (shared) or its own field | empty ❌ | Not linked | Locate + link next refresh — needed for the projected savings on $110K amendment + $400K dep reclass |
+| **Tax Planning Memo** (.docx) | Account.Tax Planning Memo URL | empty ❌ | Not linked — but the 2026-02-25 Tax Planning Session likely produced one | Locate Feb 2026 planning memo deliverable + link next refresh |
+| **Meeting Prep Notes** | Account.Meeting Prep Notes URL | empty ❌ | Not linked | Locate prep notes for 02-11 + 02-25 meetings + link next refresh |
+| **Engagement Letter** | Engagement Letters Tracker DB row tied to Account | not in tracker ❌ | Not on file | Confirm whether EL exists; if so add tracker row; if not, originate |
+| **Files & Links rows** | Files & Links DB rows tied to Account | 0 rows ❌ | None on file | Originate at least one Files & Links row to track Document Inventory + PBC PDF Package URLs as those get populated |
+
+### 5.5 Rollup
+
+| Metric | Value | Source |
+| --- | --- | --- |
+| Engagement Letters on file | **0** ⚠️ | `[Accounts:Tommy Harr.Engagement Letters]` |
+| Files & Links rows | **0** ⚠️ | `[Accounts:Tommy Harr.Files & Links]` |
+| Cost Seg Proposal Intake rows | 13 (mostly empty placeholders awaiting property data) | `[Accounts:Tommy Harr.Cost Seg Proposals]` |
+| Cost Seg Engagements (executed studies) | 0 — none yet commissioned | `[Accounts:Tommy Harr]` |
+| Core tax workbooks not linked to Account | 5 (PBC Workbook, Tax Extraction, Tax Analysis, Tax Memo, Meeting Prep) | `[Accounts:Tommy Harr]` |
+| Document-platform footprint | MS Teams · Fellow · SharePoint (implied) · TBD Cost Seg Portal | derived |
+| External document inventory completeness | LOW — most documents are not linked or are awaiting population | derived |
