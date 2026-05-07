@@ -1,0 +1,75 @@
+{
+  "client": "Alex Dykes & Mark Ferguson",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "medium",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181a594bfeff1c8484430",
+    "page_id": "30d49172875181a594bfeff1c8484430",
+    "client_number": "01241311-01",
+    "mango_client_id": "939149",
+    "primary_contact_url": "https://www.notion.so/30d49172875181a8b77ffe107a0c9551"
+  },
+  "household": {
+    "principals": [
+      {"name": "Alex Dykes"},
+      {"name": "Mark Ferguson"}
+    ],
+    "filing_status": "Joint household — partners (likely MFJ; confirm)"
+  },
+  "exec_summary_db_rows": [
+    {"url": "https://www.notion.so/33b49172875181e6970fe1f5731d23d5", "summary_title": "Alex Dykes & Mark Ferguson", "summary_type": "General"}
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2f84917287518025872ac085bbf7cfed",
+    "insights_project": "https://www.notion.so/2fd49172875180a5aa99e30f39fa8f48",
+    "tax_ascend": "https://www.notion.so/2f049172875180ccaf27f6e28318c1aa",
+    "files_and_links": [
+      "https://www.notion.so/33b4917287518152bc97c7bcd58d5775",
+      "https://www.notion.so/33b491728751812b9ed1d7510f8c82c1",
+      "https://www.notion.so/33b4917287518137bc1edf30abdff79e"
+    ],
+    "meetings": [
+      "https://www.notion.so/2fb4917287518006a7d5c5f32566596e",
+      "https://www.notion.so/2fb491728751806ca4ebff1bd00b3cca",
+      "https://www.notion.so/31049172875180489061d4f9b833fb77",
+      "https://www.notion.so/31949172875180b6853bfc03d40f9dda"
+    ]
+  },
+  "key_facts": {
+    "engagement_fee": 5325,
+    "engagement_letter_status": "Signed (Compliance Group: Executed)",
+    "extension_status": "Accepted",
+    "deposit_paid": true,
+    "mango_engagement": "Project Created",
+    "mango_portal": "Customer Accessed",
+    "pbc_list_status": "Received PBC items",
+    "pbc_list_sent_date": "2026-01-30",
+    "batch_added": "2026-01-30",
+    "tax_proposal": "COMMITTED",
+    "insights_status": "DELIVERED — full delivery cycle complete",
+    "insights_kickoff": "2026-01-27",
+    "insights_clarifying_call": "2026-02-12",
+    "insights_first_delivery": "2026-02-23",
+    "insights_final_delivery": "2026-03-04",
+    "insights_received_files": "2/2",
+    "insights_workbook_links": [
+      "Analysis Workbook (SharePoint)",
+      "Extraction 1040 (SharePoint)",
+      "Request List xlsx (Insights SharePoint)",
+      "Tax Returns Folder (SharePoint)"
+    ]
+  },
+  "discoveries": [
+    "Files & Links 'Alex Dykes & Mark Ferguson' row has Document Inventory + PBC PDF Package SharePoint URLs IDENTICAL to Spring Bengtzen's — likely template defaults that were never customized per client; data-integrity issue affecting unknown number of clients (possibly all)",
+    "Insights project workflow ran cleanly — full ingestion-to-delivery cycle Jan 6 → Mar 4 2026 (~57 days)",
+    "Mango portal: Customer Accessed (good); PBC items received (good); engagement Compliance Group Status: Executed"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_through_10": "done (combined into single dossier.md write)",
+    "turn_11_push_notion": "pending"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181e6970fe1f5731d23d5",
+  "notion_claude_summary_row_url": null
+}
