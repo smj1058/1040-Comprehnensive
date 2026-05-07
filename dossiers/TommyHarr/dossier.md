@@ -620,3 +620,104 @@ Mirroring the Spring/Brian strategic theme: **referral capacity exceeds engageme
 - Inherit the same key-numbers structure (mirror at 50%)
 - Run §9 Opportunity Flags independently — same entities, same HIGH cost-seg + S-corp candidates
 - Apply the asymmetric-service-depth check that came out of Spring's §11.2 (the analog for partnerships: are Tommy and Andy receiving symmetric Accruity coverage, or is one partner driving the engagement while the other gets thinner service?). The Apr 14 thread CC'd only Tommy (not Andy); flag this as a possible asymmetry until confirmed.
+
+---
+
+## §12. Provenance Index
+
+Every non-obvious fact in this dossier carries an inline source tag. This index lists every tag used above with a direct link. Alphabetical within each category.
+
+### 12.1 Notion — Account record
+- `[Accounts:Tommy Harr]` → [notion.so/3424917287518141812be02393d26cb1](https://www.notion.so/3424917287518141812be02393d26cb1)
+- `[Accounts:Tommy Harr.Email Log]` · `[Accounts:Tommy Harr.Engagement Letters]` · `[Accounts:Tommy Harr.Files & Links]` · `[Accounts:Tommy Harr.Cost Seg Proposals]` · `[Accounts:Tommy Harr.Meetings]` · `[Accounts:Tommy Harr.New Contact: Email]` · `[Accounts:Tommy Harr.New Contact: PH#]` — properties on the Account page above
+- ⚠️ Suspected duplicate Account at [notion.so/30d49172875181ddb232f4b70fb47e04](https://www.notion.so/30d49172875181ddb232f4b70fb47e04) (linked from the Feb 11 meeting; possibly Andy Karabinos's Account — Action #9)
+
+### 12.2 Notion — Client Email Log
+- `[EI:Re: April 15 - Extension & 2025 Tax Status …]` → [notion.so/34249172875181ae9397f58a504e0957](https://www.notion.so/34249172875181ae9397f58a504e0957) — [Outlook](https://outlook.office365.com/owa/?ItemID=AAMkADBmZjg2NGQ4LTFhNTgtNGI2Mi05MmJmLTlhMWZkNDVkMjVkZQBGAAAAAAAY75o7uPA2RpuX8UEo5dXBBwBwW9uyQOvRTKnXOw4wkwFeAAAAAAEMAABwW9uyQOvRTKnXOw4wkwFeAAQ8ogn2AAA%3D&exvsurl=1&viewmodel=ReadMessageItem)
+- `[Email 2026-04-09 Accruity→Tom "April 15 - Extension"]` · `[Email 2026-04-10 Tom→Accruity]` · `[Email 2026-04-14 Deontae→Tom]` · `[Email 2026-04-14 Tom→Deontae]` — messages within same thread
+
+### 12.3 Notion — Meetings Tracker
+- `[Meeting 2026-02-11 Tommy + Andy K]` → [notion.so/30449172875180ed92f8e8f541eeb727](https://www.notion.so/30449172875180ed92f8e8f541eeb727) — [MS Teams recap](https://teams.microsoft.com/l/meetingrecap?driveId=b%219Sy6PCqW-k-mi_pkBBdtAnmxOhkZ9z9DnB1ebRRhIxorE7g_sYChQIEPQYfrGcNH&driveItemId=01SRMA4TPXZP722266UJGZTF4BZETURQB5)
+- `[Meeting 2026-02-25 Thomas Harr]` → [notion.so/314491728751804eb9cfd1eb0ba5a507](https://www.notion.so/314491728751804eb9cfd1eb0ba5a507) — [Fellow recap](https://sg5.fellow.app/uni/ls/click?upn=u001.Y1tiWTgJ1PJMrKyj7dbJHqPp-2FT6JwyJKYnLKCSUh0dRKOQm2cj6PWWcYw1WzaV8IB9FGQODOjD0Q-2B5JJcCrN5BRAOPWH3ooUhVUuFVrRbbcKvq39JUo20X8G6-2FzaK8u5-2BDRYjdRd7ccspDaY-2FNEwPsx-2BmtvaUoNrHlT76DG3EqkdDJOMNCUTWrfeY09EhHMpTvlSLREAcGCle1z0EQ-2FFnRwhg1-2FIIS8C6IBMVFkyfWhp7w-2BxyknOlw5ZK9nOYxk-2BwdQ6jEFpyB12n1aRJb9B73fbr4Pslhn5u9-2F0IqpbmU2hH7460Ixy4IRd2HhvdT-2FsZnymnKd-2B3TOjpyQIY-2Bv3B9ZYyVDk-2BNFDDKvvlY8SE1kHJaB1jsWD5BgmRQsBDNIhKiuh5AY0sH1w9q8nCULikaIvB5knh5oCwFZdC-2BscOY8ipHN0-2FwCOGj4RFT2Jjx-2BwUX3yQboIRQ7cXM4dAv3G5FFVzHv030sU8jPsExpXJy4UajTekbmTk9ledqy7ZJA3RP-2BKm3C2LOCmHrdYgD-2BeOHVe9JOQqxhV4CiGyRhDS9oaMI9oRbZEYssGScwZEUcg44km_nCyD0OjfWWda0fny7BdXCaZa1dTuV49YyfNg3yJrg97FL3Kv0EHJMcicPdkuqwuRdzjRrm80tEQd1-2BziUVdt4N-2BENqkwrYnMwunCF16u8LRHLYXwliaO-2FRxCTdaxoscX0qRzlE7rIioEu87itWKBhA35b-2BLtpeZdY5FttszEKk98S-2BAkQjeAEezMXDnx4Erip9FzEXDDzYaOs5Vcm1AsYb-2BgpyoamtklMs0g2uty2jkLjDmv7S713h0dFNaejm6R4aacY7tM-2BP0Ba2zS1tS4g4lNk1ZUqKdUjExLsKx4IXKxbWGPcQL0vxW8Qyj2yn4a5ix4R0g2Yru3eRWmZLGhh84fwBeZSH3h12ETm6-2Fl4qe2Nre9VtgjSdgNHHF7M5rgOoyImZHHDfOL1RD170sXKpdh22SsY9Id4F65zZHdaDFbEcH-2BNR2-2FGFymfze07EF4)
+
+### 12.4 Notion — Cost Seg Proposal Intake DB
+- `[Cost Seg Proposal status]` — 13 rows on Account; parent `3484…7344` + 12 sub-items, all Status "New - Enter in Portal" with no property data populated
+- Sample child fetched: `34849172875180e2bbc4d307522d9b0b` (deleted/empty)
+
+### 12.5 Notion — Claude Summaries
+- `[Claude 2026-04-08 Cost Seg Pipeline]` → [notion.so/33c49172875181098390e5d079955549](https://www.notion.so/33c49172875181098390e5d079955549) — multi-client review (Tommy + Andy + 6 others)
+- `[Claude 2026-04-08 Aidan McIsaac Research + New Client Alert Review]` → [notion.so/33c4917287518117994fe68400dcdc76](https://www.notion.so/33c4917287518117994fe68400dcdc76) — recorded Tommy as referral source for Meghan Botkin
+
+### 12.6 In-dossier back-references
+- `[§3 Email Intelligence]` · `[§3.4 Gaps]` · `[§4.4 Rollup]` · `[§5.2 Cost Seg Proposal Intake nuance]` · `[§5.4 Files still missing]` · `[§7.1 Master Action Items table]` · `[§9.1 Cost Seg Candidates]` · `[§10.4 Referral & brand value]` · `[§11.2 Andy Karabinos coverage stub]`
+
+### 12.7 Cross-dossier references
+- `[dossiers/SpringBengtzen/dossier.md §11.2 Relationship-risk read]` — strategic-theme parallel for asymmetric service depth
+
+### 12.8 Gap markers
+- `[Gap: Outlook live scan deferred]` — no live Outlook scan run this refresh
+- `[Gap: Fellow transcript ingestion]` · `[Gap: transcript ingestion]` — transcript URLs captured but not ingested
+- `[? Pending workbook ingestion]` · `[? Pending memo ingestion]` — strategy/opportunity rows awaiting linked workbooks/memo
+
+---
+
+## §13. Changed Since Last Refresh
+
+**This is the first comprehensive refresh.** No prior dossier existed for Tommy Harr; the existing Notion state was a shell Executive Summaries DB row (`34249172875181859bb5c392c42ac4a2`) with empty body and properties.
+
+### 13.1 · 2026-04-22 · First-run baseline
+
+**New — factual integrations assembled across sources:**
+- Account record + email thread + meetings + cost seg proposals + 2 prior Claude sessions integrated into one canonical profile.
+- Engagement scope quantified end-to-end: $48K W-2 · $572K active K-1 income · $922K LHI rental losses · $35K SE tax · $28,520 extension balance · $196K IRS balance ($141K 2023 + $55K 2025) · $12K/mo payment plan · $110K combined amendment savings ($65K Tommy + $45K Andy) · $400K office dep reclass · $23K AMT · $1.5M LHI mortgage interest · safe-harbor $52,981 · Tom's proposed $6K payment.
+- Rolled-up master Action Items table of **22 items** across 6 owner-buckets covering compliance + IRS + amendment + dep reclass + cost seg + S-corp + plumbing.
+
+**New — discoveries that had not previously been flagged:**
+- ⚠️ **Dual-Account flag**: the 2026-02-11 Tommy + Andy K meeting row points to Account `30d49172…7e04` instead of this dossier's anchor `34249172…2cb1`. Either duplicate Tommy Account exists or it's Andy Karabinos's Account (Action #9).
+- ⚠️ **13 Cost Seg Proposal Intake rows are empty placeholders** — they look like an active pipeline but contain no property data (parent + 12 sub-items, all Status "New - Enter in Portal"). The actual cost seg study is post-4/15 work that has not begun. Real classifier output blocked until populated.
+- ⚠️ **0 Engagement Letters · 0 Files & Links rows · 5 unlinked tax workbooks** — substantial documentation gap on a HIGH-urgency engagement.
+- **Bryan Szpindor** — new third party in the orbit (Feb 10 MS Teams call); role unidentified (Action #17).
+- **Sami Bates** — `sami@legacyohiohomes.com`, CC'd on April thread, likely spouse/operations (Action #18).
+- **Tommy is an active referrer** — sourced Meghan Botkin (4/3 new Foundations+ client at $2,500 + $500/mo). Strategic-theme parallel to Spring/Brian: referral capacity exceeds engagement revenue.
+- **2026-02-25 "Thomas Harr" meeting has no Account relation populated** (Action #10).
+
+**New — rule-based auto-detected flags (§9):**
+- **2 HIGH Cost-Seg candidates** (qualitative pending basis): LHI rental portfolio (strongest priority — $1.5M mortgage interest implies large basis, loss-usability path established via $922K nonpassive losses) + Legacy Ohio Homes office reclass ($400K basis adjustment).
+- **2 HIGH S-Corp candidates**: Legacy Ohio Homes ($312K Tommy 50% net SE, ~$60K combined annual SE savings) + COGS ULTD ($260K Tommy 50%, ~$50K combined). **Combined ~$110K/yr ongoing SE-tax savings** — same magnitude as the one-time amendment.
+- **NOT APPLICABLE** rule-outs: LHI (passive rental holding with appreciated RE — distribution gain risk) · B&M Management (loss entity, no SE to eliminate).
+- **? Pending classification**: Real Side Real Estate.
+
+**New — strategic themes surfaced for the first time in an integrated record:**
+- **Combined ~$110K/yr S-corp recurring savings + $110K one-time amendment + LHI cost-seg** is the value stack. Frame future scoping conversations around the recurring multi-year value, not just the amendment.
+- **Tommy is NOT at relationship risk despite IRS balance stress** — financially stressed but operationally engaged, prompt in replies, and actively referring new clients.
+- **Execution-speed risk on Accruity side** — failure to convert the planning framework into delivered amendment + dep reclass + cost-seg + S-corp would erode trust over time.
+- **Andy-side coverage parallel** — symmetric 50/50 across all entities; Apr 14 thread CC'd only Tommy. When Andy's dossier is generated, run the asymmetric-service-depth check (analog of Spring/Brian).
+
+**New — dossier-generation plumbing items flagged:**
+- 11 plumbing items (#9–#16, #19–#22): dual-Account resolution, missing relations, EL origination, Files & Links rows, 5 unlinked workbooks, transcript pulls, Claude Summary structured links, Andy dossier queue, Outlook scan.
+
+### 13.2 Carry-over summary (for next refresh)
+
+| Count | Bucket | Reference |
+| --- | --- | --- |
+| 22 | Open / In-progress action items | §7.1 |
+| 8 | "Gaps to backfill next refresh" items across sections | §3.4 · §4.5 · §5.4 · §6.6 · §7.4 · §8.3 · §9.4 |
+| 11 | Strategy lines (some HIGH quantified, several `? Pending workbook`) | §8.1 |
+| 4 | HIGH opportunity flags promoted to §7 | §9.1 + §9.2 |
+| 13 | Cost Seg Proposal Intake rows awaiting property-data population | §5.2 |
+| 5 | Core tax workbooks not linked to Account | §5.4 |
+| 1 | Suspected duplicate / wrong Account relation to resolve | §4.2 |
+
+### 13.3 What a reader should look at first on next refresh
+
+1. **§13.1 block dated 2026-04-22** — this baseline. Anything marked "new" here is not in the prior dossier because there isn't one.
+2. **§7.1 Action #1** — confirm extension was filed before Apr 15 with payment processed (refresh date Apr 22 is post-deadline).
+3. **§9.1 + §9.2** — the $110K/yr ongoing S-corp savings + LHI cost-seg priority. These are the largest value-creation items in the file.
+4. **§5.2 / Action #7** — populate the 13 Cost Seg Proposal Intake rows with real property data; everything in §9.1 unlocks once that's done.
+5. **§7.1 Action #9 / §4.2 dual-Account flag** — confirm whether `30d49172…7e04` is a duplicate Tommy or Andy's account; data integrity question.
+
+---
+*Internal document — not for client distribution.*
+*Accruity · www.accruity.com*
+*Source: [dossiers/TommyHarr/dossier.md](.) on branch `claude/update-exec-summary-notion-118m7`*
+*First generated: 2026-04-22 · Next scheduled refresh: TBD (trigger on email delta or manual)*
