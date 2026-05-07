@@ -302,3 +302,58 @@ Promoted to §7 Action Items as `Accruity / Tommy — populate the 13 Cost Seg P
 | Core tax workbooks not linked to Account | 5 (PBC Workbook, Tax Extraction, Tax Analysis, Tax Memo, Meeting Prep) | `[Accounts:Tommy Harr]` |
 | Document-platform footprint | MS Teams · Fellow · SharePoint (implied) · TBD Cost Seg Portal | derived |
 | External document inventory completeness | LOW — most documents are not linked or are awaiting population | derived |
+
+---
+
+## §6. Claude Work Product
+
+**Scope of this refresh:** Queried the Notion **Claude Summaries** database (`collection://86dca8a4…`) and the **Claude Activity Log** database (`collection://f9cc7d05…`) for sessions tied to Tommy Harr. **2 prior Claude sessions found**, both directly relevant. Neither is currently linked to Tommy's Account record via a structured relation — they were matched by name in the Summary text via search. `[Claude Summaries DB]` `[Claude Activity Log DB]`
+
+### 6.1 Prior Claude sessions tied to this account
+
+| Date | Thread Title | Topics | Tommy's role | Source |
+| --- | --- | --- | --- | --- |
+| **2026-04-08** | **Cost Seg Pipeline — Property Lists, File Inventory & Follow-Up Tracker** | Cost Seg pipeline triage across 8 clients | Direct subject (alongside Andy Karabinos) | [notion.so/33c49172875181098390e5d079955549](https://www.notion.so/33c49172875181098390e5d079955549) |
+| **2026-04-08** | Aidan McIsaac Research + New Client Alert Review — 2026-04-08 | New Client Alert review (cross-client) | **Tommy is the referral source for Meghan Botkin** (4/3 new client, $2,500 Foundations+ / $500/mo retainer) | [notion.so/33c4917287518117994fe68400dcdc76](https://www.notion.so/33c4917287518117994fe68400dcdc76) |
+
+### 6.2 Cost Seg Pipeline session (2026-04-08) — what it covered
+
+The April 8 session reviewed cost seg pipeline status across **8 clients**: Augustine, Dan Hamilton, Gil Ramos, Michael Venereo, **Tommy Harr**, **Andy Karabinos**, Matt Iannaccio, and Tate Cline. Both Tommy and Andy (his 50/50 partner) appear together — consistent with the joint partnership stack. The session's title implies it produced a property list + file inventory + follow-up tracker; the output URL above is the canonical record. **Reading priority for next refresh:** fetch the full body of that summary and pull the Tommy + Andy property-specific findings into §9.1 Cost Seg Candidates here. `[Claude 2026-04-08 Cost Seg Pipeline]`
+
+This session is the most likely upstream reason the **13 Cost Seg Proposal Intake rows** exist (see §5.2) — it likely created the parent + 12-sub-item skeleton as a tracking shell, awaiting the property data to be populated by the operations team.
+
+### 6.3 Referral attribution (2026-04-08 New Client Alert Review)
+
+Tommy is recorded as the **referral source for Meghan Botkin**, a new 2026-04-03 Accruity client on the **Foundations+ plan ($2,500 setup + $500/mo retainer)**. This is a meaningful operational data point:
+- **Tommy is an active referrer** to Accruity — outsized referral capacity vs current engagement scope
+- Combined with Tommy's HIGH-urgency compliance/IRS-balance status, the referral activity reinforces a strategic-theme parallel to Spring Bengtzen's: **the household referral capacity is disproportionate to the engagement revenue**, so service depth on Tommy needs to match the relationship value `[§10.4 Referral & brand value, mirror to Spring's pattern]`
+- Confirms Tommy is NOT churning despite the IRS balance + extension stress — he's actively recommending Accruity to others.
+
+`[Claude 2026-04-08 Aidan McIsaac Research + New Client Alert Review §Clients]`
+
+### 6.4 This refresh (2026-04-22) — pending log row
+
+Upon Turn 11 completion, the generator will write a new Claude Summary row with the following shape so the next refresh sees this run on its ingest:
+
+| Field | Value |
+| --- | --- |
+| Thread Title | `Tommy Harr — Client Intelligence Dossier Refresh — 2026-04-22` |
+| Date | 2026-04-22 |
+| Account | relation → Tommy Harr (`3424917287518141812be02393d26cb1`) |
+| Clients | `Tommy Harr; Andy Karabinos (50/50 partner)` |
+| Topics | `File Review`, `Notion Build`, `Compliance`, `Tax Planning`, `Cost Seg`, `S-Corp Restructure` |
+| Files Reviewed | Notion Accounts record · Email thread `Re: April 15 - Extension & 2025 Tax Status` · 2 Meetings Tracker rows · 2 sample Cost Seg Proposal Intake rows · 2 prior Claude Summaries (Cost Seg Pipeline, Aidan McIsaac referral review) |
+| Notion Pages Created/Updated | `dossiers/TommyHarr/dossier.md` (local) · GitHub mirror branch claude/update-exec-summary-notion-118m7 · Updated: Executive Summaries DB row `34249172875181859bb5c392c42ac4a2` (properties; pointer-only Notion model) |
+| Summary | First comprehensive refresh — HIGH-urgency April 15 extension cycle ($28,520 due, awaiting bank info), $196K live IRS balance, $110K amendment savings + $400K dep reclass + S-corp restructure pipeline, 13 cost-seg intake placeholder rows pending population, dual-Account flag on the Feb 11 meeting (possibly Andy's account), 0 ELs / 0 Files & Links / 5 unlinked tax workbooks. Tommy is an active referrer (sourced Meghan Botkin 4/3) — referral capacity > engagement revenue is a strategic theme. |
+
+### 6.5 Cross-stream notes
+
+- **Action carry-over from Cost Seg Pipeline session** — the April 8 session likely produced a follow-up tracker. Confirm next refresh whether any of the 13 Cost Seg Proposal Intake rows trace back to that session as the originating record. If yes, link them.
+- **Andy Karabinos parallel coverage** — Andy was reviewed alongside Tommy in the Cost Seg Pipeline session. When Andy gets his own dossier (he's in the missing-rows queue at `docs/BATCH_REFRESH_PROMPT.md`), the §6 there should cross-reference this session and this dossier.
+- **Brian Charlesworth-style asymmetric coverage check** — Tommy and Andy share the same partnership stack (50/50). When Andy's dossier is generated, the §10 Operations and §11 Profile sections should flag any asymmetry in service depth between the two partners (mirroring the Spring/Brian flat-fee asymmetry analysis from `dossiers/SpringBengtzen/dossier.md §11.2`).
+
+### 6.6 Gaps to backfill on next refresh
+
+- **Link the 2 prior Claude Summaries to Tommy's Account via the Account relation** — they are searchable but not structurally linked, so any future query scoped to `Account = Tommy Harr` will miss them. Promoted to §7 Action Items as a plumbing item.
+- **Pull the full body of the 2026-04-08 Cost Seg Pipeline summary** to populate §9.1 Cost Seg Candidates with the property-level findings that session produced.
+- **Read-after-write check on Turn 11** — verify the new Claude Summary row created this refresh resolves the Account relation correctly.
