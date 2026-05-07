@@ -52,9 +52,9 @@
   ],
   "plan_turn_progress": {
     "turn_1_bootstrap": "done",
-    "turn_2_through_10": "pending",
-    "turn_11_push_notion": "pending"
+    "turn_2_through_10": "done (combined into single dossier.md write)",
+    "turn_11_push_notion": "done"
   },
-  "notion_exec_summary_row_url": null,
-  "notion_claude_summary_row_url": null
+  "notion_exec_summary_row_url": "https://www.notion.so/35949172875181a7bd8bf7125a734d09",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751813496b9fe63e643e98e"
 }
