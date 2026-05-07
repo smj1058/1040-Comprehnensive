@@ -1,0 +1,161 @@
+{
+  "client": "Gil Ramos",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "15+ sidecars: 1 Account + 1 EL + 1 TaxAscend + 1 Transcript + 3 Meetings + 3 F&L + 7 CostSeg proposals + 2 Claude Summaries + TaxComplianceProjects + ExtensionsTracker + Contacts + TaxPlanningSession = 22 distinct source records",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181abb42ec31aef33fd35",
+    "page_id": "30d49172-8751-81ab-b42e-c31aef33fd35",
+    "account_name": "Gil Ramos",
+    "client_number": "07121819-01",
+    "mango_client_id": "937695",
+    "mango_display_name": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Gil Ramos",
+        "email": "gilaramos@gmail.com",
+        "phone": "(407) 749-9646",
+        "role": "Primary taxpayer — real-estate investor/operator (UPG S-corp + UP8 HoldCo)"
+      },
+      {
+        "name": "Lorena Ramos",
+        "email": "unknown — request Lorena on all comms per Gil 3/10",
+        "role": "Co-filer (MFJ) — requested on all Accruity communications"
+      }
+    ],
+    "filing_status": "Married Filing Jointly (MFJ)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181d09485fa9f7752943f",
+      "page_id": "33b49172-8751-81d0-9485-fa9f7752943f",
+      "summary_title": "Gil Ramos",
+      "summary_type": "General",
+      "state": "has Activity Log with 2026-04-14 deep-dive content — used as primary source; Summary/Dossier properties empty — populated in Turn 11"
+    }
+  ],
+  "sidecars": {
+    "exec_summary": "https://www.notion.so/33b49172875181d09485fa9f7752943f",
+    "engagement_letter": "https://www.notion.so/30c4917287518048bb4cd15620ef0323",
+    "tax_ascend": "https://www.notion.so/30c49172875180868198e9401090fb1c",
+    "tax_ascend_transcript_subpage": "https://www.notion.so/31849172875180728343c22eca66179e",
+    "tax_planning_session": "https://www.notion.so/319491728751801eb5d2e85aab837cac",
+    "tax_compliance_project_1040": "https://www.notion.so/54d49172875182978a13810148ccb5ab",
+    "extensions_tracker": "https://www.notion.so/3424917287518105b894f8ffe0569707",
+    "meetings": [
+      "https://www.notion.so/2fb49172875180c3a8cbd7fb31c527cb",
+      "https://www.notion.so/2fb491728751808ca4fbff2dc89274c3",
+      "https://www.notion.so/32249172875180d0acf1fd74d3782427"
+    ],
+    "files_and_links": [
+      "https://www.notion.so/33b491728751811fb130d8ee893fead2",
+      "https://www.notion.so/33b491728751816f9e7fd8ab4c2e9c75",
+      "https://www.notion.so/33b49172875181b0a2b0e829a83e70a6"
+    ],
+    "cost_seg_proposals": [
+      "https://www.notion.so/34449172875180509129f17566376530",
+      "https://www.notion.so/34449172875180059b39e7fc3b66e2a8",
+      "https://www.notion.so/344491728751802a82cfcf813ebb4bb8",
+      "https://www.notion.so/34449172875180689e14d0cac061512d",
+      "https://www.notion.so/3444917287518088b88ded93dae52215",
+      "https://www.notion.so/344491728751800482d8c4c9b09952f2",
+      "https://www.notion.so/34449172875180348272cab31ddeeb3e"
+    ],
+    "claude_summaries": [
+      "https://www.notion.so/3424917287518166a18ac322bb799c3b",
+      "https://www.notion.so/33c49172875181098390e5d079955549"
+    ],
+    "client_contact": "https://www.notion.so/30d491728751813e8e77de8afbd88875",
+    "fathom_dec05": "https://fathom.video/share/8YGXCHFx8FTRRoWQEBts2yEi2Ljsp-1N",
+    "fathom_dec08": "https://fathom.video/share/1_GsytdqcGdZ54vCzk7wVesLu3sgh6n5"
+  },
+  "entities_known": [
+    "Gil & Lorena Ramos — 1040 (MFJ)",
+    "Unlimited Prosperity Group LLC — 1120-S (S-corp, primary operating entity)",
+    "Unlimited Prosperity 8 LP — 1065 (Delaware HoldCo, ghost entity — no EIN)",
+    "Alliance Culture Center LLC — 1065 (50/50 Gil + Veronica Figueroa, ghost entity — no EIN)",
+    "Davos Limited — retail RE (rolls into UPG? confirm)",
+    "Carda MA Law PA — Professional Assn, inactive (Grable CPA filed final return — confirm)"
+  ],
+  "cost_seg_pipeline": {
+    "total_modeled_deductions": 522438,
+    "total_modeled_savings_at_21pct": 109712,
+    "amendment_years": {
+      "2022": {
+        "properties": ["3082 Springwell Loop ($320,026)", "3307 Azolla Street ($299,200)"],
+        "deduction": 117445,
+        "savings": 24663,
+        "sol_status": "CRITICAL — may have closed April 15, 2026 if Ponales filed without extension"
+      },
+      "2023": {
+        "properties": ["502 Dunbar Ave ($190,580)"],
+        "deduction": 27444,
+        "savings": 5763,
+        "sol_status": "Open through 2027"
+      },
+      "2024": {
+        "properties": ["5615 SW 24th Ave ($375,000)"],
+        "deduction": 54000,
+        "savings": 11340,
+        "sol_status": "Open through 2028",
+        "correction_note": "Prior estimate told Gil $63K refund; actual 2024 amendment refund ~$11K only"
+      }
+    },
+    "2025_original": {
+      "properties": [
+        "311 W Fern St ($388,000) — $77,600 deduction",
+        "9439 Lake Lotta Circle ($234,189) — $31,616 deduction",
+        "11 S Bumby — Alliance 50% ($200,000 deduction FRAGILE — Figueroa may defer)",
+        "31 Windtree (3115 only — $14,333)"
+      ],
+      "total_deduction": 323549,
+      "total_savings": 67945,
+      "bumby_contingency": "If Alliance/Bumby drops, 2025 savings fall from $67,945 to ~$25,945"
+    }
+  },
+  "irs_back_taxes": {
+    "total_outstanding": 200000,
+    "note": "Per Gil (client-disclosed). Was previously stated as $50K — corrected to $200K per 2026-04-14 Claude run. Year-by-year breakdown unknown. Installment agreement terms unknown. Lien status unknown. 2024 balance-due alone was ~$72K ($105K tax minus $33K withholding)."
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Ramos_2025_Planning_Proforma_UPDATED.xlsx — attached to Tax Ascend row",
+    "Gil_Ramos_-_Tax_Planner.xlsm — attached to Tax Ascend row",
+    "2024_Tax_Return_Data_Ramos.xlsx — attached to Tax Ascend row",
+    "Financial Reporting Workbook — referenced in Claude Summaries 2026-04-14",
+    "PBC Open Items Workbook — referenced in Claude Summaries 2026-04-14",
+    "Bond/Entity/Property Workbook — referenced in Claude Summaries 2026-04-14",
+    "Tax Analysis 24-26.xlsm — referenced in Claude Summaries 2026-04-14",
+    "Ramos_Tax_Planning_Brief_2025.docx — attached to Transcript subpage"
+  ],
+  "flags": {
+    "fl_url_collision": true,
+    "fl_url_collision_note": "Document Inventory URL (IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw) and PBC PDF Package URL (IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA) on Gil Ramos primary F&L row are byte-identical to Michael Venereo primary F&L row. Confirmed as 6th known collision.",
+    "sol_2022_risk": true,
+    "pbc_upload_bug": true,
+    "ghost_entities": ["Unlimited Prosperity 8 LP", "Alliance Culture Center LLC"],
+    "expectation_correction_needed": "Gil was told $63K 2024 amendment refund; actual is ~$11K — confirm corrected on 4/14 call"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_work": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181d09485fa9f7752943f",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181b48edaf8018f5cdd64"
+}
