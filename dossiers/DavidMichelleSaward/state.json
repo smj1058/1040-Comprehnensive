@@ -1,0 +1,122 @@
+{
+  "client": "David & Michelle Saward",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/32f491728751808391f7d15e7954ed5e",
+    "page_id": "32f491728751808391f7d15e7954ed5e",
+    "account_name": "David & Michelle Saward",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_compliance_ids": {
+      "1040": 1880995,
+      "pukalani_llc_1065": 1880999,
+      "435_sycamore_llc_1065": 1880996
+    },
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null,
+    "executive_summary_url": null
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "David Saward",
+        "email": null,
+        "role": "Joint filer; professional role and income profile not surfaced in this refresh"
+      },
+      {
+        "name": "Michelle Saward (née / also Bowles)",
+        "email": "michelle@clayhousemortgage.com",
+        "role": "Primary household contact; Clay House Mortgage (real estate / mortgage industry); principal of CHMMB Holdings LLC (forming)"
+      }
+    ],
+    "filing_status": "Married Filing Jointly (1040 project confirmed)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/342491728751813688a2d83ddb485ec9",
+      "summary_title": "David & Michelle Saward",
+      "summary_type": "General",
+      "state": "partially populated (existing summary: 'Active Tax Ascend client. Engagement signed 2/5/2026, Insights delivered 3/11, tax memo sent 3/20. CHMMB Holdings LLC formation in progress. Tax planning session booked 4/17. PBC sent but nothing received yet.' — last updated 2026-04-14) — updated in Turn 11"
+    }
+  ],
+  "thin_exec_summary_child_page": {
+    "url": "https://www.notion.so/34249172875181fcaea2cb89e2f24f08",
+    "role": "prior synthesized narrative under Client Executive Summaries index — last synthesized 2026-04-14"
+  },
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/326491728751801aba68f571bc1b43f3",
+    "tax_ascend": "https://www.notion.so/2fe49172875180e7916bed5cf5e1114a",
+    "insights_project": "https://www.notion.so/2fe49172875180a39844f6e5648dcbc3",
+    "email_log_chmmb_holdings": "https://www.notion.so/34249172875181a3899ce867939afc87",
+    "email_log_booking": "https://www.notion.so/34249172875181088c5ac0bb3589bf24",
+    "email_intelligence_subpage": "https://www.notion.so/342491728751812fb444ecce6a134e98",
+    "meetings_decisions_subpage": "https://www.notion.so/3424917287518187914cd249c3b1d5b7",
+    "files_documents_subpage": "https://www.notion.so/342491728751818384ffe3a8c51eb50f",
+    "meetings": [
+      "https://www.notion.so/32249172875180cb868cf8c63abfc191"
+    ],
+    "files_and_links": [
+      "https://www.notion.so/33b491728751810c80d5f453ef898297",
+      "https://www.notion.so/33b49172875181199fa3da35ae899d4a",
+      "https://www.notion.so/33b4917287518134a3c5c29b5e4f2dd7"
+    ],
+    "mango_planning_new": [
+      "https://www.notion.so/34249172875181b88d9bf36d076442cf",
+      "https://www.notion.so/34249172875181caa458c8daa6e48cf8",
+      "https://www.notion.so/34249172875181bdbe0ce837d5abc501"
+    ],
+    "mango_planning_old": [
+      "https://www.notion.so/33a49172875181569419cf03b7816cd8",
+      "https://www.notion.so/33a4917287518186ba97d7e97d2e17eb"
+    ],
+    "tax_compliance_projects": [
+      "https://www.notion.so/4d74917287518275933a816018bb89f0",
+      "https://www.notion.so/cd849172875182ebb03a8137b971d7cd",
+      "https://www.notion.so/ae54917287518221a3fd015cd1f5b620"
+    ]
+  },
+  "entities_known": [
+    "Pukalani LLC (1065, extended 2026-09-15)",
+    "435 Sycamore LLC (1065, extended 2026-09-15)",
+    "CHMMB Holdings LLC (forming via Fileforms, EIN pending)"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Planning Memo content (2 Word docs on Tax Ascend — URLs known, content not parsed)",
+    "Analysis Workbook (SharePoint xlsx — URL known, content not parsed)",
+    "Extraction 1040 (SharePoint xlsx — URL known, content not parsed)",
+    "PBC Workbook — URL empty on Account record",
+    "April 17 Tax Planning session recap — no Fathom/Fellow URL on record",
+    "Reporting Entities — none found for this Account"
+  ],
+  "url_collision_flag": {
+    "detected": true,
+    "fl_row_url": "https://www.notion.so/33b4917287518134a3c5c29b5e4f2dd7",
+    "document_inventory_url": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua",
+    "pbc_pdf_package_url": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u",
+    "note": "Same SharePoint folder IDs as Spring Bengtzen, Alex Dykes, Matt Iannaccio — template default never customized"
+  },
+  "open_action_items": {
+    "high": ["AI-01", "AI-02", "DG-01", "DG-02"],
+    "medium": ["AI-03", "DG-03", "DG-04", "DG-05", "DG-06", "DG-07"],
+    "low": ["DG-08", "DG-09", "DG-10", "DG-11", "DG-12", "DG-13"]
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_work": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/342491728751813688a2d83ddb485ec9",
+  "notion_claude_summary_row_url": null
+}

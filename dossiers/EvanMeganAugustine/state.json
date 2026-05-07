@@ -1,0 +1,76 @@
+{
+  "client": "Evan and Megan Augustine",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/320491728751808f88f9d0725ac0c208",
+    "client_number": "05140105-01",
+    "mango_client_id": "959391",
+    "mango_display_name": "Evan and Megan Augustine",
+    "account_name": "Evan Augustine"
+  },
+  "household": {
+    "principals": ["Evan Augustine", "Megan Augustine"],
+    "filing_status": "MFJ (married 2024)",
+    "dependents": 0,
+    "state": "PA"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181e79d9ceb851de90c50",
+      "title": "Evan Augustine — Full Engagement Analysis & Cost Seg Opportunity",
+      "type": "Tax Planning",
+      "last_synthesized": "2026-04-07"
+    }
+  ],
+  "sidecars": {
+    "advisory_exec_summary": "https://www.notion.so/33b49172875181e79d9ceb851de90c50",
+    "engagement_letter": "https://www.notion.so/30249172875180a09381ef00c2c7aec4",
+    "tax_ascend": "https://www.notion.so/302491728751808c9326f5c63ab34352",
+    "insights_project": "https://www.notion.so/32949172875180cc9558f0700f2acc26",
+    "mango_compliance_new": "https://www.notion.so/34249172875181d88f8ae625c8b1ec47",
+    "mango_compliance_old_1040": "https://www.notion.so/33a491728751814eb25bed575c58caf5",
+    "mango_compliance_old_1065": "https://www.notion.so/33a49172875181f980ffee0961717722",
+    "outsourcing_tracker": "https://www.notion.so/3114917287518029930adaa0f2db3def",
+    "cost_seg_pipeline_session": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "individual_file_lists": "https://www.notion.so/33c49172875181fcab44cd1f61507c1f",
+    "2025_tax_estimate_subpage": "https://www.notion.so/33b491728751812faf40c05a3a1cbbf3",
+    "files_and_links_1_el": "https://www.notion.so/33b49172875181328d0ee3f1f544e2c7",
+    "files_and_links_2_exec_summary": "https://www.notion.so/33b49172875181ae9c8ccfce843662a2",
+    "files_and_links_3_sp_folder": "https://www.notion.so/33b49172875181368c10ea5005da5832"
+  },
+  "entities_known": [
+    {"name": "Evan & Megan Augustine (MFJ 1040)", "type": "Individual", "state": "PA"},
+    {"name": "EAA Holdings LLC", "type": "DRE → Schedule E (possible 1065)", "ein": "92-0265667"},
+    {"name": "New Lockhart LLC", "type": "Partnership 1065 (co-owner TJ Bencho)", "ownership": "50/50"},
+    {"name": "Evan Coaching", "type": "Schedule C", "status": "Active (2024); possibly inactive 2025"},
+    {"name": "Megan Coaching (Beadling Soccer)", "type": "Schedule C", "status": "Active (2024 1099-NEC)"}
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "EVAN AUGUSTINE- tax_return_extraction.xlsx (SharePoint — not fetched)",
+    "Augustine_2025_Tax_Estimate.xlsx (SharePoint — subpage fetched as proxy)",
+    "EvanAugustine_PBC Cklist.xlsx (SharePoint — not fetched)",
+    "Augustine_Revised_PBC_OpenItems_2025.xlsx (SharePoint — not fetched)",
+    "Evan_Augustine_Executive_Summary_CostSeg_Analysis.docx (SharePoint — exec summary Notion page used as proxy)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies": "done",
+    "turn_9_opportunity_flags": "done",
+    "turn_10_operations_analysis": "done",
+    "turn_11_individual_profiles": "done",
+    "turn_12_provenance_index": "done",
+    "turn_13_changed_since_refresh": "done",
+    "turn_14_notion_write": "done"
+  },
+  "depth_mode": "MEDIUM",
+  "depth_reason": "New Tax Compliance client (signed 2026-02-07), no planning meeting conducted, no Meetings Tracker rows found, no Email Log rows found, rich exec summary + cost seg analysis from 2026-04-07, 2025 tax estimate subpage, 10-property rental portfolio. MEDIUM = 5-15 substantive data sources.",
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181e79d9ceb851de90c50",
+  "notion_claude_summary_row_url": "pending"
+}
