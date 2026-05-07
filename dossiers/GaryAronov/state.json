@@ -105,8 +105,9 @@
     "turn_8_strategies_opportunities": "done",
     "turn_9_operations_individual_profiles": "done",
     "turn_10_provenance_changed": "done",
-    "turn_11_push_notion": "in progress"
+    "turn_11_push_notion": "done"
   },
   "notion_exec_summary_row_url": "https://www.notion.so/341491728751816aa67fd94ecef22128",
-  "notion_claude_summary_row_url": null
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751812ab845faf10f3f1493",
+  "last_commit_sha": "2f5c521c8d6a1841cdad0b0f3cb854d23578ee25"
 }
