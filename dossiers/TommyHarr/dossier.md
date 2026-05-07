@@ -171,3 +171,71 @@ None this refresh.
 - **Andy Karabinos parallel scan** — Andy is the 50/50 partner on the same entities and may have his own threads on the Accruity side that affect Tommy's positions.
 - **Confirm extension filing happened on or before 2026-04-15** with payment processed — this thread ended 2026-04-14 still gathering bank info. Update status next refresh.
 - **Make-scenario-captured threads** — confirm whether the user's Make scenarios that pipe accruity.com inboxes into the Client Email Log have run for tax@accruity.com / seth@accruity.com / sophia@accruity.com / deontae.lafayette@accruity.com / stacy@accruity.com on Tommy-mentioned threads. If yes, backfill those rows next refresh.
+
+---
+
+## §4. Meeting History
+
+**Scope of this refresh:** 2 meetings on file in the Notion Meetings Tracker tied to Tommy Harr (one via Account relation, one matched by client-name string with no Account relation populated). Both unrestricted. Both have recap URLs. Append-only on subsequent refreshes. `[Accounts:Tommy Harr.Meetings — implied via search]`
+
+> ⚠️ **Discovery flag — dual Account records suspected.** The 2026-02-11 "Tommy Harr and Andy K" meeting is linked to Account `30d49172875181ddb232f4b70fb47e04`, which is **different** from the Account record this dossier is anchored to (`3424917287518141812be02393d26cb1`). Two plausible explanations: (a) an older/duplicate Tommy Harr Account row exists in the Accounts DB and needs to be reconciled / merged, or (b) `30d49172…7e04` is actually Andy Karabinos's Account (since the meeting was joint Tommy + Andy). Promoted to §7 as a plumbing item — confirm next refresh by fetching the other Account page.
+
+### 4.1 Chronological log (newest → oldest)
+
+| Date | Type | Time (EST) | Status | Recap | Account linked? | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| **2026-02-25** | Tax Planning Session | 2:00 – 2:30 PM | Done ✓ | [Fellow recap](https://sg5.fellow.app/uni/ls/click?upn=u001.Y1tiWTgJ1PJMrKyj7dbJHqPp-2FT6JwyJKYnLKCSUh0dRKOQm2cj6PWWcYw1WzaV8IB9FGQODOjD0Q-2B5JJcCrN5BRAOPWH3ooUhVUuFVrRbbcKvq39JUo20X8G6-2FzaK8u5-2BDRYjdRd7ccspDaY-2FNEwPsx-2BmtvaUoNrHlT76DG3EqkdDJOMNCUTWrfeY09EhHMpTvlSLREAcGCle1z0EQ-2FFnRwhg1-2FIIS8C6IBMVFkyfWhp7w-2BxyknOlw5ZK9nOYxk-2BwdQ6jEFpyB12n1aRJb9B73fbr4Pslhn5u9-2F0IqpbmU2hH7460Ixy4IRd2HhvdT-2FsZnymnKd-2B3TOjpyQIY-2Bv3B9ZYyVDk-2BNFDDKvvlY8SE1kHJaB1jsWD5BgmRQsBDNIhKiuh5AY0sH1w9q8nCULikaIvB5knh5oCwFZdC-2BscOY8ipHN0-2FwCOGj4RFT2Jjx-2BwUX3yQboIRQ7cXM4dAv3G5FFVzHv030sU8jPsExpXJy4UajTekbmTk9ledqy7ZJA3RP-2BKm3C2LOCmHrdYgD-2BeOHVe9JOQqxhV4CiGyRhDS9oaMI9oRbZEYssGScwZEUcg44km_nCyD0OjfWWda0fny7BdXCaZa1dTuV49YyfNg3yJrg97FL3Kv0EHJMcicPdkuqwuRdzjRrm80tEQd1-2BziUVdt4N-2BENqkwrYnMwunCF16u8LRHLYXwliaO-2FRxCTdaxoscX0qRzlE7rIioEu87itWKBhA35b-2BLtpeZdY5FttszEKk98S-2BAkQjeAEezMXDnx4Erip9FzEXDDzYaOs5Vcm1AsYb-2BgpyoamtklMs0g2uty2jkLjDmv7S713h0dFNaejm6R4aacY7tM-2BP0Ba2zS1tS4g4lNk1ZUqKdUjExLsKx4IXKxbWGPcQL0vxW8Qyj2yn4a5ix4R0g2Yru3eRWmZLGhh84fwBeZSH3h12ETm6-2Fl4qe2Nre9VtgjSdgNHHF7M5rgOoyImZHHDfOL1RD170sXKpdh22SsY9Id4F65zZHdaDFbEcH-2BNR2-2FGFymfze07EF4) | ❌ no Account relation populated | `[Meeting 2026-02-25 Thomas Harr]` |
+| **2026-02-11** | Tax Discussion | (no time set) | **Pending** ⚠️ | [MS Teams recap](https://teams.microsoft.com/l/meetingrecap?driveId=b%219Sy6PCqW-k-mi_pkBBdtAnmxOhkZ9z9DnB1ebRRhIxorE7g_sYChQIEPQYfrGcNH&driveItemId=01SRMA4TPXZP722266UJGZTF4BZETURQB5&sitePath=https%3A%2F%2Fsubledgesl-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Fseth_accruity_com%2FIQD3y_-ta96iTZmXgcknSMA9AXSzRgHYIKk3QRNt8mCZuBQ&fileUrl=https%3A%2F%2Fsubledgesl-my.sharepoint.com%2Fpersonal%2Fseth_accruity_com%2FDocuments%2FRecordings%2FCall+with+Bryan+Szpindor-20260210_162550-Meeting+Recording.mp4%3Fweb%3D1&threadId=19%3Aa9669322-34d5-4d98-8e4e-a4e265a7d094_c10aa3b2-2b43-4013-834a-10a4dc624394%40unq.gbl.spaces&callId=00969c7a-612d-4a1f-a297-7d43f3fecab3&threadType=OneOnOneChat&meetingType=Unknown&subType=RecapSharingLink_RecapCore) | ✓ to `30d49172…7e04` (different Account!) | `[Meeting 2026-02-11 Tommy + Andy K]` |
+
+### 4.2 Meeting-by-meeting detail
+
+---
+
+#### 🎙 **2026-02-25 · Tax Planning Session** · Done
+**Title:** "Thomas Harr" · **Recap:** Fellow.app · **Status:** Done · **Restricted:** No · **Time:** 2:00–2:30 PM EST. `[Meeting 2026-02-25 Thomas Harr]`
+
+This is the **most recent Tommy-side strategic session** on file, occurring ~6 weeks before the April 9 extension thread opened. Likely the session that produced the strategic framework now in flight: amendment work ($110K savings), $400K office dep reclass, S-corp restructure pipeline, and the cost-seg study tied to the 13 Cost Seg Proposal rows. The Fellow recap should be re-ingested on the next refresh to pull exact decisions and quotes into §10 Operations and §11 Individual Profile. `[Gap: Fellow transcript ingestion]`
+
+**Account relation gap.** This row has **no Account relation populated** — it was matched to Tommy by the title string "Thomas Harr" via search, not via a structured relation. The relationship-manager workflow should set the Account relation so future queries scoped to `Account = Tommy Harr` include this meeting. Promoted to §7 as a plumbing item.
+
+---
+
+#### 🎙 **2026-02-11 · Tax Discussion** · **Pending ⚠️** · joint Tommy + Andy K
+**Title:** "Tommy Harr and Andy K" · **Recap:** Microsoft Teams (Recording: "Call with Bryan Szpindor" 2026-02-10 16:25 EST) · **Status:** Pending · **Restricted:** No. `[Meeting 2026-02-11 Tommy + Andy K]`
+
+This was a **joint Tommy + Andy** session, suggesting the partnership stack (Legacy Ohio Homes / COGS ULTD / LHI / B&M Management) was discussed jointly. The recording title references **Bryan Szpindor** — a new third-party participant not previously in this dossier's third-party orbit. Bryan's role is unclear from the row metadata; he could be an outside CPA, attorney, lender, or potential investor. **Pending** status means the Accruity-side meeting-tracker workflow has not closed this row out — needs a status update. `[Action:Meetings tracker cleanup]`
+
+**Account relation issue.** This row's Account relation points to `30d49172875181ddb232f4b70fb47e04` — **not** the Tommy Harr Account record this dossier is anchored to (`3424917287518141812be02393d26cb1`). Two possibilities:
+1. There is a **duplicate Tommy Harr Account** in the Accounts DB that needs reconciliation/merging.
+2. `30d49172…7e04` is actually **Andy Karabinos's Account record**, since the meeting was joint Tommy + Andy.
+
+Either way, this is a plumbing item: confirm next refresh by fetching `30d49172…7e04` and either merging the duplicate or updating the meeting row's Account relation to include both Tommy AND Andy. Promoted to §7 Action Items.
+
+### 4.3 Meetings referenced elsewhere but NOT in the Meetings Tracker
+
+The April 9 → April 14 extension thread does not reference any specific synchronous meeting. The thread implies a longer prior planning relationship (the amendment scope, $400K office dep reclass, S-corp restructure plan, and cost-seg pipeline all pre-date the thread), so additional planning sessions likely exist but aren't logged. Backfill on next refresh once the live Outlook scan + meeting-transcript MCP queries are run.
+
+### 4.4 Rollup
+
+| Metric | Value | Source |
+| --- | --- | --- |
+| Total meetings on file | 2 | search-matched |
+| Status breakdown | 1 Done · 1 Pending ⚠️ | derived |
+| Meeting cadence | 14 days between the two on file (2026-02-11 → 2026-02-25) | derived |
+| Meeting types | 1 Tax Discussion · 1 Tax Planning Session | derived |
+| Recap platforms | 1 Fellow · 1 MS Teams (with Bryan Szpindor) | derived |
+| Transcripts ingested this refresh | 0 (URLs captured; full pull deferred to Granola/Fathom MCP) | `[Gap: transcript ingestion]` |
+| Meetings with Restricted flag | 0 | `[Meetings Tracker.Restricted]` |
+| Last meeting (any status) | 2026-02-25 Tax Planning Session | derived |
+| Days since last meeting | 56 days (as of 2026-04-22 refresh) | derived |
+| Meetings with Account relation populated | 1 of 2 (50% — plumbing gap) | derived |
+| Meetings linked to wrong Account | 1 (the 02-11 Tommy + Andy K meeting points to `30d49172…7e04` instead of `34249172…2cb1`) | derived |
+
+### 4.5 Gaps to backfill on next refresh
+
+- **Resolve dual-Account question** — fetch page `30d49172875181ddb232f4b70fb47e04` and confirm whether it is (a) a duplicate Tommy Harr Account to merge or (b) Andy Karabinos's Account. Either way, fix the meeting-row's Account relation so it surfaces under Tommy.
+- **Set Account relation on 2026-02-25 "Thomas Harr" meeting row** — currently empty; should point to `34249172…2cb1` so the Account → Meetings relation populates correctly.
+- **Resolve Pending status on 2026-02-11 meeting** — close-out Done/Canceled with reason.
+- **Pull Fellow transcript** for 2026-02-25 — extract the strategic framework discussed (amendment scope, dep reclass, S-corp plan, cost-seg pipeline) into §10 Operations.
+- **Pull MS Teams recording** for 2026-02-10 (the "Call with Bryan Szpindor" referenced in the 02-11 meeting row) — clarify Bryan's role and whether he should be added to §3 third-party orbit.
+- **Backfill any Tax Planning Session meeting prior to 2026-02-11** — the amendment/dep-reclass/S-corp scope discussed in the April thread implies earlier planning sessions; locate them next refresh.
