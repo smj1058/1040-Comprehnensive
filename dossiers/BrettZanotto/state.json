@@ -1,0 +1,163 @@
+{
+  "client": "Brett Zanotto",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "15+ sidecars (5 meetings, 8 cost-seg proposals, 7 action items, 2 emails, EL, Insights, Tax Ascend, Tax Planning exec summary, Tax Planning Session record); active multi-strategy advisory exemplar (S-Corp Holding + Cost Seg + REP + Solo 401k); single PA filer with 6-entity stack and 10 LTR rentals + flips",
+  "account": {
+    "page_url": "https://www.notion.so/30d4917287518137b00ce6854a3f9bae",
+    "page_id": "30d49172-8751-8137-b00c-e6854a3f9bae",
+    "client_number": "02202615-01",
+    "mango_client_id": "937671",
+    "imaginetime_workspace": "5331/937671",
+    "primary_contact_email": "brettzsellspgh@gmail.com",
+    "primary_contact_phone": "724-961-6509",
+    "address": "5767 Evans Road, Export PA 15632",
+    "filing_status": "Single (head of household)",
+    "state": "Pennsylvania",
+    "relationship_manager": "Seth Johnson"
+  },
+  "household": {
+    "principals": [
+      { "name": "Brett Zanotto", "email": "brettzsellspgh@gmail.com", "role": "Realtor + full-time RE investor (left W-2 April 2025)" }
+    ],
+    "filing_status": "Single (head of household)"
+  },
+  "engagement": {
+    "stage": "Tax Ascend — Tax Planning + Tax Compliance",
+    "el_status": "Signed",
+    "el_signed_date": "2026-02-03",
+    "extension_status": "Accepted",
+    "compliance_fee_usd": 11075,
+    "planning_retainer_monthly_usd": 425,
+    "returns_scope": "1 Form 1040 + 5 entity returns",
+    "tax_memo_status": "SENT",
+    "tax_memo_sent_date": "2026-02-18",
+    "insights_status": "Delivered",
+    "insights_delivered_date": "2026-01-29"
+  },
+  "exec_summary_db_rows": [
+    {
+      "id": "31449172-8751-819e-9384-f43c046a4983",
+      "title": "📋 Tax Planning — Brett Zanotto",
+      "summary_type": "Tax Planning",
+      "url": "https://www.notion.so/314491728751819e9384f43c046a4983",
+      "role": "primary populated exec summary (full strategy memo)"
+    },
+    {
+      "id": "34249172-8751-81fd-a031-d764959ed19f",
+      "title": "Brett Zanotto",
+      "summary_type": "General",
+      "url": "https://www.notion.so/34249172875181fda031d764959ed19f",
+      "role": "thin general exec summary (Turn 11 update target)"
+    }
+  ],
+  "sidecars": {
+    "tax_planning_exec_summary": "https://www.notion.so/314491728751819e9384f43c046a4983",
+    "thin_exec_summary": "https://www.notion.so/34249172875181fda031d764959ed19f",
+    "tax_planning_session_record": "https://www.notion.so/3104917287518022a951c86e8a4a75b4",
+    "engagement_letter_row": "https://www.notion.so/2fb4917287518037a5bfe491610cd8c3",
+    "insights_project_row": "https://www.notion.so/2fd49172875180959975f8e572188665",
+    "tax_ascend_row": "https://www.notion.so/2f049172875180c8a439e7f67dbc7120",
+    "primary_contact": "https://www.notion.so/30d491728751813e833aeeaf908bb4ff",
+    "files_links_brett_populated": "https://www.notion.so/33b491728751817c9502db73670e8ce6",
+    "files_links_el_placeholder": "https://www.notion.so/33b49172875181128da5fa7995c5ecd9",
+    "files_links_execsum_placeholder": "https://www.notion.so/33b491728751819ea3bacc0ca4435ffb",
+    "cost_seg_parent": "https://www.notion.so/33d49172875181419113d772292da336",
+    "cost_seg_approval_subpage_branded": "https://www.notion.so/3194917287518123bb03eeebfc199ef9",
+    "cost_seg_approval_subpage_template": "https://www.notion.so/319491728751817fbb46cd62ed566536",
+    "email_extension_payment": "https://www.notion.so/34249172875181be9102dd4672ffd012",
+    "email_cost_seg_proposal": "https://www.notion.so/3424917287518185a163fb6be21fd4aa",
+    "meeting_2026_01_05_insights_kickoff": "https://www.notion.so/2fb491728751801d8bd4f243901c532f",
+    "meeting_2026_01_23_insights_clarification": "https://www.notion.so/2fb49172875180caae0ec0141e45a8b7",
+    "meeting_2026_01_29_insights_delivery": "https://www.notion.so/2fb4917287518077b971d7c9ce3c06e2",
+    "meeting_2026_02_27_tax_planning_session": "https://www.notion.so/31449172875180dc897fffda08832cb5",
+    "meeting_2026_04_01_screenpipe_internal": "https://www.notion.so/33549172875181bb931be9bbf1c115d6",
+    "ai_36_property_excel": "https://www.notion.so/33549172875181f0a79afaab5c23bbd2",
+    "ai_37_scorp_intake": "https://www.notion.so/335491728751819c98bdf3f560eac6d5",
+    "ai_38_solo401k": "https://www.notion.so/33549172875181cfb6b2d803e02fd287",
+    "ai_39_medical_expense_research": "https://www.notion.so/33549172875181ebbddaf7ee50d17dd3",
+    "ai_40_may_followup": "https://www.notion.so/33549172875181e59601e56e843a4e46",
+    "ai_105_send_cost_seg_proposal_done": "https://www.notion.so/33549172875181fe96a1ce54852be18a",
+    "ai_106_luna_creek_ein": "https://www.notion.so/3354917287518180af6dcdf33358fbe6"
+  },
+  "entities_known": [
+    { "name": "CityLife Homebuyers", "type": "LLC partnership", "ownership": "50/50 with Brian Kirshner", "activity": "Wholesaling — primary income", "scorp_priority": "HIGH (rolls into proposed Brett Zanotto Holdings, Inc.)" },
+    { "name": "Luna Creek Holdings", "type": "LLC partnership", "ownership": "50/50 with Mikey", "activity": "5 LTR rentals (passive)", "scorp_priority": "NOT APPLICABLE — passive rental holding" },
+    { "name": "Luna Creek Ventures", "type": "LLC partnership", "ownership": "50/50 with Mikey", "activity": "Fix & flip (12 flips planned 2026)", "scorp_priority": "HIGH (rolls into proposed Holdings)" },
+    { "name": "Wistertown Holdings", "type": "LLC", "ownership": "100% Brett", "activity": "5 LTR rentals (incl. owner-occupied 1137 Sheffield unit)", "scorp_priority": "NOT APPLICABLE — passive rental + owner-occupancy" },
+    { "name": "Breeze Mountain Holdings", "type": "LLC", "ownership": "100% Brett", "activity": "Consulting — no activity", "scorp_priority": "NOT APPLICABLE — idle" },
+    { "name": "Burr Simply (BRRRR Simply)", "type": "TBD entity-type", "ownership": "15% Brett", "activity": "RE underwriting app ($33K invested, no income)", "scorp_priority": "MED-LATER — pending entity-type confirmation (AI #7)" },
+    { "name": "Steel City", "type": "LLC partnership (likely)", "ownership": "50% with Casey", "activity": "TBD (HSA workaround floated)", "scorp_priority": "NOT EVALUATED — outside primary stack" }
+  ],
+  "properties_known": [
+    { "address": "1137 Sheffield St (triplex)", "entity": "Wistertown / Brett personal", "purchase_price": 405000, "reno_cost": 70000, "land_value": 45000, "pis": "2024-04-15", "est_savings_usd": 19475, "status": "Engaged" },
+    { "address": "10821 Bellview Dr", "entity": "Wistertown", "purchase_price": 65689, "reno_cost": 53914.59, "land_value": 35000, "pis": "2023-01-28", "est_savings_usd": 5905, "status": "Awaiting approval" },
+    { "address": "237 Belmont Ave", "entity": "Wistertown (intake says 'Wiestertown')", "purchase_price": 75125, "reno_cost": 55069.37, "land_value": 20000, "pis": "2024-04-15", "est_savings_usd": 4960, "status": "Awaiting approval" },
+    { "address": "216 Munson Ave", "entity": "Luna Creek Holdings", "purchase_price": 55000, "reno_cost": 32165.73, "land_value": 12000, "pis": "2024-11-09", "est_savings_usd": 1800, "status": "Awaiting approval" },
+    { "address": "178 Central Ave", "entity": "Luna Creek Holdings", "purchase_price": 68000, "reno_cost": 55157.79, "land_value": 25000, "pis": "2025-03-17", "est_savings_usd": 5050, "status": "Awaiting approval" },
+    { "address": "327 James St", "entity": "Luna Creek Holdings", "purchase_price": 75000, "reno_cost": 53784.42, "land_value": 25000, "pis": "2024-09-11", "est_savings_usd": 5095, "status": "Awaiting approval" },
+    { "address": "837 Woodward Ave", "entity": "Luna Creek Holdings", "purchase_price": 35000, "reno_cost": 40773.12, "land_value": 12000, "pis": "2024-11-09", "est_savings_usd": 4100, "status": "Awaiting approval" },
+    { "address": "1613 Clarkton St", "entity": "Luna Creek Holdings", "purchase_price": 81000, "reno_cost": null, "land_value": null, "pis": "TBD (in renos; likely 2026)", "est_savings_usd": null, "status": "Awaiting approval" },
+    { "address": "357 Marylea Ave", "entity": "Luna Creek Ventures", "purchase_price": 95000, "status": "Excluded — fix & flip 2026 (deleted)" },
+    { "address": "1649 Duffield St", "entity": "Luna Creek Ventures", "purchase_price": 146672, "status": "Excluded — fix & flip 2026 (deleted)" },
+    { "address": "1044 Biltmore Ave", "entity": "Luna Creek Holdings", "purchase_price": 115000, "status": "Excluded — bought + resold ~$20K-25K profit (deleted)" },
+    { "address": "112 Eileen Dr", "entity": "Luna Creek Ventures", "purchase_price": 100000, "status": "Excluded — bought + resold ~$55K profit (deleted)" }
+  ],
+  "key_numbers": {
+    "agi_2024_usd": 95472,
+    "tax_2024_usd": 14277,
+    "effective_rate_2024_pct": 15.7,
+    "w2_2024_usd": 114374,
+    "w2_2025_usd": 33296,
+    "estimated_income_2025_low_usd": 117000,
+    "estimated_income_2025_high_usd": 152000,
+    "estimated_payments_2025_usd": 0,
+    "balance_due_2025_low_usd": 19000,
+    "balance_due_2025_high_usd": 27000,
+    "underpayment_penalty_low_usd": 490,
+    "underpayment_penalty_high_usd": 700,
+    "se_savings_scorp_min_usd": 6714,
+    "annual_savings_fully_optimized_usd": 44307,
+    "cost_seg_total_active_savings_usd": 46385,
+    "burr_simply_invested_usd": 33000,
+    "ulcerative_colitis_oop_usd": 7500
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Memo .docx (URL on Tax Ascend row, body not pulled)",
+    "Insights Counting File xlsx (URL on Insights Project row, body not pulled)",
+    "Insights Extraction 1040 xlsx (URL on Insights Project row, body not pulled)",
+    "Property Excel for cost seg (Brett to provide — AI-36 open 54 days)",
+    "PBC Workbook (sent 2026-02-25, deadline 2026-03-15, overdue 56 days)"
+  ],
+  "files_links_url_collision": {
+    "flag": true,
+    "details": "Brett's Files & Links row 33b491728751817c9502db73670e8ce6 has byte-identical Document Inventory (IgCqkxeMjXQo...) and PBC PDF Package (IgDL0pq68xE1...) SharePoint URLs to Spring Bengtzen's Files & Links row. Template-default propagation issue likely affecting other clients too.",
+    "promoted_to_action": "#21"
+  },
+  "open_action_items_count": 22,
+  "high_priority_action_items": [
+    "#1 Confirm 2025 extension payment posted (deadline midnight Apr 15 already passed)",
+    "#2 Brett — review and approve cost-seg proposals in client portal (1 of 8 engaged)",
+    "#3 Seth — Send S-Corp intake form to Brett (AI-37 open 54 days)",
+    "#4 Brett — Send property Excel for cost seg (AI-36 open 54 days)",
+    "#6 Brett — Return PBC Workbook (overdue 56 days)",
+    "#18 Q1 2026 estimated tax payment missed (Apr 15)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_opportunities": "done",
+    "turn_9_operations_individual": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/34249172875181fda031d764959ed19f",
+  "notion_exec_summary_row_action": "updated (existing thin General row)",
+  "notion_claude_summary_row_url": "https://www.notion.so/359491728751815faedbd20a0b7be049"
+}
