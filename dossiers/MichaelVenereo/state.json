@@ -129,8 +129,8 @@
     "turn_8_strategies_flags": "done",
     "turn_9_operations_individuals": "done",
     "turn_10_provenance_changelog": "done",
-    "turn_11_push_notion": "pending"
+    "turn_11_push_notion": "done"
   },
   "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181cb8eced582e12f919f",
-  "notion_claude_summary_row_url": null
+  "notion_claude_summary_row_url": "https://www.notion.so/3594917287518144a174dd7f84c4b097"
 }
