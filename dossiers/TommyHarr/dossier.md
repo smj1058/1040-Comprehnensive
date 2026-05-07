@@ -424,3 +424,96 @@ Upon Turn 11 completion, the generator will write a new Claude Summary row with 
 - **No Meeting Action Items DB rows exist** for either of Tommy's 2 logged meetings. The 02-25 Tax Planning Session clearly produced action items (the amendment + dep reclass + cost-seg + S-corp pipeline are effectively its output) — those items live in the email thread today, not as DB rows. On next refresh, **back-fill Meeting Action Items DB rows** so they're queryable by owner + due date.
 - **Andy-side action items not captured here.** Andy's $45K share of the amendment savings, his side of the cost-seg pipeline, and his S-corp structure are Tommy-parallel but Tommy's Account doesn't surface them. Pick up on Andy's dossier when generated.
 - **Engagement Inquiries / Service Requests / Intake Requests** — all return zero for Tommy this refresh. Either no requests have been filed, or they exist but aren't linked to the Account. Verify next refresh.
+
+---
+
+## §8. Tax Strategies & Projected Savings
+
+**Scope of this refresh:** Strategy lines anchored in the April 9–14 email thread and the 2026-02-25 Tax Planning Session (transcript pending). The **Tax Planning Memo, Tax Analysis Workbook, Insights Delivery Workbook, and PBC Workbook are all unlinked** on the Account record (§5.4), so projected-savings figures that aren't quoted directly in the email thread are marked `? Pending workbook ingestion`. **No fabricated $ figures** — every dollar value below is sourced from the email thread or marked `?`.
+
+### 8.1 Strategy table
+
+| Strategy | Entity / Property | Est. Impact | Status | Year | Priority | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| **April 15 extension + payment** | Personal 1040 | `$28,520` balance due covered with extension payment | In Progress — awaiting Tom's bank info as of 2026-04-14 | 2025 | 🔴 HIGH | `[EI:Re: April 15 - Extension §Synopsis]` |
+| **Prior-year amendment to capture $110K combined savings** ($65K Tommy + $45K Andy) | Tommy + Andy 1040s | **$65,000** Tommy share | Open · post-4/15 deliverable | Prior year (2023 likely) | 🔴 HIGH | `[EI §Key Numbers]` `[EI §Action Items]` |
+| **AMT issue resolution** ($23K from prior year) | Tommy 1040 | `$23,000` (component of the $65K above) | Open · to be addressed in the same amendment | Prior year | 🔴 HIGH | `[Email 2026-04-10 Tom→Accruity]` |
+| **Office depreciation reclass** | (entity TBD — likely Legacy Ohio Homes office property or LHI) | `$400,000` basis adjustment | Open · post-4/15 deliverable | 2025 + amendment | 🔴 HIGH | `[EI §Action Items]` `[EI §Key Numbers]` |
+| **Cost segregation study** | TBD properties (13 intake rows pending population) | ? Pending property data | Open · post-4/15 · 13 placeholder rows in Cost Seg Proposal Intake DB | 2025 + 2026 | 🔴 HIGH | `[Accounts:Tommy Harr.Cost Seg Proposals]` `[EI §Action Items]` `[Claude 2026-04-08 Cost Seg Pipeline]` |
+| **S-Corp restructure** (entity-by-entity) | Likely Legacy Ohio Homes + COGS ULTD (the active operating partnerships with $260K + $312K Tommy K-1 income) | ? Pending net-SE-by-entity computation | Open · pipeline · scope/timing not committed | 2026 | 🟡 MED | `[EI §Action Items]` |
+| **REPS (Real Estate Professional Status) evaluation** | Tommy and/or Andy | ? Pending hours-of-participation log; Tommy's RE operator profile (Real Side Real Estate brokerage + LHI rental management + Legacy Ohio Homes operating) suggests likely qualification, would unlock LHI rental losses against active income | Not formally claimed in the file | 2025 + 2026 | 🟡 MED | `? Pending memo ingestion` `[EI §Synopsis: "rental losses don't reduce SE"]` |
+| **STR / material-participation evaluation** for the LHI rental portfolio | LHI properties | ? Pending property type breakdown — depends on whether any LHI properties are short-term rentals | Not determinable without PBC workbook + rental schedule | 2025 | 🟡 MED | `? Pending workbook ingestion` |
+| **Augusta Rule (§280A(g)) evaluation** for any meeting/use of Tommy's primary residence by the partnerships | Personal residence → operating entities | ? Pending — not in scope of email thread | Not evaluated | 2026 | 🟢 LOW | `? Pending memo ingestion` |
+| **Accountable plan for reimbursable business expenses** | Tommy + Andy → operating entities | ? Pending 2024/2025 expense mix | Not evaluated | 2026 | 🟡 MED | `? Pending memo ingestion` |
+| **Retirement plan / SEP-IRA / Solo 401(k) optimization** | Tommy (and possibly entity-level on Legacy Ohio Homes / COGS ULTD) | ? Pending W-2 + K-1 detail | Not evaluated in file | 2025 + 2026 | 🟡 MED | `? Pending memo ingestion` |
+
+### 8.2 Projected savings rollup
+
+| Bucket | Quantified | 2025 Impact | Prior-Year Amendment | Source |
+| --- | --- | --- | --- | --- |
+| Amendment ($110K combined) — Tommy share | ✓ | — | **$65,000** | `[EI §Key Numbers]` |
+| AMT issue (component of amendment) | ✓ | — | $23,000 (in $65K) | `[EI §Key Numbers]` |
+| Office dep reclass | ~ partial | (depends on year of reclass) | — | `[EI §Key Numbers]` ($400K basis adj.) |
+| Cost seg study (TBD properties) | ❌ | ? | — | `[Accounts:Tommy Harr.Cost Seg Proposals]` |
+| S-Corp restructure SE savings | ❌ | ? | — | `[EI §Action Items]` |
+| REPS / STR loss-usability optimization | ❌ | ? | — | `? Pending memo ingestion` |
+| **Total quantified** | — | **? Pending** | **$65,000 (+$45,000 Andy share)** | — |
+
+### 8.3 Gaps to backfill next refresh (strategy side)
+
+- **Tax Planning Memo (Feb 2026 Tax Planning Session output)** — the 2026-02-25 session likely produced a memo that quantifies the office dep reclass + cost seg + S-corp impacts. Locate + link to Account.
+- **Tax Analysis Workbook** — net-SE-by-entity numbers needed for the S-corp election analysis.
+- **Insights Delivery Workbook** — prior-year baseline + the W-2 source confirmation.
+- **PBC Workbook** — entity stack reconciliation + property schedule for cost-seg classifier.
+- **REPS hours log** for Tommy — would materially upgrade the priority of the LHI rental losses + cost seg cascade.
+
+---
+
+## §9. Opportunity Flags (auto-detected)
+
+Rule-based classifier from `execsumm_emails/opportunity_flags.py`. Same caveat as Spring's §9: classifier depends on per-property basis + placed-in-service + study status (Cost Seg) and per-entity net SE earnings + classification + activity (S-Corp). Those inputs are not yet in the file (§5.4 + §5.2 — 13 cost-seg intake rows are empty placeholders), so most rows are `? Pending`. HIGH flags auto-promote to §7.
+
+### 9.1 Cost Segregation Candidates
+
+| Property | Entity Owner | Basis | Placed in Service | Study Status | Est. Bonus Dep | Priority | Basis of Flag | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **(13 unnamed intake-row placeholders)** | TBD (likely LHI portfolio + possibly Legacy Ohio Homes office) | ? Pending | ? | "New - Enter in Portal" (not commissioned) | ? Pending | 🟡 **PENDING DATA** | Intake-form skeleton exists but no property data populated; can't classify HIGH/MEDIUM/LOW until rows are filled | `[Accounts:Tommy Harr.Cost Seg Proposals]` `[§5.2]` |
+| **LHI rental portfolio** (the rental engine producing the $922K 50% nonpassive losses) | LHI partnership | ? Pending | ? Pending | None commissioned | ? Pending | 🔴 **HIGH** (qualitative, awaiting basis data) | $1.5M mortgage interest implies large basis · rental real estate · loss usability path likely already established (the K-1 already shows $922K nonpassive losses, suggesting REPS or material participation is being claimed) — **strongest candidate in the file** for cost seg priority once basis is known | `[EI §Key Numbers]` |
+| **Legacy Ohio Homes office property** ($400K dep reclass referenced) | Legacy Ohio Homes | ~$400K (basis adjustment) | ? Pending | None — but $400K reclass is in flight | ? Pending | 🔴 **HIGH** (related but distinct from cost seg — this is a reclassification, not a new study) | The $400K office dep reclass is a separate item from a property-level cost seg study; it may overlap but should be tracked separately | `[EI §Key Numbers]` `[EI §Action Items]` |
+
+**Read:** the LHI rental portfolio is **the strongest cost-seg priority** in the file. The $922K loss already on the K-1 means the loss-usability path is established (REPS / material participation), so any additional cost-seg-driven acceleration would flow directly through to active income offset (or further negative AGI). The basis is unknown — but $1.5M of mortgage interest implies a portfolio basis substantially north of $1.5M. Even at $3M basis × 25% × 60% bonus = ~$450K incremental first-year deduction (illustrative; pending actual basis).
+
+### 9.2 S-Corp Election Candidates
+
+| Entity | Current Classification | 2025 Net SE Earnings (Tommy 50%) | Reasonable Salary | Est. SE Savings | Priority | Basis of Flag | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **Legacy Ohio Homes** | 1065 partnership (K-1 of $312K Tommy 50%) | **$312,472** | ~$94K (30% of net SE) | ~`$30K` Tommy / `$60K` combined w/ Andy | 🔴 **HIGH** | Net SE earnings ≥ $80K threshold by ~4×; active operating partnership; SE tax of $35K total in 2025 confirms SE exposure on the active income | `[EI §Key Numbers]` `[EI §Action Items: S-Corp restructure]` |
+| **COGS ULTD** | 1065 partnership (K-1 of $260K Tommy 50%) | **$260,178** | ~$78K (30% of net SE) | ~`$25K` Tommy / `$50K` combined w/ Andy | 🔴 **HIGH** | Net SE earnings ≥ $80K threshold by ~3×; active operating partnership | `[EI §Key Numbers]` `[EI §Action Items: S-Corp restructure]` |
+| **LHI** (rental portfolio) | 1065 partnership | -$922K (passive rental losses) | — | — | **NOT APPLICABLE** | Rental holding entity with depreciable RE — S election would create distribution-gain recognition risk on appreciated RE; the rental losses are nonpassive only because of REPS/material participation, but the entity itself is rental real estate | `[EI §Key Numbers]` |
+| **B&M Management** | 1065 partnership | -$71K (loss) | — | — | **NOT APPLICABLE** (current) | Loss entity; no SE tax to eliminate; reconsider once activity shifts to net-positive | `[EI §Key Numbers]` |
+| **Real Side Real Estate** | TBD (possibly W-2 source — $48K Tommy wages 2025) | ? Pending classification | — | — | ? Pending | If Tommy is a W-2 employee here it's likely already an S-corp or 1120; if it's a Schedule C / LLC he runs, S election may be MEDIUM priority | derived from `realsiderealestate@gmail.com` contact email |
+
+**S-Corp savings rollup** (combined Tommy + Andy across the two HIGH-priority entities):
+- Legacy Ohio Homes: ~`$60K/yr` SE-tax savings (combined)
+- COGS ULTD: ~`$50K/yr` SE-tax savings (combined)
+- **Combined: ~`$110K/yr` ongoing SE tax reduction** if both elections + reasonable salary structure are implemented
+
+This is approximately **the same magnitude as the prior-year amendment savings ($110K combined)** — meaning the S-corp restructure is structurally a recurring annual benefit on top of the one-time amendment. Strongly supports the priority of completing the S-corp restructure pipeline (Action #6) post-4/15.
+
+### 9.3 Classifier coverage this refresh
+
+| Metric | Value |
+| --- | --- |
+| Properties scanned for Cost Seg | 0 properties with actual data; 13 placeholder rows; 1 implicit aggregate ("LHI portfolio") + 1 office reclass scope |
+| Entities scanned for S-Corp | 5 named; 2 numerically scored HIGH (Legacy Ohio Homes, COGS ULTD); 2 ruled out NOT APPLICABLE (LHI, B&M); 1 ? Pending (Real Side Real Estate) |
+| HIGH flags promoted to §7 Open Items | 4 (LHI cost seg ⊃ Action #7; office reclass ⊃ Action #5; Legacy Ohio Homes S-corp ⊃ Action #6; COGS ULTD S-corp ⊃ Action #6) |
+| Combined ongoing SE-tax savings opportunity (S-corp) | ~`$110K/yr` (combined Tommy + Andy) |
+| Cost Seg engagements already in flight | 0 (13 placeholder rows + the planned post-4/15 study) |
+
+### 9.4 Gaps to backfill next refresh (opportunity-flag side)
+
+- **Populate the 13 Cost Seg Proposal Intake rows** with property addresses, basis, EINs, placed-in-service dates, and study fees so the §9.1 classifier can run with real data.
+- **PBC Workbook property schedule** — once linked, every LHI property gets its own row in §9.1.
+- **Confirm REPS status formally** for Tommy (and Andy) — would lock in the loss-usability path that's currently inferred from the $922K nonpassive losses on the K-1.
+- **Net SE earnings per entity** from the Tax Analysis Workbook — sharpens the S-corp savings estimates from rough rule-of-thumb to precise.
+- **Real Side Real Estate classification** — confirm whether Tommy's W-2 is from this entity and what its current federal form is.
