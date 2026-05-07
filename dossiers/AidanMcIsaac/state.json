@@ -1,0 +1,60 @@
+{
+  "client": "Aidan McIsaac",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "sparse",
+  "account": {
+    "page_url": "https://www.notion.so/33c4917287518072a33eeebd89ec6745",
+    "page_id": "33c4917287518072a33eeebd89ec6745",
+    "account_name": "Aidan McIsaac",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_display_name": null,
+    "primary_contact_email": null,
+    "primary_contact_phone": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null
+  },
+  "duplicate_account_flag": "https://www.notion.so/33c4917287518130bac5f8b92e78b7ae (titled 'Aidan McIsaac (duplicate)' — confirm delete vs merge)",
+  "household_note": "Per Deontae 2026-04-08 New Client Alert review: Aidan is 'wrapped in Colin's folder' — primary engagement runs through Colin Ushkowitz; Aidan is bundled. Both signed Ascend for Compliance + Silver in early April 2026.",
+  "exec_summary_db_rows": [],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/33c491728751801b9272ccc19f2ea23e",
+    "joint_meeting_with_colin": "https://www.notion.so/34c49172875180ff9ff0eb16af0dd46d",
+    "tax_ascend": "https://www.notion.so/33c491728751807c921cd0be0e443baa",
+    "prior_claude_summary": "https://www.notion.so/33c4917287518117994fe68400dcdc76"
+  },
+  "key_facts": {
+    "engagement_fee": 1200,
+    "engagement_letter_status": "Signed",
+    "extension_status": null,
+    "mango_engagement_status": "Project Created",
+    "mango_portal_invite": "Portal Invite Sent",
+    "pbc_list_status": "Sent List nothing received yet",
+    "pbc_list_sent_date": "2026-04-09",
+    "batch_added_date": "2026-04-08",
+    "tax_proposal": "COMMITTED",
+    "compliance_group_status": "Pending Check",
+    "ascend_tier": "Compliance + Silver (per New Client Alert)",
+    "ascend_signed_date": "2026-04-08",
+    "primary_engagement_via": "Colin Ushkowitz folder (Aidan bundled)",
+    "files_basis": "tax extraction file (not tax analysis)"
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook — not on Account record",
+    "Tax Extraction (Insights Delivery) — not on Account",
+    "Tax Analysis Workbook — not on Account",
+    "Tax Planning Memo — not on Account",
+    "Meeting Prep Notes — not on Account"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_through_10": "pending",
+    "turn_11_push_notion": "pending"
+  },
+  "notion_exec_summary_row_url": null,
+  "notion_claude_summary_row_url": null
+}
