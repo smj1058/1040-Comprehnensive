@@ -517,3 +517,106 @@ This is approximately **the same magnitude as the prior-year amendment savings (
 - **Confirm REPS status formally** for Tommy (and Andy) — would lock in the loss-usability path that's currently inferred from the $922K nonpassive losses on the K-1.
 - **Net SE earnings per entity** from the Tax Analysis Workbook — sharpens the S-corp savings estimates from rough rule-of-thumb to precise.
 - **Real Side Real Estate classification** — confirm whether Tommy's W-2 is from this entity and what its current federal form is.
+
+---
+
+## §10. Operations Analysis
+
+**Scope this refresh:** derived from the April email thread, the 2 Meetings Tracker rows, and the 2 prior Claude sessions. Tommy and Andy operate a **vertically-integrated Ohio real-estate platform** spanning brokerage (Real Side Real Estate), homebuilder/operating (Legacy Ohio Homes + COGS ULTD), rental holdings (LHI portfolio), and a management entity (B&M Management). The model is structurally similar to a Spring/Brian-style household but with a **single 50/50 partner pair** (Tommy + Andy) instead of a married couple — and with the partnership entirely concentrated on real-estate operations rather than mixed RE-and-software.
+
+### 10.1 The operating engine
+
+**Top of funnel — Real Side Real Estate (brokerage).** Tommy's `realsiderealestate@gmail.com` contact email plus a $48K W-2 in 2025 strongly suggest Tommy holds a brokerage role at this entity (or it's his own brokerage). Brokerage activity is plausibly the deal-flow source feeding the operating + holding entities below. Federal form unknown until confirmed in §5 documents. `[Accounts:Tommy Harr.New Contact: Email]`
+
+**Core operating partnerships — Legacy Ohio Homes + COGS ULTD.** Both entities are 50/50 with Andy. Combined 2025 K-1 income on Tommy's side: **$572,650** ($312,472 Legacy Ohio Homes + $260,178 COGS ULTD). The names suggest a homebuilder / property-development model — Legacy Ohio Homes likely the build/sell entity, COGS ULTD likely the cost-of-goods/development services entity. SE tax ($35K total at 2025) hits because these are active-business K-1s (not rental). `[EI §Key Numbers]`
+
+**Rental holding — LHI.** 50/50 with Andy. **2025 50% rental losses: $922K**, driven by `$1.5M` of mortgage interest on the LHI portfolio. The loss is recorded as **nonpassive**, which means either (a) Tommy/Andy have qualified for **REPS** (Real Estate Professional Status), or (b) the properties are **STR** with material participation, or (c) the LHI structure is being treated as a self-rental. Whichever applies, the K-1 already reflects nonpassive treatment — this is the engine that drives Tommy's 2025 AGI to negative. `[EI §Key Numbers]` `[EI §Synopsis]`
+
+**Loss-of-record entity — B&M Management.** 50/50 with Andy. 2025 50% loss: $71K. Likely a management-services entity that bills the operating partnerships at cost or below cost. `[EI §Key Numbers]`
+
+### 10.2 IRS posture (current)
+
+- **Live IRS balance: $196,000** ($141K relating to 2023 + $55K accruing on 2025) on a **$12,000/month payment plan** `[EI §Key Numbers]`
+- **2025 extension balance: $28,520** added on top — handling outcome of the Apr 14 thread is the immediate gate `[EI §Key Numbers]`
+- **2024 AMT issue: $23,000** carried over from prior year, expected to be resolved as part of the amendment work `[Email 2026-04-10 Tom→Accruity]`
+
+### 10.3 Coverage model + cadence
+
+**Accruity coverage.** Deontae Lafayette (Tax Compliance) owns the active April thread; Sophia Leonardo (Tax Admin) is the portal/admin contact; Seth Johnson (RM) and Stacy Cvengros are CC'd; `tax@accruity.com` is on the team-inbox CC list. Sami Bates is CC'd from the client side, indicating she has visibility into tax/financial conversations. `[EI §Participants]`
+
+**Meeting cadence.** 2 logged meetings in early 2026 (Feb 11 ad-hoc with Bryan Szpindor, Feb 25 Tax Planning Session). 56-day gap from last meeting to this refresh. ~6 weeks before the April extension thread opened, the Feb 25 session likely produced the strategic framework (amendment + dep reclass + S-corp + cost-seg) currently in flight. `[§4.4]`
+
+### 10.4 Referral & brand value (operational context)
+
+Tommy is **an active referrer to Accruity**. The 2026-04-08 New Client Alert review explicitly records Tommy as the source for **Meghan Botkin** (4/3 new client, $2,500 Foundations+ + $500/mo retainer). `[Claude 2026-04-08 Aidan McIsaac §Clients]` Combined with his HIGH-urgency compliance/IRS-balance status, the referral activity is a strong signal: **Tommy is not at relationship risk despite the financial stress**, and the engagement is producing follow-on revenue beyond Tommy's direct fees.
+
+Mirroring the Spring/Brian strategic theme: **referral capacity exceeds engagement revenue.** The investment in resolving Tommy's amendment + cost seg + S-corp pipeline is justified not just by the direct economics ($110K amendment + $110K/yr ongoing S-corp savings) but by the referral network it sustains.
+
+### 10.5 Risk posture
+
+| Risk | Current state | Mitigation |
+| --- | --- | --- |
+| **April 15 cycle compliance** | $28,520 due; Tom's bank info pending Apr 14 (refresh date Apr 22 — already past deadline) | Confirm extension was filed with payment (Action #1) |
+| **IRS payment plan integrity** | $12K/mo plan against $196K balance; new $28,520 compounds against this if extension wasn't paid | Pay extension balance to keep plan clean |
+| **Amendment timing** | $110K combined + $23K AMT; post-4/15 work | Build amendment workpapers; file once 4/15 cycle clears |
+| **Cost seg pipeline stall** | 13 intake placeholder rows since (date unclear); none populated; no studies commissioned | Populate intake → commission studies → §9.1 classifier runs with real data |
+| **S-corp restructure inertia** | Pipeline-only; entity scope/timing not committed | Use the $110K/yr ongoing-savings frame to drive prioritization (Action #6) |
+| **Andy-side coverage gap** | Andy is a separate Account that doesn't yet have a dossier; his $45K amendment share + S-corp stake + cost seg interest live in his own context | Generate Andy dossier next; cross-reference here (Action #21) |
+| **Documentation gap** | 0 ELs, 0 Files & Links rows, 5 unlinked tax workbooks | Plumbing items (#12–#14) — backfill before next refresh |
+| **Dual-Account flag** | The Feb 11 meeting points to a different Account ID — possibly a duplicate Tommy or Andy's account | Resolve next refresh (Action #9) |
+
+---
+
+## §11. Individual Profile(s)
+
+### 11.1 Tommy Harr
+
+| Dimension | Detail | Source |
+| --- | --- | --- |
+| Role | Operator/principal across the Legacy Ohio Homes / COGS ULTD / LHI / B&M Management stack; brokerage role at Real Side Real Estate (likely) | derived from `[Accounts:Tommy Harr]` + `[EI §Key Numbers]` |
+| Email (operating) | `tom@legacyohiohomes.com` | `[Accounts:Tommy Harr.New Contact: Email]` |
+| Email (brokerage) | `realsiderealestate@gmail.com` | `[Accounts:Tommy Harr.New Contact: Email]` |
+| Phone | `(614) 406-0997` | `[Accounts:Tommy Harr.New Contact: PH#]` |
+| Tax filing status | Likely MFJ (Sami Bates CC'd, possibly spouse) — `? Pending confirmation` | `[EI §Participants]` |
+| Residency | Ohio (operating entities domiciled in Ohio; area code 614 = Columbus) | derived |
+| W-2 income (2025) | $48,000 (likely sourced from Real Side Real Estate or one of the operating entities) | `[EI §Key Numbers]` |
+| 2025 K-1 income (Tommy 50%) | +$312K Legacy Ohio Homes + $260K COGS ULTD = **+$572K active** | `[EI §Key Numbers]` |
+| 2025 K-1 losses (Tommy 50%) | -$922K LHI rentals + -$71K B&M Management = **-$993K** | `[EI §Key Numbers]` |
+| 2025 net K-1 position | **-$421K** (rental losses fully offset active K-1 income) → negative AGI | `[EI §Key Numbers]` |
+| 2025 SE tax exposure | **$35,000** (rental losses don't reduce SE; SE applies to active K-1 income) | `[EI §Key Numbers]` |
+| IRS balance (across years) | **$196,000** total ($141K 2023 + $55K 2025) on $12K/month plan | `[EI §Key Numbers]` |
+| 2025 extension balance due | **$28,520** (as of Apr 14 thread; may already be paid post-Apr 15) | `[EI §Key Numbers]` |
+| Engagement letter | Not on file ⚠️ (Action #12) | `[Accounts:Tommy Harr.Engagement Letters]` |
+| Active engagement tracks | Compliance + Amendment ($110K combined savings) + Cost Seg + Office Dep Reclass ($400K) + S-Corp restructure pipeline | `[EI §Action Items]` |
+| Wealth picture | Active operator with negative-AGI tax shelter via LHI rentals; underlying balance-sheet equity in Legacy Ohio Homes / COGS ULTD / LHI portfolio likely substantial (8-figure portfolio implied by $1.5M mortgage interest + active brokerage) but not quantified in file | derived |
+| REPS posture | Likely qualifies given multi-entity RE operator status; nonpassive treatment of $922K LHI losses suggests already being claimed — formal hours-log documentation pending | `[EI §Key Numbers]` `[EI §Synopsis]` |
+
+**Life events / third-party context.**
+- **Bryan Szpindor** entered the orbit on 2026-02-10 via an MS Teams call. Role unclear (CPA / attorney / lender / investor / contractor — Action #17 to identify).
+- **Sami Bates** (`sami@legacyohiohomes.com`) — same domain as Tommy, CC'd on the April thread; likely spouse or operations principal (Action #18).
+- **Andy Karabinos** — 50/50 partner across the entire entity stack; needs his own dossier.
+
+**Stated priorities (from the file).**
+- 2026-04-10: "wants to pay [extension] with extension" and "address the $23K AMT issue in the amendment" `[Email 2026-04-10 Tom→Accruity]`
+- 2026-04-14: offered bank info for extension payment, asked if `$6,000` payment was recommended `[Email 2026-04-14 Tom→Deontae]`
+
+**Outstanding to Tommy personally.** 1 in-progress action item (#2 — bank info for extension payment). Several Accruity-owned but Tommy-facing items follow ($23K AMT, $65K Tommy-share amendment, S-corp scope, cost seg).
+
+**Relationship-risk read.** **LOW** — Tommy is financially stressed (IRS balance + extension cycle) but operationally engaged, prompt in his replies (same-day responses on Apr 10 and Apr 14), and actively referring new business (sourced Meghan Botkin 4/3). The risk is on the Accruity side: failing to convert the $110K amendment + $110K/yr S-corp restructure + LHI cost-seg pipeline into real deliverables would erode trust over time. Tommy is the kind of client where execution speed materially shapes long-term value.
+
+### 11.2 Andy Karabinos (50/50 partner — coverage stub)
+
+| Dimension | Detail | Source |
+| --- | --- | --- |
+| Role | 50/50 partner with Tommy across Legacy Ohio Homes, COGS ULTD, LHI, B&M Management | `[EI §Key Numbers]` |
+| Status as Accruity client | Pending — Andy is in the missing-rows queue at `docs/BATCH_REFRESH_PROMPT.md` | `[CLAUDE.md §Remaining queue]` |
+| Andy's 2025 K-1 income share | Mirrors Tommy at 50% — same dollar amounts on his side: +$312K + $260K - $922K - $71K = -$421K net | `[EI §Key Numbers]` |
+| Amendment share | **$45,000** (component of $110K combined Tommy+Andy amendment savings) | `[EI §Key Numbers]` |
+| Other Accruity touchpoints | Joint Feb 11 meeting (Tommy + Andy K Tax Discussion); 2026-04-08 Cost Seg Pipeline Claude session reviewed Andy alongside Tommy | `[Meeting 2026-02-11 Tommy + Andy K]` `[Claude 2026-04-08 Cost Seg Pipeline]` |
+| Engagement letter | Not on file (assumed parallel to Tommy's — Action #12 includes both) | derived |
+
+**Coverage instruction for next refresh.** When Andy's dossier is generated (he's queued in the missing-rows list), it should:
+- Cross-reference this Tommy dossier as the partner reference
+- Inherit the same key-numbers structure (mirror at 50%)
+- Run §9 Opportunity Flags independently — same entities, same HIGH cost-seg + S-corp candidates
+- Apply the asymmetric-service-depth check that came out of Spring's §11.2 (the analog for partnerships: are Tommy and Andy receiving symmetric Accruity coverage, or is one partner driving the engagement while the other gets thinner service?). The Apr 14 thread CC'd only Tommy (not Andy); flag this as a possible asymmetry until confirmed.
