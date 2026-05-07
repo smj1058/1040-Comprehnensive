@@ -1,0 +1,74 @@
+{
+  "client": "Daniel Huffman",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/32f49172875180b68b96e9f0f4cd1dc7",
+    "client_number": "",
+    "mango_client_id": "1900412",
+    "account_name": "Daniel Huffman"
+  },
+  "household": {
+    "principals": ["Daniel Huffman"],
+    "filing_status": "unknown — not populated on Account record",
+    "entities": ["Daniel Huffman (1040)", "K&D Management (1065 — scope unclear)"]
+  },
+  "exec_summary_db_rows": [],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2f1491728751809f9a04e208c00c0d38",
+    "insights_project": "https://www.notion.so/348491728751803cb3bccf757ac3abd6",
+    "tax_compliance_1040": "https://www.notion.so/ee149172875183d9a6df81c4f4a3a382",
+    "meeting_2025_08_22": "https://www.notion.so/2fb4917287518058abdacafb8160c007",
+    "fl_main": "https://www.notion.so/33b491728751812c8843d45950da1e6b",
+    "fl_el_stub": "https://www.notion.so/33b491728751816e9030eaa3dd99d94c",
+    "fl_exec_summary_stub": "https://www.notion.so/33b491728751814f9eaec663e0f7fcf8",
+    "extensions_tracker": "https://www.notion.so/34249172875181b4a177cfd41ec6b08c",
+    "outsourcing_tracker": "https://www.notion.so/33349172875180518f60e2036d7e175e",
+    "mango_old_1040": "https://www.notion.so/33a49172875181f2b6d9f1af24cb64af",
+    "mango_old_kd": "https://www.notion.so/33a491728751814cade3d7a738140ea9",
+    "mango_new_1040": "https://www.notion.so/342491728751816fab7ef4b36fcde3e5",
+    "mango_new_kd": "https://www.notion.so/3424917287518168ba96d866c09e2c44",
+    "tax_ascend": "NOT FOUND",
+    "email_log_threads": 0,
+    "reporting_entities": 0,
+    "engagement_inquiries": 0,
+    "claude_summaries_prior": 0
+  },
+  "entities_known": [
+    {"name": "Daniel Huffman", "type": "1040", "mango_project": "1040- Daniel Huffman", "mango_id": "1900412", "status": "In Progress"},
+    {"name": "K&D Management", "type": "1065 (presumed)", "mango_project": "1065- K&D Management", "status": "Scope uncertain — no EL services ticked, no Reporting Entity"}
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook",
+    "Tax Extraction",
+    "Tax Analysis / Planning Memo",
+    "Meeting Prep Notes",
+    "K&D Management 1065 workbook"
+  ],
+  "flags": {
+    "wrong_client_attachment": "Extension_Payment_Request_-_Hamilton_Dan_and_Kelly.pdf filed on Daniel Huffman Extensions record — HIGH data integrity",
+    "2024_return_may_not_be_filed": "PBC email language indicates possible missing return — IRS transcript needed",
+    "outsourcing_workspace_missing": "No Mango workspace; old SOW in Greg Smith's workspace only",
+    "compliance_group_declined": "EL Compliance Group Status = Declined — needs clarification",
+    "k_and_d_scope_unknown": "1065 K&D Management in Mango but not in EL entity services",
+    "fl_url_collision": "NOT PRESENT — URLs are client-specific"
+  },
+  "depth_mode": "MEDIUM",
+  "depth_reason": "EL signed, Insights delivered, 1 meeting on file, active compliance project — but no Tax Ascend, no Reporting Entities, no email log, no workbooks accessible",
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunities": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/35949172875181049cf3cb699b020057",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181728297db7ea8497863",
+  "github_dossier_url": "https://github.com/smj1058/1040-comprehnensive/blob/claude/update-exec-summary-notion-118m7/dossiers/DanielHuffman/dossier.md"
+}
