@@ -1,0 +1,57 @@
+{
+  "client": "Joel Cabrera",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751810fa37ed5a49bde23a6",
+    "client_number": "10120301-01",
+    "mango_client_id": "937650",
+    "mango_display_name": null,
+    "primary_email": "thesoundmecca@gmail.com",
+    "primary_phone": "(305) 905-5813"
+  },
+  "household": {
+    "principals": [
+      { "name": "Joel Cabrera", "role": "primary", "email": "thesoundmecca@gmail.com" },
+      { "name": "Yaniery Cabrera", "role": "co-filer", "email": null }
+    ],
+    "filing_status": "~ MFJ (unconfirmed)"
+  },
+  "business": "Sound Mecca",
+  "exec_summary_db_rows": [],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2f14917287518052aca6f0e342db8d8e",
+    "tax_ascend": "https://www.notion.so/2f0491728751809d997fc3df4c43cd78",
+    "meeting_2025-11-06_insights_delivery": "https://www.notion.so/2fb49172875180099248eb6c0075915f",
+    "meeting_2025-12-05_compliance": "https://www.notion.so/2fb49172875180a59e75f92bfc759071",
+    "extensions_tracker": "https://www.notion.so/34349172875180ec808df4f8c681eb7d",
+    "client_contacts": "https://www.notion.so/30d49172875181f78d66ec033f7b6375"
+  },
+  "entities_known": [
+    { "name": "Sound Mecca", "type": "unknown (sole prop or LLC)", "ein": null }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Insights Analysis Workbook (not in Insights Tracker — PENDING INSERT)",
+    "Extraction 1040 (not in Insights Tracker)",
+    "PBC Workbook (Account field empty)",
+    "Document Inventory (Account field empty)"
+  ],
+  "depth_mode": "SPARSE",
+  "depth_mode_reason": "2 meetings, 1 EL, 1 Tax Ascend record; 0 Files & Links, 0 email log, 0 Reporting Entities, 0 Claude sessions",
+  "f_and_l_url_collision": false,
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_ops_individual": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/3594917287518100ac1aee72c1c3a424",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181468669cfa64ee5fca7"
+}
