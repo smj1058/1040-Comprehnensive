@@ -1,0 +1,106 @@
+{
+  "client": "Jeremy Martin",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/32f491728751805d952ce3bd82418141",
+    "page_id": "32f491728751805d952ce3bd82418141",
+    "account_name": "Jeremy Martin",
+    "client_number": null,
+    "mango_client_id": null,
+    "mango_display_name": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null,
+    "executive_summary_url": "https://www.notion.so/33b49172875181258a63d0d8d624feae",
+    "tax_ascend_url": "https://www.notion.so/31449172875180bdbac6de2edebf9844"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Jeremy Martin",
+        "email": "jeremy@realestategoto.com (unconfirmed — see disambiguation note §3)",
+        "role": "Primary client — Jeremy Martin Realty LLC (S-Corp, 1120-S)"
+      },
+      {
+        "name": "Chante D Martin",
+        "email": null,
+        "role": "Likely spouse/partner — Tax Planning 30-min meeting 2026-03-18 (no-show)"
+      }
+    ],
+    "filing_status": "Unknown — likely MFJ; confirm",
+    "related_party": {
+      "name": "Russell Faucette",
+      "role": "Joint Insights project co-client — relationship to Jeremy unresolved",
+      "insights_account_url": "https://www.notion.so/30d491728751817da0b0c0811134ab24"
+    }
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181258a63d0d8d624feae",
+      "page_id": "33b49172875181258a63d0d8d624feae",
+      "summary_title": "Jeremy Martin",
+      "summary_type": "General",
+      "state": "empty shell — populated by this refresh"
+    }
+  ],
+  "prior_exec_summary_page": {
+    "url": "https://www.notion.so/34249172875181e1ba33c1ffe6aa99d0",
+    "role": "prior synthesized narrative (Jeremy Martin — Executive Summary page)"
+  },
+  "sidecars": {
+    "tax_ascend": "https://www.notion.so/31449172875180bdbac6de2edebf9844",
+    "engagement_letter": "https://www.notion.so/3144917287518093a58fd6a2c8a124eb",
+    "email_log_personal_taxing_info": "https://www.notion.so/34249172875181528e51e5a9dcc509ba",
+    "email_log_chante_meeting_recap": "https://www.notion.so/342491728751812fac0ee0590543976a",
+    "email_intelligence_subpage": "https://www.notion.so/34249172875181a487abf77ab7fd6099",
+    "files_and_links": [
+      "https://www.notion.so/33b4917287518170b899fae1310a5ee3",
+      "https://www.notion.so/33b49172875181c08b7af15117d12097",
+      "https://www.notion.so/33b49172875181908887f13939a5b10f"
+    ],
+    "tax_compliance_1040": "https://www.notion.so/555491728751833fa0b281ab3ac34eeb",
+    "tax_compliance_1120s": "https://www.notion.so/8bd491728751836e96dc0109c238804e",
+    "scorp_election_tracker": "https://www.notion.so/34a49172875181d8a3dddc99ece0aa1b",
+    "tax_planning_session": "https://www.notion.so/31949172875180788131de8b6e7ad435",
+    "insights_project": "https://www.notion.so/2fd49172875180ef97d6c7b5edba2e63",
+    "meetings_chante_d_martin": "https://www.notion.so/3264917287518017bcd5f8f1513ba445",
+    "mango_db_1040": "https://www.notion.so/3424917287518196b422efe8e9578bb1",
+    "mango_db_1120s": "https://www.notion.so/34249172875181efbef2c26ad852fa02",
+    "mango_db_tax_planning": "https://www.notion.so/342491728751816285f3fdd23f78098d"
+  },
+  "entities_known": [
+    "Jeremy Martin (individual) — 1040",
+    "Jeremy Martin Realty LLC — 1120-S (S-Corp)",
+    "Unnamed entity — Form 2553 S-Corp election in Planned status"
+  ],
+  "disambiguation_flags": {
+    "email_identity": "email log 'Jeremy Lee' (jeremy@realestategoto.com) linked to Jeremy Martin Account — confirm identity",
+    "chante_d_martin": "Likely spouse/partner of Jeremy Martin; confirmed same household from meeting log + email intel",
+    "russell_faucette": "Joint Insights project; relationship type unknown; different Account record"
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook — field empty on Account record",
+    "Tax Extraction — field empty on Account record",
+    "Tax Planning Memo — field empty on Account record (memo text); memo file is on Tax Ascend record as attachment",
+    "SharePoint Drive — field empty on Account record",
+    "Analysis Workbook / Extraction 1040 — on Insights Project under Russell Faucette Account (cross-account)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_work": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181258a63d0d8d624feae",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181aa8d30d7b59d2fc51d"
+}
