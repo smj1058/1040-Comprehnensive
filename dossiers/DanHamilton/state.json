@@ -1,0 +1,238 @@
+{
+  "client": "Dan Hamilton",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "Tax Ascend signed 2025-11-22, Tax Memo SENT 2025-12-22, TPS DELIVERED 2026-03-04 with full Fellow transcript, 3 Burks CPA cost seg studies received 2026-04-09 (~$173K dep / ~$60K tax benefit), 3 Cost Seg Proposal Intake rows Engaged, 4 Meetings, 4 Meeting Action Items, 2 Claude Summary rows, full Extension Tax Rollup workbook with bracket-level calc, EL Signed/Extension Accepted/PBC Received",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181ea8ad3fad9841051c4",
+    "page_id": "30d49172-8751-81ea-8ad3-fad9841051c4",
+    "account_name": "Dan Hamilton",
+    "client_number": "04140814-01",
+    "mango_client_id": "937683",
+    "mango_display_name": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null,
+    "executive_summary_url": null,
+    "primary_contact_url": "https://www.notion.so/30d491728751811994e3fd88b7190466",
+    "relationship_manager_url": "https://www.notion.so/30d49172875181a1be5ff71f7a185588",
+    "partner_url": "https://www.notion.so/30d491728751817eb3e1ec737ebae236",
+    "tax_ascend_url": "https://www.notion.so/2f0491728751806c8753e4ee34718dff",
+    "insights_url": "https://www.notion.so/32849172875180c9a705f0a94ee80312",
+    "engagement_letter_url": "https://www.notion.so/2ef4917287518074ad9ac6523793e6bb",
+    "tax_planning_session_url": "https://www.notion.so/2ea491728751815887a0dd3e60dd9a17",
+    "executive_summary_db_url": "https://www.notion.so/33b4917287518142b05df7d208d740aa"
+  },
+  "household": {
+    "principals": [
+      {"name": "Dan Hamilton", "email": "dan@mygreenvillehome.com", "role": "Real-estate broker, KW franchise owner, runs sales team; principal of Hamilton Management Group (S-Corp)"},
+      {"name": "Kelly Hamilton (likely spouse)", "email": null, "role": "Schedule C nursing income (~$8K/yr)"}
+    ],
+    "filing_status": "MFJ",
+    "residency": "South Carolina",
+    "reps_status_claimed": true,
+    "children": [
+      {"age": 14, "kid_w2_status": "prepared not submitted (Seth click pending)"},
+      {"age": 18, "kid_w2_status": "prepared not submitted"},
+      {"age": 20, "kid_w2_status": "prepared not submitted"},
+      {"age": 23, "kid_w2_status": "prepared not submitted"}
+    ]
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b4917287518142b05df7d208d740aa",
+      "summary_title": "Dan Hamilton",
+      "summary_type": "General",
+      "state": "active — has 2 dated activity-log entries + 3 child subpages (Workbooks, Cost Seg Properties, Transcripts). Properties (Summary / TL;DR / 📄 Dossier / etc.) blank — to populate this turn."
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef4917287518074ad9ac6523793e6bb",
+    "tax_ascend": "https://www.notion.so/2f0491728751806c8753e4ee34718dff",
+    "insights_project": "https://www.notion.so/32849172875180c9a705f0a94ee80312",
+    "tax_planning_session": "https://www.notion.so/2ea491728751815887a0dd3e60dd9a17",
+    "client_contact": "https://www.notion.so/30d491728751811994e3fd88b7190466",
+    "files_and_links": [
+      "https://www.notion.so/33b49172875181ceb8f8f2361f8e3d9e",
+      "https://www.notion.so/33b4917287518144ad97f74f9953f862",
+      "https://www.notion.so/33b49172875181d19b97ffabba593de0"
+    ],
+    "meetings": [
+      "https://www.notion.so/2fb4917287518001b5f8c2d47b7695bb",
+      "https://www.notion.so/2fb49172875180518403d5e5f261849d",
+      "https://www.notion.so/2fb4917287518089a1b8e4ecad68a6a1",
+      "https://www.notion.so/31949172875180ac92edfbc2823d5eba"
+    ],
+    "cost_seg_proposals": [
+      "https://www.notion.so/33e491728751813791ceceab976fbd0e",
+      "https://www.notion.so/33e491728751817d89c0f6476d2d0788",
+      "https://www.notion.so/33e49172875181f693d0e35f0db67434"
+    ],
+    "tax_planning_action_items": [
+      "https://www.notion.so/3354917287518167bbd0d5b0fd2b8077",
+      "https://www.notion.so/33549172875181edb58cf23daf8b219b",
+      "https://www.notion.so/33549172875181fe9e38f0d1a4089a53",
+      "https://www.notion.so/335491728751812883fee267a7369c60"
+    ],
+    "claude_summaries": [
+      "https://www.notion.so/33e49172875181e6a49beeeebbad0f6e",
+      "https://www.notion.so/33c49172875181b48498f6cb2c8a2e33"
+    ],
+    "claude_summary_cost_seg_pipeline_multi_client": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "exec_summary_subpages": {
+      "workbooks": "https://www.notion.so/33b49172875181faba39fa67676c4cda",
+      "cost_seg_properties": "https://www.notion.so/33c4917287518153b7e6ccc94cd87a09",
+      "transcripts": "https://www.notion.so/33c49172875181c493b9d849da712f1b"
+    }
+  },
+  "engagement": {
+    "scope": "PLAN + COMPLIANCE — 1040 + 2x 1065 (Allegiance Ventures, 207 Highland) + 1x 1120-S (HMG)",
+    "stacy_description": "Tax build, tax maintain, planning and advisory",
+    "tax_ascend_type": ["TAX PLANNING", "TAX COMPLIANCE"],
+    "engagement_fee": 8675,
+    "el_status": "Signed",
+    "compliance_group_status": "Pending Check",
+    "deposit_paid": true,
+    "extension": "Accepted",
+    "open_items_email_sent": "2026-03-09",
+    "pbc_list_status": "Received PBC items",
+    "pbc_list_email": "None sent (per EL property; PBC checklist promised in follow-up — verify status)",
+    "tax_memo_status": "SENT",
+    "tax_memo_sent_date": "2025-12-22",
+    "date_signed_tax_ascend": "2025-11-22",
+    "planning_status": "Tax Planning Delivered",
+    "tps_delivery_date": "2026-03-04",
+    "mango_engagement_project": "Project Created",
+    "mango_planning_projects": "Done",
+    "mango_compliance_engagement": "To check",
+    "mango_portal_invite": "Portal Invite Sent",
+    "mango_tag": "PBC Request list",
+    "mango_portal_access_per_contact": false,
+    "linking_status": "Complete",
+    "insights_status": "DELIVERED",
+    "insights_analysis_status": "Waiting on Extraction",
+    "insights_temp_filter": "Piah to do - extraction and analysis meeting recap 04/29"
+  },
+  "entities_known": [
+    "Hamilton Management Group (HMG) — S-Corp (1120-S)",
+    "Allegiance Ventures LLC (EIN 84-2750812) — Partnership (1065)",
+    "207 Highland Street LLC — LLC partnership (1065 in scope)",
+    "4105 Liberty Highway LLC (TCT1 LLC) — Partnership (1065 outside, Greene Finney Cauley)",
+    "Anchors Five — Partnership (outside)",
+    "Earnnest LLC — Partnership",
+    "Jensen — Partnership (50% Dan)",
+    "4503 Hwy 72/221 E — Property (Greenville SC)",
+    "32 Dover — Property (SFR)"
+  ],
+  "properties_for_cost_seg_pipeline": [
+    {"property": "4503 Hwy 72/221 E", "study_status": "complete (Burks)", "year_1_dep": 87446, "incremental_tax_benefit_at_37pct": 29826, "basis": 304658, "ownership_pct": 100, "entity_owning": "TBD - confirm with Dan"},
+    {"property": "32 Dover", "study_status": "complete (Burks)", "year_1_dep": 48891, "incremental_tax_benefit_at_37pct": 17797, "pad_loss_1231": -1575, "ownership_pct": 100, "entity_owning": "TBD - confirm with Dan"},
+    {"property": "207 Highland Street", "study_status": "summary received (tax-impact page pending)", "year_1_dep": 37150, "incremental_tax_benefit_at_37pct_estimated": 12500, "basis": 138949, "drc": 25933, "ownership_pct": 100, "entity_owning": "207 Highland Street LLC"},
+    {"property": "White Horse Road Units (Allegiance)", "study_status": "already segged per 2025-11-12 Tax Insight", "candidate_for_review": false},
+    {"property": "Razor (2 duplexes) (Allegiance)", "study_status": "already segged", "candidate_for_review": false},
+    {"property": "104 George Way (Allegiance, mobile home park)", "study_status": "already segged", "candidate_for_review": false},
+    {"property": "115 E Caroline (Allegiance)", "study_status": "possibly segged - confirm with prior CPA", "candidate_for_review": true},
+    {"property": "161 Thomas Green Blvd (25% via JV)", "study_status": "ask JV partners about cost seg", "candidate_for_review": true},
+    {"property": "4105 Liberty (May 2016)", "study_status": "pre-TCJA, minimal benefit", "candidate_for_review": false},
+    {"property": "123 Bypass Seneca (2016)", "study_status": "pre-TCJA, minimal benefit", "candidate_for_review": false}
+  ],
+  "tax_estimate_two_scenarios": {
+    "scenario_a_baseline": {
+      "total_income": 420000,
+      "taxable_income": 337000,
+      "federal_tax_summary": 66574,
+      "sc_tax": 18535,
+      "total_tax": 85109,
+      "federal_es_plus_withholding": 93400,
+      "sc_es": 0,
+      "federal_owe_or_refund": -26826,
+      "sc_owe": 18535,
+      "combined_owe_or_refund": -8291
+    },
+    "scenario_b_full_planning": {
+      "total_income": 420000,
+      "taxable_income": 122000,
+      "federal_tax": 16668,
+      "sc_tax": 6100,
+      "total_tax": 22768,
+      "federal_es_plus_withholding": 93400,
+      "sc_es": 0,
+      "federal_owe_or_refund": -76732,
+      "sc_owe": 6100,
+      "combined_owe_or_refund": -70632
+    },
+    "delta": -62341
+  },
+  "extension_recommendation": {
+    "federal": 5000,
+    "sc": 24000,
+    "note": "Federal $5K likely now unnecessary post-Burks studies (Scenario B refund ~$76K). SC $24K still needed (no SC ES on file). Caveat: if 4105 Liberty K-1 spikes above $150K, add $5-8K federal buffer."
+  },
+  "high_priority_action_items": [
+    "Submit Children W-2s (~$30K deduction at risk) — Seth click pending since 2026-03-04",
+    "Get 207 Highland LLC financials unblocked (no QBO, no bookkeeper)",
+    "Confirm SC estimated payments (currently $0; drives $24K extension)",
+    "Chase 4105 Liberty Highway K-1 from Greene Finney Cauley",
+    "Schedule Q2 quarterly meeting (promised late April, overdue 2026-05-07)",
+    "AI-32 Mega backdoor Roth research",
+    "AI-33 Solo 401(k) options research"
+  ],
+  "high_severity_opportunity_flags": [
+    "Cost Seg pipeline LIVE — 3 Burks studies in hand, ~$60K tax benefit",
+    "Children-on-payroll opportunity — $30K deduction at risk because Submit not clicked",
+    "207 Highland LLC bookkeeping BLOCKER — return cannot be drafted",
+    "2024 QBI amendment opportunity — ~$43K under-claimed",
+    "Solo 401k pivot opens $69K annual contribution path"
+  ],
+  "files_and_links_url_collision_check": {
+    "result": "no collision",
+    "doc_inv_url": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua",
+    "pbc_url": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u",
+    "note": "Different SharePoint share IDs from Spring/Brad/Alex Dykes pattern — Dan's F&L row is clean. Two empty placeholder rows (Engagement Letter + Executive Summary) carry no URLs."
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Memo PDF/Word (URL on Tax Ascend, not parsed)",
+    "Insights Counting File / Tax Extraction (omitted on Insights Project record)",
+    "Analysis File / Extraction File (omitted on Tax Ascend)",
+    "PBC Workbook + PBC list Excel (URL on EL but not parsed)",
+    "PBC Folder ImagineTime (URL on EL, contents not enumerated)",
+    "Aaron Burks 207 Highland tax-impact page (only summary received)",
+    "Client Email Log DB (Notion query rate-limited 429 this refresh)",
+    "Engagement Inquiries DB (rate-limited 429)",
+    "Reporting Entities DB (rate-limited 429)",
+    "Partner record (Account.Partner page not fetched)"
+  ],
+  "open_blockers": [
+    "207 Highland LLC financials — no QBO, no bookkeeper",
+    "4105 Liberty Highway K-1 — outside preparer Greene Finney Cauley, pending",
+    "Anchors Five K-1 — outside preparer pending",
+    "Earnnest K-1 — outside preparer pending",
+    "Aaron Burks 207 Highland tax-impact page — only summary received",
+    "SC ES payments status — assumed $0",
+    "2025 federal ES payments — assumed $84K, needs confirmation",
+    "Dan's actual 2025 W-2 salary — needs QBO verification"
+  ],
+  "claude_session_2026_04_08_cost_seg_pipeline": {
+    "url": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "dan_specific_findings": "Hamilton entities (Allegiance Ventures + 3 Aaron Burks cost seg properties 207 Highland / 32 Dover / 4503 Hwy 72)",
+    "files_reviewed_for_dan": ["HAMILTON_2024_tax_return_extraction.xlsx", "Hamilton_2025_Extension_Rollup.xlsx"]
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done (with email-log query rate-limit caveat)",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_work": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done",
+    "notion_exec_summary_row_url": "https://www.notion.so/33b4917287518142b05df7d208d740aa",
+    "notion_claude_summary_row_url": "https://www.notion.so/359491728751814eaa63dab66ef1ca5f"
+  }
+}
