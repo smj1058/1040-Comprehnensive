@@ -1,0 +1,150 @@
+{
+  "client": "Sandee Payne",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181919db7fa070694edd3",
+    "client_number": "19051605-01",
+    "mango_client_id": "937748",
+    "mango_display_name": "Sandee Payne"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Sandra A Payne",
+        "aka": "Sandee",
+        "role": "primary filer",
+        "employer": "Dell USA LP",
+        "income_streams": ["W-2 (Dell)", "1099s (Schwab, NW Mutual)", "Schedule F (cattle)", "1099-R (Defence Fund)", "rental income (5 properties)", "K-1 (D2S Enterprises LLC)"]
+      },
+      {
+        "name": "Michael B Payne",
+        "role": "joint filer (MFJ)",
+        "contact_info": "not populated on Account record"
+      }
+    ],
+    "filing_status": "MFJ",
+    "state_returns": 1
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181078655dffbe0f648a1",
+      "title": "Sandee Payne",
+      "status": "existing row — body empty except Activity Log header",
+      "notion_id": "33b49172-8751-8107-8655-dffbe0f648a1"
+    }
+  ],
+  "sidecars": {
+    "tax_ascend": "https://www.notion.so/2f6491728751809eb86fd658b4695408",
+    "insights_project": "https://www.notion.so/2f549172875180a1abdfdd4feb4348c4",
+    "engagement_letter": "https://www.notion.so/2fb49172875180a9a5fbc3f75720abb8",
+    "exec_summary_subpage": "https://www.notion.so/342491728751811f8dc9ff46e5f2d930",
+    "email_intelligence_subpage": "https://www.notion.so/34249172875181f58e50f7abbcc3a31d",
+    "meetings_decisions_subpage": "https://www.notion.so/34249172875181dc9bccfaf86e475a47",
+    "files_documents_subpage": "https://www.notion.so/34249172875181ee8ae6e4acaf62c868",
+    "email_log_unison_globus": "https://www.notion.so/34249172875181f9bc57e9455fd0980d",
+    "s_corp_tracker_d2s": "https://www.notion.so/34a49172875181cf8d7ccf71bdd9bad5",
+    "tax_planning_session": "https://www.notion.so/2f7491728751802ba813ca95bc00e622",
+    "mango_1040": "https://www.notion.so/342491728751812da216dd3092bf2fde",
+    "mango_d2s_1065": "https://www.notion.so/3424917287518104b693d5e8fd8ddd0e",
+    "mango_tax_planning": "https://www.notion.so/34249172875181d88699ec44abd42bc1",
+    "fileforms_inbox": "https://www.notion.so/34b49172875180b1add3c524c224a240"
+  },
+  "meetings": [
+    {
+      "date": "2025-12-19",
+      "type": "Full Insights - Kickoff Call",
+      "status": "Pending",
+      "recap": null,
+      "url": "https://www.notion.so/2fb49172875180b49f51e6adafb98917"
+    },
+    {
+      "date": "2026-01-14",
+      "type": "Full Insights - Clarification call",
+      "status": "Done",
+      "recap": "https://fathom.video/share/qzqt1sdukVe1Limw8oxXQa3RWeHZs283",
+      "url": "https://www.notion.so/2fb49172875180ff9d41d3b77e8b5c8d"
+    },
+    {
+      "date": "2026-01-26",
+      "type": "Full Insights - Delivery call",
+      "status": "Done",
+      "recap": "https://fathom.video/share/tFFjJJZzZkZEKPyRxCLeWem9xNHn3-Uh",
+      "url": "https://www.notion.so/2fb4917287518015bae2d383769e5886"
+    },
+    {
+      "date": "2026-02-05",
+      "type": "Tax Planning Session",
+      "status": "Rescheduled",
+      "recap": null,
+      "url": "https://www.notion.so/2fb49172875180169b1ddc37f5f5e4f3"
+    }
+  ],
+  "entities_known": [
+    {
+      "name": "D2S Enterprises LLC",
+      "aka": "D2S Enterprises Inc.",
+      "type": "Partnership → S-Corp (short-period split 2025)",
+      "s_corp_election_date": "2025-06-09",
+      "filing_type_2025": "1065 (Jan 1–Jun 8) + 1120-S (Jun 9–Dec 31)",
+      "status": "CRITICAL — short-period split unresolved; Form 2553 not confirmed",
+      "s_corp_tracker_url": "https://www.notion.so/34a49172875181cf8d7ccf71bdd9bad5"
+    }
+  ],
+  "files_and_links_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181efb4e7dd8506cdece3",
+      "name": "Engagement Letter",
+      "flag": "empty placeholder"
+    },
+    {
+      "url": "https://www.notion.so/33b491728751810082fccb57b98e7689",
+      "name": "Executive Summary",
+      "flag": "empty placeholder"
+    },
+    {
+      "url": "https://www.notion.so/33b4917287518197a14ad7ba0f5ec484",
+      "name": "Sandee Payne",
+      "document_inventory": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua",
+      "pbc_pdf_package": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u",
+      "flag": "URL_COLLISION — byte-identical to Spring Bengtzen and Alex Dykes (3rd confirmed client)"
+    }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Account.PBC Workbook (empty on Account record)",
+    "Account.Tax Extraction (empty on Account record)",
+    "Account.Tax Planning Memo (empty on Account record)",
+    "Account.Meeting Prep Notes (empty on Account record)",
+    "Account.SharePoint Drive (empty on Account record)"
+  ],
+  "open_action_items_count": {
+    "total": 12,
+    "HIGH": 4,
+    "MED": 3,
+    "LOW": 5
+  },
+  "high_opportunity_flags": [
+    "D2S S-Corp short-period split (compliance critical)",
+    "5 rental properties — Cost Seg classifier pending",
+    "Schedule F cattle operations — agricultural strategies",
+    "Fee dispute — SoS entity compliance services"
+  ],
+  "url_collision_flag": true,
+  "url_collision_note": "Document Inventory and PBC PDF Package URLs on Files & Links row 33b4917287518197a14ad7ba0f5ec484 are byte-identical to Spring Bengtzen and Alex Dykes — 3rd confirmed client with template-default collision",
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunities": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181078655dffbe0f648a1",
+  "notion_claude_summary_row_url": "pending — created in Turn 11"
+}

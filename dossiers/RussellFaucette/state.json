@@ -1,0 +1,106 @@
+{
+  "client": "Russell Faucette",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751817da0b0c0811134ab24",
+    "client_number": "18120605-01",
+    "mango_client_id": "937745",
+    "mango_display_name": "",
+    "primary_email": "russell@sternteam.com",
+    "primary_phone": "(801) 859-3173"
+  },
+  "household": {
+    "principals": [
+      { "name": "Russell Faucette", "role": "primary", "email": "russell@sternteam.com" },
+      { "name": "Keri Faucette", "role": "likely spouse — confirm MFJ", "email": "" }
+    ],
+    "filing_status": "unknown — likely MFJ (Keri Faucette referenced in Tax Planning Memo)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/3424917287518160b992ebf83fbbcc1d",
+      "title": "Russell Faucette",
+      "status": "empty — populated by Turn 11"
+    }
+  ],
+  "sidecars": {
+    "tax_ascend": "https://www.notion.so/3144917287518027971eea802a556163",
+    "engagement_letter": "https://www.notion.so/2f1491728751803bb946fc0e24553552",
+    "insights_project": "https://www.notion.so/2fd49172875180ef97d6c7b5edba2e63",
+    "client_email_log_1": "https://www.notion.so/3424917287518153b84efba55880409c",
+    "tax_planning_session": "https://www.notion.so/319491728751806d8ccef7d3e6270a4f",
+    "meeting_kickoff_2025_12_11": "https://www.notion.so/2fb49172875180db9631ea09f5e3347e",
+    "meeting_clarification_2026_01_08": "https://www.notion.so/2fb491728751802fb634f5445699d528",
+    "meeting_delivery_2026_02_03": "https://www.notion.so/2fd49172875180da8ffdeeab19592dac",
+    "meeting_tax_planning_2026_03_18": "https://www.notion.so/3264917287518043a662dd41cc1984df",
+    "meeting_tax_planning_2026_04_01": "https://www.notion.so/33549172875180b1a92eef5445b9403d",
+    "fl_tax_planning_memo": "https://www.notion.so/33449172875181a19e34d863b5f72c07",
+    "fl_meeting_prep": "https://www.notion.so/3344917287518107b9aac302fc93823e",
+    "fl_analysis_workbook": "https://www.notion.so/3344917287518186b643e300e8d5bf8a",
+    "fl_pbc_checklist": "https://www.notion.so/3344917287518120930ccb65ffc82d04",
+    "fl_docinv_workbook": "https://www.notion.so/33449172875181b2a290ddf0345917f9",
+    "fl_el_2025_compliance": "https://www.notion.so/334491728751813ba702ceddf503b4cb",
+    "fl_el_placeholder": "https://www.notion.so/33b49172875181e39f66e16dab995712",
+    "fl_exec_summ_placeholder": "https://www.notion.so/33b491728751812cae67f48591c29d5e",
+    "fl_russell_main": "https://www.notion.so/33b491728751816da352ed70a974d4c0",
+    "primary_contact": "https://www.notion.so/30d49172875181458046cd7726602db7"
+  },
+  "entities_known": [
+    { "name": "Russell Faucette (individual)", "form": "1040", "status": "extended" },
+    { "name": "Faucette Holdings", "form": "1120-S (S-Corp)", "status": "in Tax Planning Memo" },
+    { "name": "Tres Capital", "form": "unknown", "status": "in Tax Planning Memo" },
+    { "name": "Faucette Properties", "form": "unknown (likely LLC)", "status": "in Tax Planning Memo" },
+    { "name": "Omada Mountain", "form": "unknown", "status": "referenced in EL client feedback — confirm if in scope" },
+    { "name": "3+ additional entities", "form": "K-1 issuers (6 total per PBC)", "status": "unnamed" }
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Planning Memo (SharePoint — URL on Tax Ascend, not opened)",
+    "Analysis Workbook 1 (Insights Project SharePoint, not opened)",
+    "Analysis Workbook 2 (Insights Project SharePoint, not opened)",
+    "Extraction 1040-1 (Insights Project SharePoint, not opened)",
+    "Extraction 1040-2 (Insights Project SharePoint, not opened)",
+    "TaxReturn_Faucette_2024_Analysis.xlsm (Tax Ascend attachment, not opened)"
+  ],
+  "flags": {
+    "fl_url_collision": true,
+    "fl_url_collision_detail": "Russell Faucette main F&L row (33b491728751816da352ed70a974d4c0) has Document Inventory and PBC PDF Package URLs identical to Spring Bengtzen and Jeremy Martin — template defaults, not client-specific",
+    "churn_risk": true,
+    "churn_risk_detail": "Client complained about PBC scope for all companies; threatened to return to prior CPA if Accruity cannot proceed without all information (EL tracker Notes PBC OPEN ITEMS)"
+  },
+  "open_action_items_count": {
+    "HIGH": 3,
+    "MEDIUM": 8,
+    "LOW": 5,
+    "total": 16
+  },
+  "high_opportunity_flags": [
+    "S-Corp Optimization (SE Tax) — Faucette Holdings",
+    "Cost Segregation — Faucette Properties",
+    "Real Estate Professional Status (REPS)",
+    "Retirement Planning (Solo 401k / SEP-IRA)"
+  ],
+  "cross_account_flags": {
+    "jeremy_martin_joint_insights": {
+      "resolved": true,
+      "resolution": "Separate clients. Russell is primary on the Insights project. Jeremy Martin is co-client. NOT joint household filers.",
+      "jeremy_martin_account_url": "https://www.notion.so/32f491728751805d952ce3bd82418141"
+    }
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opps": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/3424917287518160b992ebf83fbbcc1d",
+  "notion_claude_summary_row_url": "pending — populated after Turn 11 Notion write",
+  "dossier_github_url": "https://github.com/smj1058/1040-comprehnensive/blob/claude/update-exec-summary-notion-118m7/dossiers/RussellFaucette/dossier.md"
+}
