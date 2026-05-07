@@ -1,0 +1,147 @@
+{
+  "client": "Tate Cline",
+  "refresh_date": "2026-04-22",
+  "prior_refresh": "first run",
+  "depth_mode": "FULL",
+  "depth_reason": "Active Cost Seg pipeline (stalled intake), full Insights delivered, Tax Planning Memo issued ($55K savings), 2025 extension cycle critical, S-Corp election planned, 6+ properties, multi-entity stack, 11 open items pending",
+  "account": {
+    "page_url": "https://www.notion.so/30d4917287518113aaead67f8bfafece",
+    "page_id": "30d4917287518113aaead67f8bfafece",
+    "account_name": "Tate Cline",
+    "client_number": "20050305-01",
+    "mango_client_id": "937757",
+    "mango_display_name": null,
+    "primary_contact_email": "knrspropertiesllc@gmail.com",
+    "primary_contact_phone": "(614) 456-6451",
+    "alt_contact_email": null,
+    "pbc_workbook_url": null,
+    "sharepoint_drive_url": null,
+    "tax_extraction_url": null,
+    "tax_planning_memo_url": null,
+    "meeting_prep_notes_url": null
+  },
+  "household": {
+    "principals": [
+      {"name": "Tate Cline", "email": "knrspropertiesllc@gmail.com", "phone": "(614) 456-6451", "role": "Operator/principal — KNRS Properties LLC + BRC Dispositions + KR&S Properties"},
+      {"name": "Whitney Cline", "email": null, "role": "Spouse / co-filer (MFJ)"}
+    ],
+    "filing_status": "MFJ — Tate & Whitney Cline (per Mango project name '1040 - Tate & Whitney Cline')"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181d58542f05d50fe9189",
+      "page_id": "33b49172875181d58542f05d50fe9189",
+      "summary_title": "Tate Cline",
+      "state": "canonical — empty body, properties to populate this refresh",
+      "is_canonical": true
+    },
+    {
+      "url": "https://www.notion.so/34249172875181b2a0bfe124b5d355dd",
+      "page_id": "34249172875181b2a0bfe124b5d355dd",
+      "summary_title": "🗑️ DELETE — Tate Cline (duplicate)",
+      "state": "DUPLICATE — flagged in BATCH_REFRESH_PROMPT.md cleanup queue. DO NOT auto-delete.",
+      "is_canonical": false
+    }
+  ],
+  "duplicate_status": "FLAGGED — duplicate row 34249172875181b2a0bfe124b5d355dd remains in DB per BATCH_REFRESH_PROMPT.md cleanup-queue rules. Canonical row 33b49172875181d58542f05d50fe9189 used for Turn 11 Notion update.",
+  "sidecars": {
+    "tax_ascend": "https://www.notion.so/30449172875180a9815dfc7a657dca11",
+    "insights_project": "https://www.notion.so/2fd491728751805a92b4c1c0ee77acb5",
+    "tax_planning_session": "https://www.notion.so/31949172875180129701e4369a8b17c0",
+    "scorp_election_tracker": "https://www.notion.so/34a491728751819ea3f2f0667aae5650",
+    "engagement_letter": "https://www.notion.so/3034917287518095a520da84b5870a1c",
+    "delivery_call_transcript": "https://www.notion.so/31849172875180d1b91af6659c05f5ca",
+    "delivery_call_fathom": "https://fathom.video/share/84s4-kehxdHgjPzuLvYwz3GuPQN-YPR1",
+    "tax_planning_call_otter": "https://otter.ai/u/BemfyEI1XyJqUh2A5NODAMhN2O0?utm_source=copy_url",
+    "tax_memo_url_sharepoint": "https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQBIlXx-db4JToqcHV6f4IaNAZQGc7AwboiP9RIGAZjmn9o?e=t1kXdB",
+    "claude_summary_extension_consolidation": "https://www.notion.so/34249172875181bebce5e3aec36ef60c",
+    "claude_summary_cost_seg_pipeline": "https://www.notion.so/33c49172875181098390e5d079955549",
+    "cost_seg_proposals": [
+      "https://www.notion.so/33d4917287518144b229e323ff86751e",
+      "https://www.notion.so/33749172875181b79d46f8ad985569eb"
+    ],
+    "files_and_links": [
+      "https://www.notion.so/33b491728751811dbacbca1b38476f32",
+      "https://www.notion.so/33b49172875181a39d18ee7ed412d488",
+      "https://www.notion.so/33b491728751810fbb6df96f9abc44a7"
+    ],
+    "meetings": [
+      "https://www.notion.so/2fb49172875180db800ec7949abee3a7",
+      "https://www.notion.so/2fb49172875180a1bc64ede097c3ef14",
+      "https://www.notion.so/2fb4917287518007913bc9c4bcc7cbd1",
+      "https://www.notion.so/30449172875180389215e85f5cc183d1",
+      "https://www.notion.so/32949172875180a09d85d13002c63456",
+      "https://www.notion.so/335491728751805ea67bca6403e601cb"
+    ],
+    "email_log": [
+      "https://www.notion.so/3424917287518144a4fed005ba5477b5",
+      "https://www.notion.so/34249172875181dca589ecb01817fe48",
+      "https://www.notion.so/342491728751816f8095e06804080bc2",
+      "https://www.notion.so/34249172875181ba9110ffe4f537ac42"
+    ]
+  },
+  "entities_known": [
+    "KNRS Properties LLC (rental holding entity, owner of 111 Hancock St Delaware OH)",
+    "BRC Dispositions (property flipping — currently NOT formally an S-Corp, triggering SE tax; 2553 election planned)",
+    "KR&S Properties (rental portfolio operations)",
+    "Cooking class (active operating side venture)",
+    "Proposed: New rental-portfolio partnership holdco",
+    "Proposed: New S-Corp holdco over active operating businesses"
+  ],
+  "properties_known": [
+    {"address": "111 Hancock St, Delaware OH 43015", "owner_entity": "KNRS Properties LLC", "purchase_price": 200000, "year_built": 2003, "placed_in_service": "2021-05-20", "sq_ft": 1584, "cost_seg_status": "Entered in Portal 2026-04-02 (sub-item only — parent row not advanced)"},
+    {"address": "365 Garfield", "owner_entity": "TBD", "cost_seg_status": "NEVER ENTERED — flagged 2026-04-13"}
+  ],
+  "key_numbers": {
+    "engagement_letter_price": 5350,
+    "tax_memo_total_estimated_savings": 55000,
+    "extension_scenario_with_strategies": 0,
+    "extension_scenario_without_strategies": 25000,
+    "cost_seg_suspended_losses_unblocked_by_REPS": 90000,
+    "cost_seg_accelerated_depreciation_2025": 67500,
+    "brc_misleading_book_loss": 1000000,
+    "solo_401k_max_deferral": 23500,
+    "solo_401k_max_contribution_estimate": 70000,
+    "augusta_rule_typical_range_low": 5000,
+    "augusta_rule_typical_range_high": 15000,
+    "employ_children_per_child_per_year": 15000
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook — URL empty on Account record",
+    "Tax Extraction — URL empty on Account record (Insights extraction backlog; Piah scheduled 2026-04-29)",
+    "Tax Planning Memo — URL empty on Account but exists per Tax Ascend SharePoint link",
+    "SharePoint Drive — URL empty on Account",
+    "Tax Analysis Workbook (Cline_analysis_2024.xlsm) — exists per Tax Ascend attachment, not URL-linked on Account",
+    "Meeting Prep Notes — URL empty on Account"
+  ],
+  "high_opportunity_flags": [
+    "Cost Seg execution gap — parent intake row 'Cline — Cost Seg' stuck at 'New - Enter in Portal' despite 111 Hancock sub-item being entered to portal; 365 Garfield never captured. 2025 extension scenario depends on this.",
+    "REPS qualification not documented — $90K suspended-loss unlock claimed in 4/9 extension scenario but no contemporaneous hours log on file",
+    "S-Corp election timing — BRC Dispositions actively flipping subject to SE tax; 2553 status 'Planned' with no target effective date"
+  ],
+  "open_action_items": {
+    "high_count": 5,
+    "medium_count": 9,
+    "low_count": 6
+  },
+  "files_links_url_collision": false,
+  "files_links_url_collision_notes": "3 F&L rows linked to Tate's Account; URLs are unique. No collision triggered.",
+  "email_log_misclassifications": 3,
+  "email_log_misclassifications_notes": "Of 4 Email Log rows on Account: 'FW Southern Visions' (Wolfe/Wilkes), 'FW realestategoto.com' (Gary Aronov), and 'Declined: Stacy<>Seth<>Sophia' are all misclassifications. 'FW vState Filings' is ambiguous — possibly Tate-related via cost seg intake form mention.",
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email": "done",
+    "turn_4_meetings": "done",
+    "turn_5_documents": "done",
+    "turn_6_claude_work": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181d58542f05d50fe9189",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181fba074c9d8321c5916",
+  "github_dossier_blob_url": "https://github.com/smj1058/1040-comprehnensive/blob/claude/update-exec-summary-notion-118m7/dossiers/TateCline/dossier.md"
+}
