@@ -1,0 +1,86 @@
+{
+  "client": "Jennifer Stickler",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181d4abf6e26649a9cac3",
+    "client_number": "10181918-01",
+    "mango_client_id": "937658",
+    "primary_email": "jennifer@mountainluxury.com",
+    "phone": "(801) 745-8400"
+  },
+  "household": {
+    "principals": [
+      "Jennifer Stickler (primary)",
+      "Husband (unnamed — mechanic, $120K salary projected 2025)",
+      "Hunter Stickler (son, age 19-20, VA/CRM, income-shifting strategy)"
+    ],
+    "filing_status": "? — likely MFJ (confirm)"
+  },
+  "entities_known": [
+    { "name": "Mountain Luxury", "type": "Pass-through (likely LLC/S-Corp)", "role": "Employer; 10% ownership", "status": "Active" },
+    { "name": "Jen's Real Estate, LLC", "type": "LLC (S-Corp election)", "role": "Commission income vehicle", "status": "Active — 1120-S on extension" },
+    { "name": "KS Surfacing Inc.", "type": "S-Corp", "role": "S-Corp compliance in progress", "status": "Active — 1120-S on extension" },
+    { "name": "Lake Powell STR", "type": "Investment property (proposed)", "role": "$610K STR or $230K mobile home", "status": "Pending acquisition — unconfirmed as of 2026-04-13" }
+  ],
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181f48d52d76c74fcf8ff",
+      "type": "existing",
+      "note": "Executive Summaries DB — Activity Log pre-populated by prior Claude session"
+    }
+  ],
+  "sidecars": {
+    "tax_ascend": "https://www.notion.so/2fb49172875180a2a073c65a38f033e9",
+    "engagement_letter": "https://www.notion.so/2fc49172875180089dfddea79b387e35",
+    "insights_project": "https://www.notion.so/2fd491728751800e9932e2c253e2e46e",
+    "tax_planning_session": "https://www.notion.so/30349172875180d693a0ef04e66cea46",
+    "meeting_2025_12_09_kickoff": "https://www.notion.so/2fb49172875180b7967aebef30855972",
+    "meeting_2026_01_08_clarification": "https://www.notion.so/2fb4917287518016a6bbf0fd7defeae8",
+    "meeting_2026_01_19_delivery": "https://www.notion.so/2fb49172875180be8379d4024e48634a",
+    "extensions_tracker": "https://www.notion.so/342491728751818c98d7d9f3828ea108",
+    "tax_compliance_1040": "https://www.notion.so/ba7491728751833fb4b581a991cb426b",
+    "mango_new_db_ks_surfacing": "https://www.notion.so/3424917287518177b65bd809d98320d3",
+    "mango_new_db_jens_real_estate": "https://www.notion.so/3424917287518141a3ccdbef29f28eac",
+    "fl_engagement_letter": "https://www.notion.so/33b491728751813a9326d5f325b2c858",
+    "fl_executive_summary": "https://www.notion.so/33b491728751816ea93ceea49a444a49",
+    "fl_jennifer_stickler": "https://www.notion.so/33b491728751814b9785f580d5156179",
+    "claude_summary_2026_04_13": "https://www.notion.so/342491728751813296c8d4003b516f9f",
+    "master_doc_doc134": "https://www.notion.so/32149172875181bda033c52b3a377aac",
+    "action_item_ai46": "https://www.notion.so/335491728751817ba33bcdfec77431d8",
+    "action_item_ai47": "https://www.notion.so/33549172875181c69e2dd2b9a5b6d75b",
+    "action_item_ai48": "https://www.notion.so/33549172875181cda85cf4e75dcc85e1",
+    "action_item_ai49": "https://www.notion.so/3354917287518180a173d632b17b05af",
+    "client_contacts": "https://www.notion.so/30d49172875181a88752f644b8b49463"
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Tax Memo Word doc (SharePoint .docx — linked on Tax Ascend, not parsed)",
+    "Analysis/Counting File workbook (SharePoint xlsx — linked on Insights, not parsed)",
+    "Extraction 1040 (SharePoint xlsx — linked on Insights, not parsed)",
+    "PBC Workbook (not linked on Account)",
+    "Tax Planning Memo field on Account (empty)",
+    "Stickler_Cost_Seg_Extension_Workpaper.xlsx (referenced in Claude Summary, not in Notion)"
+  ],
+  "fl_url_collision_check": {
+    "collision_detected": true,
+    "fl_row": "33b491728751814b9785f580d5156179",
+    "document_inventory_url": "IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw",
+    "pbc_pdf_package_url": "IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA",
+    "note": "Same URLs as Spring Bengtzen and Alex Dykes — 3rd confirmed instance of template-default URL collision"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181f48d52d76c74fcf8ff",
+  "notion_claude_summary_row_url": "https://www.notion.so/3594917287518194a886f5e1ec12347b"
+}
