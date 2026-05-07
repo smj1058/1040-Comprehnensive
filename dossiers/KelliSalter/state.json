@@ -1,0 +1,67 @@
+{
+  "client": "Kelli Salter",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751812899beca1a28f2e5da",
+    "client_number": "11091918-01",
+    "mango_client_id": "937712",
+    "email": "kelli@anchorrealestatenc.com",
+    "phone": "9103588868"
+  },
+  "household": {
+    "principals": ["Kelli Salter", "Michael Salter"],
+    "filing_status": "MFJ (inferred — EL titled 'Kelli & Michael Salter')"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181f0be3ef2efc17c2215",
+      "title": "Kelli Salter",
+      "status": "body_empty_pre_refresh"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef49172875180c4bae0f48458eb917f",
+    "tax_ascend": "https://www.notion.so/2f049172875180a58b7aca6bcda4be4a",
+    "email_thread_touchbase": "https://www.notion.so/34249172875181d49981f9ee2c182971",
+    "email_thread_documents_set2": "https://www.notion.so/34249172875181f4b6a8cc11b8013008",
+    "engagement_inquiry_inq5": "https://www.notion.so/33649172875181a39700c83de81f84ac",
+    "engagement_inquiry_inq6": "https://www.notion.so/33649172875181d7b4d7c317a9c9f11a",
+    "files_links_el": "https://www.notion.so/33b49172875181609b40edfd667af5f3",
+    "files_links_exec_summary": "https://www.notion.so/33b49172875181d5a679ce6fad8c0bbe",
+    "files_links_kelli_salter": "https://www.notion.so/33b49172875181ab971ce68ad1667a13",
+    "reporting_entity": "https://www.notion.so/30b49172875181399592d4d2ce5f7c94",
+    "tax_engagement_compliance_2024": "https://www.notion.so/30b491728751816d838fd765cec7e379",
+    "tax_engagement_planning_2024": "https://www.notion.so/30b49172875181fb9831f9f909083282",
+    "meeting_2026_04_14": "https://www.notion.so/34349172875180e8bda2d6d3992a064e"
+  },
+  "entities_known": [
+    "Kelli Salter (1040 — primary)",
+    "Michael Salter (spouse)",
+    "WATBASH (entity — purchased 120 Heavens Gate Jacksonville 2025; type TBD)"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook (not linked on Account)",
+    "Tax Extraction (not linked on Account)",
+    "Tax Planning Memo (linked on Tax Ascend — SharePoint doc — not parsed this refresh)",
+    "Analysis File (omitted on Tax Ascend)",
+    "Extraction File (omitted on Tax Ascend)"
+  ],
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181f0be3ef2efc17c2215",
+  "notion_claude_summary_row_url": "pending_turn_11",
+  "depth_mode": "MEDIUM",
+  "depth_reason": "2 email threads with substantive financial content, 1 meeting on file, $14,725 EL, Tax Ascend TAX PLANNING scope, WATBASH entity, multi-property real estate footprint"
+}

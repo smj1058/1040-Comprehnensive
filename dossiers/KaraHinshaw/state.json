@@ -1,0 +1,113 @@
+{
+  "client": "Kara Hinshaw",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d49172875181b29041ebeaa5cbc5a4",
+    "client_number": "11010823-01",
+    "mango_client_id": "937710",
+    "mango_display_name": "Kara Hinshaw",
+    "partner_url": "https://www.notion.so/30d4917287518141bf8acf3dca2654a7",
+    "relationship_manager_url": "https://www.notion.so/30d4917287518175b716d66d41895400",
+    "primary_contact_url": "https://www.notion.so/30d491728751818ebef7f0caa590ce22",
+    "document_inventory_sharepoint": "https://subledgesl-my.sharepoint.com/personal/seth_accruity_com/Documents/_Client%20Intake/Client%20Intake%20Documents/KaraHinshaw_DocInv.xlsx"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Kara S. Hinshaw",
+        "role": "Managing Broker/Realtor, Key Associates Signature Realty",
+        "email": "karahinshaw@keyassociates.com",
+        "phone": "(812) 686-3268",
+        "address": "19 W Christmas Blvd, Santa Claus, IN 47579"
+      },
+      {
+        "name": "Matthew Hinshaw",
+        "role": "Joint household member / property manager"
+      }
+    ],
+    "filing_status": "MFJ (confirmed via EL: Kara & Matthew Hinshaw)"
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b4917287518114918df6f903f0be06",
+      "title": "Kara Hinshaw",
+      "summary_type": "General",
+      "tax_engagement_type": null,
+      "status": "populated this refresh"
+    }
+  ],
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef49172875180fda22be75663e9c3ad",
+    "tax_ascend": "https://www.notion.so/2f049172875180549efbd4a86c6a4881",
+    "oz_workpaper": "https://www.notion.so/33a49172875181119656c4f208b560a1",
+    "meetings": [
+      "https://www.notion.so/2fb4917287518071ba1fef4b10230edb",
+      "https://www.notion.so/2fb4917287518010b1bcc8dcf838b4dd",
+      "https://www.notion.so/2fb49172875180b895cec18fee4e67a3",
+      "https://www.notion.so/2fb49172875180fcb004d2337c0ba050"
+    ],
+    "files_and_links": [
+      "https://www.notion.so/33b49172875181ccac7ae78c29afeca7",
+      "https://www.notion.so/33b49172875181178cafd49bfa62b905",
+      "https://www.notion.so/33b4917287518185876ac294fbd6ff51"
+    ],
+    "email_log": [
+      "https://www.notion.so/3424917287518191b202ca341ccacb59",
+      "https://www.notion.so/34249172875181fda6b7e56f4ae21d81",
+      "https://www.notion.so/3424917287518150a3d8c9572a3478cb",
+      "https://www.notion.so/34249172875181c4b86df46de6134049",
+      "https://www.notion.so/3424917287518126ac51ccb8c8030c36",
+      "https://www.notion.so/342491728751816a8956cd82c044787a",
+      "https://www.notion.so/34249172875181e789ddf79f2b4a0b73",
+      "https://www.notion.so/34249172875181edb778eb08d500982f",
+      "https://www.notion.so/342491728751813391a0f4956f059ae4",
+      "https://www.notion.so/3424917287518167b860d86866b8dbd9"
+    ]
+  },
+  "entities_known": [
+    "Kara S-Corp (primary operating entity)",
+    "Santa's Cottages (dissolved/sold 2025)",
+    "Karma Zone LLC (QOF, EIN 41-5338590, organized 12/01/2025)",
+    "Karma Properties LLC (EIN 20-8680820)",
+    "110 Green River (rental)",
+    "Brick Church (rental)",
+    "Drago's (rental)",
+    "Tell City (rental)",
+    "344 Lewis Cook Dr (new rental)",
+    "1045 Gentle Wind Dr Baton Rouge LA (QOZ SFR rental)"
+  ],
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook (not linked to Account)",
+    "Tax Extraction (not linked to Account)",
+    "Tax Planning Memo (Account field empty; URL on Tax Ascend record)",
+    "Analysis File on Tax Ascend (omitted/protected)",
+    "Extraction File on Tax Ascend (omitted/protected)",
+    "9 Document sub-pages on Account (not fetched this refresh)"
+  ],
+  "flags": {
+    "fl_url_collision": true,
+    "fl_url_collision_note": "Kara Hinshaw Files & Links row has Document Inventory + PBC PDF Package URLs identical to Spring Bengtzen and Alex Dykes — 3rd confirmation of system-wide template default issue",
+    "oz_compliance_risk": true,
+    "oz_compliance_note": "Karma Zone LLC has 5 open structural compliance items; property transfer required; census tract unverified; 180-day window needs documentation",
+    "email_noise_ratio": "4/10 threads are internal/noise misfiled to client account",
+    "meeting_recap_missing": "Jul 11 2025 Insights Delivery recap tagged FIND - not resolved",
+    "q1_2026_planning_call_not_scheduled": true,
+    "dec8_dec9_discrepancy": "M4 in Meetings Tracker is Dec 8; Fathom recap email is Dec 9 - same session or separate?"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opps": "done",
+    "turn_9_operations_profiles": "done",
+    "turn_10_provenance_changelog": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b4917287518114918df6f903f0be06",
+  "notion_claude_summary_row_url": null
+}
