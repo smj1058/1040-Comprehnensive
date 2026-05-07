@@ -1,0 +1,144 @@
+{
+  "client": "Logan Bowles",
+  "refresh_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751816d9949f6a4a7f23141",
+    "client_number": "",
+    "mango_client_id": "937719",
+    "account_name": "Logan Bowles",
+    "notes": "Client # blank on Account record; needs assignment"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "Logan Bowles",
+        "role": "Primary client; mortgage broker-owner Clayhouse Mortgage",
+        "filing_status": "Single",
+        "email": "logan@clayhousemortgage.com",
+        "phone": "(719) 323-7277",
+        "nmls_personal": "1760241"
+      },
+      {
+        "name": "Michelle Bowles",
+        "role": "Logan's mother; co-operator Clayhouse Mortgage; separate Accruity Account",
+        "filing_status": "MFJ (with Jason)",
+        "separate_account_url": "https://www.notion.so/329491728751806799d2f1c4471ce13b"
+      }
+    ],
+    "business": {
+      "name": "Clayhouse Mortgage",
+      "nmls_company": "2528999",
+      "revenue_per_month": "$105K-$120K",
+      "loan_volume": "20-40 loans/month",
+      "avg_loan_size": "$430,000",
+      "margins": "1.75%"
+    }
+  },
+  "exec_summary_db_rows": [
+    {
+      "url": "https://www.notion.so/33b49172875181789ea0d7e9101ee49d",
+      "title": "Logan Bowles",
+      "type": "Tax Planning",
+      "status": "canonical — updated this refresh",
+      "summary_populated": true
+    },
+    {
+      "url": "https://www.notion.so/34249172875181a99a7dcc3c4a817dce",
+      "title": "🗑️ DELETE — Logan Bowles (duplicate, merged into other)",
+      "type": "General",
+      "status": "DUPLICATE — do not populate; log to cleanup queue",
+      "summary_populated": false
+    }
+  ],
+  "duplicate_status": {
+    "canonical_row": "https://www.notion.so/33b49172875181789ea0d7e9101ee49d",
+    "duplicate_row": "https://www.notion.so/34249172875181a99a7dcc3c4a817dce",
+    "duplicate_resolved": "flagged — confirmed duplicate; canonical identified; duplicate retained per hard rule (never auto-delete)"
+  },
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/2ef49172875180ea8870c60fc0aaf998",
+    "tax_ascend": "https://www.notion.so/2f749172875180759609f32f1c5d4949",
+    "insights_project": "https://www.notion.so/2fd491728751800db6cfcea531c9fead",
+    "tax_planning_session": "https://www.notion.so/2fc491728751800db714eedb65a5fe51",
+    "primary_contact": "https://www.notion.so/30d4917287518186a56befdb834c7d6b",
+    "email_thread_call": "https://www.notion.so/3424917287518119b9e0caaeda5b8727",
+    "email_thread_chmlb_formation": "https://www.notion.so/34249172875181a29f6bef61b9e8d5a9",
+    "email_thread_touchbase_apr10": "https://www.notion.so/34249172875181e68a78fe6b415553d5",
+    "email_thread_llc_next_steps": "https://www.notion.so/34249172875181ef8106d405d8907c09",
+    "email_thread_s_corp_election": "https://www.notion.so/34249172875181e7928bce8766d74546",
+    "claude_activity_log_review": "https://www.notion.so/33d4917287518110adc7d8076a84d8d9",
+    "claude_activity_log_estimates": "https://www.notion.so/33e4917287518184b1adcd8855a92c66",
+    "meeting_2025-11-26_kickoff": "https://www.notion.so/2fb491728751808e8a39fafae9cc765e",
+    "meeting_2025-12-17_clarification": "https://www.notion.so/2fb491728751809c9c44d614d983714f",
+    "meeting_2025-12-23_delivery": "https://www.notion.so/2fb49172875180dcbf51fb236ad64c82",
+    "meeting_2026-04-10_touchbase": "https://www.notion.so/33e491728751805abf36ef7132be52ca",
+    "files_links_el": "https://www.notion.so/33b491728751817d99b0dfe7097d222f",
+    "files_links_exec_summary": "https://www.notion.so/33b49172875181af8efdc91db83fda71",
+    "files_links_logan_bowles": "https://www.notion.so/33b49172875181c8a572cf90400b1438"
+  },
+  "entities_known": [
+    {
+      "name": "Clayhouse Mortgage",
+      "type": "Mortgage brokerage / DBA / sole proprietor or partnership",
+      "owners": "Logan Bowles + Michelle Bowles",
+      "nmls": "2528999"
+    },
+    {
+      "name": "CHMLB Holdings LLC",
+      "type": "LLC in formation",
+      "for": "Logan Bowles",
+      "status": "Formation initiated; EIN Not Submitted — blocked on SSN; S-Corp election pending"
+    },
+    {
+      "name": "CHMMB Holdings LLC",
+      "type": "LLC in formation",
+      "for": "Michelle Bowles",
+      "status": "Formation initiated; EIN Not Submitted — blocked on SSN; S-Corp election pending"
+    }
+  ],
+  "files_links_url_collision": "YES — Files & Links 'Logan Bowles' row uses the same defaulted SharePoint URLs (IgCqkxeMjXQoTZO + IgDL0pq68xE1RK) seen on Spring + Alex + Becky + Brad + Brett + Andy + Matt + Renee + now Logan. Confirms system-wide template-default issue; NOT client-specific.",
+  "workbooks_not_accessed_this_refresh": [
+    "PBC Workbook (Account top-level field empty)",
+    "Tax Extraction (Account top-level field empty — linked on Insights Project)",
+    "Tax Planning Memo (Account top-level field empty — linked on Tax Ascend record)",
+    "Analysis Workbook (referenced in Claude session but no direct URL surfaced this refresh)",
+    "Logan_Bowles_Tax_Planning_Prep_Summary_2025.docx (pending SharePoint upload per F&L Notes)"
+  ],
+  "tax_position_2025": {
+    "logan_single": {
+      "income_tax": 17400,
+      "se_tax": 25100,
+      "total_tax": 42563,
+      "balance_due": 42500,
+      "se_pct_of_total": "59%"
+    },
+    "michelle_jason_mfj": {
+      "income_tax": 4900,
+      "se_tax": 14600,
+      "total_tax": 19490,
+      "balance_due": 19490,
+      "extension_email_overstated": 65000,
+      "note": "Construction loss $75K nets against K-1; extension email overstated by $45.5K"
+    }
+  },
+  "opportunity_flags": {
+    "s_corp_election": "HIGH — ~$37K/yr combined savings; CHMLB + CHMMB in formation; EIN blocked",
+    "cost_seg": "LOW — 3440 Bethel Ct $150K basis; ~$7,900 savings under 100% bonus; probe at planning call"
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_tax_strategies_opportunity_flags": "done",
+    "turn_9_operations_individual_profiles": "done",
+    "turn_10_provenance_changed_since": "done",
+    "turn_11_push_notion": "done"
+  },
+  "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181789ea0d7e9101ee49d",
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181a1afbcc1209378c947"
+}
