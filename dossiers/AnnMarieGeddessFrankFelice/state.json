@@ -1,0 +1,130 @@
+{
+  "client": "AnnMarie Geddess & Frank Felice",
+  "refresh_date": "2026-04-22",
+  "writeup_date": "2026-05-07",
+  "prior_refresh": "first run",
+  "depth_mode": "medium",
+  "depth_mode_reason": "Insights cycle DELIVERED cleanly with 3/3 files; $16,250 multi-entity 1065-only engagement signed; 9 partnership entities; 1 meeting; 0 emails on Account; Sisu COI overlay layered on top. ~12 sidecars total.",
+  "account": {
+    "page_url": "https://www.notion.so/30d491728751811d92b7fcbd079086f3",
+    "page_id": "30d49172-8751-811d-92b7-fcbd079086f3",
+    "client_number": "01050611-01",
+    "mango_client_id": null,
+    "mango_client_id_status": "EMPTY ON ACCOUNT — flagged §7 #11"
+  },
+  "household": {
+    "principals": [
+      {
+        "name": "AnnMarie Geddess",
+        "name_variants_on_file": ["AnnMarie Geddess", "Annemarie Geddess", "AnnMarie Geddes"],
+        "email": "annmarie@sisu.co",
+        "phone": "(801) 897-1076",
+        "client_contacts_url": "https://www.notion.so/30d4917287518146ab8becce57d68651",
+        "portal_access": false,
+        "role_at_sisu": "Sisu employee — specific role not on file"
+      },
+      {
+        "name": "Frank Felice",
+        "email_assumed": "frank.felice@sisu.co OR frank@sisu.co — verify",
+        "phone": null,
+        "client_contacts_url": null,
+        "client_contacts_record_exists": false,
+        "role_at_sisu": "Finance / investor relations contact — per Spring Bengtzen dossier §2 + §10.3"
+      }
+    ],
+    "filing_status_assumed": "MFJ — but no 1040 in scope per client",
+    "residency_inferred": "Utah (801 area code)"
+  },
+  "engagement": {
+    "fee_usd": 16250,
+    "scope": "9 × Form 1065 (compliance only — no 1040, no personal tax advice per client direction)",
+    "el_status": "Signed",
+    "compliance_group_status": "Pending Check",
+    "mango_engagement_status": "Project Created",
+    "mango_portal_invite_status": "To Check",
+    "pbc_list_status": "To Create Comprehensive PBC list",
+    "tax_ascend_type": "TAX COMPLIANCE",
+    "tax_ascend_status": "New Client GC",
+    "tax_ascend_date_ascended": "2026-04-09",
+    "insights_status": "DELIVERED",
+    "insights_date_delivered": "2026-03-26",
+    "insights_kickoff_date": "2026-03-03",
+    "insights_clarifying_call_date": "2026-03-20",
+    "insights_files_received": "3/3",
+    "insights_analysis_required": false,
+    "tax_memo_status": "NOT APPLICABLE"
+  },
+  "exec_summary_db_rows": [],
+  "exec_summary_db_row_status": "NOT FOUND — needs creation in Turn 11",
+  "sidecars": {
+    "engagement_letter": "https://www.notion.so/35049172875180ffa83fd38d0e6b96ed",
+    "insights_project": "https://www.notion.so/30b49172875180ca9bc8f3f2be173af9",
+    "tax_ascend": "https://www.notion.so/34149172875180bf9d53fe73b086b901",
+    "primary_contact_annmarie": "https://www.notion.so/30d4917287518146ab8becce57d68651",
+    "meeting_2026_03_20_clarification": "https://www.notion.so/32949172875180f88fe1cff50ccd80d4",
+    "meeting_fathom_recap": "https://fathom.video/share/ERkHszB65V5NcXt4EyN4maX8Sx5oYsjj",
+    "insights_fathom_meeting": "https://fathom.video/share/Yh8xiKqhuCy7B-jDEwbP5j_n5EURU4Rv",
+    "cross_account_email_mortgage_restructure": "https://www.notion.so/34249172875181339853ce02cbf1c70a",
+    "cross_account_email_filed_on": "https://www.notion.so/30d49172875181b4a960ff221f9a14c2 (Renee Mueller and Jeff Cohn)",
+    "el_mangoshare_signed": "https://app.mangoshare.com/share/c446da37c44e2d959a51181a",
+    "insights_counting_file": "https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQAt2KzEh-kxRoCu90V0y2s4AdSzdvbVoKBDsirTbMmFiJM?e=UHVF3Z",
+    "insights_request_list": "https://subledgesl.sharepoint.com/:x:/s/Insights/IQDkOkXDzkj2R77CsqykM4hHAaflcUYKhyHbG9T-KJuTos0?e=3wx4XC",
+    "insights_tax_returns_folder": "https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgC94XgBXeVrTJfol9jWAz-cAYGAUldWbns4KRqhhvFFRzY?e=84LFZ1",
+    "insights_sharepoint_doc": "https://subledgesl.sharepoint.com/sites/Insights/_layouts/15/viewer.aspx?sourcedoc=%7Be2b44cba-ea13-461f-9574-fa38f6794e30%7D",
+    "imaginetime_workspace_mortgage_restructure_docs": "firm/5331/workspaces/961366/files/19011257"
+  },
+  "entities_known": [
+    {"id": "A", "name": "Sisu Mortgage Ventures LLC", "form": "1065", "fileforms_url": "https://www.notion.so/349491728751805e84c0ff282a4ecd04"},
+    {"id": "B", "name": "Sympli Mortgage Platinum, LLC", "form": "1065", "fileforms_url": "https://www.notion.so/34949172875180c0bbd0f09cf0eeb31e"},
+    {"id": "C", "name": "Sympli Mortgage of North Carolina, LLC", "form": "1065", "fileforms_url": "https://www.notion.so/34949172875180359e7ec16be7851e2e"},
+    {"id": "D", "name": "Sisu Mortgage Partners, LLC", "form": "1065", "fileforms_url": "https://www.notion.so/34949172875180aca525d6e798f2a8fb"},
+    {"id": "E", "name": "Sympli Mortgage Carolinas", "form": "1065", "fileforms_url": "https://www.notion.so/34949172875180f6af17e5c44eecec1c"},
+    {"id": "F", "name": "Sympli Mortgage Collective, LLC", "form": "1065", "fileforms_url": "https://www.notion.so/34949172875180968e98ffeb025ed2c4"},
+    {"id": "G", "name": "Sympli Mortgage FIG Partners, LLC", "form": "1065", "fileforms_url": "https://www.notion.so/349491728751808a9396fb83fd2c74b3"},
+    {"id": "H", "name": "Sympli Mortgage Southern LLC", "form": "1065", "fileforms_url": "https://www.notion.so/34949172875180769309cd99840134e5"},
+    {"id": "I", "name": "Sympli Mortgage, LLC (parent)", "form": "1065", "fileforms_url": "https://www.notion.so/349491728751805f948ac8e2fdeda093"}
+  ],
+  "coi_overlay": {
+    "active": true,
+    "priority": "HIGH",
+    "summary": "Frank Felice is documented in Spring Bengtzen's dossier as Sisu finance/IR. He personally granted Seth data-room access (2025-10-30) and JD Capital data-room access (2025-12-04) to Sisu's exclusive SAFE-note raise. AnnMarie Geddess also @ sisu.co. Brian Charlesworth (Sisu CEO) is Spring Bengtzen's spouse and a parallel Accruity client. Recommended: written COI/scope-clarity disclosure to Frank+AnnMarie.",
+    "cross_dossier_refs": [
+      "dossiers/SpringBengtzen/dossier.md §2 Third parties",
+      "dossiers/SpringBengtzen/dossier.md §10.3 Joint household-level operations",
+      "dossiers/SpringBengtzen/dossier.md §11.2 Brian Charlesworth profile"
+    ]
+  },
+  "workbooks_not_accessed_this_refresh": [
+    "Insights Counting File (linked but not parsed)",
+    "Insights Request List Tracker (linked but not parsed)",
+    "Tax Returns Folder contents (folder linked, contents not enumerated)",
+    "Mortgage entity restructure legal docs in ImagineTime (referenced in cross-account email; not retrieved)"
+  ],
+  "open_action_items": {
+    "total": 15,
+    "high": 4,
+    "med": 6,
+    "low": 5,
+    "high_items": [
+      "#1 Issue written COI / scope-clarity disclosure",
+      "#3 Confirm Mango Portal Invite delivered + accessed",
+      "#4 Create comprehensive PBC list across 9 entities",
+      "#15 Confirm Sisu intercompany flows posture"
+    ]
+  },
+  "plan_turn_progress": {
+    "turn_1_bootstrap": "done",
+    "turn_2_overview_profile": "done",
+    "turn_3_email_intelligence": "done",
+    "turn_4_meeting_history": "done",
+    "turn_5_document_inventory": "done",
+    "turn_6_claude_work_product": "done",
+    "turn_7_action_items": "done",
+    "turn_8_strategies_flags": "done",
+    "turn_9_operations_individuals": "done",
+    "turn_10_provenance_changed": "done",
+    "turn_11_push_notion": "in progress"
+  },
+  "notion_exec_summary_row_url": null,
+  "notion_claude_summary_row_url": null
+}
