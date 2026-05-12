@@ -1,7 +1,7 @@
 {
   "client": "Gil Ramos",
-  "refresh_date": "2026-05-07",
-  "prior_refresh": "first run",
+  "refresh_date": "2026-05-12",
+  "prior_refresh": "2026-04-22",
   "depth_mode": "FULL",
   "depth_reason": "15+ sidecars: 1 Account + 1 EL + 1 TaxAscend + 1 Transcript + 3 Meetings + 3 F&L + 7 CostSeg proposals + 2 Claude Summaries + TaxComplianceProjects + ExtensionsTracker + Contacts + TaxPlanningSession = 22 distinct source records",
   "account": {
@@ -39,7 +39,7 @@
       "page_id": "33b49172-8751-81d0-9485-fa9f7752943f",
       "summary_title": "Gil Ramos",
       "summary_type": "General",
-      "state": "has Activity Log with 2026-04-14 deep-dive content — used as primary source; Summary/Dossier properties empty — populated in Turn 11"
+      "state": "Summary/Dossier properties populated in first-run Turn 11 (2026-05-07). Last Updated on Notion row: 2026-04-14T21:07:15.295Z — no new content added to body since first-run. Last Synthesized property to be updated to 2026-05-12 in this refresh."
     }
   ],
   "sidecars": {
@@ -71,7 +71,8 @@
     ],
     "claude_summaries": [
       "https://www.notion.so/3424917287518166a18ac322bb799c3b",
-      "https://www.notion.so/33c49172875181098390e5d079955549"
+      "https://www.notion.so/33c49172875181098390e5d079955549",
+      "https://www.notion.so/35949172875181b48edaf8018f5cdd64"
     ],
     "client_contact": "https://www.notion.so/30d491728751813e8e77de8afbd88875",
     "fathom_dec05": "https://fathom.video/share/8YGXCHFx8FTRRoWQEBts2yEi2Ljsp-1N",
@@ -157,5 +158,23 @@
     "turn_11_push_notion": "done"
   },
   "notion_exec_summary_row_url": "https://www.notion.so/33b49172875181d09485fa9f7752943f",
-  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181b48edaf8018f5cdd64"
+  "notion_claude_summary_row_url": "https://www.notion.so/35949172875181b48edaf8018f5cdd64",
+  "delta_refresh_2026_05_12": {
+    "new_emails": 0,
+    "new_meetings": 1,
+    "new_claude_sessions": 1,
+    "key_deltas": [
+      "April 14 Touchbase meeting backfilled in Meetings Tracker (row created 2026-04-23)",
+      "1040 advanced to 04 Internal WP Preparation (Mango In Progress) as of 2026-05-06",
+      "1120-S advanced to 03 Collect and Review K-1s (Mango In Progress) as of 2026-05-06",
+      "1065 Alliance Culture Center: 03 Collect and Review K-1s + Extension NOT filed — new H6 action item",
+      "Outsourcing Assignment Tracker rows created 2026-04-29 for all 3 returns",
+      "New Cost Seg Approval Pages created 2026-04-16 and 2026-04-20 in new RE Cost Seg (1) workspace"
+    ],
+    "notion_updates_completed": [
+      "Exec Summary row Last Synthesized updated to 2026-05-12 (33b49172875181d09485fa9f7752943f)",
+      "New Claude Summary log row created: 35e49172875181 31a7a9ecfeece8d6e5 (2026-05-12 delta refresh)"
+    ],
+    "notion_claude_summary_delta_refresh_url": "https://www.notion.so/35e4917287518131a7a9ecfeece8d6e5"
+  }
 }

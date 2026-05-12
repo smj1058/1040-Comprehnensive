@@ -7,8 +7,8 @@
 | Client # | 07121819-01 `[Accounts:Gil Ramos.Client #]` |
 | Mango Client ID | 937695 `[Accounts:Gil Ramos.Mango Client ID]` |
 | Prepared by | Accruity Tax Advisory |
-| Date | 2026-05-07 |
-| Prior Refresh | First run (prior Claude sessions 2026-04-08 Cost Seg Pipeline + 2026-04-14 Full Synopsis on file) |
+| Date | 2026-05-12 |
+| Prior Refresh | 2026-04-22 (first-run dossier written 2026-05-07; prior Claude sessions 2026-04-08 Cost Seg Pipeline + 2026-04-14 Full Synopsis on file) |
 | Planning Year(s) | 2022 (SOL-critical amendment) · 2023 (amendment) · 2024 (amendment) · 2025 (original, extended Oct 15) · 2026 forward |
 | Engagement Stage | Tax Ascend = TAX COMPLIANCE + TAX PLANNING · EL Executed · Deposit Paid · Tax Memo Sent 2026-03-05 · 7 Cost Seg Proposals in portal · 1040 in "04 Internal WP Preparation" (Deontae) |
 | Temperature | Active engagement · Client was frustrated Nov/Dec 2025 · PBC upload 0kb Mango bug as of 3/23 (re-upload requested 4/2, unconfirmed) · Extension status "In progress (Client ongoing queries)" · Meeting 4/14/26 held |
@@ -16,7 +16,7 @@
 | Primary Contact | Gil Ramos — `gilaramos@gmail.com` · (407) 749-9646 `[Contacts:Gil Ramos]` |
 | Spouse/Co-Filer | Lorena Ramos (MFJ) · requests Lorena on all communications (per Gil 3/10) `[ExecSumm:Gil Ramos §Activity Log 2026-04-14]` |
 | Prior CPA | Ponales (prior preparer — 2022 SOL exposure depends on whether Ponales filed on extension) · Grable CPA (filed final return for Carda MA Law PA) `[Transcript:Gil Ramos Dec 05 §Entity Structure]` |
-| Data Sources (this refresh) | 1 Account record · 1 Engagement Letter · 1 Tax Ascend row · 1 Exec Summary (with Activity Log, 2026-04-14) · 1 Transcript subpage (Dec 05 Insights Delivery) · 3 Meetings Tracker rows · 3 Files & Links rows · 7 Cost Seg Proposal rows · 1 Claude Summaries row (2026-04-14 Full Synopsis) · 1 Claude Summaries row (2026-04-08 Cost Seg Pipeline) · Tax Compliance Projects row · Extensions Status Tracker row |
+| Data Sources (this refresh) | 1 Account record · 1 Engagement Letter · 1 Tax Ascend row · 1 Exec Summary (with Activity Log, 2026-04-14) · 1 Transcript subpage (Dec 05 Insights Delivery) · 4 Meetings Tracker rows (3 prior + 1 new 2026-04-14 backfill created 2026-04-23) · 3 Files & Links rows · 7 Cost Seg Proposal rows · 1 Claude Summaries row (2026-04-14 Full Synopsis) · 1 Claude Summaries row (2026-04-08 Cost Seg Pipeline) · 3 Tax Compliance Projects rows (updated 2026-05-06) · 3 Outsourcing Assignment Tracker rows (created 2026-04-29) · Extensions Status Tracker row |
 | Workbooks NOT Re-Accessed This Refresh | Ramos_2025_Planning_Proforma_UPDATED.xlsx · Gil_Ramos_-_Tax_Planner.xlsm · 2024_Tax_Return_Data_Ramos.xlsx · Ramos_Tax_Planning_Brief_2025.docx · Financial Reporting Workbook · PBC Open Items Workbook · Bond/Entity/Property Workbook · Tax Analysis 24-26.xlsm — all referenced through Claude Summaries + Exec Summary Activity Log |
 
 **Confidence:** ✓ Confirmed · ~ Estimated · ? Pending
@@ -25,10 +25,15 @@
 ---
 
 <!-- Sections written in one pass — first dossier refresh 2026-05-07 -->
+<!-- Delta refresh 2026-05-12: header updated; §2 compliance status in-place; §3 gap note updated; §4 April 14 Meetings Tracker row backfilled; §7 status annotations added; §13.1 added at top of §13 -->
 
 ---
 
 ## §1. Executive Overview
+
+> **2026-05-12 amendment:** No new email threads or Claude sessions found since the 2026-04-22 first-run baseline. Three material operational updates confirmed: (1) The April 14 Touchbase meeting has now been formally logged in the Meetings Tracker (created 2026-04-23, no recap attached yet). (2) Tax Compliance Projects show meaningful workflow progression as of 2026-05-06: the 1040 advanced to "04 Internal WP Preparation" (Mango: In Progress), the 1120-S to "03 Collect and Review K-1s" (Mango: In Progress, extended), and the 1065 Alliance Culture Center to "03 Collect and Review K-1s" — critically, the Alliance 1065 shows **extension NOT filed**, which is a new and urgent flag given the ghost-entity status of that entity. All three returns have been entered in the Outsourcing Assignment Tracker (created 2026-04-29, status "Not Yet received"). See §2, §4, §7 for in-place updates.
+>
+> *(Prior §1 narrative from 2026-05-07 preserved below.)*
 
 Gil and Lorena Ramos (`gilaramos@gmail.com` · MFJ · Florida) are **mid-scale Orlando-area real-estate investors** operating a multi-entity rental and business portfolio through **Unlimited Prosperity Group LLC** (S-corp), a newly-formed **Unlimited Prosperity 8 LP** (Delaware partnership HoldCo), and **Alliance Culture Center LLC** (partnership, 50/50 with Veronica Figueroa). The engagement is simultaneously a **compliance project** (three extended returns — 1040, 1120-S, 1065 — all due Oct 15, 2026), a **prior-year amendment campaign** (three years, 2022–2024), and a **cost segregation study execution** across up to seven properties.
 
@@ -91,21 +96,23 @@ Gil and Lorena Ramos (`gilaramos@gmail.com` · MFJ · Florida) are **mid-scale O
 
 ### Filing engagement scope (per EL / Exec Summary 2026-04-14)
 
-| Return | EL Price | Mango Project | Manager | Status |
-| --- | --- | --- | --- | --- |
-| 1040 — Gil & Lorena Ramos | $1,500 | 1040- Gil Ramos | Deontae | Extended · 04 Internal WP Prep |
-| 1120-S — Unlimited Prosperity Group | $3,150 | 1120-S- Unlimited Prosperity | Deontae | Extended · Not started |
-| 1065 — Alliance Culture Center | $1,850 | 1065- Alliance Culture Center | Deontae | Extended · Not started |
-| Tax Planning | $2,000/mo | Tax Planning - Gil Ramos | Sophia/Seth | PBC request sent · Done |
-| **Total compliance** | **$6,500** | | | Signed 3/16/26 · Deposit paid |
+| Return | EL Price | Mango Project | Mango ID | Manager | Status |
+| --- | --- | --- | --- | --- | --- |
+| 1040 — Gil & Lorena Ramos | $1,500 | 1040- Gil Ramos | 1878852 | Deontae | Extended · **04 Internal WP Preparation** (Mango: In Progress) · Outsourcing row created 2026-04-29: "Not Yet received" `[TaxComplianceProjects:1040 Gil Ramos — updated 2026-05-06]` (was: "Not started" per `[ExecSumm:Gil Ramos §2026-04-14]`, changed to: "04 Internal WP Preparation / In Progress" per `[TaxComplianceProjects:1040 Gil Ramos — 2026-05-06]`) |
+| 1120-S — Unlimited Prosperity Group | $3,150 | 1120-S- Unlimited Prosperity | 1878855 | Deontae | Extended · **03 Collect and Review K-1s** (Mango: In Progress) · Outsourcing row created 2026-04-29: "Not Yet received" `[TaxComplianceProjects:1120-S Unlimited Prosperity — updated 2026-05-06]` (was: "Not started" per `[ExecSumm:Gil Ramos §2026-04-14]`, changed to: "03 Collect and Review K-1s / In Progress" per `[TaxComplianceProjects:1120-S Unlimited Prosperity — 2026-05-06]`) |
+| 1065 — Alliance Culture Center | $1,850 | 1065- Alliance Culture Center LLC | 1878853 | Deontae | **⚠ Extension NOT filed** · **03 Collect and Review K-1s** (Mango: In Progress) · Notes: "pbc list sent" · Outsourcing row created 2026-04-29: "Not Yet received" `[TaxComplianceProjects:1065 Alliance Culture Center — updated 2026-05-06]` (was: "Not started / Extended" per `[ExecSumm:Gil Ramos §2026-04-14]`, changed to: "03 Collect and Review K-1s / Extension NOT filed" per `[TaxComplianceProjects:1065 Alliance Culture Center — 2026-05-06]`) |
+| Tax Planning | $2,000/mo | Tax Planning - Gil Ramos | — | Sophia/Seth | PBC request sent · Done |
+| **Total compliance** | **$6,500** | | | | Signed 3/16/26 · Deposit paid |
 
 ---
 
 ## §3. Email Intelligence
 
-**Scope of this refresh:** Client Email Log DB returned 0 rows for Gil Ramos (`gilaramos@gmail.com` / "Gil" / "Ramos") via direct SQL query. Communications are documented through the EL record (Open Items email, Extension email, .msg attachments), Extensions Status Tracker, and the Exec Summary Activity Log. No live email threads are currently indexed in the Email Log DB for this client. `[EmailLog:Gil Ramos — 0 rows returned]`
+**Scope of 2026-05-07 first-run refresh:** Client Email Log DB returned 0 rows for Gil Ramos (`gilaramos@gmail.com` / "Gil" / "Ramos") via direct SQL query. Communications documented through EL record, Extensions Status Tracker, and Exec Summary Activity Log. `[EmailLog:Gil Ramos — 0 rows returned]`
 
-**Rollup:** 0 active threads in Email Log DB · Known email touchpoints reconstructed from EL / Extensions Tracker / Activity Log · 1 unresolved PBC upload blocker (Mango 0kb bug) · Extension status "In progress — client ongoing queries" as of 4/8.
+**2026-05-12 delta refresh update:** Repeated search of the Client Email Log DB (SQL query by Account ID `30d49172-8751-81ab-b42e-c31aef33fd35` + semantic search for "Ramos / gilaramos" with `created_date_range` from 2026-04-15) returned **0 new rows**. No Gil Ramos email threads have been ingested into the Email Log DB since the prior baseline. Extensions Tracker last-updated 2026-04-15 — no changes to status. `[EmailLog:Gil Ramos — 0 rows confirmed 2026-05-12]`
+
+**Rollup:** 0 active threads in Email Log DB (confirmed through 2026-05-12) · Known email touchpoints reconstructed from EL / Extensions Tracker / Activity Log · 1 unresolved PBC upload blocker (Mango 0kb bug — status not updated in any DB since 4/14) · Extension status: 1040 and 1120-S extended; **1065 Alliance NOT extended** (new flag per Tax Compliance Projects DB 2026-05-06).
 
 ### 3.1 Reconstructed Communication Timeline
 
@@ -139,13 +146,14 @@ Gil and Lorena Ramos (`gilaramos@gmail.com` · MFJ · Florida) are **mid-scale O
 
 ## §4. Meeting History
 
-**3 Meetings Tracker rows on Account.** `[Accounts:Gil Ramos.Meetings]`
+**4 Meetings Tracker rows on Account** (was 3 — April 14 Touchbase backfilled 2026-04-23). `[Accounts:Gil Ramos.Meetings]`
 
-| Date | Type | Recap | Status | Action items captured? |
-| --- | --- | --- | --- | --- |
-| 2025-12-05 | Full Insights Delivery Call · 11:00 AM | [Fathom — 67 min](https://fathom.video/share/8YGXCHFx8FTRRoWQEBts2yEi2Ljsp-1N) | Done | Yes — synthesized in §6 + §7; transcript stored as subpage under Tax Ascend row |
-| 2025-12-08 | Post Delivery Follow-Up · 2:00 PM – 2:30 PM | [Fathom link](https://fathom.video/share/1_GsytdqcGdZ54vCzk7wVesLu3sgh6n5) | Done | Short follow-up; no separate action items indexed |
-| 2026-03-11 | Tax Planning Session · 2:00 PM – 2:30 PM | — (MISSED) | Rescheduled | n/a — meeting did not occur |
+| Date | Type | Recap | Status | Action items captured? | Source |
+| --- | --- | --- | --- | --- | --- |
+| 2025-12-05 | Full Insights Delivery Call · 11:00 AM | [Fathom — 67 min](https://fathom.video/share/8YGXCHFx8FTRRoWQEBts2yEi2Ljsp-1N) | Done | Yes — synthesized in §6 + §7; transcript stored as subpage under Tax Ascend row | `[MeetingsTracker:Gil Ramos 2025-12-05]` |
+| 2025-12-08 | Post Delivery Follow-Up · 2:00 PM – 2:30 PM | [Fathom link](https://fathom.video/share/1_GsytdqcGdZ54vCzk7wVesLu3sgh6n5) | Done | Short follow-up; no separate action items indexed | `[MeetingsTracker:Gil Ramos 2025-12-08]` |
+| 2026-03-11 | Tax Planning Session · 2:00 PM – 2:30 PM | — (MISSED) | Rescheduled | n/a — meeting did not occur | `[MeetingsTracker:Gil Ramos 2026-03-11]` |
+| 2026-04-14 | Touchbase · 4:00 PM – 4:30 PM **(new this refresh)** | — (no recap attached) | Done | No action items indexed in Meetings Tracker row; agenda context from Exec Summary Activity Log (see §4.3) | `[MeetingsTracker:Gil Ramos 2026-04-14]` (row created 2026-04-23) |
 
 ### 4.1 December 5 Insights Delivery — key meeting content
 
@@ -171,7 +179,8 @@ The April 14 call was the major deep-dive meeting following the 2026-04-14 Claud
 
 ### 4.4 Gaps
 
-- Meeting recap for the April 14 call is not yet indexed as a Meetings Tracker row — flag for backfill.
+- ~~Meeting recap for the April 14 call is not yet indexed as a Meetings Tracker row~~ (closed 2026-04-23 — row created `[MeetingsTracker:Gil Ramos 2026-04-14]`, but no recap/notes attached yet — still a gap)
+- **April 14 meeting recap is still missing.** The Meetings Tracker row was created but its "MEETING RECAP" and "NOTES" fields are blank. The call content is captured only in the 2026-04-14 Exec Summary Activity Log. A proper recap should be attached to the row. `[MeetingsTracker:Gil Ramos 2026-04-14]`
 - Post-delivery follow-up (Dec 8) has a Fathom link but no action items captured as Meetings Tracker entries.
 - Meeting Prep Notes field on Account is blank — any prep documents from Sophia should be indexed here.
 
@@ -321,14 +330,27 @@ The December 5 Insights Delivery generated the `#TRANSCRIPT - Gil Ramos` subpage
 ### 6.3 Gaps
 
 - **Correction memo to Gil** regarding the $61K → ~$11K (2024 amendment) estimate revision — was this delivered verbally on April 14? Not yet documented in writing in any indexed source.
-- **April 14 meeting recap** — no Meetings Tracker row created yet; the call content lives in the 2026-04-14 Exec Summary Activity Log but not as a separate recap.
+- ~~**April 14 meeting recap** — no Meetings Tracker row created yet~~ (closed: row created 2026-04-23 — but recap content still missing from the row; see §4.4)
 - **Claude Activity Log** for this account not enumerated this refresh — flag for next pass.
+
+### 6.4 Claude Summaries — added since 2026-04-14 baseline
+
+#### `2026-05-07` — **Gil Ramos — Client Intelligence Dossier (first refresh)**
+**Page:** `https://www.notion.so/35949172875181b48edaf8018f5cdd64` · **Topics:** File Review · Notion Build · Tax Planning · Cost Seg · Amendments · Extension Planning · **Date:** 2026-05-07
+
+**Summary:** First full dossier run for Gil Ramos. Synthesized all prior Claude sessions (2026-04-08 Cost Seg Pipeline + 2026-04-14 Full Synopsis), 3 Meetings Tracker rows, 7 Cost Seg Proposal rows, EL row, Tax Ascend row, Transcript subpage, Files & Links rows, Tax Compliance Projects row, Extensions Tracker row, and Exec Summary Activity Log into a 738-line §1–§13 dossier. Populated Notion Exec Summary DB row properties (Summary, Last Synthesized, 📄 Dossier URL, all section anchor URLs).
+
+**Key findings logged:** $522K cost-seg pipeline across 7 properties; 2022 SOL may have passed 4/15/26; ghost entities UP8 + Alliance; $200K IRS back-tax balance; prior $63K→$11K 2024-amendment correction; F&L URL collision with Venereo confirmed.
+
+`[ClaudeSummaries:Gil Ramos Dossier First Refresh 2026-05-07]`
 
 ---
 
 ## §7. Action Items (rolled up across all sources)
 
 **Total: 14 open action items** — 5 HIGH · 6 MEDIUM · 3 LOW
+
+> **2026-05-12 status update:** Items H1 (2022 SOL), H2 (Alliance EIN), H3 (expectation correction), H4 (UP8 EIN), H5 (cost-seg studies) remain open — no Notion record shows these resolved. New intelligence from Tax Compliance Projects DB (2026-05-06) elevates the Alliance 1065 extension to a NEW HIGH item: the extension was never filed for that entity. M1 (PBC re-upload) status unclear — no update in any source. L1 (April 14 meeting row backfill) partially closed — row exists but recap blank. See in-line annotations below.
 
 ### HIGH (block downstream work or have time-sensitive SOL exposure)
 
@@ -339,6 +361,7 @@ The December 5 Insights Delivery generated the `#TRANSCRIPT - Gil Ramos` subpage
 | H3 | **Reset Gil's expectations on the 2024 amendment refund.** The Dec 5 call told him ~$63K refund; actual 2024 amendment refund is ~$11K (Lake Lotta only). Confirm this was communicated April 14. If not, send a brief written correction immediately before Gil acts on incorrect expectations. | Seth / Sophia | `[ClaudeSummaries:Full Synopsis 2026-04-14 §Summary]` | Unaddressed expectation = client frustration risk |
 | H4 | **Obtain UP8 EIN and determine if a 2025 UP8 1065 is required.** UP8 legally owns Dunbar + Windtree (transferred Dec 2024, recorded Sep 2025) and 311 Fern is on UPG BS but should be in UP8 per go-forward policy. No EIN, no QBO, no EL, no Mango project — needs full standup before Oct 15. | Seth → Gil (after April 14) | `[ExecSumm:Gil Ramos §2026-04-14 §UP8 Ghost Entity Problem]` | If UP8 needs a 2025 1065, scope + EL required urgently |
 | H5 | **Confirm cost seg studies are actively in progress or order them now.** All 7 properties are "Entered in Portal" in the Cost Seg Proposal Intake DB. Confirmation of study execution and delivery timelines is needed — the entire $522K deduction strategy depends on studies being complete before Oct 15 filing. | Seth / Cost Seg team | `[CostSeg:Gil Ramos sub-items]` `[ExecSumm §Key Open Items #1]` | $110K in savings at risk if studies don't land before returns file |
+| H6 **(new 2026-05-12)** | **File extension for 1065 — Alliance Culture Center LLC immediately.** Tax Compliance Projects DB (updated 2026-05-06) shows `Extension Filed = NO` for the Alliance 1065. The original due date was 2026-03-15 (calendar year partnership). The entity is a ghost (no EIN confirmed) — but if it needed a return, it needs an extension. **Cannot file an extension without an EIN.** This collapses back to H2 (obtain Alliance EIN) as a prerequisite. If EIN is not obtainable, assess late-filing penalty exposure. | Seth / Deontae → Gil | `[TaxComplianceProjects:1065 Alliance Culture Center — 2026-05-06]` | Extension not filed + no EIN = potential late-filing penalty on a $1,850 engagement |
 
 ### MEDIUM
 
@@ -355,7 +378,7 @@ The December 5 Insights Delivery generated the `#TRANSCRIPT - Gil Ramos` subpage
 
 | # | Action | Owner | Source |
 | --- | --- | --- | --- |
-| L1 | Backfill April 14 meeting as a Meetings Tracker row with recap (outcome of the 4 PM call). | Generator/Sophia | `[MeetingsTracker:gap]` |
+| L1 | ~~Backfill April 14 meeting as a Meetings Tracker row~~ (was: gap; now: row created 2026-04-23 per `[MeetingsTracker:Gil Ramos 2026-04-14]`) — **still open: recap content + notes fields remain blank on the row.** | Generator/Sophia | `[MeetingsTracker:Gil Ramos 2026-04-14]` |
 | L2 | Populate `Account.SharePoint Drive`, `Account.Tax Extraction`, `Account.Tax Planning Memo`, `Account.PBC Workbook`, `Account.Meeting Prep Notes`, `Account.Mango Display Name` fields. | Operator | `[Accounts:Gil Ramos §blanks]` |
 | L3 | Investigate / remediate F&L URL collision — Document Inventory and PBC PDF Package URLs on the Gil Ramos primary F&L row are identical to the Michael Venereo primary F&L row. Confirm whether client files are truly co-mingled in Seth's OneDrive root or if the SharePoint links need to be updated to client-specific subfolders. | Operator (Seth) | `[Files & Links §5.3 §URL collision]` |
 
@@ -384,6 +407,8 @@ The full memo lives at `https://subledgesl-my.sharepoint.com/:w:/g/personal/seth
 | 8.8 | **Amendment trigger — bond income reclassification** — reclassify bond income from dividend → interest as the formal hook to reopen all 3 prior-year returns; this is a real underlying correction, not a technicality | UPG / Gil 1040 | Required for legal basis to amend | — | Not yet filed | `[Transcript:Gil Ramos Dec 05 §2024 Amendment Basis]` |
 
 **Grand total modeled:** $522,438 deductions → ~$109,712 tax savings @21%. Net impact after $200K IRS offset: ~$110K in savings applied against the balance + future reduction in overpayment. `[ExecSumm:Gil Ramos §2026-04-14 §Grand Total]`
+
+> **2026-05-12 status note:** Tax Compliance Projects as of 2026-05-06 show returns are advancing: 1040 at "04 Internal WP Preparation" (Mango In Progress), 1120-S at "03 Collect and Review K-1s" (Mango In Progress, extended), Alliance 1065 at "03 Collect and Review K-1s" (Mango In Progress, **extension NOT filed**). Outsourcing rows created 2026-04-29 for all three — all "Not Yet received." Cost-seg studies must complete before returns advance to draft stage. No update on study delivery timelines in any Notion source. `[TaxComplianceProjects:all three Gil Ramos returns — 2026-05-06]`
 
 ---
 
@@ -509,7 +534,11 @@ The full memo lives at `https://subledgesl-my.sharepoint.com/:w:/g/personal/seth
 | `[ClaudeSummaries:Cost Seg Pipeline 2026-04-08]` | Claude Summaries row `33c49172-8751-8109-8390-e5d079955549` |
 | `[Contacts:Gil Ramos]` | Client Contacts row `30d49172-8751-813e-8e77-de8afbd88875` |
 | `[ExtensionsTracker:Gil Ramos]` | Extensions Status Tracker row `34249172-8751-8105-b894-f8ffe0569707` |
-| `[EmailLog:Gil Ramos — 0 rows returned]` | Client Email Log query returned 0 rows matching Gil Ramos |
+| `[EmailLog:Gil Ramos — 0 rows returned]` | Client Email Log query returned 0 rows matching Gil Ramos (confirmed on both 2026-05-07 and 2026-05-12 refreshes) |
+| `[TaxComplianceProjects:<entity> — <date>]` | Tax Compliance Projects DB rows (updated 2026-05-06): 1040 `54d49172-8751-8297-8a13-810148ccb5ab` · 1120-S `af149172-8751-8365-9f52-810bfda74843` · 1065 Alliance `2cc49172-8751-8285-8cc4-01f40dffea58` |
+| `[OutsourcingTracker:Gil Ramos rows — 2026-04-29]` | Outsourcing Assignment Tracker rows (created 2026-04-29): 1040 `35049172-8751-81f4-84b0-d5b8b7a6079f` · 1065 Alliance `35049172-8751-815d-b563-d144f8a229f6` · 1120-S `35049172-8751-8193-bed4-f06a42733f32` |
+| `[CostSegApprovalPage:Gil Ramos — 2026-04-16/20]` | Cost Seg Approval Pages: `3444917287518097ad33f2f221c49840` (old RE Cost Seg, created 2026-04-16) · `34849172875181d88fb4c7b67c396dfc` (new RE Cost Seg (1), created 2026-04-20) |
+| `[ClaudeSummaries:Gil Ramos Dossier First Refresh 2026-05-07]` | Claude Summaries row `35949172-8751-81b4-8eda-f8018f5cdd64` |
 | `derived` | Inference from cross-section synthesis; no single source row |
 | `?` | Number not yet sourceable; pending workbook ingestion |
 
@@ -548,10 +577,52 @@ The full memo lives at `https://subledgesl-my.sharepoint.com/:w:/g/personal/seth
 | 29 | Signed EL (MangoShare) | https://app.mangoshare.com/share/3bf9dea70c083f3ea3c41a0d |
 | 30 | Fathom Recording — Dec 05 Insights Delivery | https://fathom.video/share/8YGXCHFx8FTRRoWQEBts2yEi2Ljsp-1N |
 | 31 | Fathom Recording — Dec 08 Follow-Up | https://fathom.video/share/1_GsytdqcGdZ54vCzk7wVesLu3sgh6n5 |
+| 32 | Meetings Tracker — April 14 Touchbase (backfilled 2026-04-23) | https://www.notion.so/34949172875180048d96f6dad25095b9 |
+| 33 | Tax Compliance Projects — 1040 Gil Ramos (updated 2026-05-06) | https://www.notion.so/54d49172875182978a13810148ccb5ab |
+| 34 | Tax Compliance Projects — 1120-S Unlimited Prosperity (updated 2026-05-06) | https://www.notion.so/af149172875183659f52810bfda74843 |
+| 35 | Tax Compliance Projects — 1065 Alliance Culture Center LLC (updated 2026-05-06) | https://www.notion.so/2cc49172875182858cc401f40dffea58 |
+| 36 | Outsourcing Assignment Tracker — 1040 Gil Ramos (created 2026-04-29) | https://www.notion.so/35049172875181f484b0d5b8b7a6079f |
+| 37 | Outsourcing Assignment Tracker — 1065 Alliance Culture Center LLC (created 2026-04-29) | https://www.notion.so/350491728751815db563d144f8a229f6 |
+| 38 | Outsourcing Assignment Tracker — 1120-S Unlimited Prosperity (created 2026-04-29) | https://www.notion.so/3504917287518193bed4f06a42733f32 |
+| 39 | Claude Summaries — Gil Ramos Dossier First Refresh (2026-05-07) | https://www.notion.so/35949172875181b48edaf8018f5cdd64 |
 
 ---
 
 ## §13. Changed Since Last Refresh
+
+### 13.1 · 2026-05-12 · Delta Refresh
+
+**Baseline:** 2026-04-22 first-run dossier (written 2026-05-07, 738 lines).
+**Search window:** all Notion activity since 2026-04-14.
+
+**New emails found:** 0 — Client Email Log DB query (by Account ID + semantic search) returned zero rows tied to Gil Ramos through 2026-05-12. `[EmailLog:Gil Ramos — 0 rows confirmed 2026-05-12]`
+
+**New meetings found:** 1 — April 14 Touchbase row backfilled (created 2026-04-23 in Meetings Tracker). Date: 2026-04-14, Type: Touchbase, Status: Done, Time: 4:00–4:30 PM. No recap or notes attached. `[MeetingsTracker:Gil Ramos 2026-04-14]`
+
+**New Claude sessions found:** 1 — The 2026-05-07 first dossier run itself is now logged as a Claude Summary row (`35949172-8751-81b4-8eda-f8018f5cdd64`). No new separate Claude work sessions for Gil Ramos since the dossier was written.
+
+**Tax Compliance status changes (material — as of 2026-05-06):**
+- 1040 Gil Ramos: was "Not started" → now **"04 Internal WP Preparation"** (Mango In Progress, extended ✓, Mango ID 1878852) `[TaxComplianceProjects:1040 Gil Ramos — 2026-05-06]`
+- 1120-S Unlimited Prosperity: was "Not started" → now **"03 Collect and Review K-1s"** (Mango In Progress, extended ✓, Mango ID 1878855) `[TaxComplianceProjects:1120-S Unlimited Prosperity — 2026-05-06]`
+- 1065 Alliance Culture Center: was "Not started / Extended" → now **"03 Collect and Review K-1s"** (Mango In Progress, **Extension Filed = NO**, Mango ID 1878853, Notes "pbc list sent") `[TaxComplianceProjects:1065 Alliance Culture Center — 2026-05-06]`
+
+**New action item (H6):** Alliance 1065 extension not filed — potential late-filing penalty exposure; cannot extend without EIN. Collapses into H2 (obtain Alliance EIN) as prerequisite.
+
+**Outsourcing Assignment Tracker:** Three rows created 2026-04-29 for 1040, 1120-S, and 1065 — all status "Not Yet received" / XCM "Notif Not Yet Rcvd". Returns are queued but not yet received by outsourcing team. `[OutsourcingTracker:Gil Ramos rows — 2026-04-29]`
+
+**New Cost Seg Approval Pages:** Two cost-seg approval page entries created in a new "RE Cost Seg (1)" workspace (2026-04-16 and 2026-04-20). These are a new operational tracking system for the cost-seg study process — Gil's client entry and proposal parent were added. No new property proposals, no study delivery confirmed. `[CostSegApprovalPage:Gil Ramos — 2026-04-16/20]`
+
+**Closed items (partial):** L1 (April 14 meeting backfill) — row created but recap still missing.
+
+**No factual revisions** to §8 dollar figures, §9 opportunity flags, §11 individual profiles, or §12 provenance index.
+
+---
+
+*(Prior §13 baseline from 2026-05-07 below.)*
+
+---
+
+### 13.0 · 2026-05-07 · First Refresh (original baseline)
 
 This is the **first dossier-style refresh** of Gil Ramos.
 
@@ -574,4 +645,4 @@ This is the **first dossier-style refresh** of Gil Ramos.
 
 ---
 
-*End of Gil Ramos dossier — 2026-05-07 refresh.*
+*End of Gil Ramos dossier — last updated 2026-05-12 (delta refresh). Prior refresh: 2026-04-22 (first-run dossier written 2026-05-07).*
