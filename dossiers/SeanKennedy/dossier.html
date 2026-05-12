@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeanKennedy — Client Intelligence Dossier</title>
+
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 30px 40px; color: #24292e; line-height: 1.6; }
+  h1, h2, h3, h4 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin-top: 1.5em; }
+  h1 { font-size: 2em; }  h2 { font-size: 1.5em; }  h3 { font-size: 1.25em; }  h4 { font-size: 1em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #dfe2e5; padding: 6px 13px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  code { background: rgba(27,31,35,.05); padding: .2em .4em; border-radius: 3px; font-family: SFMono-Regular, Menlo, monospace; font-size: 85%; }
+  pre code { display: block; padding: 16px; overflow: auto; }
+  blockquote { border-left: 4px solid #dfe2e5; padding: 0 1em; color: #6a737d; margin: 1em 0; }
+  a { color: #0366d6; text-decoration: none; }  a:hover { text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #e1e4e8; margin: 24px 0; }
+  ul, ol { padding-left: 2em; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: .85em; color: #6a737d; }
+</style>
+
+</head>
+<body>
+<h1 id="sean-kennedy-client-intelligence-dossier">Sean Kennedy — Client Intelligence Dossier</h1>
+<p><strong>Internal Working Document — Accruity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Sean Kennedy (single filer · real estate operator with REPS-adjacent partner Amy)</td>
+</tr>
+<tr>
+<td>Client #</td>
+<td><strong>19141125-01</strong> <code>[Accounts:Sean Kennedy.Client #]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td>(empty on Account record — gap) <code>[Accounts:Sean Kennedy.Mango Client ID]</code></td>
+</tr>
+<tr>
+<td>Prepared by</td>
+<td>Accruity Tax Advisory</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-04-22 (refresh)</td>
+</tr>
+<tr>
+<td>Prior Refresh</td>
+<td>first run</td>
+</tr>
+<tr>
+<td>Depth mode</td>
+<td><strong>Full</strong> — Sean is a Tax Planning advisory exemplar with a TYPE A Tax Planning Memorandum produced 2026-04-13 (~$89K projected savings, $464K identified deductions, 8 strategies including cost seg + Sec 179 + REPS via Amy + Solo 401(k) + entity restructure), Insights DELIVERED 2026-03-11, Tax Memo SENT 2026-04-16, plus an active 2025 extension thread (Brandon Gerber, 2026-04-10).</td>
+</tr>
+<tr>
+<td>Planning Year(s)</td>
+<td>2024 (Insights base year — extracted) · 2025 (current planning + extension) · 2026 (forward S-Corp + cost seg + REPS)</td>
+</tr>
+<tr>
+<td>Engagement Stage</td>
+<td>Tax Ascend — <strong>Insights DELIVERED 2026-03-11</strong> → <strong>Tax Planning Memo SENT 2026-04-16</strong> → planning engagement decision pending (Hybrid Option 3 preferred per memo notes); Compliance Status = <strong>To Check</strong></td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Active &amp; engaged · <strong>MED-HIGH urgency</strong> — extension requested 2026-04-10 same-day, memo SENT 2026-04-16, Mango Compliance Engagement / Mango Client ID still "To Check" / blank, Hybrid Option 3 engagement decision outstanding, Amy REPS time-log + ES history + cost basis schedules pending from client</td>
+</tr>
+<tr>
+<td>Relationship Manager</td>
+<td>Seth Johnson (Partner, Tax) — implied by Tax Ascend record + Claude Summary author chain</td>
+</tr>
+<tr>
+<td>Active thread participants</td>
+<td>Brandon Gerber (<code>brandon@accruity.com</code> — 2025 Extension thread owner) · Seth Johnson (<code>seth@accruity.com</code> — source inbox)</td>
+</tr>
+<tr>
+<td>Primary Contact</td>
+<td>Sean Kennedy — <code>seank154@hotmail.com</code> · <code>(412) 735-3926</code> <code>[Contact:Sean Kennedy 30d49172…fd29]</code></td>
+</tr>
+<tr>
+<td>Address</td>
+<td>(not populated on Client Contact row — gap; Pittsburgh-area phone area code 412 ✓)</td>
+</tr>
+<tr>
+<td>Filing Status</td>
+<td>Single filer (inferred — no spouse on file; "Amy" referenced as significant other, not joint filer per Tax Memo notes)</td>
+</tr>
+<tr>
+<td>Significant other</td>
+<td><strong>Amy</strong> — qualifies for REPS (Real Estate Professional Status) treatment per Tax Planning Memo; not a joint filer, REPS strategy routed through partner-level filings <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 Tax Planning Memo Production]</code></td>
+</tr>
+<tr>
+<td>Data Sources (this refresh)</td>
+<td>Account record (<code>30d49172…110b</code>) · duplicate Account (<code>33c49172…21b9</code> — flagged for cleanup queue, NOT auto-deleted) · Client Contact (<code>30d49172…fd29</code>) · 1 Executive Summary (Tax Planning Memo Exec Summary <code>34149172…ba0c</code>) · 1 Claude Summary (Full Tax Planning Memo Production <code>34149172…68d4</code>) · 1 Email Log row (Sean Kennedy - Extension <code>34249172…fd22</code> 2026-04-10) · 1 Insights Project (<code>2fd49172…e103</code> DELIVERED) · 1 Tax Ascend record (<code>2f049172…c917</code> Memo SENT 2026-04-16) · 2 Meetings Tracker rows (Insights Clarification 2026-03-04 + Insights Delivery 2026-03-11)</td>
+</tr>
+<tr>
+<td>Files NOT Accessible This Refresh</td>
+<td>Tax Planning Memo .docx body (<code>Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx</code> — SharePoint URL captured on Tax Ascend, body not pulled into Notion); Insights Deliverable Workbook (<code>Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx</code> — referenced in Claude Summary "Files Reviewed", URL on Insights Project Sharepoint Link, body not pulled); 2024 Form 1040 Extraction file (URL on Insights Project, body not pulled); Counting File workbook (URL on Insights Project, body not pulled); Delivery Call recap transcript (Fathom URL <code>fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka</code> — recap not transcribed into Notion)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence:</strong> ✓ Confirmed · ~ Estimated · ? Pending
+<strong>Attribution:</strong> every non-obvious fact carries an inline source tag. See §12 Provenance Index at the end.</p>
+<hr>
+<h2 id="1-executive-overview">§1. Executive Overview</h2>
+<p>Sean Kennedy (<code>seank154@hotmail.com</code>, <code>(412) 735-3926</code>, area code 412 = Pittsburgh PA) is a <strong>real estate operator</strong> who entered the Accruity ascend pipeline as a <strong>Tax Insights</strong> client (Date Added to New Client GC: 2026-01-22, Date Signed on Tax Ascend: 2026-01-22), advanced through <strong>Insights Clarification (2026-03-04)</strong> and <strong>Insights Delivery (2026-03-11)</strong> calls, and as of 2026-04-16 has a <strong>Tax Planning Memorandum SENT</strong> (status: <code>TAX MEMO STATUS = SENT, date:Tax Memo Sent 2026-04-16</code>). <code>[Tax Ascend:Sean Kennedy §dates]</code> <code>[Insights Project:Sean Kennedy §date:Date delivered]</code> <code>[Meetings Tracker:Sean 2026-03-04 + 2026-03-11]</code> The memo is <strong>TYPE A</strong> (post-meeting, derived from the 2024 filed return Insights Deliverable Workbook + March 11 delivery call notes) and was generated 2026-04-13 by Claude in a single full-production session, then sent 2026-04-16. <code>[Claude Summary 2026-04-13 §Summary]</code> <code>[Tax Ascend:Sean §notes]</code> Output deliverable: <code>Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx</code>.</p>
+<p><strong>The headline number.</strong> <strong>~$89,000 in projected annual tax savings</strong> identified across <strong>$464,000 in identified deductions</strong> and <strong>8 distinct strategies</strong>. <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 §Summary]</code> <code>[ExecSum:Sean Kennedy — Tax Planning Memo §Summary]</code> Top dollar drivers (memo-tagged):</p>
+<ol>
+<li><strong>Cost Segregation — 3 properties — ~$45,000</strong> in tax savings (largest single line item by tax saved). <code>[Tax Ascend:Sean §notes]</code></li>
+<li><strong>Section 179 dump truck — ~$20,000</strong> (heavy-equipment expensing on a real-estate-services / construction asset). <code>[Tax Ascend:Sean §notes]</code></li>
+<li><strong>REPS via Amy — ~$11,000+</strong> — Real Estate Professional Status is being claimed through Sean's significant other Amy, not Sean himself; this enables non-passive treatment of rental losses. The "+" tag in the Tax Ascend notes means the $11K is a floor, not a ceiling — a fully-loaded REPS conversion can unlock additional bonus depreciation pass-through depending on cost-seg timing. <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 §Summary]</code></li>
+<li><strong>Solo 401(k) — ~$6,000</strong> (deferral + employer-side match — assumes self-employed earnings track at the level inferred from the 2024 return). <code>[Tax Ascend:Sean §notes]</code></li>
+<li><strong>Hiring children — ~$6,000 future</strong> (Form W-2 wages to children up to standard deduction threshold + Roth-IRA seeding strategy). <code>[Tax Ascend:Sean §notes]</code></li>
+<li><strong>Accountable plan</strong> (home office / vehicle / cell reimbursement structure under Reg §1.62-2) — dollar amount not separately quantified in the Tax Ascend notes. <code>[Tax Ascend:Sean §notes]</code></li>
+<li><strong>Augusta Rule</strong> (§280A(g) — up to 14 days/year of personal-residence rental to the entity at fair-market rate, tax-free to homeowner) — dollar amount not separately quantified. <code>[Tax Ascend:Sean §notes]</code></li>
+<li><strong>Entity restructure</strong> — proposed: <strong>S-Corp holding co + RE Holding Co + separate flipping / PM (property management) / construction entities</strong>. This is the structural backbone underneath strategies 1–7. The memo flags <strong>"Hybrid Option 3 preferred"</strong> as the engagement-decision form factor. <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 §Summary]</code></li>
+</ol>
+<p><strong>What matters right now.</strong> Three concurrent tracks:</p>
+<ol>
+<li><strong>2025 Extension (active).</strong> On <strong>2026-04-10</strong> Brandon Gerber (<code>brandon@accruity.com</code>, source inbox <code>seth@accruity.com</code>) emailed re: <code>Sean Kennedy - Extension</code>: <em>"I spoke with Sean Kennedy this morning, and he's looking to have us file an extension on his 2025 returns (today if possible). I let him know that I w[ould]…"</em> — the email body truncates in the Email Log Executive Summary field, but the direction is <strong>Outbound</strong> (Accruity → internal/team), Date 2026-04-10, Last Scanned 2026-04-13. <strong>No 4868 confirmation, no estimated extension balance, no payment proof is on file in Notion.</strong> The Tax Ascend record's <strong>Compliance Status = "To Check"</strong> + <strong>Mango Compliance Engagement = "To check"</strong> + <strong>Mango Client ID empty on Account</strong> suggest the compliance engagement plumbing hasn't been wired up yet. <strong>Refresh date is 2026-04-22 — 7 days post-deadline; Sean's 2025 extension status is unverified in the file.</strong> <code>[Email Log:Sean Kennedy - Extension §Executive Summary]</code> <code>[Tax Ascend:Sean §Compliance Status]</code> <code>[Accounts:Sean Kennedy.Mango Client ID]</code> Promote to §7 as a HIGH-priority verification item.</li>
+<li><strong>Tax Memo SENT — engagement decision pending.</strong> Memo was sent 2026-04-16 (per Tax Ascend <code>date:Tax Memo Sent</code>). Memo notes flag: <em>"Pending: ES payment history, credit detail, dispositions, engagement decision (Hybrid Option 3 preferred)."</em> <code>[Tax Ascend:Sean §notes]</code> Translation: client needs to (a) confirm 2025 estimated-tax payment history (which feeds the extension balance), (b) provide credit detail (likely §47 or §45L credits referenced in memo), (c) confirm property dispositions in 2025 (sales/refinances that affect the cost-seg property list), and (d) sign the engagement letter under <strong>Hybrid Option 3</strong> — the preferred form factor combining a one-time strategy implementation engagement with an ongoing planning retainer. <strong>No engagement letter is on file in the Notion Engagement Letters DB linked to Sean's Account.</strong> <code>[Accounts:Sean Kennedy.→ Engagement Letters]</code> (count = 0; verified by Account record's empty Engagement Letters relation).</li>
+<li><strong>Account-record plumbing gap — duplicate.</strong> A second Account row exists titled <code>🔴 Sean Kennedy(duplicate)</code> at <code>33c49172…21b9</code> with <strong>all fields empty</strong> (no Client #, no Mango ID, no contacts, no relations). Per CLAUDE.md hard rule #8 ("never auto-delete; log to cleanup queue") and per <code>docs/BATCH_REFRESH_PROMPT.md § "duplicate rows to log to a cleanup queue"</code>, this is logged here for §13 review and §7 cleanup-queue addition; no merge or delete is performed in this refresh. <code>[Accounts:Sean Kennedy(duplicate) — full record empty]</code></li>
+</ol>
+<p><strong>Documentation strength.</strong> This is a <strong>Tax-Planning-mature account with a thin compliance-side</strong>. Strong: Insights project DELIVERED with Counting File + 1040 Extraction + Sharepoint folder all linked on the Insights Project record <code>[Insights Project:Sean]</code>; Tax Ascend record fully populated with Tax Memo URL on SharePoint, status SENT, memo notes carrying the strategy stack; Tax Planning Exec Summary and Claude Summary log entries both filed against the Account; 2 Meeting recap URLs (Fathom share for delivery + Fellow tracking link for clarification). Thin: zero Engagement Letters on Account, zero Files &amp; Links rows on Account (confirmed via Account properties — empty relation), zero Reporting Entities on Account (Sean's entity stack is described in memo notes as <em>"S-Corp holding co + RE Holding Co + separate flipping/PM/construction entities"</em> but no specific entity has been added to the Reporting Entities DB yet — these are <strong>proposed</strong> entities, not yet formed), zero Engagement Inquiries on Account, zero Tax Engagements on Account. <strong>The compliance-side scaffolding is the weakest link</strong>: Mango Client ID blank, Mango Display Name blank, Mango Compliance Engagement = "To check", PBC Workbook empty, SharePoint Drive empty, Tax Extraction empty, Document Inventory empty.</p>
+<p><strong>Cross-reference.</strong> Sean's profile pattern most closely matches <strong>Brett Zanotto</strong> (<code>dossiers/BrettZanotto/dossier.md</code>) — both are RE-operator single filers with a Tax Memo delivered, Insights project complete, S-Corp restructure proposed but not yet executed, and partner/significant-other in the entity stack. Brett's stack is more mature (6 entities, 10 LTR rentals, EL signed, $11,075 compliance fee committed); Sean's is earlier-stage (proposed entities still on paper, EL not yet on file). The strategy mix mirrors Brett's almost line-for-line: cost seg + Sec 179 + S-Corp + Solo 401(k) + Augusta Rule + accountable plan + REPS — except Sean's REPS path runs through <strong>partner Amy</strong>, where Brett's runs through <strong>Brett himself</strong> (Brett left W-2 April 2025). This dossier therefore mirrors Brett's structure with two material differentiators: (a) Sean has a <strong>Sec 179 dump truck</strong> line that Brett does not (Brett's stack is all rentals + flips, no construction equipment); (b) Sean's REPS qualifier is a <strong>non-filing significant other</strong> rather than the primary taxpayer — a more subtle compliance posture requiring Amy's hour-log defense.</p>
+<hr>
+<h2 id="2-client-profile">§2. Client Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account name</td>
+<td>Sean Kennedy</td>
+<td>✓</td>
+<td><code>[Accounts:Sean Kennedy]</code></td>
+</tr>
+<tr>
+<td>Account URL</td>
+<td><a href="https://www.notion.so/30d49172875181b08a05f793da2e110b">notion.so/30d49172875181b08a05f793da2e110b</a></td>
+<td>✓</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Account Page ID</td>
+<td>30d49172875181b08a05f793da2e110b</td>
+<td>✓</td>
+<td><code>[Accounts:Sean Kennedy.url]</code></td>
+</tr>
+<tr>
+<td>Duplicate Account (cleanup queue)</td>
+<td><a href="https://www.notion.so/33c49172875181d4a5c9f3c883ea21b9">notion.so/33c49172875181d4a5c9f3c883ea21b9</a> — fully empty record, prefixed <code>🔴 Sean Kennedy(duplicate)</code></td>
+<td>✓</td>
+<td><code>[Accounts:Sean Kennedy(duplicate)]</code></td>
+</tr>
+<tr>
+<td>Client #</td>
+<td>19141125-01</td>
+<td>✓</td>
+<td><code>[Accounts:Sean Kennedy.Client #]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td><strong>(empty — gap)</strong></td>
+<td>✓</td>
+<td><code>[Accounts:Sean Kennedy.Mango Client ID]</code></td>
+</tr>
+<tr>
+<td>Mango Display Name</td>
+<td>(empty — gap)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean Kennedy.Mango Display Name]</code></td>
+</tr>
+<tr>
+<td>Filing status</td>
+<td>Single filer (inferred — no spouse, Amy is significant other not joint filer)</td>
+<td>~</td>
+<td>inferred from absence of MFJ flags + Tax Ascend memo notes treating Amy as REPS-only</td>
+</tr>
+<tr>
+<td>Primary email</td>
+<td><code>seank154@hotmail.com</code></td>
+<td>✓</td>
+<td><code>[Contact:Sean Kennedy 30d49172…fd29]</code></td>
+</tr>
+<tr>
+<td>Primary phone</td>
+<td><code>(412) 735-3926</code> (Pittsburgh PA area code)</td>
+<td>✓</td>
+<td><code>[Contact:Sean Kennedy.Phone]</code></td>
+</tr>
+<tr>
+<td>Address</td>
+<td>(not populated on Client Contact row — gap)</td>
+<td>✓</td>
+<td><code>[Contact:Sean Kennedy]</code> empty Address</td>
+</tr>
+<tr>
+<td>Portal Access</td>
+<td><strong>NO</strong> (<code>Portal Access = __NO__</code>)</td>
+<td>✓</td>
+<td><code>[Contact:Sean Kennedy.Portal Access]</code></td>
+</tr>
+<tr>
+<td>Relationship Manager</td>
+<td>Seth Johnson (inferred from Tax Ascend ownership + source inbox <code>seth@accruity.com</code> on email thread)</td>
+<td>~</td>
+<td><code>[Email Log:Sean - Extension §Source Inbox]</code></td>
+</tr>
+<tr>
+<td>Active thread owner</td>
+<td>Brandon Gerber (<code>brandon@accruity.com</code>)</td>
+<td>✓</td>
+<td><code>[Email Log:Sean - Extension §From]</code></td>
+</tr>
+<tr>
+<td>Significant other</td>
+<td><strong>Amy</strong> — qualifies for REPS treatment; not a joint filer; REPS strategy routes through partner</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean §notes "REPS via Amy"]</code> <code>[Claude Summary 2026-04-13 §Summary]</code></td>
+</tr>
+<tr>
+<td>Engagement Stage</td>
+<td>Tax Ascend — Insights DELIVERED → Tax Planning Memo SENT → planning engagement decision pending (Hybrid Option 3 preferred)</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean §Status fields]</code></td>
+</tr>
+<tr>
+<td>TAX ASCEND TYPE</td>
+<td>TAX INSIGHTS + TAX PLANNING (multi-select)</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.TAX ASCEND TYPE]</code></td>
+</tr>
+<tr>
+<td>Tax Ascend Date Signed</td>
+<td>2026-01-22</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.date:Date Signed]</code></td>
+</tr>
+<tr>
+<td>Tax Ascend Date Ascended</td>
+<td>2026-04-06</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.date:Date Ascended]</code></td>
+</tr>
+<tr>
+<td>Tax Memo Sent</td>
+<td><strong>2026-04-16</strong></td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.date:Tax Memo Sent]</code></td>
+</tr>
+<tr>
+<td>Insights Status</td>
+<td>DELIVERED 2026-03-11 (Date Added to New Client GC 2026-01-22, Clarifying Call 2026-03-04, Req Due Date 2026-02-17, Received Files 5/5, Checked by Tax Team ✓, Accelo "04 Insights Delviered" [sic — Notion typo])</td>
+<td>✓</td>
+<td><code>[Insights Project:Sean §Status fields]</code></td>
+</tr>
+<tr>
+<td>Compliance Status</td>
+<td><strong>To Check</strong> (gap — engagement plumbing not wired)</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.Compliance Status]</code></td>
+</tr>
+<tr>
+<td>Mango Compliance Engagement</td>
+<td>"To check"</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.Mango Compliance Engagement]</code></td>
+</tr>
+<tr>
+<td>Mango Planning Projects</td>
+<td>"To Check"</td>
+<td>✓</td>
+<td><code>[Tax Ascend:Sean.Mango Planning Projects]</code></td>
+</tr>
+<tr>
+<td>Engagement Letters on Account</td>
+<td><strong>0</strong></td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Engagement Letters]</code> empty relation</td>
+</tr>
+<tr>
+<td>Files &amp; Links on Account</td>
+<td><strong>0</strong></td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Files &amp; Links]</code> empty relation</td>
+</tr>
+<tr>
+<td>Reporting Entities on Account</td>
+<td><strong>0</strong></td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Reporting Entities]</code> empty relation (proposed entities exist on memo only)</td>
+</tr>
+<tr>
+<td>Engagement Inquiries</td>
+<td><strong>0</strong></td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Engmt Inquiries]</code> empty relation</td>
+</tr>
+<tr>
+<td>Tax Engagements</td>
+<td><strong>0</strong></td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Tax Engagements]</code> empty relation</td>
+</tr>
+<tr>
+<td>Cost Seg Engagements</td>
+<td><strong>0</strong> commissioned (3 properties identified as candidates in memo, not yet engaged)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ # of Cost Seg Engagements]</code> 0</td>
+</tr>
+<tr>
+<td>Cost Seg Proposals</td>
+<td><strong>0</strong> in DB (memo-level only, not yet ported to Cost Seg Proposals DB)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ # of Cost Seg Proposals]</code> 0</td>
+</tr>
+<tr>
+<td>Insights Projects</td>
+<td>1 (DELIVERED)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Insights Projects]</code></td>
+</tr>
+<tr>
+<td>Meetings</td>
+<td>2 (Clarification 2026-03-04 + Delivery 2026-03-11)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Meetings]</code></td>
+</tr>
+<tr>
+<td>Email Log rows</td>
+<td>1 (Extension thread 2026-04-10)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Email Log]</code></td>
+</tr>
+<tr>
+<td>Executive Summaries on Account</td>
+<td>1 (Tax Planning Memo Exec Summary <code>34149172…ba0c</code>)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.→ Executive Summaries]</code></td>
+</tr>
+<tr>
+<td>Claude Summaries on Account</td>
+<td>1 (Full Tax Planning Memo Production <code>34149172…68d4</code> 2026-04-13)</td>
+<td>✓</td>
+<td><code>[Accounts:Sean.Claude Summaries]</code></td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Active &amp; engaged · MED-HIGH urgency — extension verification + engagement decision + Amy REPS time-log all racing the calendar</td>
+<td>~</td>
+<td>derived</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-principals-at-a-glance">2.1 Principals at a glance</h3>
+<ul>
+<li><strong>Sean Kennedy</strong> — Pittsburgh-area (412 area code) real estate operator. Single filer (no spouse on file). Operates a <strong>multi-vertical RE business</strong> that the Tax Planning Memo proposes to formalize into S-Corp holding co + RE holding co + separate flipping / PM (property management) / construction entities. The presence of a <strong>dump truck</strong> on the Sec 179 line is the strongest signal that Sean's operations include <strong>construction or active RE-services work</strong> (rehab, ground-up, or land-development), not just rental holds. The cost-seg-on-3-properties line indicates a small-to-mid rental portfolio (3 buildings or 3 doors — typical first-cost-seg cohort). Amy is the REPS qualifier — Sean's hours likely don't meet the 750-hour / &gt;50% real-property-trade-or-business test, so Amy carries that test on her hours. <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 §Summary]</code></li>
+<li><strong>Amy</strong> (last name not in file) — Sean's significant other; <strong>qualifies for REPS</strong> per the Tax Memo. Critically: <strong>Amy is not a joint filer</strong> (no MFJ flags anywhere on the Account; the memo notes treat Amy as a separate strategy-routing layer rather than a joint filer). This is a non-trivial REPS configuration: REPS is a <strong>per-taxpayer</strong> test under IRC §469(c)(7), so for Amy's REPS status to convert Sean's rental losses to non-passive, the rental holdings would need to be either (a) held by Amy or (b) held by an entity with material allocation to Amy (and the §469(g) grouping election made on Amy's return, not Sean's). <strong>The compliance posture here needs a clear ownership-structure narrative — flagged as §7 action item.</strong> <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 §Summary]</code></li>
+</ul>
+<h3 id="22-entity-stack-proposed-not-yet-formed">2.2 Entity stack (proposed — not yet formed)</h3>
+<p>The Tax Planning Memo proposes the following structure. <strong>None of these entities exist on the Reporting Entities DB linked to Sean's Account as of this refresh</strong> — they are memo-level recommendations awaiting engagement-letter signature and entity formation. <code>[Accounts:Sean.→ Reporting Entities]</code> empty <code>[Tax Ascend:Sean §notes "Entity Restructure"]</code></p>
+<table>
+<thead>
+<tr>
+<th>Entity (proposed)</th>
+<th>Type</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S-Corp holding co</strong> (name TBD)</td>
+<td>S-Corp</td>
+<td>Active income — wraps flipping / PM / construction labor income; takes reasonable salary; supports Solo 401(k) + accountable plan</td>
+<td>Proposed only</td>
+</tr>
+<tr>
+<td><strong>RE Holding Co</strong> (name TBD)</td>
+<td>LLC (likely partnership or disregarded)</td>
+<td>Passive income — wraps long-term rentals (3 properties identified for cost seg)</td>
+<td>Proposed only</td>
+</tr>
+<tr>
+<td><strong>Flipping entity</strong> (name TBD)</td>
+<td>LLC under S-Corp</td>
+<td>Active flipping operations</td>
+<td>Proposed only</td>
+</tr>
+<tr>
+<td><strong>PM entity</strong> (name TBD)</td>
+<td>LLC under S-Corp</td>
+<td>Property management — would charge management fees to RE Holding Co</td>
+<td>Proposed only</td>
+</tr>
+<tr>
+<td><strong>Construction entity</strong> (name TBD)</td>
+<td>LLC under S-Corp</td>
+<td>Active construction services — owns the dump truck (Sec 179 line)</td>
+<td>Proposed only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hybrid Option 3</strong> is the engagement-decision form factor preferred per memo notes. Per CLAUDE.md hard rule #6 ("no fabricated $ figures"), the specific Hybrid Option 3 fee structure is not in the Notion record this refresh — the .docx body would need to be opened to surface the dollar number. <code>? Pending memo body extraction.</code></p>
+<h3 id="23-property-inventory-cost-seg-candidates">2.3 Property inventory (cost-seg candidates)</h3>
+<p>The Tax Memo identifies <strong>3 properties</strong> for cost segregation studies projected at <strong>~$45,000 in tax savings</strong> total. Property addresses, purchase prices, placed-in-service dates, and basis splits are <strong>not in the Notion record</strong> this refresh — they live in the Insights Deliverable Workbook (<code>Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx</code>) referenced in the Claude Summary "Files Reviewed" but not pulled into Notion. <code>? Pending workbook ingestion — promoted to §7.</code> <code>[Claude Summary 2026-04-13 §Files Reviewed]</code></p>
+<h3 id="24-third-parties-in-the-file">2.4 Third parties in the file</h3>
+<table>
+<thead>
+<tr>
+<th>Party</th>
+<th>Role</th>
+<th>Status / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amy</strong> (last name TBD)</td>
+<td>Sean's significant other; <strong>REPS qualifier</strong></td>
+<td>Not a joint filer; need ownership-structure narrative + Amy's annual hour log</td>
+</tr>
+<tr>
+<td><strong>Brandon Gerber</strong> (<code>brandon@accruity.com</code>)</td>
+<td>Accruity Tax — owns 2025 extension thread</td>
+<td>Spoke with Sean morning of 2026-04-10; sent extension request internally</td>
+</tr>
+<tr>
+<td><strong>Seth Johnson</strong> (<code>seth@accruity.com</code>)</td>
+<td>Accruity Tax Advisory — RM (inferred)</td>
+<td>Source inbox on extension thread; Tax Ascend record owner; Claude Summary author chain</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-email-intelligence">§3. Email Intelligence</h2>
+<p><strong>Scope of this refresh:</strong> <strong>1 substantive thread</strong> in Notion Client Email Log linked to Sean's Account. Append-only on subsequent refreshes.</p>
+<p><strong>Rollup:</strong> 1 active outbound thread (2025 extension request). <strong>Zero inbound emails captured from Sean.</strong> The truncation pattern in Notion's Email Log Executive Summary field (cuts at <em>"I let him know that I w[…]"</em>) means we know the conversation happened but we don't have the full message body — only the Outlook deep-link. Risk profile: <strong>MED</strong> — extension itself is operationally routine, but absence of confirmation 12 days later (refresh date 2026-04-22) raises a verification flag.</p>
+<h3 id="31-active-threads">3.1 Active Threads</h3>
+<h4 id="sean-kennedy-extension-med-risk-active-no-client-reply-captured">🟡 <strong>Sean Kennedy - Extension</strong> · MED risk · ACTIVE (no client reply captured)</h4>
+<p><strong>Notion Email Log row:</strong> <a href="https://www.notion.so/34249172875181a6870bc3353f61fd22"><code>34249172875181a6870bc3353f61fd22</code></a> · <strong>Conversation ID:</strong> <code>AAMkADBmZjg2NGQ4-…AAQ1SFyfAAA=</code> · <strong>Source inbox:</strong> <code>seth@accruity.com</code> · <strong>From:</strong> <code>brandon@accruity.com</code> · <strong>Direction:</strong> Outbound (Brandon → internal/team) · <strong>Email Date:</strong> 2026-04-10 · <strong>Last Scanned:</strong> 2026-04-13 · <strong>Outlook deep-link:</strong> <a href="https://outlook.office365.com/owa/?ItemID=AAMkADBmZjg2NGQ4LTFhNTgtNGI2Mi05MmJmLTlhMWZkNDVkMjVkZQBGAAAAAAAY75o7uPA2RpuX8UEo5dXBBwBwW9uyQOvRTKnXOw4wkwFeAAAAAAEMAABwW9uyQOvRTKnXOw4wkwFeAAQ1SFyfAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Open in Outlook</a> <code>[Email 2026-04-10 Sean Kennedy - Extension]</code></p>
+<p><strong>Synopsis (truncated body verbatim):</strong></p>
+<blockquote>
+<p>"I spoke with Sean Kennedy this morning, and hes looking to have us file an extension on his 2025 returns (today if possible). I let him know that I w[…]"</p>
+</blockquote>
+<p>The body cuts off in the Notion Executive Summary field (Outlook full body not pulled in). Inferred completion: Brandon was likely outlining either (a) the same-day filing feasibility, (b) that he would coordinate with the compliance team (Deontae Lafayette pattern matches similar threads <code>[BrettZanotto §3]</code>), or (c) the extension-balance estimation requirement.</p>
+<p><strong>Participants:</strong>
+- <strong>Brandon Gerber</strong> (<code>brandon@accruity.com</code>) — Accruity Tax (sender)
+- <strong>Sean Kennedy</strong> — Client (subject of the call earlier that morning, not necessarily on the email itself — outbound direction suggests this is internal)
+- <strong>Source inbox:</strong> <code>seth@accruity.com</code> (Seth's mailbox is where this thread is captured — Seth is on distribution)</p>
+<p><strong>Key facts anchored in this thread:</strong>
+- Sean called Brandon morning of 2026-04-10 requesting same-day 2025 extension
+- Direction is Outbound from Brandon — likely internal coordination email, not the client-facing 4868 transmittal
+- No estimated 2025 balance figure in the captured body
+- No payment vehicle (Direct Pay, check, ACH) referenced
+- No 4868 confirmation number captured
+- Refresh date 2026-04-22 — <strong>12 days post-call, 7 days post-deadline; no confirmation thread captured</strong></p>
+<p><strong>Action items generated by this thread</strong> (promoted to §7):
+1. <strong>Accruity (Brandon / Tax Compliance)</strong> — Confirm 2025 4868 was filed for Sean Kennedy on or before 2026-04-15. Capture confirmation number into Email Log or Tax Ascend record. · Open · <strong>HIGH</strong>
+2. <strong>Accruity (Tax Compliance)</strong> — Surface estimated 2025 balance + payment status (was an estimated payment made with the extension, or is the balance carried into Sept/Oct?). · Open · <strong>HIGH</strong>
+3. <strong>Sean Kennedy (client)</strong> — Provide ES payment history for 2025 (referenced in Tax Memo notes as "Pending: ES payment history"). · Open · <strong>MED</strong></p>
+<p><strong>Risk flags:</strong> MED — Compliance-side blind spot. The Mango Compliance Engagement = "To check" + Mango Client ID empty + zero EL on Account triple-flag suggests Sean may not have a signed compliance EL yet — meaning the 4868 filing authority chain needs verification (likely covered under a verbal authorization given the phone call, but should be papered).</p>
+<h3 id="32-noise-threads">3.2 Noise threads</h3>
+<p>None this refresh.</p>
+<h3 id="33-thread-rollup">3.3 Thread rollup</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substantive threads</td>
+<td>1</td>
+<td><code>[Accounts:Sean.→ Email Log]</code></td>
+</tr>
+<tr>
+<td>Noise threads</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Open action items from email</td>
+<td>3</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Most recent inbound (from Sean)</td>
+<td>Not captured</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Most recent outbound (Accruity)</td>
+<td>Brandon Gerber — 2026-04-10 (extension request internal)</td>
+<td><code>[Email 2026-04-10]</code></td>
+</tr>
+<tr>
+<td>Risk profile</td>
+<td>MED — verification gap on extension confirmation</td>
+<td>derived</td>
+</tr>
+<tr>
+<td>Direct shared-inbox scan</td>
+<td>Not active — emails reach Notion via Make.com Email Log scenarios only <code>[CLAUDE.md §Email-ingestion notes]</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-gaps-to-backfill-on-next-refresh">3.4 Gaps to backfill on next refresh</h3>
+<ul>
+<li><strong>Full body of the 2026-04-10 extension thread</strong> — open the Outlook deep-link, capture the response chain (Brandon's reply to Sean if any, Deontae's follow-up if pattern matches Brett, the eventual 4868 confirmation).</li>
+<li><strong>Any 2026 client-side reply emails</strong> from Sean — <code>seank154@hotmail.com</code> should be searched against Notion Email Log for any captured threads not currently linked to the Account.</li>
+<li><strong>Compliance-side coordination thread</strong> — if a separate Mangoshare workspace creation or PBC list email exists, capture it and link to Account.</li>
+<li><strong>Tax Memo delivery email</strong> — when memo was sent 2026-04-16, the cover email should exist in either <code>seth@accruity.com</code> or <code>brandon@accruity.com</code> outbox. Not captured this refresh.</li>
+</ul>
+<hr>
+<h2 id="4-meeting-history">§4. Meeting History</h2>
+<p><strong>Scope:</strong> all Meetings Tracker rows tied to Sean's Account. <strong>Append-only on subsequent refreshes.</strong></p>
+<p><strong>Rollup:</strong> 2 meetings on file, both DONE, both Insights-cycle, both linked to recap URLs. <strong>No Tax Planning Session meeting on file</strong> — this is a notable absence given that the Tax Memo was generated 2026-04-13 from "March 11 delivery call notes" with no separate planning session in between. The 30-min planning meeting that typically follows the delivery call (and that drives the Tax Memo) is <strong>either embedded in the delivery call recap or has not been logged separately</strong>. Promote as §7 verification item.</p>
+<h3 id="41-meeting-1-insights-clarification-call-2026-03-04">4.1 Meeting 1 — Insights Clarification Call (2026-03-04)</h3>
+<p><strong>Notion row:</strong> <a href="https://www.notion.so/319491728751802a83b5fa3918fb91d5"><code>319491728751802a83b5fa3918fb91d5</code></a> · <strong>Type:</strong> Full Insights — Clarification call · <strong>Status:</strong> Done · <strong>Restricted:</strong> No · <strong>Account:</strong> Sean Kennedy · <strong>Recap link:</strong> <a href="https://sg5.fellow.app/uni/ls/click?upn=u001.Y1tiWTgJ1PJMrKyj7dbJHqPp-2FT6JwyJKYnLKCSUh0dRKOQm2cj6PWWcYw1WzaV8IB9FGQODOjD0Q-2B5JJcCrN5P5QURRm3JRf-2BxZWpa-2B4GnJqX-2F9aB-2FXNczcigLaFIgAnpX-2BAURKnmkUgtaz6jkj0Rt3kJF96YJBQzJ908Xa1HyL0-2BS5vr96RAnrZ7RPYyU96Q-2FgrTCwW24FcmHnN-2BK9xy8bbYJxtEji3T-2BDLQwFAbGGvVIwGDz8ECj3jwR-2B2YE56dRPZEafrb-2FMY95GCql68vSaKf0Mn7WEqieTtmiZnXAzhUQi7Xz3Ko7dagyXZ-2BjqFknra03Od92dO-2FV8uXz0FqFwWOf-2BbizNpA-2Bhid5Q9-2BzVrDiz8T-2BAhh8ZrV99J0p1ROaM5uNg6CgjR-2BiuL8i4rXNSKBteqrjfceeej9f2U5IS-2BO4cmZSRhZ5imTEOLVZnwbB4HgmFpzkVAHSacSeDJ-2BVciEwF27MS6Gq2vZIR0o3AsHRtD1ebTfoD9D0u9I3QJysk5zjAJeqtDxFf5DuCQV1MCWOk8LV4fAHNzxlEr0W-2BWdktgPNgxrGtsoMrKoGtNCbSb_…">Fellow.app tracking redirect</a> (Fellow notetaker tracking link) <code>[Meeting 2026-03-04]</code></p>
+<p><strong>Notes field:</strong> (empty in Notion — recap content not pulled into the Tracker row)</p>
+<p><strong>Inferred purpose</strong> (from Insights Project flow): Sean's Insights Project marked Date Added 2026-01-22, Req Due Date 2026-02-17 — the Clarification Call sits between request-list submission and delivery, used to surface ambiguities in the 2024 return extraction or the source documents (typical Accruity Insights cadence per <code>[BrettZanotto §4]</code> <code>[SpringBengtzen §4]</code>).</p>
+<h3 id="42-meeting-2-insights-delivery-call-2026-03-11">4.2 Meeting 2 — Insights Delivery Call (2026-03-11)</h3>
+<p><strong>Notion row:</strong> <a href="https://www.notion.so/322491728751804e9c83edb65f5a23d1"><code>322491728751804e9c83edb65f5a23d1</code></a> · <strong>Type:</strong> Full Insights — Delivery call · <strong>Status:</strong> Done · <strong>Restricted:</strong> No · <strong>Account:</strong> Sean Kennedy · <strong>Recap link:</strong> <a href="https://fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka">Fathom share <code>QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka</code></a> · <strong>Notes:</strong> "no calendar invite" <code>[Meeting 2026-03-11]</code></p>
+<p><strong>Notes field annotation:</strong> <em>"no calendar invite"</em> — this is a notable ops signal. Either the meeting was scheduled ad-hoc (phone call without a calendar entry) or the calendar invite went out under a different organizer's account that didn't link back to Notion. Either way, the Fathom recording captured it. Date matches the Insights Project's <code>Date delivered: 2026-03-11</code>.</p>
+<p><strong>Inferred content</strong> (from Tax Memo derivation chain — the memo was built from "March 11 delivery call notes"): Seth (or the delivering tax preparer) walked Sean through the 2024 return Insights — likely covering AGI / total tax / effective rate baselines, identifying 2025-forward planning opportunities, and surfacing the strategy stack that became the Tax Memo (cost seg 3 properties, Sec 179 dump truck, REPS via Amy, Solo 401(k), Augusta Rule, accountable plan, hiring children, entity restructure). The "Hybrid Option 3" preferred engagement form factor likely emerged from this conversation. <code>[Tax Ascend:Sean §notes]</code> <code>[Claude Summary 2026-04-13 §Summary]</code></p>
+<p><strong>Recap recommended</strong> for next refresh: pull the Fathom transcript at <code>fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka</code> and convert key strategy commitments to Action Items DB rows.</p>
+<h3 id="43-missing-meeting">4.3 Missing meeting</h3>
+<p><strong>No separate Tax Planning Session meeting</strong> on file. Tax Memo was generated 2026-04-13 (Claude session) and SENT 2026-04-16 — but the standard Accruity cadence (see Brett Zanotto, Andy Karabinos, Spring Bengtzen) includes a dedicated 30-min Tax Planning Session that drives the memo content. Either:
+1. The delivery call (2026-03-11) doubled as the planning session, OR
+2. A planning session occurred but was not logged to the Meetings Tracker, OR
+3. The Tax Memo was a desk-build from the delivery call notes alone (TYPE A pattern per Tax Ascend "type" field).</p>
+<p>The Tax Ascend <code>notes</code> field flags <strong>"TYPE A memo generated 4/13/2026 from 2024 return (Insights Deliverable Workbook) + March 11 delivery call notes"</strong> — option 3 is the documented path. The TYPE A label (post-meeting desk build, no separate planning session) is consistent with the meeting absence. <code>[Tax Ascend:Sean §notes]</code></p>
+<h3 id="44-restricted-meetings">4.4 Restricted meetings</h3>
+<p>None this refresh — both Meetings Tracker rows have <code>Restricted = __NO__</code>.</p>
+<hr>
+<h2 id="5-document-inventory">§5. Document Inventory</h2>
+<p><strong>Scope:</strong> Engagement Letters, Files &amp; Links, platforms (SharePoint / Mango / Insights folder), and any unlinked workbooks referenced in sidecars.</p>
+<h3 id="51-engagement-letters">5.1 Engagement Letters</h3>
+<p><strong>Count on Account: 0.</strong> <code>[Accounts:Sean.→ Engagement Letters]</code> empty relation.</p>
+<p>This is <strong>the single most material plumbing gap</strong> on the Account. Despite a Tax Memo SENT 2026-04-16 and a 2025 extension requested 2026-04-10, no Compliance or Planning EL is on file in the Notion Engagement Letters DB linked to Sean's Account. Per the Tax Ascend record, <code>Linking status = "N/A - ENGAGEMENT LETTERS"</code> (a literal "not applicable" tag on the linking-status property), suggesting the EL database hasn't yet been wired up for Sean. Promote to §7 as <strong>HIGH priority</strong> — the Hybrid Option 3 engagement decision needs an EL to formalize, and the 2025 4868 filing authority needs an EL to paper.</p>
+<h3 id="52-files-links-db-rows">5.2 Files &amp; Links (DB rows)</h3>
+<p><strong>Count on Account: 0.</strong> <code>[Accounts:Sean.→ Files &amp; Links]</code> empty relation. <code>[Accounts:Sean.→ # of Files &amp; Links]</code> 0.</p>
+<p>No Files &amp; Links DB rows exist for Sean. Documents that exist in SharePoint/external URLs but are <strong>not</strong> mirrored to the Files &amp; Links DB:</p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Where it lives</th>
+<th>URL</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx</code></td>
+<td>SharePoint (<code>subledgesl-my.sharepoint.com</code>) — Seth's personal OneDrive</td>
+<td><a href="https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQAaeCNJkaS3TK1plGWlMskfAU_SjQg0T5oLknpMZiHK6ZM?e=SVP8ee">Tax Memo SharePoint URL</a></td>
+<td>Linked from Tax Ascend record only — no Files &amp; Links row</td>
+</tr>
+<tr>
+<td><code>Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx</code></td>
+<td>SharePoint Insights folder</td>
+<td>(URL TBD — referenced in Claude Summary "Files Reviewed" but specific URL not captured this refresh; lives under the Insights project Sharepoint Link / Tax Returns Folder Link)</td>
+<td>Linked from Insights Project record only</td>
+</tr>
+<tr>
+<td><code>Extraction 1040</code> (2024 return extraction xlsx)</td>
+<td>SharePoint</td>
+<td><a href="https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQB_6jMCJXATSY1s-rc-9yrNAVqhXgx5yJlXdjB7pDw7iJM?e=9Ya8Rd">Insights Project Extraction 1040 link</a></td>
+<td>Linked from Insights Project only</td>
+</tr>
+<tr>
+<td><code>Counting File</code> (Insights review tracker xlsx)</td>
+<td>SharePoint</td>
+<td><a href="https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBXaGK26juXQp815w3QBLp6AY-XmINWC6l-OBhWrKzgXsA?e=VLrV3h">Insights Project Counting File link</a></td>
+<td>Linked from Insights Project only</td>
+</tr>
+<tr>
+<td><code>Tax Returns Folder</code> (parent folder for 2024 return PDFs)</td>
+<td>SharePoint folder</td>
+<td><a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgAVjlkkerURRq9Cw8cXF0g8Ad6ri9NWAF34uvJ7aSKvBUg?e=LvU2gc">Tax Returns Folder link</a></td>
+<td>Linked from Insights Project only</td>
+</tr>
+<tr>
+<td><code>Analysis Workbook</code></td>
+<td>SharePoint folder (same parent as Tax Returns Folder per the Insights Project record)</td>
+<td><a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgAVjlkkerURRq9Cw8cXF0g8Ad6ri9NWAF34uvJ7aSKvBUg?e=LvU2gc">Analysis Workbook link</a> — same URL as Tax Returns Folder ⚠️</td>
+<td>Linked from Insights Project only · <strong>URL collision warning</strong></td>
+</tr>
+<tr>
+<td><code>Insights Sharepoint folder root</code> (Insights site)</td>
+<td>SharePoint Insights site</td>
+<td><a href="https://subledgesl.sharepoint.com/sites/Insights/_layouts/15/viewer.aspx?sourcedoc=%7Bef4c312f-2585-49b5-bb1e-5758d24e81f1%7D">Insights Sharepoint root</a></td>
+<td>Linked from Insights Project only</td>
+</tr>
+<tr>
+<td><code>Request List Tracker</code> (PBC Request List template)</td>
+<td>SharePoint Insights site</td>
+<td><a href="https://subledgesl.sharepoint.com/:x:/r/sites/Insights/_layouts/15/Doc.aspx?sourcedoc=%7B0DA9DC18-B216-4329-9F6E-E33B8A494BAC%7D&amp;file=Template%20for%20Tax%20Insight%20Request%20List%20Tracker.xlsx&amp;action=default&amp;mobileredirect=true">Request List Tracker xlsx</a></td>
+<td>Linked from Insights Project only</td>
+</tr>
+<tr>
+<td><code>Delivery Call Recap</code> (Fathom video share)</td>
+<td>Fathom.video</td>
+<td><a href="https://fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka">Fathom share</a></td>
+<td>Linked from Insights Project + Meetings Tracker (delivery row)</td>
+</tr>
+<tr>
+<td><code>Clarification Call Recap</code> (Fellow.app tracking link)</td>
+<td>Fellow.app</td>
+<td>(Fellow tracking redirect — see §4.1)</td>
+<td>Linked from Meetings Tracker only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Files &amp; Links URL collision check.</strong> <strong>Y — Triggered.</strong> The <code>Analysis Workbook</code> and <code>Tax Returns Folder Link</code> properties on the Insights Project record both resolve to the <strong>same SharePoint folder URL</strong> (<code>IgAVjlkkerURRq9Cw8cXF0g8Ad6ri9NWAF34uvJ7aSKvBUg?e=LvU2gc</code>). This is the same pattern flagged across other clients in the queue (5/9 hit rate per pre-flight). Logged here for the running collision tally. <code>[Insights Project:Sean §Analysis Workbook + §Tax Returns Folder Link]</code></p>
+<h3 id="53-platforms-in-use">5.3 Platforms in use</h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SharePoint</strong> (<code>subledgesl-my.sharepoint.com</code> Seth's OneDrive + <code>subledgesl.sharepoint.com/sites/Insights</code>)</td>
+<td>Active</td>
+<td>Primary document storage; Insights deliverable + Tax Memo + 2024 return extraction all live here</td>
+</tr>
+<tr>
+<td><strong>Fathom</strong></td>
+<td>Active</td>
+<td>Delivery call recording (2026-03-11)</td>
+</tr>
+<tr>
+<td><strong>Fellow</strong></td>
+<td>Active</td>
+<td>Clarification call notetaker (2026-03-04)</td>
+</tr>
+<tr>
+<td><strong>Mango (Mangoshare)</strong></td>
+<td><strong>NOT ACTIVE</strong></td>
+<td>Mango Client ID empty on Account; Mango Compliance Engagement = "To check"; Mango Planning Projects = "To Check"; Mango Display Name empty. <strong>Compliance plumbing not yet wired.</strong></td>
+</tr>
+<tr>
+<td><strong>Notion</strong></td>
+<td>Active</td>
+<td>Account record + Insights Project + Tax Ascend + Tax Planning Exec Summary + Claude Summary + 2 Meetings + 1 Email Log all populated</td>
+</tr>
+<tr>
+<td><strong>Accelo</strong></td>
+<td>Active</td>
+<td>Insights Project Accelo Status = "04 Insights Delviered" (Notion-side typo for "Delivered")</td>
+</tr>
+<tr>
+<td><strong>PBC Workbook</strong> (Notion-attached)</td>
+<td>NOT ATTACHED</td>
+<td><code>PBC Workbook</code> field empty on Account</td>
+</tr>
+<tr>
+<td><strong>Tax Extraction</strong> (Notion-attached)</td>
+<td>NOT ATTACHED</td>
+<td><code>Tax Extraction</code> field empty on Account</td>
+</tr>
+<tr>
+<td><strong>Document Inventory</strong> (Notion-attached)</td>
+<td>NOT ATTACHED</td>
+<td><code>Document Inventory</code> field empty on Account</td>
+</tr>
+<tr>
+<td><strong>SharePoint Drive</strong> (Notion-attached)</td>
+<td>NOT ATTACHED</td>
+<td><code>SharePoint Drive</code> field empty on Account (the Insights Project has a Sharepoint Link populated but it's not echoed to the Account-level field)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-tax-planning-memo-exec-summary-34149172ba0c">5.4 Tax Planning Memo Exec Summary (<code>34149172…ba0c</code>)</h3>
+<p>This is the structured Notion record that pairs with the .docx deliverable. <strong>Body content:</strong></p>
+<blockquote>
+<p><strong>2026-04-13 — Tax Planning Memorandum Production</strong>
+TYPE A memo generated from 2024 return + March 11 delivery call. ~$89K savings identified across 8 strategies. Top: cost seg 3 properties ($45K), Sec 179 dump truck ($20K), REPS via Amy ($11K+).
+→ <strong>Deliverable:</strong> <code>Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx</code>
+→ <strong>TAX ASCEND Status:</strong> Memo Done Pending send</p>
+</blockquote>
+<p><strong>Properties:</strong>
+- Summary Type: <strong>Tax Planning</strong> (existing select value — preserve on Turn 11 update)
+- Tax Engagement Type: <strong>Planning</strong>
+- Last Updated: 2026-04-13
+- Linked to Account: Sean Kennedy ✓</p>
+<p><strong>Important:</strong> Per the dossier prompt, this is the <strong>existing Exec Summary row to update on Turn 11</strong> — Summary Type must remain <code>Tax Planning</code> (matching the existing value on this row), not <code>General</code>. The 📄 Dossier URL goes here.</p>
+<h3 id="55-workbook-ingestion-gaps-promoted-to-7">5.5 Workbook ingestion gaps (promoted to §7)</h3>
+<ul>
+<li><code>Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx</code> — full body not pulled into Notion. Likely contains the 2024 AGI / tax / entity-by-entity breakdown that backs the $89K savings projection.</li>
+<li><code>Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx</code> — full body not pulled. Contains the per-strategy quantification, Hybrid Option 3 fee, and the per-property cost-seg numbers.</li>
+<li>2024 1040 Extraction xlsx — full body not pulled.</li>
+<li>Counting File xlsx — full body not pulled.</li>
+</ul>
+<p>Per CLAUDE.md hard rule #6, <strong>all $ figures in this dossier carry the source tag <code>[Tax Ascend:Sean §notes]</code> or <code>[Claude Summary 2026-04-13 §Summary]</code></strong> — the underlying workbook numbers are pending ingestion. The $89K and per-strategy ($45K / $20K / $11K+ / $6K / $6K) figures are confirmed by the Tax Ascend memo notes prose, but the workbook-level disaggregation would be needed to defend each figure individually.</p>
+<hr>
+<h2 id="6-claude-work-product">§6. Claude Work Product</h2>
+<h3 id="61-claude-summaries-db-rows">6.1 Claude Summaries DB rows</h3>
+<p><strong>Count on Account: 1.</strong></p>
+<h4 id="sean-kennedy-full-tax-planning-memo-production">Sean Kennedy — Full Tax Planning Memo Production</h4>
+<ul>
+<li><strong>Notion row:</strong> <a href="https://www.notion.so/341491728751813d8c08f83a75a068d4"><code>341491728751813d8c08f83a75a068d4</code></a></li>
+<li><strong>Date:</strong> 2026-04-13</li>
+<li><strong>Topics:</strong> Tax Planning</li>
+<li><strong>Account link:</strong> Sean Kennedy ✓</li>
+<li><strong>Files Reviewed:</strong> <code>Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx</code>, Notion TAX ASCEND record, Insights Project record, Meetings Tracker (delivery call 3/11, clarification call 3/4), Account record</li>
+<li><strong>Notion Pages Created:</strong> TAX ASCEND record updated (Planning Status, TAX MEMO STATUS, notes)</li>
+<li><strong>Summary:</strong> <em>"TYPE A Tax Planning Memorandum generated for Sean Kennedy from 2024 filed return (Insights Deliverable Workbook) + March 11, 2026 delivery call notes. ~$89K potential savings from $464K in identified deductions. Key strategies: cost seg (3 properties, $45K), Sec 179 dump truck ($20K), REPS via Amy ($11K+), Solo 401(k) ($6K), entity restructure (S-Corp + RE Holding Co), hiring children ($6K future), accountable plan, Augusta Rule. TAX ASCEND status updated to 'Memo Done Pending send'. Output: Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx"</em></li>
+</ul>
+<p>This is the canonical Claude work-product log entry for Sean. The Tax Memo deliverable is referenced from this row; the Tax Ascend record was also updated by this session. The session ran 2026-04-13 (Friday); the memo was sent 2026-04-16 (Wednesday) — a 3-day delivery turnaround presumably for QA + send.</p>
+<h3 id="62-claude-activity-log-rows">6.2 Claude Activity Log rows</h3>
+<p><strong>Count on Account: 0</strong> (no Claude Activity Log rows tied to Sean's Account in this refresh — query returned 0 rows). <code>[Claude Activity Log: SELECT * WHERE Account = Sean.url → 0 results]</code></p>
+<p>The Account record's <code>Claude Activity</code> formula resolves to a count value, not a URL list — so the count was not surfaced by the Account fetch directly. Cross-checked against the Claude Activity Log DB query → 0 rows. Sean has not been processed by any of the standing Claude periodic-job activities (Cost Seg Pipeline weekly review, etc.) yet.</p>
+<h3 id="63-this-refresh-claude-summary-to-be-created-on-turn-11">6.3 This refresh — Claude Summary to be created on Turn 11</h3>
+<p>A new Claude Summary will be created on Turn 11 logging this dossier-generation refresh:
+- <strong>Title:</strong> <code>Sean Kennedy — Comprehensive Client Intelligence Dossier (2026-04-22)</code>
+- <strong>Topics:</strong> Tax Planning, File Review, Compliance (multi-select)
+- <strong>Account:</strong> Sean Kennedy
+- <strong>Files Reviewed:</strong> Account record, Client Contact, Tax Ascend, Insights Project, Tax Planning Memo Exec Summary, prior Claude Summary, 2 Meetings Tracker rows, 1 Email Log row, prior Claude Summary chain
+- <strong>Output:</strong> <code>dossiers/SeanKennedy/dossier.md</code> (this file)
+- <strong>Date:</strong> 2026-04-22</p>
+<hr>
+<h2 id="7-action-items-rolled-up">§7. Action Items (rolled-up)</h2>
+<p>This is the consolidated action items list across email threads, advisory issues, meeting action items, engagement inquiries, service requests, intake requests, and dossier-generation flags. <strong>Source-tagged. Priority-tagged.</strong> Append-only on subsequent refreshes (new items get new IDs SK-001+).</p>
+<h3 id="71-high-priority">7.1 HIGH priority</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Owner</th>
+<th>Source</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SK-001</strong></td>
+<td>Confirm 2025 4868 was filed on or before 2026-04-15 for Sean Kennedy. Capture 4868 confirmation number into Email Log or Tax Ascend record. (Refresh date is 2026-04-22 — 7 days post-deadline; unverified.)</td>
+<td>Brandon Gerber / Tax Compliance</td>
+<td><code>[Email 2026-04-10 Sean - Extension]</code> <code>[Tax Ascend:Sean §Compliance Status "To Check"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-002</strong></td>
+<td>Surface estimated 2025 balance + payment status. Was an estimated payment made with the extension, or is the balance carried? Memo notes flag "Pending: ES payment history".</td>
+<td>Tax Compliance + Sean</td>
+<td><code>[Tax Ascend:Sean §notes]</code> <code>[Email 2026-04-10]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-003</strong></td>
+<td>Engagement decision: client to sign Hybrid Option 3 engagement letter formalizing the Tax Planning + Compliance engagement. <strong>Currently zero ELs on Account.</strong> Without this, Tax Memo strategies cannot be implemented and 4868 filing authority is unpapered.</td>
+<td>Seth Johnson + Sean Kennedy</td>
+<td><code>[Tax Ascend:Sean §notes "engagement decision (Hybrid Option 3 preferred)"]</code> <code>[Accounts:Sean.→ Engagement Letters]</code> empty</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-004</strong></td>
+<td>Mango plumbing: create Mangoshare workspace + assign Mango Client ID + populate Mango Display Name + set Mango Compliance Engagement status. Currently all four fields are blank/"To Check".</td>
+<td>Tax Admin</td>
+<td><code>[Accounts:Sean.Mango Client ID]</code> empty <code>[Tax Ascend:Sean §Mango fields]</code> "To check"</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-005</strong></td>
+<td><strong>Amy REPS posture documentation.</strong> Document (a) Amy's ownership in each rental holding entity, (b) Amy's annual hour log meeting the §469(c)(7) 750-hour + &gt;50% RE-services tests, (c) the §469(g) grouping election — needs to be on Amy's return, not Sean's. Without this, the $11K+ REPS savings line is exposure.</td>
+<td>Sean + Amy + Seth Johnson</td>
+<td><code>[Tax Ascend:Sean §notes "REPS via Amy"]</code> (compliance posture risk)</td>
+<td>OPEN</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-med-priority">7.2 MED priority</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Owner</th>
+<th>Source</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SK-006</strong></td>
+<td>Sean to provide ES payment history for 2025 (memo "Pending").</td>
+<td>Sean Kennedy</td>
+<td><code>[Tax Ascend:Sean §notes "Pending: ES payment history"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-007</strong></td>
+<td>Sean to provide credit detail (memo "Pending: credit detail" — likely §47, §45L, or other RE-adjacent credits referenced in the strategy stack).</td>
+<td>Sean Kennedy</td>
+<td><code>[Tax Ascend:Sean §notes]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-008</strong></td>
+<td>Sean to confirm 2025 property dispositions (sales/refinances) — affects the cost-seg property list (3 properties projected $45K savings).</td>
+<td>Sean Kennedy</td>
+<td><code>[Tax Ascend:Sean §notes "dispositions"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-009</strong></td>
+<td>Open the Tax Planning Memo .docx body and ingest per-strategy / per-property numbers into the dossier on the next refresh. Particularly: Hybrid Option 3 fee structure, per-property cost-seg basis splits, Solo 401(k) deferral + employer match calc backing the $6K.</td>
+<td>Tax Advisory + dossier-gen</td>
+<td><code>[Tax Ascend:Sean §Tax Memo URL SharePoint]</code> body not pulled this refresh</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-010</strong></td>
+<td>Open the Insights Deliverable Workbook (<code>Sean_Kennedy_Tax_Insights_Deliverable_Workbook.xlsx</code>) and ingest 2024 AGI / total tax / effective rate baseline + entity income breakdown into the dossier on the next refresh.</td>
+<td>Tax Advisory + dossier-gen</td>
+<td><code>[Insights Project:Sean §Sharepoint Link]</code> body not pulled</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-011</strong></td>
+<td>Pull the Fathom transcript at <code>fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka</code> (Delivery Call 2026-03-11) and convert key strategy commitments to Action Items DB rows.</td>
+<td>Tax Advisory</td>
+<td><code>[Meeting 2026-03-11 §Recap]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-012</strong></td>
+<td>Cost Seg Proposals — prepare 3-property proposal package for Sean's RE Holding Co properties; price per-property at standard $1,600/property or 3-property bundle $3,600 (per Brett's pricing pattern as anchor — confirm). Currently zero rows in Cost Seg Proposals DB tied to Sean.</td>
+<td>Cost Seg team + Seth Johnson</td>
+<td><code>[Tax Ascend:Sean §notes "cost seg (3 properties, $45K)"]</code> <code>[Accounts:Sean.→ # of Cost Seg Proposals]</code> 0</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-013</strong></td>
+<td>Entity formation — file Articles of Organization / Inc for the proposed structure (S-Corp holding co, RE Holding Co, flipping LLC, PM LLC, construction LLC). Coordinate with Sean on entity names + state of formation. <strong>Critical sequencing: S-Corp election (Form 2553) must be filed within 75 days of formation OR within 75 days of start of tax year for retroactive 2026 effect — late-election relief under Rev Proc 2013-30 available if past due.</strong></td>
+<td>Sean + Tax Advisory + FileForms</td>
+<td><code>[Tax Ascend:Sean §notes "Entity Restructure"]</code> (no entities formed yet)</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-014</strong></td>
+<td>Sec 179 dump truck — confirm dump truck is over 6,000 lbs GVWR + acquired and placed in service before 2025-12-31 to qualify for §179 expensing or 100% bonus (post-OBBBA). Confirm vehicle title and purchase docs. $20K savings line depends on this.</td>
+<td>Sean + Tax Compliance</td>
+<td><code>[Tax Ascend:Sean §notes "Sec 179 dump truck ($20K)"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-015</strong></td>
+<td>Solo 401(k) — confirm S-Corp formation + 2553 election timing, then establish the Solo 401(k) before 2026-12-31 for 2026 deferrals + employer match. $6K savings line depends on this.</td>
+<td>Sean + Seth Johnson</td>
+<td><code>[Tax Ascend:Sean §notes "Solo 401(k) ($6K)"]</code></td>
+<td>OPEN</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-low-priority">7.3 LOW priority</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Action</th>
+<th>Owner</th>
+<th>Source</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SK-016</strong></td>
+<td>Hiring children — Sean to confirm whether children are old enough / available for W-2 wages from the proposed S-Corp; $6K future savings is <strong>future-state</strong>, not 2025 or 2026. Document children's ages + reasonable-compensation wage rate.</td>
+<td>Sean Kennedy</td>
+<td><code>[Tax Ascend:Sean §notes "hiring children ($6K future)"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-017</strong></td>
+<td>Augusta Rule documentation — establish the §280A(g) framework: (a) confirm primary residence is in a market with sufficient comparable rental rates, (b) document up to 14 days of S-Corp meetings to be held at residence, (c) draft FMV rental agreement at arm's-length rate. Dollar amount not separately quantified.</td>
+<td>Sean + Seth Johnson</td>
+<td><code>[Tax Ascend:Sean §notes "Augusta Rule"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-018</strong></td>
+<td>Accountable plan documentation — once S-Corp formed, draft accountable plan resolution covering home office, vehicle, cell phone reimbursements per Reg §1.62-2. Dollar amount not separately quantified.</td>
+<td>Sean + Tax Advisory</td>
+<td><code>[Tax Ascend:Sean §notes "accountable plan"]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-019</strong></td>
+<td>Account-record duplicate cleanup — <code>🔴 Sean Kennedy(duplicate)</code> at <code>33c49172…21b9</code> is fully empty. Per CLAUDE.md hard rule #8 ("never auto-delete; log to cleanup queue") add to the duplicate-Accounts cleanup queue under <code>docs/BATCH_REFRESH_PROMPT.md § "duplicate rows"</code>.</td>
+<td>Tax Admin (manual review)</td>
+<td><code>[Accounts:Sean Kennedy(duplicate)]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-020</strong></td>
+<td>Address capture — Client Contact row (<code>30d49172…fd29</code>) has no Address field populated. Phone area code 412 = Pittsburgh PA but mailing address not on file. Capture from extension thread or memo cover letter.</td>
+<td>Tax Admin</td>
+<td><code>[Contact:Sean Kennedy]</code> empty Address</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-021</strong></td>
+<td>Portal Access — Client Contact <code>Portal Access = __NO__</code>. If Mango portal is intended, flip this and send portal invite.</td>
+<td>Tax Admin</td>
+<td><code>[Contact:Sean Kennedy.Portal Access]</code></td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-022</strong></td>
+<td>Tax Memo delivery email capture — when the memo was sent 2026-04-16, the cover email should exist in <code>seth@accruity.com</code> or <code>brandon@accruity.com</code> outbox. Not currently captured in Notion Email Log.</td>
+<td>Make.com Email Log scenario (auto-capture) or manual</td>
+<td>not captured this refresh</td>
+<td>OPEN</td>
+</tr>
+<tr>
+<td><strong>SK-023</strong></td>
+<td>Reporting Entities DB — add the proposed entities (S-Corp holding co, RE Holding Co, flipping, PM, construction) to the Reporting Entities DB once formed; link to Sean's Account. Currently 0 entities on Account.</td>
+<td>Tax Admin</td>
+<td><code>[Accounts:Sean.→ Reporting Entities]</code> 0</td>
+<td>OPEN (future-state)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-tax-strategies">§8. Tax Strategies</h2>
+<p>This is the strategy-by-strategy breakdown with quantification, status, sequencing, and source. <strong>In-place update on subsequent refreshes</strong> per CLAUDE.md hard rule #3 (factual section).</p>
+<h3 id="81-strategy-table">8.1 Strategy table</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Strategy</th>
+<th>Quantified Tax Saving</th>
+<th>Status</th>
+<th>Sequencing dependency</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Cost Segregation — 3 properties</strong></td>
+<td><strong>~$45,000</strong> in tax savings</td>
+<td>Memo-only (no proposals in DB, no engagements)</td>
+<td>Requires identifying 3 properties (memo says "3 properties" — specifics in workbook); RE Holding Co formation; client engagement</td>
+<td><code>[Tax Ascend:Sean §notes "cost seg (3 properties, $45K)"]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>§179 dump truck expensing</strong></td>
+<td><strong>~$20,000</strong></td>
+<td>Memo-only (asset confirmed by reference, not yet documented in Notion)</td>
+<td>Requires (a) construction entity formation, (b) dump truck &gt;6,000 GVWR confirmation, (c) acquisition + PIS before tax year end, (d) §179 vs 100% bonus depreciation election</td>
+<td><code>[Tax Ascend:Sean §notes "Sec 179 dump truck ($20K)"]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>REPS via Amy</strong></td>
+<td><strong>~$11,000+</strong> ("+" indicates floor — additional bonus depreciation pass-through possible)</td>
+<td>Posture documentation needed (HIGH risk if challenged)</td>
+<td>Requires (a) Amy's hour log, (b) ownership-allocation alignment, (c) §469(g) grouping election on Amy's return</td>
+<td><code>[Tax Ascend:Sean §notes "REPS via Amy ($11K+)"]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Solo 401(k)</strong></td>
+<td><strong>~$6,000</strong> (deferral + employer match)</td>
+<td>Memo-only (cannot establish until S-Corp formed)</td>
+<td>Requires S-Corp holding co formation + 2553 election; reasonable salary established; plan adoption before tax year end</td>
+<td><code>[Tax Ascend:Sean §notes "Solo 401(k) ($6K)"]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Hiring children</strong></td>
+<td><strong>~$6,000 future</strong></td>
+<td>Future-state (depends on children's age + employability)</td>
+<td>Requires S-Corp holding co; W-2 setup for children; bona-fide-services documentation</td>
+<td><code>[Tax Ascend:Sean §notes "hiring children ($6K future)"]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Accountable plan</strong></td>
+<td>not separately quantified</td>
+<td>Memo-only</td>
+<td>Requires S-Corp formation; written accountable-plan resolution per Reg §1.62-2</td>
+<td><code>[Tax Ascend:Sean §notes "accountable plan"]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Augusta Rule (§280A(g))</strong></td>
+<td>not separately quantified</td>
+<td>Memo-only</td>
+<td>Requires S-Corp; FMV documentation of comparable rental rates; up to 14 days/year of substantive meetings</td>
+<td><code>[Tax Ascend:Sean §notes "Augusta Rule"]</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Entity restructure</strong></td>
+<td>structural backbone — enables strategies 1, 2, 4, 5, 6, 7</td>
+<td>Memo-only (Hybrid Option 3 preferred form factor)</td>
+<td>Articles of Organization / Inc filings; 2553 timing; cross-entity management agreements</td>
+<td><code>[Tax Ascend:Sean §notes "Entity Restructure"]</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total quantified savings (memo)</strong></td>
+<td><strong>~$89,000/year</strong></td>
+<td></td>
+<td></td>
+<td><code>[Tax Ascend:Sean §notes "~$89K potential savings from $464K in identified deductions"]</code></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Total identified deductions (memo)</strong></td>
+<td><strong>~$464,000</strong></td>
+<td></td>
+<td></td>
+<td>same</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pending workbook ingestion:</strong> the per-strategy / per-property dollar reconciliation between the $89K savings line and the $464K deductions line lives in the .docx memo body — not pulled this refresh. Per CLAUDE.md hard rule #6, all $ figures above are tagged to the memo notes prose source, not to the underlying workbook.</p>
+<h3 id="82-sequencing-roadmap">8.2 Sequencing roadmap</h3>
+<p>The strategies are not independent. They sequence as follows:</p>
+<ol>
+<li><strong>2025 extension verification (SK-001 / SK-002)</strong> — clear the 2025 balance question first, since it affects ES payment confirmation feeding the memo's "Pending" list.</li>
+<li><strong>Engagement letter (SK-003)</strong> — sign the Hybrid Option 3 EL. Without this, nothing implements.</li>
+<li><strong>Mango plumbing (SK-004)</strong> — wire up Mango Client ID + Compliance Engagement so the compliance side is operationalized.</li>
+<li><strong>Entity formation (SK-013)</strong> — file Articles for the 5 proposed entities; coordinate names + state. <strong>Critical: 2553 timing for S-Corp election.</strong></li>
+<li><strong>Cost seg proposals (SK-012)</strong> — once RE Holding Co is formed and 3 properties identified, launch cost-seg studies. $45K is the largest single-strategy savings line.</li>
+<li><strong>§179 dump truck (SK-014)</strong> — confirm vehicle qualifies; expense in tax year of formation/acquisition.</li>
+<li><strong>Solo 401(k) (SK-015)</strong> — once S-Corp formed and reasonable salary established, adopt Solo 401(k) before tax-year end.</li>
+<li><strong>Amy REPS posture (SK-005)</strong> — ongoing documentation; needs to be in place from year of first claim.</li>
+<li><strong>Long-tail strategies</strong> — accountable plan, Augusta Rule, hiring children — these are post-formation paperwork items.</li>
+</ol>
+<h3 id="83-effective-rate-projection">8.3 Effective rate projection</h3>
+<p>The memo notes do not contain a before/after effective rate (typical of Brett's memo <code>[BrettZanotto §1]</code> which carried 32.0% → 2.4% as headline). Sean's effective rate before/after is <strong>pending workbook ingestion</strong>. <code>? Pending</code></p>
+<hr>
+<h2 id="9-opportunity-flags">§9. Opportunity Flags</h2>
+<p>Rule-based flags from the dossier-generation pass over the Account.</p>
+<h3 id="91-high-confidence-flags-active-opportunities">9.1 HIGH-confidence flags (active opportunities)</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Trigger</th>
+<th>Detail</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🟢 Cost Seg — confirmed candidate</strong></td>
+<td>Tax Memo identifies 3 properties for cost seg</td>
+<td>$45K savings already quantified in memo. <strong>0 cost seg engagements + 0 proposals in DB</strong> — proposal package needed.</td>
+<td><code>[Tax Ascend:Sean §notes]</code> <code>[Accounts:Sean.→ # of Cost Seg Proposals]</code> 0</td>
+</tr>
+<tr>
+<td><strong>🟢 S-Corp election — confirmed candidate</strong></td>
+<td>Tax Memo proposes S-Corp holding co structure</td>
+<td>Active operating income (flipping + PM + construction) flows through proposed S-Corp. Drives Solo 401(k) + accountable plan + Augusta Rule. <strong>0 ELs on Account — formation pending</strong>.</td>
+<td><code>[Tax Ascend:Sean §notes "Entity Restructure"]</code></td>
+</tr>
+<tr>
+<td><strong>🟢 §179 / 100% Bonus — dump truck</strong></td>
+<td>Tax Memo identifies dump truck as Sec 179 candidate</td>
+<td>$20K savings. Confirm GVWR + acquisition date. Note: Post-OBBBA (One Big Beautiful Bill Act, 2025), 100% bonus depreciation was restored — dump truck likely qualifies for either §179 or 100% bonus at owner's election.</td>
+<td><code>[Tax Ascend:Sean §notes "Sec 179 dump truck ($20K)"]</code></td>
+</tr>
+<tr>
+<td><strong>🟢 REPS via Amy — confirmed claim posture</strong></td>
+<td>Tax Memo claims REPS via Amy</td>
+<td>$11K+ savings depends on Amy's hours documentation + ownership alignment + §469(g) grouping. <strong>HIGH risk if not documented</strong>.</td>
+<td><code>[Tax Ascend:Sean §notes]</code></td>
+</tr>
+<tr>
+<td><strong>🟡 Solo 401(k)</strong></td>
+<td>Tax Memo identifies Solo 401(k)</td>
+<td>$6K savings. Sequencing-dependent on S-Corp.</td>
+<td><code>[Tax Ascend:Sean §notes]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-complianceexposure-flags">9.2 Compliance/exposure flags</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Trigger</th>
+<th>Detail</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🔴 2025 extension — verification gap</strong></td>
+<td>Refresh date 2026-04-22, no 4868 confirmation in file 7+ days post-deadline</td>
+<td>Brandon's 2026-04-10 internal request thread truncates; no client-facing 4868 transmittal captured</td>
+<td><strong>HIGH</strong></td>
+</tr>
+<tr>
+<td><strong>🔴 Engagement letter gap</strong></td>
+<td>0 ELs on Account despite Tax Memo SENT + 2025 extension requested</td>
+<td>4868 filing authority unpapered; engagement implementation cannot proceed</td>
+<td><strong>HIGH</strong></td>
+</tr>
+<tr>
+<td><strong>🔴 Amy REPS exposure</strong></td>
+<td>REPS claimed via partner, not primary</td>
+<td>Per-taxpayer test under §469(c)(7) — needs ownership alignment + grouping election + hour log</td>
+<td><strong>HIGH</strong></td>
+</tr>
+<tr>
+<td><strong>🟡 Mango plumbing not wired</strong></td>
+<td>Mango Client ID + Display Name empty; Compliance + Planning Mango status "To check"</td>
+<td>Compliance-side workflow not operationalized</td>
+<td><strong>MED</strong></td>
+</tr>
+<tr>
+<td><strong>🟡 Account-record duplicate</strong></td>
+<td><code>🔴 Sean Kennedy(duplicate)</code> at <code>33c49172…21b9</code> exists empty</td>
+<td>Cleanup-queue add (no auto-delete)</td>
+<td><strong>LOW (admin)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-additional-flag-candidates-not-yet-confirmed">9.3 Additional flag candidates (not yet confirmed)</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Trigger</th>
+<th>Detail</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🟡 §47 / §45L / §179D credits?</strong></td>
+<td>Memo "Pending: credit detail"</td>
+<td>Credit type unspecified — could be Rehab Credit (§47 — historic property), Energy Efficient Home Credit (§45L — for builders), or Energy Efficient Commercial Building Deduction (§179D). Construction entity + dump truck context suggests possible §45L for new-build PIS work.</td>
+<td><code>?</code> Pending memo body</td>
+</tr>
+<tr>
+<td><strong>🟡 Disposition gain harvest</strong></td>
+<td>Memo "Pending: dispositions"</td>
+<td>If 2025 dispositions occurred, opportunity for §1031 exchange (deferral) or installment-sale election (timing) — not yet evaluated</td>
+<td><code>?</code> Pending</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-operations-analysis">§10. Operations Analysis</h2>
+<p><strong>Append-amended on subsequent refreshes</strong> per CLAUDE.md hard rule #4 (narrative section).</p>
+<h3 id="101-engagement-velocity">10.1 Engagement velocity</h3>
+<p>Sean's engagement velocity from Insights through Tax Memo is on the <strong>fast end of the Accruity cohort</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Date</th>
+<th>Days from prior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date Added (New Client GC)</td>
+<td>2026-01-22</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tax Ascend Date Signed</td>
+<td>2026-01-22</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Insights Req Due Date</td>
+<td>2026-02-17</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Insights Clarification Call</td>
+<td>2026-03-04</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Insights Delivery Call</td>
+<td>2026-03-11</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Tax Memo generated (Claude session)</td>
+<td>2026-04-13</td>
+<td>33</td>
+</tr>
+<tr>
+<td>Tax Ascend Date Ascended</td>
+<td>2026-04-06</td>
+<td>(between memo gen and send)</td>
+</tr>
+<tr>
+<td><strong>Tax Memo SENT</strong></td>
+<td>2026-04-16</td>
+<td>3 (post-Claude-session)</td>
+</tr>
+<tr>
+<td>2025 Extension requested</td>
+<td>2026-04-10</td>
+<td>(concurrent with memo prep)</td>
+</tr>
+<tr>
+<td><strong>This refresh</strong></td>
+<td>2026-04-22</td>
+<td>6 (post-send)</td>
+</tr>
+</tbody>
+</table>
+<p>Total cycle from New-Client to Memo-Sent: <strong>84 days</strong> (about 12 weeks). For comparison, Brett Zanotto's cycle was Account-Sign 2026-02-03 → Memo-Sent 2026-02-18 (15 days), but Brett came in further along the funnel. Sean's pace is consistent with a fresh-intake Insights → Planning conversion.</p>
+<h3 id="102-operational-gaps-as-compounding-risk">10.2 Operational gaps as compounding risk</h3>
+<p>The combination of <strong>(zero ELs) × (Mango blank) × (extension verification gap) × (memo SENT)</strong> is the standout operational risk pattern. Each gap individually is operational hygiene; together they mean the <strong>memo strategies cannot be implemented and the 2025 compliance posture is unpapered</strong>. The shortest fix path:</p>
+<ol>
+<li>Sign Hybrid Option 3 EL (creates Mango engagement + paper authority for 4868 + paper authority for entity-formation work).</li>
+<li>Mango admin team creates Client ID + Display Name + workspace.</li>
+<li>Compliance team confirms 4868 was filed (or files it under the new EL authority) and surfaces 2025 balance.</li>
+</ol>
+<p>Without step 1, steps 2 and 3 are bandages.</p>
+<h3 id="103-throughput-metrics">10.3 Throughput metrics</h3>
+<p>This refresh:
+- 8 Notion records read end-to-end (Account, Contact, Tax Ascend, Insights Project, 2 Meetings, Email Log, Exec Summary, Claude Summary)
+- 1 dossier produced
+- 23 action items rolled up (5 HIGH, 10 MED, 8 LOW)
+- 8 strategies cataloged
+- 5 active opportunity flags (4 HIGH-confidence + 1 sequencing-dependent)
+- 5 compliance/exposure flags (3 HIGH severity, 1 MED, 1 LOW)
+- 2 candidate flags pending memo body</p>
+<h3 id="104-cross-account-interaction-patterns">10.4 Cross-account interaction patterns</h3>
+<p>Sean's Account does <strong>not</strong> share entities or partners with any other Account in the queue this refresh. Amy is unique to Sean. The Pittsburgh PA area code (412) overlaps with Brett Zanotto's market (also Pittsburgh) — but no shared entities or counterparties on either side's records. <strong>No partner-pair check needed</strong> (unlike Tommy/Andy or Spring/Brian).</p>
+<hr>
+<h2 id="11-individual-profiles">§11. Individual Profile(s)</h2>
+<p><strong>Append-amended on subsequent refreshes</strong> per CLAUDE.md hard rule #4.</p>
+<h3 id="111-sean-kennedy">11.1 Sean Kennedy</h3>
+<ul>
+<li><strong>Age, marital status:</strong> not in file (single filer inferred; age unknown)</li>
+<li><strong>Profession:</strong> Real estate operator across multiple verticals — flipping, rentals, property management, construction services. The dump truck is a strong signal of active construction-services labor (Sec 179 candidates require trade-or-business use). The 3-property cost-seg cohort is consistent with a mid-stage RE operator (not a single-asset hobbyist, not a 50+ door institutional).</li>
+<li><strong>Geography:</strong> Pittsburgh PA area (phone area code 412)</li>
+<li><strong>Health context:</strong> none in file</li>
+<li><strong>Risk tolerance:</strong> apparent comfort with multi-entity restructure + REPS-via-partner posture — these are not first-cycle planning moves. Suggests Sean has had prior tax advisors or sophisticated counsel.</li>
+<li><strong>Communication style:</strong> phone-first (called Brandon morning of 2026-04-10 for extension); email body of any Sean replies not captured in Notion.</li>
+<li><strong>Engagement decisions outstanding:</strong> Hybrid Option 3 (preferred per memo) — requires sign-off.</li>
+</ul>
+<h3 id="112-amy-significant-other-not-on-file-as-joint-filer">11.2 Amy (significant other — not on file as joint filer)</h3>
+<ul>
+<li><strong>Last name:</strong> not in file</li>
+<li><strong>Role in Sean's tax posture:</strong> <strong>REPS qualifier</strong> — Amy meets the §469(c)(7) Real Estate Professional Status test (750 hours + &gt;50% RE-services). This converts what would otherwise be passive rental losses into non-passive losses.</li>
+<li><strong>Tax compliance:</strong> files her own return (not joint with Sean per the absence of MFJ flags + the memo's framing of REPS as routed "via Amy"). Her hour log + grouping election are core to defending the $11K+ savings line.</li>
+<li><strong>Open question:</strong> does Amy have an entity ownership stake in the proposed RE Holding Co + flipping LLC + PM LLC? Without ownership alignment on Amy's side, the §469(g) grouping election doesn't carry to Sean's deductions on Sean's return. <strong>This is the single biggest documentation gap</strong> on the 2025 + 2026 strategy posture.</li>
+</ul>
+<hr>
+<h2 id="12-provenance-index">§12. Provenance Index</h2>
+<p>Source-tag taxonomy used throughout this dossier. Every non-obvious fact above carries one or more of these tags inline.</p>
+<h3 id="121-account-level-sources">12.1 Account-level sources</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Source</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Accounts:Sean Kennedy]</code></td>
+<td>Notion Accounts DB row</td>
+<td>https://www.notion.so/30d49172875181b08a05f793da2e110b</td>
+</tr>
+<tr>
+<td><code>[Accounts:Sean Kennedy(duplicate)]</code></td>
+<td>Duplicate Account row (cleanup queue)</td>
+<td>https://www.notion.so/33c49172875181d4a5c9f3c883ea21b9</td>
+</tr>
+<tr>
+<td><code>[Contact:Sean Kennedy 30d49172…fd29]</code></td>
+<td>Notion Client Contacts DB row</td>
+<td>https://www.notion.so/30d49172875181c1b1d9db120f0ffd29</td>
+</tr>
+</tbody>
+</table>
+<h3 id="122-tax-ascend-insights-memo-sources">12.2 Tax Ascend / Insights / Memo sources</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Source</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Tax Ascend:Sean Kennedy]</code> or <code>[Tax Ascend:Sean §notes]</code></td>
+<td>Tax Ascend record <code>🟪 Sean Kennedy (not lacey blackmans)</code> (the title prefix is an internal disambiguator for a same-named different client)</td>
+<td>https://www.notion.so/2f049172875180dbba36e072d3bdc917</td>
+</tr>
+<tr>
+<td><code>[Insights Project:Sean Kennedy]</code></td>
+<td>Insights Project Status row</td>
+<td>https://www.notion.so/2fd4917287518007bf42e30ec358e103</td>
+</tr>
+<tr>
+<td><code>[ExecSum:Sean Kennedy — Tax Planning Memo]</code></td>
+<td>Exec Summary DB row (Tax Planning)</td>
+<td>https://www.notion.so/34149172875181bba47df34b88c2ba0c</td>
+</tr>
+<tr>
+<td><code>[Claude Summary 2026-04-13 §Summary]</code> or <code>[Claude Summary 2026-04-13 Tax Planning Memo Production]</code></td>
+<td>Claude Summaries DB row (TYPE A memo production)</td>
+<td>https://www.notion.so/341491728751813d8c08f83a75a068d4</td>
+</tr>
+<tr>
+<td><code>[Tax Memo SharePoint URL]</code></td>
+<td><code>Sean_Kennedy_Tax_Planning_Memorandum_2025_2026.docx</code> (body not pulled this refresh)</td>
+<td>https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQAaeCNJkaS3TK1plGWlMskfAU_SjQg0T5oLknpMZiHK6ZM?e=SVP8ee</td>
+</tr>
+</tbody>
+</table>
+<h3 id="123-meetings-sources">12.3 Meetings sources</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Source</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Meeting 2026-03-04]</code> or <code>[Meetings Tracker:Sean 2026-03-04]</code></td>
+<td>Meetings Tracker row — Insights Clarification Call</td>
+<td>https://www.notion.so/319491728751802a83b5fa3918fb91d5</td>
+</tr>
+<tr>
+<td><code>[Meeting 2026-03-11]</code> or <code>[Meetings Tracker:Sean 2026-03-11]</code></td>
+<td>Meetings Tracker row — Insights Delivery Call</td>
+<td>https://www.notion.so/322491728751804e9c83edb65f5a23d1</td>
+</tr>
+<tr>
+<td><code>[Fathom recap — delivery]</code></td>
+<td>Fathom video share (delivery call)</td>
+<td>https://fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka</td>
+</tr>
+</tbody>
+</table>
+<h3 id="124-email-sources">12.4 Email sources</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Source</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Email 2026-04-10 Sean Kennedy - Extension]</code> or <code>[Email Log:Sean - Extension]</code></td>
+<td>Client Email Log DB row</td>
+<td>https://www.notion.so/34249172875181a6870bc3353f61fd22</td>
+</tr>
+<tr>
+<td><code>[Email 2026-04-10 §Source Inbox]</code></td>
+<td>seth@accruity.com mailbox</td>
+<td>(Outlook deep-link in §3.1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="125-cross-dossier-reference-sources">12.5 Cross-dossier reference sources</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Source</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[BrettZanotto §1]</code> etc.</td>
+<td>Brett Zanotto dossier (most-similar template anchor)</td>
+<td><code>dossiers/BrettZanotto/dossier.md</code></td>
+</tr>
+<tr>
+<td><code>[SpringBengtzen §4]</code></td>
+<td>Spring Bengtzen dossier (reference cadence anchor)</td>
+<td><code>dossiers/SpringBengtzen/dossier.md</code></td>
+</tr>
+<tr>
+<td><code>[CLAUDE.md §X]</code></td>
+<td>Project workflow rules</td>
+<td><code>CLAUDE.md</code></td>
+</tr>
+<tr>
+<td><code>[BATCH_REFRESH_PROMPT.md § X]</code></td>
+<td>Batch refresh queue / cleanup conventions</td>
+<td><code>docs/BATCH_REFRESH_PROMPT.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="126-sources-not-pulled-this-refresh-gaps">12.6 Sources NOT pulled this refresh (gaps)</h3>
+<p>These sources are referenced by URL but their bodies were not pulled into Notion / this dossier:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>URL</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tax Planning Memo .docx body</td>
+<td>https://subledgesl-my.sharepoint.com/:w:/g/personal/seth_accruity_com/IQAaeCNJkaS3TK1plGWlMskfAU_SjQg0T5oLknpMZiHK6ZM?e=SVP8ee</td>
+<td>Body not pulled</td>
+</tr>
+<tr>
+<td>Insights Deliverable Workbook xlsx</td>
+<td>(Insights Project Sharepoint Link parent folder)</td>
+<td>Body not pulled</td>
+</tr>
+<tr>
+<td>2024 1040 Extraction xlsx</td>
+<td>https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQB_6jMCJXATSY1s-rc-9yrNAVqhXgx5yJlXdjB7pDw7iJM?e=9Ya8Rd</td>
+<td>Body not pulled</td>
+</tr>
+<tr>
+<td>Counting File xlsx</td>
+<td>https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQBXaGK26juXQp815w3QBLp6AY-XmINWC6l-OBhWrKzgXsA?e=VLrV3h</td>
+<td>Body not pulled</td>
+</tr>
+<tr>
+<td>Tax Returns Folder</td>
+<td>https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgAVjlkkerURRq9Cw8cXF0g8Ad6ri9NWAF34uvJ7aSKvBUg?e=LvU2gc</td>
+<td>Folder listing not pulled</td>
+</tr>
+<tr>
+<td>Insights Sharepoint root</td>
+<td>https://subledgesl.sharepoint.com/sites/Insights/_layouts/15/viewer.aspx?sourcedoc=%7Bef4c312f-2585-49b5-bb1e-5758d24e81f1%7D</td>
+<td>Folder listing not pulled</td>
+</tr>
+<tr>
+<td>Request List Tracker xlsx</td>
+<td>https://subledgesl.sharepoint.com/:x:/r/sites/Insights/_layouts/15/Doc.aspx?sourcedoc=%7B0DA9DC18-B216-4329-9F6E-E33B8A494BAC%7D</td>
+<td>Body not pulled</td>
+</tr>
+<tr>
+<td>Fathom delivery call transcript</td>
+<td>https://fathom.video/share/QKtL8q64y1ALcGcxsV2Db3PVUr7qTNka</td>
+<td>Transcript not pulled</td>
+</tr>
+<tr>
+<td>Fellow clarification call recap</td>
+<td>(Fellow tracking redirect — see §4.1)</td>
+<td>Recap not pulled</td>
+</tr>
+<tr>
+<td>Outlook full body — extension thread</td>
+<td>(Outlook deep-link — see §3.1)</td>
+<td>Truncated body in Notion only</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="13-changed-since-last-refresh">§13. Changed Since Last Refresh</h2>
+<p><strong>This is the first refresh.</strong> Prior refresh: none.</p>
+<p><strong>Initialized this refresh (2026-04-22):</strong>
+- Dossier folder created at <code>dossiers/SeanKennedy/</code>
+- <code>dossier.md</code> created (this file)
+- <code>state.json</code> created (companion file)
+- 23 action items rolled up (5 HIGH / 10 MED / 8 LOW)
+- 8 tax strategies cataloged
+- 10 opportunity / compliance flags raised
+- Notion Exec Summary row <code>34149172…ba0c</code> to be updated with this dossier's URL pointers on Turn 11
+- Notion Claude Summaries DB row to be created on Turn 11 logging this refresh</p>
+<p><strong>Watch list for next refresh:</strong>
+- 2025 4868 confirmation (SK-001) — HIGH priority blocker
+- Hybrid Option 3 engagement letter (SK-003) — HIGH priority blocker
+- Amy REPS posture documentation (SK-005) — HIGH risk
+- Workbook ingestion (SK-009 / SK-010) — fills in $89K → $464K reconciliation
+- Mango plumbing (SK-004) — operational
+- Cost Seg Proposals DB rows (SK-012) — implements the largest single-strategy savings line
+- Entity formation status (SK-013) — gates strategies 4, 5, 6, 7, 8
+- Account-record duplicate (SK-019) — admin cleanup queue addition</p>
+<p><strong>Append-only on subsequent refreshes:</strong> §3 thread roster, §4 meeting roster, §6 Claude session log. <strong>In-place update on subsequent refreshes:</strong> §2 Profile table, §5 Document Inventory, §8 Strategy table, §9 Flags. <strong>Amended (not overwritten) on subsequent refreshes:</strong> §1, §10, §11, §13.</p>
+<hr>
+<p><em>End of dossier.</em></p>
+<div class="footer">Internal working document — Accruity. Rendered from <code>dossiers/SeanKennedy/dossier.md</code>.</div>
+</body>
+</html>

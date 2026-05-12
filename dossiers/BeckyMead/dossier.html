@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeckyMead — Client Intelligence Dossier</title>
+
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 30px 40px; color: #24292e; line-height: 1.6; }
+  h1, h2, h3, h4 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin-top: 1.5em; }
+  h1 { font-size: 2em; }  h2 { font-size: 1.5em; }  h3 { font-size: 1.25em; }  h4 { font-size: 1em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #dfe2e5; padding: 6px 13px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  code { background: rgba(27,31,35,.05); padding: .2em .4em; border-radius: 3px; font-family: SFMono-Regular, Menlo, monospace; font-size: 85%; }
+  pre code { display: block; padding: 16px; overflow: auto; }
+  blockquote { border-left: 4px solid #dfe2e5; padding: 0 1em; color: #6a737d; margin: 1em 0; }
+  a { color: #0366d6; text-decoration: none; }  a:hover { text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #e1e4e8; margin: 24px 0; }
+  ul, ol { padding-left: 2em; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: .85em; color: #6a737d; }
+</style>
+
+</head>
+<body>
+<h1 id="becky-mead-client-intelligence-dossier">Becky Mead — Client Intelligence Dossier</h1>
+<p><strong>Internal Working Document — Accruity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Becky Mead (single individual)</td>
+</tr>
+<tr>
+<td>Client #</td>
+<td><strong>02251304-01</strong> <code>[Accounts]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td><em>(empty on Account record — see §5 Plumbing)</em> <code>[Accounts §Mango Client ID]</code></td>
+</tr>
+<tr>
+<td>Prepared by</td>
+<td>Accruity Tax Advisory</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-04-22</td>
+</tr>
+<tr>
+<td>Prior Refresh</td>
+<td>first run</td>
+</tr>
+<tr>
+<td>Depth mode</td>
+<td><strong>Medium</strong> — Insights project DELIVERED, Compliance EL Signed but Open Items Email gating compliance progress; 1 pending meeting; no email/inquiry/Claude history</td>
+</tr>
+<tr>
+<td>Engagement Stage</td>
+<td>Tax Ascend — Tax Insights (DELIVERED) → Compliance (Open Items List sent 2026-03-10, awaiting client)</td>
+</tr>
+<tr>
+<td>Engagement Fee</td>
+<td><strong>$3,825</strong> (compliance EL — TAX COMPLIANCE) <code>[EL §Price]</code></td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td><strong>Action-pending</strong> — Open Items Email sent 2026-03-10; no return responses captured; one Rescoping meeting parked on tracker (status Pending, dated 2025-10-02)</td>
+</tr>
+<tr>
+<td>Relationship Manager</td>
+<td>Seth Johnson (per Account Hub ancestry) <code>[Accounts §ancestor-path]</code></td>
+</tr>
+<tr>
+<td>Primary Contact</td>
+<td><strong>Becky Mead</strong> — becky.mead@1sourcetitle.com (Portal Access: NO) <code>[Contact:Becky Mead]</code></td>
+</tr>
+<tr>
+<td>Data Sources (this refresh)</td>
+<td>Notion Accounts record · 1 Primary Contact · 1 Engagement Letter (Signed/Pending Check) · 1 Insights Project (DELIVERED) · 1 Meetings Tracker row (Pending Rescoping) · 1 Tax Ascend record · 3 Files &amp; Links rows · existing Exec Summary DB row</td>
+</tr>
+<tr>
+<td>Files NOT Accessible This Refresh</td>
+<td>PBC Workbook, Tax Extraction (per EL note: "no extraction found in folder"), Tax Planning Memo, SharePoint Drive (top-level Account fields all empty); Insights Analysis "Waiting on Extraction"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence:</strong> ✓ Confirmed · ~ Estimated · ? Pending
+<strong>Attribution:</strong> every non-obvious fact carries an inline source tag. See §12 Provenance Index.</p>
+<hr>
+<h2 id="1-executive-overview">§1. Executive Overview</h2>
+<p>Becky Mead is a <strong>single-principal Accruity client</strong> (Client # 02251304-01) running on the Tax Ascend / TAX COMPLIANCE track. The Tax Insights project was <strong>DELIVERED</strong> (per Insights Project Status), and the Compliance EL is <strong>Signed</strong> with deposit paid and Mango Portal Invite status <code>Customer Accessed</code>. <code>[EL]</code> <code>[Insights]</code> <code>[Tax Ascend]</code> However, two material gating issues remain on file: (a) <strong>Compliance Group Status = "Pending Check"</strong> with a tracker note that <strong>"no PBC included with open items email, no PBC saved in onedrive ISSUE — no extraction found in folder"</strong> — Seth's resolution was to send a Temp PBC checklist from the analysis file plus the Mangoshare portal link; (b) the Insights tracker shows <code>Analysis: Waiting on Extraction</code>, meaning downstream analysis hasn't closed even though Insights itself is marked Delivered. <code>[EL §Notes (PBC OPEN ITEMS)]</code> <code>[Insights §Analysis]</code></p>
+<p><strong>TL;DR.</strong> Becky Mead — <strong>$3,825 compliance engagement, Insights delivered, EL signed, deposit paid, but stuck on missing 1040 extraction + missing PBC artifact</strong>. Open Items Email sent 2026-03-10 (Mango portal invite accessed); awaiting client response. One Pending Rescoping meeting (dated 2025-10-02) sits on the Meetings Tracker with no recap and no recent activity. <strong>Next natural step:</strong> confirm whether client has responded to the 2026-03-10 Open Items Email and whether a 1040 extraction can now be produced from received PBC docs.</p>
+<p><strong>What matters right now.</strong> The client's status is <strong>action-pending on the client side</strong> — Accruity has done the EL/deposit/Open-Items handoff; the ball is with Becky. No HIGH-urgency items in Accruity's court today, but two MED items: (1) Compliance Group Status reads <strong>Pending Check</strong> with the <strong>2026-03-16</strong> date marker <code>"check portal invite/assigned staff"</code> and (2) the Open Items Email needs follow-up if no client response by mid-April. <code>[EL §check portal invite/assigned staff]</code> <code>[EL §Notes (PBC OPEN ITEMS)]</code></p>
+<p><strong>Discovery flag — system-wide data integrity (CONFIRMED).</strong> The "Becky Mead" Files &amp; Links DB row has <code>Document Inventory</code> and <code>PBC PDF Package</code> SharePoint URLs that are <strong>byte-identical to Spring Bengtzen's AND Alex Dykes &amp; Mark Ferguson's same fields</strong>. Same SharePoint share GUIDs <code>IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw</code> (Doc Inventory) and <code>IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA</code> (PBC PDF Package). <strong>Three clients in a row with the same defaulted URLs</strong> → this is a confirmed system-wide template-default issue, not client-specific. Promoted to §7 Action Items / system-wide plumbing flag (now seen on Spring + Alex + Becky). <code>[FL:Becky 33b491728751…dd9f]</code> <code>[FL:Spring §Document Inventory]</code> <code>[FL:Alex §Document Inventory]</code></p>
+<hr>
+<h2 id="2-client-profile">§2. Client Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account name</td>
+<td>Becky Mead</td>
+<td><code>[Accounts]</code></td>
+</tr>
+<tr>
+<td>Client #</td>
+<td>02251304-01</td>
+<td><code>[Accounts §Client #]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td><em>(empty on Account record)</em> — flag for §5 plumbing</td>
+<td><code>[Accounts]</code></td>
+</tr>
+<tr>
+<td>Engagement</td>
+<td>Tax Ascend — TAX COMPLIANCE (New Client GC)</td>
+<td><code>[Tax Ascend §TAX ASCEND TYPE]</code></td>
+</tr>
+<tr>
+<td>Insights status</td>
+<td><strong>DELIVERED</strong> (Status (Precheck)) — but <code>Analysis: Waiting on Extraction</code></td>
+<td><code>[Insights §Status (Precheck)]</code> <code>[Insights §Analysis]</code></td>
+</tr>
+<tr>
+<td>EL status</td>
+<td><strong>Signed</strong> · Compliance Group Status <strong>Pending Check</strong></td>
+<td><code>[EL §Engagement Letter Status]</code> <code>[EL §Compliance Group Status]</code></td>
+</tr>
+<tr>
+<td>Deposit</td>
+<td><strong>Paid</strong> ✓</td>
+<td><code>[EL §Deposit Paid]</code></td>
+</tr>
+<tr>
+<td>Docusign</td>
+<td>Email Status: Delivered · Docusign Status: To Do</td>
+<td><code>[EL §Docusign]</code></td>
+</tr>
+<tr>
+<td>Engagement fee</td>
+<td><strong>$3,825</strong></td>
+<td><code>[EL §Price]</code></td>
+</tr>
+<tr>
+<td>Mango Engagement</td>
+<td>Project Created</td>
+<td><code>[EL §Mango Engagement/Project]</code></td>
+</tr>
+<tr>
+<td>Mango portal</td>
+<td><strong>Customer Accessed</strong> ✓</td>
+<td><code>[EL §Mango Portal Invite]</code></td>
+</tr>
+<tr>
+<td>Mango Tag</td>
+<td>PBC Request list</td>
+<td><code>[EL §Mango Tag]</code></td>
+</tr>
+<tr>
+<td>PBC list status</td>
+<td><strong>Received PBC items</strong></td>
+<td><code>[EL §PBC list status]</code></td>
+</tr>
+<tr>
+<td>PBC list email</td>
+<td>None sent</td>
+<td><code>[EL §PBC list Email]</code></td>
+</tr>
+<tr>
+<td>Open Items Email</td>
+<td><strong>Sent</strong> (2026-03-10)</td>
+<td><code>[EL §Date EXT EMAIL sent]</code> <code>[EL §Open items Status]</code></td>
+</tr>
+<tr>
+<td>Compliance Status (Tax Ascend)</td>
+<td>Open Items List - email sent</td>
+<td><code>[Tax Ascend §Compliance Status]</code></td>
+</tr>
+<tr>
+<td>Planning Status</td>
+<td>New Client GC</td>
+<td><code>[Tax Ascend §Planning Status]</code></td>
+</tr>
+<tr>
+<td>Mango Compliance Engagement</td>
+<td>To check</td>
+<td><code>[Tax Ascend §Mango Compliance Engagement]</code></td>
+</tr>
+<tr>
+<td>Linking status</td>
+<td>Complete</td>
+<td><code>[Tax Ascend §Linking status]</code></td>
+</tr>
+<tr>
+<td>Batch Added</td>
+<td>2026-02-24</td>
+<td><code>[EL §date:Batch Added:start]</code></td>
+</tr>
+<tr>
+<td>Tax Ascend tracker note</td>
+<td>"added to tracker 03/13. Not added from New Client GC. Added from Mango Compliance Project"</td>
+<td><code>[Tax Ascend §notes]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="principal-at-a-glance">Principal at a glance</h3>
+<ul>
+<li><strong>Becky Mead</strong> — primary contact + only contact on file <code>[Contact:Becky Mead]</code></li>
+<li>Email: <strong>becky.mead@1sourcetitle.com</strong> (employer/professional address — 1Source Title) — note this is the only contact email; no personal email captured <code>[Contact:Becky Mead §Email]</code></li>
+<li>Phone: <em>(empty)</em> <code>[Contact:Becky Mead §Phone]</code></li>
+<li>Portal Access: <strong>NO</strong> ❌ — no Mango portal access flagged on the contact record despite the EL showing <code>Customer Accessed</code>. Possibly captured under a different contact or the Account-level Mango invite vs. portal-access fields are inconsistent. Plumbing flag → §7. <code>[Contact:Becky Mead §Portal Access]</code> <code>[EL §Mango Portal Invite]</code></li>
+<li>Role: <em>(empty)</em> <code>[Contact:Becky Mead §Role]</code></li>
+<li>Filing status: not stated — TAX COMPLIANCE engagement defaults imply 1040; single-principal Account name suggests single filer; <strong>confirm on next refresh</strong> <code>[Tax Ascend §TAX ASCEND TYPE]</code></li>
+<li><strong>1Source Title context.</strong> The <code>1sourcetitle.com</code> email domain implies Becky works in the title-insurance / closing-services industry. Likely industry context for any future planning conversations (real-estate-adjacent earnings, possible commission income, possible 1099 vs W-2 question). <strong>Not yet validated on file.</strong> <code>[Contact:Becky Mead §Email]</code></li>
+</ul>
+<hr>
+<h2 id="3-email-intelligence">§3. Email Intelligence</h2>
+<p><strong>0 email threads on Account, 0 Email Log relations populated.</strong> No <code>📧 Email Intelligence</code> subpage. Notion-search workspace queries against "Becky Mead" / "Mead" / <code>becky.mead</code> returned <strong>zero Client Email Log hits</strong> (the search results that came back were for unrelated clients like Tate Cline, Brett Zanotto, Jeremy Lee, etc.). <code>[Notion search:Client Email Log]</code></p>
+<p><strong>Adjacent artifacts found via the EL row (not the Email Log):</strong>
+- <strong>Outlook Email Msg</strong> attachment on EL: <code>Becky_Mead.msg</code> (1 file) — handoff message; not synthesized as a thread <code>[EL §Outlook Email Msg]</code>
+- <strong>Open Items Email</strong>: <code>Becky_Meade_-_Open_Items.msg</code> attached to the EL row twice (once as <code>Ext Email Sent</code>, once embedded in page content) — sent 2026-03-10 per <code>Date EXT EMAIL sent</code> <code>[EL §Ext Email Sent]</code> <code>[EL §date:Date EXT EMAIL sent:start]</code>
+- <strong>Email subject patterns</strong> (inferred from filenames): <code>Becky Meade - Open Items</code> ← note the spelling <strong>"Meade"</strong> on the open-items filename vs <strong>"Mead"</strong> on the Account name; could be a transcription delta or could indicate the client uses "Meade" socially. Cross-check on next refresh. <code>[EL §Ext Email Sent]</code></p>
+<p><strong>Plumbing gap</strong> → §7 Action: backfill Client Email Log via Outlook scan against <code>becky.mead@1sourcetitle.com</code> patterns; check whether Make.com email-capture scenarios are wired against <code>1sourcetitle.com</code> domain; verify <code>Becky Mead</code> vs <code>Becky Meade</code> aliasing.</p>
+<p><strong>Cadence note.</strong> Without an Email Log feed, the only outbound email evidence is the 2026-03-10 Open Items send. No reply captured on file. <strong>48 days elapsed</strong> between Open Items send (2026-03-10) and refresh date (2026-04-22) — past the typical 2-week PBC follow-up window. Promote to §7 follow-up nudge.</p>
+<hr>
+<h2 id="4-meeting-history">§4. Meeting History</h2>
+<p><strong>1 meeting on file — status Pending.</strong> Append-only on next refresh.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Time (EST)</th>
+<th>Status</th>
+<th>Recap</th>
+<th>Restricted</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2025-10-02</strong></td>
+<td>Rescoping</td>
+<td>n/a</td>
+<td>Pending ⏳</td>
+<td><em>(empty)</em></td>
+<td>No</td>
+<td><code>[Meeting 2026-03-31 row]</code> <code>[2fb49172875180ec…]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cadence note.</strong> A single Rescoping meeting from <strong>October 2025</strong> sitting in <strong>Pending</strong> status with no recap and no NOTES is unusual:
+- Either the meeting <strong>never actually happened</strong> and the row is stale (likely, given the Insights project subsequently progressed all the way to DELIVERED without a Rescoping intervention)
+- Or it happened informally and was never logged with a Fathom/Fellow recap
+- Either way, the row should be either <strong>closed</strong> (mark Done, attach a recap if any), <strong>deleted</strong> (if stale placeholder), or <strong>rescheduled</strong> (if scope is genuinely re-opening) — flag for §7</p>
+<p><strong>Restricted flag</strong>: 0/1 meetings restricted.
+<strong>Recap coverage</strong>: 0/1 meetings have recap URLs (gap).</p>
+<hr>
+<h2 id="5-document-inventory">§5. Document Inventory</h2>
+<h3 id="51-engagement-letter-compliance-pending-check-state">5.1 Engagement Letter (compliance — Pending Check state)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td><strong>Signed</strong> · Compliance Group Status: <strong>Pending Check</strong></td>
+<td><code>[EL §Engagement Letter Status]</code> <code>[EL §Compliance Group Status]</code></td>
+</tr>
+<tr>
+<td>Price</td>
+<td><strong>$3,825</strong></td>
+<td><code>[EL §Price]</code></td>
+</tr>
+<tr>
+<td>Deposit</td>
+<td><strong>Paid</strong> ✓</td>
+<td><code>[EL §Deposit Paid]</code></td>
+</tr>
+<tr>
+<td>Mangoshare signed EL</td>
+<td><a href="https://app.mangoshare.com/share/36a22a2464a2946f3897ba1d">app.mangoshare.com/share/36a22a2464a2946f3897ba1d</a></td>
+<td><code>[EL §Signed EL mangoshare]</code></td>
+</tr>
+<tr>
+<td>Newly Added</td>
+<td>Done</td>
+<td><code>[EL §Newly Added]</code></td>
+</tr>
+<tr>
+<td>Mango Engagement/Project</td>
+<td>Project Created</td>
+<td><code>[EL §Mango Engagement/Project]</code></td>
+</tr>
+<tr>
+<td>Mango Portal Invite</td>
+<td>Customer Accessed</td>
+<td><code>[EL §Mango Portal Invite]</code></td>
+</tr>
+<tr>
+<td>Mango Tag</td>
+<td>PBC Request list</td>
+<td><code>[EL §Mango Tag]</code></td>
+</tr>
+<tr>
+<td>PBC list status</td>
+<td>Received PBC items</td>
+<td><code>[EL §PBC list status]</code></td>
+</tr>
+<tr>
+<td>Open Items Email Status</td>
+<td><strong>Sent</strong></td>
+<td><code>[EL §Open items Status]</code></td>
+</tr>
+<tr>
+<td>Date EXT Email sent</td>
+<td><strong>2026-03-10</strong></td>
+<td><code>[EL §date:Date EXT EMAIL sent]</code></td>
+</tr>
+<tr>
+<td>Date PBC list sent</td>
+<td>2026-03-10</td>
+<td><code>[EL §date:Date PBC list sent]</code></td>
+</tr>
+<tr>
+<td>TAX PROPOSAL (SOW)</td>
+<td><strong>COMMITTED</strong></td>
+<td><code>[EL §TAX PROPOSAL]</code></td>
+</tr>
+<tr>
+<td>Entity Compliance services</td>
+<td>"No services ticked on signed EL" — flag, signed EL was missing entity-services check</td>
+<td><code>[EL §Entity Compliance services]</code></td>
+</tr>
+<tr>
+<td>Outlook Email attached</td>
+<td><code>Becky_Mead.msg</code></td>
+<td><code>[EL §Outlook Email Msg]</code></td>
+</tr>
+<tr>
+<td>Open Items msg attached</td>
+<td><code>Becky_Meade_-_Open_Items.msg</code></td>
+<td><code>[EL §Ext Email Sent]</code></td>
+</tr>
+<tr>
+<td>Notes (PBC OPEN ITEMS)</td>
+<td>"Seth - no PBC included with open items email, no PBC saved in onedrive ISSUE - no extraction found in folder Send email containing Temp PBC checklist from analysis file + mangoshare portal"</td>
+<td><code>[EL §Notes (PBC OPEN ITEMS)]</code></td>
+</tr>
+<tr>
+<td>TEMP FILTER</td>
+<td>"check 03/10"</td>
+<td><code>[EL §TEMP FILTER]</code></td>
+</tr>
+<tr>
+<td>check portal invite/assigned staff</td>
+<td><strong>03/16</strong></td>
+<td><code>[EL §check portal invite/assigned staff]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-insights-project-delivered-but-analysis-blocked">5.2 Insights Project (Delivered, but Analysis blocked)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status (Precheck)</td>
+<td><strong>DELIVERED</strong> ✓</td>
+<td><code>[Insights §Status (Precheck)]</code></td>
+</tr>
+<tr>
+<td>Status (Tax Insights)</td>
+<td>Not started</td>
+<td><code>[Insights §Status (Tax Insights)]</code></td>
+</tr>
+<tr>
+<td>Insights</td>
+<td>Delivered</td>
+<td><code>[Insights §Insights]</code></td>
+</tr>
+<tr>
+<td>Analysis</td>
+<td><strong>Waiting on Extraction</strong> ⚠️</td>
+<td><code>[Insights §Analysis]</code></td>
+</tr>
+<tr>
+<td>Next Scheduled Call</td>
+<td>Delivery Call</td>
+<td><code>[Insights §Next Scheduled Call]</code></td>
+</tr>
+<tr>
+<td>Mango Status</td>
+<td>To Check</td>
+<td><code>[Insights §Mango Status]</code></td>
+</tr>
+<tr>
+<td>Accelo Status</td>
+<td>To Check Accelo</td>
+<td><code>[Insights §Accelo Status]</code></td>
+</tr>
+<tr>
+<td>Checked (Tax Team)</td>
+<td>NO</td>
+<td><code>[Insights §Checked (Tax Team)]</code></td>
+</tr>
+<tr>
+<td>Temp Filter</td>
+<td>"Piah to do - extraction and analysis meeting recap 04/29"</td>
+<td><code>[Insights §Temp Filter]</code></td>
+</tr>
+<tr>
+<td>Relational DB Only</td>
+<td>"Relational DB only don't delete"</td>
+<td><code>[Insights §Relational DB Only]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading.</strong> The combo of <code>Status (Precheck): DELIVERED</code> + <code>Status (Tax Insights): Not started</code> + <code>Analysis: Waiting on Extraction</code> suggests the <strong>Precheck</strong> stage was delivered (initial review of materials), but <strong>Tax Insights proper</strong> (the strategy memo) hasn't kicked off yet because the extraction file isn't done. Piah has a <strong>2026-04-29</strong> task to do the extraction + analysis meeting recap. <code>[Insights §Temp Filter]</code></p>
+<h3 id="53-files-links-db-rows-on-account-3-rows">5.3 Files &amp; Links DB rows on Account (3 rows)</h3>
+<table>
+<thead>
+<tr>
+<th>Row ID</th>
+<th>Name</th>
+<th>Populated fields</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>33b491728751816aad88fb5208f0d347</code></td>
+<td>Engagement Letter</td>
+<td><em>(all blank)</em></td>
+<td>Empty placeholder row</td>
+</tr>
+<tr>
+<td><code>33b491728751810f9ea9daf6981f96d7</code></td>
+<td>Executive Summary</td>
+<td><em>(all blank)</em></td>
+<td>Empty placeholder row</td>
+</tr>
+<tr>
+<td><code>33b49172875181109bbbe66734aadd9f</code></td>
+<td>"Becky Mead"</td>
+<td>Document Inventory + PBC PDF Package</td>
+<td>⚠️ <strong>URLs are byte-identical to Spring Bengtzen's AND Alex Dykes &amp; Mark Ferguson's same fields</strong> — same template-default issue confirmed across 3+ clients</td>
+</tr>
+</tbody>
+</table>
+<p><strong>System-wide flag (now confirmed by 3 datapoints)</strong> — same as Spring + Alex:
+- Document Inventory: <code>IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw</code> (Spring + Alex + Becky — identical) <code>[FL:Becky §Document Inventory]</code> <code>[FL:Spring §Document Inventory]</code> <code>[FL:Alex §Document Inventory]</code>
+- PBC PDF Package: <code>IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA</code> (Spring + Alex + Becky — identical)</p>
+<p><strong>This is a confirmed system-wide flag</strong> — not client-specific. With 3 of 3 reviewed clients exhibiting the exact same defaulted URLs, the Files &amp; Links DB has <strong>template-default URLs that were never per-client-customized</strong>. Likely affects every client in the queue. Promoted to §7 plumbing as Action #2 (was MED on Alex's dossier; now MED-HIGH given confirmed pattern across 3 clients).</p>
+<h3 id="54-documents-not-accessed-this-refresh">5.4 Documents not accessed this refresh</h3>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Where it should live</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PBC Workbook</strong> (xlsx)</td>
+<td>Account.PBC Workbook field</td>
+<td>empty ❌ — also flagged on EL row Notes ("no PBC saved in onedrive")</td>
+<td>Find via Mango portal <code>Customer Accessed</code> artifacts; ImagineTime workspace if Mango Client ID populates</td>
+</tr>
+<tr>
+<td><strong>Tax Extraction</strong> (1040)</td>
+<td>Account.Tax Extraction field + Insights Extraction File</td>
+<td>empty ❌ — EL Notes confirm "no extraction found in folder"</td>
+<td>Piah's 2026-04-29 task (per Insights Temp Filter)</td>
+</tr>
+<tr>
+<td><strong>Tax Planning Memo</strong></td>
+<td>Account.Tax Planning Memo field</td>
+<td>empty ❌</td>
+<td>Pending Tax Insights stage (currently "Not started")</td>
+</tr>
+<tr>
+<td><strong>SharePoint Drive</strong></td>
+<td>Account.SharePoint Drive field</td>
+<td>empty ❌</td>
+<td>Plumbing — sync from Files &amp; Links row if customized URLs ever land</td>
+</tr>
+<tr>
+<td><strong>Document Inventory</strong> (Account-level)</td>
+<td>Account.Document Inventory field</td>
+<td>empty ❌ — <strong>but Files &amp; Links row has the (templated) URL</strong></td>
+<td>Sync Files &amp; Links → Account top-level field once URL is real</td>
+</tr>
+<tr>
+<td><strong>Mango Client ID</strong></td>
+<td>Account.Mango Client ID field</td>
+<td>empty ❌</td>
+<td>Sync from Mango Compliance Project once <code>Mango Compliance Engagement: To check</code> is closed <code>[Tax Ascend]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-platforms-in-use">5.5 Platforms in use</h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>What lives there</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MangoShare</strong></td>
+<td>Signed EL (<code>/share/36a22a2464a2946f3897ba1d</code>) · client portal (Customer Accessed)</td>
+<td><code>[EL §Signed EL mangoshare]</code> <code>[EL §Mango Portal Invite]</code></td>
+</tr>
+<tr>
+<td><strong>Mango (firm)</strong></td>
+<td>Compliance Project Created · Mango Compliance Engagement still "To check" · Mango Client ID empty</td>
+<td><code>[EL §Mango Engagement/Project]</code> <code>[Tax Ascend §Mango Compliance Engagement]</code></td>
+</tr>
+<tr>
+<td><strong>SharePoint (seth_accruity OneDrive)</strong></td>
+<td>Document Inventory + PBC PDF Package folders linked on Files &amp; Links row — <strong>but URLs are template-defaults shared with other clients</strong></td>
+<td><code>[FL:Becky §Document Inventory]</code></td>
+</tr>
+<tr>
+<td><strong>Outlook</strong></td>
+<td><code>Becky_Mead.msg</code> (handoff) · <code>Becky_Meade_-_Open_Items.msg</code> (open items) — both attached to EL row</td>
+<td><code>[EL §Outlook Email Msg]</code> <code>[EL §Ext Email Sent]</code></td>
+</tr>
+<tr>
+<td><strong>Accelo</strong></td>
+<td>Status: To Check Accelo (Insights row)</td>
+<td><code>[Insights §Accelo Status]</code></td>
+</tr>
+<tr>
+<td><strong>Notion</strong></td>
+<td>Account record · 3 Files &amp; Links rows · 1 EL row · 1 Insights row · 1 Tax Ascend row · 1 Meetings Tracker row · 1 Exec Summary row · 1 Primary Contact</td>
+<td>this dossier</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-claude-work-product">§6. Claude Work Product</h2>
+<p><strong>0 prior Claude Summaries on file</strong> for Becky Mead. Notion-search across Claude Summaries DB returned only other-client refreshes (Alex, Tommy, Aidan, Tate, Spring) — none for Becky. <code>[Notion search:Claude Summaries]</code></p>
+<p><strong>0 Claude Activity Log rows</strong> tied to the Account (search returned no Becky-Mead-tied Activity Log entries). <code>[Notion search:Claude Activity Log]</code></p>
+<p><strong>This Claude Summary</strong> (the one being created for this refresh) will be the <strong>first</strong> Claude Summary on file for Becky Mead. Logged in §11 plan_turn_progress.</p>
+<hr>
+<h2 id="7-action-items">§7. Action Items</h2>
+<p><strong>Scope of this refresh:</strong> Aggregates open / in-progress action items discovered across §3 Email Intelligence, §4 Meeting History pending row cleanup, §5 Document Inventory plumbing flags, the Engagement Letter tracker notes, the Insights Project tracker notes, the Tax Ascend tracker, and dossier-gen system-wide flags. <strong>Append-only</strong> on subsequent refreshes.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Owner</th>
+<th>Severity</th>
+<th>Source</th>
+<th>Date Flagged</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Follow up on 2026-03-10 Open Items Email</strong> — 48 days elapsed since send, no client response captured. Confirm whether Becky has responded via portal or email; if not, send nudge.</td>
+<td>Accruity (Seth/staff)</td>
+<td>🟡 MED</td>
+<td><code>[EL §Date EXT EMAIL sent]</code> <code>[EL §Open items Status]</code></td>
+<td>2026-04-22 (this refresh)</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>System-wide check (CONFIRMED across 3 clients): the Files &amp; Links 'Document Inventory' + 'PBC PDF Package' URLs are byte-identical on Spring + Alex + Becky.</strong> Template defaults across all clients — investigate full scope and remediate. Was MED on Alex's first flag; upgrade to MED-HIGH on confirmation.</td>
+<td>Accruity ops</td>
+<td>🟠 MED-HIGH (data integrity)</td>
+<td><code>[FL:Becky]</code> <code>[FL:Spring]</code> <code>[FL:Alex]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open · system-wide</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Resolve Compliance Group Status = "Pending Check"</strong> — the EL is Signed, deposit paid, portal accessed, but the compliance status hasn't moved past Pending Check. Tracker has <code>check portal invite/assigned staff: 03/16</code> and <code>TEMP FILTER: check 03/10</code> markers — both dates are now past.</td>
+<td>Jane / staff</td>
+<td>🟡 MED</td>
+<td><code>[EL §Compliance Group Status]</code> <code>[EL §check portal invite/assigned staff]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Produce 1040 extraction</strong> — EL note says "no extraction found in folder"; Insights <code>Analysis: Waiting on Extraction</code>; Piah has 2026-04-29 task per Insights Temp Filter</td>
+<td>Piah</td>
+<td>🟡 MED</td>
+<td><code>[EL §Notes (PBC OPEN ITEMS)]</code> <code>[Insights §Analysis]</code> <code>[Insights §Temp Filter]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open · scheduled 04/29</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Locate / save PBC artifact</strong> — EL note: "no PBC included with open items email, no PBC saved in onedrive ISSUE". Workaround was to "Send email containing Temp PBC checklist from analysis file + mangoshare portal" — confirm completion.</td>
+<td>Seth / staff</td>
+<td>🟡 MED</td>
+<td><code>[EL §Notes (PBC OPEN ITEMS)]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Close out the 2025-10-02 "Rescoping" Pending meeting row</strong> — either mark Done (with recap if any), delete (if stale placeholder), or reschedule. Currently 200+ days stale with no recap and no notes.</td>
+<td>Accruity ops</td>
+<td>🟢 LOW</td>
+<td><code>[Meeting 2025-10-02]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Fix entity-services tick on signed EL</strong> — Entity Compliance services field reads "No services ticked on signed EL". For a TAX COMPLIANCE engagement either (a) only 1040 is intended (correct as-is) or (b) the EL omitted entity scope and should be amended. Confirm scope with Becky.</td>
+<td>Seth / staff</td>
+<td>🟢 LOW</td>
+<td><code>[EL §Entity Compliance services]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Sync Mango Client ID to Account record</strong> — Account.Mango Client ID is empty; Tax Ascend row says <code>Mango Compliance Engagement: To check</code>. Once Mango Compliance Project is confirmed, populate the Account top-level Mango Client ID field.</td>
+<td>Accruity ops</td>
+<td>🟢 LOW (plumbing)</td>
+<td><code>[Accounts §Mango Client ID]</code> <code>[Tax Ascend §Mango Compliance Engagement]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Reconcile Mango portal access flag</strong> — Account-level EL says <code>Mango Portal Invite: Customer Accessed</code>, but <code>Primary Contact: Becky Mead</code> has <code>Portal Access: NO</code>. Pick the source of truth.</td>
+<td>Accruity ops</td>
+<td>🟢 LOW (plumbing)</td>
+<td><code>[EL §Mango Portal Invite]</code> <code>[Contact:Becky Mead §Portal Access]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Backfill Client Email Log for Becky</strong> — 0 entries on Account; Outlook has at least 2 .msg artifacts attached to the EL row. Verify Make.com email-capture scenario coverage for <code>becky.mead@1sourcetitle.com</code> and <code>1sourcetitle.com</code> domain. <strong>Do not touch Make scenarios — read-only check only.</strong></td>
+<td>Accruity ops</td>
+<td>🟢 LOW (plumbing)</td>
+<td><code>[EL §Outlook Email Msg]</code> <code>[Notion search:Client Email Log]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Verify "Mead" vs "Meade" name aliasing</strong> — Account name is <code>Becky Mead</code>; Open-Items email file is <code>Becky_Meade_-_Open_Items.msg</code>. Could be transcription delta or actual client preference.</td>
+<td>Accruity ops</td>
+<td>🟢 LOW</td>
+<td><code>[EL §Ext Email Sent]</code> <code>[Accounts]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Cross-check Piah's 2026-04-29 task</strong> — Insights Temp Filter reads "Piah to do - extraction and analysis meeting recap 04/29". On next refresh confirm whether 04/29 task closed.</td>
+<td>Accruity ops</td>
+<td>🟢 LOW</td>
+<td><code>[Insights §Temp Filter]</code></td>
+<td>2026-04-22</td>
+<td>🔴 Open</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-tax-strategies">§8. Tax Strategies</h2>
+<p><strong>Strategy slate — Becky Mead.</strong> Tax Insights (the strategy-memo stage) has not started yet (<code>Status (Tax Insights): Not started</code>); only Precheck has delivered. As a result this dossier carries <strong>no client-specific strategy recommendations</strong> — they will populate once the Tax Insights deliverable is produced. <code>[Insights §Status (Tax Insights)]</code></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Strategy</th>
+<th>Status</th>
+<th>Notes</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(Tax Insights memo strategies)</td>
+<td>⏳ Pending Insights stage</td>
+<td>Insights Status (Precheck): DELIVERED, but Tax Insights proper is "Not started"; analysis waiting on extraction</td>
+<td><code>[Insights]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1040 compliance prep</td>
+<td>🟡 In progress</td>
+<td>EL signed/deposit paid; PBC items received per tracker (but EL Notes contradict — say no PBC saved). Ext Email sent 2026-03-10.</td>
+<td><code>[EL]</code> <code>[Tax Ascend]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pending workbook ingestion.</strong> No <code>$</code> planning numbers can be cited yet — 1040 extraction not complete, Tax Insights memo not produced. All planning estimates flagged <code>? Pending workbook ingestion</code> per hard rule #6.</p>
+<hr>
+<h2 id="9-opportunity-flags-rule-based">§9. Opportunity Flags (rule-based)</h2>
+<p><strong>Cost Seg classifier.</strong> Not triggered — no real-estate-entity reporting entities on file (0 Reporting Entities linked); no Schedule E or rental-property indicators in the available sidecars. <strong>However, the email domain <code>1sourcetitle.com</code> (1Source Title)</strong> suggests potential title-industry adjacency — could surface real-estate ownership in the Tax Insights memo. <strong>Flag on watch list, not actionable today.</strong> <code>[Contact:Becky Mead §Email]</code></p>
+<p><strong>S-Corp classifier.</strong> Not triggered — no business-entity Reporting Entities on file; engagement is <code>TAX COMPLIANCE</code> (defaults to 1040); no W-2 / Schedule C indicators yet. <strong>Flag on watch list pending Tax Insights memo and PBC review.</strong></p>
+<p><strong>1Source Title industry note.</strong> If Becky is an officer or significant shareholder of 1Source Title (vs. a W-2 employee), the S-Corp + reasonable-comp + accountable-plan playbook becomes relevant. Cannot confirm from available data — gated on PBC review.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Flag</th>
+<th>Trigger</th>
+<th>Status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Cost Seg eligibility</td>
+<td>No Reporting Entities; insufficient data</td>
+<td>🟢 watch</td>
+<td><code>[Notion search:Reporting Entities]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>S-Corp eligibility</td>
+<td>No business entities; insufficient data</td>
+<td>🟢 watch</td>
+<td><code>[Tax Ascend §TAX ASCEND TYPE]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Title-industry adjacency (1Source Title employer)</td>
+<td><code>becky.mead@1sourcetitle.com</code> domain — possible real-estate / closing-services exposure</td>
+<td>🟡 to investigate during Tax Insights memo</td>
+<td><code>[Contact:Becky Mead §Email]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>New-Client GC pipeline ✓</td>
+<td>Tax Ascend <code>TAX ASCEND TYPE: TAX COMPLIANCE</code> + <code>Planning Status: New Client GC</code></td>
+<td>🟢 confirmed enrolled</td>
+<td><code>[Tax Ascend]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="10-operations-analysis">§10. Operations Analysis</h2>
+<p><strong>Engagement throughput.</strong> Becky Mead onboarded onto the Tax Ascend track between <strong>2026-02-24</strong> (<code>Batch Added</code> on EL) and <strong>2026-03-10</strong> (Open Items Email + PBC list emails sent). Insights project ran in parallel — Status (Precheck) reached <code>DELIVERED</code> per Insights Project Status. The compliance side has been <strong>stuck at "Pending Check" for ~6 weeks</strong> as of refresh date (2026-04-22), with the gating issues being (a) no PBC artifact saved to OneDrive despite <code>PBC list status: Received PBC items</code>, and (b) no 1040 extraction file. <code>[EL §date:Batch Added:start]</code> <code>[EL §date:Date EXT EMAIL sent:start]</code> <code>[Insights §Status (Precheck)]</code></p>
+<p><strong>Tooling stack.</strong> MangoShare for signed-EL repository (<code>/share/36a22a2464a2946f3897ba1d</code>) and client portal (Customer Accessed). Mango (firm) for Compliance Project (Project Created) — but Mango Client ID still empty on Account record. SharePoint (seth_accruity OneDrive) for Document Inventory and PBC PDF Package — <strong>but the URLs on the Files &amp; Links row are template defaults shared with Spring + Alex, so they don't actually point to Becky-specific folders</strong>. Outlook for handoff <code>.msg</code> and Open-Items <code>.msg</code> (attached to EL row, not synthesized into Email Log). Accelo: status <code>To Check Accelo</code>. <code>[FL:Becky]</code> <code>[EL]</code></p>
+<p><strong>Process gaps observed.</strong>
+1. <strong>PBC artifact handling inconsistency.</strong> EL row shows <code>PBC list status: Received PBC items</code> (positive), yet the same row's Notes say "no PBC included with open items email, no PBC saved in onedrive ISSUE." Two contradictory data points on the same record. <code>[EL §PBC list status]</code> <code>[EL §Notes (PBC OPEN ITEMS)]</code>
+2. <strong>Stale Pending meeting</strong> (2025-10-02 Rescoping, no recap, 200+ days stale).
+3. <strong>Email Log empty</strong> on a client where Outlook .msg artifacts are confirmed to exist on the EL row — Make scenario coverage gap suspected.
+4. <strong>Mango Client ID empty on Account</strong> despite Mango Compliance Project being created.
+5. <strong>Files &amp; Links template-default URLs</strong> (system-wide, now confirmed across 3 clients).</p>
+<p><strong>Observed temperature.</strong> Action-pending on the client side. No Accruity-side blockers tagged HIGH; staff dependencies (Piah 04/29 extraction task, Jane on Compliance Group Status check) are scheduled.</p>
+<hr>
+<h2 id="11-individual-profile">§11. Individual Profile</h2>
+<h3 id="111-becky-mead">11.1 Becky Mead</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role on Account</td>
+<td>Primary Contact (and only contact on file)</td>
+<td><code>[Contact:Becky Mead §Contact Type]</code></td>
+</tr>
+<tr>
+<td>Email</td>
+<td>becky.mead@1sourcetitle.com</td>
+<td><code>[Contact:Becky Mead §Email]</code></td>
+</tr>
+<tr>
+<td>Phone</td>
+<td><em>(empty)</em></td>
+<td><code>[Contact:Becky Mead §Phone]</code></td>
+</tr>
+<tr>
+<td>Portal Access flag</td>
+<td>NO (per Contact record) — but EL says Mango Portal Invite: Customer Accessed</td>
+<td><code>[Contact:Becky Mead §Portal Access]</code> <code>[EL §Mango Portal Invite]</code></td>
+</tr>
+<tr>
+<td>Employer (inferred from email domain)</td>
+<td>1Source Title (<code>1sourcetitle.com</code>) — title-insurance / closing-services industry</td>
+<td><code>[Contact:Becky Mead §Email]</code></td>
+</tr>
+<tr>
+<td>Filing status</td>
+<td>not stated — single-principal Account, TAX COMPLIANCE engagement default implies 1040</td>
+<td><code>[Tax Ascend §TAX ASCEND TYPE]</code></td>
+</tr>
+<tr>
+<td>Notion Contact ID</td>
+<td><code>30d491728751819cba2dfe80f5441ec7</code></td>
+<td><code>[Contact:Becky Mead]</code></td>
+</tr>
+<tr>
+<td>Contact userDefined:ID</td>
+<td>138</td>
+<td><code>[Contact:Becky Mead §userDefined:ID]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Narrative.</strong> Becky Mead is the single principal on this Account. Her professional email at <code>1sourcetitle.com</code> is the only contact address on file — no personal email, no phone, no role description. The EL was signed and the deposit paid before the typical onboarding cycle would have produced a richer contact profile, suggesting Becky is a <strong>lower-touch / async-preferred client</strong> who completed handoff via portal + email rather than via discovery calls. The 2025-10-02 Rescoping meeting on the Meetings Tracker never produced a recap, supporting the async-preferred read.</p>
+<p>The 1Source Title employer signal is the most actionable narrative input for the Tax Insights memo when it eventually generates. Title-industry employees often have:
+- Variable commission/bonus components → withholding-tuning opportunities
+- Real-estate adjacency → potential side-investment property income
+- Possible licensing/CE deductions
+- (less common) ownership stake → S-corp or 1099 vs W-2 questions</p>
+<p>None of these are confirmed on file — they are watchlist hypotheses to validate against the 1040 extraction once Piah produces it.</p>
+<hr>
+<h2 id="12-provenance-index">§12. Provenance Index</h2>
+<p>Source-tag legend used inline above. Each tag points to a Notion record or a search performed during this refresh.</p>
+<h3 id="121-account-record">12.1 Account record</h3>
+<ul>
+<li><code>[Accounts]</code> / <code>[Accounts:Becky Mead]</code> — <a href="https://www.notion.so/30d4917287518117a499d55acbb92fda">notion.so/30d491728751…fda</a> (Accounts collection <code>8668d5ca-…</code>)</li>
+<li><code>[Accounts §Client #]</code> — <code>02251304-01</code></li>
+<li><code>[Accounts §Mango Client ID]</code> — empty</li>
+<li><code>[Accounts §ancestor-path]</code> — Seth's Account Hub &gt; Main Databases &gt; Accounts</li>
+</ul>
+<h3 id="122-primary-contact">12.2 Primary Contact</h3>
+<ul>
+<li><code>[Contact:Becky Mead]</code> — <a href="https://www.notion.so/30d491728751819cba2dfe80f5441ec7">notion.so/30d491728751…1ec7</a> (Client Contacts collection <code>59baafd4-…</code>)</li>
+<li><code>[Contact:Becky Mead §Email]</code> — <code>becky.mead@1sourcetitle.com</code></li>
+<li><code>[Contact:Becky Mead §Contact Type]</code> — Primary</li>
+<li><code>[Contact:Becky Mead §Portal Access]</code> — NO</li>
+<li><code>[Contact:Becky Mead §userDefined:ID]</code> — 138</li>
+</ul>
+<h3 id="123-engagement-letter-tracker">12.3 Engagement Letter (Tracker)</h3>
+<ul>
+<li><code>[EL]</code> / <code>[EL:Becky Mead]</code> — <a href="https://www.notion.so/30a4917287518042b58dfe1718087bf2">notion.so/30a491728751…7bf2</a> (ENGAGEMENT LETTERS TRACKER <code>2ef49172-…</code>)</li>
+<li>All §EL-prefixed sub-tags throughout the dossier reference fields on this page</li>
+</ul>
+<h3 id="124-insights-project">12.4 Insights Project</h3>
+<ul>
+<li><code>[Insights]</code> / <code>[Insights:Becky Mead]</code> — <a href="https://www.notion.so/329491728751809d8ec5f2b10f207ed1">notion.so/329491728751…7ed1</a> (Insights Project Status <code>2f549172-…</code>)</li>
+</ul>
+<h3 id="125-tax-ascend">12.5 Tax Ascend</h3>
+<ul>
+<li><code>[Tax Ascend]</code> / <code>[Tax Ascend:Becky Mead]</code> — <a href="https://www.notion.so/32249172875180daa75eda29b0ccb055">notion.so/32249172875180…b055</a> (Tax Ascend <code>2f049172-…</code>)</li>
+</ul>
+<h3 id="126-files-links-rows-3">12.6 Files &amp; Links rows (3)</h3>
+<ul>
+<li><code>[FL:Becky 33b…dd9f]</code> / <code>[FL:Becky §Document Inventory]</code> / <code>[FL:Becky §PBC PDF Package]</code> — <a href="https://www.notion.so/33b49172875181109bbbe66734aadd9f">notion.so/33b491728751…dd9f</a></li>
+<li>Document Inventory URL: <code>subledgesl-my.sharepoint.com/.../IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw</code> ⚠️ <strong>same as Spring + Alex</strong></li>
+<li>PBC PDF Package URL: <code>subledgesl-my.sharepoint.com/.../IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA</code> ⚠️ <strong>same as Spring + Alex</strong></li>
+<li><code>[FL:Becky 33b…0347]</code> (Engagement Letter) — <a href="https://www.notion.so/33b491728751816aad88fb5208f0d347">notion.so/33b491728751…0347</a> (all fields blank)</li>
+<li><code>[FL:Becky 33b…96d7]</code> (Executive Summary) — <a href="https://www.notion.so/33b491728751810f9ea9daf6981f96d7">notion.so/33b491728751…96d7</a> (all fields blank)</li>
+<li><code>[FL:Spring §Document Inventory]</code> / <code>[FL:Alex §Document Inventory]</code> — cross-references for the URL-collision flag (system-wide template-default issue)</li>
+</ul>
+<h3 id="127-meetings-tracker">12.7 Meetings Tracker</h3>
+<ul>
+<li><code>[Meeting 2025-10-02]</code> / <code>[2fb49172875180ec…]</code> — <a href="https://www.notion.so/2fb49172875180ec86c7f8bf8f2fe334">notion.so/2fb491728751…e334</a> (MEETINGS TRACKER <code>2fb49172-…</code>) · Type: Rescoping · Status: Pending · Recap: empty</li>
+</ul>
+<h3 id="128-executive-summary-db-row-existing">12.8 Executive Summary DB row (existing)</h3>
+<ul>
+<li><code>[ExecSumm:Becky Mead]</code> — <a href="https://www.notion.so/33b4917287518127a321e0abc2e264b4">notion.so/33b491728751…64b4</a> (Executive Summaries <code>44d6ebf0-…</code>) · Summary Type: General · all summary properties empty pre-refresh</li>
+</ul>
+<h3 id="129-negative-searches-zero-results-important-to-note-as-gaps-not-absence-of-search">12.9 Negative searches (zero results — important to note as gaps, not absence-of-search)</h3>
+<ul>
+<li><code>[Notion search:Client Email Log]</code> — searched workspace + collection <code>d601d9ff-…</code> for "Becky Mead" / "Mead" / "becky.mead" → <strong>0 results tied to this Account</strong></li>
+<li><code>[Notion search:Engagement Inquiries]</code> — searched collection <code>7d71d896-…</code> → <strong>0 results</strong></li>
+<li><code>[Notion search:Claude Summaries]</code> — searched collection <code>86dca8a4-…</code> → <strong>0 results</strong> for Becky (only other clients' refreshes returned)</li>
+<li><code>[Notion search:Claude Activity Log]</code> — searched collection <code>f9cc7d05-…</code> → <strong>0 results</strong></li>
+<li><code>[Notion search:Reporting Entities]</code> — searched collection <code>9c91286b-…</code> → <strong>0 results</strong></li>
+<li><code>[Notion search:Meeting Action Items]</code> — collection <code>3cc53615-…</code> → <strong>0 results</strong> (workspace-level rate-limit hit; cross-checked via Account-page link list which contains no Meeting Action Items relations)</li>
+</ul>
+<h3 id="1210-cross-client-references">12.10 Cross-client references</h3>
+<ul>
+<li><code>[FL:Spring §Document Inventory]</code> — <a href="https://github.com/smj1058/1040-comprehnensive/blob/claude/update-exec-summary-notion-118m7/dossiers/SpringBengtzen/dossier.md">Spring's dossier §5</a></li>
+<li><code>[FL:Alex §Document Inventory]</code> — <a href="https://github.com/smj1058/1040-comprehnensive/blob/claude/update-exec-summary-notion-118m7/dossiers/AlexDykesMarkFerguson/dossier.md">Alex's dossier §5</a></li>
+</ul>
+<hr>
+<h2 id="13-changed-since-last-refresh">§13. Changed Since Last Refresh</h2>
+<p><strong>First refresh — no prior dossier exists for Becky Mead.</strong> This is the baseline.</p>
+<p>Headline state captured at this refresh:
+1. Insights Project — Status (Precheck): DELIVERED · Status (Tax Insights): Not started · Analysis: Waiting on Extraction
+2. Engagement Letter — Signed · Compliance Group Status: Pending Check · $3,825 · Deposit Paid · Mango Portal Customer Accessed · Open Items Email sent 2026-03-10
+3. Tax Ascend — TAX COMPLIANCE (New Client GC) · Linking status: Complete · Mango Compliance Engagement: To check
+4. Meetings — 1 row, Pending Rescoping dated 2025-10-02, no recap, stale 200+ days
+5. Email Log — empty (gap)
+6. Files &amp; Links — 3 rows, 1 with templated URLs (URL-collision system-wide flag confirmed across Spring + Alex + Becky), 2 blank placeholders
+7. Reporting Entities — none on file (single-principal 1040 default expected)
+8. Open dossier-gen flags: 12 action items in §7 (1 MED-HIGH system-wide, 4 MED, 7 LOW)</p>
+<p><strong>Net:</strong> Action-pending client (ball is with Becky for Open Items reply). Two staff items scheduled (Piah 04/29 extraction; Jane 03/16 portal/staff check — past-due). One system-wide data-integrity flag promoted (Files &amp; Links template-default URLs, now confirmed across 3 clients).</p>
+<hr>
+<p><em>Dossier prepared 2026-04-22 · Becky Mead · MEDIUM depth · single-Write generation · branch <code>claude/update-exec-summary-notion-118m7</code></em></p>
+<div class="footer">Internal working document — Accruity. Rendered from <code>dossiers/BeckyMead/dossier.md</code>.</div>
+</body>
+</html>

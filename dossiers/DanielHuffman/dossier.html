@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DanielHuffman — Client Intelligence Dossier</title>
+
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 30px 40px; color: #24292e; line-height: 1.6; }
+  h1, h2, h3, h4 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin-top: 1.5em; }
+  h1 { font-size: 2em; }  h2 { font-size: 1.5em; }  h3 { font-size: 1.25em; }  h4 { font-size: 1em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #dfe2e5; padding: 6px 13px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  code { background: rgba(27,31,35,.05); padding: .2em .4em; border-radius: 3px; font-family: SFMono-Regular, Menlo, monospace; font-size: 85%; }
+  pre code { display: block; padding: 16px; overflow: auto; }
+  blockquote { border-left: 4px solid #dfe2e5; padding: 0 1em; color: #6a737d; margin: 1em 0; }
+  a { color: #0366d6; text-decoration: none; }  a:hover { text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #e1e4e8; margin: 24px 0; }
+  ul, ol { padding-left: 2em; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: .85em; color: #6a737d; }
+</style>
+
+</head>
+<body>
+<h1 id="daniel-huffman-client-intelligence-dossier">Daniel Huffman — Client Intelligence Dossier</h1>
+<p><strong>Internal Working Document — Accruity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Daniel Huffman</td>
+</tr>
+<tr>
+<td>Client #</td>
+<td>— (not populated on Account record)</td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td><strong>1900412</strong> (Tax Compliance Projects record)</td>
+</tr>
+<tr>
+<td>Mango Project</td>
+<td>1040- Daniel Huffman · 1065- K&amp;D Management</td>
+</tr>
+<tr>
+<td>Prepared by</td>
+<td>Accruity Tax Advisory</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-05-07</td>
+</tr>
+<tr>
+<td>Prior Refresh</td>
+<td>first run</td>
+</tr>
+<tr>
+<td>Depth mode</td>
+<td><strong>Medium</strong> — EL signed, 1 meeting, Insights delivered, active compliance in progress; no email log, no Tax Ascend row, no Reporting Entities</td>
+</tr>
+<tr>
+<td>Engagement Stage</td>
+<td>Tax Compliance — 1040 (extended to 2026-10-15) + possible 1065 (K&amp;D Management)</td>
+</tr>
+<tr>
+<td>Engagement Fee</td>
+<td><strong>$3,925</strong> (compliance EL signed 2026-03-30)</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Active but stalled — extension filed, PBC items not yet received; IRS transcript needed; outsourcing prep "not yet received"</td>
+</tr>
+<tr>
+<td>Relationship Manager</td>
+<td>Seth Johnson / Deontae Lafayette (billing partner)</td>
+</tr>
+<tr>
+<td>Primary Contact</td>
+<td>(not populated on Account record)</td>
+</tr>
+<tr>
+<td>Data Sources (this refresh)</td>
+<td>Notion Accounts record · 1 Engagement Letter (Signed) · 1 Insights Project record · 1 Meetings Tracker row · 3 Files &amp; Links rows · Tax Compliance Projects record (1040) · Extensions Status Tracker · Outsourcing Assignment Tracker · Mango Planning (old + new DB)</td>
+</tr>
+<tr>
+<td>Files NOT Accessible This Refresh</td>
+<td>PBC Workbook, Tax Extraction, Tax Planning Memo, Meeting Prep Notes — all empty on Account record; no Tax Ascend row; no Reporting Entities</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence:</strong> ✓ Confirmed · ~ Estimated · ? Pending
+<strong>Attribution:</strong> every non-obvious fact carries an inline source tag. See §12 Provenance Index.</p>
+<hr>
+<h2 id="1-executive-overview">§1. Executive Overview</h2>
+<p>Daniel Huffman is an Accruity <strong>Tax Compliance</strong> client engaged on a <strong>1040</strong> return for the 2024/2025 tax year, with a secondary Mango project for <strong>1065- K&amp;D Management</strong> suggesting a partnership interest. The engagement letter was signed on <strong>2026-03-30</strong> at a fee of <strong>$3,925</strong>, with deposit paid and an extension filed (extended due date <strong>2026-10-15</strong>). <code>[EL:Daniel Huffman]</code> <code>[TaxComp:1040 Daniel Huffman]</code></p>
+<p><strong>Current status — stalled on PBC items.</strong> As of late April 2026, PBC items have not been received (<code>PBC list status: Sent List nothing received yet</code>). Internal notes from Seth/Deontae indicate the client needs to send W-2s, 1099s, brokerage statements, and confirm whether 2024 was filed. A PBC request email was sent on <strong>2026-04-27</strong> (generic income-document request with IRS account setup instructions). The team needs an <strong>IRS transcript</strong> to assess the filing status of 2024 and remediate any issues. <code>[EL:Daniel Huffman §Notes (PBC OPEN ITEMS)]</code> <code>[EL:Daniel Huffman §PBC list status]</code></p>
+<p><strong>Extension lifecycle.</strong> Extension email sent <strong>2026-04-10</strong>; payment request sent <strong>2026-04-14</strong>; client responded and process is ongoing. <code>[Extensions:Daniel Huffman]</code></p>
+<p><strong>Outsourcing concern.</strong> The Outsourcing Assignment Tracker shows <strong>"No Mango Workspace — only found an old SOW in Greg Smith's workspace, no date of coverage."</strong> This is an operational gap: the 1040 prep cannot be assigned to an outsourced preparer until the workspace issue is resolved. <code>[Outsourcing:Daniel Huffman]</code></p>
+<p><strong>Entity complexity flag.</strong> The presence of a <strong>1065- K&amp;D Management</strong> Mango project on both the old and new Mango Planning databases signals Daniel has a partnership interest. The partnership entity is not yet reflected in Reporting Entities, and there is no Reporting Entities DB row linked to the Account. <code>[MangoPlanningOld:Daniel Huffman]</code> <code>[MangoPlanningNew:Daniel Huffman]</code></p>
+<p><strong>Insights project delivered.</strong> An Insights project exists and is status <code>DELIVERED</code> per the Insights tracker, but the Analysis and Extraction file fields are blank (<code>"Analysis: Waiting on Extraction"</code>), and no follow-up Tax Insights work is started. <code>[Insights:Daniel Huffman]</code></p>
+<p><strong>F&amp;L URL collision check.</strong> The three Files &amp; Links rows contain two shell rows (EL stub, Executive Summary stub) with all URL fields blank, and one main row with SharePoint Document Inventory and PBC PDF Package URLs that appear client-specific (unlike the Spring/Alex pattern). <strong>No collision detected this refresh.</strong> <code>[FL:Daniel Huffman §Document Inventory]</code> <code>[FL:Daniel Huffman §PBC PDF Package]</code></p>
+<hr>
+<h2 id="2-client-profile">§2. Client Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account name</td>
+<td>Daniel Huffman</td>
+<td>✓</td>
+<td><code>[Accounts:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Client #</td>
+<td>— (blank)</td>
+<td>❌</td>
+<td><code>[Accounts:Daniel Huffman.Client #]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td>1900412</td>
+<td>✓</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Mango projects</td>
+<td>1040- Daniel Huffman (active) · 1065- K&amp;D Management (active)</td>
+<td>✓</td>
+<td><code>[MangoPlanningOld:Daniel Huffman]</code> <code>[MangoPlanningNew:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>EL status</td>
+<td><strong>Signed</strong> · $3,925 · Batch added 2026-03-30 · Docusign Done</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Compliance Group Status</td>
+<td><strong>Declined</strong> ⚠️</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman §Compliance Group Status]</code></td>
+</tr>
+<tr>
+<td>Tax proposal</td>
+<td>COMMITTED</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman §TAX PROPOSAL]</code></td>
+</tr>
+<tr>
+<td>Docusign email status</td>
+<td>Delivered</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman §Docusign Email Status]</code></td>
+</tr>
+<tr>
+<td>Mango portal</td>
+<td>Portal Invite Sent · Project Created</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman §Mango Portal Invite]</code></td>
+</tr>
+<tr>
+<td>PBC list status</td>
+<td>Sent List nothing received yet</td>
+<td>⚠️</td>
+<td><code>[EL:Daniel Huffman §PBC list status]</code></td>
+</tr>
+<tr>
+<td>Open items status</td>
+<td>None Sent (as of EL row)</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman §Open items Status]</code></td>
+</tr>
+<tr>
+<td>Extension status</td>
+<td>Filed ✓ · Extended due 2026-10-15 · Extension email sent 2026-04-10</td>
+<td>✓</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code> <code>[Extensions:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Compliance correct status</td>
+<td>04 Internal WP Preparation</td>
+<td>✓</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Mango task</td>
+<td>04 Preparation (External)</td>
+<td>✓</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Review required</td>
+<td>No</td>
+<td>✓</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Preparer / Manager</td>
+<td>Deontae Lafayette</td>
+<td>✓</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>SOW (Mangoshare)</td>
+<td><a href="https://app.mangoshare.com/share/e37ffcb88b58f56aded14c74">app.mangoshare.com/share/e37ffcb88b58f56aded14c74</a></td>
+<td>✓</td>
+<td><code>[Outsourcing:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Entity services</td>
+<td>No services ticked on signed EL</td>
+<td>⚠️</td>
+<td><code>[EL:Daniel Huffman §Entity Compliance services]</code></td>
+</tr>
+<tr>
+<td>Insights project</td>
+<td>DELIVERED (analysis waiting on extraction)</td>
+<td>~</td>
+<td><code>[Insights:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Tax Ascend row</td>
+<td><strong>None found</strong></td>
+<td>❌</td>
+<td>No match in Tax Ascend DB</td>
+</tr>
+<tr>
+<td>Reporting Entities</td>
+<td><strong>None linked</strong> to Account</td>
+<td>❌</td>
+<td><code>[Accounts:Daniel Huffman.# of Reporting Entities]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="principals-at-a-glance">Principals at a glance</h3>
+<ul>
+<li><strong>Daniel Huffman</strong> — individual; filing 1040; partnership interest via K&amp;D Management (1065). No contact email, phone, or address populated on Account record.</li>
+</ul>
+<h3 id="entity-stack">Entity stack</h3>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Type</th>
+<th>Mango Project</th>
+<th>Status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daniel Huffman (individual)</td>
+<td>1040</td>
+<td>1040- Daniel Huffman</td>
+<td>Active · In Progress</td>
+<td><code>[TaxComp:1040]</code></td>
+</tr>
+<tr>
+<td>K&amp;D Management</td>
+<td>1065 (partnership)</td>
+<td>1065- K&amp;D Management</td>
+<td>Active (old + new Mango DB)</td>
+<td><code>[MangoPlanningOld §K&amp;D]</code> <code>[MangoPlanningNew §K&amp;D]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Note: K&amp;D Management entity type, EIN, state, and ownership split are unknown — no Reporting Entity record, no workbook linked.</p>
+<hr>
+<h2 id="3-email-intelligence">§3. Email Intelligence</h2>
+<p><strong>0 email threads in Client Email Log</strong> for Daniel Huffman. The Account record has no Email Log relation populated; no <code>📧 Email Intelligence</code> subpage exists.</p>
+<p><strong>What is on file (from sidecar records):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Direction</th>
+<th>Subject / Content</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-04-10</td>
+<td>Outbound (Accruity → Daniel)</td>
+<td>Extension email sent</td>
+<td><code>[Extensions:Daniel Huffman §date:Date Extension Email reminder Sent]</code></td>
+</tr>
+<tr>
+<td>2026-04-14</td>
+<td>Outbound (Accruity → Daniel)</td>
+<td>Extension Payment Request — attachment <code>Extension_Payment_Request_-_Hamilton_Dan_and_Kelly.pdf</code> ⚠️</td>
+<td><code>[Extensions:Daniel Huffman §Payment Request sent]</code></td>
+</tr>
+<tr>
+<td>2026-04-27</td>
+<td>Outbound (Accruity → Daniel)</td>
+<td>PBC request — W-2, 1099, brokerage, 2024 filing confirmation + IRS account setup instructions</td>
+<td><code>[EL:Daniel Huffman §Notes (PBC OPEN ITEMS)]</code> + image embedded in EL page</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anomaly flag — wrong-client attachment.</strong> The extension payment request PDF is named <code>Extension_Payment_Request_-_Hamilton_Dan_and_Kelly.pdf</code>. This is a <strong>Dan Hamilton / Kelly Hamilton document</strong> apparently attached to Daniel Huffman's record in error. Promoted to §7 as HIGH data integrity issue. <code>[Extensions:Daniel Huffman §Payment Request sent]</code></p>
+<p><strong>Email log gap.</strong> No Client Email Log rows are linked to Daniel's Account. This may mean Make.com is not capturing his thread, or emails are going to a personal address not yet in the system. Backfill is needed.</p>
+<hr>
+<h2 id="4-meeting-history">§4. Meeting History</h2>
+<p><strong>1 meeting on file.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th>Time</th>
+<th>Status</th>
+<th>Recap</th>
+<th>Notes</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2025-08-22</strong></td>
+<td>Full Insights — Delivery call</td>
+<td>3:00 – 3:30 PM</td>
+<td><strong>Pending</strong> ⚠️</td>
+<td>FIND (not yet located)</td>
+<td>Recap status "FIND" — no Fathom/Fellow URL attached</td>
+<td><code>[Meeting 2025-08-22 Huffman]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observations:</strong>
+- This is an <strong>August 2025</strong> meeting — predates the March 2026 EL signing by ~7 months. The Insights delivery call was likely part of the pre-engagement or prior tax year cycle.
+- Recap is flagged as "FIND" — the meeting happened but the recap was never linked.
+- No time zone specified; 3:00–3:30 PM EST assumed.
+- 0/1 meetings restricted.</p>
+<p><strong>Gap:</strong> Pull the Fathom/Fellow transcript for 2025-08-22 Insights Delivery call next refresh.</p>
+<hr>
+<h2 id="5-document-inventory">§5. Document Inventory</h2>
+<h3 id="51-engagement-letter">5.1 Engagement Letter</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td><strong>Signed</strong></td>
+</tr>
+<tr>
+<td>Price</td>
+<td><strong>$3,925</strong></td>
+</tr>
+<tr>
+<td>Batch Added</td>
+<td>2026-03-30</td>
+</tr>
+<tr>
+<td>Docusign Status</td>
+<td>Done</td>
+</tr>
+<tr>
+<td>Signed EL (Mangoshare)</td>
+<td><a href="https://app.mangoshare.com/share/97dfbddc430a56d3a1851b4b">app.mangoshare.com/share/97dfbddc430a56d3a1851b4b</a></td>
+</tr>
+<tr>
+<td>PBC list email</td>
+<td>None sent (as of EL record)</td>
+</tr>
+<tr>
+<td>PBC list status</td>
+<td>Sent List nothing received yet</td>
+</tr>
+<tr>
+<td>Entity services</td>
+<td>No services ticked on signed EL ⚠️</td>
+</tr>
+<tr>
+<td>Compliance Group Status</td>
+<td><strong>Declined</strong> ⚠️</td>
+</tr>
+</tbody>
+</table>
+<p>Note: "Compliance Group Status = Declined" is notable — this typically means Daniel opted out of the standard compliance group bundle. Clarification needed.</p>
+<h3 id="52-files-links-rows-3-total">5.2 Files &amp; Links Rows (3 total)</h3>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Name</th>
+<th>Document Inventory URL</th>
+<th>PBC PDF Package URL</th>
+<th>Other URLs</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Daniel Huffman (main)</td>
+<td><a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua">SharePoint folder</a></td>
+<td><a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u">SharePoint folder</a></td>
+<td>—</td>
+<td><code>[FL:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Engagement Letter (stub)</td>
+<td>—</td>
+<td>—</td>
+<td>All fields blank</td>
+<td><code>[FL:Engagement Letter stub]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Executive Summary (stub)</td>
+<td>—</td>
+<td>—</td>
+<td>All fields blank</td>
+<td><code>[FL:Executive Summary stub]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>F&amp;L URL collision check:</strong> Document Inventory and PBC Package URLs are unique SharePoint paths (not matching Spring Bengtzen's known collision paths). <strong>No collision confirmed.</strong> <code>[FL:Daniel Huffman §Document Inventory]</code></p>
+<h3 id="53-tax-compliance-status-mango">5.3 Tax Compliance Status (Mango)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mango ID</td>
+<td>1900412</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>04 Internal WP Preparation</td>
+</tr>
+<tr>
+<td>Mango Task</td>
+<td>04 Preparation (External)</td>
+</tr>
+<tr>
+<td>Extension filed</td>
+<td>Yes ✓</td>
+</tr>
+<tr>
+<td>Original due</td>
+<td>2026-04-15</td>
+</tr>
+<tr>
+<td>Extended due</td>
+<td><strong>2026-10-15</strong></td>
+</tr>
+<tr>
+<td>Review required</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Preparer</td>
+<td>Deontae Lafayette</td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-insights-project">5.4 Insights Project</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status (Precheck)</td>
+<td>DELIVERED</td>
+</tr>
+<tr>
+<td>Status (Tax Insights)</td>
+<td>Not started</td>
+</tr>
+<tr>
+<td>Analysis</td>
+<td>Waiting on Extraction</td>
+</tr>
+<tr>
+<td>Received Files</td>
+<td>— (blank)</td>
+</tr>
+<tr>
+<td>Next Scheduled Call</td>
+<td>Delivery Call</td>
+</tr>
+<tr>
+<td>Accelo Status</td>
+<td>To Check Accelo</td>
+</tr>
+<tr>
+<td>Mango Status</td>
+<td>To Check</td>
+</tr>
+<tr>
+<td>Temp Filter</td>
+<td>"Piah to do - Check meeting recap 04/29" ⚠️</td>
+</tr>
+</tbody>
+</table>
+<p>Note: "Piah to do - Check meeting recap 04/29" is an internal note flagging that a staff member (Piah) needs to find the meeting recap. Ties to the §4 "FIND" flag.</p>
+<h3 id="55-workbooks-not-accessible-this-refresh">5.5 Workbooks not accessible this refresh</h3>
+<table>
+<thead>
+<tr>
+<th>Workbook</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBC Workbook</td>
+<td>Not linked on Account</td>
+</tr>
+<tr>
+<td>Tax Extraction</td>
+<td>Not linked on Account</td>
+</tr>
+<tr>
+<td>Tax Analysis / Planning Memo</td>
+<td>Not linked on Account</td>
+</tr>
+<tr>
+<td>Meeting Prep Notes</td>
+<td>Not linked on Account</td>
+</tr>
+<tr>
+<td>K&amp;D Management 1065 workbook</td>
+<td>No Reporting Entity or workbook linked</td>
+</tr>
+</tbody>
+</table>
+<h3 id="56-outsourcing">5.6 Outsourcing</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assignment status</td>
+<td>Not Yet received</td>
+</tr>
+<tr>
+<td>Client folder link</td>
+<td>— (blank)</td>
+</tr>
+<tr>
+<td>SOW</td>
+<td><a href="https://app.mangoshare.com/share/e37ffcb88b58f56aded14c74">Mangoshare</a></td>
+</tr>
+<tr>
+<td>Notes</td>
+<td><strong>"No mango Workspace. Only found an old SOW in Greg Smith's workspace, no date of coverage"</strong> ⚠️</td>
+</tr>
+<tr>
+<td>Mango Edit Yr Status</td>
+<td>Clarify with Stacy</td>
+</tr>
+<tr>
+<td>XCM status</td>
+<td>Notif Not Yet Rcvd</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="6-claude-work-product">§6. Claude Work Product</h2>
+<p><strong>0 prior Claude Summaries found</strong> for Daniel Huffman in the Claude Summaries DB.</p>
+<p><strong>0 Activity Log rows</strong> found tied to Daniel Huffman's Account.</p>
+<p>This refresh (2026-05-07) creates the <strong>first Claude Summary</strong> for this client. The Turn 11 Notion write will create the first Claude Summaries DB row.</p>
+<hr>
+<h2 id="7-action-items-rolled-up">§7. Action Items — Rolled Up</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Owner</th>
+<th>Priority</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Receive PBC items from Daniel</strong> — list sent 2026-04-27 (W-2, 1099, brokerage, 2024 filing confirmation); nothing received yet</td>
+<td>Daniel / Deontae</td>
+<td>🔴 HIGH (compliance gating)</td>
+<td><code>[EL:Daniel Huffman §PBC list status]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Pull IRS transcript for Daniel</strong> — needed to determine if 2024 return was filed / silently rejected</td>
+<td>Deontae</td>
+<td>🔴 HIGH (compliance gating)</td>
+<td><code>[EL:Daniel Huffman §Notes (PBC OPEN ITEMS)]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Resolve outsourcing workspace gap</strong> — "No mango Workspace; old SOW in Greg Smith's workspace, no date of coverage." Clarify with Stacy; create proper workspace before prep can proceed</td>
+<td>Stacy / Deontae</td>
+<td>🔴 HIGH (prep blocking)</td>
+<td><code>[Outsourcing:Daniel Huffman §Notes]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Investigate wrong-client attachment</strong> — extension payment request PDF named <code>Extension_Payment_Request_-_Hamilton_Dan_and_Kelly.pdf</code> was attached to Daniel Huffman's Extensions record. Likely a Dan Hamilton PDF filed in error; verify and correct</td>
+<td>Accruity ops</td>
+<td>🔴 HIGH (data integrity)</td>
+<td><code>[Extensions:Daniel Huffman §Payment Request sent]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Clarify Compliance Group Status = "Declined"</strong> — was this intentional? Affects compliance group billing and bundling</td>
+<td>Seth / Deontae</td>
+<td>🟡 MED</td>
+<td><code>[EL:Daniel Huffman §Compliance Group Status]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Clarify K&amp;D Management entity</strong> — confirm entity type (LLC/Partnership), EIN, ownership %, state; create Reporting Entity record; determine if 1065 is in scope for 2024/2025 prep</td>
+<td>Deontae / Seth</td>
+<td>🟡 MED</td>
+<td><code>[MangoPlanningOld §K&amp;D]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Find and link meeting recap for 2025-08-22</strong> Insights Delivery call — flagged as "FIND" / "Piah to do - Check meeting recap 04/29"</td>
+<td>Piah / ops</td>
+<td>🟡 MED</td>
+<td><code>[Meeting 2025-08-22]</code> <code>[Insights §Temp Filter]</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Add Reporting Entities</strong> for Daniel Huffman (1040 individual + K&amp;D Management 1065)</td>
+<td>Accruity ops</td>
+<td>🟡 MED</td>
+<td><code>[Accounts:Daniel Huffman.# of Reporting Entities]</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Populate Client # field</strong> on Account record</td>
+<td>Accruity ops</td>
+<td>🟢 LOW</td>
+<td><code>[Accounts:Daniel Huffman.Client #]</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Backfill email log</strong> — 0 threads captured; check Make scenario for Daniel's email address</td>
+<td>Generator / ops</td>
+<td>🟢 LOW</td>
+<td><code>[§3]</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Confirm "No services ticked on signed EL"</strong> — entity compliance services field is blank; confirm whether any entities (K&amp;D Management) should be included in the compliance engagement</td>
+<td>Seth / Deontae</td>
+<td>🟡 MED</td>
+<td><code>[EL:Daniel Huffman §Entity Compliance services]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Total: <strong>11 open items</strong> (4 HIGH, 4 MED, 3 LOW).</p>
+<hr>
+<h2 id="8-tax-strategies-projected-savings">§8. Tax Strategies &amp; Projected Savings</h2>
+<p><strong>Sparse this refresh</strong> — engagement is in compliance-prep phase; PBC items not yet received; no Tax Analysis workbook accessible.</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Status</th>
+<th>Estimated Savings</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1040 compliance prep (2024/2025)</td>
+<td>In progress (awaiting PBC + IRS transcript)</td>
+<td>N/A</td>
+<td><code>[TaxComp:1040 Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>K&amp;D Management 1065 partnership return</td>
+<td>? Scope uncertain — no Reporting Entity, EL has no entity services ticked</td>
+<td><code>? Pending workbook ingestion</code></td>
+<td><code>[MangoPlanningOld §K&amp;D]</code></td>
+</tr>
+<tr>
+<td>All planning strategies</td>
+<td><code>? Pending — PBC items not received; no Tax Analysis workbook</code></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key unknowns driving all planning gaps:</strong>
+1. 2024 return filing status (was it filed? IRS transcript needed)
+2. K&amp;D Management entity details and whether it's in scope
+3. Daniel's income breakdown (W-2 vs. K-1 vs. self-employment)
+4. Property ownership (Cost Seg applicability unknown)</p>
+<hr>
+<h2 id="9-opportunity-flags-auto-detected">§9. Opportunity Flags (auto-detected)</h2>
+<p><strong>Insufficient data for full classifier this refresh.</strong> Assessments below are based on available signals only.</p>
+<h3 id="91-cost-segregation">9.1 Cost Segregation</h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reporting Entities with real property</td>
+<td>None found (0 Reporting Entities)</td>
+</tr>
+<tr>
+<td>Property type indicators</td>
+<td>None in file</td>
+</tr>
+<tr>
+<td><strong>Cost Seg flag</strong></td>
+<td>⬜ NOT FLAGGED — insufficient data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-s-corp-election-candidate">9.2 S-Corp Election Candidate</h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self-employment / passthrough income</td>
+<td>? Unknown — no workbook, no K-1 in file</td>
+</tr>
+<tr>
+<td>Entity classification</td>
+<td>K&amp;D Management type unknown (could be partnership electing S treatment)</td>
+</tr>
+<tr>
+<td>Net SE earnings threshold ($40k+)</td>
+<td>? Unknown</td>
+</tr>
+<tr>
+<td><strong>S-Corp flag</strong></td>
+<td>🟡 WATCH — K&amp;D Management could be an LLC that would benefit from S-Corp election if SE income is material; insufficient data to confirm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-other-flags">9.3 Other Flags</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Detail</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IRS compliance risk</td>
+<td>2024 return filing status unknown; IRS transcript needed; first notice pattern in PBC email</td>
+<td><code>[EL:Daniel Huffman §Notes PBC]</code></td>
+</tr>
+<tr>
+<td>Partnership basis / K-1 complexity</td>
+<td>K&amp;D Management 1065 in scope; basis tracking, guaranteed payments, SE treatment all unknown</td>
+<td><code>[MangoPlanningOld §K&amp;D]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>HIGH opportunity flags promotable to §7:</strong> None confirmed (data insufficient). K&amp;D Management S-Corp watch promoted to §7 Action #6 as investigation item.</p>
+<hr>
+<h2 id="10-operations-analysis">§10. Operations Analysis</h2>
+<p>Daniel Huffman is a <strong>compliance-only engagement</strong> in mid-2026, stalled at the PBC collection phase with three compounding blockers:</p>
+<ol>
+<li>
+<p><strong>IRS transcript gap</strong> — the 2024 return may not have been filed or may have been silently rejected. This is unusual and elevates compliance risk beyond a typical extension. The internal PBC email (2026-04-27) explicitly says "This is the first notice sent when a return is missing."</p>
+</li>
+<li>
+<p><strong>Outsourcing workspace missing</strong> — the CCH Outsourcing tracker shows the preparer workspace doesn't exist; only an old SOW in Greg Smith's workspace was found. This means the return physically cannot enter preparation workflow until the workspace is created and the engagement is handed off properly.</p>
+</li>
+<li>
+<p><strong>K&amp;D Management scope ambiguity</strong> — two Mango projects exist (1040 + 1065) but only one EL was signed ($3,925) with no entity services ticked. If the 1065 is in scope, it either needs to be added to the EL or clarified as out-of-scope. This ambiguity could delay delivery.</p>
+</li>
+</ol>
+<p><strong>Engagement health: YELLOW.</strong> Clean EL signature and portal setup, but stalled on basics. The August 2025 Insights delivery pre-dates the March 2026 EL by 7 months — suggesting Daniel was an Insights client before converting to a compliance engagement. That conversion may be the source of the "No mango workspace" gap if the old workspace was under a prior team member.</p>
+<p><strong>Manager alignment:</strong> Seth is tagged as Manager on Mango Planning records; Deontae is the preparer and billing partner on the 1040 Tax Compliance project. Deontae should be primary driver of the PBC + transcript workflow; Seth owns the entity scope clarification.</p>
+<hr>
+<h2 id="11-individual-profile">§11. Individual Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Detail</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full name</td>
+<td>Daniel Huffman</td>
+<td>✓</td>
+<td><code>[Accounts:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Email</td>
+<td>(not populated on Account record)</td>
+<td>❌</td>
+<td><code>[Accounts:Daniel Huffman.New Contact: Email]</code></td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>(not populated)</td>
+<td>❌</td>
+<td><code>[Accounts:Daniel Huffman.New Contact: PH#]</code></td>
+</tr>
+<tr>
+<td>Client #</td>
+<td>(not assigned)</td>
+<td>❌</td>
+<td><code>[Accounts:Daniel Huffman.Client #]</code></td>
+</tr>
+<tr>
+<td>Filing type</td>
+<td>1040 individual + likely 1065 K&amp;D Management</td>
+<td>~</td>
+<td><code>[MangoPlanningOld §K&amp;D]</code></td>
+</tr>
+<tr>
+<td>Filing status (MFJ/S/etc.)</td>
+<td>? Unknown — single engagement letter but no household info</td>
+<td>?</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Engagement signed</td>
+<td>2026-03-30 · $3,925</td>
+<td>✓</td>
+<td><code>[EL:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Tax year in prep</td>
+<td>2024 (possibly also 2025) — EL notes "2024 and 2025" in PBC request</td>
+<td>~</td>
+<td><code>[EL:Daniel Huffman §Notes PBC]</code></td>
+</tr>
+<tr>
+<td>Prior preparer</td>
+<td>? — SOW found in Greg Smith's workspace (old)</td>
+<td>~</td>
+<td><code>[Outsourcing:Daniel Huffman §Notes]</code></td>
+</tr>
+<tr>
+<td>Insights history</td>
+<td>Insights delivered pre-engagement (2025-08-22 delivery call)</td>
+<td>✓</td>
+<td><code>[Meeting 2025-08-22]</code> <code>[Insights:Daniel Huffman]</code></td>
+</tr>
+<tr>
+<td>Relationship-risk read</td>
+<td>YELLOW — PBC stall + IRS uncertainty + outsourcing gap; not red (EL signed, client responded to extension payment request)</td>
+<td>derived</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Outstanding to Daniel</td>
+<td>2 items (Action #1 — PBC docs; Action #2 pull IRS transcript)</td>
+<td>✓</td>
+<td><code>[§7]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="12-provenance-index">§12. Provenance Index</h2>
+<h3 id="notion-account-record">Notion — Account record</h3>
+<ul>
+<li><code>[Accounts:Daniel Huffman]</code> → <a href="https://www.notion.so/32f49172875180b68b96e9f0f4cd1dc7">notion.so/32f49172875180b68b96e9f0f4cd1dc7</a> — primary Account; Client # blank; 1 meeting, 3 F&amp;L, 1 EL, 1 Insights project</li>
+</ul>
+<h3 id="notion-engagement-letters-tracker">Notion — Engagement Letters Tracker</h3>
+<ul>
+<li><code>[EL:Daniel Huffman]</code> → <a href="https://www.notion.so/2f1491728751809f9a04e208c00c0d38">notion.so/2f1491728751809f9a04e208c00c0d38</a> — Signed $3,925 · 2026-03-30 · Compliance Group Status: Declined · PBC list sent but nothing received</li>
+</ul>
+<h3 id="notion-insights-project-status">Notion — Insights Project Status</h3>
+<ul>
+<li><code>[Insights:Daniel Huffman]</code> → <a href="https://www.notion.so/348491728751803cb3bccf757ac3abd6">notion.so/348491728751803cb3bccf757ac3abd6</a> — DELIVERED · analysis waiting on extraction · "Piah to do - Check meeting recap 04/29"</li>
+</ul>
+<h3 id="notion-tax-compliance-projects">Notion — Tax Compliance Projects</h3>
+<ul>
+<li><code>[TaxComp:1040 Daniel Huffman]</code> → <a href="https://www.notion.so/ee149172875183d9a6df81c4f4a3a382">notion.so/ee149172875183d9a6df81c4f4a3a382</a> — Mango ID 1900412 · 04 Internal WP Preparation · Extended due 2026-10-15 · Deontae Lafayette</li>
+</ul>
+<h3 id="notion-meetings-tracker">Notion — Meetings Tracker</h3>
+<ul>
+<li><code>[Meeting 2025-08-22 Huffman]</code> → <a href="https://www.notion.so/2fb4917287518058abdacafb8160c007">notion.so/2fb4917287518058abdacafb8160c007</a> — Full Insights Delivery call · 3:00–3:30 PM · Status Pending · Recap "FIND"</li>
+</ul>
+<h3 id="notion-files-links">Notion — Files &amp; Links</h3>
+<ul>
+<li><code>[FL:Daniel Huffman]</code> → <a href="https://www.notion.so/33b491728751812c8843d45950da1e6b">notion.so/33b491728751812c8843d45950da1e6b</a> — Document Inventory: <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua">SharePoint</a> · PBC PDF Package: <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u">SharePoint</a></li>
+<li><code>[FL:Engagement Letter stub]</code> → <a href="https://www.notion.so/33b491728751816e9030eaa3dd99d94c">notion.so/33b491728751816e9030eaa3dd99d94c</a> — all URL fields blank</li>
+<li><code>[FL:Executive Summary stub]</code> → <a href="https://www.notion.so/33b491728751814f9eaec663e0f7fcf8">notion.so/33b491728751814f9eaec663e0f7fcf8</a> — all URL fields blank</li>
+</ul>
+<h3 id="notion-extensions-status-tracker">Notion — Extensions Status Tracker</h3>
+<ul>
+<li><code>[Extensions:Daniel Huffman]</code> → <a href="https://www.notion.so/34249172875181b4a177cfd41ec6b08c">notion.so/34249172875181b4a177cfd41ec6b08c</a> — Extension email sent 2026-04-10 · Payment request sent 2026-04-14 · Status "In progress (Client ongoing queries)" · ⚠️ Wrong-client PDF attached</li>
+</ul>
+<h3 id="notion-outsourcing-assignment-tracker">Notion — Outsourcing Assignment Tracker</h3>
+<ul>
+<li><code>[Outsourcing:Daniel Huffman]</code> → <a href="https://www.notion.so/33349172875180518f60e2036d7e175e">notion.so/33349172875180518f60e2036d7e175e</a> — Not Yet received · No mango workspace · SOW: <a href="https://app.mangoshare.com/share/e37ffcb88b58f56aded14c74">Mangoshare</a></li>
+</ul>
+<h3 id="notion-mango-planning-old-db">Notion — Mango Planning (old DB)</h3>
+<ul>
+<li><code>[MangoPlanningOld:Daniel Huffman 1040]</code> → <a href="https://www.notion.so/33a49172875181f2b6d9f1af24cb64af">notion.so/33a49172875181f2b6d9f1af24cb64af</a> — 1040- Daniel Huffman</li>
+<li><code>[MangoPlanningOld:Daniel Huffman K&amp;D]</code> → <a href="https://www.notion.so/33a491728751814cade3d7a738140ea9">notion.so/33a491728751814cade3d7a738140ea9</a> — 1065- K&amp;D Management</li>
+</ul>
+<h3 id="notion-mango-planning-new-db">Notion — Mango Planning (new DB)</h3>
+<ul>
+<li><code>[MangoPlanningNew:Daniel Huffman 1040]</code> → <a href="https://www.notion.so/342491728751816fab7ef4b36fcde3e5">notion.so/342491728751816fab7ef4b36fcde3e5</a> — 1040- Daniel Huffman · Tags: Tax Compliance, Extended (Compliance)</li>
+<li><code>[MangoPlanningNew:Daniel Huffman K&amp;D]</code> → <a href="https://www.notion.so/3424917287518168ba96d866c09e2c44">notion.so/3424917287518168ba96d866c09e2c44</a> — 1065- K&amp;D Management · Tags: Tax Planning, Extended (Compliance), Tax Compliance</li>
+</ul>
+<h3 id="portals-sharepoint">Portals / SharePoint</h3>
+<ul>
+<li>Signed EL (Mangoshare): <a href="https://app.mangoshare.com/share/97dfbddc430a56d3a1851b4b">app.mangoshare.com/share/97dfbddc430a56d3a1851b4b</a></li>
+<li>SOW (Mangoshare): <a href="https://app.mangoshare.com/share/e37ffcb88b58f56aded14c74">app.mangoshare.com/share/e37ffcb88b58f56aded14c74</a></li>
+<li>Document Inventory (SharePoint): <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua">link</a></li>
+<li>PBC PDF Package (SharePoint): <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u">link</a></li>
+</ul>
+<hr>
+<h2 id="13-changed-since-last-refresh">§13. Changed Since Last Refresh</h2>
+<p><strong>This is the first comprehensive refresh.</strong> No prior dossier existed.</p>
+<h3 id="131-2026-05-07-first-run-baseline">13.1 · 2026-05-07 · First-run baseline</h3>
+<p><strong>New — facts integrated:</strong>
+- EL Signed 2026-03-30 · $3,925 · Compliance Group Status Declined · PBC sent but nothing received
+- 1040 Tax Compliance project: Mango ID 1900412 · 04 Internal WP Preparation · Extension to 2026-10-15
+- K&amp;D Management 1065 project in Mango (old + new DB) — entity type/scope unclear
+- Insights project DELIVERED (2025-08-22 delivery call, recap not yet linked)
+- Extension process: email sent 2026-04-10, payment request 2026-04-14, client ongoing
+- Outsourcing: no Mango workspace; old SOW only in Greg Smith's workspace
+- 3 Files &amp; Links rows (1 populated with SharePoint links, 2 shell stubs)</p>
+<p><strong>New — discoveries:</strong>
+- ⚠️ <strong>Wrong-client attachment</strong> — <code>Extension_Payment_Request_-_Hamilton_Dan_and_Kelly.pdf</code> filed on Daniel Huffman's Extensions record → Action #4 HIGH
+- ⚠️ <strong>PBC notes indicate 2024 return may not have been filed</strong> — IRS transcript urgently needed → Action #2 HIGH
+- ⚠️ <strong>No Mango outsourcing workspace</strong> — prep cannot proceed → Action #3 HIGH
+- ⚠️ <strong>K&amp;D Management entity scope ambiguous</strong> — EL has no entity services ticked → Action #6 MED
+- ⚠️ <strong>Compliance Group Status = Declined</strong> — unusual; needs clarification → Action #5 MED
+- ✓ <strong>F&amp;L URL collision: NOT present</strong> — Daniel's SharePoint URLs are unique</p>
+<h3 id="132-carry-over-summary">13.2 Carry-over summary</h3>
+<table>
+<thead>
+<tr>
+<th>Count</th>
+<th>Bucket</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td>Open action items</td>
+<td>§7</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Workbooks not linked</td>
+<td>§5.5</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Reporting Entities</td>
+<td>§2</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Email threads</td>
+<td>§3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Meeting on file (recap missing)</td>
+<td>§4</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Prior Claude Summaries</td>
+<td>§6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="133-what-a-reader-should-look-at-first">13.3 What a reader should look at first</h3>
+<ol>
+<li><strong>§7 Action #2</strong> — IRS transcript: 2024 may not be filed; this is a potential compliance emergency</li>
+<li><strong>§7 Action #4</strong> — Wrong-client attachment: data integrity issue needs immediate correction</li>
+<li><strong>§7 Action #3</strong> — Outsourcing workspace: prep literally cannot start until fixed</li>
+<li><strong>§7 Action #1</strong> — PBC items: gating all return work</li>
+<li><strong>§7 Action #6</strong> — K&amp;D Management: confirm whether 1065 is in scope before the extended due date</li>
+</ol>
+<hr>
+<p><em>Internal document — not for client distribution.</em>
+<em>Accruity · www.accruity.com</em>
+<em>Source: <a href=".">dossiers/DanielHuffman/dossier.md</a> on branch <code>claude/update-exec-summary-notion-118m7</code></em>
+<em>First generated: 2026-05-07 · Depth mode: medium · Next refresh: trigger on PBC items received OR IRS transcript obtained</em></p>
+<div class="footer">Internal working document — Accruity. Rendered from <code>dossiers/DanielHuffman/dossier.md</code>.</div>
+</body>
+</html>

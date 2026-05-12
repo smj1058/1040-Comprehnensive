@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReneeMuellerJeffCohn — Client Intelligence Dossier</title>
+
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 30px 40px; color: #24292e; line-height: 1.6; }
+  h1, h2, h3, h4 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin-top: 1.5em; }
+  h1 { font-size: 2em; }  h2 { font-size: 1.5em; }  h3 { font-size: 1.25em; }  h4 { font-size: 1em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #dfe2e5; padding: 6px 13px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  code { background: rgba(27,31,35,.05); padding: .2em .4em; border-radius: 3px; font-family: SFMono-Regular, Menlo, monospace; font-size: 85%; }
+  pre code { display: block; padding: 16px; overflow: auto; }
+  blockquote { border-left: 4px solid #dfe2e5; padding: 0 1em; color: #6a737d; margin: 1em 0; }
+  a { color: #0366d6; text-decoration: none; }  a:hover { text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #e1e4e8; margin: 24px 0; }
+  ul, ol { padding-left: 2em; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: .85em; color: #6a737d; }
+</style>
+
+</head>
+<body>
+<h1 id="renee-mueller-and-jeff-cohn-client-intelligence-dossier">Renee Mueller and Jeff Cohn — Client Intelligence Dossier</h1>
+<p><strong>Account:</strong> Renee Mueller and Jeff Cohn (<code>30d49172-8751-81b4-a960-ff221f9a14c2</code>) <code>[Accounts §Account Name]</code>
+<strong>Client #:</strong> 18051006-01 <code>[Accounts §Client #]</code>
+<strong>Mango Client ID:</strong> 937741 <code>[Accounts §Mango Client ID]</code>
+<strong>Refresh date:</strong> 2026-05-07 (first run — full FULL-mode pass)
+<strong>Depth mode:</strong> <strong>FULL</strong> — see §0
+<strong>Designated branch:</strong> <code>claude/update-exec-summary-notion-118m7</code>
+<strong>Generator:</strong> Claude Code (Opus 4.7 1M)</p>
+<hr>
+<h2 id="0-how-to-read-this-dossier">§0. How to read this dossier</h2>
+<p>This is the first comprehensive synthesis pass for the <strong>Renee Mueller and Jeff Cohn</strong> household Account. FULL mode was selected because the source base is rich: existing Executive Summary subpage carries a full 2026-04-07 Tax Estimate Workbook + 2026-04-08 Cost Seg Property List with 9 enumerated properties, Tax Ascend record shows Tax Planning <strong>Delivered</strong> with a memo on file (status "CLARIFY WITH STACY"), Engagement Letter is <strong>signed</strong> with deposit paid ($16,650), Insights Project FULL INSIGHTS is <strong>Delivered</strong>, the 2026-03-30 tax planning meeting has a full 1-hour recap with topic-by-topic breakdown and three-tier action items, 7 Email Log threads exist (mixed signal — see §3), and a 9-property SREO is workbook-ready with cost seg analysis. This puts Mueller/Cohn in the same depth tier as Spring Bengtzen and Tommy Harr.</p>
+<p><strong>Critical structural observation up front (carries through the whole dossier).</strong> The Account Name is "Renee Mueller and Jeff Cohn" but <strong>Jeff Cohn does not substantively appear in any source record.</strong> All meetings (4 of 4) are titled "Rene Mueller" / "Rene Mueller Personal" / "Renee Mueller". All emails reference renee@eliterealestatesystems.com. The 2026-03-30 tax planning recap names attendees as Seth Johnson, Deontae C. Lafayette, <strong>Renee M. Mueller</strong>, Sophia Leonardo — Jeff is not on the call. The recap discusses entities owned by <strong>Renee + Tyler</strong> (Renee's spouse, farm partner) — Tyler is the actual MFJ partner per source data. The Engagement Letter Tracker spells the client as "Renee Mueller + Jeff <strong>Cohen</strong> ERS" <code>[EL §CLIENT]</code> (note: "Cohen" not "Cohn"), and the Tax Ascend record uses "Rene Mueller &amp; Jeff <strong>Cohen</strong> ERS" <code>[Tax Ascend §Client]</code>. Three open structural questions:
+1. <strong>Spelling — Cohn vs Cohen?</strong> Account uses "Cohn"; EL + Tax Ascend use "Cohen". Standardize.
+2. <strong>Who is Jeff in this household?</strong> Silent business partner in ERS? Jeff Cohn (national real-estate coach who runs No Broker Bound and Elite Real Estate Systems coaching) is the most likely identification given the ERS branding alignment, suggesting he's Renee's <strong>business partner / co-owner</strong> of Elite Real Estate Systems (LLP), not a household co-filer. If so, the Account is <strong>mis-modelled</strong> as a joint household; it's actually a business partnership where Renee is the active 1040 client and Jeff is a partner-side relationship.
+3. <strong>MFJ co-filer is Tyler, not Jeff.</strong> Tyler appears throughout the 3/30 recap as Renee's spouse (farm partner, K-1 issuer for farm). Tyler is not listed in the Account Name. The 1040 (if MFJ) flows through Renee + Tyler.</p>
+<p>This dossier treats <strong>Renee</strong> as the active 1040 client and Jeff Cohn as a business-partner relationship at the ERS level (with explicit "verify on next contact" flags in §11).</p>
+<p><strong>§11 individual profiles</strong> are written for Renee (full depth) and Jeff (sparse — explicit "no source data on file" gap analysis with asymmetric-service-depth check). Tyler is profiled in §11.3 since he's the actual MFJ counterpart per recap evidence.</p>
+<p><strong>Source-tag convention</strong> (used throughout):
+- <code>[Accounts §Field]</code> = Accounts DB row for this client
+- <code>[ClientContacts §Renee]</code> = Renee's Client Contacts row
+- <code>[Tax Ascend §Field]</code> = the Tax Ascend tracker row (<code>Rene Mueller &amp; Jeff Cohen ERS</code>)
+- <code>[EL §Field]</code> = the Engagement Letter tracker row
+- <code>[Insights §Field]</code> = the Insights Project Status row
+- <code>[Email YYYY-MM-DD "subject"]</code> = a Client Email Log row
+- <code>[Meeting YYYY-MM-DD]</code> = a Meetings Tracker row
+- <code>[FL:row §Field]</code> = a Files &amp; Links row
+- <code>[ExecSum §subpage]</code> = the Executive Summary page or its subpages
+- <code>[Cross-ref:Client §X]</code> = pulled from another client's dossier in this repo</p>
+<hr>
+<h2 id="1-executive-overview">§1. Executive Overview</h2>
+<p><strong>TL;DR (used as Notion Exec Summary "Summary" property in Turn 11).</strong> Renee Mueller is a high-six-figure Nebraska real-estate operator (Elite Real Estate Systems / ERS) with a complex multi-entity stack (ATM Acquisitions LLC, Elite Wealth Management LLC, MTBAB C-Corp, Premier 1031 winding down, Verli Foundation 990, Verli/VRLY LLC, RM PC, ERS LLP, Real Services, Schedule F farm) and a 9-property SREO totaling ~$3.0M acquisition basis. 2025 federal tax projection ~$107K without cost seg; primary lever is a 4471 41st Ave / Parkway Plaza commercial cost seg ($1.6M acq / $4.4M current valuation, all currently 39yr SL) targeted to drop TI from ~$384K to $100–120K. Engagement Letter signed at $16,650 with deposit paid. Tax planning delivered 2026-03-30 (1 hour, Zoom recording <strong>failed</strong> — backup recovered from Stacy). Active blockers: cost seg proposal not yet submitted, ~$21,766 extension payment uncertain pending farm tax payment confirmation, 7 thread Email Log includes 4 mis-filed threads requiring re-link.</p>
+<p><strong>What matters right now (operationally).</strong> Five threads of work are live:</p>
+<ol>
+<li>
+<p><strong>Cost seg proposal on 4471 41st Ave.</strong> This is the dominant 2025 tax-reduction lever. Built 2019–2020, $1.6M acquisition basis (per SREO), $4.4M current valuation (per Cost Seg Property List), $24,957/mo rent, currently 100% at 39yr SL — nothing broken out. Seth on the 3/30 call: <em>"everything they have is at 39 years... that one alone would be a huge cost seg"</em> <code>[ExecSum §Tax Estimate Workbook §Cost Segregation]</code>. Seth's target: ~$400K in deductions to get TI to $100–120K (22% bracket). Proposal not yet submitted to Accruity's cost seg system. Promoted to §7 #1 HIGH.</p>
+</li>
+<li>
+<p><strong>2025 extension payment (~$21,766).</strong> Safe harbor target = ~$22,000 (PY 2024 total tax — AGI was deeply negative from $515K 4797 Aksarben abandonment loss). CY payments in: $234 W-2 only + farm tax payments (unknown amount) + zero personal ES. Whether farm payments cover the gap is the binding question. Promoted to §7 #2 HIGH.</p>
+</li>
+<li>
+<p><strong>Tax memo finalization.</strong> Tax Ascend <code>TAX MEMO STATUS = "CLARIFY WITH STACY"</code> <code>[Tax Ascend §TAX MEMO STATUS]</code>. Compliance Status = "Open Items List - email sent" <code>[Tax Ascend §Compliance Status]</code>. Memo presumably exists but is unfinalized. Promoted to §7 #3 HIGH.</p>
+</li>
+<li>
+<p><strong>Email Log re-linking (4 of 7 threads mis-filed).</strong> Three internal Seth↔Jeff Boscaino threads + one Jennifer Stickler/Jen's Real Estate thread are filed against this Account because Make.com auto-categorization keyed on the wrong "Jeff" / wrong subject line. Promoted to §7 #4 MED-plumbing.</p>
+</li>
+<li>
+<p><strong>Multiple data integrity checks.</strong> ATM K-1 extraction shows D012/D013 field alignment issues (Renee vs Tyler boxes appear swapped per Workbook §Open Items #9). Stamm Estate K-1 (D067) issued to Cora not Renee/Tyler — confirm if on MFJ. 1099-NEC ($204K Elite RE) — separate Sch C or in K-1 flow? Promoted to §7 #5–7 MED.</p>
+</li>
+</ol>
+<p><strong>Cross-account discovery — Sympli Mortgage cross-reference RESOLVED.</strong> AnnMarie Geddess + Frank Felice's dossier flagged a 2026-04-14 outbound email "Re: Mortgage units and ERS changes in 2025" filed on this Mueller/Cohn account, with concern that the "Mortgage" entity discussed might be Sympli Mortgage, LLC (the parent in AnnMarie/Frank's 9-entity 1065 stack), creating a partner-basis impact on AnnMarie/Frank's K-1s <code>[Cross-ref:AnnMarieGeddessFrankFelice §1 Cross-client data-integrity discovery]</code>. <strong>This refresh resolves that flag.</strong> The "Mortgage" entity in the email is <strong>ERS's internal Mortgage subsidiary</strong> — a real-estate-services-mortgage entity inside Renee's Elite Real Estate Systems brokerage stack. "Nick" is Renee's brokerage partner inside ERS; the 100% transfer of the Mortgage entity from Renee to Nick is an internal ERS rebalance that has NO connection to Sisu/Sympli/AnnMarie/Frank. The email is correctly filed on Mueller/Cohn. <strong>AnnMarie/Frank §7 Action #2 (re-link/duplicate to AnnMarie account) and §7 Action #6 (basis-schedule reconciliation) can be downgraded to "investigated — no overlap with Sympli Mortgage LLC family"</strong> on the AnnMarie/Frank dossier next refresh. Documented in §13.</p>
+<hr>
+<h2 id="2-client-profile">§2. Client Profile</h2>
+<h3 id="21-identity-contact">2.1 Identity &amp; contact</h3>
+<ul>
+<li><strong>Account Name (canonical per Accounts DB):</strong> Renee Mueller and Jeff Cohn <code>[Accounts §Account Name]</code></li>
+<li><strong>Tax Ascend Client field:</strong> Rene Mueller &amp; Jeff <strong>Cohen</strong> ERS <code>[Tax Ascend §Client]</code> (spelling drift)</li>
+<li><strong>Engagement Letter Tracker CLIENT:</strong> Renee Mueller + Jeff <strong>Cohen</strong> ERS <code>[EL §CLIENT]</code> (spelling drift)</li>
+<li><strong>Files &amp; Links Name field (one of three rows):</strong> Renee Mueller and Jeff Cohn <code>[FL:33b…5dec §Name]</code></li>
+<li><strong>Primary state:</strong> NE (Nebraska — Columbus area; properties at 32nd Ave, 28th, 33rd Ave, 41st Ave, 83rd St, Howard Blvd; Renee's address area code 402) <code>[ExecSum §Cost Seg Property List]</code> <code>[ClientContacts:Renee §Phone]</code></li>
+</ul>
+<h3 id="22-principals">2.2 Principals</h3>
+<ul>
+<li><strong>Renee Mueller</strong> — Primary Contact <code>[ClientContacts:Renee §Contact Type]</code></li>
+<li>Email: <code>renee@eliterealestatesystems.com</code> <code>[ClientContacts:Renee §Email]</code></li>
+<li>Phone: (402) 910-0178 <code>[ClientContacts:Renee §Phone]</code></li>
+<li>Portal Access: <strong>No</strong> <code>[ClientContacts:Renee §Portal Access]</code></li>
+<li>
+<p>Role per evidence: Operator of Elite Real Estate Systems (ERS) — Nebraska real-estate brokerage; co-owner of multi-entity holding stack (ATM Acquisitions, Elite Wealth Management, ERS LLP, RM PC, Verli LLC, Real Services); married to Tyler with farm Schedule F partnership; mother to Tyler (son on farm payroll per 3/30 recap; note: Tyler appears as both spouse and son's name in recap — verify) <code>[Meeting 2026-03-30 §Topics §Farm]</code> <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code>.</p>
+</li>
+<li>
+<p><strong>Jeff Cohn</strong> (or "Jeff Cohen" per Tax Ascend / EL) — listed in Account Name; <strong>NO substantive source records.</strong></p>
+</li>
+<li>No Client Contacts row on file <code>[ClientContacts:Renee — only contact on Account]</code>.</li>
+<li>Not on the 3/30 tax planning call attendee list <code>[Meeting 2026-03-30 §Attendees]</code>.</li>
+<li>Not in any of the 7 Email Log threads as a participant (the 3 "Jeff" emails on Account are mis-filed — they're Seth's internal 1-on-1s with <strong>Jeff Boscaino</strong>, not Jeff Cohn) <code>[Email 2026-04-13 "FW: Recap for 'Jeff'"]</code> <code>[Email 2026-04-13 "FW: 📝 JEFF&lt;&gt;SETH on Mar 19"]</code> <code>[Email 2026-04-13 "FW: You have an upcoming 1-on-1 with Jeff on Fellow"]</code>.</li>
+<li>
+<p><strong>Most likely identification (UNCONFIRMED):</strong> Jeff Cohn is a nationally-known real-estate coach and team leader (Nebraska-based Berkshire Hathaway HomeServices Ambassador Real Estate; founder of "No Broker Bound" coaching; rebranded under the Elite Real Estate Systems brand). If correct, Jeff is <strong>Renee's business partner / co-owner of Elite Real Estate Systems LLP</strong> rather than a household co-filer. This makes the Account label "Renee Mueller and Jeff Cohn" describe a <strong>business partnership relationship</strong> — not a married household. The actual MFJ co-filer is Tyler (Renee's spouse). Confirm on next contact.</p>
+</li>
+<li>
+<p><strong>Tyler Mueller</strong> — Renee's spouse (per 3/30 recap §1 Farm: "Tyler (Renee's son) will keep the existing firm for farm bookkeeping" — wait, recap says <strong>son</strong> not spouse — re-read).</p>
+</li>
+<li><strong>Important correction.</strong> The 3/30 meeting recap actually says: <em>"Tyler (Renee's </em><em>son</em><em>) will keep the existing firm for farm bookkeeping and K-1 issuance."</em> <code>[Meeting 2026-03-30 §Topics §Farm]</code>. So Tyler is Renee's <strong>son</strong> running the farm books, not the spouse. The spouse is <strong>separately referenced</strong> as a co-owner ("Renee + husband") of ATM Acquisitions <code>[Meeting 2026-03-30 §Topics §Entity Structure]</code>. <strong>Spouse name is not stated in any source on file.</strong> This is a §7 gap.</li>
+<li><strong>Implication.</strong> If MFJ, the spouse is a separately-named individual whose identity isn't captured in any source (not Tyler, not Jeff). Three candidate identifications (in order of probability):<ol>
+<li><strong>Jeff Cohn = the spouse</strong> (the Account Name would then be literally correct as a married household). This contradicts the most likely "Jeff Cohn = ERS coach" identification above. Mutually exclusive.</li>
+<li><strong>An unnamed third person</strong> (the actual spouse) — Account Name is misleading.</li>
+<li><strong>Renee files Single or HoH</strong> — the "MFJ" assumption is wrong and the spouse reference in the recap is to a non-1040-relevant relationship.</li>
+</ol>
+</li>
+<li><strong>Resolution:</strong> §7 HIGH gap — confirm filing status and spouse identity directly with Renee on next contact.</li>
+</ul>
+<h3 id="23-entity-stack-per-330-meeting-recap-workbook-cost-seg-list">2.3 Entity Stack (per 3/30 meeting recap + Workbook + Cost Seg list)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Entity</th>
+<th>Type</th>
+<th>Role</th>
+<th>Notes / Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>ATM Acquisitions LLC</strong></td>
+<td>LLC (likely 1065 partnership)</td>
+<td>Real-estate holding co; owns Elite Wealth Mgmt; holds 8 of 9 SREO properties</td>
+<td>Renee + husband; <code>[ExecSum §Cost Seg Property List]</code> <code>[Meeting 2026-03-30 §Entity Structure]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Elite Wealth Management LLC</strong></td>
+<td>LLC</td>
+<td>Holds 4471 41st Ave / Parkway Plaza commercial bldg</td>
+<td>$1.6M acq, $4.4M current valuation, $24,957/mo rent; built 2019–2020, refi 2021; ~$2M building basis <code>[ExecSum §Tax Estimate Workbook §Cost Seg]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>MTBAB LC</strong></td>
+<td>C-Corp</td>
+<td>Coffee/bagel shop; tenant in commercial bldg; small, profitable</td>
+<td>Semi-retired accountant partner does return + issues K-1 <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Premier 1031 Exchange</strong></td>
+<td>(filing TBD)</td>
+<td>Winding down</td>
+<td>Last K-1 expected 2025; extension already filed <code>[Meeting 2026-03-30 §Entity Structure]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Verli (Burley) Foundation</strong></td>
+<td>Non-profit</td>
+<td>990 — handled by external specialist</td>
+<td>Out of scope for Accruity <code>[Meeting 2026-03-30 §Entity Structure]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Verli LLC</strong> (also "VRLY LLC" in Workbook)</td>
+<td>LLC</td>
+<td>For-profit media arm</td>
+<td>Now under ERS — does NOT flow through personal 1040 in 2025 <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Elite Real Estate Systems (ERS) LLP</strong></td>
+<td>LLP</td>
+<td>Parent entity; disregarded entities roll up here</td>
+<td>Source of the K-1 losses Renee expects in 2025 <code>[Meeting 2026-03-30 §Entity Structure]</code> <code>[ExecSum §Tax Estimate Workbook §Open Items #8]</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Real Services</strong></td>
+<td>Disregarded entity</td>
+<td>Minimal 2025 income</td>
+<td><code>[Meeting 2026-03-30 §Entity Structure]</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Elite Real Estate Investors 2020 / KW Elite</strong></td>
+<td>Prior brokerage</td>
+<td>Outstanding notes payable on books (no interest, ~36-month terms); transitioning to eXp</td>
+<td>Balance sheet item; Seth flagged to back office <code>[Meeting 2026-03-30 §Notes Payable]</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>RM PC</strong></td>
+<td>Professional Corporation</td>
+<td>(-$74K) loss in 2024; EIDL loans on ATM and PC</td>
+<td>Personal services entity <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Schedule F Farm</strong></td>
+<td>Sole prop / disregarded</td>
+<td>~$300K net expected 2025 (same as PY); son Tyler on payroll via Sch F (no FICA)</td>
+<td>Tyler keeping prior CPA for farm books; uploaded to Dropbox <code>[Meeting 2026-03-30 §Farm]</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Stamm Estate</strong></td>
+<td>Estate (K-1 D067)</td>
+<td>K-1 issued to Cora — confirm if on MFJ</td>
+<td><code>[ExecSum §Tax Estimate Workbook §Open Items #10]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entity-stack note.</strong> Per 3/30 recap §3 Entity Structure Review: <em>"Well-optimized per insights review. No changes recommended."</em> <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code>. This is consistent with the Insights Project status <code>Insights: Delivered</code> <code>[Insights §Insights]</code>.</p>
+<h3 id="24-9-property-sreo-schedule-of-real-estate-owned">2.4 9-Property SREO (Schedule of Real Estate Owned)</h3>
+<p>Per <code>Copy_of_SREORenee_Mueller.xlsx</code> reviewed 2026-04-08 <code>[ExecSum §Cost Seg Property List]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Address</th>
+<th>Type</th>
+<th>Acquired</th>
+<th>Purchase Price</th>
+<th>Entity</th>
+<th>Ownership</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1368-1372 32nd Ave, Columbus NE</td>
+<td>Triplex</td>
+<td>2018</td>
+<td>$225,000</td>
+<td>ATM Acquisitions</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3303 28th / 2776-2778 33rd Ave, Columbus NE</td>
+<td>Triplex</td>
+<td>2015</td>
+<td>$200,000</td>
+<td>ATM Acquisitions</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3902 Howard Blvd, Columbus NE</td>
+<td>Commercial</td>
+<td>12/2015</td>
+<td>$249,000</td>
+<td>ATM Acquisitions</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5304 41st, Columbus NE</td>
+<td>Townhome</td>
+<td>2014</td>
+<td>$169,000</td>
+<td>ATM Acquisitions</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5306 41st, Columbus NE</td>
+<td>Townhome</td>
+<td>2014</td>
+<td>$169,000</td>
+<td>ATM Acquisitions</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5220 41st, Columbus NE</td>
+<td>Townhome</td>
+<td>2014</td>
+<td>$169,000</td>
+<td>ATM Acquisitions</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1680 83rd St, Columbus NE</td>
+<td>SFR</td>
+<td>2000</td>
+<td>$125,000</td>
+<td>ATM Acquisitions</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bellaire Apartments, TX</td>
+<td>Multi</td>
+<td>2020</td>
+<td>$100,000</td>
+<td>ATM Acquisitions</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>4471 41st Ave (Parkway Plaza), Columbus NE</strong></td>
+<td><strong>Commercial/Office</strong></td>
+<td><strong>6/2019</strong></td>
+<td><strong>$1,600,000</strong></td>
+<td><strong>Elite Wealth Management</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Total acquisition basis ≈ $3.006M (note: #8 Bellaire is 10% pro rata so adjusted ≈ $2.916M). #9 is the cost seg primary target — see §8.</p>
+<p><strong>REP (Real Estate Professional) status flag.</strong> Per Workbook §Cost Segregation: <em>"REP status: Not elected on PY return per insights review. Verify for 2025."</em> <code>[ExecSum §Tax Estimate Workbook §Cost Seg]</code>. Given the 9-property holdings + Renee's role as ERS operator, REP qualification is plausible and would unlock passive losses against active income — major lever if confirmed.</p>
+<h3 id="25-filing-status">2.5 Filing status</h3>
+<p><strong>MFJ assumed</strong> per Workbook header: <em>"Filing: MFJ | State: NE | Tax Year: 2025"</em> <code>[ExecSum §Tax Estimate Workbook §Header]</code>. But the spouse identification is unclear (see §2.2). Confirm directly.</p>
+<hr>
+<h2 id="3-email-intelligence">§3. Email Intelligence</h2>
+<h3 id="31-email-log-inventory-7-threads-on-account">3.1 Email Log inventory (7 threads on Account)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Date</th>
+<th>Subject</th>
+<th>Direction</th>
+<th>Risk</th>
+<th>Relevance</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2026-04-14</td>
+<td>Re: Mortgage units and ERS changes in 2025</td>
+<td>Outbound</td>
+<td>Med</td>
+<td><strong>ON-ACCOUNT</strong></td>
+<td><code>[Email 2026-04-14 "Re: Mortgage units"]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2026-04-14</td>
+<td>Re: April 15 - Extension &amp; 2025 Tax Estimate</td>
+<td>Outbound</td>
+<td>High</td>
+<td><strong>MIS-FILED</strong> — Jennifer Stickler</td>
+<td><code>[Email 2026-04-14 "Re: April 15"]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2026-04-13</td>
+<td>FW: Recap for "Jeff"</td>
+<td>Inbound</td>
+<td>Med</td>
+<td><strong>MIS-FILED</strong> — Seth+Jeff Boscaino internal</td>
+<td><code>[Email 2026-04-13 "FW: Recap for 'Jeff'"]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2026-04-13</td>
+<td>FW: ZOOM MEETING: Rene Mueller Tax Planning on Mar 31 could not be recorded</td>
+<td>Inbound</td>
+<td>Med</td>
+<td><strong>ON-ACCOUNT</strong> — Zoom recording failure</td>
+<td><code>[Email 2026-04-13 "FW: ZOOM"]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>2026-04-13</td>
+<td>FW: 📝 JEFF&lt;&gt;SETH on Mar 19 — Key decisions inside</td>
+<td>Inbound</td>
+<td>Low</td>
+<td><strong>MIS-FILED</strong> — Seth+Jeff Boscaino internal</td>
+<td><code>[Email 2026-04-13 "FW: JEFF&lt;&gt;SETH"]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>2026-04-13</td>
+<td>FW: 📝 Tax Planning (30min review) - Renee Mueller on Mar 25 — Key decisions inside</td>
+<td>Inbound</td>
+<td>Low</td>
+<td><strong>ON-ACCOUNT</strong> — Renee tax planning recap</td>
+<td><code>[Email 2026-04-13 "FW: Tax Planning"]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>2026-04-13</td>
+<td>FW: You have an upcoming 1-on-1 with Jeff on Fellow - Jeff/Seth</td>
+<td>Inbound</td>
+<td>Low</td>
+<td><strong>MIS-FILED</strong> — Fellow reminder for Seth+Jeff Boscaino</td>
+<td><code>[Email 2026-04-13 "FW: Fellow"]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Signal-to-noise: 3 substantive on-account / 4 mis-filed = 43% on-account rate.</strong> All 4 mis-files share a pattern: Make.com auto-categorization keyed on the string "Jeff" in subject lines or matched the wrong recipient. The 3 internal Seth↔Jeff Boscaino threads (#3, #5, #7) are about the SweetDash client portal prototype + SOW standardization — internal Accruity ops business, no client touchpoint. The Jennifer Stickler thread (#2) is about Jen's Real Estate K-1 and KS Surfacing — a different client's compliance work.</p>
+<h3 id="32-substantive-thread-analysis">3.2 Substantive thread analysis</h3>
+<h4 id="thread-1-2026-04-14-re-mortgage-units-and-ers-changes-in-2025-on-account">Thread #1 — 2026-04-14 — Re: Mortgage units and ERS changes in 2025 ⭐ ON-ACCOUNT</h4>
+<p><code>[Email 2026-04-14 "Re: Mortgage units"]</code></p>
+<p>Renee Mueller emailed Stacy Cvengros (Accruity) about ERS internal entity changes effective October 2025: ERS removed the <strong>Mortgage entity</strong> in October 2025 along with several other entities, triggering a rebalance of ownership shares. Renee and <strong>Nick</strong> initially planned to retain co-ownership of Mortgage but ultimately decided Renee would sign over 100% ownership to Nick. Legal docs (entity contributions, percentage allocations) attached.</p>
+<p>Seth forwarded to Sophia Leonardo, Deontae Lafayette, Tax, and Operations on 2026-04-14 with directives:
+- Get the documents into Mango portal <code>[Email §Synopsis]</code>
+- Note: <em>"unsure if a signed engagement letter was ever obtained"</em> — referring to ERS-side documentation
+- Included intake form links (Cost Seg Intake, Entity Creation, Tax Controversy)</p>
+<p>Sophia uploaded to ImagineTime workspace <code>firm/5331/workspaces/961366/files/19011257</code> and confirmed done.</p>
+<p><strong>Action items extracted from thread:</strong>
+- [x] Sophia Leonardo — Upload docs to ImagineTime/Mango — Done
+- [ ] Team — Verify if signed engagement letter exists for ERS/Mortgage entities
+- [ ] Alex Orosz — Coordinate with Nick on mortgage entity transfer
+- [ ] Deontae — Process entity restructuring docs for 2025 returns</p>
+<p><strong>"Nick" identification.</strong> Nick is Renee's ERS business partner — distinct from any Sisu/Sympli party (see §1 Cross-account discovery resolution). The 100%-to-Nick transfer is an internal ERS rebalance.</p>
+<p><strong>Cross-account note.</strong> This thread was flagged in AnnMarie/Frank's dossier as potentially overlapping with their Sympli Mortgage LLC stack. <strong>Resolved this refresh: no overlap.</strong> "Mortgage" here = ERS's internal mortgage entity, not Sympli Mortgage LLC (which is the parent of AnnMarie/Frank's 9-entity stack). See §13 for resolution detail.</p>
+<h4 id="thread-4-2026-04-13-fw-zoom-meeting-rene-mueller-tax-planning-on-mar-31-could-not-be-recorded">Thread #4 — 2026-04-13 — FW: ZOOM MEETING: Rene Mueller Tax Planning on Mar 31 could not be recorded</h4>
+<p><code>[Email 2026-04-13 "FW: ZOOM"]</code></p>
+<p>Fellow automated notification that the 2026-03-31 Renee Mueller tax planning Zoom call could not be recorded due to Zoom settings ("Record to computer files" + "External meeting participants" disabled). The call content was <strong>NOT captured by Fellow.</strong></p>
+<p><strong>Recovery.</strong> Per the 2026-03-30 meeting tracker NOTES field: <em>"ZOOM MEETING - waiting for stacy to forward the Video recording that's not corrupted"</em> <code>[Meeting 2026-03-30 §NOTES]</code>. Stacy did forward a backup recording — the meeting summary at <code>https://foregoing-cilantro-a21.notion.site/Meeting-Summary-Action-Items-3344917287518130b726d8d92c1c3ff1</code> is built from that backup, with the note that it's a "two-part recording; ~4.5 min gap between parts" <code>[Meeting Summary §Format]</code>. <strong>Content was preserved despite the Fellow recording failure.</strong> ✅</p>
+<p>Action items: Seth to fix Zoom settings for future meetings. Promoted to §7 #18 LOW (housekeeping).</p>
+<h4 id="thread-6-2026-04-13-fw-tax-planning-30min-review-renee-mueller-on-mar-25-key-decisions-inside">Thread #6 — 2026-04-13 — FW: 📝 Tax Planning (30min review) - Renee Mueller on Mar 25 — Key decisions inside</h4>
+<p><code>[Email 2026-04-13 "FW: Tax Planning"]</code></p>
+<p>Fellow recap forwarded by Seth to tax@accruity.com for an internal Tax Planning 30-minute review on <strong>2026-03-25</strong> about Renee Mueller. This is <strong>distinct from</strong> the 3/30 client-facing tax planning session — it's the prep session 5 days earlier. No detailed content in the email body; details available via Fellow link (not retrieved this refresh).</p>
+<p><strong>Implication.</strong> The actual prep was done in this internal review — the 3/30 client meeting was the delivery. The prep recap likely contains scenario modeling that didn't surface to Renee. Promoted to §6 Claude Work Product / Internal preparation track.</p>
+<h3 id="33-mis-filed-threads-analysis">3.3 Mis-filed threads — analysis</h3>
+<h4 id="thread-2-2026-04-14-re-april-15-extension-2025-tax-estimate-mis-filed">Thread #2 — 2026-04-14 — Re: April 15 - Extension &amp; 2025 Tax Estimate ❌ MIS-FILED</h4>
+<p><code>[Email 2026-04-14 "Re: April 15"]</code></p>
+<p>Substance: Multi-message thread between Deontae Lafayette + Sophia Leonardo + <strong>Jennifer Stickler</strong> about her 2025 extension and ES payments. Discusses Jen's Real Estate K-1 ($102K), KS Surfacing K-1 ($48K), $48K total federal tax without cost seg or $18K with cost seg, $8,467–$16,974 extension payment range. Jennifer uploaded W-2/1098 but cannot find Kirk's W-2. Jennifer also bought a Tesla.</p>
+<p><strong>This thread has zero connection to Renee Mueller / Jeff Cohn.</strong> It's about Jennifer Stickler (Mountain Luxury, principal broker) and her husband Kirk. Filed against Mueller/Cohn likely because Make.com matched on the subject line "April 15 - Extension &amp; 2025 Tax Estimate" or on a thread-ID collision.</p>
+<p><strong>Action.</strong> Re-link to the correct Jennifer Stickler Account. Promoted to §7 #4 MED-plumbing.</p>
+<h4 id="threads-3-5-7-internal-sethjeff-boscaino-mis-filed">Threads #3, #5, #7 — Internal Seth↔Jeff Boscaino ❌ MIS-FILED</h4>
+<p>These are three Fellow recaps / reminders of internal 1-on-1 meetings between Seth Johnson and <strong>Jeff Boscaino</strong> (Accruity colleague — driving SweetDash client portal prototype + SOW standardization). NO client involvement. Filed against Mueller/Cohn account because Make.com matched on the string "Jeff" (auto-categorization mistakenly assumed "Jeff" = Jeff Cohn).</p>
+<p><strong>Action.</strong> Re-link to an internal Accruity ops account (or remove from any client account). Promoted to §7 #4 MED-plumbing as a single bundle.</p>
+<h3 id="34-email-plumbing-rollup">3.4 Email plumbing rollup</h3>
+<ul>
+<li><strong>7 total threads · 3 substantive · 4 mis-filed (43% on-account rate)</strong></li>
+<li><strong>Make.com auto-categorization weakness:</strong> mis-filed 4 of 7 because "Jeff" string matching is too loose. Recommendation (do NOT modify scenario): document the failure mode and let ops escalate on their cycle. <code>[Hard rule §8: do not touch Make.com scenarios.]</code></li>
+<li><strong>No active threads from Renee's @eliterealestatesystems.com mailbox</strong> — Make is capturing only outbound / forwarded. If Renee sends inbound to Stacy, those should also be appearing on the log; the gap (only 1 outbound from Renee on file) suggests either Make isn't tracking inbound from her domain, or Renee is communicating through a different channel (Mango portal? Phone?). Promoted to §7 #15 LOW-plumbing.</li>
+<li><strong>No Mango portal access</strong> — <code>Portal Access: No</code> on Renee's contact <code>[ClientContacts:Renee §Portal Access]</code> despite EL row showing <code>Mango Portal Invite: Portal Invite Sent</code> and <code>Mango Engagement/Project: Project Created</code> <code>[EL §Mango Portal Invite]</code>. Invite sent but not accepted. Promoted to §7 #16 MED.</li>
+</ul>
+<hr>
+<h2 id="4-meeting-history">§4. Meeting History</h2>
+<p>Four rows on the Meetings Tracker for this Account, all 2025-12-22 through 2026-03-30. All four titled with "Rene Mueller" or "Renee Mueller" variants — <strong>no Jeff Cohn meeting on file.</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Date</th>
+<th>Type</th>
+<th>Status</th>
+<th>Recap</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2025-12-22</td>
+<td>Full Insights – Clarification call</td>
+<td><strong>Pending</strong></td>
+<td>LINK (placeholder; not populated)</td>
+<td>"Ask Bryan if required to be on this call" <code>[Meeting 2025-12-22 §NOTES]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2026-01-15</td>
+<td>Full Insights – Clarification call</td>
+<td>Done</td>
+<td><a href="https://fathom.video/share/2yWBkAQagwJabrja-mhGLzeZD6Zkf5ee">fathom.video/share/2yWBkAQagwJabrja</a></td>
+<td>1pm–2pm EST <code>[Meeting 2026-01-15]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2026-02-25</td>
+<td>Full Insights – Delivery call</td>
+<td><strong>Pending</strong></td>
+<td><a href="https://fathom.video/share/jCscBaYxT-ehUgHrzoh-uHhJyw2sfgmS">fathom.video/share/jCscBaYxT-ehUgHrzoh</a></td>
+<td>"NO CALENDAR" <code>[Meeting 2026-02-25 §NOTES]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2026-03-30</td>
+<td>Tax Planning Session</td>
+<td>Done</td>
+<td><a href="https://foregoing-cilantro-a21.notion.site/Meeting-Summary-Action-Items-3344917287518130b726d8d92c1c3ff1">Notion meeting summary</a></td>
+<td>Zoom recording failed; Stacy forwarded backup <code>[Meeting 2026-03-30 §NOTES]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-meeting-1-2025-12-22-full-insights-clarification-status-pending">4.1 Meeting #1 — 2025-12-22 — Full Insights Clarification (status: Pending)</h3>
+<p>Earliest meeting on tracker. Status still "Pending" — recap LINK is a placeholder (string "LINK", not an actual URL) <code>[Meeting 2025-12-22 §MEETING RECAP]</code>. NOTES say "Ask Bryan if required to be on this call" — likely a coordination note with Bryan/Brian (possibly Brian Charlesworth per the Spring/AnnMarie cross-references, or a different Bryan inside Accruity). <strong>Cannot determine if meeting actually occurred</strong> without a recap. Promoted to §7 #14 LOW.</p>
+<h3 id="42-meeting-2-2026-01-15-full-insights-clarification-status-done">4.2 Meeting #2 — 2026-01-15 — Full Insights Clarification (status: Done)</h3>
+<p>1:00–2:00 PM EST. Marked Done. Fathom recap link populated. Restricted = No. This is the entry point for the FULL INSIGHTS engagement. <code>[Meeting 2026-01-15]</code></p>
+<h3 id="43-meeting-3-2026-02-25-full-insights-delivery-status-pending">4.3 Meeting #3 — 2026-02-25 — Full Insights Delivery (status: Pending)</h3>
+<p>This is the <strong>Insights Delivery meeting</strong> (the milestone where Accruity hands the FULL INSIGHTS package to the client). Recap link present, but status flagged "Pending" with note "NO CALENDAR" — suggesting the meeting may have happened but tracker wasn't updated, or the calendar invite was missing and the meeting was held informally <code>[Meeting 2026-02-25 §NOTES]</code>. The Tax Ascend <code>Insights Delivery Meeting Recap</code> field DOES point to this Fathom share — same URL <code>[Tax Ascend §Insights Delivery Meeting Recap]</code> — so the meeting did occur. Update tracker status. Promoted to §7 #14 LOW.</p>
+<h3 id="44-meeting-4-2026-03-30-tax-planning-session-status-done">4.4 Meeting #4 — 2026-03-30 — Tax Planning Session ⭐ (status: Done)</h3>
+<p>The marquee meeting. 1 hour, 2:00–3:00 PM EST; actual run ~3:03–4:03 per recap. Attendees: Seth Johnson (RM), Deontae C. Lafayette (Tax Compliance), Renee M. Mueller (client), Sophia Leonardo (Tax Admin) <code>[Meeting Summary §Attendees]</code>. Format: Zoom; recording failed (Fellow couldn't capture); two-part backup recording with ~4.5 min gap recovered via Stacy.</p>
+<p><strong>Topics covered (9 sections):</strong></p>
+<ol>
+<li><strong>Farm (Schedule F).</strong> Tyler (Renee's son) keeps prior CPA for farm books. Farm financials + personal property list to be uploaded to Dropbox. ~$300K income 2024 → expected similar 2025. Son on farm payroll structured correctly via Sch F flow-through (no FICA).</li>
+<li><strong>Retirement plans.</strong> 3 accounts: Solo 401(k), self-directed IRA, possibly traditional or Roth IRA. Seth: <em>"retirement contributions are one of the biggest remaining levers for 2025 tax reduction"</em> <code>[Meeting Summary §Retirement Plans]</code>.</li>
+<li><strong>Entity structure review.</strong> Seth walked the org chart (see §2.3 above for entity-by-entity treatment).</li>
+<li><strong>Cost segregation opportunities.</strong> Existing studies done but may not have fully broken out 15/7-yr property components. Most assets at 39 years. Seth committed to submitting 4471 41st Ave (~$2M cost basis) to Accruity's cost seg system. Capital improvements 2025/2026 also discussed.</li>
+<li><strong>2025 tax projection.</strong> Projected TI ~$530K before farm/cost seg. Goal: reduce to ~$100–120K (12–15% effective rate). ~$400K of deductions still available. If Verli LLC ~$92K loss (2024) is removed and farm income added back, total could be higher. No real estate sales in 2025.</li>
+<li><strong>Notes payable.</strong> KW Elite transition notes (no interest, ~36-mo terms) sitting on books across multiple entities including PC. Seth flagged to back office to treat as balance sheet items.</li>
+<li><strong>Tax-efficient strategies discussed.</strong> Oil &amp; gas (~70% Y1 write-off); avoid energy credits/solar deals promising &gt; Y1 returns (IRS scrutiny); farm losses as flexible vehicle (IRS rarely questions); opportunity zones (no current properties qualify); like-kind exchanges (consider if any sales).</li>
+<li><strong>Estimated tax payments / Q1 2026.</strong> Seth to calc ES based on W-2 + farm tax payments. Will set Q1 2026 ES at ~50% of original estimate to avoid underpayment. K-1s not yet received → estimates based on 2024 actuals.</li>
+<li><strong>Onboarding / back office.</strong> Renee asked about broader onboarding process beyond tax. Seth acknowledged communication gap between tax and back office; committed to follow up internally. Seth bio note: joined Accruity end of May 2025 (LY); prior CFO for family office + tax partner at BDO.</li>
+</ol>
+<p><strong>Action items from meeting (rolled up to §7).</strong></p>
+<p><em>Renee / Client (9):</em> Upload farm financials + personal property list to Dropbox; upload EIDL loan docs (ATM + PC); upload retirement plan statements; locate/upload existing cost seg study for 4471 41st Ave; confirm 2025/2026 capital improvements + upload docs; confirm/send restructuring details for new entity changes; SREO (already in Dropbox per Renee); notify Seth of any income tax payments outside W-2/farm.</p>
+<p><em>Seth / Accruity Tax (10):</em> Submit 4471 41st Ave to cost seg system; review depreciation schedules from prior CPA; get GL detail from back office for capital improvements; calculate 2025 ES + provide to Renee; set Q1 2026 ES at ~50%; follow up with back office on Renee's onboarding; share live checklist/document tracker (not via Mango); check PY returns for REP status election + loss carryover; verify any income tax payments from personal accounts; confirm Verli LLC / ERS filing structure; align with Renee before April 15.</p>
+<p><em>Deontae / Back Office (3):</em> Confirm Dropbox access for Rene Mueller file; review notes payable on PC + other entities (balance sheet treatment); clarify Verli LLC ownership + filing treatment.</p>
+<h3 id="45-meeting-tracking-gaps">4.5 Meeting tracking gaps</h3>
+<ul>
+<li><strong>Meeting #1 (2025-12-22):</strong> Recap LINK is placeholder string. Either confirm meeting occurred (and add real recap) or mark Cancelled. Promoted to §7 #14 LOW.</li>
+<li><strong>Meeting #3 (2026-02-25):</strong> Status "Pending" but recap exists + Tax Ascend points to it. Update status to Done. Promoted to §7 #14 LOW.</li>
+<li><strong>No Insights Project Status check completed by Tax Team.</strong> <code>Checked (Tax Team): No</code> <code>[Insights §Checked]</code>. Promoted to §7 #11 MED.</li>
+</ul>
+<hr>
+<h2 id="5-document-inventory">§5. Document Inventory</h2>
+<h3 id="51-accounts-record-top-level-url-fields-all-empty-except-tax-ascend-el">5.1 Accounts-record top-level URL fields (all empty except Tax Ascend / EL)</h3>
+<p><code>[Accounts §various]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBC Workbook</td>
+<td>(empty)</td>
+<td>Plumbing gap — workbook exists in Insights project Counting File</td>
+</tr>
+<tr>
+<td>SharePoint Drive</td>
+<td>(empty)</td>
+<td>Plumbing gap</td>
+</tr>
+<tr>
+<td>Tax Extraction</td>
+<td>(empty)</td>
+<td>Plumbing gap — referenced in Insights project as <code>[Extraction 1040](...IQCeL8GoThM3RJEm...)</code></td>
+</tr>
+<tr>
+<td>Tax Planning Memo</td>
+<td>(empty)</td>
+<td>Plumbing gap — Tax Memo Status "CLARIFY WITH STACY"</td>
+</tr>
+<tr>
+<td>Meeting Prep Notes</td>
+<td>(empty)</td>
+<td>Plumbing gap</td>
+</tr>
+<tr>
+<td>Mango Display Name</td>
+<td>(empty)</td>
+<td>Plumbing gap</td>
+</tr>
+<tr>
+<td>Tax Ascend</td>
+<td>populated → <code>https://www.notion.so/314491728751809d91eaf4d2481bb351</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Engagement Letters</td>
+<td>populated → <code>https://www.notion.so/314491728751802fa8bad4a0406c0c05</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Email Log</td>
+<td>7 rows linked</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Meetings</td>
+<td>4 rows linked</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Files &amp; Links</td>
+<td>3 rows linked (see §5.3)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Insights Projects</td>
+<td>1 row linked</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Documents</td>
+<td>1 row linked (DOC-133, "Email: Rene Mueller")</td>
+<td>partial</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-engagement-letter-signed">5.2 Engagement Letter (signed)</h3>
+<p><code>[EL §various]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLIENT</td>
+<td>Renee Mueller + Jeff <strong>Cohen</strong> ERS (spelling drift vs Account "Cohn")</td>
+</tr>
+<tr>
+<td>Engagement Letter Status</td>
+<td><strong>Signed</strong></td>
+</tr>
+<tr>
+<td>Compliance Group Status</td>
+<td>Pending Check</td>
+</tr>
+<tr>
+<td>Deposit Paid</td>
+<td><strong>Deposit Paid</strong></td>
+</tr>
+<tr>
+<td>Mango Engagement/Project</td>
+<td>Project Created</td>
+</tr>
+<tr>
+<td>Mango Portal Invite</td>
+<td>Portal Invite Sent (but Portal Access = No on Renee's contact)</td>
+</tr>
+<tr>
+<td>Mango Tag</td>
+<td>PBC Request list</td>
+</tr>
+<tr>
+<td>Insights Project Status</td>
+<td>linked → <code>https://www.notion.so/2fd49172875180ecb463d053d615f7fe</code></td>
+</tr>
+<tr>
+<td>Entity Compliance services</td>
+<td>Registered Agent Services</td>
+</tr>
+<tr>
+<td>Newly Added</td>
+<td>Done</td>
+</tr>
+<tr>
+<td>Price</td>
+<td><strong>$16,650</strong></td>
+</tr>
+<tr>
+<td>Open items Status</td>
+<td>None Sent</td>
+</tr>
+<tr>
+<td>PBC list status</td>
+<td>Hold for review</td>
+</tr>
+<tr>
+<td>Notes (PBC OPEN ITEMS)</td>
+<td><em>"Need to speak with them. I'm not really sure what we need. They have a lot of documents. If neither are complaining about anything right now. I would hold off until I can look closer at what they have given us."</em> (Jane)</td>
+</tr>
+<tr>
+<td>TAX PROPOSAL (SOW - NEW CLIENT GC)</td>
+<td>COMMITTED</td>
+</tr>
+<tr>
+<td>Signed EL mangoshare</td>
+<td><a href="https://app.mangoshare.com/share/92a9b4d05819e6765cb049b8">app.mangoshare.com/share/92a9b4d05819e6765cb049b8</a></td>
+</tr>
+<tr>
+<td>TEMP FILTER</td>
+<td>PBC 04/27 CHECK</td>
+</tr>
+<tr>
+<td>date:Batch Added</td>
+<td>2026-03-13</td>
+</tr>
+<tr>
+<td>check portal invite/assigned staff</td>
+<td>03/16</td>
+</tr>
+</tbody>
+</table>
+<p>The EL also has an embedded <code>Meuller_-_Open_Items.msg</code> Outlook attachment + 3 inline images on the page body (signed copy snapshots).</p>
+<h3 id="53-files-links-3-rows-on-account">5.3 Files &amp; Links (3 rows on Account)</h3>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Name</th>
+<th>URLs populated</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>33b4…eccd</code></td>
+<td>"Engagement Letter"</td>
+<td>(all empty)</td>
+<td>Placeholder shell</td>
+</tr>
+<tr>
+<td><code>33b4…8d11</code></td>
+<td>"Executive Summary"</td>
+<td>(all empty)</td>
+<td>Placeholder shell</td>
+</tr>
+<tr>
+<td><code>33b4…5dec</code></td>
+<td>"Renee Mueller and Jeff Cohn"</td>
+<td><strong>Document Inventory</strong> + <strong>PBC PDF Package</strong> populated</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>URLs from row #3:</strong>
+- <strong>Document Inventory:</strong> <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua">subledgesl-my.sharepoint.com/.../IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw</a>
+- <strong>PBC PDF Package:</strong> <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u">subledgesl-my.sharepoint.com/.../IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA</a></p>
+<h4 id="531-url-collision-confirmed-now-8th-datapoint">5.3.1 ⚠️ URL collision — confirmed (now 8th datapoint)</h4>
+<p>Both URLs above are <strong>byte-identical to Spring + Alex Dykes/Mark Ferguson + Becky Mead + Brad Kanouse + Brett Zanotto + Andy Karabinos + Matt &amp; Chelsea Iannaccio Files &amp; Links rows.</strong> Same SharePoint share GUIDs <code>IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw</code> (Doc Inventory) and <code>IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA</code> (PBC PDF Package). <strong>8 of 8 reviewed clients exhibit identical defaulted URLs</strong> — Mueller/Cohn is now the 8th confirmation.</p>
+<p>This is a <strong>system-wide template-default issue</strong>, not client-specific. The Files &amp; Links DB has shared boilerplate URLs that were never per-client-customized. Affects every client in the queue. Promoted to §7 #5 MED-HIGH (was MED on Alex's first detection; HIGH-confidence pattern now). <code>[FL:33b…5dec §Document Inventory]</code> <code>[Cross-ref:SpringBengtzen §FL]</code> <code>[Cross-ref:BeckyMead §URL collision flag]</code> <code>[Cross-ref:MattAndChelseaIannaccio §F&amp;L Section]</code>.</p>
+<h3 id="54-insights-project-full-insights-delivered">5.4 Insights Project (FULL INSIGHTS — Delivered)</h3>
+<p><code>[Insights §various]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLIENT</td>
+<td>Renee Mueller and Jeff Cohn</td>
+</tr>
+<tr>
+<td>PROJECT TYPE</td>
+<td><strong>FULL INSIGHTS</strong></td>
+</tr>
+<tr>
+<td>Status (Precheck)</td>
+<td>DELIVERED</td>
+</tr>
+<tr>
+<td>Insights</td>
+<td><strong>Delivered</strong></td>
+</tr>
+<tr>
+<td>Analysis</td>
+<td>Completed</td>
+</tr>
+<tr>
+<td>Status (Tax Insights)</td>
+<td>Not Applicable</td>
+</tr>
+<tr>
+<td>Mango Status</td>
+<td>To Check</td>
+</tr>
+<tr>
+<td>Accelo Status</td>
+<td>To Check Accelo</td>
+</tr>
+<tr>
+<td>Checked (Tax Team)</td>
+<td><strong>No</strong> ⚠️</td>
+</tr>
+<tr>
+<td>Next Scheduled Call</td>
+<td>Delivery Call</td>
+</tr>
+<tr>
+<td>date:Date Added</td>
+<td>2026-02-27</td>
+</tr>
+<tr>
+<td>Counting file</td>
+<td>Two SharePoint links (<code>IQAyqlvlH6LcSbGmSS4oxWZLAc4To8azJndkXMgbuSc3NlI</code>, <code>IQDzQwRnJHkbTYRXhw5hdbIjATkI6U30Am49RBP9iBeZvYI</code>)</td>
+</tr>
+<tr>
+<td>Extraction 1040</td>
+<td>One SharePoint link (<code>IQCeL8GoThM3RJEmM12bOy7xAR49yyBAQq85gnyJysz0L-8</code>)</td>
+</tr>
+<tr>
+<td>Request List</td>
+<td>Two Excel SharePoint links: <a href="https://subledgesl.sharepoint.com/:x:/s/Insights/IQB9BSN5GG3TS67fseGHlDyoAaj0QzvLHqQcQbck_NQ65yc?e=MAl3qR">Request List Tracker ERS Holdings.xlsx</a> + <a href="https://subledgesl.sharepoint.com/:x:/s/Insights/IQAgP2ONJu2RS5VzNYRkVmTiAWwrlYWXTgmQEPC7uvwnmvE?e=Q8A6Om">Request List Tracker Renee Mueller.xlsx</a></td>
+</tr>
+<tr>
+<td>Temp Filter</td>
+<td>"Piah to do - Check meeting recap 04/29"</td>
+</tr>
+</tbody>
+</table>
+<p>The Insights project page has 4 inline screenshot images (counting file snapshots, pricing, taxduedate tracking) + an empty pricing block.</p>
+<h3 id="55-tax-ascend-record">5.5 Tax Ascend record</h3>
+<p><code>[Tax Ascend §various]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Rene Mueller &amp; Jeff Cohen ERS</td>
+</tr>
+<tr>
+<td>Compliance Status</td>
+<td>Open Items List - email sent</td>
+</tr>
+<tr>
+<td>Mango Compliance Engagement</td>
+<td>Already In mango</td>
+</tr>
+<tr>
+<td>Mango Planning Projects</td>
+<td>Done</td>
+</tr>
+<tr>
+<td>Linking status</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>Planning Status</td>
+<td><strong>Tax Planning Delivered</strong></td>
+</tr>
+<tr>
+<td>TAX MEMO STATUS</td>
+<td><strong>CLARIFY WITH STACY</strong> ⚠️</td>
+</tr>
+<tr>
+<td>TAX ASCEND TYPE</td>
+<td>TAX COMPLIANCE + TAX PLANNING</td>
+</tr>
+<tr>
+<td>Insights Delivery Meeting Recap</td>
+<td><a href="https://fathom.video/share/k1LGxzU7Ec3zVEL7d9axbPBzcae-8zyM">fathom.video/share/k1LGxzU7Ec3zVEL7d9axbPBzcae-8zyM</a></td>
+</tr>
+<tr>
+<td>👉 TAX PLANNING SESSION</td>
+<td>linked → <code>319491728751804fa0bbe10165ecfc0b</code></td>
+</tr>
+<tr>
+<td>date:Date Ascended</td>
+<td>2026-02-27</td>
+</tr>
+<tr>
+<td>date:Date Signed</td>
+<td>(empty)</td>
+</tr>
+<tr>
+<td>date:Tax Memo Sent</td>
+<td>(empty)</td>
+</tr>
+</tbody>
+</table>
+<p>The Tax Ascend record also embeds <code>#TRANSCRIPT - Rene Mueller and Jeff Cohen ERS</code> as a child page (transcript not retrieved this refresh; promoted to §7 #20 LOW — useful future extraction).</p>
+<h3 id="56-tax-planning-session-record">5.6 Tax Planning Session record</h3>
+<p><code>[Meeting 2026-04-07 Tax Planning Session]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Rene Mueller &amp; Jeff Cohen ERS</td>
+</tr>
+<tr>
+<td>Meeting 1 Status</td>
+<td>Piah to Verify</td>
+</tr>
+<tr>
+<td>Meeting 1 date</td>
+<td>2026-04-07</td>
+</tr>
+<tr>
+<td>Meeting 2 Status</td>
+<td>To check</td>
+</tr>
+<tr>
+<td>Meeting 3 Status</td>
+<td>To check</td>
+</tr>
+<tr>
+<td>Mango task Status</td>
+<td>Piah to Verify</td>
+</tr>
+<tr>
+<td>Memo Link</td>
+<td>(omitted)</td>
+</tr>
+<tr>
+<td>Tax Memo status</td>
+<td>(omitted)</td>
+</tr>
+<tr>
+<td>memo sent date</td>
+<td>(omitted)</td>
+</tr>
+</tbody>
+</table>
+<p>This page is mostly empty — it's a TAX PLANNING SESSION DB row that's the umbrella for the planning track but with sparse content. The actual content lives in the 3/30 meeting summary subpage and the Workbook subpage on the Exec Summary record.</p>
+<h3 id="57-master-documents-1-row-doc-133">5.7 Master Documents (1 row — DOC-133)</h3>
+<p><code>[Documents §DOC-133]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Doc ID</td>
+<td>DOC-133</td>
+</tr>
+<tr>
+<td>Document Name</td>
+<td>Email: Rene Mueller</td>
+</tr>
+<tr>
+<td>Document Type</td>
+<td>Other</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Received</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Client_Clarification | From: tax@accruity.com | Link: https://mail.google.com/mail/u/0/#inbox/19ce4474707e01e3</td>
+</tr>
+<tr>
+<td>date:Received</td>
+<td>2026-03-12</td>
+</tr>
+<tr>
+<td>File</td>
+<td>4 Google Drive file URLs (1WqLjvJPsTnmfvp2xOYWvKVQmCzDHqvCg, 1GojR0CUtJDkDHvHzW0Ta9wIkVl-I-cA5, 11Uk_k-D8GUuj8LuvYshsrqqJgY9w08tl, 1JEbAS5jldt5CJIXf9vx6j35w1lZ92NZR)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Single Documents row.</strong> This is a placeholder "Email: Rene Mueller" receipt for a 4-attachment client clarification email forwarded from <code>tax@accruity.com</code>. No further metadata. Suggests document ingest is sparse (only one Documents row vs. presumably many client documents in SharePoint/Dropbox).</p>
+<h3 id="58-document-plumbing-rollup">5.8 Document plumbing rollup</h3>
+<ul>
+<li><strong>6 of 6</strong> Account-record top-level URL fields are empty (PBC Workbook, SharePoint Drive, Tax Extraction, Tax Planning Memo, Meeting Prep Notes, Mango Display Name).</li>
+<li>All real document URLs live in the Insights project, EL row, or Files &amp; Links rows. <strong>No top-level sync to the Account record.</strong> Same plumbing pattern observed across Spring, Tommy, Matt, Becky, Brad, etc. — system-wide.</li>
+<li><strong>Tax Memo</strong> status "CLARIFY WITH STACY" suggests memo was drafted but final review is blocked. Memo is presumably under Tax Ascend or Insights project; not directly accessible on the Account.</li>
+<li>Promoted to §7 #6 MED-plumbing.</li>
+</ul>
+<hr>
+<h2 id="6-claude-work-product">§6. Claude Work Product</h2>
+<h3 id="61-claude-summaries-db-rows-on-this-account">6.1 Claude Summaries DB rows on this Account</h3>
+<p><strong>Zero rows</strong> linked from this Account <code>[Claude Summaries query result: 0]</code>. This is a first-run dossier — the Claude Summary log row will be created in Turn 11 of this refresh (see §13 / Turn 11).</p>
+<h3 id="62-claude-activity-log-db-rows-on-this-account">6.2 Claude Activity Log DB rows on this Account</h3>
+<p><strong>Zero rows</strong> linked <code>[Claude Activity Log query result: 0]</code>.</p>
+<h3 id="63-embedded-prior-synthesis-on-the-executive-summary-subpage">6.3 Embedded prior synthesis on the Executive Summary subpage</h3>
+<p>The Exec Summary record <code>33b4…3410b</code> already carries two prior Claude-style synthesis subpages:</p>
+<ol>
+<li>
+<p><strong>📊 2025 Tax Estimate Workbook — Renee Mueller</strong> (<code>33b4…dd80</code>) — dated 2026-04-07. Full 1040-style tax estimate workbook with bracket-by-bracket computation, SE tax, NIIT, safe harbor, cost seg scenarios, reconciliation. Income estimate $530K → AGI ~$445K → TI ~$384K. Federal tax estimate $107K (no cost seg) / $77K (with $30K cost seg savings). Safe harbor target $22K. Q1 2026 ES ~$9,625 (50% method). 10 enumerated open items. Workbook file <code>ReneeMueller_TaxEstimate.xlsx</code> referenced (not directly accessible). <strong>Author: per content style, this is Claude-class output.</strong> <code>[ExecSum §Tax Estimate Workbook]</code></p>
+</li>
+<li>
+<p><strong>🏠 2026-04-08 — Cost Seg Property List</strong> (<code>33c4…de7b</code>) — dated 2026-04-08. SREO workbook review with 9 properties enumerated (see §2.4). Identifies 4471 41st Ave as primary cost seg target with $400K deduction goal. <strong>Author: per content style, this is Claude-class output.</strong> <code>[ExecSum §Cost Seg Property List]</code></p>
+</li>
+<li>
+<p><strong>Activity Log on Exec Summary</strong> (header content). One entry: <strong>2026-04-07 — 2025 Extension &amp; Tax Estimate.</strong> Captures the 3/30 tax planning call summary: Seth's ~$530K projection, $22K PY safe harbor target, $21,766 extension payment needed, $107K CY total tax estimate without cost seg, primary cost seg target = 4471 41st Ave. <code>[ExecSum §Activity Log]</code></p>
+</li>
+</ol>
+<p>These three Claude work products are <strong>embedded on the Exec Summary record but not logged in the Claude Summaries DB.</strong> This is a meta-plumbing gap — prior Claude synthesis isn't centrally indexed. Promoted to §7 #19 LOW (will be naturally addressed by Turn 11 logging the current refresh).</p>
+<h3 id="64-internal-prep-2026-03-25-tax-planning-30-min-review">6.4 Internal prep — 2026-03-25 Tax Planning 30-min review</h3>
+<p><code>[Email 2026-04-13 "FW: Tax Planning"]</code></p>
+<p>This is the internal Accruity prep meeting 5 days before the client-facing 3/30 session. No detailed content captured in the email log row — content lives in Fellow. Worth retrieving on next refresh as it likely contains the scenario-modeling work that Seth used to drive the 3/30 conversation. Promoted to §7 #20 LOW.</p>
+<hr>
+<h2 id="7-action-items-rolled-up-across-all-surfaces">§7. Action Items (rolled up across all surfaces)</h2>
+<p>Total: <strong>24 open items.</strong> Sorted by priority then source.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Owner</th>
+<th>Priority</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Submit 4471 41st Ave (Parkway Plaza) to Accruity's cost seg system for estimated benefit analysis.</strong> Primary 2025 lever; targeting ~$400K deductions to drop TI from ~$384K to $100–120K. Note current 39yr SL on entire ~$2M building basis.</td>
+<td>Seth (RM)</td>
+<td>🔴 HIGH</td>
+<td><code>[Meeting 2026-03-30 §Action Items §Seth/Accruity Tax]</code> <code>[ExecSum §Cost Seg Property List]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Calculate 2025 ES + extension payment (~$21,766 target) and confirm farm tax payment amounts.</strong> Determines whether safe harbor ($22K) is already met. Time-critical — April 15 deadline already passed for 2025 1040, but Q1 2026 ES + amended extension may still apply.</td>
+<td>Seth (RM) + Renee</td>
+<td>🔴 HIGH</td>
+<td><code>[Meeting 2026-03-30 §Action Items]</code> <code>[ExecSum §Tax Estimate Workbook §Open Items #1, #5]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Finalize Tax Memo — TAX MEMO STATUS = "CLARIFY WITH STACY".</strong> Memo exists but is unfinalized; date:Tax Memo Sent is empty.</td>
+<td>Stacy / Seth</td>
+<td>🔴 HIGH</td>
+<td><code>[Tax Ascend §TAX MEMO STATUS]</code> <code>[Tax Ascend §date:Tax Memo Sent]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Re-link 4 mis-filed email threads off the Mueller/Cohn account.</strong> Thread #2 → Jennifer Stickler account; Threads #3, #5, #7 → internal Accruity ops account (or remove from any client).</td>
+<td>Generator / Ops</td>
+<td>🟡 MED</td>
+<td><code>[Email Log rows #2, #3, #5, #7]</code> <code>[§3]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>System-wide F&amp;L URL collision plumbing fix.</strong> 8 of 8 reviewed clients (Spring, Alex, Becky, Brad, Brett, Andy, Matt, Mueller) have identical defaulted SharePoint URLs in their Files &amp; Links rows. Pattern is now confirmed across 8 datapoints. Ops fix needed.</td>
+<td>Accruity ops</td>
+<td>🟡 MED-HIGH</td>
+<td><code>[FL:Mueller §Document Inventory]</code> <code>[Cross-ref: 7 prior dossiers]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Sync URLs from Insights/EL/F&amp;L up to Account-record top-level fields</strong> (PBC Workbook, SharePoint Drive, Tax Extraction, Tax Planning Memo, Meeting Prep Notes, Mango Display Name — all empty). Same plumbing pattern observed across all reviewed clients.</td>
+<td>Accruity ops</td>
+<td>🟢 LOW (plumbing)</td>
+<td><code>[Accounts §various]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Confirm Mango Portal Invite delivered + accessed by Renee.</strong> Renee's Client Contacts shows Portal Access = No despite EL showing Mango Portal Invite Sent.</td>
+<td>Sophia / Stacy</td>
+<td>🟡 MED</td>
+<td><code>[ClientContacts:Renee §Portal Access]</code> <code>[EL §Mango Portal Invite]</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Verify ATM K-1 extraction — D012/D013 field alignment issues</strong> (Renee vs Tyler boxes appear swapped). Critical for accurate K-1 income on 2025 return.</td>
+<td>Deontae / Stacy</td>
+<td>🟡 MED</td>
+<td><code>[ExecSum §Tax Estimate Workbook §Open Items #9]</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Confirm Stamm Estate K-1 (D067) treatment.</strong> Issued to Cora, not Renee/Tyler. Confirm if on MFJ.</td>
+<td>Deontae / Stacy</td>
+<td>🟡 MED</td>
+<td><code>[ExecSum §Tax Estimate Workbook §Open Items #10]</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Confirm 1099-NEC ($204K Elite RE) treatment</strong> — separate Sch C or captured in K-1 flow?</td>
+<td>Deontae</td>
+<td>🟡 MED</td>
+<td><code>[ExecSum §Tax Estimate Workbook §Open Items #2]</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Tax Team check on Insights project.</strong> <code>Checked (Tax Team) = No</code> despite <code>Insights: Delivered</code>.</td>
+<td>Tax Team</td>
+<td>🟡 MED</td>
+<td><code>[Insights §Checked (Tax Team)]</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Confirm Renee's filing status + spouse identity.</strong> Workbook says MFJ, but spouse is unnamed in any source (Tyler is recap'd as "son" not spouse). Resolve before final return.</td>
+<td>Seth / Stacy</td>
+<td>🔴 HIGH</td>
+<td><code>[§2.2 corrections]</code></td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Confirm "Jeff Cohn" identity + role.</strong> Spelling ("Cohen" vs "Cohn"), and whether Jeff is a household co-filer or ERS business partner.</td>
+<td>Seth</td>
+<td>🔴 HIGH</td>
+<td><code>[§2.2]</code></td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Update Meetings Tracker statuses</strong> for #1 (2025-12-22 Pending — placeholder recap LINK) and #3 (2026-02-25 Pending — recap exists).</td>
+<td>Ops</td>
+<td>🟢 LOW</td>
+<td><code>[Meeting 2025-12-22, 2026-02-25]</code></td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Email plumbing — capture inbound from renee@eliterealestatesystems.com.</strong> Make.com appears to be only capturing outbound; inbound from Renee not on log.</td>
+<td>Ops (Make.com — DO NOT MODIFY)</td>
+<td>🟢 LOW</td>
+<td><code>[§3.4]</code></td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Confirm capital improvements 2025/2026 on commercial building</strong> + upload docs (client side). Get GL detail from back office (Accruity side).</td>
+<td>Renee + Deontae</td>
+<td>🟡 MED</td>
+<td><code>[Meeting 2026-03-30 §Action Items]</code></td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>Verify 2024 actual total tax (PY safe harbor target).</strong> D016 PY return needs review; AGI was deeply negative from $515K 4797 abandonment loss.</td>
+<td>Stacy</td>
+<td>🟡 MED</td>
+<td><code>[ExecSum §Tax Estimate Workbook §Open Items #5]</code></td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Fix Zoom recording settings.</strong> Settings &gt; Recording &gt; Enable Record to computer files + External meeting participants.</td>
+<td>Seth</td>
+<td>🟢 LOW (housekeeping)</td>
+<td><code>[Email 2026-04-13 "FW: ZOOM"]</code></td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>Log prior Claude-style work products</strong> (Tax Estimate Workbook 2026-04-07, Cost Seg Property List 2026-04-08) into the Claude Summaries DB. Will be addressed by Turn 11 of current refresh.</td>
+<td>Generator</td>
+<td>🟢 LOW</td>
+<td><code>[ExecSum subpages]</code> <code>[§6.3]</code></td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Retrieve Fellow recap of 2026-03-25 internal Tax Planning prep meeting.</strong> Likely contains scenario modeling driving the 3/30 conversation.</td>
+<td>Seth</td>
+<td>🟢 LOW</td>
+<td><code>[Email 2026-04-13 "FW: Tax Planning"]</code></td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>Verify REP (Real Estate Professional) status election for 2025.</strong> Not elected on PY per Insights review; given 9-property holdings + ERS operator role, qualification is plausible — major lever if confirmed.</td>
+<td>Seth + Renee</td>
+<td>🟡 MED</td>
+<td><code>[ExecSum §Tax Estimate Workbook §Cost Seg]</code></td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>Inventory PBC list for 2025 returns.</strong> EL note (Jane): <em>"Need to speak with them. I'm not really sure what we need... I would hold off until I can look closer at what they have given us."</em> PBC list status = Hold for review. Comprehensive PBC list still TBD.</td>
+<td>Stacy / Tax Team</td>
+<td>🟡 MED</td>
+<td><code>[EL §Notes (PBC OPEN ITEMS)]</code> <code>[EL §PBC list status]</code></td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>Confirm/send restructuring details for new entity changes underway</strong> (likely the ERS Mortgage transfer + October 2025 entity removals).</td>
+<td>Renee</td>
+<td>🟡 MED</td>
+<td><code>[Meeting 2026-03-30 §Action Items §Renee/Client]</code> <code>[Email 2026-04-14]</code></td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>Standardize "Cohn" vs "Cohen" spelling.</strong> Account = Cohn; EL + Tax Ascend = Cohen. Pick canonical and update other records.</td>
+<td>Ops</td>
+<td>🟢 LOW</td>
+<td><code>[§2.1]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Priority distribution:</strong> 4 HIGH · 11 MED · 9 LOW. The HIGH cluster (#1, #2, #3, #12, #13) is <strong>all about resolving 2025 return uncertainty</strong>: cost seg lever (#1), extension payment (#2), tax memo (#3), filing status (#12), and Jeff Cohn role (#13).</p>
+<hr>
+<h2 id="8-tax-strategies">§8. Tax Strategies</h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Status</th>
+<th>Notes / Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cost Segregation — 4471 41st Ave (Parkway Plaza)</strong></td>
+<td>🟢 <strong>PRIMARY 2025 LEVER — proposal not yet submitted</strong></td>
+<td>$1.6M acq / $4.4M valuation; ~$2M building basis; built 2019–2020; 100% currently 39yr SL; $400K deduction target → TI ~$100–120K. <code>[ExecSum §Tax Estimate Workbook §Cost Seg]</code> <code>[ExecSum §Cost Seg Property List]</code></td>
+</tr>
+<tr>
+<td><strong>Cost Segregation — 8 other ATM Acquisitions properties</strong></td>
+<td>🟡 Secondary — review for lookback eligibility</td>
+<td>Per Workbook §Cost Seg: <em>"Additional lookback-eligible properties in EWM ($1M+ building basis) and other ATM properties."</em> <code>[ExecSum §Tax Estimate Workbook §Cost Seg]</code></td>
+</tr>
+<tr>
+<td><strong>REP (Real Estate Professional) status</strong></td>
+<td>🟡 Not elected on PY — verify for 2025</td>
+<td>If qualified, unlocks passive losses against active income — major lever. <code>[ExecSum §Tax Estimate Workbook §Cost Seg]</code></td>
+</tr>
+<tr>
+<td><strong>Retirement contributions</strong> (Solo 401(k) + IRAs)</td>
+<td>🟡 Discussed — biggest remaining lever after cost seg</td>
+<td>Contribution amounts TBD per Renee. <em>"retirement contributions are one of the biggest remaining levers for 2025 tax reduction"</em> (Seth, 3/30). <code>[Meeting 2026-03-30 §Retirement Plans]</code></td>
+</tr>
+<tr>
+<td><strong>Q1 2026 ES at ~50% of original estimate</strong></td>
+<td>🟡 Underpayment penalty avoidance</td>
+<td>Seth's "50% method" → ~$9,625. K-1s not yet received; estimates from 2024 actuals. <code>[ExecSum §Tax Estimate Workbook §Q1 2026 ES]</code></td>
+</tr>
+<tr>
+<td><strong>Oil &amp; gas investments (~70% Y1 write-off)</strong></td>
+<td>🟢 Discussed — flexible vehicle</td>
+<td>Mentioned 3/30 as IRS-tolerated structure. <code>[Meeting 2026-03-30 §Tax-Efficient Strategies]</code></td>
+</tr>
+<tr>
+<td><strong>Farm losses (Schedule F)</strong></td>
+<td>🟢 Active vehicle</td>
+<td><em>"farm losses as a flexible write-off vehicle — IRS rarely questions"</em>; ~$300K farm income expected 2025 (~same as PY). Tyler keeping prior CPA for farm books. <code>[Meeting 2026-03-30 §Tax-Efficient Strategies]</code> <code>[Meeting 2026-03-30 §Farm]</code></td>
+</tr>
+<tr>
+<td><strong>Avoid energy credits/solar deals promising &gt; Y1 returns</strong></td>
+<td>🔴 IRS scrutiny — flagged not to do</td>
+<td>Per 3/30 advisory. <code>[Meeting 2026-03-30 §Tax-Efficient Strategies]</code></td>
+</tr>
+<tr>
+<td><strong>§1031 like-kind exchanges</strong></td>
+<td>⚪ Not applicable 2025 (no real estate sales)</td>
+<td>Consider if any sales emerge. <code>[Meeting 2026-03-30 §Tax-Efficient Strategies]</code></td>
+</tr>
+<tr>
+<td><strong>Opportunity zones</strong></td>
+<td>⚪ Not applicable</td>
+<td>No current properties qualify. <code>[Meeting 2026-03-30 §Tax-Efficient Strategies]</code></td>
+</tr>
+<tr>
+<td><strong>Itemize vs Standard Deduction</strong></td>
+<td>🟡 Evaluate</td>
+<td>Standard used on PY. Evaluate itemizing (mortgage + SALT + charitable via Verli Foundation). <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code></td>
+</tr>
+<tr>
+<td><strong>§1202 QSBS</strong></td>
+<td>⚪ Not applicable on file</td>
+<td>No reported QSBS-eligible holdings.</td>
+</tr>
+<tr>
+<td><strong>Accountable plan / S-corp election</strong></td>
+<td>⚪ Not currently in scope</td>
+<td>Entity stack already mature; Insights review concluded "well-optimized; no changes recommended." <code>[Meeting 2026-03-30 §Entity Structure]</code></td>
+</tr>
+<tr>
+<td><strong>EIDL loan reconciliation</strong></td>
+<td>🟡 Active</td>
+<td>EIDL loans on ATM and PC; balance sheet treatment needed. <code>[ExecSum §Tax Estimate Workbook §Key Facts]</code></td>
+</tr>
+<tr>
+<td><strong>KW Elite → eXp transition notes payable</strong></td>
+<td>🟡 Active — balance sheet treatment</td>
+<td>No-interest, ~36-month terms across multiple entities. Seth flagged to back office. <code>[Meeting 2026-03-30 §Notes Payable]</code></td>
+</tr>
+<tr>
+<td><strong>NOL carryforward ($85K from 2024)</strong></td>
+<td>🟢 Active — applies 2025</td>
+<td>One-time 2024 Aksarben abandonment 4797 loss generated $85K NOL. AGI was ~$0 in 2024. Reduces 2025 AGI from ~$530K to ~$445K. <code>[ExecSum §Tax Estimate Workbook §Income Estimate]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-opportunity-flags-rule-based">§9. Opportunity Flags (rule-based)</h2>
+<p>Per <code>execsumm_emails/opportunity_flags.py</code> rule pack (Cost Seg + S-Corp classifier).</p>
+<h3 id="91-cost-segregation-high-already-on-path">9.1 Cost Segregation (HIGH — already on path)</h3>
+<p>🔴 <strong>HIGH — IN MOTION.</strong> All 5 cost-seg trigger conditions are met:
+- ✅ 9-property RE portfolio (&gt;1 property)
+- ✅ Commercial real estate ≥$500K basis (4471 41st Ave at $1.6M acq / $4.4M valuation; $1M+ basis on additional EWM)
+- ✅ Currently using SL depreciation only (100% at 39yr SL on Parkway Plaza)
+- ✅ Acquisition or substantial improvements within recent 5 years (Parkway built 2019–2020, refi'd 2021)
+- ✅ Active operator (ERS = Renee's brokerage; multi-entity holding stack)</p>
+<p><strong>Status:</strong> Discussed on 3/30 call; proposal <strong>not yet submitted</strong> to Accruity's cost seg system. Primary 2025 lever. Action item §7 #1.</p>
+<h3 id="92-s-corp-election-low-entity-stack-already-mature">9.2 S-Corp Election (LOW — entity stack already mature)</h3>
+<p>⚪ <strong>LOW — entity stack already optimized.</strong> Per 3/30 §3 Entity Structure Review: <em>"Well-optimized per insights review. No changes recommended."</em> <code>[Meeting 2026-03-30 §Entity Structure]</code>. Existing stack includes:
+- ATM Acquisitions LLC (1065 partnership likely)
+- Elite Wealth Management LLC (LLC; holds commercial bldg)
+- MTBAB LC (already a C-Corp)
+- ERS LLP (parent)
+- RM PC (Professional Corporation)</p>
+<p>S-corp election on a brokerage-services entity (e.g., the Elite RE Sch C if separated) could be evaluated, but Insights team has already opined no changes recommended. Re-evaluate only if material new income streams emerge.</p>
+<h3 id="93-rep-status-high-major-lever-if-qualified">9.3 REP Status (HIGH — major lever if qualified)</h3>
+<p>🔴 <strong>HIGH — eligibility likely.</strong> With 9 properties (8 in ATM + 1 in EWM) plus active ERS brokerage operations, Renee likely qualifies for Real Estate Professional status (&gt;750 hours material participation in real-estate trades or businesses; &gt;50% of personal services in real-estate). REP status would convert passive losses (cost seg, normal depreciation) into active losses deductible against W-2/farm/brokerage income. <strong>Not elected on PY per Insights review.</strong> Action item §7 #21.</p>
+<h3 id="94-1202-qsbs-na">9.4 §1202 QSBS (N/A)</h3>
+<p>⚪ No reported QSBS-eligible holdings.</p>
+<h3 id="95-rd-credit-na">9.5 R&amp;D Credit (N/A)</h3>
+<p>⚪ No reported R&amp;D activities.</p>
+<h3 id="96-accountable-plan-augusta-rule-low">9.6 Accountable Plan / Augusta Rule (LOW)</h3>
+<p>⚪ Not currently in scope.</p>
+<h3 id="97-roth-conversion-mega-backdoor-med-defer">9.7 Roth Conversion / Mega Backdoor (MED — defer)</h3>
+<p>🟡 <strong>MED — defer.</strong> Solo 401(k) + IRAs (some self-directed) on file. With expected 2025 TI dropping from ~$384K to ~$100–120K via cost seg, <strong>lower-bracket year is a Roth-conversion window.</strong> Not in 3/30 agenda; flag for 2026 planning cycle.</p>
+<h3 id="98-charitable-daf-low">9.8 Charitable / DAF (LOW)</h3>
+<p>🟡 <strong>LOW.</strong> Verli Foundation (Burley Foundation) is the family non-profit (990 handled by external specialist). If Renee + spouse have donor-advised contributions or appreciated-stock gifts, evaluate as part of itemize-vs-standard analysis (§8). Not currently in scope.</p>
+<hr>
+<h2 id="10-operations-analysis">§10. Operations Analysis</h2>
+<h3 id="101-engagement-scope">10.1 Engagement scope</h3>
+<p><strong>Per EL signed copy + Tax Ascend record:</strong>
+- Tax Ascend Type: TAX COMPLIANCE + TAX PLANNING <code>[Tax Ascend §TAX ASCEND TYPE]</code>
+- Entity Compliance services: Registered Agent Services <code>[EL §Entity Compliance services]</code>
+- Mango tag: PBC Request list <code>[EL §Mango Tag]</code>
+- TAX PROPOSAL (SOW): COMMITTED <code>[EL §TAX PROPOSAL]</code>
+- Engagement Letter Status: Signed <code>[EL §Engagement Letter Status]</code>
+- Deposit Paid: Yes <code>[EL §Deposit Paid]</code>
+- Price: $16,650 <code>[EL §Price]</code></p>
+<p><strong>Scope coverage (in-scope):</strong>
+- 1040 (MFJ assumed; Renee + spouse-TBD)
+- Multi-entity returns: ATM Acquisitions (1065), Elite Wealth Management LLC, ERS LLP, Verli LLC, RM PC, Real Services, Premier 1031 (winding down — extension filed)
+- Schedule F farm (Renee's responsibility; Tyler's CPA continues bookkeeping)
+- Cost Segregation (4471 41st Ave + lookback opportunities)
+- Registered Agent services for some entities</p>
+<p><strong>Scope coverage (out-of-scope or external):</strong>
+- Verli Foundation 990 (external specialist)
+- Farm bookkeeping (Tyler keeping prior CPA — Accruity does not touch farm books)
+- MTBAB C-Corp return (semi-retired accountant partner does it + issues K-1 to Renee)
+- Stamm Estate K-1 (D067 issued to Cora — separate scope)</p>
+<h3 id="102-pricing-context">10.2 Pricing context</h3>
+<p>$16,650 EL price is consistent with the Spring/Tommy/Matt class of complex multi-entity 1040+1065+services engagements. For comparison: Spring's 20-returns-on-engagement / 11-QBO-entities engagement is in the same depth tier. Mueller is plausibly slightly less complex than Spring (no QSBS, no SAFE-note investor work, fewer transactions/yr) but more property-heavy.</p>
+<h3 id="103-workflow-lifecycle-status-as-of-2026-05-07">10.3 Workflow lifecycle status (as of 2026-05-07)</h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Onboarding / EL</td>
+<td>✅ Signed + Deposit Paid</td>
+<td>$16,650, MangoShare 92a9b4d05819e6765cb049b8</td>
+</tr>
+<tr>
+<td>Mango Project Created</td>
+<td>✅</td>
+<td><code>[EL §Mango Engagement/Project]</code></td>
+</tr>
+<tr>
+<td>Mango Portal Invite</td>
+<td>⚠️ Sent but NOT accepted</td>
+<td>Renee Portal Access = No</td>
+</tr>
+<tr>
+<td>Insights Project</td>
+<td>✅ Delivered (FULL INSIGHTS)</td>
+<td>Tax Team check NOT done</td>
+</tr>
+<tr>
+<td>Tax Memo</td>
+<td>⚠️ Status "CLARIFY WITH STACY"; not yet sent</td>
+<td>Date Memo Sent empty</td>
+</tr>
+<tr>
+<td>Tax Planning Session</td>
+<td>✅ Delivered 2026-03-30 (1 hr)</td>
+<td>Recording recovered post-failure</td>
+</tr>
+<tr>
+<td>2025 ES + Extension</td>
+<td>⚠️ Computation not yet finalized</td>
+<td>Farm tax payment confirmation pending</td>
+</tr>
+<tr>
+<td>2025 Compliance</td>
+<td>⏸️ Open Items List - email sent</td>
+<td>Awaiting response</td>
+</tr>
+<tr>
+<td>Cost Seg Proposal</td>
+<td>⏸️ NOT submitted</td>
+<td>Primary 2025 lever</td>
+</tr>
+<tr>
+<td>2024 Returns</td>
+<td>✅ Complete (PY context referenced throughout)</td>
+<td>Generated $85K NOL</td>
+</tr>
+<tr>
+<td>2024 Returns Amendments</td>
+<td>(none flagged)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="104-communication-plumbing">10.4 Communication plumbing</h3>
+<ul>
+<li><strong>Renee → Accruity:</strong> Email to Stacy, then Seth forwards internally. Email Log captures outbound forwards, not inbound directly from Renee (gap).</li>
+<li><strong>No Mango portal usage</strong> — Renee hasn't accepted invite.</li>
+<li><strong>Documents:</strong> Dropbox is the de facto channel (per 3/30 recap, multiple "upload to Dropbox" action items). Mango portal inactive. SharePoint folders exist but are Accruity-side.</li>
+<li><strong>Live checklist/document tracker</strong> — Seth committed on 3/30 to share a live tracker NOT through Mango. Status TBD.</li>
+</ul>
+<h3 id="105-operational-risks">10.5 Operational risks</h3>
+<ol>
+<li><strong>Asymmetric service depth (Renee vs Jeff)</strong> — see §11 below. The "joint household" framing is misleading; the engagement is Renee-centric. If Jeff Cohn surfaces with personal tax needs, scope creep is likely.</li>
+<li><strong>Tax Memo unfinalized + Compliance Open Items pending</strong> — two parallel blockers on 2025 return finalization.</li>
+<li><strong>Mango portal not accepted</strong> — single most material plumbing gap; without portal, document flow is ad hoc Dropbox + email.</li>
+<li><strong>Cost seg proposal not submitted</strong> — primary lever sitting in queue; the longer it waits, the less likely the 2025 return can claim the deduction without an amended return.</li>
+<li><strong>Spousal identification + filing status unconfirmed</strong> — basic 1040 information gap.</li>
+</ol>
+<hr>
+<h2 id="11-individual-profiles">§11. Individual Profile(s)</h2>
+<h3 id="111-renee-mueller-active-1040-client">11.1 Renee Mueller (active 1040 client)</h3>
+<p><strong>Identity.</strong>
+- Name: Renee Mueller (alt: "Rene Mueller" — single 'e' — appears in Tax Ascend, Meetings; canonical "Renee" per Account + ClientContacts)
+- Email: <code>renee@eliterealestatesystems.com</code>
+- Phone: (402) 910-0178
+- Location: Columbus, NE area (402 area code; 9-property holdings clustered in Columbus)</p>
+<p><strong>Professional.</strong>
+- Operator of Elite Real Estate Systems (ERS) — Nebraska-based real-estate brokerage; LLP parent for a multi-entity stack
+- Multi-property real estate operator (9 properties, ~$3M acquisition basis)
+- Prior brokerage affiliation: KW Elite (now transitioning to eXp; carryover notes payable on balance sheet)
+- Personal services entity: RM PC (-$74K loss in 2024)</p>
+<p><strong>Personal context (per 3/30 recap).</strong>
+- Married (spouse not named in any source — gap)
+- Son <strong>Tyler</strong> runs the farm (Schedule F); Tyler is on farm payroll via Sch F flow-through (no FICA)
+- Charitable vehicle: Verli (Burley) Foundation (family non-profit)</p>
+<p><strong>Tax profile.</strong>
+- 2024 AGI: deeply negative (4797 Aksarben abandonment loss ~$515K)
+- 2024 total tax: ~$22,000 (SE only)
+- 2024 NOL generated: $85K (carries forward to 2025)
+- 2025 projected income (all-in incl farm): ~$530K
+- 2025 estimated AGI: ~$445K (after $85K NOL)
+- 2025 estimated TI (before cost seg): ~$384K
+- 2025 estimated federal tax (no cost seg): ~$107K
+- 2025 estimated federal tax (with $30K cost seg savings): ~$77K
+- 2025 ES paid in: ~$234 W-2 only + farm tax payments (unknown amount) + zero personal ES
+- Extension payment needed (to hit safe harbor): ~$21,766 (less farm payments, if any)</p>
+<p><strong>Service depth.</strong> ⭐⭐⭐⭐⭐ (5/5 — full engagement) — primary client for tax compliance + planning + cost seg + REP analysis + multi-entity coordination + farm coordination + ES + extension.</p>
+<h3 id="112-jeff-cohn-account-named-principal-sparse">11.2 Jeff Cohn (Account-named principal — sparse)</h3>
+<p><strong>Identity.</strong>
+- Name (per Account): Jeff Cohn
+- Name (per Tax Ascend, EL): Jeff <strong>Cohen</strong> ⚠️ spelling drift
+- Email: <strong>NOT ON FILE</strong>
+- Phone: <strong>NOT ON FILE</strong>
+- Location: <strong>NOT ON FILE</strong></p>
+<p><strong>Professional (inferred / unconfirmed).</strong>
+- Most likely identification: nationally-known real-estate coach (founder of "No Broker Bound" coaching, rebranded under Elite Real Estate Systems brand; based in Omaha NE area at Berkshire Hathaway HomeServices Ambassador Real Estate). If correct, this would make Jeff Renee's <strong>business partner / co-owner of ERS LLP</strong>, not a household co-filer.
+- Alternative identification: silent / inactive partner in ERS or one of the holding entities
+- Alternative identification: Renee's spouse (the Account Name would then be literally accurate as a married household — but this contradicts the 3/30 recap reference to Renee's "husband" without naming Jeff)</p>
+<p><strong>Personal context.</strong>
+- Filing status relationship to Renee: <strong>UNCONFIRMED</strong> — see §2.2 corrections
+- 1040 involvement: NONE on file</p>
+<p><strong>Service depth.</strong> ⭐ (1/5 — name-on-Account-only) — Jeff Cohn does not appear in any meeting attendee list, email thread participant list, action items, K-1 references, or substantive narrative. <strong>Asymmetric service depth gap = 4 stars (Renee 5/5 vs Jeff 1/5).</strong></p>
+<p><strong>Asymmetric service depth check (joint household pattern).</strong> The Spring Bengtzen reference dossier exhibits an asymmetric depth where Spring (5/5) has dramatically more engagement-level activity than Brian (3/5 — but Brian still had emails, meetings, a SAFE-note transaction stream, and Sisu CEO context). The Matt &amp; Chelsea Iannaccio reference dossier is more symmetric (Matt 5/5 active operator; Chelsea 4/5 future $25K W-2 from OHS, joint filer). <strong>Mueller/Cohn is the most extreme asymmetric case yet observed in this dossier corpus</strong> — Jeff is essentially invisible in source data. This strongly suggests either (a) the Account Name is mis-modelled (Jeff = business partner not household co-filer), or (b) Jeff is genuinely a silent partner with no personal tax engagement footprint.</p>
+<p><strong>Promoted to §7 #13 HIGH</strong> — confirm Jeff's identity, role, and whether he's a 1040 client at all.</p>
+<h3 id="113-tyler-mueller-per-recap-renees-son-not-spouse">11.3 Tyler Mueller (per recap — Renee's son, NOT spouse)</h3>
+<p>⚠️ <strong>Important re-read of source data.</strong> Initial parse assumed Tyler = Renee's spouse based on the "MFJ" filing-status header in the Workbook. Re-reading the 2026-03-30 meeting recap more carefully:</p>
+<blockquote>
+<p><em>"Tyler (Renee's </em><em>son</em><em>) will keep the existing firm for farm bookkeeping and K-1 issuance."</em> <code>[Meeting Summary §Topics §Farm]</code></p>
+</blockquote>
+<p>Tyler is Renee's <strong>son</strong>, not her spouse. The spouse appears separately in the recap as <em>"ATM Acquisitions – Real estate holding company (Renee + </em><em>husband</em><em>)"</em> without naming the husband.</p>
+<p><strong>Identity (Tyler).</strong>
+- Name: Tyler Mueller (presumably — same surname as Renee)
+- Role: Operator of Renee's farm Schedule F (~$300K/yr); on farm payroll via Sch F flow-through
+- Tax footprint: Issues K-1 to Renee from farm; Tyler files his own return separately (with prior CPA)
+- 1040 involvement at Accruity: NONE — Tyler's farm bookkeeping stays with prior CPA per 3/30 recap</p>
+<p><strong>Service depth.</strong> ⭐⭐ (2/5 — context-only) — Tyler is a stakeholder in Renee's tax picture (farm K-1 source) but is not a separate Accruity client.</p>
+<h3 id="114-renees-spouse-unnamed-in-source-data-high-gap">11.4 Renee's spouse (unnamed in source data) — HIGH gap</h3>
+<ul>
+<li>Per 3/30 recap, Renee co-owns ATM Acquisitions with "husband" (unnamed).</li>
+<li>Workbook header says MFJ → spouse exists.</li>
+<li>No name, email, phone, or contact record on file.</li>
+<li><strong>Most likely candidates</strong> (in order of likelihood):
+  1. Jeff Cohn (would reconcile Account Name; contradicts ERS-coach hypothesis above)
+  2. An unnamed third individual not yet captured in any source</li>
+<li><strong>Promoted to §7 #12 HIGH.</strong></li>
+</ul>
+<hr>
+<h2 id="12-provenance-index">§12. Provenance Index</h2>
+<p>All sources cited in this dossier with stable URLs / IDs.</p>
+<h3 id="121-notion-records-primary">12.1 Notion records — primary</h3>
+<ul>
+<li><strong>Account:</strong> <a href="https://www.notion.so/30d49172875181b4a960ff221f9a14c2">Renee Mueller and Jeff Cohn</a> <code>30d49172-8751-81b4-a960-ff221f9a14c2</code></li>
+<li><strong>Primary Contact (Renee):</strong> <a href="https://www.notion.so/30d4917287518158b371d7fce8767ee2">Renee Mueller</a></li>
+<li><strong>Executive Summary (DB row):</strong> <a href="https://www.notion.so/33b491728751813dbff6e31c99d3410b">Renee Mueller &amp; Jeff Cohn</a> <code>33b49172-8751-813d-bff6-e31c99d3410b</code></li>
+<li><strong>Subpage:</strong> <a href="https://www.notion.so/33b491728751810f8c85d9e8d732dd80">📊 2025 Tax Estimate Workbook — Renee Mueller</a> (2026-04-07)</li>
+<li><strong>Subpage:</strong> <a href="https://www.notion.so/33c491728751815ea19bf479595ade7b">🏠 2026-04-08 — Cost Seg Property List</a> (2026-04-08)</li>
+<li><strong>Tax Ascend record:</strong> <a href="https://www.notion.so/314491728751809d91eaf4d2481bb351">Rene Mueller &amp; Jeff Cohen ERS</a></li>
+<li><strong>Insights Delivery Meeting Recap:</strong> <a href="https://fathom.video/share/k1LGxzU7Ec3zVEL7d9axbPBzcae-8zyM">Fathom share k1LGxzU7Ec3zVEL7d9axbPBzcae-8zyM</a></li>
+<li><strong>Tax Planning Session record:</strong> <a href="https://www.notion.so/319491728751804fa0bbe10165ecfc0b">Rene Mueller &amp; Jeff Cohen ERS</a></li>
+<li><strong>Engagement Letter:</strong> <a href="https://www.notion.so/314491728751802fa8bad4a0406c0c05">✅ Renee Mueller + Jeff Cohen ERS</a></li>
+<li><strong>Signed EL MangoShare:</strong> <a href="https://app.mangoshare.com/share/92a9b4d05819e6765cb049b8">app.mangoshare.com/share/92a9b4d05819e6765cb049b8</a></li>
+<li><strong>Insights Project Status:</strong> <a href="https://www.notion.so/2fd49172875180ecb463d053d615f7fe">Renee Mueller and Jeff Cohn</a> (FULL INSIGHTS — Delivered)</li>
+<li><strong>Documents (Master Document Input):</strong> <a href="https://www.notion.so/32149172875181869c87dd19486d4d0d">Email: Rene Mueller — DOC-133</a></li>
+</ul>
+<h3 id="122-files-links-3-rows">12.2 Files &amp; Links (3 rows)</h3>
+<ul>
+<li><a href="https://www.notion.so/33b491728751814e9aaefb07b2f8eccd"><code>33b4…eccd</code> — Engagement Letter (placeholder)</a></li>
+<li><a href="https://www.notion.so/33b49172875181b488aafade65748d11"><code>33b4…8d11</code> — Executive Summary (placeholder)</a></li>
+<li><a href="https://www.notion.so/33b49172875181cc8596f989260b5dec"><code>33b4…5dec</code> — Renee Mueller and Jeff Cohn</a></li>
+<li>Document Inventory: <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgCqkxeMjXQoTZO-AkTP6NpEARi_eOyGo1CIpZYMo-RRlnw?e=QLo4ua">SharePoint folder</a> ⚠️ collision</li>
+<li>PBC PDF Package: <a href="https://subledgesl-my.sharepoint.com/:f:/g/personal/seth_accruity_com/IgDL0pq68xE1RK_ZTOeU2SehAVXsUACBFadilTO5RsW-5YA?e=2u2L6u">SharePoint folder</a> ⚠️ collision</li>
+</ul>
+<h3 id="123-meetings-tracker-4-rows">12.3 Meetings Tracker (4 rows)</h3>
+<ul>
+<li><a href="https://www.notion.so/2fb49172875180d58feceb36bb5558b1">2025-12-22 — Full Insights Clarification (Pending)</a></li>
+<li><a href="https://www.notion.so/2fb49172875180699679e56baa40120d">2026-01-15 — Full Insights Clarification (Done)</a> — recap <a href="https://fathom.video/share/2yWBkAQagwJabrja-mhGLzeZD6Zkf5ee">Fathom 2yWBkAQagwJabrja</a></li>
+<li><a href="https://www.notion.so/31a49172875180a19accf414a977e936">2026-02-25 — Full Insights Delivery (Pending)</a> — recap <a href="https://fathom.video/share/jCscBaYxT-ehUgHrzoh-uHhJyw2sfgmS">Fathom jCscBaYxT-ehUgHrzoh</a></li>
+<li><a href="https://www.notion.so/33349172875180669719d2877c24f295">2026-03-30 — Tax Planning Session (Done)</a> — recap <a href="https://foregoing-cilantro-a21.notion.site/Meeting-Summary-Action-Items-3344917287518130b726d8d92c1c3ff1">Notion Meeting Summary 3344917287518130b726d8d92c1c3ff1</a></li>
+</ul>
+<h3 id="124-email-log-7-rows">12.4 Email Log (7 rows)</h3>
+<ul>
+<li><a href="https://www.notion.so/34249172875181339853ce02cbf1c70a">2026-04-14 — Re: Mortgage units and ERS changes in 2025 (Outbound, Med risk) — ON-ACCOUNT</a></li>
+<li><a href="https://www.notion.so/342491728751816d91d9dd33f269301d">2026-04-14 — Re: April 15 - Extension &amp; 2025 Tax Estimate (Outbound, High risk) — MIS-FILED → Jennifer Stickler</a></li>
+<li><a href="https://www.notion.so/34249172875181c29d92d807ccc5eb8d">2026-04-13 — FW: Recap for "Jeff" (Inbound, Med) — MIS-FILED → Seth+Jeff Boscaino internal</a></li>
+<li><a href="https://www.notion.so/3424917287518143960feb83ce5c281e">2026-04-13 — FW: ZOOM MEETING failed (Inbound, Med) — ON-ACCOUNT</a></li>
+<li><a href="https://www.notion.so/342491728751815780ebfa233051b632">2026-04-13 — FW: 📝 JEFF&lt;&gt;SETH on Mar 19 (Inbound, Low) — MIS-FILED → Seth+Jeff Boscaino internal</a></li>
+<li><a href="https://www.notion.so/3424917287518156bc1ae606a1f6a015">2026-04-13 — FW: 📝 Tax Planning 30min review - Renee Mueller on Mar 25 (Inbound, Low) — ON-ACCOUNT</a></li>
+<li><a href="https://www.notion.so/3424917287518186957cec21828b1356">2026-04-13 — FW: 1-on-1 with Jeff on Fellow (Inbound, Low) — MIS-FILED → Seth+Jeff Boscaino internal</a></li>
+</ul>
+<h3 id="125-sharepoint-external">12.5 SharePoint / external</h3>
+<ul>
+<li><a href="https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQAyqlvlH6LcSbGmSS4oxWZLAc4To8azJndkXMgbuSc3NlI?e=emNuXj">Insights Counting File 1</a></li>
+<li><a href="https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQDzQwRnJHkbTYRXhw5hdbIjATkI6U30Am49RBP9iBeZvYI?e=oNI9HC">Insights Counting File 2</a></li>
+<li><a href="https://subledgesl-my.sharepoint.com/:x:/g/personal/seth_accruity_com/IQCeL8GoThM3RJEmM12bOy7xAR49yyBAQq85gnyJysz0L-8?e=xtA8Lb">Insights Extraction 1040</a></li>
+<li><a href="https://subledgesl.sharepoint.com/:x:/s/Insights/IQB9BSN5GG3TS67fseGHlDyoAaj0QzvLHqQcQbck_NQ65yc?e=MAl3qR">Request List Tracker ERS Holdings.xlsx</a></li>
+<li><a href="https://subledgesl.sharepoint.com/:x:/s/Insights/IQAgP2ONJu2RS5VzNYRkVmTiAWwrlYWXTgmQEPC7uvwnmvE?e=Q8A6Om">Request List Tracker Renee Mueller.xlsx</a></li>
+<li>ImagineTime workspace (Mortgage docs upload — per 4/14 email): <code>firm/5331/workspaces/961366/files/19011257</code></li>
+<li>4 Google Drive files for DOC-133: <code>1WqLjvJPsTnmfvp2xOYWvKVQmCzDHqvCg</code>, <code>1GojR0CUtJDkDHvHzW0Ta9wIkVl-I-cA5</code>, <code>11Uk_k-D8GUuj8LuvYshsrqqJgY9w08tl</code>, <code>1JEbAS5jldt5CJIXf9vx6j35w1lZ92NZR</code></li>
+</ul>
+<h3 id="126-cross-references-to-other-client-dossiers">12.6 Cross-references to other client dossiers</h3>
+<ul>
+<li><strong>AnnMarie Geddess + Frank Felice dossier</strong> — <code>/dossiers/AnnMarieGeddessFrankFelice/dossier.md</code> — the Sympli Mortgage cross-reference flag (resolved this refresh; see §1 + §13)</li>
+<li><strong>Spring Bengtzen dossier</strong> — <code>/dossiers/SpringBengtzen/dossier.md</code> — joint-household reference shape</li>
+<li><strong>Matt &amp; Chelsea Iannaccio dossier</strong> — <code>/dossiers/MattAndChelseaIannaccio/dossier.md</code> — joint-household reference shape</li>
+<li><strong>Becky Mead, Brad Kanouse, Brett Zanotto, Andy Karabinos, Alex Dykes/Mark Ferguson dossiers</strong> — each reference points for the F&amp;L URL collision pattern (now 8 datapoints with this refresh)</li>
+</ul>
+<hr>
+<h2 id="13-changed-since-last-refresh">§13. Changed Since Last Refresh</h2>
+<p><strong>This is the first refresh</strong> — no prior dossier exists for this client.</p>
+<h3 id="131-created-this-refresh">13.1 Created this refresh</h3>
+<ul>
+<li><code>/dossiers/ReneeMuellerJeffCohn/dossier.md</code> (this file)</li>
+<li><code>/dossiers/ReneeMuellerJeffCohn/state.json</code></li>
+<li>Notion Exec Summary row updated (Turn 11): properties <code>Summary</code> (TL;DR pulled from §1), <code>Summary Type</code> (General), <code>Tax Engagement Type</code> (TAX COMPLIANCE + TAX PLANNING), <code>date:Last Synthesized</code> (2026-05-07), <code>📄 Dossier</code> (GitHub URL), <code>📧/🎙/⚡/📁/🤖</code> (each → same GitHub URL with section anchor where supported)</li>
+<li>Notion Claude Summaries DB log row created (Turn 11): refresh entry under topic "Tax Planning"</li>
+</ul>
+<h3 id="132-cross-account-flags-resolved-this-refresh">13.2 Cross-account flags resolved this refresh</h3>
+<ul>
+<li><strong>AnnMarie/Frank dossier flagged</strong> the 2026-04-14 "Re: Mortgage units" thread on this Account as potentially overlapping with Sympli Mortgage LLC (their parent 1065 entity). <strong>This refresh resolves: NO overlap.</strong> "Mortgage" in the Mueller/Cohn email = ERS's internal Mortgage subsidiary (Renee's brokerage stack); "Nick" = Renee's brokerage partner (distinct from any Sisu/Sympli party); the 100%-to-Nick transfer is an internal ERS rebalance with no impact on AnnMarie/Frank's basis schedules. <strong>Recommend:</strong> AnnMarie/Frank §7 Action #2 (re-link/duplicate to AnnMarie account) and §7 Action #6 (basis-schedule reconciliation) be <strong>downgraded to "investigated — no overlap"</strong> on next AnnMarie refresh. Documented in §1 + §3.2.</li>
+</ul>
+<h3 id="133-mis-filed-email-re-link-queue-created-this-refresh">13.3 Mis-filed email re-link queue (created this refresh)</h3>
+<p>4 of 7 Email Log threads on the Mueller/Cohn account need re-linking:
+- 1 thread → <strong>Jennifer Stickler</strong> account (Re: April 15 Extension)
+- 3 threads → <strong>Internal Accruity ops account</strong> or removal (Seth ↔ Jeff Boscaino)</p>
+<p>These do NOT auto-relink — generator flags only; ops handles re-linking. Promoted as §7 #4 MED-plumbing.</p>
+<h3 id="134-fl-url-collision-pattern-8th-datapoint-added">13.4 F&amp;L URL collision pattern — 8th datapoint added</h3>
+<p>Mueller/Cohn's "Renee Mueller and Jeff Cohn" Files &amp; Links row exhibits the same defaulted <code>IgCqkxeMjXQoTZO…</code> (Doc Inventory) and <code>IgDL0pq68xE1RK…</code> (PBC PDF Package) URLs seen on Spring + Alex + Becky + Brad + Brett + Andy + Matt. <strong>8 of 8 reviewed clients = 100% confirmation pattern.</strong> This is a system-wide template-default issue; affects every client. Promoted as §7 #5 MED-HIGH.</p>
+<h3 id="135-open-structural-questions-surfaced">13.5 Open structural questions surfaced</h3>
+<ul>
+<li>Spelling (Cohn vs Cohen): §7 #24 LOW</li>
+<li>Filing status + spouse identity: §7 #12 HIGH</li>
+<li>Jeff Cohn's role: §7 #13 HIGH</li>
+</ul>
+<h3 id="136-drive-deliverable-per-claudemd-hard-rule-1-turn-11-protocol">13.6 Drive deliverable (per CLAUDE.md hard rule §1 / Turn 11 protocol)</h3>
+<p>In the canonical workflow, the deliverable is also saved to:
+<code>G:\Shared drives\_SMJ\___Product Development\ExecSumm-Emails\dossiers\ReneeMuellerJeffCohn_Client_Intelligence_2026-05-07.md</code></p>
+<p>In this sandboxed environment, the local repo mirror at <code>/dossiers/ReneeMuellerJeffCohn/dossier.md</code> is the canonical artifact. The Drive copy is to be replicated by the user on their local machine post-PR-merge if needed. Notion Exec Summary row 📄 Dossier property points to the GitHub URL of this file (per the <code>claude/update-exec-summary-notion-118m7</code> branch).</p>
+<hr>
+<p><em>End of dossier — Renee Mueller and Jeff Cohn — 2026-05-07.</em></p>
+<div class="footer">Internal working document — Accruity. Rendered from <code>dossiers/ReneeMuellerJeffCohn/dossier.md</code>.</div>
+</body>
+</html>

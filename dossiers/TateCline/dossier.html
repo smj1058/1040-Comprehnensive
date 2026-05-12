@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TateCline — Client Intelligence Dossier</title>
+
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 30px 40px; color: #24292e; line-height: 1.6; }
+  h1, h2, h3, h4 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin-top: 1.5em; }
+  h1 { font-size: 2em; }  h2 { font-size: 1.5em; }  h3 { font-size: 1.25em; }  h4 { font-size: 1em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #dfe2e5; padding: 6px 13px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  code { background: rgba(27,31,35,.05); padding: .2em .4em; border-radius: 3px; font-family: SFMono-Regular, Menlo, monospace; font-size: 85%; }
+  pre code { display: block; padding: 16px; overflow: auto; }
+  blockquote { border-left: 4px solid #dfe2e5; padding: 0 1em; color: #6a737d; margin: 1em 0; }
+  a { color: #0366d6; text-decoration: none; }  a:hover { text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #e1e4e8; margin: 24px 0; }
+  ul, ol { padding-left: 2em; }
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eaecef; font-size: .85em; color: #6a737d; }
+</style>
+
+</head>
+<body>
+<h1 id="tate-cline-client-intelligence-dossier">Tate Cline — Client Intelligence Dossier</h1>
+<p><strong>Internal Working Document — Accruity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Tate Cline (KNRS Properties LLC · BRC Dispositions · KR&amp;S Properties)</td>
+</tr>
+<tr>
+<td>Client #</td>
+<td><code>20050305-01</code> <code>[Accounts:Tate Cline.Client #]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td><code>937757</code> <code>[Accounts:Tate Cline.Mango Client ID]</code></td>
+</tr>
+<tr>
+<td>Prepared by</td>
+<td>Accruity Tax Advisory</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>2026-04-22</td>
+</tr>
+<tr>
+<td>Prior Refresh</td>
+<td>first run</td>
+</tr>
+<tr>
+<td>Planning Year(s)</td>
+<td>2024 (extraction baseline), 2025 (active extension), 2026 (forward)</td>
+</tr>
+<tr>
+<td>Engagement Stage</td>
+<td>Tax Ascend — Compliance + Planning + Cost Seg (stalled) + S-Corp election (planned)</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Active &amp; engaged · <strong>HIGH urgency</strong> (Apr 15 extension cycle, cost-seg intake stalled, 11 open items)</td>
+</tr>
+<tr>
+<td>Relationship Manager</td>
+<td>Seth Johnson (billing partner)</td>
+</tr>
+<tr>
+<td>Senior Manager (Billing Partner)</td>
+<td>Ryan Walsh <code>[Mango:Tax Planning - Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Tax Planning Manager</td>
+<td>Sophia (Tax Admin); Seth (Manager) <code>[Mango New DB:Tax Planning - Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Primary Contact</td>
+<td>Tate Cline — <code>knrspropertiesllc@gmail.com</code> · <code>(614) 456-6451</code> <code>[Accounts:Tate Cline.Client Contacts]</code></td>
+</tr>
+<tr>
+<td>Spouse / Co-filer</td>
+<td>Whitney Cline (per Mango project name "1040 - Tate &amp; Whitney Cline") <code>[Mango:1040 - Tate &amp; Whitney Cline]</code></td>
+</tr>
+<tr>
+<td>Data Sources (this refresh)</td>
+<td>Notion Account record · 6 Meetings Tracker rows (5 done, 1 cancelled, 1 rescheduled) · 1 Engagement Letter row (signed, $5,350) · 3 Files &amp; Links rows · 4 Email Log rows (3 misclassified noise + 1 vState) · 2 Cost Seg Proposal Intake rows · 1 Tax Ascend row · 1 Insights Project · 1 Tax Planning Session · 2 Exec Summary DB rows (1 canonical + 1 duplicate flagged) · 1 prior Claude Summary · 1 Cost Seg Pipeline session (cross-client) · 2 Mango DB rows · S-Corp Election Tracker row · Delivery call transcript (84 min)</td>
+</tr>
+<tr>
+<td>Files NOT Accessible This Refresh</td>
+<td>PBC Workbook (URL empty), Tax Extraction (URL empty), SharePoint Drive (URL empty), Tax Planning Memo (URL empty on Account, but exists per Tax Ascend record), Meeting Prep Notes (URL empty) — flagged for §5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence:</strong> ✓ Confirmed · ~ Estimated · ? Pending
+<strong>Attribution:</strong> every non-obvious fact carries an inline source tag. See §12 Provenance Index at the end.</p>
+<hr>
+<h2 id="1-executive-overview">§1. Executive Overview</h2>
+<p>Tate Cline (<code>knrspropertiesllc@gmail.com</code> · <code>(614) 456-6451</code>) is an <strong>Ohio real-estate investor &amp; operator</strong> running a multi-vertical small-business stack: <strong>KNRS Properties LLC</strong> (rental holding entity), <strong>BRC Dispositions</strong> (property flipping — currently NOT formally an S-Corp, triggering self-employment tax exposure), <strong>KR&amp;S Properties</strong> (rental portfolio operations), plus a small "cooking class" side venture. Files MFJ with spouse <strong>Whitney Cline</strong>. <code>[Mango:1040 - Tate &amp; Whitney Cline]</code> <code>[Transcript:Delivery Call 2026-02-10]</code></p>
+<p><strong>What matters right now — Apr 15 extension cycle is HIGH urgency and the cost-seg pipeline has STALLED.</strong> Per the most recent Claude session (2026-04-13), extension estimate was modeled at <strong><code>$0</code> payment IF REPS + cost seg are applied</strong> (yielding ~$90K suspended losses + $67.5K accelerated depreciation), but <strong><code>$25K+</code> balance due if those strategies fall through</strong>. <code>[ClaudeSumm:Tate Cline — Extension Estimate Consolidation 2026-04-13]</code> The cost-seg track has a <strong>critical execution gap</strong>: only <strong>111 Hancock St</strong> (KNRS Properties · $200K purchase price · 1,584 sq ft single-family rental in Delaware, OH 43015 · placed in service 2021-05-20) was entered into the RE Cost Seg portal on 2026-04-02 — and even then, the parent intake row "Cline — Cost Seg" still shows status <code>New - Enter in Portal</code> <code>[CostSegProposal:Cline — Cost Seg]</code>. <strong>365 Garfield was never entered at all.</strong> <code>[ClaudeSumm:Extension Estimate Consolidation §Discovery]</code></p>
+<p><strong>Three engagement tracks are simultaneously active:</strong></p>
+<ol>
+<li><strong>2025 Compliance + Extension</strong> — Engagement Letter signed (<code>$5,350</code>) on 2026-02-24 batch; deposit paid; Mango portal invite sent; PBC list received. Extension email sent to Tate 2026-04-09 with two scenarios. Open Items List status: "Client feedback" (awaiting Tate's response). <code>[EL:Tate Cline 2026-02-24]</code> <code>[TaxAscend:Tate Cline.Compliance Status]</code></li>
+<li><strong>Tax Planning Memo Track A</strong> — Memorandum issued 2026-03-05 (<code>Tax_Planning_Memorandum_Tate_Cline_2026.docx</code>) projecting <strong><code>$55,000</code> annual tax savings</strong> across 6 strategies driven by org-chart restructure (rental partnership holdco + S-Corp operating holdco), REPS qualification, cost segregation, Solo 401(k), Augusta Rule, employing children, and accountable plan. Tax planning session delivered 2026-04-02. <code>[ExecSumm:Tate Cline.Activity Log 2026-03-03]</code> <code>[TaxPlanningSession:Tate Cline 2026-04-02]</code></li>
+<li><strong>S-Corp Election (planned)</strong> — 2553 election flagged in S-Corp Election Tracker with status <code>Planned</code> and next action "Advance S-Corp election plan". Target effective date not yet set. <code>[SCorpTracker:Tate Cline 2026-04-22]</code></li>
+</ol>
+<p><strong>Cost segregation track — exceptionally active opportunity but executionally STALLED.</strong> Tate appeared as one of <strong>8 named clients in the cross-client 2026-04-08 "Cost Seg Pipeline — Property Lists, File Inventory &amp; Follow-Up Tracker" Claude session</strong> (alongside Tommy Harr, Andy Karabinos, Augustine, Dan Hamilton, Gil Ramos, Michael Venereo, Matt Iannaccio, Lacey Blackman, Brett Zanotto, Tanya Toliver, Renee Mueller, Randy Wolfe). <code>[ClaudeSumm:Cost Seg Pipeline 2026-04-08]</code> Tate has only <strong>2 Cost Seg Proposal Intake rows on Account</strong> (vs Tommy Harr's 13), but the active 2025 strategy depends on the cost seg deductions hitting before extension filing — and the intake gap (111 Hancock entered but parent row not advanced; 365 Garfield missing entirely) is the single highest-leverage execution risk this week. <code>[Accounts:Tate Cline.Cost Seg Proposals]</code></p>
+<p><strong>Property structure (per delivery call 2/10).</strong> Discussion identified <strong>4 of 6 properties on land contracts</strong> with <strong>2 transitioning to rent-to-own</strong>, and that all rental properties currently flow to Tate's personal return — increasing IRS audit risk and blocking entity-level liability isolation. The proposed restructure: a partnership-holding company owning all rental LLCs (single K-1 to Tate's 1040) plus an S-Corp holding company over the active operating businesses. <code>[Transcript:Delivery Call 2026-02-10 §Solution]</code></p>
+<p><strong>Coverage model.</strong> Seth Johnson is billing partner &amp; Manager. Ryan Walsh is Senior Manager (per Mango). Sophia is admin Manager on the Tax Planning project. Bryan Szpindor and Alex Orosz appeared on the 2/10 delivery call (Alex sent calendar invite for 1:30 PM same-day pricing meeting; Bryan committed to sending slide deck and meeting recording). <code>[Transcript:Delivery Call 2026-02-10 §Next Steps]</code></p>
+<p><strong>Current refresh gaps.</strong> PBC Workbook URL, Tax Extraction URL, Tax Planning Memo URL, and SharePoint Drive URL are all empty on the Account record, but the underlying files are referenced from the Tax Ascend record (<code>Tax_Memo_URL</code> SharePoint link, <code>Cline_analysis_2024.xlsm</code> analysis file attached). The Account record needs URL backfill on next refresh. The 2026-04-13 Claude session also flagged <strong>11 open items</strong> awaiting Tate's response — those drive §7. <code>[Accounts:Tate Cline]</code> <code>[TaxAscend:Tate Cline]</code></p>
+<p><strong>Bottom-line urgency.</strong> This week's blockers, in priority order:
+- (HIGH) Submit "Cline — Cost Seg" parent intake to RE Cost Seg portal so 111 Hancock can yield estimated savings before extension is filed
+- (HIGH) Capture 365 Garfield property data and create second Cost Seg Proposal Intake row
+- (HIGH) Receive Tate's response to Open Items List (Compliance Status: "Client feedback") and Apr 9 extension scenarios email
+- (MED) Finalize $0-vs-$25K extension scenario decision and file Form 4868 by Apr 15
+- (MED) Reconcile Tax Planning Memo strategies with extension assumptions to ensure REPS facts-and-circumstances test will hold</p>
+<hr>
+<h2 id="2-client-profile">§2. Client Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filing status</td>
+<td>MFJ — Tate &amp; Whitney Cline</td>
+<td>✓</td>
+<td><code>[Mango:1040 - Tate &amp; Whitney Cline]</code></td>
+</tr>
+<tr>
+<td>Residency</td>
+<td>Ohio (Delaware, OH 43015 rental property; Columbus area phone 614)</td>
+<td>✓</td>
+<td><code>[CostSegProposal:111 Hancock St]</code> <code>[Contact:Tate Cline.Phone]</code></td>
+</tr>
+<tr>
+<td>Client #</td>
+<td><code>20050305-01</code></td>
+<td>✓</td>
+<td><code>[Accounts:Tate Cline.Client #]</code></td>
+</tr>
+<tr>
+<td>Mango Client ID</td>
+<td><code>937757</code></td>
+<td>✓</td>
+<td><code>[Accounts:Tate Cline.Mango Client ID]</code></td>
+</tr>
+<tr>
+<td>Mango Display Name</td>
+<td>(blank — falls back to Account Name "Tate Cline")</td>
+<td>❌</td>
+<td><code>[Accounts:Tate Cline.Mango Display Name]</code></td>
+</tr>
+<tr>
+<td>Primary Contact</td>
+<td>Tate Cline · <code>knrspropertiesllc@gmail.com</code> · <code>(614) 456-6451</code></td>
+<td>✓</td>
+<td><code>[Contact:Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Spouse / Co-filer</td>
+<td>Whitney Cline</td>
+<td>✓ (~ on contact details — no separate Notion contact row)</td>
+<td><code>[Mango:1040 - Tate &amp; Whitney Cline]</code></td>
+</tr>
+<tr>
+<td>Portal Access</td>
+<td><code>__NO__</code> (no Notion portal access flag)</td>
+<td>❌</td>
+<td><code>[Contact:Tate Cline.Portal Access]</code></td>
+</tr>
+<tr>
+<td>Email address roll (Email addresses tracker)</td>
+<td><code>knrspropertiesllc@gmail.com</code></td>
+<td>✓</td>
+<td><code>[EmailAddrs:Tate Cline 2026-02-03]</code></td>
+</tr>
+<tr>
+<td>Senior Manager (Billing Partner)</td>
+<td>Ryan Walsh</td>
+<td>✓</td>
+<td><code>[Mango:Tax Planning - Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Manager / Billing Partner</td>
+<td>Seth Johnson</td>
+<td>✓</td>
+<td><code>[Mango New DB:Tax Planning - Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Tax Admin Manager</td>
+<td>Sophia</td>
+<td>✓</td>
+<td><code>[Mango New DB:Tax Planning - Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Account-level Tax Ascend type</td>
+<td>Tax Compliance + Tax Planning</td>
+<td>✓</td>
+<td><code>[TaxAscend:Tate Cline.TAX ASCEND TYPE]</code></td>
+</tr>
+<tr>
+<td>Engagement Stage</td>
+<td>Compliance signed · Planning Memo delivered · Extension in progress · Cost Seg intake stalled · S-Corp election planned</td>
+<td>✓</td>
+<td>composite</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>Active &amp; engaged · <strong>HIGH urgency</strong> (Apr 15 extension, intake stall, 11 open items)</td>
+<td>✓</td>
+<td><code>[ClaudeSumm:Extension Estimate Consolidation]</code></td>
+</tr>
+<tr>
+<td>Engagement Letter on file</td>
+<td><code>Tate_Cline_EL</code> — Signed · Deposit Paid · Price <code>$5,350</code> · Mango Portal Invite Sent · PBC items received</td>
+<td>✓</td>
+<td><code>[EL:Tate Cline 2026-02-24]</code></td>
+</tr>
+<tr>
+<td>Insights Project</td>
+<td>FULL INSIGHTS · Status <code>Delivered</code> (delivered 2026-02-10) · Insights Status <code>Delivered</code> · Tax Insights <code>Not started</code> (extraction backlog)</td>
+<td>✓</td>
+<td><code>[InsightsProject:Tate Cline]</code></td>
+</tr>
+<tr>
+<td>Tax Planning Session</td>
+<td>Meeting 1 delivered 2026-04-02 (10:30–11:00 AM, otter.ai recording on file) · Status <code>step 6 (meeting delivered)</code> · Mango task <code>Completed</code></td>
+<td>✓</td>
+<td><code>[TaxPlanningSession:Tate Cline]</code></td>
+</tr>
+<tr>
+<td>S-Corp Election</td>
+<td>Status <code>Planned</code> · Type 2553 · Last touch 2026-04-22 · Next action: "Advance S-Corp election plan"</td>
+<td>✓</td>
+<td><code>[SCorpTracker:Tate Cline]</code></td>
+</tr>
+<tr>
+<td>IRS posture</td>
+<td>None disclosed in available sidecars (no IRS balance flagged in Tax Ascend or Email Log)</td>
+<td>~</td>
+<td>derived (absence of evidence)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="principals-at-a-glance">Principals at a glance</h3>
+<ul>
+<li><strong>Tate Cline</strong> — Operator/principal across KNRS Properties LLC (rental holding) · BRC Dispositions (flipping) · KR&amp;S Properties (rentals). Real-estate investor running a multi-property portfolio (4 of 6 on land contracts, 2 going rent-to-own per 2/10 delivery call). Likely qualifies for <strong>Real Estate Professional (REPS) status for 2025</strong> per Seth's view on the delivery call. <code>[Transcript:Delivery Call 2026-02-10 §Solution]</code></li>
+<li><strong>Whitney Cline</strong> — Spouse / co-filer on the joint 1040. No standalone Notion contact row this refresh; gap to backfill. <code>[Mango:1040 - Tate &amp; Whitney Cline]</code></li>
+</ul>
+<h3 id="entity-stack-provisional-reconcile-with-pbc-on-next-refresh">Entity stack (provisional — reconcile with PBC on next refresh)</h3>
+<p><code>[Transcript:Delivery Call 2026-02-10]</code> <code>[CostSegProposal:111 Hancock St.Business Associated With]</code></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Federal Form (estimated)</th>
+<th>Role</th>
+<th>Status this refresh</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>KNRS Properties LLC</strong></td>
+<td>TBD — currently flow-through to 1040 (likely SMLLC/disregarded or partnership)</td>
+<td>Rental holding entity (per Cost Seg intake "Business Associated With")</td>
+<td>Active rental owner</td>
+<td><code>[CostSegProposal:111 Hancock St]</code></td>
+</tr>
+<tr>
+<td><strong>BRC Dispositions</strong></td>
+<td>Currently NOT formally an S-Corp — triggering SE tax</td>
+<td>Property flipping operating business</td>
+<td>Active flipping; <strong>S-Corp election proposed</strong></td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Problem]</code> <code>[SCorpTracker:Tate Cline]</code></td>
+</tr>
+<tr>
+<td><strong>KR&amp;S Properties</strong></td>
+<td>Rental partnership (TBD)</td>
+<td>Rental portfolio operations</td>
+<td>Active</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Solution]</code></td>
+</tr>
+<tr>
+<td><strong>"Cooking class" side venture</strong></td>
+<td>TBD</td>
+<td>Active operating business mentioned on 2/10 call</td>
+<td>Active</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Solution]</code></td>
+</tr>
+<tr>
+<td><strong>(Proposed) New Rental Partnership Holdco</strong></td>
+<td>1065 partnership</td>
+<td>Single K-1 wrapper around all rental LLCs</td>
+<td>Proposed (planning memo)</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §New Org Chart]</code></td>
+</tr>
+<tr>
+<td><strong>(Proposed) New S-Corp Holdco</strong></td>
+<td>1120-S</td>
+<td>Owns active businesses (flipping, cooking class)</td>
+<td>Proposed (planning memo)</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §New Org Chart]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="property-inventory-partial-per-cost-seg-pipeline-210-delivery-call">Property inventory (partial — per Cost Seg pipeline &amp; 2/10 delivery call)</h3>
+<p><code>[ClaudeSumm:Extension Estimate Consolidation]</code> <code>[CostSegProposal:111 Hancock St]</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Owner Entity</th>
+<th>Purchase Price</th>
+<th>Year Built</th>
+<th>Placed in Service</th>
+<th>Sq Ft</th>
+<th>Cost Seg Status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>111 Hancock St, Delaware OH 43015</strong></td>
+<td>KNRS Properties LLC</td>
+<td><code>$200,000</code></td>
+<td>2003</td>
+<td>2021-05-20</td>
+<td>1,584</td>
+<td><strong>Entered in Portal 2026-04-02</strong> (parent intake row still says "New - Enter in Portal" — execution gap)</td>
+<td><code>[CostSegProposal:TC.111 hancock st]</code></td>
+</tr>
+<tr>
+<td><strong>365 Garfield</strong></td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td><strong>NEVER ENTERED</strong> in Cost Seg Proposal Intake (gap flagged 2026-04-13)</td>
+<td><code>[ClaudeSumm:Extension Estimate Consolidation §Discovery]</code></td>
+</tr>
+<tr>
+<td>(4 others on land contracts; 2 transitioning to rent-to-own)</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>Not yet in Cost Seg pipeline</td>
+<td><code>[Transcript:Delivery Call 2026-02-10]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="third-parties-in-the-file">Third parties in the file</h3>
+<table>
+<thead>
+<tr>
+<th>Party</th>
+<th>Role</th>
+<th>Status / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bryan Szpindor (Accruity)</td>
+<td>Insights delivery presenter on 2/10 call</td>
+<td>Committed to sending slide deck + recording <code>[Transcript:Delivery Call 2026-02-10 §Next Steps]</code></td>
+</tr>
+<tr>
+<td>Alex Orosz (Accruity)</td>
+<td>Pricing/sales follow-up</td>
+<td>Sent calendar invite for 1:30 PM same-day proposal review (2026-02-10) <code>[Transcript:Delivery Call 2026-02-10 §Next Steps]</code></td>
+</tr>
+<tr>
+<td>Katie (unspecified)</td>
+<td>Bookkeeping / spreadsheet workstream</td>
+<td>"Push Katie to finish spreadsheet" appeared in 4/13 Email Log noise — <strong>likely misclassified to Tate's account</strong> (this came from Gary Aronov thread) <code>[EmailLog:FW Recap realestategoto.com]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="3-email-intelligence">§3. Email Intelligence</h2>
+<p><strong>Note on data quality:</strong> 4 email log rows are linked to Tate Cline's Account, but <strong>3 of the 4 are misclassifications</strong> — they are forwarded Fathom recaps for OTHER clients (Wolfe/Wilkes Southern Visions, Gary Aronov realestategoto.com, vState Filings) that the Email Log auto-tagger erroneously associated with Tate's record. Only the <strong>vState Filings</strong> row may have a partial connection (cost seg intake form mention). All four were forwarded by Seth from <code>seth@accruity.com</code> to <code>tax@accruity.com</code> on the same day (2026-04-13) as part of a bulk forward. <code>[EmailLog:Tate Cline.4 rows 2026-04-13]</code></p>
+<h3 id="31-active-threads-substantive-tate-specific-correspondence">3.1 Active threads — substantive Tate-specific correspondence</h3>
+<p><code>[ExecSumm:Tate Cline.Activity Log]</code></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Direction</th>
+<th>Subject / Channel</th>
+<th>Synopsis</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-04-09</td>
+<td>Outbound (Accruity → Tate)</td>
+<td>"21 - Tate Cline - Sent.msg" — extension email</td>
+<td><strong>Extension scenarios sent</strong>: $0 payment if REPS + cost seg apply (~$90K suspended losses + $67.5K depreciation); $25K+ balance due otherwise. Confirmation questions included.</td>
+<td><code>[Activity Log 2026-04-09]</code> Awaiting Tate response</td>
+</tr>
+<tr>
+<td>2026-04-21</td>
+<td>Outbound (Accruity team)</td>
+<td>"Fw: Tate Cline - Open Items + Tax Plan Follow Up.msg" attached to EL row content</td>
+<td>Internal forward of Open Items List + Tax Plan follow-up correspondence</td>
+<td><code>[EL:Tate Cline.Open Items Email block]</code></td>
+</tr>
+<tr>
+<td>2026-03-05</td>
+<td>Outbound (Accruity → Tate)</td>
+<td>Tax Planning Memorandum sent</td>
+<td><code>Tax_Planning_Memorandum_Tate_Cline_2026.docx</code> delivered (SharePoint: Client Files/Cline, Tate/Tax Planning/)</td>
+<td><code>[Activity Log 2026-03-03]</code> <code>[TaxAscend:Tate Cline.Tax Memo Sent 2026-03-05]</code></td>
+</tr>
+<tr>
+<td>2026-03-10</td>
+<td>Outbound (Accruity → Tate)</td>
+<td>Extension email</td>
+<td>Per EL row "Date EXT EMAIL sent 2026-03-10" — earlier extension touch</td>
+<td><code>[EL:Tate Cline.Date EXT EMAIL sent]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-misclassified-noise-to-be-routedcleaned">3.2 Misclassified noise to be routed/cleaned</h3>
+<table>
+<thead>
+<tr>
+<th>Email Log Row URL</th>
+<th>Real Client</th>
+<th>Recommended Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://www.notion.so/3424917287518144a4fed005ba5477b5</code> "FW: Recap of your meeting with Southern Visions Real Estate"</td>
+<td>Doug Wilkes / Randy Wolfe (Southern Visions)</td>
+<td>Re-link Account from Tate Cline → Randy Wolfe / Doug Wilkes Account</td>
+</tr>
+<tr>
+<td><code>https://www.notion.so/34249172875181dca589ecb01817fe48</code> "FW: Recap of your meeting with realestategoto.com"</td>
+<td>Gary Aronov / Jeremy</td>
+<td>Re-link Account from Tate Cline → Gary Aronov Account</td>
+</tr>
+<tr>
+<td><code>https://www.notion.so/342491728751816f8095e06804080bc2</code> "FW: Recap of your meeting with vState Filings"</td>
+<td>vState Filings (entity formation vendor) — possibly Tate-relevant via cost seg intake form mention but ambiguous</td>
+<td>Verify; if unrelated, unlink from Tate</td>
+</tr>
+<tr>
+<td><code>https://www.notion.so/34249172875181ba9110ffe4f537ac42</code> "Declined: Stacy&lt;&gt;Seth&lt;&gt;Sophia"</td>
+<td>Internal calendar decline notice — not client-relevant</td>
+<td>Unlink from Tate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-communication-channels-in-use">3.3 Communication channels in use</h3>
+<ul>
+<li><strong>Primary email</strong>: <code>knrspropertiesllc@gmail.com</code> (Gmail; standalone — not on a custom domain)</li>
+<li><strong>Phone</strong>: <code>(614) 456-6451</code></li>
+<li><strong>Outbound .msg files</strong> stored in SharePoint: <code>Extensions/2025/4.15 Deadline/Correspondence/</code> and <code>Client Files/Cline, Tate/Tax Planning/</code> <code>[ExecSumm:Tate Cline.Activity Log]</code></li>
+</ul>
+<h3 id="34-gaps-to-backfill">3.4 Gaps to backfill</h3>
+<ul>
+<li>No inbound emails from Tate captured in Email Log this refresh — likely a Make.com pipeline gap (only outbound + misclassified inbound noise present).</li>
+<li>Tate's response to the 2026-04-09 extension email (with scenarios + confirmation questions) is missing from the log — either not received yet, or received and not yet ingested.</li>
+</ul>
+<hr>
+<h2 id="4-meeting-history">§4. Meeting History</h2>
+<p><code>[Meetings Tracker:Tate Cline · 6 rows]</code></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Date</th>
+<th>Type</th>
+<th>Status</th>
+<th>Time</th>
+<th>Recap</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2026-01-06</td>
+<td>Touchbase</td>
+<td>✓ Done</td>
+<td>11:30 AM – 12:00 PM EST</td>
+<td><a href="https://fathom.video/share/8Bcy57djsfWvgSB1bYWExzStwDNFTpZT">Fathom recap</a></td>
+<td>"Ask Bryan if required to be on this call" <code>[Meetings:2fb49172...80db]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2026-01-22</td>
+<td>Full Insights — Clarification call</td>
+<td>Cancelled (per <code>NOTES</code>)</td>
+<td>10:30–11:30 AM EST</td>
+<td>(none — cancelled)</td>
+<td>Status still <code>Pending</code> on row, but notes say "cancelled" <code>[Meetings:2fb49172...80a1]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2026-01-29</td>
+<td>Full Insights — Clarification call</td>
+<td>✓ Done</td>
+<td>10:30–11:30 AM EST</td>
+<td><a href="https://fathom.video/share/TE7u7AYpZPv6ExW_jyKhstgH1K1cmZ4N">Fathom recap</a></td>
+<td>"Ask Bryan if required to be on this call" <code>[Meetings:2fb49172...8007]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>2026-02-10</td>
+<td>Full Insights — <strong>Delivery call</strong></td>
+<td>✓ Done</td>
+<td>(no time set)</td>
+<td><a href="https://fathom.video/share/84s4-kehxdHgjPzuLvYwz3GuPQN-YPR1">Fathom 84 min</a> — <strong>transcript on file</strong> as Notion subpage <code>31849172875180d1b91af6659c05f5ca</code></td>
+<td>Scheduled delivery, no calendar invite. Bryan Szpindor + Alex Orosz attended. <code>[Meetings:30449172...8038]</code> <code>[TaxAscend:Tate Cline.Insights Delivery Meeting Recap]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>2026-03-20</td>
+<td>Tax Planning Session</td>
+<td>Rescheduled</td>
+<td>12:30–1:00 PM EST</td>
+<td>(none — moved to 4/02)</td>
+<td>Rescheduled to 2026-04-02 <code>[Meetings:32949172...80a0]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>2026-04-02</td>
+<td><strong>Tax Planning Session</strong></td>
+<td>✓ Done</td>
+<td>10:30–11:00 AM EST</td>
+<td><a href="https://otter.ai/u/BemfyEI1XyJqUh2A5NODAMhN2O0?utm_source=copy_url">otter.ai recording</a></td>
+<td>INVITE CONFIRMED. Memo discussed. <code>[Meetings:33549172...805e]</code> <code>[TaxPlanningSession:Tate Cline.Meeting 1]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-key-meeting-takeaways-210-delivery-call-84-minutes">4.1 Key meeting takeaways — 2/10 Delivery Call (84 minutes)</h3>
+<p><code>[Transcript:Delivery Call 2026-02-10]</code></p>
+<p><strong>Meeting Purpose</strong>: Review Tate's business financials and propose strategic back-office and tax plan.</p>
+<p><strong>Tax Savings</strong>: New org chart and tax plan could save up to <strong><code>$55,000</code> annually</strong>, primarily via SE-tax elimination through S-Corp restructure + REPS-status accelerated depreciation to offset active flipping income.</p>
+<p><strong>Financial Clarity</strong>: Correcting BRC Dispositions accounting (treat properties as inventory, capitalize purchase + rehab costs on balance sheet until sale) will replace the current misleading <strong><code>$1,000,000</code> annual loss</strong> in QuickBooks with true project-level profitability.</p>
+<p><strong>Strategic Growth</strong>: Monthly reporting will track DSCR for rentals + project-level margins for flips, enabling data-driven refinance and viability decisions.</p>
+<p><strong>Time Savings</strong>: Outsource bookkeeping (currently year-end manual categorization).</p>
+<p><strong>Identified Problems</strong>:
+- Org chart unclear — BRC Dispositions not formally an S-Corp (SE tax exposure); all rental properties flow to personal return (audit risk)
+- Back office: manual year-end bookkeeping, no real-time insights, BRC accounting expensing all costs creating misleading $1M loss
+- Tax planning: no proactive strategy, missed QBI/REPS/cost seg, no estimated payments → year-end surprises</p>
+<p><strong>Proposed Solution</strong>:
+- New rental-portfolio partnership holdco owning all rental LLCs (single K-1 to 1040)
+- New S-Corp holdco owning active businesses (flipping + cooking class) — eliminates SE tax via reasonable salary + tax-free distributions
+- Capitalize flipping costs as inventory
+- Property/entity/portfolio-level rental tracking
+- Vendor-level expense detail with ROI by lead source
+- REPS qualification for 2025 (Tate likely already qualifies)
+- Cost segregation on rentals (est. 20–30% of purchase price as upfront deductions)
+- Solo 401(k) under S-Corp holdco (contribution up to ~$70k)
+- Low-hanging fruit: Accountable Plan, Augusta Rule, employ children for marketing (~$15k/yr each up to standard deduction)</p>
+<p><strong>Next Steps from 2/10 call</strong>:
+- Alex Orosz → calendar invite for 1:30 PM same-day pricing review with Tate
+- Bryan Szpindor → send slide deck + meeting recording
+- Tate → meet with Alex at 1:30 PM</p>
+<h3 id="42-402-tax-planning-session">4.2 4/02 Tax Planning Session</h3>
+<p><code>[TaxPlanningSession:Tate Cline.Meeting 1]</code> — 30-minute session, otter.ai recording captured. Memo follow-up. Status <code>Completed</code>. Meetings 2 and 3 not yet scheduled.</p>
+<h3 id="43-coverage-map-across-meetings">4.3 Coverage map across meetings</h3>
+<ul>
+<li><strong>Bryan Szpindor</strong> — Lead presenter on Insights delivery (1/29 + 2/10)</li>
+<li><strong>Alex Orosz</strong> — Pricing/sales handoff on 2/10</li>
+<li><strong>Seth Johnson</strong> — Billing partner; primary tax advisor on 2/10 + 4/02 sessions</li>
+<li><strong>Sophia</strong> — Tax admin (mentioned in S-Corp election workflow)</li>
+</ul>
+<h3 id="44-restricted-meetings">4.4 Restricted meetings</h3>
+<p>None marked Restricted this refresh.</p>
+<hr>
+<h2 id="5-document-inventory">§5. Document Inventory</h2>
+<h3 id="51-engagement-letters-engagement-letters-tracker">5.1 Engagement Letters (Engagement Letters Tracker)</h3>
+<table>
+<thead>
+<tr>
+<th>EL Row</th>
+<th>Status</th>
+<th>Price</th>
+<th>Mango status</th>
+<th>PBC</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tate Cline 2026-02-24 batch</code> <code>[EL:3034917287518095a520da84b5870a1c]</code></td>
+<td><strong>Signed</strong> · Deposit Paid · Docusign Delivered</td>
+<td><code>$5,350</code></td>
+<td>Project Created · Portal Invite Sent · Tag "PBC Request list"</td>
+<td>Received PBC items · "Seth - PLENTY FILES SAVED FROM GOOGLE DRIVE. no PBC list included with open items email, no PBC saved in onedrive"</td>
+<td>Signed EL on MangoShare; Open Items email forwarded; PBC folder linked to ImagineTime workspace 937757</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-files-links-rows-on-account-3-rows">5.2 Files &amp; Links rows on Account (3 rows)</h3>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>URL</th>
+<th>Filled?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Engagement Letter</code> <code>[F&amp;L:33b491728751811dbacbca1b38476f32]</code></td>
+<td>All URL fields blank</td>
+<td>❌ shell row</td>
+</tr>
+<tr>
+<td><code>Executive Summary</code> <code>[F&amp;L:33b49172875181a39d18ee7ed412d488]</code></td>
+<td>All URL fields blank</td>
+<td>❌ shell row</td>
+</tr>
+<tr>
+<td><code>Tate Cline</code> <code>[F&amp;L:33b491728751810fbb6df96f9abc44a7]</code></td>
+<td>Document Inventory: SharePoint folder link · PBC PDF Package: SharePoint link</td>
+<td>✓ partial</td>
+</tr>
+</tbody>
+</table>
+<p><strong>URL Collision Check.</strong> The 3 Files &amp; Links rows linked to Tate Cline's Account are all unique and do not collide with each other on the same <code>Document Inventory</code> URL. ✓ No collision.</p>
+<h3 id="53-platforms-in-use">5.3 Platforms in use</h3>
+<ul>
+<li><strong>SharePoint</strong> (subledgesl-my.sharepoint.com / seth_accruity_com tenant): Document Inventory folder, PBC PDF Package, Tax Planning Memo URL, Cost Seg estimate file</li>
+<li><strong>MangoShare</strong> (<code>app.mangoshare.com/share/36414a8b2c835c8bbbf72641</code>): Signed EL</li>
+<li><strong>ImagineTime</strong> (<code>app.imaginetime.com/firm/5331/workspaces/937757</code>): PBC folder</li>
+<li><strong>Mango Portal</strong>: Client portal invite sent</li>
+<li><strong>Fathom</strong> (3 meetings recorded)</li>
+<li><strong>otter.ai</strong> (4/02 tax planning session)</li>
+</ul>
+<h3 id="54-workbooks-not-linked-to-account-this-refresh">5.4 Workbooks NOT linked to Account this refresh</h3>
+<p><code>[Accounts:Tate Cline]</code> — these fields are EMPTY on the Account:</p>
+<table>
+<thead>
+<tr>
+<th>Workbook / URL property</th>
+<th>Status</th>
+<th>Where it actually lives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PBC Workbook</td>
+<td>❌ empty</td>
+<td>Likely in ImagineTime workspace 937757 — not yet linked back to Notion Account</td>
+</tr>
+<tr>
+<td>Tax Extraction</td>
+<td>❌ empty</td>
+<td>Per Insights Project: status <code>Delivered</code> but <code>Tax Insights Not started</code>. Extraction file exists but is not URL-linked</td>
+</tr>
+<tr>
+<td>Tax Planning Memo</td>
+<td>❌ empty on Account</td>
+<td>Exists per Tax Ascend <code>Tax Memo URL</code> SharePoint link: <code>Tax_Planning_Memorandum_Tate_Cline_2026.docx</code> <code>[TaxAscend:Tate Cline.Tax Memo URL]</code></td>
+</tr>
+<tr>
+<td>SharePoint Drive</td>
+<td>❌ empty</td>
+<td>Folder exists per F&amp;L row "Tate Cline" Document Inventory link</td>
+</tr>
+<tr>
+<td>Tax Analysis Workbook</td>
+<td>❌ empty on Account</td>
+<td>Exists per Tax Ascend <code>Cline_analysis_2024.xlsm</code> attached file <code>[TaxAscend:Tate Cline.Tax Analysis Files]</code></td>
+</tr>
+<tr>
+<td>Meeting Prep Notes</td>
+<td>❌ empty</td>
+<td>Likely in SharePoint Tax Planning folder</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Backfill task added to next refresh queue</strong>: copy URLs from Tax Ascend + F&amp;L "Tate Cline" row up to Account record so future refreshes pick them up automatically.</p>
+<h3 id="55-other-documents-referenced-in-activity-log">5.5 Other documents referenced in Activity Log</h3>
+<ul>
+<li><code>Tax_Planning_Memorandum_Tate_Cline_2026.docx</code> (sent 2026-03-05) — SharePoint: Client Files/Cline, Tate/Tax Planning/</li>
+<li><code>Tate_Cline_Tax_Planning_Prep_Summary_2026.docx</code> (2026-04-02 prep) — SharePoint</li>
+<li><code>21 - Tate Cline - Sent.msg</code> (2026-04-09 extension email) — SharePoint: Extensions/2025/4.15 Deadline/Correspondence/</li>
+<li><code>Tate_Cline_2025_Extension_Estimate.xlsx</code> (2026-04-13 6-tab workbook) — SharePoint</li>
+<li><code>2026-04-13_Tate_Cline_Extension_Estimate.html</code> (2026-04-13 session detail with full income build-up, tax calc, cost seg status, entity status, strategy screen, 11 open items)</li>
+</ul>
+<p><code>[ExecSumm:Tate Cline.Activity Log]</code> <code>[ClaudeSumm:Extension Estimate Consolidation]</code></p>
+<hr>
+<h2 id="6-claude-work-product">§6. Claude Work Product</h2>
+<h3 id="61-prior-claude-summaries-db-rows-tied-to-tate">6.1 Prior Claude Summaries DB rows tied to Tate</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Title</th>
+<th>Topics</th>
+<th>Files Reviewed</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-04-08</td>
+<td><strong>Cost Seg Pipeline — Property Lists, File Inventory &amp; Follow-Up Tracker</strong> (cross-client)</td>
+<td>Cost Seg</td>
+<td>(cross-client file roll)</td>
+<td>Built full cost seg pipeline tracker. Tate listed among 13 named clients. Tate's row noted as having 2 Cost Seg Proposal Intake records (parent + 111 Hancock sub-item). <code>[ClaudeSumm:33c49172...955549]</code></td>
+</tr>
+<tr>
+<td>2026-04-13</td>
+<td><strong>Tate Cline — Extension Estimate Consolidation &amp; Exec Summary Backfill</strong></td>
+<td>Tax Planning · Extension Planning · Cost Seg</td>
+<td>Cline_analysis_2024.xlsm; delivery call transcript; extension email; 2x Cost Seg Proposal Intake records; TAX ASCEND; Tax Planning Session; Account; Executive Summary; 3x Mango Planning records; Files &amp; Links; Meetings Tracker</td>
+<td>Built 6-tab extension estimate workbook (<code>$0</code> payment with REPS+cost seg, <code>$25K</code> without). Created HTML session file. <strong>Discovered cost seg intake STALLED — 111 Hancock entered 4/2 but never submitted to RE Cost Seg portal; 365 Garfield not entered at all.</strong> Backfilled Executive Summary page with 4 Activity Log entries. <code>[ClaudeSumm:34249172...ef60c]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-activity-log-entries-already-on-executive-summary-page">6.2 Activity Log entries already on Executive Summary page</h3>
+<p><code>[ExecSumm:Tate Cline.Activity Log]</code></p>
+<ul>
+<li><strong>2026-03-03</strong> — Tax Planning Memorandum (TYPE A). Memo from 2024 return extraction + delivery call transcript (2/10) + clarification call (1/29). 6 strategies, <strong><code>$55K</code> total savings</strong>. QBI missed in 2024, BRC accounting errors, no ES payments. Sent 3/5.</li>
+<li><strong>2026-04-02</strong> — Tax Planning Prep Summary &amp; Call Prep. Full prep summary with entity deep-dive, property-ownership mapping (4/6 on land contracts, 2 going rent-to-own), open items analysis. April 2 planning call delivered.</li>
+<li><strong>2026-04-09</strong> — Extension Email Sent. <strong><code>$0</code> payment with REPS + cost seg</strong> (<code>$90K</code> suspended losses + <code>$67.5K</code> depreciation). Without strategies: <strong><code>$25K+</code> balance due</strong>. Email sent to Tate with scenarios + confirmation questions.</li>
+<li><strong>2026-04-13</strong> — Extension Workbook + Session Consolidation. Built extension estimate workbook (6 tabs). <strong>Discovered cost seg STALLED</strong>: 111 Hancock intake created 4/2 but never submitted to portal; 365 Garfield not entered. HTML session detail created with full analysis.</li>
+</ul>
+<h3 id="63-claude-activity-log-tied-to-this-account">6.3 Claude Activity Log tied to this Account</h3>
+<p>No additional Claude Activity Log rows were retrieved this refresh beyond the 2 Claude Summaries above. Future refreshes should query <code>collection://f9cc7d05-26b0-4c77-b29c-af974a234b77</code> filtered to Account <code>30d4917287518113aaead67f8bfafece</code>.</p>
+<hr>
+<h2 id="7-action-items-rolled-up-across-all-sources">§7. Action Items (Rolled Up Across All Sources)</h2>
+<p><code>[Aggregated from §3, §4, §5, §6 + Cost Seg Pipeline session + 2026-04-13 HTML session detail]</code></p>
+<h3 id="71-high-must-move-this-week-apr-15-extension-cycle">7.1 HIGH — must move this week (Apr 15 extension cycle)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Owner</th>
+<th>Source</th>
+<th>Due</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1</td>
+<td><strong>Submit "Cline — Cost Seg" parent intake row to RE Cost Seg portal</strong> so 111 Hancock can yield estimated savings before extension is filed</td>
+<td>Accruity (Cost Seg admin / Sophia / Seth)</td>
+<td><code>[CostSegProposal:Cline — Cost Seg.Status]</code> <code>[ClaudeSumm:Extension Estimate Consolidation]</code></td>
+<td>2026-04-14</td>
+</tr>
+<tr>
+<td>H2</td>
+<td><strong>Capture 365 Garfield property data (address, year built, purchase date, placed-in-service, sq ft, building use) and create Cost Seg Proposal Intake row</strong></td>
+<td>Accruity + Tate</td>
+<td><code>[ClaudeSumm:Extension Estimate Consolidation §Discovery]</code></td>
+<td>2026-04-14</td>
+</tr>
+<tr>
+<td>H3</td>
+<td><strong>Receive Tate's response to 2026-04-09 extension email</strong> (scenarios + confirmation questions)</td>
+<td>Tate Cline</td>
+<td><code>[Activity Log 2026-04-09]</code> <code>[TaxAscend:Tate Cline.Compliance Status "Open Items List - Client feedback"]</code></td>
+<td>2026-04-14</td>
+</tr>
+<tr>
+<td>H4</td>
+<td><strong>File Form 4868 federal extension</strong> (and OH state extension) by Apr 15; pick $0-vs-$25K scenario based on REPS+cost seg confirmation</td>
+<td>Accruity Compliance</td>
+<td><code>[Activity Log 2026-04-09]</code></td>
+<td>2026-04-15</td>
+</tr>
+<tr>
+<td>H5</td>
+<td><strong>Resolve 11 Open Items List items</strong> flagged in 2026-04-13 HTML session file</td>
+<td>Tate + Accruity</td>
+<td><code>[ClaudeSumm:Extension Estimate Consolidation]</code></td>
+<td>2026-04-14 (rolling)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-medium-post-apr-15-deliverables">7.2 MEDIUM — post-Apr 15 deliverables</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Owner</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td><strong>Advance 2553 S-Corp election plan</strong> for BRC Dispositions; set target effective date</td>
+<td>Seth + Tate</td>
+<td><code>[SCorpTracker:Tate Cline.Next Action]</code></td>
+</tr>
+<tr>
+<td>M2</td>
+<td><strong>REPS qualification documentation</strong> — gather hours log to support Tate's REPS claim for 2025 (&gt;750 hours; &gt;50% of personal services in real-property trades)</td>
+<td>Tate</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Tax Plan]</code></td>
+</tr>
+<tr>
+<td>M3</td>
+<td><strong>Capitalize BRC Dispositions flipping costs as inventory</strong> — implement bookkeeping correction to replace misleading <code>$1M</code> annual loss with true project-level P&amp;L</td>
+<td>Bookkeeping team</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Solution]</code></td>
+</tr>
+<tr>
+<td>M4</td>
+<td><strong>Stand up new rental-portfolio partnership holdco</strong> (entity formation via vState Filings — possibly the inbound 4/13 email recap relates here)</td>
+<td>Seth + entity formation vendor</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §New Org Chart]</code> <code>[EmailLog:vState Filings recap]</code></td>
+</tr>
+<tr>
+<td>M5</td>
+<td><strong>Stand up new S-Corp holdco</strong> over active businesses (flipping + cooking class)</td>
+<td>Seth + entity formation vendor</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §New Org Chart]</code></td>
+</tr>
+<tr>
+<td>M6</td>
+<td><strong>Set up Solo 401(k)</strong> under S-Corp holdco</td>
+<td>Seth + Tate</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Tax Plan]</code></td>
+</tr>
+<tr>
+<td>M7</td>
+<td><strong>Implement Accountable Plan + Augusta Rule + employ children</strong></td>
+<td>Tate + Bookkeeping</td>
+<td><code>[Transcript:Delivery Call 2026-02-10 §Low-Hanging Fruit]</code></td>
+</tr>
+<tr>
+<td>M8</td>
+<td><strong>Schedule Tax Planning Meeting 2 + 3</strong></td>
+<td>Sophia / Tate</td>
+<td><code>[TaxPlanningSession:Tate Cline.Meeting 2/3 status To check]</code></td>
+</tr>
+<tr>
+<td>M9</td>
+<td><strong>Backfill Account record URLs</strong> (PBC Workbook, Tax Extraction, Tax Planning Memo, SharePoint Drive, Tax Analysis Workbook) from Tax Ascend + F&amp;L</td>
+<td>Internal ops</td>
+<td><code>[Accounts:Tate Cline]</code> <code>[TaxAscend:Tate Cline]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-low-process-hygiene">7.3 LOW — process / hygiene</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>Owner</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td><strong>Re-link 3 misclassified Email Log rows</strong> (Wolfe/Wilkes, Gary Aronov, Declined: Stacy&lt;&gt;Seth&lt;&gt;Sophia) away from Tate's Account</td>
+<td>Internal ops</td>
+<td><code>[EmailLog:4 rows 2026-04-13]</code></td>
+</tr>
+<tr>
+<td>L2</td>
+<td><strong>Verify vState Filings email log row</strong> — confirm whether it's Tate-related (cost seg intake form / entity creation) or also misclassified</td>
+<td>Internal ops</td>
+<td><code>[EmailLog:FW vState Filings]</code></td>
+</tr>
+<tr>
+<td>L3</td>
+<td><strong>Resolve Exec Summary DB duplicate</strong> — <code>🗑️ DELETE — Tate Cline (duplicate)</code> row exists; canonical row is <code>33b49172...9189</code>. Move duplicate to cleanup queue per BATCH_REFRESH_PROMPT.md rules — DO NOT auto-delete</td>
+<td>Internal ops</td>
+<td><code>[ExecSumm:34249172...d355dd]</code> <code>[BATCH_REFRESH_PROMPT.md §Duplicates]</code></td>
+</tr>
+<tr>
+<td>L4</td>
+<td><strong>Backfill F&amp;L shell rows</strong> — "Engagement Letter" + "Executive Summary" Files &amp; Links rows are completely empty</td>
+<td>Internal ops</td>
+<td><code>[F&amp;L:33b491728751811dbacbca1b38476f32]</code> <code>[F&amp;L:33b49172875181a39d18ee7ed412d488]</code></td>
+</tr>
+<tr>
+<td>L5</td>
+<td><strong>Insights Project — kick off Tax Insights extraction</strong> — status <code>Not started</code> despite Insights <code>Delivered</code></td>
+<td>Piah (per Insights Project Temp Filter "Piah to do - Extraction and analysis 04/29")</td>
+<td><code>[InsightsProject:Tate Cline]</code></td>
+</tr>
+<tr>
+<td>L6</td>
+<td><strong>Add Whitney Cline as separate Notion contact row</strong> (Client Contacts DB)</td>
+<td>Internal ops</td>
+<td><code>[Contact:Tate Cline]</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="8-tax-strategies">§8. Tax Strategies</h2>
+<h3 id="81-strategy-table-from-2026-03-03-tax-planning-memorandum">8.1 Strategy table — from 2026-03-03 Tax Planning Memorandum</h3>
+<p><code>[ExecSumm:Tate Cline.Activity Log 2026-03-03]</code> <code>[Transcript:Delivery Call 2026-02-10]</code></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Strategy</th>
+<th>Mechanism</th>
+<th>Estimated Savings</th>
+<th>Status</th>
+<th>Confidence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>REPS (Real Estate Professional) status</strong></td>
+<td>&gt;750 hours + &gt;50% personal services in real property trades; converts rental losses from passive to non-passive to offset active income</td>
+<td>Embedded in <code>~$55K</code> total memo savings</td>
+<td>Proposed for 2025 — likely qualifies</td>
+<td>✓ on framework, <code>?</code> on hours documentation</td>
+<td><code>[Transcript:Delivery Call §Tax Plan]</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Cost Segregation — 111 Hancock + 365 Garfield (and others)</strong></td>
+<td>Accelerated depreciation (5/7/15-yr property reclassed from 27.5-yr); est. 20–30% of purchase price as upfront deduction</td>
+<td><code>~$67,500</code> accelerated depreciation modeled in 4/9 extension scenario; broader pipeline TBD</td>
+<td><strong>Stalled</strong> at intake stage (H1/H2)</td>
+<td>✓ on 111 Hancock numbers, <code>?</code> on 365 Garfield</td>
+<td><code>[ClaudeSumm:Extension Estimate Consolidation]</code> <code>[CostSegProposal:111 Hancock St]</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>S-Corp election for BRC Dispositions (Form 2553)</strong></td>
+<td>Convert flipping entity to S-Corp; pay reasonable salary; remaining profits as tax-free distributions → eliminates SE tax</td>
+<td>Material — SE tax savings depend on profit; fits the <code>$55K</code> memo ceiling alongside REPS</td>
+<td>Planned — S-Corp Election Tracker status <code>Planned</code></td>
+<td>✓ on framework</td>
+<td><code>[SCorpTracker:Tate Cline]</code> <code>[Transcript:Delivery Call §New Org Chart]</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Solo 401(k) under new S-Corp holdco</strong></td>
+<td>Salary deferral up to <code>$23,500</code> + employer profit-sharing → contribution potentially up to <code>~$70K</code></td>
+<td>TBD — depends on salary set</td>
+<td>Planned</td>
+<td>✓ on framework</td>
+<td><code>[Transcript:Delivery Call §Tax Plan]</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Accountable Plan</strong></td>
+<td>Reimburse owner for business-use home/auto/phone via S-Corp accountable plan (deductible to corp; tax-free to owner)</td>
+<td>TBD</td>
+<td>Planned</td>
+<td>✓</td>
+<td><code>[Transcript:Delivery Call §Low-Hanging Fruit]</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Augusta Rule (§280A(g))</strong></td>
+<td>14-day-or-fewer home rental to corp at FMV — tax-free to owner, deductible to corp</td>
+<td>TBD — typical <code>$5–$15K</code> range</td>
+<td>Planned</td>
+<td>✓</td>
+<td><code>[Transcript:Delivery Call §Low-Hanging Fruit]</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Employ children for marketing</strong></td>
+<td>Wages up to standard deduction (<code>~$15K/yr</code> per child); FICA-exempt under sole-prop or family LLC structure</td>
+<td>TBD per # of qualifying children</td>
+<td>Planned</td>
+<td>✓</td>
+<td><code>[Transcript:Delivery Call §Low-Hanging Fruit]</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>QBI optimization</strong></td>
+<td>QBI deduction was missed on 2024 return per memo; capture going forward</td>
+<td><code>?</code> Pending workbook ingestion</td>
+<td>Planned</td>
+<td>~</td>
+<td><code>[ExecSumm:Activity Log 2026-03-03 "QBI missed in 2024"]</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>BRC Dispositions accounting cleanup (inventory method)</strong></td>
+<td>Capitalize purchase + rehab costs to balance sheet; recognize at sale → replaces misleading <code>$1M</code> annual loss with true project margin</td>
+<td>Not a tax strategy per se but enables accurate planning</td>
+<td>Planned</td>
+<td>✓</td>
+<td><code>[Transcript:Delivery Call §Solution]</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>New rental-portfolio partnership holdco</strong></td>
+<td>All rental LLCs roll up to one partnership; single K-1 to 1040; isolates liability</td>
+<td>TBD (structural)</td>
+<td>Planned</td>
+<td>✓</td>
+<td><code>[Transcript:Delivery Call §New Org Chart]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Memo headline number</strong>: ~<code>$55,000</code> annual tax savings combined across the strategy stack (<code>[Transcript:Delivery Call §Key Takeaways]</code>). Apr 9 extension scenario quantifies the 2025-specific REPS+cost-seg leg at <code>~$157,500</code> of deductions ($90K suspended + $67.5K accelerated) reducing 2025 balance from <code>~$25K</code> to <code>$0</code>. <code>[Activity Log 2026-04-09]</code></p>
+<h3 id="82-strategies-considered-but-not-applied-this-refresh">8.2 Strategies considered but NOT applied (this refresh)</h3>
+<ul>
+<li>No 1031 exchange referenced — Tate is buying-and-holding (rentals) and flipping (BRC), not 1031-able under flipping treatment</li>
+<li>No Opportunity Zone mention</li>
+<li>No DST / 721 exchange mention</li>
+<li>No conservation easement / ESBT / charitable trust mention</li>
+</ul>
+<hr>
+<h2 id="9-opportunity-flags">§9. Opportunity Flags</h2>
+<h3 id="91-high-actionable-immediately">9.1 HIGH — actionable immediately</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Rule</th>
+<th>Why It Triggers for Tate</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟥 <strong>HIGH — Cost Seg execution gap</strong></td>
+<td>Cost Seg Proposal Intake parent row stuck at <code>New - Enter in Portal</code> despite a sub-item being entered to portal</td>
+<td>The parent row ("Cline — Cost Seg") has NOT advanced; 111 Hancock sub-item entered 4/2 but workflow is broken. 365 Garfield never even captured. <strong>2025 extension scenario hinges on this.</strong></td>
+<td>H1 + H2 in §7.1</td>
+</tr>
+<tr>
+<td>🟥 <strong>HIGH — REPS qualification not documented</strong></td>
+<td>REPS tax savings claimed in 4/9 extension scenario (<code>$90K</code> suspended losses unblocked) but no hours log on file</td>
+<td>Without contemporaneous hours documentation, REPS claim is exposed at audit; if disallowed, $25K extension balance materializes</td>
+<td>M2 in §7.2 — collect hours log</td>
+</tr>
+<tr>
+<td>🟥 <strong>HIGH — S-Corp election timing</strong></td>
+<td>BRC Dispositions actively flipping properties subject to SE tax; S-Corp Election Tracker status <code>Planned</code> — no target date set</td>
+<td>Every quarter that passes without 2553 effective date = SE tax bleed on flipping profits</td>
+<td>M1 in §7.2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-medium-track-through-next-quarter">9.2 MEDIUM — track through next quarter</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Rule</th>
+<th>Why It Triggers for Tate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟧 MED — BRC accounting misclassification</td>
+<td>QuickBooks shows <code>$1M</code> annual loss; actual flipping margin masked</td>
+<td>M3 in §7.2 — capitalize as inventory</td>
+</tr>
+<tr>
+<td>🟧 MED — Solo 401(k) contribution-window</td>
+<td>Solo 401(k) must be established before SE income is realized in the contribution year</td>
+<td>M6 in §7.2 — set up under new S-Corp holdco</td>
+</tr>
+<tr>
+<td>🟧 MED — Cost seg pipeline expansion</td>
+<td>Tate has 6+ properties (4 land contracts, 2 rent-to-own, plus 111 Hancock + 365 Garfield); only 1 in cost seg pipeline</td>
+<td>Land contracts pose placed-in-service date complexity; needs property-by-property eligibility screen</td>
+</tr>
+<tr>
+<td>🟧 MED — Whitney Cline contact gap</td>
+<td>Joint 1040 filer with no separate Notion Client Contact row</td>
+<td>L6 in §7.3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-low-hygiene">9.3 LOW — hygiene</h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Rule</th>
+<th>Why It Triggers for Tate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟨 LOW — Email Log auto-tagger noise</td>
+<td>3 of 4 Email Log rows on Account are misclassifications</td>
+<td>L1 in §7.3</td>
+</tr>
+<tr>
+<td>🟨 LOW — Account URL backfill</td>
+<td>5+ URL fields empty on Account record despite files existing in Tax Ascend / F&amp;L</td>
+<td>M9 in §7.2</td>
+</tr>
+<tr>
+<td>🟨 LOW — Insights Project extraction backlog</td>
+<td>Tax Insights status <code>Not started</code> despite Insights <code>Delivered</code> 2026-02-10</td>
+<td>L5 in §7.3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="94-cost-seg-pipeline-cross-client-context">9.4 Cost Seg Pipeline cross-client context</h3>
+<p>Tate is one of <strong>8 named clients in the 2026-04-08 cross-client Cost Seg Pipeline review</strong> (alongside Tommy Harr, Andy Karabinos, Augustine, Dan Hamilton, Gil Ramos, Michael Venereo, Matt Iannaccio — plus Lacey Blackman, Brett Zanotto, Tanya Toliver, Renee Mueller, Randy Wolfe). <code>[ClaudeSumm:Cost Seg Pipeline 2026-04-08]</code> Where Tommy Harr has 13 Cost Seg Proposal rows and Mueller has 9 SREO properties (4471 41st Ave primary <code>$1.6M</code> target), Tate sits at the small-portfolio end of this cohort with 1 entered + 1 missing — but the 2025 tax-savings dependency is just as binding.</p>
+<hr>
+<h2 id="10-operations-analysis">§10. Operations Analysis</h2>
+<p><strong>Engagement maturity.</strong> Tate is a <strong>mid-stage Tax Ascend client</strong>: Insights delivered (2026-02-10), Tax Planning memo issued (2026-03-05), Tax Planning Session 1 delivered (2026-04-02), EL signed at <code>$5,350</code>. The relationship is past sales/scoping and into active execution — but the execution layer (Cost Seg intake → Extension filing) has hit a process break. <code>[TaxAscend:Tate Cline]</code> <code>[ExecSumm:Tate Cline.Activity Log]</code></p>
+<p><strong>Workflow chain breakdown observed.</strong> The expected workflow:
+<code>Cost Seg Proposal Intake (parent) → Sub-item per property → Submit parent + sub-items to RE Cost Seg portal → Receive proposal → Approve → Engagement → Study delivered → Depreciation schedule integrated into return</code></p>
+<p>Where it broke:
+- Parent intake row "Cline — Cost Seg" exists but status is <code>New - Enter in Portal</code> — <strong>never advanced</strong>
+- Sub-item "TC.111 hancock st" status is <code>Entered in Portal</code> (advanced 2026-04-02) — <strong>mismatched with parent</strong>
+- 365 Garfield: <strong>no row at all</strong></p>
+<p>This is a <strong>workflow tracker integrity issue</strong> that the 2026-04-13 Claude session caught only because cross-referencing the extension model against the proposal DB. Without that cross-reference, the cost-seg-dependent extension scenario would have been filed against deductions that don't exist yet. <code>[ClaudeSumm:Extension Estimate Consolidation §Discovery]</code></p>
+<p><strong>Coverage health.</strong>
+- ✓ Billing partner clarity: Seth Johnson on Account; Ryan Walsh as Senior Manager on Mango records — same as Spring Bengtzen / Tommy Harr pattern
+- ✓ Sales-to-delivery handoff: Bryan Szpindor (Insights presenter) → Alex Orosz (sales close) → Seth (delivery)
+- <code>?</code> Bookkeeping ownership: 2/10 transcript identifies a "back office" workstream but no specific Accruity bookkeeping team member named for Tate
+- <code>?</code> Cost Seg admin ownership: parent intake row's stuckness suggests no clear owner for "submit parent to portal" step</p>
+<p><strong>Document hygiene.</strong>
+- Strong: SharePoint folder structure cleanly organized (<code>Client Files/Cline, Tate/Tax Planning/</code>, <code>Extensions/2025/4.15 Deadline/Correspondence/</code>)
+- Weak: Account record URLs are blank despite files existing — backfill task M9
+- Mixed: PBC list received per EL row, but PBC items "from google drive" not yet saved to onedrive (per EL Notes)</p>
+<p><strong>Time-on-task signal.</strong> Per Insights Project <code>Temp Filter</code>: "Piah to do - Extraction and analysis 04/29" — extraction is queued for 2026-04-29, indicating compliance work is tracking past the extension. Reasonable given the planning workstream is the active priority.</p>
+<p><strong>Risk surface.</strong>
+- (HIGH) REPS facts-and-circumstances exposure if hours not documented contemporaneously
+- (HIGH) Cost seg execution risk if parent intake remains stuck through Apr 15
+- (MED) BRC accounting misstatement — <code>$1M</code> book loss vs true profitability could cause estimated-payment / planning errors
+- (LOW) IRS audit risk per 2/10 call's note about all rentals flowing to personal return</p>
+<hr>
+<h2 id="11-individual-profiles">§11. Individual Profile(s)</h2>
+<h3 id="111-tate-cline-primary-filer">11.1 Tate Cline (Primary Filer)</h3>
+<ul>
+<li><strong>Name</strong>: Tate Cline</li>
+<li><strong>Email</strong>: <code>knrspropertiesllc@gmail.com</code> (Gmail; entity-name-prefixed inbox suggests Tate uses one inbox per business)</li>
+<li><strong>Phone</strong>: <code>(614) 456-6451</code> (Columbus, OH area code)</li>
+<li><strong>Filing Status</strong>: MFJ with Whitney Cline <code>[Mango:1040 - Tate &amp; Whitney Cline]</code></li>
+<li><strong>Residency</strong>: Ohio (Delaware, OH 43015 rental; Columbus area)</li>
+<li><strong>Profession</strong>: Real estate investor + flipper + small-business operator. Per 2/10 call: managing rental portfolio of 6+ properties + BRC Dispositions flipping operation + cooking-class side venture. Self-perceived as full-time real-estate (REPS-likely).</li>
+<li><strong>Entity exposure</strong>: KNRS Properties LLC (rentals) · BRC Dispositions (flipping, NOT yet S-Corp) · KR&amp;S Properties (rentals) · cooking class · 6+ underlying property LLCs (4 on land contracts, 2 going rent-to-own)</li>
+<li><strong>Compensation pattern</strong>: All rental P&amp;L flows to personal return (1040 Schedule E currently); BRC Dispositions SE-taxed; no W-2 captured</li>
+<li><strong>Tax posture</strong>: 2024 extraction baseline complete (Cline_analysis_2024.xlsm); 2025 extension scenario modeled at <code>$0</code> (with strategies) or <code>$25K+</code> (without); REPS qualification likely</li>
+<li><strong>Engagement temperature</strong>: Engaged — attended 1/29 + 2/10 + 4/02 meetings; signed EL <code>$5,350</code>; portal invited; PBC items submitted</li>
+</ul>
+<h3 id="112-whitney-cline-spouse-co-filer">11.2 Whitney Cline (Spouse / Co-filer)</h3>
+<ul>
+<li><strong>Name</strong>: Whitney Cline</li>
+<li><strong>Filing role</strong>: MFJ co-filer per Mango project name</li>
+<li><strong>Notion contact row</strong>: ❌ none (gap to backfill — L6)</li>
+<li><strong>Email / phone</strong>: not captured this refresh</li>
+<li><strong>Profession / income role</strong>: not captured this refresh</li>
+</ul>
+<hr>
+<h2 id="12-provenance-index">§12. Provenance Index</h2>
+<p>This dossier draws on the following Notion records and source documents. All inline tags resolve to entries here.</p>
+<h3 id="121-notion-records-this-refresh">12.1 Notion records (this refresh)</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Record</th>
+<th>Notion URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Accounts:Tate Cline]</code></td>
+<td>Account record (canonical)</td>
+<td>https://www.notion.so/30d4917287518113aaead67f8bfafece</td>
+</tr>
+<tr>
+<td><code>[Contact:Tate Cline]</code></td>
+<td>Primary Client Contact</td>
+<td>https://www.notion.so/30d491728751819ba6ded7ae59fccf77</td>
+</tr>
+<tr>
+<td><code>[EmailAddrs:Tate Cline]</code></td>
+<td>Email addresses tracker</td>
+<td>https://www.notion.so/2fc4917287518013b778eefd8b09c2ac</td>
+</tr>
+<tr>
+<td><code>[ExecSumm:Tate Cline]</code></td>
+<td>Executive Summary DB row (canonical)</td>
+<td>https://www.notion.so/33b49172875181d58542f05d50fe9189</td>
+</tr>
+<tr>
+<td><code>[ExecSumm:34249172...d355dd]</code></td>
+<td>Executive Summary DB row (DUPLICATE — flagged)</td>
+<td>https://www.notion.so/34249172875181b2a0bfe124b5d355dd</td>
+</tr>
+<tr>
+<td><code>[TaxAscend:Tate Cline]</code></td>
+<td>Tax Ascend record</td>
+<td>https://www.notion.so/30449172875180a9815dfc7a657dca11</td>
+</tr>
+<tr>
+<td><code>[InsightsProject:Tate Cline]</code></td>
+<td>Insights Project Status</td>
+<td>https://www.notion.so/2fd491728751805a92b4c1c0ee77acb5</td>
+</tr>
+<tr>
+<td><code>[TaxPlanningSession:Tate Cline]</code></td>
+<td>Tax Planning Session</td>
+<td>https://www.notion.so/31949172875180129701e4369a8b17c0</td>
+</tr>
+<tr>
+<td><code>[SCorpTracker:Tate Cline]</code></td>
+<td>S-Corp Election Tracker</td>
+<td>https://www.notion.so/34a491728751819ea3f2f0667aae5650</td>
+</tr>
+<tr>
+<td><code>[EL:Tate Cline 2026-02-24]</code></td>
+<td>Engagement Letter row</td>
+<td>https://www.notion.so/3034917287518095a520da84b5870a1c</td>
+</tr>
+<tr>
+<td><code>[CostSegProposal:Cline — Cost Seg]</code></td>
+<td>Cost Seg Proposal Intake (parent)</td>
+<td>https://www.notion.so/33d4917287518144b229e323ff86751e</td>
+</tr>
+<tr>
+<td><code>[CostSegProposal:111 Hancock St]</code></td>
+<td>Cost Seg Proposal Intake (sub-item)</td>
+<td>https://www.notion.so/33749172875181b79d46f8ad985569eb</td>
+</tr>
+<tr>
+<td><code>[Mango:1040 - Tate &amp; Whitney Cline]</code></td>
+<td>Mango Planning &amp; Compliance OLD DB row</td>
+<td>https://www.notion.so/33a49172875181a9b909d3da1fc1158d</td>
+</tr>
+<tr>
+<td><code>[Mango:Tax Planning - Tate Cline]</code></td>
+<td>Mango Planning &amp; Compliance OLD DB row</td>
+<td>https://www.notion.so/33a4917287518161b1bcda7e4e0b7069</td>
+</tr>
+<tr>
+<td><code>[Mango New DB:Tax Planning - Tate Cline]</code></td>
+<td>Mango Planning &amp; Compliance NEW DB</td>
+<td>https://www.notion.so/34249172875181debc92cebe7268f966</td>
+</tr>
+<tr>
+<td><code>[F&amp;L:33b491728751811dbacbca1b38476f32]</code></td>
+<td>Files &amp; Links — "Engagement Letter" (shell)</td>
+<td>https://www.notion.so/33b491728751811dbacbca1b38476f32</td>
+</tr>
+<tr>
+<td><code>[F&amp;L:33b49172875181a39d18ee7ed412d488]</code></td>
+<td>Files &amp; Links — "Executive Summary" (shell)</td>
+<td>https://www.notion.so/33b49172875181a39d18ee7ed412d488</td>
+</tr>
+<tr>
+<td><code>[F&amp;L:33b491728751810fbb6df96f9abc44a7]</code></td>
+<td>Files &amp; Links — "Tate Cline" (Doc Inventory + PBC)</td>
+<td>https://www.notion.so/33b491728751810fbb6df96f9abc44a7</td>
+</tr>
+<tr>
+<td><code>[Meetings:2fb49172...80db]</code></td>
+<td>2026-01-06 Touchbase</td>
+<td>https://www.notion.so/2fb49172875180db800ec7949abee3a7</td>
+</tr>
+<tr>
+<td><code>[Meetings:2fb49172...80a1]</code></td>
+<td>2026-01-22 Clarification (cancelled)</td>
+<td>https://www.notion.so/2fb49172875180a1bc64ede097c3ef14</td>
+</tr>
+<tr>
+<td><code>[Meetings:2fb49172...8007]</code></td>
+<td>2026-01-29 Clarification</td>
+<td>https://www.notion.so/2fb4917287518007913bc9c4bcc7cbd1</td>
+</tr>
+<tr>
+<td><code>[Meetings:30449172...8038]</code></td>
+<td>2026-02-10 Insights Delivery</td>
+<td>https://www.notion.so/30449172875180389215e85f5cc183d1</td>
+</tr>
+<tr>
+<td><code>[Meetings:32949172...80a0]</code></td>
+<td>2026-03-20 Tax Planning (rescheduled)</td>
+<td>https://www.notion.so/32949172875180a09d85d13002c63456</td>
+</tr>
+<tr>
+<td><code>[Meetings:33549172...805e]</code></td>
+<td>2026-04-02 Tax Planning Session</td>
+<td>https://www.notion.so/335491728751805ea67bca6403e601cb</td>
+</tr>
+<tr>
+<td><code>[Transcript:Delivery Call 2026-02-10]</code></td>
+<td>Tate Cline's Accruity Delivery Call - February 10 (Fathom 84 min)</td>
+<td>https://www.notion.so/31849172875180d1b91af6659c05f5ca</td>
+</tr>
+<tr>
+<td><code>[ClaudeSumm:Extension Estimate Consolidation]</code></td>
+<td>2026-04-13 Claude Summary</td>
+<td>https://www.notion.so/34249172875181bebce5e3aec36ef60c</td>
+</tr>
+<tr>
+<td><code>[ClaudeSumm:Cost Seg Pipeline 2026-04-08]</code></td>
+<td>Cross-client Cost Seg Pipeline session</td>
+<td>https://www.notion.so/33c49172875181098390e5d079955549</td>
+</tr>
+<tr>
+<td><code>[EmailLog:FW Southern Visions]</code></td>
+<td>Misclassified — Wolfe/Wilkes recap</td>
+<td>https://www.notion.so/3424917287518144a4fed005ba5477b5</td>
+</tr>
+<tr>
+<td><code>[EmailLog:FW realestategoto.com]</code></td>
+<td>Misclassified — Gary Aronov recap</td>
+<td>https://www.notion.so/34249172875181dca589ecb01817fe48</td>
+</tr>
+<tr>
+<td><code>[EmailLog:FW vState Filings]</code></td>
+<td>Possibly Tate-related — vState recap</td>
+<td>https://www.notion.so/342491728751816f8095e06804080bc2</td>
+</tr>
+<tr>
+<td><code>[EmailLog:Declined Stacy&lt;&gt;Seth&lt;&gt;Sophia]</code></td>
+<td>Internal calendar decline (misclassified)</td>
+<td>https://www.notion.so/34249172875181ba9110ffe4f537ac42</td>
+</tr>
+</tbody>
+</table>
+<h3 id="122-external-documents-referenced">12.2 External documents referenced</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Document</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tax_Planning_Memorandum_Tate_Cline_2026.docx</code></td>
+<td>Tax Planning Memo (sent 2026-03-05)</td>
+<td>SharePoint: Client Files/Cline, Tate/Tax Planning/ <code>[TaxAscend:Tax Memo URL]</code></td>
+</tr>
+<tr>
+<td><code>Cline_analysis_2024.xlsm</code></td>
+<td>2024 tax analysis workbook</td>
+<td>Attached to Tax Ascend record <code>[TaxAscend:Tate Cline.Tax Analysis Files]</code></td>
+</tr>
+<tr>
+<td><code>21 - Tate Cline - Sent.msg</code></td>
+<td>2026-04-09 extension email</td>
+<td>SharePoint: Extensions/2025/4.15 Deadline/Correspondence/ <code>[Activity Log 2026-04-09]</code></td>
+</tr>
+<tr>
+<td><code>Tate_Cline_2025_Extension_Estimate.xlsx</code></td>
+<td>2026-04-13 6-tab extension workbook</td>
+<td>SharePoint <code>[ClaudeSumm:Extension Estimate Consolidation]</code></td>
+</tr>
+<tr>
+<td><code>2026-04-13_Tate_Cline_Extension_Estimate.html</code></td>
+<td>2026-04-13 session detail HTML</td>
+<td>SharePoint <code>[ClaudeSumm:Extension Estimate Consolidation]</code></td>
+</tr>
+<tr>
+<td><code>Fw__Tate_Cline_-_Open_Items__Tax_Plan_Follow_Up.msg</code></td>
+<td>Open items + tax plan follow-up</td>
+<td>EL row content block <code>[EL:Tate Cline.Open Items Email]</code></td>
+</tr>
+<tr>
+<td><code>Tate_Cline_Tax_Planning_Prep_Summary_2026.docx</code></td>
+<td>2026-04-02 prep summary</td>
+<td>SharePoint <code>[ExecSumm:Activity Log 2026-04-02]</code></td>
+</tr>
+<tr>
+<td>Cost Seg Estimate (111 Hancock)</td>
+<td>SharePoint PDF</td>
+<td><code>[CostSegProposal:111 Hancock St.Estimate]</code></td>
+</tr>
+<tr>
+<td>Signed EL (MangoShare)</td>
+<td>Engagement Letter</td>
+<td><code>app.mangoshare.com/share/36414a8b2c835c8bbbf72641</code> <code>[EL:Tate Cline.Signed EL mangoshare]</code></td>
+</tr>
+<tr>
+<td>PBC folder</td>
+<td>ImagineTime workspace 937757</td>
+<td><code>app.imaginetime.com/firm/5331/workspaces/937757/files/19182108/folder</code> <code>[EL:Tate Cline.PBC Folder Link]</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="123-batch_refresh_promptmd-notes">12.3 BATCH_REFRESH_PROMPT.md notes</h3>
+<ul>
+<li>Tate Cline appears in the <strong>"Currently in the Executive Summaries DB"</strong> populate-list AND in the <strong>"Duplicates — DO NOT delete; log to cleanup queue"</strong> list. Confirmed this refresh: canonical row is <code>33b49172875181d58542f05d50fe9189</code>; duplicate row is <code>34249172875181b2a0bfe124b5d355dd</code> (titled <code>🗑️ DELETE — Tate Cline (duplicate)</code>). <code>[BATCH_REFRESH_PROMPT.md §The remaining queue]</code></li>
+</ul>
+<hr>
+<h2 id="13-changed-since-last-refresh">§13. Changed Since Last Refresh</h2>
+<p><strong>This is the first refresh</strong> for Tate Cline under the comprehensive dossier pipeline. No prior dossier exists, so there is no delta narrative.</p>
+<p><strong>Baseline established this refresh (2026-04-22):</strong>
+- Canonical Account record identified: <code>30d4917287518113aaead67f8bfafece</code>
+- Duplicate Exec Summary row identified and flagged (do not auto-delete)
+- 2 prior Claude Summaries surfaced (2026-04-08 cross-client cost seg + 2026-04-13 Tate-specific extension consolidation) and woven into §6
+- 6 Meetings Tracker rows reviewed; 2/10 Delivery Call transcript pulled into §4.1
+- Cost Seg execution gap (parent intake stuck; 365 Garfield missing) re-surfaced and promoted to §7.1 HIGH
+- 11 Tax Planning strategies catalogued in §8 with <code>~$55K</code> annual savings ceiling and Apr-9 extension scenario quantified at <code>$0</code> vs <code>$25K</code>
+- §7 Action Items: 5 HIGH (Apr 15 cycle), 9 MED (post-Apr 15), 6 LOW (hygiene)
+- §9 Opportunity Flags: 3 HIGH (cost seg execution, REPS docs, S-Corp timing), 4 MED, 3 LOW</p>
+<p><strong>Items dossier-gen flagged for next refresh queue:</strong>
+- Backfill Account record URLs (PBC Workbook, Tax Extraction, Tax Planning Memo, SharePoint Drive, Tax Analysis Workbook)
+- Re-link 3 misclassified Email Log rows away from Tate's Account
+- Resolve Exec Summary duplicate (move to cleanup queue)
+- Add Whitney Cline as separate Notion contact row
+- Pull Tax Insights extraction once Piah's 2026-04-29 work completes
+- Capture 365 Garfield property data + create second Cost Seg Proposal Intake row</p>
+<p><strong>Provenance summary</strong>: 30+ Notion records reviewed, 1 Fathom transcript (84 min), 2 Claude Summaries, 1 Engagement Letter, 1 Tax Planning Memo, 1 extension workbook, 1 HTML session detail. ✓ Tate-specific data; ✓ cross-client cost seg context; ✓ duplicate row resolved.</p>
+<hr>
+<p><em>End of dossier — Tate Cline 2026-04-22 (first refresh).</em></p>
+<div class="footer">Internal working document — Accruity. Rendered from <code>dossiers/TateCline/dossier.md</code>.</div>
+</body>
+</html>
