@@ -21,7 +21,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.workbook.defined_name import DefinedName
 from openpyxl.workbook.properties import CalcProperties
 
-OUT = '/home/user/1040-Comprehnensive/docs/Tax_Workbook_Sample_Template_v5.xlsx'
+OUT = '/home/user/1040-Comprehnensive/docs/Master_Pivot_Framework.xlsx'
 
 wb = Workbook()
 wb.remove(wb.active)
