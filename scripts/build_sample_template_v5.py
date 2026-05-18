@@ -1,13 +1,14 @@
-"""Build v5 sample — minimal master-first model.
+"""Build v5 sample — master-first, minimal.
 
-Sheets:
-  1. Master_Inputs       — primary source of truth (long-format with Year col)
-  2. Y2025               — one year sheet: simple Adjustments table + rollup reading from Master + Adjustments
-  3. Dropdown_Lists      — closed sets + per-bucket cascade named ranges
-  4. Treatment_Profile_Map — reference for the auto-fill flags
-
-Deferred (intentionally not in this build): tax computation, FICA / True Tax Burden box,
-PBC_List, Dashboard_Export, Strategies_Library, PROJECTION_HISTORY, master-from-year-sheet sync.
+  Master_Inputs    — single-entry committed baseline rows (year-tagged).
+  Y2025            — year sheet with a strategies schedule and a rollup:
+                     Line | Desc | Baseline (from Master) | S1 (manual override)
+                     | Strategies (from year-sheet table) | Effective | Drill
+                     Plus Helper / Tax-Calc Inputs section (reference values
+                     for future LAMBDAs that don't aggregate into income).
+                     Plus FILTER-driven drill panel.
+  Treatment_Profile_Map — lookup reference
+  Dropdown_Lists   — closed sets + per-bucket cascade named ranges
 
 Output: docs/Tax_Workbook_Sample_Template_v5.xlsx
 """
@@ -45,8 +46,13 @@ def widths(ws, ws_widths):
     for i, w in enumerate(ws_widths, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
 
+def add_dv(ws, letter, formula, start=5, end=500):
+    dv = DataValidation(type='list', formula1=formula, allow_blank=True)
+    ws.add_data_validation(dv)
+    dv.add(f'{letter}{start}:{letter}{end}')
+
 # ============================================================
-# Dropdown_Lists  (top-level + per-bucket cascade lists)
+# Dropdown_Lists
 # ============================================================
 ws = wb.create_sheet('Dropdown_Lists')
 ws['A1'] = 'DROPDOWN LISTS — top-level + per-bucket cascade named ranges'
@@ -60,6 +66,7 @@ top_lists = {
                      'PBC - Requested', 'PBC - Received', 'PBC - Reviewed',
                      'Extraction - Imported', 'Extraction - Tied', 'System Calculated'],
     'Status':       ['Proposed', 'Approved', 'Committed', 'Implemented', 'Rejected'],
+    'TaxLines':     ['1z', '2a', '2b', '3a', '3b', '7', '8', '10', '12', '13'],
 }
 col = 1
 for header, items in top_lists.items():
@@ -72,7 +79,7 @@ for header, items in top_lists.items():
     wb.defined_names[header] = DefinedName(header, attr_text=ref)
     col += 1
 
-ws.cell(row=16, column=1, value='▸ PER-BUCKET TREATMENT_PROFILE LISTS').font = SUB_FONT
+ws.cell(row=17, column=1, value='▸ PER-BUCKET TREATMENT_PROFILE LISTS').font = SUB_FONT
 bucket_profiles = {
     'BusinessIncome_Profiles': ['SchC_Active', 'SchE_Rental', 'SchE_REPro', 'SchF_Active',
                                 'K1_PTP_Active', 'K1_PTP_Passive', 'K1_SCorp_Active', 'K1_SCorp_Passive', 'Trust_K1'],
@@ -86,16 +93,16 @@ bucket_profiles = {
 }
 col = 1
 for header, items in bucket_profiles.items():
-    ws.cell(row=17, column=col, value=header).font = HDR_FONT
-    ws.cell(row=17, column=col).fill = HDR_FILL
+    ws.cell(row=18, column=col, value=header).font = HDR_FONT
+    ws.cell(row=18, column=col).fill = HDR_FILL
     for i, v in enumerate(items):
-        ws.cell(row=18 + i, column=col, value=v)
-    last_row = 17 + len(items)
-    ref = f"'Dropdown_Lists'!${get_column_letter(col)}$18:${get_column_letter(col)}${last_row}"
+        ws.cell(row=19 + i, column=col, value=v)
+    last_row = 18 + len(items)
+    ref = f"'Dropdown_Lists'!${get_column_letter(col)}$19:${get_column_letter(col)}${last_row}"
     wb.defined_names[header] = DefinedName(header, attr_text=ref)
     col += 1
 
-ws.cell(row=32, column=1, value='▸ PER-BUCKET SOURCE_DOCUMENT LISTS').font = SUB_FONT
+ws.cell(row=33, column=1, value='▸ PER-BUCKET SOURCE_DOCUMENT LISTS').font = SUB_FONT
 bucket_docs = {
     'BusinessIncome_Docs': ['K-1', 'P&L Statement', 'QuickBooks Export', 'Sch C Workpaper', 'Sch E Workpaper', 'Sch F Workpaper', 'PY Return'],
     'Wages_Docs':          ['W-2', 'Paystub Summary', 'S-Corp Officer Comp Wkpr'],
@@ -108,26 +115,23 @@ bucket_docs = {
 }
 col = 1
 for header, items in bucket_docs.items():
-    ws.cell(row=33, column=col, value=header).font = HDR_FONT
-    ws.cell(row=33, column=col).fill = HDR_FILL
+    ws.cell(row=34, column=col, value=header).font = HDR_FONT
+    ws.cell(row=34, column=col).fill = HDR_FILL
     for i, v in enumerate(items):
-        ws.cell(row=34 + i, column=col, value=v)
-    last_row = 33 + len(items)
-    ref = f"'Dropdown_Lists'!${get_column_letter(col)}$34:${get_column_letter(col)}${last_row}"
+        ws.cell(row=35 + i, column=col, value=v)
+    last_row = 34 + len(items)
+    ref = f"'Dropdown_Lists'!${get_column_letter(col)}$35:${get_column_letter(col)}${last_row}"
     wb.defined_names[header] = DefinedName(header, attr_text=ref)
     col += 1
 
 widths(ws, [22] * 12)
 
 # ============================================================
-# Treatment_Profile_Map  (reference table)
+# Treatment_Profile_Map
 # ============================================================
 ws = wb.create_sheet('Treatment_Profile_Map')
-ws['A1'] = 'TREATMENT PROFILE MAP — reference for SE/NIIT/QBI/Primary_Line/Helper_Treatment auto-fill'
+ws['A1'] = 'TREATMENT PROFILE MAP — reference for the VBA hook that fills SE/NIIT/QBI/Primary_Line/Helper_Treatment'
 ws['A1'].font = TITLE_FONT
-ws['A2'] = 'In the real workbook a VBA hook fills the corresponding columns on Master_Inputs when Treatment_Profile changes.'
-ws['A2'].font = NOTE_FONT
-
 tpm_cols = ['Profile', 'Bucket', 'SE_Subject', 'NIIT_Class', 'QBI_Eligible',
             'Primary_Line', 'Helper_Treatment', 'Consider_Prompt', 'Notes']
 hdr(ws, 4, tpm_cols)
@@ -176,15 +180,14 @@ ws.add_table(tbl)
 widths(ws, [22, 18, 11, 12, 13, 11, 18, 50, 35])
 
 # ============================================================
-# Master_Inputs — primary source of truth
+# Master_Inputs — single-entry committed baseline items, year-tagged
 # ============================================================
 ws = wb.create_sheet('Master_Inputs')
-ws['A1'] = 'MASTER INPUTS — primary source of truth (baseline source-input rows, multi-year)'
+ws['A1'] = 'MASTER INPUTS — committed baseline source-input items (one row per source document per year)'
 ws['A1'].font = TITLE_FONT
-ws['A2'] = 'Enter or edit data here. Year-sheet rollups pull from this table via SUMIFS.'
+ws['A2'] = 'Adjustments and strategies live on the year sheet. Master is just where baseline data lives.'
 ws['A2'].font = NOTE_FONT
 
-# Priority column order (master-first model — adjustments live on the year sheet, not here)
 mi_cols = [
     'InputID',                                                       # A
     'Year',                                                          # B
@@ -194,7 +197,7 @@ mi_cols = [
     'Payor',                                                         # I
     'Baseline_Amount', 'Helper_Amount',                              # J-K
     'SE_Subject', 'NIIT_Class', 'QBI_Eligible',                      # L-N (stored; VBA auto-fills)
-    'Primary_Line', 'Helper_Treatment',                              # O-P (stored; same)
+    'Primary_Line', 'Helper_Treatment',                              # O-P (stored; VBA auto-fills)
     'Consider', 'Notes',                                             # Q-R
 ]
 hdr(ws, 4, mi_cols)
@@ -217,7 +220,7 @@ mi_sample = [
      'Capital Gains',     'LTCG_Stock',     '1099-B',    'PBC - Reviewed', 'Brokerage',
      14487, 0,
      'No', 'Portfolio', 'No',  '7',  'LTCG_SPLIT',  'All long-term', ''],
-    # 2025 — sample client baseline (adjustments live on Y2025 sheet, not here)
+    # 2025 — sample client baseline
     ['SAM|2025|Wages|01',  2025, 'SAMPLE', 'Sample Client',
      'Wages',             'W2_SCorpOwner',  'W-2',       'Estimate - Preparer', 'SampleCo S-Corp',
      100000, 100000,
@@ -246,19 +249,13 @@ mi_sample = [
 for i, row in enumerate(mi_sample):
     r = 5 + i
     for j, v in enumerate(row):
-        c = ws.cell(row=r, column=1 + j, value=v)
-        c.fill = INPUT_FILL
+        c = ws.cell(row=r, column=1 + j, value=v); c.fill = INPUT_FILL
 
 tbl = Table(displayName='tblMaster_Inputs', ref=f'A4:{get_column_letter(len(mi_cols))}{4+len(mi_sample)}')
 tbl.tableStyleInfo = TableStyleInfo(name='TableStyleMedium2', showRowStripes=True)
 ws.add_table(tbl)
 
 # Cascading dropdowns
-def add_dv(ws, letter, formula, start=5, end=500):
-    dv = DataValidation(type='list', formula1=formula, allow_blank=True)
-    ws.add_data_validation(dv)
-    dv.add(f'{letter}{start}:{letter}{end}')
-
 add_dv(ws, 'E', '=Bucket')
 add_dv(ws, 'F', '=INDIRECT(SUBSTITUTE($E5," ","")&"_Profiles")')
 add_dv(ws, 'G', '=INDIRECT(SUBSTITUTE($E5," ","")&"_Docs")')
@@ -271,46 +268,45 @@ widths(ws, [22, 7, 11, 18, 18, 22, 22, 18, 22, 14, 14, 11, 12, 13, 11, 18, 30, 3
 ws.freeze_panes = 'A5'
 
 # ============================================================
-# Y2025 — simple Adjustments table + rollup
+# Y2025 — strategies schedule + rollup with S1 manual override
 # ============================================================
 ws = wb.create_sheet('Y2025')
-ws['A1'] = 'Y2025 — adjustments + rollup (baseline pulled from Master_Inputs)'
+ws['A1'] = 'Y2025 — strategies schedule + rollup (master baseline + S1 manual override + strategies)'
 ws['A1'].font = TITLE_FONT
-ws['A2'] = 'Edit adjustments below. Rollup on the right pulls Baseline from Master_Inputs (Year=2025) and Adj from this sheet.'
+ws['A2'] = 'Strategies entered here flow into the Strategies column of the rollup (committed-tier status only).'
 ws['A2'].font = NOTE_FONT
 
-# Simple scratch adjustments table — much smaller now; year sheet is a playground only
-ws['A4'] = '▸ SCRATCH ADJUSTMENTS — tblY2025_Adjustments  (year-sheet only; not pushed to Master)'
+# ----- STRATEGIES SCHEDULE -----
+ws['A4'] = '▸ STRATEGIES — tblY2025_Strategies'
 ws['A4'].font = SUB_FONT
-adj_cols = ['AdjID', 'Primary_Line', 'Description', 'Adj_Amount', 'Status']
-hdr(ws, 5, adj_cols)
-
-adj_rows = [
-    ['ADJ-2025-001', '1z', 'S-Corp salary reduction',   -25000, 'Committed'],
-    ['ADJ-2025-002', '10', 'Family HSA max',            -8550,  'Committed'],
-    ['ADJ-2025-003', '12', 'DAF stack (charitable)',     15000, 'Proposed'],
-    ['ADJ-2025-004', '10', 'SEP-IRA contribution',      -7000,  'Approved'],
+strat_cols = ['StrategyID', 'Strategy Name', 'TargetLine', 'Amount', 'Status', 'Notes']
+hdr(ws, 5, strat_cols)
+strat_rows = [
+    ['STR-001', 'S-Corp Wage Optimization (STD-008)',   '1z', -25000, 'Committed',  'Reduce W-2 by $25K'],
+    ['STR-002', 'HSA Family Max (Retirement-adjacent)', '10', -8550,  'Committed',  'Family HSA contribution'],
+    ['STR-003', 'DAF Stack (ADV-002 Charitable)',       '12',  15000, 'Proposed',   'Bunching strategy — pending decision'],
+    ['STR-004', 'SEP-IRA Contribution (STD-001)',       '10', -7000,  'Approved',   'Pending commitment'],
+    ['STR-005', 'Cost Seg Study (STD-012)',             '10', -80000, 'Proposed',   'Real estate accelerated depreciation'],
 ]
-for i, row in enumerate(adj_rows):
+for i, row in enumerate(strat_rows):
     r = 6 + i
     for j, v in enumerate(row):
-        c = ws.cell(row=r, column=1 + j, value=v)
-        c.fill = INPUT_FILL
+        c = ws.cell(row=r, column=1 + j, value=v); c.fill = INPUT_FILL
 
-tbl = Table(displayName='tblY2025_Adjustments', ref=f'A5:{get_column_letter(len(adj_cols))}{5+len(adj_rows)}')
+tbl = Table(displayName='tblY2025_Strategies', ref=f'A5:{get_column_letter(len(strat_cols))}{5+len(strat_rows)}')
 tbl.tableStyleInfo = TableStyleInfo(name='TableStyleMedium2', showRowStripes=True)
 ws.add_table(tbl)
-
+add_dv(ws, 'C', '=TaxLines', start=6, end=200)
 add_dv(ws, 'E', '=Status', start=6, end=200)
 
-# === ROLLUP at column J (col 10) — gap H,I ===
-ROLLUP_COL = 10  # J
+# ----- ROLLUP at column H (col 8) — gap G -----
+ROLLUP_COL = 8  # H
 RC = lambda offset: get_column_letter(ROLLUP_COL + offset)
 
-ws.cell(row=4, column=ROLLUP_COL, value='▸ 2025 ROLLUP — 1040 LINES (aggregate to taxable income)').font = SUB_FONT
-hdr(ws, 5, ['Line', 'Description', 'Baseline (from Master)', 'Adj (this sheet)', 'Effective', 'Drill'], start_col=ROLLUP_COL)
+ws.cell(row=4, column=ROLLUP_COL, value='▸ 2025 ROLLUP — 1040 LINES').font = SUB_FONT
+hdr(ws, 5, ['Line', 'Description', 'Baseline (Master)', 'S1 Override (manual)', 'Strategies', 'Effective', 'Drill'], start_col=ROLLUP_COL)
 
-# Section 1: 1040 LINES — these aggregate to AGI / Taxable Income
+# Section 1: 1040 LINES — aggregate to taxable income
 ru_lines = [
     ('1z', 'Wages'),
     ('2b', 'Taxable interest'),
@@ -328,101 +324,81 @@ for i, (line, desc) in enumerate(ru_lines):
     r = 6 + i
     ws.cell(row=r, column=ROLLUP_COL,     value=line)
     ws.cell(row=r, column=ROLLUP_COL + 1, value=desc)
-    # Baseline — SUMIFS by Primary_Line + Year
+    # Baseline from Master (Year=2025 + Primary_Line)
     ws.cell(row=r, column=ROLLUP_COL + 2,
             value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Primary_Line], ${RC(0)}{r})')
-    # Adj — Committed + Implemented + Approved flow through
-    ws.cell(row=r, column=ROLLUP_COL + 3,
-            value=f'=SUMIFS(tblY2025_Adjustments[Adj_Amount], tblY2025_Adjustments[Primary_Line], ${RC(0)}{r}, tblY2025_Adjustments[Status], "Committed") '
-                  f'+ SUMIFS(tblY2025_Adjustments[Adj_Amount], tblY2025_Adjustments[Primary_Line], ${RC(0)}{r}, tblY2025_Adjustments[Status], "Implemented") '
-                  f'+ SUMIFS(tblY2025_Adjustments[Adj_Amount], tblY2025_Adjustments[Primary_Line], ${RC(0)}{r}, tblY2025_Adjustments[Status], "Approved")')
-    # Effective = Baseline + Adj
+    # S1 Override — manual entry by preparer; blank means no override
+    s1_cell = ws.cell(row=r, column=ROLLUP_COL + 3)
+    s1_cell.fill = INPUT_FILL
+    # Strategies — SUMIFS from year-sheet strategies table, committed-tier only
     ws.cell(row=r, column=ROLLUP_COL + 4,
-            value=f'={RC(2)}{r}+{RC(3)}{r}')
-    # Drill hyperlink → jumps to Drill_Line cell so preparer can pick this line
+            value=f'=SUMIFS(tblY2025_Strategies[Amount], tblY2025_Strategies[TargetLine], ${RC(0)}{r}, tblY2025_Strategies[Status], "Committed") '
+                  f'+ SUMIFS(tblY2025_Strategies[Amount], tblY2025_Strategies[TargetLine], ${RC(0)}{r}, tblY2025_Strategies[Status], "Implemented")')
+    # Effective = IF(Override blank, Baseline, Override) + Strategies
+    # — S1 column is a TRUE OVERRIDE: blank = use baseline; non-blank = replace baseline
     ws.cell(row=r, column=ROLLUP_COL + 5,
+            value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})+{RC(4)}{r}')
+    # Drill hyperlink — jumps to Drill_Line cell
+    ws.cell(row=r, column=ROLLUP_COL + 6,
             value=f'=HYPERLINK("#Y2025!{RC(1)}33", "↗ drill")')
-    ws.cell(row=r, column=ROLLUP_COL + 5).font = Font(color='0563C1', underline='single')
+    ws.cell(row=r, column=ROLLUP_COL + 6).font = Font(color='0563C1', underline='single')
 
-# ============================================================
-# Section 2: HELPER / TAX-CALC INPUTS — do NOT add to income; pulled separately for LAMBDA inputs
-# ============================================================
-HELPER_START_ROW = 19
-ws.cell(row=HELPER_START_ROW, column=ROLLUP_COL,
-        value='▸ HELPER / TAX-CALC INPUTS — does NOT add to income; reference values future LAMBDAs read').font = SUB_FONT
-hdr(ws, HELPER_START_ROW + 1, ['Helper Label', 'Description', 'Amount', 'Used by'], start_col=ROLLUP_COL)
-
-# Each helper aggregated from Helper_Amount where Helper_Treatment = <label>
-# These are the values future tax-calc LAMBDAs will read but are NOT part of Total Income aggregation
+# ----- Section 2: HELPER / TAX-CALC INPUTS -----
+HELPER_ROW = 19
+ws.cell(row=HELPER_ROW, column=ROLLUP_COL,
+        value='▸ HELPER / TAX-CALC INPUTS — does NOT add to income; reference values for future LAMBDAs').font = SUB_FONT
+hdr(ws, HELPER_ROW + 1, ['Helper Label', 'Description', 'Amount', 'Used by'], start_col=ROLLUP_COL)
 helper_items = [
-    ('TAX_EXEMPT', 'Tax-exempt interest (Line 2a; reported but not taxed)',
-     'NIIT_FN (MAGI base)'),
-    ('QUAL_DIV',   'Qualified dividends (carve-out of Line 3b; LTCG-rate stack)',
-     'Calc_CapGainsTax stacking'),
-    ('OWNER_PAY',  'Owner W-2 wages (S-Corp reasonable comp)',
-     'FICA_Employer / FICA_Employee for True Tax Burden box'),
-    ('SEC1250',    '§1250 unrecaptured gain (capped at 25% rate)',
-     'Calc_1250Tax'),
-    ('SE_INCOME',  'Total SE-subject income (Sch C + active K-1)',
-     'Calc_SE_Tax · AddlMedicareTax_FN'),
-    ('PASSIVE',    'Passive income / loss (Sch E baseline; PAL limits)',
-     'PassiveLossAllowed_FN'),
-    ('TAX_W2',     'Total W-2 wages (any source)',
-     'Calc_SE_Tax (SS-base sharing) · AddlMedicareTax_FN'),
+    ('TAX_EXEMPT', 'Tax-exempt interest (Line 2a; reported but not taxed)',  'NIIT_FN (MAGI base)'),
+    ('QUAL_DIV',   'Qualified dividends (carve-out of Line 3b; LTCG stack)', 'Calc_CapGainsTax stacking'),
+    ('OWNER_PAY',  'Owner W-2 wages (S-Corp reasonable comp)',               'FICA_Employer/Employee — True Tax Burden box'),
+    ('SEC1250',    '§1250 unrecaptured gain (capped at 25% rate)',           'Calc_1250Tax'),
+    ('SE_INCOME',  'Total SE-subject income (Sch C/F + active K-1 helper)',  'Calc_SE_Tax · AddlMedicareTax_FN'),
+    ('PASSIVE',    'Passive income/loss (Sch E baseline; PAL limits)',       'PassiveLossAllowed_FN'),
+    ('TAX_W2',     'Total W-2 wages (any source)',                           'Calc_SE_Tax · AddlMedicareTax_FN'),
 ]
 for i, (label, desc, used_by) in enumerate(helper_items):
-    r = HELPER_START_ROW + 2 + i
+    r = HELPER_ROW + 2 + i
     ws.cell(row=r, column=ROLLUP_COL,     value=label).font = Font(bold=True, color='305496')
     ws.cell(row=r, column=ROLLUP_COL + 1, value=desc)
     if label == 'TAX_W2':
-        # Special case: Total W-2 = SUM of Baseline_Amount where Bucket = Wages
         ws.cell(row=r, column=ROLLUP_COL + 2,
                 value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Bucket], "Wages")')
     elif label == 'SE_INCOME':
-        # SE_INCOME helper isn't only one Helper_Treatment — also includes Schedule C baseline.
-        # For now read the Helper_Amount where Helper_Treatment = SE_INCOME (active K-1 carve)
-        # plus full Baseline_Amount where Treatment_Profile = SchC_Active or SchF_Active
         ws.cell(row=r, column=ROLLUP_COL + 2,
                 value=f'=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "SE_INCOME") '
                       f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "SchC_Active") '
                       f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "SchF_Active")')
     elif label == 'PASSIVE':
-        # Sum baseline where Treatment_Profile is one of the passive profiles
         ws.cell(row=r, column=ROLLUP_COL + 2,
                 value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[NIIT_Class], "Passive")')
     else:
-        # Generic: sum Helper_Amount where Helper_Treatment = label
         ws.cell(row=r, column=ROLLUP_COL + 2,
                 value=f'=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "{label}")')
     ws.cell(row=r, column=ROLLUP_COL + 3, value=used_by).font = NOTE_FONT
 
-# ============================================================
-# DRILL DETAIL PANEL
-# ============================================================
-DRILL_HDR_ROW = 32
-ws.cell(row=DRILL_HDR_ROW, column=ROLLUP_COL,
+# ----- DRILL PANEL -----
+DRILL_HDR = 32
+ws.cell(row=DRILL_HDR, column=ROLLUP_COL,
         value='▸ DRILL DETAIL — pick a line; FILTER below shows the contributing Master_Inputs rows').font = SUB_FONT
-
-ws.cell(row=DRILL_HDR_ROW + 1, column=ROLLUP_COL, value='Drill into line:').font = Font(bold=True)
-ws.cell(row=DRILL_HDR_ROW + 1, column=ROLLUP_COL).alignment = Alignment(horizontal='right')
-drill_cell = ws.cell(row=DRILL_HDR_ROW + 1, column=ROLLUP_COL + 1, value='1z')
+ws.cell(row=DRILL_HDR + 1, column=ROLLUP_COL, value='Drill into line:').font = Font(bold=True)
+ws.cell(row=DRILL_HDR + 1, column=ROLLUP_COL).alignment = Alignment(horizontal='right')
+drill_cell = ws.cell(row=DRILL_HDR + 1, column=ROLLUP_COL + 1, value='1z')
 drill_cell.fill = KEY_FILL
 drill_cell.font = Font(bold=True, color='305496')
 drill_cell.alignment = Alignment(horizontal='center')
 
-wb.defined_names['Drill_Line'] = DefinedName('Drill_Line', attr_text=f"'Y2025'!${RC(1)}${DRILL_HDR_ROW + 1}")
-
-ws.cell(row=DRILL_HDR_ROW + 1, column=ROLLUP_COL + 3,
+wb.defined_names['Drill_Line'] = DefinedName('Drill_Line', attr_text=f"'Y2025'!${RC(1)}${DRILL_HDR + 1}")
+ws.cell(row=DRILL_HDR + 1, column=ROLLUP_COL + 3,
         value=f'=HYPERLINK("#Master_Inputs!A1", "✏ open Master_Inputs to edit")').font = Font(color='0563C1', underline='single')
 
 drill_lines = [l for (l, _) in ru_lines]
 dv_drill = DataValidation(type='list', formula1=f'"{",".join(drill_lines)}"', allow_blank=False)
 ws.add_data_validation(dv_drill)
-dv_drill.add(f'{RC(1)}{DRILL_HDR_ROW + 1}')
+dv_drill.add(f'{RC(1)}{DRILL_HDR + 1}')
 
-# FILTER panel
-FILTER_HDR_ROW = DRILL_HDR_ROW + 3
-hdr(ws, FILTER_HDR_ROW, ['InputID', 'Bucket', 'Treatment_Profile', 'Payor', 'Baseline_Amount', 'Helper_Amount', 'Notes'], start_col=ROLLUP_COL)
+FILTER_HDR = DRILL_HDR + 3
+hdr(ws, FILTER_HDR, ['InputID', 'Bucket', 'Treatment_Profile', 'Payor', 'Baseline_Amount', 'Helper_Amount', 'Notes'], start_col=ROLLUP_COL)
 hstack_formula = (
     '=IFERROR('
     'HSTACK('
@@ -435,22 +411,20 @@ hstack_formula = (
     'FILTER(tblMaster_Inputs[Notes],            (tblMaster_Inputs[Year]=2025)*(tblMaster_Inputs[Primary_Line]=Drill_Line))'
     '), "(no rows matching this line / year)")'
 )
-ws.cell(row=FILTER_HDR_ROW + 1, column=ROLLUP_COL, value=hstack_formula)
+ws.cell(row=FILTER_HDR + 1, column=ROLLUP_COL, value=hstack_formula)
 
-ws.cell(row=FILTER_HDR_ROW + 10, column=ROLLUP_COL,
-        value='Note: FILTER output is live — change Drill_Line and the rows update automatically.').font = NOTE_FONT
+ws.cell(row=FILTER_HDR + 12, column=ROLLUP_COL,
+        value='FILTER output is live — change Drill_Line and the rows update. Use the hyperlink to edit in Master_Inputs.').font = NOTE_FONT
 
 # Column widths
-# A:H adjustments table, I gap, J:N rollup
-adj_widths = [16, 32, 14, 18, 12, 32, 14, 24]   # A-H (8 cols)
-gap_widths = [3]                                  # I (1 col gap)
-rollup_widths = [8, 32, 18, 16, 14]               # J-N (5 cols)
-widths(ws, adj_widths + gap_widths + rollup_widths)
+# A:F strategies table (6 cols), G gap (1), H-N rollup (7 cols)
+strat_widths = [12, 36, 12, 14, 14, 32]   # A-F
+gap_widths = [3]                            # G
+rollup_widths = [8, 36, 16, 16, 14, 16, 9] # H-N
+widths(ws, strat_widths + gap_widths + rollup_widths)
 ws.freeze_panes = 'A6'
 
-# ============================================================
-# Order
-# ============================================================
+# Order sheets
 order = ['Master_Inputs', 'Y2025', 'Treatment_Profile_Map', 'Dropdown_Lists']
 wb._sheets = [wb[name] for name in order]
 
