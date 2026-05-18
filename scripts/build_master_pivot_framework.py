@@ -136,15 +136,16 @@ tpm_cols = ['Profile', 'Bucket', 'SE_Subject', 'NIIT_Class', 'QBI_Eligible',
             'Primary_Line', 'Helper_Treatment', 'Consider_Prompt', 'Notes']
 hdr(ws, 4, tpm_cols)
 profiles = [
-    ('SchC_Active',       'Business Income',  'Yes','Active',    'Yes','10', 'SE_INCOME',   'SE earnings?',                                 'Sole prop active SE'),
-    ('SchE_Rental',       'Business Income',  'No', 'Passive',   'No', '10', 'PASSIVE',     'short-term rental? RE Pro election?',          'Rental real estate default passive'),
-    ('SchE_REPro',        'Business Income',  'No', 'Active',    'No', '10', 'ACTIVE_RE',   'meets 750hr / >50% test?',                     'RE Pro election'),
-    ('SchF_Active',       'Business Income',  'Yes','Active',    'Yes','10', 'SE_INCOME',   'farm income averaging?',                       'Farm income'),
-    ('K1_PTP_Active',     'Business Income',  'Yes','Active',    'Yes','10', 'K1_SPLIT',    'active vs passive?',                           'Active partnership K-1'),
-    ('K1_PTP_Passive',    'Business Income',  'No', 'Passive',   'Yes','10', 'K1_SPLIT',    'PAL limits?',                                  'Passive partnership K-1'),
-    ('K1_SCorp_Active',   'Business Income',  'No', 'Active',    'Yes','10', 'K1_SPLIT',    'active vs passive?',                           'Active S-Corp K-1'),
-    ('K1_SCorp_Passive',  'Business Income',  'No', 'Passive',   'Yes','10', 'K1_SPLIT',    'rare — confirm',                               'Passive S-Corp K-1'),
-    ('Trust_K1',          'Business Income',  'No', 'Portfolio', 'No', '10', 'TRUST_DIST',  'character of distribution?',                   'Trust K-1'),
+    # Business income flows to Sch 1 → 1040 Line 8 (NOT Line 10 — that's adjustments)
+    ('SchC_Active',       'Business Income',  'Yes','Active',    'Yes','8',  'SE_INCOME',   'SE earnings?',                                 'Sole prop active SE'),
+    ('SchE_Rental',       'Business Income',  'No', 'Passive',   'No', '8',  'PASSIVE',     'short-term rental? RE Pro election?',          'Rental real estate default passive'),
+    ('SchE_REPro',        'Business Income',  'No', 'Active',    'No', '8',  'ACTIVE_RE',   'meets 750hr / >50% test?',                     'RE Pro election'),
+    ('SchF_Active',       'Business Income',  'Yes','Active',    'Yes','8',  'SE_INCOME',   'farm income averaging?',                       'Farm income'),
+    ('K1_PTP_Active',     'Business Income',  'Yes','Active',    'Yes','8',  'K1_SPLIT',    'active vs passive?',                           'Active partnership K-1'),
+    ('K1_PTP_Passive',    'Business Income',  'No', 'Passive',   'Yes','8',  'K1_SPLIT',    'PAL limits?',                                  'Passive partnership K-1'),
+    ('K1_SCorp_Active',   'Business Income',  'No', 'Active',    'Yes','8',  'K1_SPLIT',    'active vs passive?',                           'Active S-Corp K-1'),
+    ('K1_SCorp_Passive',  'Business Income',  'No', 'Passive',   'Yes','8',  'K1_SPLIT',    'rare — confirm',                               'Passive S-Corp K-1'),
+    ('Trust_K1',          'Business Income',  'No', 'Portfolio', 'No', '8',  'TRUST_DIST',  'character of distribution?',                   'Trust K-1'),
     ('W2_Employee',       'Wages',            'No', 'Active',    'No', '1z', 'NONE',        '(n/a)',                                        'Standard W-2 wages'),
     ('W2_SCorpOwner',     'Wages',            'No', 'Active',    'No', '1z', 'OWNER_PAY',   'owner pay portion?',                           'S-Corp owner reasonable comp'),
     ('Int_Taxable',       'Investment Income','No', 'Portfolio', 'No', '2b', 'TAX_EXEMPT',  'tax-exempt portion?',                          'Taxable interest'),
@@ -211,7 +212,7 @@ mi_sample = [
     ['CED|2024|BI|01',     2024, 'CEDILLO', 'Ron Cedillo',
      'Business Income',   'K1_PTP_Passive', 'K-1',       'PBC - Reviewed', 'Cedillo Partnership',
      -100766, 0,
-     'No', 'Passive',   'Yes', '10', 'K1_SPLIT',    'Passive loss', ''],
+     'No', 'Passive',   'Yes', '8',  'K1_SPLIT',    'Passive loss', ''],
     ['CED|2024|II|01',     2024, 'CEDILLO', 'Ron Cedillo',
      'Investment Income', 'Div_Ordinary',   '1099-DIV',  'PBC - Reviewed', 'Brokerage',
      25922, 0,
@@ -228,7 +229,7 @@ mi_sample = [
     ['SAM|2025|BI|01',     2025, 'SAMPLE', 'Sample Client',
      'Business Income',   'K1_SCorp_Active','K-1',       'PY Rolled Forward', 'SampleCo S-Corp K-1',
      200000, 0,
-     'No', 'Active',    'Yes', '10', 'K1_SPLIT',    'Active S-corp K-1', ''],
+     'No', 'Active',    'Yes', '8',  'K1_SPLIT',    'Active S-corp K-1', ''],
     ['SAM|2025|II_Div|01', 2025, 'SAMPLE', 'Sample Client',
      'Investment Income', 'Div_Qualified',  '1099-DIV',  'PBC - Received', 'Brokerage',
      10000, 7000,
@@ -306,45 +307,85 @@ RC = lambda offset: get_column_letter(ROLLUP_COL + offset)
 ws.cell(row=4, column=ROLLUP_COL, value='▸ 2025 ROLLUP — 1040 LINES').font = SUB_FONT
 hdr(ws, 5, ['Line', 'Description', 'Baseline (Master)', 'S1 Override (manual)', 'Strategies', 'Effective', 'Drill'], start_col=ROLLUP_COL)
 
-# Section 1: 1040 LINES — aggregate to taxable income
+# Rollup lines in 1040 page-1 order. 'kind' = 'data' (SUMIFS) | 'agg' (aggregator) | 'info' (informational, doesn't add to Total Income)
 ru_lines = [
-    ('1z', 'Wages'),
-    ('2b', 'Taxable interest'),
-    ('3b', 'Ordinary dividends (total — incl qualified)'),
-    ('7',  'Capital gain or (loss)'),
-    ('8',  'Other income (Sch 1)'),
-    ('9',  'TOTAL INCOME'),
-    ('10', 'Adjustments to income'),
-    ('11', 'AGI'),
-    ('12', 'Std/Itemized deduction'),
-    ('13', 'QBI deduction'),
-    ('15', 'TAXABLE INCOME'),
+    ('1z', 'Wages',                                            'data'),
+    ('2a', 'Tax-exempt interest (informational — Helper)',     'info'),
+    ('2b', 'Taxable interest',                                 'data'),
+    ('3a', 'Qualified dividends (informational — Helper)',     'info'),
+    ('3b', 'Ordinary dividends (total — incl qualified)',      'data'),
+    ('7',  'Capital gain or (loss)',                           'data'),
+    ('8',  'Other income (incl business income via Sch 1)',    'data'),
+    ('9',  'TOTAL INCOME',                                     'agg_total_income'),
+    ('10', 'Adjustments to income',                            'data'),
+    ('11', 'AGI',                                              'agg_agi'),
+    ('12', 'Std/Itemized deduction',                           'data'),
+    ('13', 'QBI deduction',                                    'data'),
+    ('15', 'TAXABLE INCOME',                                   'agg_taxable_income'),
 ]
-for i, (line, desc) in enumerate(ru_lines):
+# Pre-compute row map (line → row number) for aggregator formulas
+row_map = {line: 6 + i for i, (line, _, _) in enumerate(ru_lines)}
+EFF = lambda line: f'{RC(5)}{row_map[line]}'
+
+for i, (line, desc, kind) in enumerate(ru_lines):
     r = 6 + i
     ws.cell(row=r, column=ROLLUP_COL,     value=line)
     ws.cell(row=r, column=ROLLUP_COL + 1, value=desc)
-    # Baseline from Master (Year=2025 + Primary_Line)
-    ws.cell(row=r, column=ROLLUP_COL + 2,
-            value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Primary_Line], ${RC(0)}{r})')
-    # S1 Override — manual entry by preparer; blank means no override
-    s1_cell = ws.cell(row=r, column=ROLLUP_COL + 3)
-    s1_cell.fill = INPUT_FILL
-    # Strategies — SUMIFS from year-sheet strategies table, committed-tier only
-    ws.cell(row=r, column=ROLLUP_COL + 4,
-            value=f'=SUMIFS(tblY2025_Strategies[Amount], tblY2025_Strategies[TargetLine], ${RC(0)}{r}, tblY2025_Strategies[Status], "Committed") '
-                  f'+ SUMIFS(tblY2025_Strategies[Amount], tblY2025_Strategies[TargetLine], ${RC(0)}{r}, tblY2025_Strategies[Status], "Implemented")')
-    # Effective = IF(Override blank, Baseline, Override) + Strategies
-    # — S1 column is a TRUE OVERRIDE: blank = use baseline; non-blank = replace baseline
-    ws.cell(row=r, column=ROLLUP_COL + 5,
-            value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})+{RC(4)}{r}')
+
+    if kind == 'info':
+        # Informational lines (2a tax-exempt, 3a qualified div) pull from helper section, don't add to income
+        if line == '2a':
+            ws.cell(row=r, column=ROLLUP_COL + 2, value='=TAX_EXEMPT')
+        elif line == '3a':
+            ws.cell(row=r, column=ROLLUP_COL + 2, value='=QUAL_DIV')
+        ws.cell(row=r, column=ROLLUP_COL + 3).fill = INPUT_FILL  # Override (still allowed)
+        ws.cell(row=r, column=ROLLUP_COL + 4, value=0)  # No strategies on info lines
+        # Effective: same as Baseline (or Override) — doesn't aggregate into anything
+        ws.cell(row=r, column=ROLLUP_COL + 5,
+                value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})')
+    elif kind == 'agg_total_income':
+        # Line 9 = sum of 1z, 2b, 3b, 7, 8 (the data-bearing income lines)
+        ws.cell(row=r, column=ROLLUP_COL + 2,
+                value=f'={EFF("1z")}+{EFF("2b")}+{EFF("3b")}+{EFF("7")}+{EFF("8")}')
+        ws.cell(row=r, column=ROLLUP_COL + 3).fill = INPUT_FILL
+        ws.cell(row=r, column=ROLLUP_COL + 4, value=0)
+        ws.cell(row=r, column=ROLLUP_COL + 5,
+                value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})')
+    elif kind == 'agg_agi':
+        # Line 11 = Line 9 (Total Income) - Line 10 (Adjustments to income)
+        ws.cell(row=r, column=ROLLUP_COL + 2,
+                value=f'={EFF("9")}+{EFF("10")}')   # Line 10 typically negative (deductions)
+        ws.cell(row=r, column=ROLLUP_COL + 3).fill = INPUT_FILL
+        ws.cell(row=r, column=ROLLUP_COL + 4, value=0)
+        ws.cell(row=r, column=ROLLUP_COL + 5,
+                value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})')
+    elif kind == 'agg_taxable_income':
+        # Line 15 = Line 11 (AGI) - Line 12 (Std/Itm Ded) - Line 13 (QBI Ded)
+        # Line 12 and 13 are typically negative deductions in the data model
+        ws.cell(row=r, column=ROLLUP_COL + 2,
+                value=f'={EFF("11")}+{EFF("12")}+{EFF("13")}')
+        ws.cell(row=r, column=ROLLUP_COL + 3).fill = INPUT_FILL
+        ws.cell(row=r, column=ROLLUP_COL + 4, value=0)
+        ws.cell(row=r, column=ROLLUP_COL + 5,
+                value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})')
+    else:
+        # Standard data line — SUMIFS from Master, plus S1 Override and Strategies
+        ws.cell(row=r, column=ROLLUP_COL + 2,
+                value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Primary_Line], ${RC(0)}{r})')
+        ws.cell(row=r, column=ROLLUP_COL + 3).fill = INPUT_FILL  # S1 Override
+        ws.cell(row=r, column=ROLLUP_COL + 4,
+                value=f'=SUMIFS(tblY2025_Strategies[Amount], tblY2025_Strategies[TargetLine], ${RC(0)}{r}, tblY2025_Strategies[Status], "Committed") '
+                      f'+ SUMIFS(tblY2025_Strategies[Amount], tblY2025_Strategies[TargetLine], ${RC(0)}{r}, tblY2025_Strategies[Status], "Implemented")')
+        # Effective = IF(Override blank, Baseline, Override) + Strategies
+        ws.cell(row=r, column=ROLLUP_COL + 5,
+                value=f'=IF(ISBLANK({RC(3)}{r}),{RC(2)}{r},{RC(3)}{r})+{RC(4)}{r}')
     # Drill hyperlink — jumps to Drill_Line cell
     ws.cell(row=r, column=ROLLUP_COL + 6,
-            value=f'=HYPERLINK("#Y2025!{RC(1)}33", "↗ drill")')
+            value=f'=HYPERLINK("#Y2025!{RC(1)}49", "↗ drill")')  # drill cell at DRILL_HDR+1 = 49
     ws.cell(row=r, column=ROLLUP_COL + 6).font = Font(color='0563C1', underline='single')
 
 # ----- Section 2: HELPER / TAX-CALC INPUTS -----
-HELPER_ROW = 19
+HELPER_ROW = 21  # rollup now ends at row 18 (added 2a, 3a)
 ws.cell(row=HELPER_ROW, column=ROLLUP_COL,
         value='▸ HELPER / TAX-CALC INPUTS — does NOT add to income; reference values for future LAMBDAs').font = SUB_FONT
 hdr(ws, HELPER_ROW + 1, ['Helper Label', 'Description', 'Amount', 'Used by'], start_col=ROLLUP_COL)
@@ -404,27 +445,93 @@ for i, (label, desc, used_by, formula) in enumerate(helper_items):
     wb.defined_names[label] = DefinedName(label, attr_text=helper_ref)
 
 # Named ranges for the key rollup totals (Effective column = ROLLUP_COL+5)
-# Rollup data rows start at row 6; line 9 = TOTAL INCOME, line 11 = AGI, line 15 = TAXABLE INCOME
-# Indexes: 1z=row6, 2b=7, 3b=8, 7=9, 8=10, 9(Total Income)=11, 10=12, 11(AGI)=13, 12=14, 13=15, 15(Taxable)=16
+# Updated row numbers — added 2a (row 7) and 3a (row 9) informational lines shifted everything down
 eff_col_letter = get_column_letter(ROLLUP_COL + 5)
 rollup_totals_named = {
     'Line_1z_Wages':       6,
-    'Line_2b_TaxInt':      7,
-    'Line_3b_OrdDiv':      8,
-    'Line_7_CapGain':      9,
-    'Line_8_OtherInc':     10,
-    'TotalIncome':         11,  # Line 9
-    'AdjToIncome':         12,  # Line 10
-    'AGI':                 13,  # Line 11
-    'StdItemDed':          14,  # Line 12
-    'QBI_Deduction':       15,  # Line 13
-    'TaxableIncome':       16,  # Line 15
+    'Line_2a_TaxExempt':   7,   # informational (= TAX_EXEMPT)
+    'Line_2b_TaxInt':      8,
+    'Line_3a_QualDiv':     9,   # informational (= QUAL_DIV)
+    'Line_3b_OrdDiv':      10,
+    'Line_7_CapGain':      11,
+    'Line_8_OtherInc':     12,  # business income flows here via Sch 1
+    'TotalIncome':         13,  # Line 9
+    'AdjToIncome':         14,  # Line 10
+    'AGI':                 15,  # Line 11
+    'StdItemDed':          16,  # Line 12
+    'QBI_Deduction':       17,  # Line 13
+    'TaxableIncome':       18,  # Line 15
 }
 for name, row in rollup_totals_named.items():
     wb.defined_names[name] = DefinedName(name, attr_text=f"'Y2025'!${eff_col_letter}${row}")
 
+# ============================================================
+# TAX CALC INPUTS — derived values future LAMBDAs consume directly
+# (named so each LAMBDA call can read =OrdIncome, =MAGI, =NII, etc.)
+# ============================================================
+TAX_INPUTS_ROW = 35  # helper section ends at row 33; gap at 34; tax inputs header at 35
+ws.cell(row=TAX_INPUTS_ROW, column=ROLLUP_COL,
+        value='▸ TAX CALC INPUTS — derived; each row is a workbook-level named range for LAMBDAs to consume').font = SUB_FONT
+hdr(ws, TAX_INPUTS_ROW + 1, ['Named Range', 'Description', 'Formula / Value', 'Used by LAMBDA'], start_col=ROLLUP_COL)
+
+tax_inputs = [
+    ('OrdIncome',                'Ordinary income (TaxableIncome - CG_LT - QUAL_DIV - SEC1250)',
+                                 '=TaxableIncome-CG_LT-QUAL_DIV-SEC1250',
+                                 'Calc_CapGainsTax stacking base · Calc_OrdinaryTax (after carve-outs)'),
+    ('MAGI',                     'Modified AGI = AGI + tax-exempt interest',
+                                 '=AGI+TAX_EXEMPT',
+                                 'Calc_NIIT · PassiveLossAllowed_FN'),
+    ('NII',                      'Net Investment Income = taxable int + div + cap gain + passive',
+                                 '=Line_2b_TaxInt+Line_3b_OrdDiv+Line_7_CapGain+BI_PASSIVE',
+                                 'Calc_NIIT'),
+    ('QBI_Income',               'QBI-eligible business income (active business)',
+                                 '=BI_SE_SUBJECT+BI_ACTIVE_NONSE',
+                                 'Calc_QBI_Simple · QBI_FN'),
+    ('TaxableIncome_BeforeQBI',  'Taxable Income BEFORE QBI deduction (= AGI - StdItemDed)',
+                                 '=AGI+StdItemDed',  # StdItemDed is negative by convention
+                                 'Calc_QBI_Simple (cap reference)'),
+    ('BusinessLoss',             'Net business loss (only when negative; for EBL limit)',
+                                 '=MIN(0,BI_SE_SUBJECT+BI_ACTIVE_NONSE+BI_PASSIVE)',
+                                 'ExcessBusinessLossLimit_FN'),
+    ('NetSEIncome',              'Net SE income (alias of BI_SE_SUBJECT for LAMBDA clarity)',
+                                 '=BI_SE_SUBJECT',
+                                 'Calc_SE_Tax · AddlMedicareTax_FN · SETax_FN'),
+]
+
+# Manual / placeholder inputs (preparer or another sheet supplies these)
+tax_inputs_manual = [
+    ('UBIA',                'Unadjusted Basis Immediately After Acquisition (QBI W-2/UBIA test)',
+                            0,  # placeholder
+                            'QBI_FN'),
+    ('IsSSTB',              'Is Specified Service Trade or Business? (TRUE/FALSE)',
+                            False,
+                            'QBI_FN'),
+    ('NOL_Carryforward',    'NOL carryforward available (from prior-year Carryovers; populate manually for now)',
+                            0,
+                            'NOLDeductionAllowed_FN'),
+]
+
+ti_start_row = TAX_INPUTS_ROW + 2
+for i, (name, desc, formula, used_by) in enumerate(tax_inputs):
+    r = ti_start_row + i
+    ws.cell(row=r, column=ROLLUP_COL,     value=name).font = Font(bold=True, color='305496')
+    ws.cell(row=r, column=ROLLUP_COL + 1, value=desc)
+    ws.cell(row=r, column=ROLLUP_COL + 2, value=formula)
+    ws.cell(row=r, column=ROLLUP_COL + 3, value=used_by).font = NOTE_FONT
+    wb.defined_names[name] = DefinedName(name, attr_text=f"'Y2025'!${get_column_letter(ROLLUP_COL + 2)}${r}")
+
+ti_manual_start = ti_start_row + len(tax_inputs)
+for i, (name, desc, value, used_by) in enumerate(tax_inputs_manual):
+    r = ti_manual_start + i
+    ws.cell(row=r, column=ROLLUP_COL,     value=name).font = Font(bold=True, color='305496')
+    ws.cell(row=r, column=ROLLUP_COL + 1, value=desc)
+    c = ws.cell(row=r, column=ROLLUP_COL + 2, value=value)
+    c.fill = INPUT_FILL  # manual entry
+    ws.cell(row=r, column=ROLLUP_COL + 3, value=used_by).font = NOTE_FONT
+    wb.defined_names[name] = DefinedName(name, attr_text=f"'Y2025'!${get_column_letter(ROLLUP_COL + 2)}${r}")
+
 # ----- DRILL PANEL -----
-DRILL_HDR = 32
+DRILL_HDR = 48  # after rollup (6-18), helper (21-33), tax inputs (35-46), gap at 47
 ws.cell(row=DRILL_HDR, column=ROLLUP_COL,
         value='▸ DRILL DETAIL — pick a line; FILTER below shows the contributing Master_Inputs rows').font = SUB_FONT
 ws.cell(row=DRILL_HDR + 1, column=ROLLUP_COL, value='Drill into line:').font = Font(bold=True)
@@ -438,7 +545,7 @@ wb.defined_names['Drill_Line'] = DefinedName('Drill_Line', attr_text=f"'Y2025'!$
 ws.cell(row=DRILL_HDR + 1, column=ROLLUP_COL + 3,
         value=f'=HYPERLINK("#Master_Inputs!A1", "✏ open Master_Inputs to edit")').font = Font(color='0563C1', underline='single')
 
-drill_lines = [l for (l, _) in ru_lines]
+drill_lines = [l for (l, _, _) in ru_lines]
 dv_drill = DataValidation(type='list', formula1=f'"{",".join(drill_lines)}"', allow_blank=False)
 ws.add_data_validation(dv_drill)
 dv_drill.add(f'{RC(1)}{DRILL_HDR + 1}')
