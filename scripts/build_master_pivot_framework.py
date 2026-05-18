@@ -59,14 +59,15 @@ ws['A1'] = 'DROPDOWN LISTS — top-level + per-bucket cascade named ranges'
 ws['A1'].font = TITLE_FONT
 
 top_lists = {
-    'Bucket':       ['Business Income', 'Wages', 'Investment Income', 'Capital Gains', 'Adjustment', 'Itemized', 'Credit', 'Payment'],
-    'Yes_No':       ['Yes', 'No'],
-    'NIIT_Class':   ['Active', 'Passive', 'Portfolio', 'N/A'],
-    'Provenance':   ['PY Rolled Forward', 'PY Actuals', 'Estimate - Preparer', 'Estimate - Client',
-                     'PBC - Requested', 'PBC - Received', 'PBC - Reviewed',
-                     'Extraction - Imported', 'Extraction - Tied', 'System Calculated'],
-    'Status':       ['Proposed', 'Approved', 'Committed', 'Implemented', 'Rejected'],
-    'TaxLines':     ['1z', '2a', '2b', '3a', '3b', '7', '8', '10', '12', '13'],
+    'Bucket':         ['Business Income', 'Wages', 'Investment Income', 'Capital Gains', 'Adjustment', 'Itemized', 'Credit', 'Payment'],
+    'Yes_No':         ['Yes', 'No'],
+    'NIIT_Class':     ['Active', 'Passive', 'Portfolio', 'N/A'],
+    'Provenance':     ['PY Rolled Forward', 'PY Actuals', 'Estimate - Preparer', 'Estimate - Client',
+                       'PBC - Requested', 'PBC - Received', 'PBC - Reviewed',
+                       'Extraction - Imported', 'Extraction - Tied', 'System Calculated'],
+    'Status':         ['Proposed', 'Approved', 'Committed', 'Implemented', 'Rejected'],
+    'TaxLines':       ['1z', '2a', '2b', '3a', '3b', '7', '8', '10', '12', '13'],
+    'Activity_Type':  ['Baseline', 'Strategy'],
 }
 col = 1
 for header, items in top_lists.items():
@@ -194,58 +195,64 @@ mi_cols = [
     'Year',                                                          # B
     'ClientID', 'ClientName',                                        # C-D
     'Bucket', 'Treatment_Profile', 'Source_Document',                # E-G (cascading dropdowns)
-    'Provenance',                                                    # H
-    'Payor',                                                         # I
-    'Baseline_Amount', 'Helper_Amount',                              # J-K
-    'SE_Subject', 'NIIT_Class', 'QBI_Eligible',                      # L-N (stored; VBA auto-fills)
-    'Primary_Line', 'Helper_Treatment',                              # O-P (stored; VBA auto-fills)
-    'Consider', 'Notes',                                             # Q-R
+    'Activity_Type',                                                 # H  (Baseline | Strategy)
+    'Provenance',                                                    # I
+    'Payor',                                                         # J
+    'Baseline_Amount', 'Helper_Amount',                              # K-L
+    'SE_Subject', 'NIIT_Class', 'QBI_Eligible',                      # M-O (stored; VBA auto-fills)
+    'Primary_Line', 'Helper_Treatment',                              # P-Q (stored; VBA auto-fills)
+    'Consider', 'Notes',                                             # R-S
 ]
 hdr(ws, 4, mi_cols)
 
 mi_sample = [
     # 2024 — Cedillo tie-out validation case
     ['CED|2024|Wages|01',  2024, 'CEDILLO', 'Ron Cedillo',
-     'Wages',             'W2_SCorpOwner',  'W-2',       'PBC - Reviewed', 'Acme S-Corp',
+     'Wages',             'W2_SCorpOwner',  'W-2',       'Baseline', 'PBC - Reviewed', 'Acme S-Corp',
      153648, 0,
      'No', 'Active',    'No',  '1z', 'OWNER_PAY',   'Owner reasonable comp', ''],
     ['CED|2024|BI|01',     2024, 'CEDILLO', 'Ron Cedillo',
-     'Business Income',   'K1_PTP_Passive', 'K-1',       'PBC - Reviewed', 'Cedillo Partnership',
+     'Business Income',   'K1_PTP_Passive', 'K-1',       'Baseline', 'PBC - Reviewed', 'Cedillo Partnership',
      -100766, 0,
      'No', 'Passive',   'Yes', '8',  'K1_SPLIT',    'Passive loss', ''],
     ['CED|2024|II|01',     2024, 'CEDILLO', 'Ron Cedillo',
-     'Investment Income', 'Div_Ordinary',   '1099-DIV',  'PBC - Reviewed', 'Brokerage',
+     'Investment Income', 'Div_Ordinary',   '1099-DIV',  'Baseline', 'PBC - Reviewed', 'Brokerage',
      25922, 0,
      'No', 'Portfolio', 'No',  '3b', 'QUAL_DIV',    'All non-qualified', ''],
     ['CED|2024|CG|01',     2024, 'CEDILLO', 'Ron Cedillo',
-     'Capital Gains',     'LTCG_Stock',     '1099-B',    'PBC - Reviewed', 'Brokerage',
+     'Capital Gains',     'LTCG_Stock',     '1099-B',    'Baseline', 'PBC - Reviewed', 'Brokerage',
      14487, 0,
      'No', 'Portfolio', 'No',  '7',  'LTCG_SPLIT',  'All long-term', ''],
     # 2025 — sample client baseline
     ['SAM|2025|Wages|01',  2025, 'SAMPLE', 'Sample Client',
-     'Wages',             'W2_SCorpOwner',  'W-2',       'Estimate - Preparer', 'SampleCo S-Corp',
+     'Wages',             'W2_SCorpOwner',  'W-2',       'Baseline', 'Estimate - Preparer', 'SampleCo S-Corp',
      100000, 100000,
      'No', 'Active',    'No',  '1z', 'OWNER_PAY',   'Owner reasonable comp', ''],
     ['SAM|2025|BI|01',     2025, 'SAMPLE', 'Sample Client',
-     'Business Income',   'K1_SCorp_Active','K-1',       'PY Rolled Forward', 'SampleCo S-Corp K-1',
+     'Business Income',   'K1_SCorp_Active','K-1',       'Baseline', 'PY Rolled Forward', 'SampleCo S-Corp K-1',
      200000, 0,
      'No', 'Active',    'Yes', '8',  'K1_SPLIT',    'Active S-corp K-1', ''],
     ['SAM|2025|II_Div|01', 2025, 'SAMPLE', 'Sample Client',
-     'Investment Income', 'Div_Qualified',  '1099-DIV',  'PBC - Received', 'Brokerage',
+     'Investment Income', 'Div_Qualified',  '1099-DIV',  'Baseline', 'PBC - Received', 'Brokerage',
      10000, 7000,
      'No', 'Portfolio', 'No',  '3b', 'QUAL_DIV',    '$7K qualified', ''],
     ['SAM|2025|II_Int|01', 2025, 'SAMPLE', 'Sample Client',
-     'Investment Income', 'Int_Taxable',    '1099-INT',  'PBC - Received', 'Brokerage',
+     'Investment Income', 'Int_Taxable',    '1099-INT',  'Baseline', 'PBC - Received', 'Brokerage',
      500, 0,
      'No', 'Portfolio', 'No',  '2b', 'TAX_EXEMPT',  'All taxable', ''],
     ['SAM|2025|CG|01',     2025, 'SAMPLE', 'Sample Client',
-     'Capital Gains',     'LTCG_Stock',     '1099-B',    'PBC - Requested', 'Brokerage',
+     'Capital Gains',     'LTCG_Stock',     '1099-B',    'Baseline', 'PBC - Requested', 'Brokerage',
      25000, 0,
      'No', 'Portfolio', 'No',  '7',  'LTCG_SPLIT',  'All long-term', ''],
     ['SAM|2025|Itm|01',    2025, 'SAMPLE', 'Sample Client',
-     'Itemized',          'Itm_SALT',       'Property Tax Receipt', 'PBC - Received', '',
+     'Itemized',          'Itm_SALT',       'Property Tax Receipt', 'Baseline', 'PBC - Received', '',
      10000, 0,
      'No', 'N/A',       'No',  '12', 'SALT',        'SALT cap', ''],
+    # Sample committed STRATEGY row — Cost Seg study (committed in 2025)
+    ['SAM|2025|Strategy|CostSeg|01', 2025, 'SAMPLE', 'Sample Client',
+     'Business Income',   'SchE_Rental',   '',           'Strategy', 'Estimate - Preparer', '',
+     -80000, 0,
+     'No', 'Passive',   'No',  '8',  'PASSIVE',     'Cost Seg accelerated depreciation', 'STD-012 Committed'],
 ]
 for i, row in enumerate(mi_sample):
     r = 5 + i
@@ -260,12 +267,13 @@ ws.add_table(tbl)
 add_dv(ws, 'E', '=Bucket')
 add_dv(ws, 'F', '=INDIRECT(SUBSTITUTE($E5," ","")&"_Profiles")')
 add_dv(ws, 'G', '=INDIRECT(SUBSTITUTE($E5," ","")&"_Docs")')
-add_dv(ws, 'H', '=Provenance')
-add_dv(ws, 'L', '=Yes_No')
-add_dv(ws, 'M', '=NIIT_Class')
-add_dv(ws, 'N', '=Yes_No')
+add_dv(ws, 'H', '=Activity_Type')   # new — Baseline or Strategy
+add_dv(ws, 'I', '=Provenance')      # shifted (was H)
+add_dv(ws, 'M', '=Yes_No')          # SE_Subject (shifted from L)
+add_dv(ws, 'N', '=NIIT_Class')      # shifted from M
+add_dv(ws, 'O', '=Yes_No')          # QBI_Eligible (shifted from N)
 
-widths(ws, [22, 7, 11, 18, 18, 22, 22, 18, 22, 14, 14, 11, 12, 13, 11, 18, 30, 30])
+widths(ws, [22, 7, 11, 18, 18, 22, 22, 14, 18, 22, 14, 14, 11, 12, 13, 11, 18, 30, 30])
 ws.freeze_panes = 'A5'
 
 # ============================================================
