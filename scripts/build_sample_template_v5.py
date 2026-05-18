@@ -348,34 +348,80 @@ HELPER_ROW = 19
 ws.cell(row=HELPER_ROW, column=ROLLUP_COL,
         value='▸ HELPER / TAX-CALC INPUTS — does NOT add to income; reference values for future LAMBDAs').font = SUB_FONT
 hdr(ws, HELPER_ROW + 1, ['Helper Label', 'Description', 'Amount', 'Used by'], start_col=ROLLUP_COL)
+# Each entry: (label, description, used_by_LAMBDA, formula_template)
+# Formulas use Year=2025 and tblMaster_Inputs columns; SUMIFS aggregations.
+ROLLUP_REF_COL = ROLLUP_COL  # for f-string interpolation
 helper_items = [
-    ('TAX_EXEMPT', 'Tax-exempt interest (Line 2a; reported but not taxed)',  'NIIT_FN (MAGI base)'),
-    ('QUAL_DIV',   'Qualified dividends (carve-out of Line 3b; LTCG stack)', 'Calc_CapGainsTax stacking'),
-    ('OWNER_PAY',  'Owner W-2 wages (S-Corp reasonable comp)',               'FICA_Employer/Employee — True Tax Burden box'),
-    ('SEC1250',    '§1250 unrecaptured gain (capped at 25% rate)',           'Calc_1250Tax'),
-    ('SE_INCOME',  'Total SE-subject income (Sch C/F + active K-1 helper)',  'Calc_SE_Tax · AddlMedicareTax_FN'),
-    ('PASSIVE',    'Passive income/loss (Sch E baseline; PAL limits)',       'PassiveLossAllowed_FN'),
-    ('TAX_W2',     'Total W-2 wages (any source)',                           'Calc_SE_Tax · AddlMedicareTax_FN'),
+    # --- WAGES BREAKOUT ---
+    ('W2_OWNER',        'Owner W-2 wages (S-Corp reasonable comp; Treatment_Profile=W2_SCorpOwner)',
+        'FICA_Employer/Employee — True Tax Burden box',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "W2_SCorpOwner")'),
+    ('W2_THIRD_PARTY',  'Third-party W-2 wages (Treatment_Profile=W2_Employee)',
+        'Calc_SE_Tax (SS-base sharing) · AddlMedicareTax_FN',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "W2_Employee")'),
+    ('W2_TOTAL',        'Total W-2 wages (owner + third-party)',
+        'Calc_SE_Tax (SS-base sharing) · AddlMedicareTax_FN',
+        '=W2_OWNER+W2_THIRD_PARTY'),
+    # --- BUSINESS INCOME BREAKOUT (three tiers) ---
+    ('BI_SE_SUBJECT',   'Business income subject to SE tax (Sch C, Sch F, active K-1 PTP)',
+        'Calc_SE_Tax base · AddlMedicareTax_FN',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Bucket], "Business Income", tblMaster_Inputs[SE_Subject], "Yes")'),
+    ('BI_ACTIVE_NONSE', 'Active business income NOT subject to SE (active S-Corp K-1, etc.)',
+        'NIIT exclusion (active) · QBI eligible',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Bucket], "Business Income", tblMaster_Inputs[SE_Subject], "No", tblMaster_Inputs[NIIT_Class], "Active")'),
+    ('BI_PASSIVE',      'Passive business income / loss (passive K-1s, Sch E rental)',
+        'PassiveLossAllowed_FN · NIIT inclusion',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Bucket], "Business Income", tblMaster_Inputs[NIIT_Class], "Passive")'),
+    # --- INVESTMENT INCOME CARVE-OUTS ---
+    ('TAX_EXEMPT',      'Tax-exempt interest (Line 2a; reported but not taxed)',
+        'NIIT_FN (MAGI base)',
+        '=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "TAX_EXEMPT")'),
+    ('QUAL_DIV',        'Qualified dividends (carve-out of Line 3b; LTCG stack)',
+        'Calc_CapGainsTax stacking',
+        '=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "QUAL_DIV")'),
+    # --- CAPITAL GAINS BREAKOUT (1040 Line 7 nets ST+LT; LAMBDAs need them split) ---
+    ('CG_LT',           'Long-term capital gains (LT preferential rate; stacks with qualified div)',
+        'Calc_CapGainsTax',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "LTCG_Stock") '
+        '+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "LTCG_RE") '
+        '+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "LTCG_K1_Passthrough") '
+        '+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "Sec1250_Recap")'),
+    ('CG_ST',           'Short-term capital gains (taxed as ordinary income)',
+        'Calc_OrdinaryTax (ST folded into ordinary income)',
+        '=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "STCG_Stock")'),
+    ('SEC1250',         '§1250 unrecaptured gain (sub-carve of CG_LT; capped at 25% rate)',
+        'Calc_1250Tax',
+        '=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "SEC1250")'),
 ]
-for i, (label, desc, used_by) in enumerate(helper_items):
+for i, (label, desc, used_by, formula) in enumerate(helper_items):
     r = HELPER_ROW + 2 + i
     ws.cell(row=r, column=ROLLUP_COL,     value=label).font = Font(bold=True, color='305496')
     ws.cell(row=r, column=ROLLUP_COL + 1, value=desc)
-    if label == 'TAX_W2':
-        ws.cell(row=r, column=ROLLUP_COL + 2,
-                value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Bucket], "Wages")')
-    elif label == 'SE_INCOME':
-        ws.cell(row=r, column=ROLLUP_COL + 2,
-                value=f'=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "SE_INCOME") '
-                      f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "SchC_Active") '
-                      f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Treatment_Profile], "SchF_Active")')
-    elif label == 'PASSIVE':
-        ws.cell(row=r, column=ROLLUP_COL + 2,
-                value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[NIIT_Class], "Passive")')
-    else:
-        ws.cell(row=r, column=ROLLUP_COL + 2,
-                value=f'=SUMIFS(tblMaster_Inputs[Helper_Amount], tblMaster_Inputs[Year], 2025, tblMaster_Inputs[Helper_Treatment], "{label}")')
+    amt_cell = ws.cell(row=r, column=ROLLUP_COL + 2, value=formula)
     ws.cell(row=r, column=ROLLUP_COL + 3, value=used_by).font = NOTE_FONT
+    # Workbook-level named range for this helper amount — ready to feed LAMBDAs / summary page
+    helper_ref = f"'Y2025'!${get_column_letter(ROLLUP_COL + 2)}${r}"
+    wb.defined_names[label] = DefinedName(label, attr_text=helper_ref)
+
+# Named ranges for the key rollup totals (Effective column = ROLLUP_COL+5)
+# Rollup data rows start at row 6; line 9 = TOTAL INCOME, line 11 = AGI, line 15 = TAXABLE INCOME
+# Indexes: 1z=row6, 2b=7, 3b=8, 7=9, 8=10, 9(Total Income)=11, 10=12, 11(AGI)=13, 12=14, 13=15, 15(Taxable)=16
+eff_col_letter = get_column_letter(ROLLUP_COL + 5)
+rollup_totals_named = {
+    'Line_1z_Wages':       6,
+    'Line_2b_TaxInt':      7,
+    'Line_3b_OrdDiv':      8,
+    'Line_7_CapGain':      9,
+    'Line_8_OtherInc':     10,
+    'TotalIncome':         11,  # Line 9
+    'AdjToIncome':         12,  # Line 10
+    'AGI':                 13,  # Line 11
+    'StdItemDed':          14,  # Line 12
+    'QBI_Deduction':       15,  # Line 13
+    'TaxableIncome':       16,  # Line 15
+}
+for name, row in rollup_totals_named.items():
+    wb.defined_names[name] = DefinedName(name, attr_text=f"'Y2025'!${eff_col_letter}${row}")
 
 # ----- DRILL PANEL -----
 DRILL_HDR = 32
