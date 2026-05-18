@@ -1,142 +1,138 @@
-# Desktop Handoff Prompt — Tax Workbook Rework
+# Desktop Handoff Prompt — Tax Workbook (REVISED, much smaller scope)
 
-**Use this on the desktop Claude Code session (or whichever assistant
-has filesystem access to `C:\...\Tax production three.xlsx`).**
+**Status:** Revised 2026-05-18 after receiving the existing KISS Merge
+handoff doc. The earlier version of this prompt assumed we were
+designing the architecture from scratch — we're not. KISS is built.
+This prompt is now a targeted "what to add on top" instead.
 
-Copy everything between the rulers below into the desktop session as a
-single message, after pointing it at the workbook.
+**Use this on the desktop Claude Code session that has filesystem
+access to `Tax_Workbook_Production_v3.xlsm`** (at
+`G:\Shared drives\_SMJ\___Product Development\1040 - Template Review\`).
+
+Copy the section between the rulers below into that session.
 
 ---
 
-I'm reworking `Tax production three.xlsx` (path:
-`C:\...\Tax production three.xlsx` — please open and inspect first).
-We've done the design work in a separate cloud session; the full
-architecture write-up is in `docs/TAX_WORKBOOK_PIVOT_ARCHITECTURE.md`
-on the `claude/pivot-tax-calculations-q4NyZ` branch of the
-`1040-Comprehnensive` repo. **Read that file end-to-end before doing
-anything else** — it contains the final decisions, the schema, the
-tab layout, and the open items.
+I'm continuing work on `Tax_Workbook_Production_v3.xlsm`. The KISS
+merge (Phases 1–7) is complete and Cedillo Y2024 ties out to $7,213.92
+federal tax. Don't touch the year-sheet calc engine or the
+auto-sync — those work.
 
-Once you've read the design notes, do the following, in order:
+The architecture decisions and full context are in TWO files in the
+`1040-Comprehnensive` repo on branch
+`claude/pivot-tax-calculations-q4NyZ`:
 
-## Step 1 — Inventory the current workbook
+- `docs/TAX_WORKBOOK_PIVOT_ARCHITECTURE.md` — reconciliation between
+  what we explored in chat vs. what's actually built (KISS). **Read
+  this first.** Section "Revised game plan" is the work to do.
+- `docs/DESKTOP_HANDOFF_PROMPT.md` — this file
+- (Also relevant on Seth's desktop:
+  `C:\Users\SethJohnson\MCP_Projects\tax-workbook-production\HANDOFF_v3_KISS.md`)
 
-For each existing tab, report:
+The KISS daily flow stays. The work below is **additive view layer**
+on top of `Master_Inputs`, plus the items already in the KISS backlog.
 
-- Tab name and (if obvious) intended role
-- Approximate row/column count of any data tables on it
-- Whether it's a data sheet, calc sheet, presentation sheet, or
-  control/UI sheet
-- Any defined names that reference this tab (search Name Manager)
-- Any pivot tables on this tab (count + source range)
-- Any LAMBDAs defined that this tab participates in
+## Work items (in priority order)
 
-I want a clear "here's what's currently in the file" snapshot before
-we start moving things.
+### Cleanup / unblock (do first)
 
-## Step 2 — Map current → target
+1. **Triage the 7 external workbook links** on `CONNECTIONS`.
+   Targets are: `Activity_Detail`, `Deductions_and_Adjustments1`,
+   `Form_1040_Summary`, `2025`, `Y2022`, `STRATEGY_INPUTS`,
+   `TAX_CALCULATIONS`. Several LAMBDAs depend on these
+   (`EntityCount`, `RentalCount`, `LookupDed`, `LookupLine`) and
+   currently return errors. For each: resolve path, embed the
+   referenced data into a new tab, or rewrite the LAMBDA to read from
+   `Master_Inputs`. **Report back what you find before deleting any
+   external link** — could be live referenced data.
 
-For each existing tab, classify against the target architecture
-(§11 of the design notes):
+2. **Reconcile the two LAMBDA libraries.** 7 KISS LAMBDAs +
+   14 v3-original LAMBDAs are both installed. For each v3 LAMBDA
+   (`OrdTax_FN`, `CapGainsTax_FN`, `SETax_FN`, `NIIT_FN`, `QBI_FN`,
+   `AddlMedicareTax_FN`, `FICA_EmployeeTax_FN`, `FICA_EmployerTax_FN`,
+   `ExcessBusinessLossLimit_FN`, `NOLDeductionAllowed_FN`,
+   `PassiveLossAllowed_FN`, `IncomeClassifier_FN`, `GetFITBrackets_FN`,
+   `GetLTCGBrackets_FN`), check (a) is it referenced anywhere in the
+   workbook, and (b) does KISS have an equivalent. Report a
+   keep/retire table. **Don't retire anything yet** — just produce
+   the table.
 
-- **Keep as-is** — already fits the target architecture
-- **Reshape** — content is right but layout / structure needs to
-  change (e.g. wide → long, per-year → year-as-column)
-- **Merge** — content overlaps with another tab's role and should be
-  combined
-- **Retire** — no role in the target architecture, content can be
-  deleted (or archived if there's history worth preserving)
+### KISS backlog (already on the list in HANDOFF_v3_KISS.md)
 
-Produce this as a table. For "Reshape" and "Merge" rows, write a
-one-sentence description of the transformation.
+3. Fine-tune Y2025 input UX (column widths, label clarity, dropdowns,
+   validation).
+4. Apply Phases 3–6 to Y2023 and Y2026 so all four year sheets are
+   consistent. Use `scripts/v3_kiss_merge_phase{3,4,5,6}.py` as
+   reference.
+5. Build the Roll-forward macro — copy PY input rows (without amounts,
+   `Source = Baseline` only) into the next year sheet as a starting
+   template. Macro lives in `modKissSync`.
+6. Wire up `PullExtractionsToAsFiled` to read `CONNECTIONS` file paths
+   and populate the `AsFiled` column on year sheets. Currently a stub.
+7. Clean up stale v8.6 `Module1–4` VBA modules (harmless leftovers).
 
-## Step 3 — Identify the gaps
+### New view layer on top of Master_Inputs (additive — does not touch KISS)
 
-What target tabs (`_Master`, `_Calc`, `Control`, `Strategies`,
-`Projection`, `PBC Inventory`, `Snapshots`, `Dashboard_Export`) do
-**not** yet exist? Which need to be created from scratch vs.
-extracted from existing content?
+8. **Rebuild `Tax_Summary` as a `GROUPBY`-driven cross-year view**
+   reading from `Master_Inputs`. Currently `#REF!`'d out. Goal: a
+   single tab where you can pick a year (or "all years") and see a
+   pivoted summary of every line item across years, scenarios, and
+   baseline/adjustment split. Use `GROUPBY` (Excel 365 — confirmed
+   available).
 
-## Step 4 — Resolve open items by inspection
+9. **Build `Year_Lookup_Summary` — CHOOSE-based cross-year roll-up.**
+   Already on the KISS backlog. Per the resilience standards, use
+   `CHOOSE` for cross-year refs, not `INDIRECT`.
 
-Several open items in §12 of the design notes can be answered by
-looking at the file:
+10. **Rebuild `PBC_List` as `GROUPBY`-driven from `Master_Inputs`.**
+    Filter to `Source = Baseline` and `Year = SelectedYear`, group by
+    `Bucket`/`Source_Type`/`Payor`. Replaces the hardcoded version.
+    Also DELETE `PBC_2026` — year scoping should be a parameter, not
+    a sheet per year.
 
-- **Excel version / `GROUPBY` availability** — check via formula bar
-  (`=GROUPBY(...)` in a scratch cell; if it autocompletes, you're on
-  365 current channel)
-- **What "S1" actually means in the existing Filing Stage usage** —
-  search the workbook for "S1", "Scenario 1", "Stage 1", "Estimate 1"
-  to see how it's currently used
-- **Existing LAMBDAs** — list every name in Name Manager whose
-  `RefersTo` starts with `=LAMBDA(`. For each, write one sentence on
-  what it does and whether the target architecture (pivot-fed inputs)
-  will need it rewritten
+11. **Build `Dashboard_Export` tab** — a stable named-range block,
+    `GROUPBY`-driven from `Master_Inputs`. Output is the three-number
+    headline (or whatever the dashboard needs) at known cell addresses
+    so downstream consumers (Jeff's dashboard workbook, leadership
+    Power BI, etc.) have a contract that doesn't break when year-sheet
+    layouts change.
 
-Report findings.
+12. **Repoint `CLIENT_DASHBOARD` / `DELIVERABLE` / `QUESTIONNAIRE`**
+    formulas to read from `Dashboard_Export` named ranges instead of
+    hardcoded year-sheet cells. This is KISS backlog #4 but with the
+    target redirected to the new export block.
 
-## Step 5 — Produce the migration plan
+13. **Merge Jeff's dashboard workbook.** KISS backlog #2. Locate the
+    file (currently TBD per the handoff). Bring his dashboard sheets
+    in alongside (or replacing) CLIENT_DASHBOARD/DELIVERABLE, pointed
+    at `Dashboard_Export`.
 
-Given the inventory + gap analysis + open-item resolutions, propose
-an ordered migration plan. Expected shape:
+### Documentation / hygiene
 
-1. Create `_Master` tab with the target schema (empty)
-2. Migrate data from `<existing tab>` into `_Master` (with a brief
-   description of the transformation)
-3. Repeat for each data source
-4. Create `_Calc` tab and wire up pivots / `GROUPBY` aggregates
-5. Create / refactor LAMBDAs to consume `_Calc` named ranges
-6. Build `Projection` view with `SUMIFS` against `_Master`
-7. ...etc
-
-Order matters — flag any dependencies (e.g. "step N requires step M
-to be complete before formulas will resolve"). Flag any steps that
-need user input or judgment calls before they can proceed.
-
-## Step 6 — STOP and wait for confirmation
-
-Do not start executing the migration. Present the inventory, map,
-gap analysis, open-item findings, and proposed plan, and wait for
-me to confirm or adjust before any structural changes are made to
-the workbook.
-
-If during inventory you find anything that makes you think the
-target architecture itself needs adjustment (e.g. existing complexity
-that the design notes didn't account for), flag it explicitly — don't
-silently work around it.
+14. Consolidate `User_Instructions` / `INSTRUCTIONS` / `SETUP_GUIDE`
+    into a single instructions tab.
 
 ## Constraints
 
-- **No destructive changes** until the plan is confirmed. Read-only
-  inspection only for Steps 1–4.
-- **Preserve existing LAMBDAs** until their replacements are wired
-  up and verified. Don't delete defined names without checking
-  downstream references.
-- **If the file is open in Excel**, ask me to close it before doing
-  anything that requires write access.
-- **Keep a working copy.** Before any destructive change in Step 5+,
-  save a timestamped backup (`Tax production three_backup_YYYY-MM-DD.xlsx`).
+- **Do NOT modify the KISS calc engine** (the 7 KISS LAMBDAs, the
+  same-sheet rollup on year sheets, the auto-sync, the
+  `Treatment_Profile_Map` auto-fill). These work. Cedillo Y2024 ties
+  to $7,213.92 — that's the validation case.
+- **Do NOT change directionality** — year sheet remains primary, master
+  remains downstream aggregate. New views read FROM master; they
+  don't replace year sheets.
+- **Save a timestamped backup** before any structural change.
+- **No destructive operations** without confirmation — that includes
+  retiring v3 LAMBDAs (step 2), deleting external links (step 1),
+  deleting `PBC_2026` (step 10), or removing stale modules (step 7).
+- **For each step, report before/after.** Output should include:
+  what changed, where, and what was verified (e.g. "Cedillo Y2024
+  still ties to $7,213.92").
 
----
+## Stop and confirm
 
-## Additional context for the desktop session
-
-The full architecture write-up lives at:
-`docs/TAX_WORKBOOK_PIVOT_ARCHITECTURE.md` (this same repo, branch
-`claude/pivot-tax-calculations-q4NyZ`).
-
-Key decisions already made (don't re-litigate; see §13 of the design
-notes):
-
-- Long-format master, no per-year input sheets
-- Component columns on the view (`Baseline | Σ Adj | Σ Strat | Total`),
-  not filing-stage columns
-- `Source` ∈ {Baseline, Adjustment, Tax Strategy}
-- `Status` flag on strategies drives include/exclude
-- `Source Document` column on master drives PBC inventory generation
-- Master and Control are separate tabs
-- Pivots / `GROUPBY` isolated to `_Calc` to avoid adjacent-cell
-  encroachment
-- Snapshots are filtered copies of `_Master` tagged by Filing Stage +
-  date, not copies of the wide view
-- Roll-forward carries Baseline only (pivot-net from prior year As Filed)
+Before starting, read both architecture files
+(`TAX_WORKBOOK_PIVOT_ARCHITECTURE.md` and the local
+`HANDOFF_v3_KISS.md`). Then present an ordered plan of what you'd
+attack first, what you need clarified, and what's likely to be quick
+vs. slow. Wait for confirmation before making changes.

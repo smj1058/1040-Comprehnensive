@@ -1,283 +1,188 @@
-# Tax Workbook — Final Architecture (Design Notes)
+# Tax Workbook — Architecture Reconciliation Notes
 
-**Status:** Consolidated final verdict from a multi-turn design chat
-(2026-05-18). Workbook itself (`Tax production three.xlsx`) lives on
-Seth's C drive and was not accessible from this cloud session — these
-notes are the handoff to the desktop session that *can* see the file.
-
-**Context:** Rework of the comprehensive 1040 workbook. Started from
-"per-year input sheets pushing into a master with pivots driving
-LAMBDA calcs," iterated through wide-vs-long format and component-vs-
-filing-stage column structures, and landed on the architecture below.
+**Status:** Revised 2026-05-18 after receiving the KISS Merge handoff
+doc (`HANDOFF_v3_KISS.md`, dated 2026-05-16). The architecture
+exploration in the earlier version of this file was largely
+re-inventing what's *already in the workbook* under the name "KISS."
+This version reconciles the two and recommends a much smaller scope
+of additional work.
 
 ---
 
-## TL;DR — the one-line summary
+## Headline
 
-**One long-format master data store; everything else — projection view,
-tax calc engine, PBC inventory, leadership dashboard, snapshots, tie-out
-— is a derived view on top of it.**
+You have already built the architecture. Phases 1–7 of the KISS merge
+implemented:
 
----
+- The 5-tier scenario model (`Baseline | Override | S1 | S2 | AsFiled`)
+- `Treatment_Profile_Map` driving SE/NIIT/QBI/Char_Type auto-fill
+- Year-sheet bucket-pattern input table with cascading dropdowns
+- Per-year planning adjustments table (`AdjID | Status | TargetLine |
+  S1_Amount | S2_Amount | ...`) with status workflow
+  (Proposed → Approved → Committed → Converted_To_Input)
+- 7 KISS LAMBDAs for the tax calc (`Calc_OrdinaryTax`,
+  `Calc_CapGainsTax`, `Calc_1250Tax`, `Calc_SE_Tax`, `Calc_NIIT`,
+  `Calc_QBI_Simple`, `Get_TreatmentDefault`) plus 14 v3 originals
+- Auto-sync from year sheet → `Master_Inputs` / `Planning_Adjustments`
+  on every Ctrl+S (`Workbook_BeforeSave` → `PushAllYearsToMaster`)
+- Cedillo Y2024 ties out to $7,213.92 federal tax
 
-## 1. Data store — `_Master` tab (the source of truth)
+The KISS architecture is **the inverse** of the pivot-driven model the
+earlier notes were exploring:
 
-Long-format structured table. Hidden in production. One row per
-financial entry; rows grow over time.
-
-### Schema
-
-| Column | Type | Notes |
+| Concern | Earlier notes (pivot-first) | KISS (already built) |
 | --- | --- | --- |
-| `Year` | Integer | 2024, 2025, etc. |
-| `Filing Stage` | Closed set | Extension / S1 / As Filed (compliance lifecycle dimension — open question on exact S1 meaning) |
-| `Source` | Closed set | Baseline / Adjustment / Tax Strategy (layer dimension) |
-| `Status` | Closed set | Proposed / Selected / Implemented / Rejected (only meaningful when `Source = Tax Strategy`; drives include/exclude) |
-| `Entity` | Text | Taxpayer / Spouse / Joint / Entity name |
-| `Category` | Closed set | Wages, Sch C, Sch E, Sch D, IRA, Itemized, Credit, etc. |
-| `Subcategory` | Closed set | Specific line (e.g. "Sch C — gross receipts") |
-| `Form / Line` | Text | Optional but high-value for traceability (e.g. `1040 line 1a`) |
-| `Source Document` | Text | Underlying doc (K-1 Entity X, W-2 Employer Y, 1099-B Broker Z) — **drives PBC inventory generation** |
-| `Amount` | Currency | The number |
-| `Memo` | Text | Optional free notes |
+| Source of truth | `Master_Inputs` | Year sheet (`Y####`) |
+| Calc engine reads from | Pivots over master | Same-sheet ranges on active year |
+| Master role | Primary store | Downstream aggregate |
+| Year sheet role | Derived view | Primary work surface |
+| Sync direction | Manual or push from sheets | Auto on Save (year → master) |
 
-### Hard rules
-
-- All closed-set columns enforced via **data validation dropdowns**.
-  No freetype — one typo creates a phantom pivot row.
-- `Filing Stage`, `Source`, `Status` are dimensional. `Amount` is the
-  only measure. Everything else describes the row.
-- **Component model, not filing-stage columns.** Filing stage is a
-  *row property* (captured at snapshot time), not a column on the
-  visible view.
+Both are defensible. KISS is what's built and what ties out. Don't
+rebuild the calc layer just to change the directionality.
 
 ---
 
-## 2. View layer — `Projection` tab (the daily UI)
+## What KISS does well
 
-Wide-format, year-scoped, one row per line item. Reads from `_Master`
-via `SUMIFS`. This is what the team works in daily, what the client
-sees in the presentation, and what feeds the leadership dashboard.
+- **Immediate feedback during data entry** — change a number, calc
+  updates same-tab, no master refresh round-trip
+- **One year's calc is self-contained** — easy to audit, easy to
+  diff against an actual return
+- **Auto-sync prevents drift** — the "two sources of truth" problem
+  that motivated the pivot-first design is solved by Ctrl+S
+- **Per-year planning scenarios are local** — S1/S2 SUMIFS over the
+  year's planning table happens on the same sheet; no cross-sheet
+  fragility
 
-### Columns
+## What KISS doesn't natively cover (and the pivot layer should)
 
-| Column | Source |
-| --- | --- |
-| `Line` (Entity + Category + Subcategory) | Derived / lookup |
-| `Baseline` | `=SUMIFS(_Master[Amount], _Master[Year], Selected_Year, _Master[Line], [@Line], _Master[Source], "Baseline")` |
-| `Σ Adjustments` | Same `SUMIFS` filtered to `Source = "Adjustment"` |
-| `Σ Strategies` | Same `SUMIFS` filtered to `Source = "Tax Strategy"` AND `Status IN ("Selected", "Implemented")` |
-| `Total` | `=Baseline + Σ Adjustments + IF(Include_Strategies, Σ Strategies, 0)` |
+These are the gaps the upcoming work should fill — without disturbing
+KISS daily flow:
 
-### Control cells (driven from `Control` tab)
+- **Cross-year reporting** — "wages by year 2022–2026 across all
+  clients/this client" doesn't have a home today; year sheets are
+  single-year, master is unaggregated rows
+- **Auto-generated PBC inventory** — `PBC_List` is currently
+  hardcoded; should derive from `Master_Inputs` rows where
+  `Source = Baseline` for the active year
+- **Leadership / Jeff dashboard feed** — needs a stable export block
+  reading from master, not from year-sheet cell addresses
+- **Year_Lookup_Summary** (already in the KISS backlog) —
+  CHOOSE-based cross-year roll-up per the resilience standards
 
-- `Selected_Year` — dropdown, drives which year the view shows
-- `Include_Strategies` — TRUE/FALSE toggle for the Total formula
-- (Optional) `Strategy_Status_Filter` — e.g. "Selected only" vs.
-  "Selected + Proposed" for what-if views
-
-### Why this structure wins
-
-- Drill-down for free: wide view shows the sum, `_Master` shows the
-  itemized why.
-- Scenario flexibility via one toggle, not by maintaining parallel views.
-- Multiple adjustments and strategies per line are preserved in the
-  store but presented as clean sums in the view.
-
----
-
-## 3. Calc layer — `_Calc` tab (the math engine)
-
-**Isolated tab** so pivots / spilled arrays can't trample any
-presentation-formatted content. Three layers:
-
-1. **Aggregation** — `GROUPBY` / `PIVOTBY` spilled arrays (preferred,
-   if on 365 current channel), or classic PivotTables (fallback).
-   Aggregate `_Master` by Year × Category × Subcategory × Filing Stage,
-   summing Amount, filtered by Status as needed.
-2. **Defined names** — point at the aggregate output via
-   `IFERROR(GETPIVOTDATA(...), 0)` (classic) or `IFERROR(INDEX/XLOOKUP
-   on the spilled array, 0)` (`GROUPBY`).
-3. **LAMBDA library** — named LAMBDAs in Name Manager consume the
-   defined names: `TaxableIncome(year, stage)`, `FederalTax(...)`,
-   `QBIDeduction(...)`, `NIIT(...)`, `AMTDelta(...)`, etc.
-
-### Excel version is the pivotal decision
-
-- **365 current channel:** use `GROUPBY` / `PIVOTBY`. Spills as
-  formulas, recalcs with the workbook, no Refresh All needed, no
-  adjacent-cell encroachment. "Presentable pivot" becomes free.
-- **Classic Excel:** use PivotTables with discipline — PivotTable
-  Options → Preserve cell formatting ON + Autofit column widths OFF;
-  Design → Show in Tabular Form + Repeat All Item Labels; Value Field
-  Settings → Number Format (not cell formatting). Isolate to `_Calc`
-  to avoid encroachment.
-
-**Action item:** confirm Excel version at the desktop session before
-committing to either path.
+The pattern for all four: **a new `GROUPBY` view tab reading from
+`Master_Inputs` after auto-sync has populated it.** This is additive,
+not replacement.
 
 ---
 
-## 4. Control layer — `Control` tab (the UI surface)
+## Tab-by-tab verdict (final, reconciled)
 
-Separate from `_Master`. Named cells with labels, dropdowns, and
-toggle buttons. Drives the rest of the workbook via named ranges.
-
-- `Selected_Year` (dropdown of available years from `_Master`)
-- `Include_Strategies` (TRUE/FALSE toggle)
-- `Active_Filing_Stage` (used by Snapshot button — Extension / S1 / As Filed)
-- `Strategy_Status_Filter` (optional)
-- Snapshot button (runs the snapshot macro)
-- Year roll-forward button (runs the roll-forward macro)
-
-**Why not combine `Control` and `_Master`:** the master is a
-structured table that needs to grow rows freely; the control sheet is
-a fixed UI layout with named cells. Combining them creates layout
-conflicts and visually buries the controls.
-
----
-
-## 5. Strategies layer — `Strategies` tab
-
-Year-scoped strategies table. Filtered view of `_Master` where
-`Source = "Tax Strategy"` and `Year = Selected_Year`. `Status` column
-is a dropdown (Proposed / Selected / Implemented / Rejected) — editing
-the dropdown here writes back to `_Master`.
-
-This is the surface where the team toggles which strategies are
-"in" vs. "considered but not adopted." Changes here immediately
-update the `Σ Strategies` column on `Projection` and the LAMBDAs
-downstream.
-
----
-
-## 6. PBC inventory — `PBC Inventory` tab
-
-`GROUPBY(_Master, [Year, Entity, Source Document])` filtered to
-`Source = "Baseline"`. Generates the prepared-by-client document
-inventory automatically from the same data that feeds the tax calc.
-
-One data store, third use case. Worth pointing out explicitly because
-it justifies the `Source Document` column on `_Master`.
-
----
-
-## 7. Leadership dashboard export
-
-Stable named-range block on a `Dashboard_Export` tab (or hidden
-flat table). The leadership dashboard pulls from here — Power Query,
-linked workbook refs, or Power BI connection — and the export block
-shields the dashboard from any layout changes on the human-facing
-sheets.
-
-**Open question:** confirm with leadership what they pull, at what
-grain, on what cadence — that determines whether the export is a
-named-range block, a flat table, or a Power Query feed.
-
----
-
-## 8. Snapshot mechanism — VBA macro #1
-
-Button on `Control`. Reads `Active_Filing_Stage`. Copies *the current
-state of `_Master`*, filtered to that stage, into the `Snapshots`
-archive (long-format, preserves all metadata, timestamped + stage-tagged).
-
-Snapshots are how filing stages get captured as point-in-time
-artifacts. The Projection view at snapshot time becomes "the Extension
-package" or "the As Filed work paper" — the snapshot is the source
-of truth for that frozen view.
-
-Snapshots are themselves long-format, so analytics across snapshots
-(e.g. "show me how projected federal tax moved from Extension → S1 →
-As Filed for client X") remain trivial — same store shape, just
-multiple time slices.
-
----
-
-## 9. Year roll-forward — VBA macro #2
-
-Button on `Control`. Two modes:
-
-1. **Categories only** — copies the structure (rows + line items) from
-   prior year, blank Amounts. For when this year's numbers will be
-   fully replaced by extraction.
-2. **Carry net forward** — reads pivot-net per line from prior year's
-   `As Filed` snapshot (Baseline + Adjustments + Implemented Strategies)
-   and writes a single new Baseline row per line for the new year.
-   Strategies and Adjustments do NOT carry forward — they get absorbed
-   into next-year Baseline because once implemented they're facts.
-
-Macro only writes rows with `Source = "Baseline"` in the new year.
-
----
-
-## 10. Tie-out / variance workpaper — separate workbook
-
-Loads the extracted as-filed return data (long-format from a data
-extraction tool). Diffs against the most recent `As Filed` snapshot
-via `XLOOKUP` or Power Query merge. Variances → rework queue.
-
-Because both sides are long-format, the diff is one operation, not
-a manual reconciliation. This is the standard CPA "tie-out workpaper"
-practice, automated.
-
----
-
-## 11. Tab layout — recap
-
-| Tab | Role | Visibility |
+| Tab | Verdict | Notes |
 | --- | --- | --- |
-| `_Master` | Long-format data store | Hidden in production |
-| `_Calc` | Pivots / GROUPBY + named ranges + LAMBDAs | Hidden in production |
-| `Control` | Year selector, toggles, macro buttons | Visible |
-| `Strategies` | Current-year strategy table with Status dropdowns | Visible |
-| `Projection` | Wide-format daily view (presentation grade) | Visible |
-| `PBC Inventory` | Auto-generated document checklist | Visible |
-| `Snapshots` | Archive of point-in-time master extracts | Visible (or hidden) |
-| `Dashboard_Export` | Stable named-range block for leadership pull | Hidden |
+| `CONTROL_PANEL` | KEEP | TaxYear, FilingStatus, macro shortcuts — already wired |
+| `Y2024` | KEEP — daily work surface | Cedillo ties out; don't touch |
+| `Y2025` | KEEP — daily work surface | Active year template; don't touch |
+| `Y2023` | UPGRADE — apply Phases 3-6 | Already in KISS backlog |
+| `Y2026` | UPGRADE — apply Phases 3-6 | Already in KISS backlog |
+| `Master_Inputs` | KEEP as aggregate; ADD pivot views on top | Don't change directionality |
+| `Planning_Adjustments` | KEEP | Auto-synced; status workflow works |
+| `Treatment_Profile_Map` | KEEP — this is gold | 18 profiles drive auto-fill; massive freetype-risk reducer |
+| `Tax_Brackets` | KEEP | Bracket/limit reference; LAMBDAs already consume |
+| `Tax_Limitations` | KEEP | Same role for limits/thresholds |
+| `Tax_Line_Map` | KEEP | Bucket+Input_Type → 1040 line; drives helper treatment |
+| `Tax_Pecking_Order` | KEEP | Calc sequence reference |
+| `Carryovers` | KEEP | Separate concern from main flow |
+| `Strategies` | KEEP — clarify it's a strategy LIBRARY/CATALOG | 20 standard plays; preparers draw FROM this into Planning_Adjustments |
+| `Dropdown_Lists` | KEEP — clean up the "manual setup needed" block | Closed-set reference; mostly wired |
+| `Field_Mapping` | KEEP | Required/optional matrix |
+| `PROJECTION_HISTORY` | KEEP — this is your tie-out workpaper | Year/Line/Projected/Filed/Variance/Accuracy Grade |
+| `Tax_Summary` | REBUILD as GROUPBY-driven cross-year view | Currently `#REF!`'d out; perfect target for the new view layer |
+| `PBC_List` | REBUILD as GROUPBY-driven from Master_Inputs | Auto-generate from Baseline rows + Source_Document |
+| `PBC_2026` | DELETE — year scoping is a filter, not a sheet per year | Superseded by the rebuilt PBC_List |
+| `CLIENT_DASHBOARD` | REPOINT (KISS backlog #2/#4) — point at new export block | Currently hardcoded year-sheet refs |
+| `DELIVERABLE` | REPOINT — same as above | |
+| `QUESTIONNAIRE` | REPOINT — same as above | |
+| `CONNECTIONS` | KEEP — triage the 7 external workbook links | Some LAMBDAs (`EntityCount`, `RentalCount`, `LookupDed`, `LookupLine`) depend on these and return errors |
+| `Change_Log` | KEEP | Audit trail |
+| `Review_Summary` | KEEP | Workflow tracking |
+| `Input_Table_Mods` | EVALUATE — likely transient scratch tab | Peek inside; may retire |
+| `LAMBDA_Functions` | KEEP — documentation reference | Real LAMBDAs live in Name Manager |
+| `VBA_Macros` | KEEP — documentation reference | Real code in vbaProject.bin |
+| `SETUP_GUIDE` / `INSTRUCTIONS` / `User_Instructions` | CONSOLIDATE into one | Three overlapping doc tabs |
+| `GLOSSARY` | KEEP | New-user reference |
+| `FRAMEWORK_REF` | KEEP | Reference content |
+| `Stale v8.6 Module1-4` (VBA) | DELETE | Handoff confirms harmless leftovers |
 
 ---
 
-## 12. Open items for the desktop session
+## Revised game plan
 
-- [ ] Confirm Excel version (365 current channel → `GROUPBY`; older → classic pivots)
-- [ ] Confirm exact closed set for `Filing Stage` (especially what "S1" stands for)
-- [ ] Audit the existing workbook against this target architecture:
-  - Which tabs map to which target role?
-  - What stays as-is?
-  - What needs reshaping (e.g. wide tabs → long master)?
-  - What gets deleted entirely?
-- [ ] Inventory existing LAMBDAs in `Tax production three` and decide
-      which to rewrite against pivot/`GROUPBY` outputs.
-- [ ] Confirm leadership dashboard pull mechanism.
-- [ ] Decide whether per-year input sheets are fully retired (current
-      verdict: yes — collapse to master only) or kept as a transitional
-      UX layer.
-- [ ] Decide where the workbook ultimately lives (firm shared drive
-      vs. per-client copy) — affects snapshot archive strategy.
+In priority order. Items 1–8 are the existing KISS backlog; items 9–12
+are the additive pivot-view layer.
+
+1. Fine-tune Y2025 input UX (KISS backlog #1)
+2. Merge Jeff's dashboard workbook into CLIENT_DASHBOARD/DELIVERABLE
+3. Apply Phases 3–6 to Y2023 and Y2026
+4. Repoint CLIENT_DASHBOARD / DELIVERABLE / QUESTIONNAIRE — and when
+   you do, point them at the NEW Master_Inputs-driven export block
+   (item 11 below), not at year-sheet cells
+5. Build Roll-forward macro — copy PY input rows (no amounts) into
+   next year as starting template
+6. Wire up PullExtractions for KISS layout — read CONNECTIONS file
+   paths, populate AsFiled
+7. Build Year_Lookup_Summary — CHOOSE-based, GROUPBY-driven
+8. Clean up stale Module1–4 VBA
+9. **NEW: Triage the 7 external workbook links** on `CONNECTIONS` —
+   resolve, embed, or rewrite the dependent LAMBDAs. Until done you
+   have silent ghost errors in `EntityCount`, `RentalCount`,
+   `LookupDed`, `LookupLine`.
+10. **NEW: Rebuild `Tax_Summary` as a GROUPBY-driven cross-year view**
+    reading from `Master_Inputs`. Fixes the `#REF!` and creates the
+    first piece of the pivot view layer.
+11. **NEW: Build a `Dashboard_Export` named-range block** —
+    GROUPBY-driven, reads from `Master_Inputs`, stable cell addresses
+    for the dashboards to pull from. Repoint step #4 targets this.
+12. **NEW: Rebuild `PBC_List` as GROUPBY-driven** from `Master_Inputs`
+    rows where `Source = Baseline`, grouped by Year/Bucket/Source_Type/
+    Payor.
+13. **NEW: Reconcile the two LAMBDA libraries** — 7 KISS + 14 v3
+    coexist. Check for v3 LAMBDAs that have no KISS equivalent
+    (`ExcessBusinessLossLimit_FN`, `PassiveLossAllowed_FN`,
+    `NOLDeductionAllowed_FN` look load-bearing); keep those, retire the
+    duplicates once KISS coverage is verified.
 
 ---
 
-## 13. Decisions made (so they don't get re-litigated)
+## What I'm explicitly NOT recommending
 
-1. **Long-format master, not per-year sheets.** Per-year sheets are
-   retired. Master holds all years with `Year` as a column.
-2. **Component columns on the view, not filing-stage columns.**
-   `Baseline | Σ Adj | Σ Strat | Total`. Filing stage is captured by
-   snapshotting, not by adding columns.
-3. **`Source` has three values, not two.** Baseline / Adjustment /
-   Tax Strategy.
-4. **`Status` flag on strategies.** Proposed / Selected / Implemented /
-   Rejected. Drives the include/exclude in `Σ Strategies`.
-5. **`Source Document` column on master.** Drives PBC inventory.
-6. **Master and Control are separate tabs.** Different layout
-   pressures; combining them hurts both jobs.
-7. **Pivots / GROUPBY isolated to `_Calc` tab.** Avoids the "pivot
-   ate my adjacent column" problem.
-8. **One data store, multiple views.** Projection, PBC inventory,
-   dashboard export, tie-out — all derived from `_Master`.
-9. **Snapshot = filtered copy of master tagged by Filing Stage + date.**
-   Not a copy of the wide view.
-10. **Roll-forward carries Baseline only.** Pulls pivot-net from prior
-    year As Filed, writes as new-year Baseline. Adjustments and
-    Strategies never carry forward.
+These were in the earlier version of this file. They're wrong given
+what's actually built. Strike them:
+
+- ~~"Rebuild the calc layer to read from Master_Inputs via GROUPBY"~~
+  — would tear down working KISS LAMBDAs anchored to year sheets.
+  The calc layer is fine where it is.
+- ~~"Retire the Y#### sheets as input surfaces; collapse to master
+  only"~~ — year sheets ARE the input surface in KISS. They stay.
+- ~~"Make the master the source of truth, year sheets are derived
+  views"~~ — KISS does the opposite, deliberately, and it works.
+- ~~"Filing Stage = Extension / S1 / As Filed"~~ — actual scenario
+  dimension is 5 levels: `Baseline | Override | S1 | S2 | AsFiled`.
+  The `Override` and `S2` levels are real and used.
+
+---
+
+## Open items (genuinely still open)
+
+- [ ] What "v8.6" was — referenced in the handoff as the base before
+      KISS merge. Likely the workbook lineage before the v3 / KISS
+      rewrite. Doesn't affect anything going forward but worth
+      knowing for context.
+- [ ] Where Jeff's dashboard workbook lives — handoff lists this as
+      TBD; needs to be located before backlog item #2 can start.
+- [ ] Whether the 7 external link targets (`Activity_Detail`,
+      `Deductions_and_Adjustments1`, `Form_1040_Summary`, `2025`,
+      `Y2022`, `STRATEGY_INPUTS`, `TAX_CALCULATIONS`) are obsolete
+      paths or workbooks that need to be relocated and rewired.
+- [ ] Whether `Input_Table_Mods` is still in use or transient.
