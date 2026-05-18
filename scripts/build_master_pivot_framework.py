@@ -577,8 +577,205 @@ rollup_widths = [8, 36, 16, 16, 14, 16, 9] # H-N
 widths(ws, strat_widths + gap_widths + rollup_widths)
 ws.freeze_panes = 'A6'
 
-# Order sheets
-order = ['Master_Inputs', 'Y2025', 'Treatment_Profile_Map', 'Dropdown_Lists']
+# ============================================================
+# MULTI-YEAR PIVOTS (Summary / Medium / Detailed / Helpers)
+# All read from Master_Inputs ONLY. No year-sheet S1 overrides or strategies.
+# Pure baseline aggregations across 2023-2028.
+# ============================================================
+YEARS = [2023, 2024, 2025, 2026, 2027, 2028]
+
+def build_pivot_sheet(sheet_name, title, sub_note, line_rows):
+    """Build a pivot tab.
+
+    line_rows: list of tuples (label, description, kind, filter_spec)
+      kind = 'data' (SUMIFS), 'agg' (aggregator), or 'info'
+      filter_spec depends on kind:
+        - 'data': dict with 'col' ('Baseline_Amount' or 'Helper_Amount') and
+                  list of (Master_Inputs_column, value) filters to AND with Year
+        - 'agg':  list of parent row indices (0-based within line_rows) to sum
+        - 'info': dict like 'data' (it's still SUMIFS, just visually informational)
+    """
+    ws = wb.create_sheet(sheet_name)
+    ws['A1'] = title
+    ws['A1'].font = TITLE_FONT
+    ws['A2'] = sub_note
+    ws['A2'].font = NOTE_FONT
+
+    # Header row
+    cols = ['Line', 'Description'] + [str(y) for y in YEARS]
+    hdr(ws, 4, cols)
+
+    DATA_FIRST_ROW = 5
+    for i, (label, desc, kind, spec) in enumerate(line_rows):
+        r = DATA_FIRST_ROW + i
+        ws.cell(row=r, column=1, value=label)
+        ws.cell(row=r, column=2, value=desc)
+        for yi, year in enumerate(YEARS):
+            c = 3 + yi  # year columns start at C
+            col_letter = get_column_letter(c)
+            if kind == 'data' or kind == 'info':
+                # Build SUMIFS
+                amt_col = spec['col']
+                filters = spec.get('filters', [])
+                filter_str = f', tblMaster_Inputs[Year], {year}'
+                for fcol, fval in filters:
+                    if isinstance(fval, str):
+                        filter_str += f', tblMaster_Inputs[{fcol}], "{fval}"'
+                    else:
+                        filter_str += f', tblMaster_Inputs[{fcol}], {fval}'
+                ws.cell(row=r, column=c,
+                        value=f'=SUMIFS(tblMaster_Inputs[{amt_col}]{filter_str})')
+            elif kind == 'agg':
+                # Sum parent rows for this year
+                parts = [f'{col_letter}{DATA_FIRST_ROW + p}' for p in spec]
+                ws.cell(row=r, column=c, value=f'={"+".join(parts)}')
+
+        # Bold aggregator rows
+        if kind == 'agg':
+            for c in range(1, 3 + len(YEARS)):
+                ws.cell(row=r, column=c).font = Font(bold=True)
+        elif kind == 'info':
+            ws.cell(row=r, column=2).font = Font(italic=True, color='595959')
+
+    # Column widths
+    widths(ws, [8, 50] + [14] * len(YEARS))
+    ws.freeze_panes = 'C5'
+    return ws
+
+# --------- PIVOT_SUMMARY ---------
+# Most condensed: 1z, 2 (interest combined), 3 (div combined), 7, 8 (all biz), 9, 10, 11, 12, 13, 15
+summary_rows = [
+    ('1z', 'Wages',                       'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '1z')]}),
+    ('2',  'Interest (taxable, tax-exempt info on Detailed)', 'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '2b')]}),
+    ('3',  'Dividends (qualified info on Detailed)',          'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '3b')]}),
+    ('7',  'Capital gain or (loss)',     'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '7')]}),
+    ('8',  'Other income (biz total)',   'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '8')]}),
+    ('9',  'TOTAL INCOME',               'agg',  [0, 1, 2, 3, 4]),
+    ('10', 'Adjustments to income',      'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '10')]}),
+    ('11', 'AGI',                        'agg',  [5, 6]),
+    ('12', 'Std/Itemized deduction',     'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '12')]}),
+    ('13', 'QBI deduction',              'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '13')]}),
+    ('15', 'TAXABLE INCOME',             'agg',  [7, 8, 9]),
+]
+build_pivot_sheet(
+    'Pivot_Summary',
+    'PIVOT — SUMMARY (most condensed; multi-year baseline from Master_Inputs)',
+    'Pure baseline aggregation. No overrides, no strategies. Year sheets handle those locally.',
+    summary_rows,
+)
+
+# --------- PIVOT_MEDIUM ---------
+# Summary + breakout of Line 8 by entity type
+medium_rows = [
+    ('1z',     'Wages',                              'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '1z')]}),
+    ('2',      'Interest',                           'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '2b')]}),
+    ('3',      'Dividends',                          'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '3b')]}),
+    ('7',      'Capital gain or (loss)',             'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '7')]}),
+    # Line 8 broken out by treatment profile family
+    ('8.SchC', 'Schedule C',                         'data', {'col': 'Baseline_Amount', 'filters': [('Treatment_Profile', 'SchC_Active')]}),
+    ('8.SchE', 'Schedule E rental',                  'data', {'col': 'Baseline_Amount', 'filters': [('Bucket', 'Business Income'), ('NIIT_Class', 'Passive')]}),
+    ('8.PTP',  'Partnership K-1 (active+passive)',   'data', {'col': 'Baseline_Amount', 'filters': []}),  # see below
+    ('8.SCorp','S-Corp K-1 (active+passive)',        'data', {'col': 'Baseline_Amount', 'filters': []}),
+    ('8.SchF', 'Schedule F / farm',                  'data', {'col': 'Baseline_Amount', 'filters': [('Treatment_Profile', 'SchF_Active')]}),
+    ('8.Trust','Trust K-1',                          'data', {'col': 'Baseline_Amount', 'filters': [('Treatment_Profile', 'Trust_K1')]}),
+    ('8',      'Other income (Line 8 total)',        'agg',  [4, 5, 6, 7, 8, 9]),
+    ('9',      'TOTAL INCOME',                       'agg',  [0, 1, 2, 3, 10]),
+    ('10',     'Adjustments to income',              'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '10')]}),
+    ('11',     'AGI',                                'agg',  [11, 12]),
+    ('12',     'Std/Itemized deduction',             'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '12')]}),
+    ('13',     'QBI deduction',                      'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '13')]}),
+    ('15',     'TAXABLE INCOME',                     'agg',  [13, 14, 15]),
+]
+build_pivot_sheet(
+    'Pivot_Medium',
+    'PIVOT — MEDIUM (biz income broken out by entity type; multi-year baseline)',
+    'Same as summary but Line 8 broken into Schedule C / Schedule E rental / Partnership K-1 / S-Corp K-1 / Sch F / Trust K-1.',
+    medium_rows,
+)
+
+# Patch PTP and SCorp rows on Pivot_Medium — they need OR-style aggregation (active + passive)
+ws_medium = wb['Pivot_Medium']
+for yi, year in enumerate(YEARS):
+    c = 3 + yi
+    ws_medium.cell(row=5 + 6, column=c,  # 8.PTP at index 6
+                   value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "K1_PTP_Active") + SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "K1_PTP_Passive")')
+    ws_medium.cell(row=5 + 7, column=c,  # 8.SCorp at index 7
+                   value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "K1_SCorp_Active") + SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "K1_SCorp_Passive")')
+
+# --------- PIVOT_DETAILED ---------
+# Same as the current Y2025 rollup: 1z, 2a, 2b, 3a, 3b, 7, 8, 9, 10, 11, 12, 13, 15 (no S1/strategies)
+detailed_rows = [
+    ('1z', 'Wages',                                       'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '1z')]}),
+    ('2a', 'Tax-exempt interest (informational)',         'info', {'col': 'Helper_Amount',   'filters': [('Helper_Treatment', 'TAX_EXEMPT')]}),
+    ('2b', 'Taxable interest',                            'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '2b')]}),
+    ('3a', 'Qualified dividends (informational)',         'info', {'col': 'Helper_Amount',   'filters': [('Helper_Treatment', 'QUAL_DIV')]}),
+    ('3b', 'Ordinary dividends (total incl qualified)',   'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '3b')]}),
+    ('7',  'Capital gain or (loss)',                      'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '7')]}),
+    ('8',  'Other income (biz via Sch 1)',                'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '8')]}),
+    ('9',  'TOTAL INCOME',                                'agg',  [0, 2, 4, 5, 6]),  # 1z + 2b + 3b + 7 + 8 (skips info rows 2a, 3a)
+    ('10', 'Adjustments to income',                       'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '10')]}),
+    ('11', 'AGI',                                         'agg',  [7, 8]),
+    ('12', 'Std/Itemized deduction',                      'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '12')]}),
+    ('13', 'QBI deduction',                               'data', {'col': 'Baseline_Amount', 'filters': [('Primary_Line', '13')]}),
+    ('15', 'TAXABLE INCOME',                              'agg',  [9, 10, 11]),
+]
+build_pivot_sheet(
+    'Pivot_Detailed',
+    'PIVOT — DETAILED (full 1040 page-1 lines incl. informational 2a/3a; multi-year baseline)',
+    '2a and 3a are informational (carve-outs of helpers); they don\'t add to Line 9 Total Income.',
+    detailed_rows,
+)
+
+# --------- PIVOT_HELPERS ---------
+# Separate pivot — helpers and tax-calc inputs. Don't aggregate into the 1040 pivots above.
+helper_rows = [
+    # Wages breakout
+    ('W2_OWNER',        'Owner W-2 wages (Treatment_Profile=W2_SCorpOwner)',
+        'data', {'col': 'Baseline_Amount', 'filters': [('Treatment_Profile', 'W2_SCorpOwner')]}),
+    ('W2_THIRD_PARTY',  'Third-party W-2 wages (Treatment_Profile=W2_Employee)',
+        'data', {'col': 'Baseline_Amount', 'filters': [('Treatment_Profile', 'W2_Employee')]}),
+    ('W2_TOTAL',        'Total W-2 (owner + third-party)',
+        'agg', [0, 1]),
+    # Business income breakout
+    ('BI_SE_SUBJECT',   'Biz income subject to SE (Sch C/F + active K-1 PTP)',
+        'data', {'col': 'Baseline_Amount', 'filters': [('Bucket', 'Business Income'), ('SE_Subject', 'Yes')]}),
+    ('BI_ACTIVE_NONSE', 'Active biz income NOT subject to SE',
+        'data', {'col': 'Baseline_Amount', 'filters': [('Bucket', 'Business Income'), ('SE_Subject', 'No'), ('NIIT_Class', 'Active')]}),
+    ('BI_PASSIVE',      'Passive biz income (passive K-1s, Sch E)',
+        'data', {'col': 'Baseline_Amount', 'filters': [('Bucket', 'Business Income'), ('NIIT_Class', 'Passive')]}),
+    # Investment carve-outs
+    ('TAX_EXEMPT',      'Tax-exempt interest (informational; Line 2a)',
+        'data', {'col': 'Helper_Amount', 'filters': [('Helper_Treatment', 'TAX_EXEMPT')]}),
+    ('QUAL_DIV',        'Qualified dividends (carve of 3b; LTCG stack)',
+        'data', {'col': 'Helper_Amount', 'filters': [('Helper_Treatment', 'QUAL_DIV')]}),
+    # Capital gains breakout
+    ('CG_LT',           'Long-term cap gains (LTCG_Stock + LTCG_RE + LTCG_K1_Passthrough + Sec1250_Recap)',
+        'data', {'col': 'Baseline_Amount', 'filters': []}),  # custom below
+    ('CG_ST',           'Short-term cap gains (STCG_Stock)',
+        'data', {'col': 'Baseline_Amount', 'filters': [('Treatment_Profile', 'STCG_Stock')]}),
+    ('SEC1250',         '§1250 unrecaptured (sub-carve of CG_LT; 25% cap)',
+        'data', {'col': 'Helper_Amount', 'filters': [('Helper_Treatment', 'SEC1250')]}),
+]
+build_pivot_sheet(
+    'Pivot_Helpers',
+    'PIVOT — HELPERS / TAX-CALC INPUTS (multi-year; sub-carves of main pivot lines; do NOT add to 1040 totals)',
+    'These exist for LAMBDA inputs only — qualified div for LTCG stacking, owner W-2 for FICA, etc.',
+    helper_rows,
+)
+
+# Patch CG_LT row on Pivot_Helpers — OR aggregation across multiple profiles
+ws_helpers = wb['Pivot_Helpers']
+for yi, year in enumerate(YEARS):
+    c = 3 + yi
+    ws_helpers.cell(row=5 + 8, column=c,  # CG_LT at index 8
+                    value=f'=SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "LTCG_Stock") '
+                          f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "LTCG_RE") '
+                          f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "LTCG_K1_Passthrough") '
+                          f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "Sec1250_Recap")')
+
+# Order sheets — pivots after Master_Inputs
+order = ['Master_Inputs', 'Pivot_Summary', 'Pivot_Medium', 'Pivot_Detailed', 'Pivot_Helpers',
+         'Y2025', 'Treatment_Profile_Map', 'Dropdown_Lists']
 wb._sheets = [wb[name] for name in order]
 
 wb.save(OUT)
