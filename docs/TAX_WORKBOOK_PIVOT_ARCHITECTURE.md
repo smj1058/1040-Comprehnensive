@@ -1,198 +1,283 @@
-# Tax Workbook — Pivot-Based Calculation Architecture (Design Notes)
+# Tax Workbook — Final Architecture (Design Notes)
 
-**Status:** Design notes captured during a planning chat. Workbook
-itself (`Tax production three.xlsx`) lives on Seth's C drive and was
-not accessible from this cloud session — these notes are meant to be
-carried into that workbook when back at the desktop.
+**Status:** Consolidated final verdict from a multi-turn design chat
+(2026-05-18). Workbook itself (`Tax production three.xlsx`) lives on
+Seth's C drive and was not accessible from this cloud session — these
+notes are the handoff to the desktop session that *can* see the file.
 
-**Context:** Rework of the comprehensive 1040 workbook. Going back and
-forth between per-year input sheets and a master input sheet, with
-tax calculations driven off pivots rather than direct cell references.
-The premise: pivots → defined names → LAMBDAs is cleaner than chained
-direct refs for the calc engine.
-
----
-
-## 1. Source-of-truth model
-
-- **Annual input sheets** = where data is entered. One per tax year.
-- **Master sheet** = consolidated stacked table of every annual sheet's
-  rows, with `Year` as a column. This is the input to the pivots.
-- **Pivots on the master** = the source of truth for tax calculations.
-- Annual sheets may carry **lightweight "quick & dirty" calcs locally**
-  so a user doing a fast tax-planning estimate gets immediate feedback
-  without round-tripping through the master. Those local calcs are
-  **not authoritative** — the master pivots are.
-
-Flow:
-
-```
-Annual sheet (YYYY)  ─┐
-Annual sheet (YYYY-1)─┼──► Master (stacked) ──► Pivots ──► Defined names ──► LAMBDAs ──► Tax calcs
-Annual sheet (YYYY-2)─┘
-```
+**Context:** Rework of the comprehensive 1040 workbook. Started from
+"per-year input sheets pushing into a master with pivots driving
+LAMBDA calcs," iterated through wide-vs-long format and component-vs-
+filing-stage column structures, and landed on the architecture below.
 
 ---
 
-## 2. Amount-type dimension (multiple "versions" per year)
+## TL;DR — the one-line summary
 
-Each annual row carries an **Amount Type** so the same line item can
-exist in several states within one tax year. Planned set:
+**One long-format master data store; everything else — projection view,
+tax calc engine, PBC inventory, leadership dashboard, snapshots, tie-out
+— is a derived view on top of it.**
 
-| Amount Type | Meaning |
+---
+
+## 1. Data store — `_Master` tab (the source of truth)
+
+Long-format structured table. Hidden in production. One row per
+financial entry; rows grow over time.
+
+### Schema
+
+| Column | Type | Notes |
+| --- | --- | --- |
+| `Year` | Integer | 2024, 2025, etc. |
+| `Filing Stage` | Closed set | Extension / S1 / As Filed (compliance lifecycle dimension — open question on exact S1 meaning) |
+| `Source` | Closed set | Baseline / Adjustment / Tax Strategy (layer dimension) |
+| `Status` | Closed set | Proposed / Selected / Implemented / Rejected (only meaningful when `Source = Tax Strategy`; drives include/exclude) |
+| `Entity` | Text | Taxpayer / Spouse / Joint / Entity name |
+| `Category` | Closed set | Wages, Sch C, Sch E, Sch D, IRA, Itemized, Credit, etc. |
+| `Subcategory` | Closed set | Specific line (e.g. "Sch C — gross receipts") |
+| `Form / Line` | Text | Optional but high-value for traceability (e.g. `1040 line 1a`) |
+| `Source Document` | Text | Underlying doc (K-1 Entity X, W-2 Employer Y, 1099-B Broker Z) — **drives PBC inventory generation** |
+| `Amount` | Currency | The number |
+| `Memo` | Text | Optional free notes |
+
+### Hard rules
+
+- All closed-set columns enforced via **data validation dropdowns**.
+  No freetype — one typo creates a phantom pivot row.
+- `Filing Stage`, `Source`, `Status` are dimensional. `Amount` is the
+  only measure. Everything else describes the row.
+- **Component model, not filing-stage columns.** Filing stage is a
+  *row property* (captured at snapshot time), not a column on the
+  visible view.
+
+---
+
+## 2. View layer — `Projection` tab (the daily UI)
+
+Wide-format, year-scoped, one row per line item. Reads from `_Master`
+via `SUMIFS`. This is what the team works in daily, what the client
+sees in the presentation, and what feeds the leadership dashboard.
+
+### Columns
+
+| Column | Source |
 | --- | --- |
-| **Extension** | Numbers used at extension filing (Form 4868 estimate basis) |
-| **S1** | (To confirm — likely "Scenario 1" / first revision, or first estimate. Clarify before building.) |
-| **Final / As Filed** | Numbers that match the return as ultimately filed |
+| `Line` (Entity + Category + Subcategory) | Derived / lookup |
+| `Baseline` | `=SUMIFS(_Master[Amount], _Master[Year], Selected_Year, _Master[Line], [@Line], _Master[Source], "Baseline")` |
+| `Σ Adjustments` | Same `SUMIFS` filtered to `Source = "Adjustment"` |
+| `Σ Strategies` | Same `SUMIFS` filtered to `Source = "Tax Strategy"` AND `Status IN ("Selected", "Implemented")` |
+| `Total` | `=Baseline + Σ Adjustments + IF(Include_Strategies, Σ Strategies, 0)` |
 
-> **Open question to resolve at desktop:** what exactly is "S1"?
-> Candidates: Scenario 1, Q1 estimate, first amendment ("Superseded 1"),
-> or first projection. The pivot's column/slicer behavior depends on
-> this being a clean closed set.
+### Control cells (driven from `Control` tab)
 
-**Recommendation:** make `Amount Type` a single column on every annual
-row (not separate columns per type). That way the pivot can slice by
-amount type without column-count explosion, and adding a new amount
-type (e.g. an amended return) is one new value in the column, not a
-schema change.
+- `Selected_Year` — dropdown, drives which year the view shows
+- `Include_Strategies` — TRUE/FALSE toggle for the Total formula
+- (Optional) `Strategy_Status_Filter` — e.g. "Selected only" vs.
+  "Selected + Proposed" for what-if views
 
----
+### Why this structure wins
 
-## 3. Two tables per annual sheet — Baseline vs. Tax Planning Adjustments
-
-Each annual sheet has **two physical tables** that both get pushed into
-the master:
-
-1. **Baseline** — the "as-is" facts (W-2, 1099, K-1, Sch C activity,
-   Sch E, deductions, credits, etc.).
-2. **Tax Planning Adjustments** — proposed changes layered on top
-   (Cost Seg acceleration, S-Corp election delta, retirement
-   contribution bumps, Roth conversion blocks, QBI repositioning,
-   etc.).
-
-**Why two tables instead of one with a "type" column:**
-
-- The adjustments are themselves baseline-ish (recurring playbook
-  items, not free-form), so they have their own stable schema.
-- Having them as a **separate pivot table** lets you toggle adjustments
-  on/off cleanly — show baseline only, show baseline + adjustments,
-  or show adjustments alone (delta view) — without dragging the
-  baseline pivot around.
-- Filtering one big pivot to "exclude adjustments" works but tends to
-  get messy with `GETPIVOTDATA`. Two pivots = two clean named ranges.
-
-**On the master:** both tables stack into the master as well, ideally
-into the **same master table** with a column `Source = Baseline |
-Adjustment`, OR as two parallel master tables (`Master_Baseline` and
-`Master_Adjustments`). Either works; the column approach is more
-flexible long-term, the two-table approach is what falls out
-naturally if you push from the annual sheets table-by-table.
-
-**Recommendation:** one master table with a `Source` column, then
-build two pivots off the same master (filtered by Source). Single
-source of truth, two slicing views.
+- Drill-down for free: wide view shows the sum, `_Master` shows the
+  itemized why.
+- Scenario flexibility via one toggle, not by maintaining parallel views.
+- Multiple adjustments and strategies per line are preserved in the
+  store but presented as clean sums in the view.
 
 ---
 
-## 4. Schema sketch — annual sheet rows
+## 3. Calc layer — `_Calc` tab (the math engine)
 
-Minimum columns each row needs to support the pivot/LAMBDA layer:
+**Isolated tab** so pivots / spilled arrays can't trample any
+presentation-formatted content. Three layers:
 
-| Column | Notes |
-| --- | --- |
-| `Year` | e.g. 2024 |
-| `Amount Type` | Extension / S1 / Final (closed set, validated via data validation) |
-| `Source` | Baseline / Adjustment |
-| `Entity` | Taxpayer / Spouse / Joint / Entity name |
-| `Category` | Wages, Sch C, Sch E, Sch D, IRA, Itemized, Credit, etc. |
-| `Subcategory` | Specific line (e.g. "Sch C — gross receipts") |
-| `Form / Line` | Optional but huge for traceability (e.g. `1040 line 1a`) |
-| `Amount` | The number |
-| `Memo` | Optional free text |
+1. **Aggregation** — `GROUPBY` / `PIVOTBY` spilled arrays (preferred,
+   if on 365 current channel), or classic PivotTables (fallback).
+   Aggregate `_Master` by Year × Category × Subcategory × Filing Stage,
+   summing Amount, filtered by Status as needed.
+2. **Defined names** — point at the aggregate output via
+   `IFERROR(GETPIVOTDATA(...), 0)` (classic) or `IFERROR(INDEX/XLOOKUP
+   on the spilled array, 0)` (`GROUPBY`).
+3. **LAMBDA library** — named LAMBDAs in Name Manager consume the
+   defined names: `TaxableIncome(year, stage)`, `FederalTax(...)`,
+   `QBIDeduction(...)`, `NIIT(...)`, `AMTDelta(...)`, etc.
 
-The pivot then has `Year` × `Amount Type` × `Category` (rows) crossed
-with `Source` (columns or filter), summing `Amount`.
+### Excel version is the pivotal decision
 
----
+- **365 current channel:** use `GROUPBY` / `PIVOTBY`. Spills as
+  formulas, recalcs with the workbook, no Refresh All needed, no
+  adjacent-cell encroachment. "Presentable pivot" becomes free.
+- **Classic Excel:** use PivotTables with discipline — PivotTable
+  Options → Preserve cell formatting ON + Autofit column widths OFF;
+  Design → Show in Tabular Form + Repeat All Item Labels; Value Field
+  Settings → Number Format (not cell formatting). Isolate to `_Calc`
+  to avoid encroachment.
 
-## 5. Pivot → defined names → LAMBDA
-
-The mechanism that makes this calc-engine-friendly:
-
-1. Pivot output (or `GROUPBY` spilled array in 365) sits in a known
-   location on a `_Calc` tab.
-2. Each meaningful aggregate gets a **defined name** that points at a
-   `GETPIVOTDATA(...)` or `INDEX/XLOOKUP` against the spilled array.
-   Wrap with `IFERROR(..., 0)` so empty categories don't `#REF!`.
-3. LAMBDAs (named in Name Manager) take those names as inputs:
-   - `TaxableIncome(year, amountType, source)` → number
-   - `FederalTax(year, amountType, source)` → applies brackets
-   - `QBIDeduction(...)`, `NIIT(...)`, `AMTDelta(...)`, etc.
-4. The "Adjustment impact" view = `FederalTax(yr, type, "Baseline+Adj")
-   − FederalTax(yr, type, "Baseline")`. Two pivots, one subtraction.
-
-**Note on Excel version:** if Seth is on 365 current channel, prefer
-`GROUPBY` / `PIVOTBY` over classic PivotTables — they spill, they're
-formula-driven (recalc automatically with the rest of the workbook),
-and they don't need a "Refresh All" step. Classic PivotTables require
-manual or VBA-triggered refresh, which is the #1 reason pivot-based
-calc engines get flaky.
+**Action item:** confirm Excel version at the desktop session before
+committing to either path.
 
 ---
 
-## 6. Annual-sheet local "quick & dirty" calcs
+## 4. Control layer — `Control` tab (the UI surface)
 
-Per Seth's note: the annual sheets should still let a user do a fast
-tax-planning estimate without depending on the master being refreshed.
+Separate from `_Master`. Named cells with labels, dropdowns, and
+toggle buttons. Drives the rest of the workbook via named ranges.
 
-Approach:
+- `Selected_Year` (dropdown of available years from `_Master`)
+- `Include_Strategies` (TRUE/FALSE toggle)
+- `Active_Filing_Stage` (used by Snapshot button — Extension / S1 / As Filed)
+- `Strategy_Status_Filter` (optional)
+- Snapshot button (runs the snapshot macro)
+- Year roll-forward button (runs the roll-forward macro)
 
-- Keep a small calc block at the top/side of each annual sheet that
-  references **the annual sheet's own tables directly** (no pivots).
-- This produces a "preview" number — clearly labeled as preview, not
-  authoritative.
-- The master pivot result is what feeds the official deliverable
-  (planning memo, projection, return reconciliation).
-
-Visual rule: the local preview cell should show a delta vs. the master
-pivot value when they disagree — that's the cue to refresh or
-investigate.
-
----
-
-## 7. Risks / things to watch
-
-- **`GETPIVOTDATA` brittleness with missing categories.** Always
-  `IFERROR(..., 0)` wrap. Or use `GROUPBY`/`PIVOTBY` to sidestep.
-- **PivotTable refresh dependency.** If staying on classic pivots,
-  consider a `Workbook_Open` or button-driven `RefreshAll` macro, or
-  accept that calcs lag inputs until refresh. `GROUPBY` avoids this.
-- **Amount Type closed-set discipline.** If users freetype "Ext.",
-  "Extension ", "EXT" you'll get phantom pivot columns. Data
-  validation dropdown is mandatory.
-- **Source column on the master.** If annual sheets push two physical
-  tables, make sure the push process tags each row's `Source`
-  correctly before it lands on the master.
-- **Year sheet proliferation vs. one stacked input.** Long-term, the
-  cleanest move is to retire per-year sheets entirely and have one
-  long stacked input table with `Year` as a column. But that's a
-  bigger UX change — keeping per-year sheets as the input UI and
-  stacking into the master is a reasonable middle ground.
+**Why not combine `Control` and `_Master`:** the master is a
+structured table that needs to grow rows freely; the control sheet is
+a fixed UI layout with named cells. Combining them creates layout
+conflicts and visually buries the controls.
 
 ---
 
-## 8. Open items for the next desk session
+## 5. Strategies layer — `Strategies` tab
 
-- [ ] Confirm the exact closed set of `Amount Type` values (especially
-      what "S1" means).
-- [ ] Decide: one master table with `Source` column, or two parallel
-      master tables (`Master_Baseline` / `Master_Adjustments`).
-- [ ] Confirm Excel version — is `GROUPBY`/`PIVOTBY` available, or do
-      we need to design around classic PivotTables?
-- [ ] Inventory which LAMBDAs already exist in `Tax production three`
-      and which need to be (re)written against the pivot outputs.
-- [ ] Decide whether the annual-sheet local "quick & dirty" calcs
-      should be deleted or kept once the master pivots are stable.
-- [ ] Upload the workbook (or just the master tab as CSV) to this
-      repo so the LAMBDA + pivot scaffolding can be sketched against
-      real columns.
+Year-scoped strategies table. Filtered view of `_Master` where
+`Source = "Tax Strategy"` and `Year = Selected_Year`. `Status` column
+is a dropdown (Proposed / Selected / Implemented / Rejected) — editing
+the dropdown here writes back to `_Master`.
+
+This is the surface where the team toggles which strategies are
+"in" vs. "considered but not adopted." Changes here immediately
+update the `Σ Strategies` column on `Projection` and the LAMBDAs
+downstream.
+
+---
+
+## 6. PBC inventory — `PBC Inventory` tab
+
+`GROUPBY(_Master, [Year, Entity, Source Document])` filtered to
+`Source = "Baseline"`. Generates the prepared-by-client document
+inventory automatically from the same data that feeds the tax calc.
+
+One data store, third use case. Worth pointing out explicitly because
+it justifies the `Source Document` column on `_Master`.
+
+---
+
+## 7. Leadership dashboard export
+
+Stable named-range block on a `Dashboard_Export` tab (or hidden
+flat table). The leadership dashboard pulls from here — Power Query,
+linked workbook refs, or Power BI connection — and the export block
+shields the dashboard from any layout changes on the human-facing
+sheets.
+
+**Open question:** confirm with leadership what they pull, at what
+grain, on what cadence — that determines whether the export is a
+named-range block, a flat table, or a Power Query feed.
+
+---
+
+## 8. Snapshot mechanism — VBA macro #1
+
+Button on `Control`. Reads `Active_Filing_Stage`. Copies *the current
+state of `_Master`*, filtered to that stage, into the `Snapshots`
+archive (long-format, preserves all metadata, timestamped + stage-tagged).
+
+Snapshots are how filing stages get captured as point-in-time
+artifacts. The Projection view at snapshot time becomes "the Extension
+package" or "the As Filed work paper" — the snapshot is the source
+of truth for that frozen view.
+
+Snapshots are themselves long-format, so analytics across snapshots
+(e.g. "show me how projected federal tax moved from Extension → S1 →
+As Filed for client X") remain trivial — same store shape, just
+multiple time slices.
+
+---
+
+## 9. Year roll-forward — VBA macro #2
+
+Button on `Control`. Two modes:
+
+1. **Categories only** — copies the structure (rows + line items) from
+   prior year, blank Amounts. For when this year's numbers will be
+   fully replaced by extraction.
+2. **Carry net forward** — reads pivot-net per line from prior year's
+   `As Filed` snapshot (Baseline + Adjustments + Implemented Strategies)
+   and writes a single new Baseline row per line for the new year.
+   Strategies and Adjustments do NOT carry forward — they get absorbed
+   into next-year Baseline because once implemented they're facts.
+
+Macro only writes rows with `Source = "Baseline"` in the new year.
+
+---
+
+## 10. Tie-out / variance workpaper — separate workbook
+
+Loads the extracted as-filed return data (long-format from a data
+extraction tool). Diffs against the most recent `As Filed` snapshot
+via `XLOOKUP` or Power Query merge. Variances → rework queue.
+
+Because both sides are long-format, the diff is one operation, not
+a manual reconciliation. This is the standard CPA "tie-out workpaper"
+practice, automated.
+
+---
+
+## 11. Tab layout — recap
+
+| Tab | Role | Visibility |
+| --- | --- | --- |
+| `_Master` | Long-format data store | Hidden in production |
+| `_Calc` | Pivots / GROUPBY + named ranges + LAMBDAs | Hidden in production |
+| `Control` | Year selector, toggles, macro buttons | Visible |
+| `Strategies` | Current-year strategy table with Status dropdowns | Visible |
+| `Projection` | Wide-format daily view (presentation grade) | Visible |
+| `PBC Inventory` | Auto-generated document checklist | Visible |
+| `Snapshots` | Archive of point-in-time master extracts | Visible (or hidden) |
+| `Dashboard_Export` | Stable named-range block for leadership pull | Hidden |
+
+---
+
+## 12. Open items for the desktop session
+
+- [ ] Confirm Excel version (365 current channel → `GROUPBY`; older → classic pivots)
+- [ ] Confirm exact closed set for `Filing Stage` (especially what "S1" stands for)
+- [ ] Audit the existing workbook against this target architecture:
+  - Which tabs map to which target role?
+  - What stays as-is?
+  - What needs reshaping (e.g. wide tabs → long master)?
+  - What gets deleted entirely?
+- [ ] Inventory existing LAMBDAs in `Tax production three` and decide
+      which to rewrite against pivot/`GROUPBY` outputs.
+- [ ] Confirm leadership dashboard pull mechanism.
+- [ ] Decide whether per-year input sheets are fully retired (current
+      verdict: yes — collapse to master only) or kept as a transitional
+      UX layer.
+- [ ] Decide where the workbook ultimately lives (firm shared drive
+      vs. per-client copy) — affects snapshot archive strategy.
+
+---
+
+## 13. Decisions made (so they don't get re-litigated)
+
+1. **Long-format master, not per-year sheets.** Per-year sheets are
+   retired. Master holds all years with `Year` as a column.
+2. **Component columns on the view, not filing-stage columns.**
+   `Baseline | Σ Adj | Σ Strat | Total`. Filing stage is captured by
+   snapshotting, not by adding columns.
+3. **`Source` has three values, not two.** Baseline / Adjustment /
+   Tax Strategy.
+4. **`Status` flag on strategies.** Proposed / Selected / Implemented /
+   Rejected. Drives the include/exclude in `Σ Strategies`.
+5. **`Source Document` column on master.** Drives PBC inventory.
+6. **Master and Control are separate tabs.** Different layout
+   pressures; combining them hurts both jobs.
+7. **Pivots / GROUPBY isolated to `_Calc` tab.** Avoids the "pivot
+   ate my adjacent column" problem.
+8. **One data store, multiple views.** Projection, PBC inventory,
+   dashboard export, tie-out — all derived from `_Master`.
+9. **Snapshot = filtered copy of master tagged by Filing Stage + date.**
+   Not a copy of the wide view.
+10. **Roll-forward carries Baseline only.** Pulls pivot-net from prior
+    year As Filed, writes as new-year Baseline. Adjustments and
+    Strategies never carry forward.
