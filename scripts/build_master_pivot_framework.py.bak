@@ -59,22 +59,15 @@ ws['A1'] = 'DROPDOWN LISTS — top-level + per-bucket cascade named ranges'
 ws['A1'].font = TITLE_FONT
 
 top_lists = {
-    'Bucket':           ['Business Income', 'Wages', 'Investment Income', 'Capital Gains', 'Adjustment', 'Itemized', 'Credit', 'Payment'],
-    'Yes_No':           ['Yes', 'No'],
-    'NIIT_Class':       ['Active', 'Passive', 'Portfolio', 'N/A'],
-    'Provenance':       ['PY Rolled Forward', 'PY Actuals', 'Estimate - Preparer', 'Estimate - Client',
-                         'PBC - Requested', 'PBC - Received', 'PBC - Reviewed',
-                         'Extraction - Imported', 'Extraction - Tied', 'System Calculated'],
-    'Status':           ['Proposed', 'Approved', 'Committed', 'Implemented', 'Rejected'],
-    'TaxLines':         ['1z', '2a', '2b', '3a', '3b', '7', '8', '9', '10', '11', '12', '13', '15'],
-    'Activity_Type':    ['Baseline', 'Strategy'],
-    'TaxYears':         [2023, 2024, 2025, 2026, 2027, 2028],
-    'Helper_Treatments':['NONE', 'OWNER_PAY', 'TAX_EXEMPT', 'QUAL_DIV', 'LTCG_SPLIT', 'SEC1250',
-                         'K1_SPLIT', 'ACTIVE_RE', 'PASSIVE', 'SE_INCOME', 'TRUST_DIST',
-                         'HSA', 'IRA', 'RETIREMENT', 'SE_HEALTH', 'STUDENT_LOAN',
-                         'MEDICAL', 'SALT', 'MORTGAGE', 'CHARITY',
-                         'CTC', 'EDUCATION', 'FTC'],
-    'Review_Status':    ['Draft', 'Pending Review', 'Approved', 'Needs Rework'],
+    'Bucket':         ['Business Income', 'Wages', 'Investment Income', 'Capital Gains', 'Adjustment', 'Itemized', 'Credit', 'Payment'],
+    'Yes_No':         ['Yes', 'No'],
+    'NIIT_Class':     ['Active', 'Passive', 'Portfolio', 'N/A'],
+    'Provenance':     ['PY Rolled Forward', 'PY Actuals', 'Estimate - Preparer', 'Estimate - Client',
+                       'PBC - Requested', 'PBC - Received', 'PBC - Reviewed',
+                       'Extraction - Imported', 'Extraction - Tied', 'System Calculated'],
+    'Status':         ['Proposed', 'Approved', 'Committed', 'Implemented', 'Rejected'],
+    'TaxLines':       ['1z', '2a', '2b', '3a', '3b', '7', '8', '10', '12', '13'],
+    'Activity_Type':  ['Baseline', 'Strategy'],
 }
 col = 1
 for header, items in top_lists.items():
@@ -270,18 +263,15 @@ tbl = Table(displayName='tblMaster_Inputs', ref=f'A4:{get_column_letter(len(mi_c
 tbl.tableStyleInfo = TableStyleInfo(name='TableStyleMedium2', showRowStripes=True)
 ws.add_table(tbl)
 
-# Cascading dropdowns + new validations on Year, Primary_Line, Helper_Treatment
-add_dv(ws, 'B', '=TaxYears')              # Year — restricted to 2023-2028
+# Cascading dropdowns
 add_dv(ws, 'E', '=Bucket')
 add_dv(ws, 'F', '=INDIRECT(SUBSTITUTE($E5," ","")&"_Profiles")')
 add_dv(ws, 'G', '=INDIRECT(SUBSTITUTE($E5," ","")&"_Docs")')
-add_dv(ws, 'H', '=Activity_Type')         # Baseline or Strategy
-add_dv(ws, 'I', '=Provenance')
-add_dv(ws, 'M', '=Yes_No')                # SE_Subject
-add_dv(ws, 'N', '=NIIT_Class')
-add_dv(ws, 'O', '=Yes_No')                # QBI_Eligible
-add_dv(ws, 'P', '=TaxLines')              # NEW: Primary_Line dropdown
-add_dv(ws, 'Q', '=Helper_Treatments')     # NEW: Helper_Treatment dropdown
+add_dv(ws, 'H', '=Activity_Type')   # new — Baseline or Strategy
+add_dv(ws, 'I', '=Provenance')      # shifted (was H)
+add_dv(ws, 'M', '=Yes_No')          # SE_Subject (shifted from L)
+add_dv(ws, 'N', '=NIIT_Class')      # shifted from M
+add_dv(ws, 'O', '=Yes_No')          # QBI_Eligible (shifted from N)
 
 widths(ws, [22, 7, 11, 18, 18, 22, 22, 14, 18, 22, 14, 14, 11, 12, 13, 11, 18, 30, 30])
 ws.freeze_panes = 'A5'
@@ -856,76 +846,8 @@ for yi, year in enumerate(YEARS):
                           f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "LTCG_K1_Passthrough") '
                           f'+ SUMIFS(tblMaster_Inputs[Baseline_Amount], tblMaster_Inputs[Year], {year}, tblMaster_Inputs[Treatment_Profile], "Sec1250_Recap")')
 
-# ============================================================
-# Column_Definitions — data dictionary for Master_Inputs
-# Every column gets: Col letter | Column name | Data type | Required |
-#   Allowed values / Source | Auto-fill rule | Definition | Example
-# ============================================================
-ws = wb.create_sheet('Column_Definitions')
-ws['A1'] = 'COLUMN DEFINITIONS — Master_Inputs data dictionary'
-ws['A1'].font = TITLE_FONT
-ws['A2'] = 'Authoritative reference for every column on Master_Inputs. If a column is added/changed, update here first.'
-ws['A2'].font = NOTE_FONT
-
-defs_cols = ['Col', 'Column Name', 'Data Type', 'Required?', 'Allowed Values / Source', 'Auto-Fill?', 'Definition', 'Example']
-hdr(ws, 4, defs_cols)
-
-definitions = [
-    ('A', 'InputID',             'Text',          'Yes', 'Composite key — typically <ClientID>|<Year>|<Bucket-short>|<seq>',
-        'No',  'Unique identifier for the row. Must be unique across the table.',                                            'CED|2024|Wages|01'),
-    ('B', 'Year',                'Integer',       'Yes', 'Dropdown: =TaxYears (2023-2028)',
-        'No',  'Tax year this row belongs to.',                                                                              '2025'),
-    ('C', 'ClientID',            'Text',          'Yes', 'Short uppercase code (CED, SAM, etc.); should also exist on Clients sheet (when added)',
-        'No',  'Client identifier. Multiple rows per client per year.',                                                      'CEDILLO'),
-    ('D', 'ClientName',          'Text',          'Yes', 'Free text',
-        'No',  'Full client name. Could be auto-filled via VLOOKUP from Clients sheet once it exists.',                      'Ron Cedillo'),
-    ('E', 'Bucket',              'Text (closed)', 'Yes', 'Dropdown: =Bucket (Business Income | Wages | Investment Income | Capital Gains | Adjustment | Itemized | Credit | Payment)',
-        'No',  'Top-level income/deduction category. Drives the cascading dropdowns for Treatment_Profile and Source_Document.', 'Business Income'),
-    ('F', 'Treatment_Profile',   'Text (closed)', 'Yes', 'CASCADED dropdown: =INDIRECT(SUBSTITUTE($E,"","")&"_Profiles") — narrows by Bucket',
-        'No',  'Specific tax-treatment classification within the bucket (e.g., K1_PTP_Passive, W2_SCorpOwner). Drives SE_Subject, NIIT_Class, QBI_Eligible, Primary_Line, Helper_Treatment via Treatment_Profile_Map.', 'K1_PTP_Passive'),
-    ('G', 'Source_Document',     'Text (closed)', 'No',  'CASCADED dropdown: =INDIRECT(SUBSTITUTE($E," ","")&"_Docs") — narrows by Bucket',
-        'No',  'Underlying source document (W-2, K-1, 1099-DIV, etc.).',                                                     'K-1'),
-    ('H', 'Activity_Type',       'Text (closed)', 'Yes', 'Dropdown: =Activity_Type (Baseline | Strategy)',
-        'No',  'Whether this row represents a baseline source-input fact, or an intentional tax strategy. Strategy rows are created by the strategy-commit macro.', 'Baseline'),
-    ('I', 'Provenance',          'Text (closed)', 'Yes', 'Dropdown: =Provenance (PY Rolled Forward, PY Actuals, Estimate-Preparer/Client, PBC-Requested/Received/Reviewed, Extraction-Imported/Tied, System Calculated)',
-        'No',  'Where this number came from / how confident we are. Drives PBC tracking.',                                   'PBC - Reviewed'),
-    ('J', 'Payor',               'Text (free)',   'No',  'Free text — entity / employer / broker name',
-        'No',  'Open-ended payor identifier.',                                                                               'Cedillo Partnership'),
-    ('K', 'Baseline_Amount',     'Currency',      'Yes', 'Number; positive for income, negative for losses/deductions',
-        'No',  'Headline dollar amount. The primary aggregation field — pivots SUMIF over this column.',                     '153648'),
-    ('L', 'Helper_Amount',       'Currency',      'No',  'Number; the carve-out portion of Baseline_Amount that gets different tax treatment',
-        'No',  'Sub-portion of Baseline_Amount needing different treatment (qualified div of total div; tax-exempt int of total int; owner W-2 of total W-2; §1250 of LT gain).',  '7000'),
-    ('M', 'SE_Subject',          'Yes/No',        'Yes (auto)', 'Dropdown: =Yes_No',
-        'YES — VBA auto-fills from Treatment_Profile via Treatment_Profile_Map[SE_Subject]', 'Whether income on this row is subject to Self-Employment tax.',                       'Yes'),
-    ('N', 'NIIT_Class',          'Text (closed)', 'Yes (auto)', 'Dropdown: =NIIT_Class (Active | Passive | Portfolio | N/A)',
-        'YES — VBA auto-fills from Treatment_Profile_Map[NIIT_Class]', 'Classification for NIIT and passive-loss-allowance rules.',                                                 'Passive'),
-    ('O', 'QBI_Eligible',        'Yes/No',        'Yes (auto)', 'Dropdown: =Yes_No',
-        'YES — VBA auto-fills from Treatment_Profile_Map[QBI_Eligible]', 'Whether this income qualifies for §199A QBI deduction.',                                                  'Yes'),
-    ('P', 'Primary_Line',        'Text (closed)', 'Yes (auto)', 'Dropdown: =TaxLines (1z, 2a, 2b, 3a, 3b, 7, 8, 9, 10, 11, 12, 13, 15)',
-        'YES — VBA auto-fills from Treatment_Profile_Map[Primary_Line]', 'Which 1040 line this row aggregates into.',                                                               '8'),
-    ('Q', 'Helper_Treatment',    'Text (closed)', 'Yes (auto)', 'Dropdown: =Helper_Treatments (NONE | OWNER_PAY | TAX_EXEMPT | QUAL_DIV | LTCG_SPLIT | SEC1250 | K1_SPLIT | ...)',
-        'YES — VBA auto-fills from Treatment_Profile_Map[Helper_Treatment]', 'Rule for how Helper_Amount should be treated (e.g., QUAL_DIV → stack with LTCG).',                    'K1_SPLIT'),
-    ('R', 'Consider',            'Text (free)',   'No',  'Free text — preparer note about the Consider_Prompt question',
-        'No',  'Preparer\'s answer to whatever Consider_Prompt applies (e.g., "owner pay portion?" → "Yes, full $X is reasonable comp").',                                          'Owner reasonable comp'),
-    ('S', 'Notes',               'Text (free)',   'No',  'Free text',
-        'No',  'Any additional context.',                                                                                    'Passive loss carried forward'),
-]
-for i, defn in enumerate(definitions):
-    r = 5 + i
-    for j, v in enumerate(defn):
-        ws.cell(row=r, column=1 + j, value=v)
-
-# Excel Table on the definitions
-tbl_def = Table(displayName='tblColumn_Definitions', ref=f'A4:H{4+len(definitions)}')
-tbl_def.tableStyleInfo = TableStyleInfo(name='TableStyleMedium2', showRowStripes=True)
-ws.add_table(tbl_def)
-
-widths(ws, [6, 22, 14, 13, 65, 55, 80, 22])
-ws.freeze_panes = 'C5'
-
-# Order sheets — pivots after Master_Inputs; Column_Definitions near front for visibility
-order = ['Master_Inputs', 'Column_Definitions',
-         'Pivot_Summary', 'Pivot_Medium', 'Pivot_Detailed', 'Pivot_Helpers',
+# Order sheets — pivots after Master_Inputs
+order = ['Master_Inputs', 'Pivot_Summary', 'Pivot_Medium', 'Pivot_Detailed', 'Pivot_Helpers',
          'Y2025', 'Treatment_Profile_Map', 'Dropdown_Lists']
 wb._sheets = [wb[name] for name in order]
 
