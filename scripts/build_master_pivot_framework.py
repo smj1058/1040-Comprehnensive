@@ -648,6 +648,71 @@ def build_pivot_sheet(sheet_name, title, sub_note, line_rows):
     # Column widths
     widths(ws, [8, 50] + [14] * len(YEARS))
     ws.freeze_panes = 'C5'
+
+    # --- ADD QUICK-JUMP HYPERLINK at top of every pivot ---
+    nyears = len(YEARS)
+    edit_link_col = 3 + nyears  # column right after the year columns
+    edit_link_cell = ws.cell(row=2, column=edit_link_col,
+                             value='=HYPERLINK("#Master_Inputs!A1", "↗ Edit in Master_Inputs")')
+    edit_link_cell.font = Font(color='0563C1', underline='single', bold=True)
+    ws.column_dimensions[get_column_letter(edit_link_col)].width = 32
+
+    # --- ADD DRILL DETAIL PANEL below the pivot data ---
+    # Drill_Line picker + FILTER spill of contributing Master_Inputs rows
+    last_data_row = 4 + len(line_rows)
+    drill_hdr_row = last_data_row + 3
+    ws.cell(row=drill_hdr_row, column=1,
+            value='▸ DRILL DETAIL — pick a line, FILTER below shows contributing Master_Inputs rows').font = SUB_FONT
+
+    ws.cell(row=drill_hdr_row + 1, column=1, value='Drill into row:').font = Font(bold=True)
+    ws.cell(row=drill_hdr_row + 1, column=1).alignment = Alignment(horizontal='right')
+    drill_cell = ws.cell(row=drill_hdr_row + 1, column=2)
+    drill_cell.fill = PatternFill('solid', fgColor='DDEBF7')
+    drill_cell.font = Font(bold=True, color='305496')
+    drill_cell.alignment = Alignment(horizontal='center')
+
+    # Pick a sensible default drill value (first data line)
+    first_label = next((lbl for lbl, _, kind, _ in line_rows if kind != 'agg'), '')
+    drill_cell.value = first_label
+
+    # Data validation: dropdown of all line labels in this pivot
+    line_labels = [lbl for lbl, _, kind, _ in line_rows if kind != 'agg']
+    dv_drill = DataValidation(type='list', formula1=f'"{",".join(line_labels)}"', allow_blank=False)
+    ws.add_data_validation(dv_drill)
+    dv_drill.add(f'B{drill_hdr_row + 1}')
+
+    # Quick-jump on the drill row too
+    ws.cell(row=drill_hdr_row + 1, column=edit_link_col,
+            value='=HYPERLINK("#Master_Inputs!A1", "✏ open Master_Inputs")').font = Font(color='0563C1', underline='single')
+
+    # FILTER spill — match by Primary_Line for line-based pivots; for Helper pivot match Helper_Treatment
+    filter_hdr_row = drill_hdr_row + 3
+    hdr(ws, filter_hdr_row,
+        ['InputID', 'Year', 'Bucket', 'Treatment_Profile', 'Payor',
+         'Baseline_Amount', 'Helper_Amount', 'Activity_Type', 'Notes'])
+
+    # Use Primary_Line as the filter key (most pivots). For Pivot_Helpers, fall back to Helper_Treatment match.
+    if 'Helper' in sheet_name:
+        match_col = 'Helper_Treatment'
+    else:
+        match_col = 'Primary_Line'
+
+    filter_formula = (
+        '=IFERROR('
+        'HSTACK('
+        f'FILTER(tblMaster_Inputs[InputID],            tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Year],               tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Bucket],             tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Treatment_Profile],  tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Payor],              tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Baseline_Amount],    tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Helper_Amount],      tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Activity_Type],      tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1}),'
+        f'FILTER(tblMaster_Inputs[Notes],              tblMaster_Inputs[{match_col}]=$B${drill_hdr_row + 1})'
+        '), "(no matching rows for this drill value)")'
+    )
+    ws.cell(row=filter_hdr_row + 1, column=1, value=filter_formula)
+
     return ws
 
 # --------- PIVOT_SUMMARY ---------
