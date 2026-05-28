@@ -1,331 +1,361 @@
-# FlashTax Handoff — Prototype Build + Database Architecture
+# Finatical / Flash Reports — Founder Meeting Handoff
 
-> Handoff doc for a fresh Claude Code session. Self-contained: anyone reading this can pick up and build the prototype + understand the bigger vision.
+> Comprehensive handoff covering the full brainstorm arc — from initial FlashTax concept through to the final platform architecture. Self-contained brief for any Claude Code session picking this up, OR for Seth's own reference walking into the founder meeting.
 >
 > **Repo**: `smj1058/1040-Comprehnensive`
-> **Branch**: `claude/pivot-tax-calculations-q4NyZ` (or whatever branch the new session designates)
+> **Branch**: `claude/pivot-tax-calculations-q4NyZ`
 > **User**: Seth Johnson (seth@accruity.com)
+> **Context**: Seth has Flash Reports installed, is meeting with the founder, expected to come with ideas + a working prototype demonstrating value.
 
 ---
 
-## 1. Context — what's already built and what we're building next
+## 1. EXECUTIVE SUMMARY — what to walk into the meeting with
 
-### Already built (this repo, this branch)
+**The pitch in one sentence**:
 
-A **1040 tax planning workbook** (`Master_Pivot_Framework_v5_phase3v24_CC.xlsx` is the latest CC version) with:
+> "Flash Reports is the live query layer for QBO. The missing piece is a thin metadata + snapshot service that turns Flash Reports into a multi-client, multi-period, audit-defensible **platform**. That service is small — it doesn't store any GL data — but it's the keystone that makes a whole family of add-ons possible. I've sketched the platform and built the first app (FlashTax) to prove the architecture."
 
-- **Master_Inputs**: long-format table of tax facts (income, deductions, strategy impacts) with columns for Year, ClientID, Bucket, Treatment_Profile, Activity_Type (Baseline / Strategy), Provenance, Payor, Baseline_Amount, Helper_Amount, Helper_Treatment, Primary_Line, Primary_State, State_Mix, PTET_Routed, etc.
-- **Year sheets Y2023-Y2028**: per-year sandboxes with 1040-line breakdown, calc engine (7 components: SE, payroll, ordinary, CG, NIIT, QBI, combined), and an At-a-Glance dashboard at rows 140-185.
-- **Master_Strategies catalog**: 19 impact rows for 15 STR-* IDs, with multi-impact fan-out (S-Corp wage opt = -1z + +8, Hire Children = -8 + +1z + info-only Roth, etc.)
-- **Tax_Plan_Dashboard**: 4-box layout following Active_Year
-- **Deliverable sheet**: 7-section client-facing report
-- **Property_Appendix, Framework_Ref, Tax_Ref** (rate tables, std ded, brackets, state rates, treatment profile map)
-- **6 KISS LAMBDAs + fn_StrategyMarginal** (designed but pasted manually in Excel; openpyxl couldn't serialize them cleanly)
-- **State tax stack** (multistate columns + state PTET routing on Master_Inputs)
-- **QBI bug fix** (J119/K119 0.2 → 0.5 on year sheets)
+**What Seth brings to the meeting**:
 
-See `docs/REMAINING_EXCEL_WORK.md` for full punch-list.
+1. **A working FlashTax prototype** (the wedge — first app on the platform)
+2. **A platform architecture sketch** (FlashCore — the layer Flash Reports needs next)
+3. **A product family roadmap** (8 add-on concepts that ride on FlashCore)
+4. **One specific Flash Reports product-feedback ask** — granular snapshots (covered in Section 6)
 
-### Building next: FlashTax
-
-A **separate workbook** (NOT modifying the 1040 workbook above) that:
-1. Sits next to **Flash Reports by Finatical** in the same Excel session
-2. Reads QBO data via Flash Reports' formula functions
-3. Computes book-to-tax adjustments (Schedule M-1) per entity
-4. Outputs **entity taxable income** per entity type (1120S / 1120 / 1065 / Sch C)
-5. Bridges K-1 distributions to the 1040 framework
-
-**Purpose**: prototype to walk into a meeting with the Finatical founder. Seth is positioning as a partner / feature-suggester / co-builder. FlashTax is the wedge — Finatical has financial data, we add the tax IP layer.
+**Why this lands**: Seth isn't asking the founder to add a feature. He's showing the founder how Finatical becomes the iOS of accounting Excel — a platform other people build on.
 
 ---
 
-## 2. About Flash Reports / Finatical (the host product)
+## 2. WHAT FLASH REPORTS DOES (the host product)
 
-- **What it is**: Excel add-in for QuickBooks Online. Pulls live QBO data into Excel via **formulas** (function-based, like `=FR.PL("Revenue", ClientID, Year)` or similar — exact syntax TBD when Seth shares examples).
-- **Multi-entity**: connects to unlimited QBO subscriptions; can consolidate.
-- **Refresh model**: change a cell (ClientID / Year / Period) → all formulas recalc → new client's data appears. NO manual refresh button required for context switching.
-- **Snapshots**: feature to convert formulas to static values, freezing a point in time.
-- **New (March 2026)**: **Claude in Excel integration** — Claude lives in the same workbook, can read cells, explain variances, with cell-level citations.
-- **Pricing page**: https://finaticalsoftware.com/pricing/
-- **App listing**: https://quickbooks.intuit.com/app/apps/appdetails/flashreports/
+### Core capabilities
+- **Excel add-in for QuickBooks Online** — pulls live QBO data via formulas like `=FR.PL("Revenue", ClientID, Year, Period)` (exact syntax TBD when Seth shares examples)
+- **Multi-entity** — connects to unlimited QBO subscriptions, consolidates at the entity level
+- **Formula-driven refresh** — change a control cell (ClientID / Year / Period) → entire workbook recalcs → see different client's data. No manual refresh button.
+- **Drill-down** — click a cell, see the underlying QBO transactions
+- **Snapshot** — converts formulas to static values to freeze a point in time. Currently **workbook-wide only** (this is a limitation — see Section 6)
+- **Reporting Pack** (March 2026 release) — branded multi-section workbooks with cover, index, narrative, multiple report tabs
+- **Claude in Excel integration** (March 2026 release) — Claude can read cells, explain variances, with cell-level citations
 
-**Implication for the prototype**: Build placeholders for Flash Reports formulas. Seth will paste the actual `=FR.<function>(...)` syntax during the meeting once he confirms the function names.
+### Why formula-driven is the foundation
+Because formulas + drill-down already exist, **most of what we'd otherwise have to build for a multi-client database is already done by Flash Reports**. The hard parts (QBO auth, API client, ETL, account normalization, drill paths) are handled. What's left to build is much smaller than it first appeared.
+
+### Sources
+- https://quickbooks.intuit.com/app/apps/appdetails/flashreports/
+- https://finaticalsoftware.com/
+- https://www.prnewswire.com/news-releases/finatical-software-launches-reporting-pack-and-integrates-claude-in-excel-302712247.html
+- https://support.claude.com/en/articles/12650343-use-claude-for-excel
 
 ---
 
-## 3. FlashTax — what to build
+## 3. THE BRAINSTORM ARC — how the thinking evolved
 
-### Target file
+The discussion went through five reframes. Each one made the architecture simpler and the pitch stronger:
 
-`FlashTax_Prototype.xlsx` — standalone workbook, NOT merged into the 1040 framework. (Eventually FlashTax can pipe into the 1040 workbook via cross-workbook references for owner-level planning, but the prototype stands alone.)
+### Reframe 1: "Build FlashTax — a tax add-on"
+First idea was a tax-specific add-on (book-to-tax M-1 bridge + K-1 to 1040 connection). Strong because tax is Seth's expertise and high-ARPU. But too narrow as a standalone pitch.
 
-### Sheet structure
+### Reframe 2: "FlashTax is one of several add-ons"
+Brainstormed eight add-on concepts (Tax, Practice, Snapshot, Consolidate, Taxonomy, Health, Dimensions, Library, Connect). Each individually compelling. But still a feature pitch.
 
-| # | Sheet | Purpose |
+### Reframe 3: "Platform, not features"
+The eight add-ons share a common need — they all want multi-client, multi-period, drill-down-preserving access to financial data. That's a **platform layer**, not a feature. Pitching the platform changes the conversation from "add this feature" to "build this category."
+
+### Reframe 4: "Flash Reports does most of the platform already"
+The formula-driven nature of Flash Reports means we don't need to build a transactional warehouse. Live data flows through `=FR.<func>(...)` calls on demand. The "database" we sketched shrinks from millions of rows to thousands.
+
+### Reframe 5: "Templates + central snapshot vault — no GL storage at all"
+Snapshots shouldn't live inside workbooks. They should live in a centralized vault, and templates query EITHER Flash Reports (live) OR the vault (frozen). This breakthrough means we don't store any GL data anywhere. Just metadata + a snapshot vault.
+
+**Final architecture is the result of these five reframes.**
+
+---
+
+## 4. THE FINAL ARCHITECTURE — FlashCore + apps
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                            QBO                                    │
+│              (system of record for transactions)                  │
+└─────────────────────────────┬────────────────────────────────────┘
+                              ↓
+┌──────────────────────────────────────────────────────────────────┐
+│                       FLASH REPORTS                               │
+│        (formula-driven live query layer to QBO in Excel)         │
+│                Already exists. Owned by Finatical.                │
+└─────────────────────────────┬────────────────────────────────────┘
+                              ↓
+┌──────────────────────────────────────────────────────────────────┐
+│                          FLASHCORE                                │
+│             (the platform layer — what's missing today)          │
+│                                                                   │
+│  ┌────────────────────┐    ┌─────────────────────────────────┐   │
+│  │ METADATA SERVICE   │    │ SNAPSHOT VAULT                  │   │
+│  │ - Firms / Clients  │    │ - Frozen milestone states       │   │
+│  │ - Entities         │    │ - As-Filed / Extension / S1 /   │   │
+│  │ - Ownership %      │    │   Amended / Reviewed            │   │
+│  │ - Standard CoA     │    │ - Queryable by date + scope     │   │
+│  │ - Account mappings │    │ - One source of truth for       │   │
+│  │ - Periods          │    │   "what we knew when"           │   │
+│  │ - Tax line codings │    │                                 │   │
+│  └────────────────────┘    └─────────────────────────────────┘   │
+│                                                                   │
+│  Total storage: thousands of rows of metadata + bounded growth   │
+│  in snapshots. Fits in one Excel file for years.                 │
+└─────────────────────────────┬────────────────────────────────────┘
+                              ↓
+┌──────────────────────────────────────────────────────────────────┐
+│                       APPLICATIONS                                │
+│             (templates that consume FlashCore + Flash Reports)    │
+│                                                                   │
+│  FlashTax       — book-to-tax bridge, K-1 to 1040                │
+│  FlashHealth    — composite business health scorecard            │
+│  FlashPractice  — multi-client roll-up dashboards                │
+│  FlashConsolidate — ownership-weighted multi-entity consolidation │
+│  FlashSnapshot  — milestone audit trail UI                       │
+│  FlashTaxonomy  — standardized CoA + mapping engine              │
+│  FlashDimensions — customer / vendor / cohort analytics          │
+│  FlashLibrary   — practitioner template marketplace              │
+│  FlashConnect   — cross-system drill (CRM, email, meetings)      │
+│                                                                   │
+│  Each app = thin Excel workbook with templates that read from    │
+│  FlashCore + Flash Reports. No app stores GL data.               │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### The single biggest insight: no GL storage
+
+**You do not store transactions. You do not store P&L history. You do not store BS history.** All of that lives in QBO. Flash Reports queries it on demand via formulas.
+
+You ONLY store:
+
+| What | Why | Approximate size |
 |---|---|---|
-| 1 | **Cover** | Branded title page — "FlashTax for [Client Name] — [Year]" with selectors visible |
-| 2 | **Control_Panel** | ClientID, EntityID, EntityType, Year, Period selectors (drive everything) |
-| 3 | **PL_Live** | P&L cells that call Flash Reports formulas (placeholders for now) |
-| 4 | **BS_Live** | Balance Sheet cells calling Flash Reports formulas |
-| 5 | **M1_Reconciliation** | Book net income → adds → subs → taxable income |
-| 6 | **TaxableIncome_Output** | Entity taxable income summary by type (1120S / 1120 / 1065 / Sch C) |
-| 7 | **K1_Bridge** | For pass-through entities: K-1 distribution by owner with ownership %, ready to land in owner's 1040 |
-| 8 | **Claude_Prompts** | 5-7 ready-to-paste Claude-in-Excel prompts demonstrating value |
-| 9 | **TaxRef_M1** | Reference table of M-1 categories with rules and citations |
-| 10 | **Settings** | EntityType-specific rule toggles, override switches |
+| **Metadata** | Defines structure (clients, entities, ownership, mappings) | ~1,000 rows per 30-client firm |
+| **Snapshots** | Frozen point-in-time captures at milestones | ~5-10K rows per client per year |
+| **Templates** | Layout + formulas — zero data | KB, not MB |
 
-### Schemas
+The entire "Master DB" fits comfortably in **one Excel file** for years. No SQL Server. No data warehouse. No ETL pipelines.
 
-#### Control_Panel cells (named ranges)
+### Template + snapshot vault pattern
 
-```
-ClientID         — text dropdown (sourced from a client list, hardcoded for prototype)
-EntityID         — text dropdown
-EntityType       — enum: 1120S / 1120 / 1065 / SchC / SchE / Trust
-Year             — number (2023..2028)
-Period           — enum: Q1 / Q2 / Q3 / Q4 / YTD / Annualized / Projected / Final
-BookBasis        — enum: Accrual / Cash
-TaxBasis         — enum: Accrual / Cash (often different from BookBasis)
-```
-
-Every formula on PL_Live, BS_Live, M1_Reconciliation references these via named ranges. Change `ClientID` cell → entire workbook recalcs.
-
-#### M1_Reconciliation table (the heart of FlashTax)
-
-Each row is one M-1 adjustment line. Suggested categories (with form citations):
-
-| Category | Direction | Book vs Tax | Typical Source |
-|---|---|---|---|
-| Federal income tax expense | Add | Book deducts; tax doesn't | P&L `FedTaxExpense` |
-| State income tax expense (entity-level) | Depends on PTET | Varies | P&L `StateTaxExpense` |
-| Depreciation difference (DDA) | Add or Sub | Book SL vs tax MACRS/§168(k)/§179 | Computed from Fixed Asset module |
-| §263A inventory capitalization | Add | Tax requires capitalizing more costs | Reasoned estimate |
-| Meals (50%) | Add | Book 100%, tax 50% | P&L `Meals` × 0.5 |
-| Entertainment (100%) | Add | Book deducts, tax doesn't (post-2017) | P&L `Entertainment` |
-| Political contributions | Add | Book deducts, tax doesn't | P&L `PoliticalContrib` |
-| Fines & penalties | Add | Book deducts, tax doesn't | P&L `Penalties` |
-| Tax-exempt interest | Sub | Book includes, tax excludes | P&L `MuniInterest` |
-| Life insurance proceeds | Sub | Book includes, tax excludes | P&L (rare) |
-| §179 depreciation | Sub | Tax accelerates over book | Fixed Asset module |
-| Bonus depreciation §168(k) | Sub | Tax accelerates over book | Fixed Asset module |
-| Accrued compensation not paid in 2.5 mo | Add | Book accrues, tax requires payment | Payroll module |
-| Bad debt reserve | Add | Book reserves, tax direct write-off only | AR aging |
-| Charitable contributions over 10% AGI cap | Add (corp only) | C-Corp cap, S-Corp passes through | P&L `Charitable` |
-| Net operating loss carryforward | Sub | Tax-specific | Prior year tax return |
-| Tax credits (R&D, etc.) | Note | Reduces tax, not income | Separate calc |
-
-#### Output: Taxable Income by entity type
-
-For each entity type, the output formula is:
-
-```
-Net Income per Books (from Flash Reports P&L)
-  + Σ M1 Adds
-  − Σ M1 Subs
-  = Taxable Income before special deductions
-  − Special deductions (e.g., DRD for C-Corp, QBI for individuals)
-  = Federal Taxable Income
-```
-
-#### K-1 Bridge (for pass-through entities only)
-
-```
-Per entity (1120S / 1065):
-  Taxable Income → Total
-  
-Per owner:
-  Ownership %  ← from a tblOwnership table (manually entered for prototype; production = from database)
-  Owner's share = Total × Ownership %
-  
-Output: list of (OwnerID, EntityID, Year, Share_OrdinaryIncome, Share_CG, Share_QBI, Share_Section199A_W2, Share_UBIA)
-  ↓
-  ready to import into owner's 1040 Master_Inputs as new rows with Helper_Treatment = K1_SCorp_Active / K1_PTP_Passive / etc.
-```
-
-This is the **direct bridge** to the 1040 framework already in this repo.
-
-### Flash Reports formula placeholders
-
-Until Seth provides actual syntax, use these placeholder patterns:
+Every cell in every template uses a routing formula:
 
 ```excel
-=FR.PL(account_name, ClientID, Year, Period)             ← P&L cell
-=FR.BS(account_name, ClientID, AsOfDate)                  ← BS cell
-=FR.Drill(account_name, ClientID, Year, Period)           ← drill-down link
-=FR.Snapshot(snapshot_id)                                 ← static historical value
+=IF(SnapshotMode="Live",
+    FR.PL("Revenue", ClientID, Year, Period),
+    INDEX(tblSnapshots[Value], MATCH(...)))
 ```
 
-Mark each placeholder cell with a yellow fill (`FFF2CC`) so Seth can find and paste real syntax during the meeting.
+Or wrapped in a custom function:
 
-### Claude_Prompts sheet — 5-7 demonstrating value
-
-Pre-load these prompts so the founder sees Claude is useful inside FlashTax:
-
-1. **"Explain my Q3 M-1 variance"** — Claude reads M1_Reconciliation, identifies which lines moved the most QoQ, and writes 2-3 sentences of plain language.
-2. **"What's the tax impact of accruing the $50K Q4 bonus on 12/31 vs paying it 3/1?"** — Tests the 2.5-month rule. Claude computes both scenarios.
-3. **"Compare my book net income to taxable income for the last 3 years"** — Trend on the M-1 bridge.
-4. **"Which M-1 category is growing fastest as a % of book income?"** — Anomaly / trend detection.
-5. **"Estimate my §199A QBI deduction for this entity"** — Reads the entity-type, applies QBI rules from the Tax_Ref already built.
-6. **"What's my effective tax rate by entity in 2025?"** — Multi-entity comparison.
-7. **"If I take a $100K distribution from the S-Corp, what's my owner-level tax impact?"** — Cross-workbook to 1040 framework.
-
-### VBA stubs (skeleton, not full implementation)
-
-```vba
-' mod_FlashTaxControl
-Sub RefreshAllClients()
-    ' Loop over tblClients, set ClientID cell, calc, save
-End Sub
-
-Sub SnapshotCurrent()
-    ' Capture current PL/BS/M1 state to a versioned sheet
-End Sub
-
-Sub PushToOwner1040()
-    ' For each pass-through entity in current view:
-    '   Read K1_Bridge sheet
-    '   Write rows into owner's Master_Pivot_Framework Master_Inputs
-End Sub
+```excel
+=GetValue("Revenue", ClientID, EntityID, Year, Period, SnapshotMode)
 ```
 
-### One-page pitch (for the meeting handout)
+Where `SnapshotMode` is a control cell: `"Live"` / `"AsOf_2025-04-15"` / `"AsFiled_2024"` / etc.
 
-Print as PDF or include as the Cover sheet:
+**Same template. Different lens.** Change one cell → see live data, or any historical snapshot.
 
-```
-FLASHTAX — Tax-Ready Financial Close for Flash Reports
-
-THE PROBLEM
-Flash Reports stops at the financial statement. Tax practitioners then
-spend hours hand-rolling M-1 adjustments in Excel, re-keying numbers,
-and bridging K-1s to individual 1040s.
-
-THE SOLUTION
-FlashTax sits next to Flash Reports in the same workbook. Reads your
-=FR.<func>() cells. Computes Schedule M-1 reconciliation per entity
-type. Outputs taxable income. Bridges K-1s to owner returns.
-
-WHY FINATICAL WINS
-- Locks in the higher-ARPU tax practitioner segment (currently lost
-  to ProConnect / Lacerte add-ons)
-- Same workbook = Claude can analyze BOTH financial and tax in one
-  conversation, with cell-level citations
-- Defensible moat — tax IP is harder to replicate than report
-  templates
-
-WHO IT'S FOR
-- Tax-focused CPA firms (250K+ in US)
-- Family offices doing entity consolidation + tax planning
-- Wealth advisors who need pre-tax projections for clients
-
-PRICING IDEA
-Add-on to Flash Reports — $50-100/month per practitioner. Justified
-by 2-3 hours saved per client per quarter.
-
-ROADMAP
-- Phase 1 (this prototype): M-1 reconciliation, taxable income output
-- Phase 2: K-1 bridge to 1040, owner-level planning
-- Phase 3: Multi-entity consolidation with ownership-weighted M-1
-- Phase 4: Industry benchmarking, year-over-year trend, AI commentary
-```
+This eliminates the workbook-embedded-snapshot problem completely. All snapshots live in one queryable vault. Workbooks stay pure view layer.
 
 ---
 
-## 4. The bigger Database vision (back-burner, for context)
+## 5. THE APPS — what rides on FlashCore
 
-FlashTax is the wedge product. The full architecture Seth has in mind is a **practice-level data system** for accounting firms. Knowing this context helps avoid building FlashTax in ways that conflict with later phases.
+### 5.1 FlashTax — book-to-tax bridge (the prototype)
 
-### Hierarchy
+**What it does**: Sits next to Flash Reports in the same workbook. Reads P&L / BS cells, computes Schedule M-1 reconciliation per entity type, outputs taxable income, bridges K-1s to individual 1040s.
 
-```
-FIRM                              (the CPA practice — Seth's firm)
-  └─ CLIENTS                      (households / engagement groups)
-       └─ ENTITIES                (legal entities: S-Corps, LLCs, partnerships, trusts)
-            └─ TRANSACTIONS       (GL data per entity, refreshed from QBO via Flash Reports)
+**Why it's first**: Seth's expertise lives here. Tax IP is harder to replicate than reporting templates. High-ARPU practitioner segment. Demonstrates FlashCore architecture works.
 
-Cross-cutting tables:
-  INDIVIDUALS                     (people who own entities directly)
-  OWNERSHIP_RELATIONSHIPS         (effective-dated %, by class, voting/non)
-  STANDARD_COA                    (normalized chart of accounts — Seth's tax line coding)
-  ACCOUNT_MAPPINGS                (per-entity QB CoA → Standard CoA)
-  GROUPINGS                       (different lenses on standard accounts)
-```
+**Sheet structure**:
+- Cover (branded title page with selectors visible)
+- Control_Panel (ClientID / EntityID / EntityType / Year / Period / SnapshotMode)
+- PL_Live (cells calling Flash Reports formulas — placeholders until Seth pastes real syntax)
+- BS_Live (same)
+- M1_Reconciliation (book net income → adds → subs → taxable income; categories below)
+- TaxableIncome_Output (entity taxable income per type — 1120S / 1120 / 1065 / Sch C)
+- K1_Bridge (pass-through distribution to owner's 1040)
+- Claude_Prompts (5-7 ready-to-paste prompts)
+- TaxRef_M1 (citation reference)
+- Settings (toggles)
 
-### Key tables
+**M-1 categories to include**: Federal tax expense, state tax expense (PTET-aware), depreciation difference (DDA), §263A, meals (50%), entertainment (100%), political contributions, fines & penalties, tax-exempt interest, life insurance proceeds, §179 depreciation, bonus §168(k), accrued comp not paid in 2.5mo, bad debt reserve, charitable >10% AGI (corp), NOL carryforward, tax credits.
 
-```sql
-tblFirms          (FirmID, Name, Type, ContactInfo)
-tblClients        (ClientID, FirmID, Name, PrimaryContact, Type)
-tblEntities       (EntityID, ClientID, Name, EntityType, EIN, StartYear,
-                   ClosedYear, NAICS, HomeState, FiscalYearEnd)
-tblIndividuals    (IndividualID, FirstName, LastName, SSN_last4, DOB, Notes)
-tblOwnership      (OwnershipID, EntityID, OwnerType, OwnerID, Percent,
-                   Class, Voting, EffectiveStart, EffectiveEnd)
-tblStandardCoA    (AccountID, AccountName, BalanceType, NAICS_Mapping,
-                   TaxLine_1120, TaxLine_1120S, TaxLine_1065, TaxLine_SchC,
-                   Sort_Order)
-tblAccountMap     (MapID, EntityID, LocalAccountName, StandardAccountID,
-                   ApprovedBy, ApprovedDate)
-tblGroupings      (GroupingID, Name, Description, Purpose)
-tblGroupingDetail (GroupingID, StandardAccountID, DisplayLabel, Sort_Order,
-                   SignMultiplier, ParentLabel)
-tblTransactions   (TxnID, EntityID, StandardAccountID, Year, Period, Amount,
-                   Source, Provenance, IC_Flag, Notes)
-tblConsolidationGroups (GroupID, RootClientID, IncludedEntityID,
-                        Method [Full/Equity/Cost], EffectiveStart, EffectiveEnd)
-tblIntercompany   (ICID, EntityID_A, EntityID_B, Description,
-                   ExpectedConvention, MatchRule)
-tblSnapshots      (SnapshotID, EntityID, Milestone [Extension/S1/AsFiled/Amended],
-                   SnapshotDate, FrozenState_JSON_or_blob)
-```
+**K-1 Bridge output**: For each owner of a pass-through entity — `(OwnerID, EntityID, Year, Share_Ordinary, Share_CG, Share_QBI, Share_§199A_W2, Share_UBIA)` ready to land in owner's 1040 Master_Inputs as new rows.
 
-### The 4 layers that make this work
+**The 1040 framework already in this repo** (`Master_Pivot_Framework_v5_phase3v24_CC.xlsx`) is the receiving system for K-1 outputs.
 
-1. **Standardized CoA + mapping** — every QB account in every client maps to one StandardAccountID. This is the foundation; once mapped, everything else flows.
-2. **Ownership graph + effective-dating** — supports consolidation, K-1 distribution, ownership-change scenarios.
-3. **Consolidation engine** — given a `ClientID + Year + Period`, walks ownership tree, applies full/equity/cost method, eliminates intercompany, returns one consolidated set.
-4. **Groupings** — same standard accounts viewed through different lenses (GAAP / Tax-by-entity-type / Mgmt / Lender / Industry / Audit workpaper).
+### 5.2 FlashHealth — composite business health scorecard
 
-### The hard problems
+**What it does**: Pulls every dimension QBO tracks into one 0-100 health score with subscores across Liquidity, Profitability, Efficiency, Solvency, Growth, Customer Concentration, Vendor Concentration, Receivables Aging. Red/yellow/green sub-flags. Refresh on Flash Reports recalc.
 
-| Problem | Why hard | Where to focus |
+**Why it matters**: Finagraph already does business health scoring as a separate product. Finatical adding it in-workbook removes a competitor. Workflow magnet — "which clients need attention this week?"
+
+### 5.3 FlashPractice — multi-client roll-up
+
+**What it does**: Practice-level dashboard watching a `/clients/` folder of Flash Reports outputs. Power Query aggregates. Anomaly flags (revenue down >15% MoM, AR aging >60 days, ratio thresholds). Industry benchmarking using NAICS-coded entities.
+
+**Why it matters**: Removes the single-client constraint that limits Finatical's sales to mid-size firms. Practice-level views are the missing piece for firm-wide buyers.
+
+### 5.4 FlashSnapshot — milestone audit trail
+
+**What it does**: User-facing interface to the FlashCore snapshot vault. Captures snapshots at workflow milestones (Extension, S1, As-Filed, Amended, Reviewed). Diff reports between snapshots. Workpaper-ready PDF export. PCAOB / SSARS-compliant output.
+
+**Why it matters**: Opens the audit firm market for Finatical (large TAM). Compliance + audit defense is a wedge into firms that don't currently care about reporting tools.
+
+### 5.5 FlashConsolidate — ownership-weighted multi-entity consolidation
+
+**What it does**: Walks the ownership tree, applies full/equity/cost method based on ownership %, eliminates intercompany transactions, produces one consolidated P&L + BS for the entire client.
+
+**Why it matters**: Family offices and multi-entity clients currently pay separately for this. Automating it is a major revenue unlock for Finatical.
+
+### 5.6 FlashTaxonomy — standardized CoA + mapping engine
+
+**What it does**: Master standardized CoA (~200-400 normalized accounts). Per-entity mapping table (LocalAccountName → StandardAccountID). AI-assisted mapping suggestions on client onboarding. Multiple groupings (GAAP / Tax / Mgmt / Lender / Industry / Audit).
+
+**Why it matters**: Highest-effort phase but deepest moat. Once mapped, every report / consolidation / benchmark just works. Mapping data is hard to replicate.
+
+### 5.7 FlashDimensions — analytical layers beyond raw pull
+
+**What it does**: Customer profitability (revenue × margin per customer with allocated overhead), vendor concentration risk, project / job profitability, class / department P&L over time, cohort retention, employee productivity, inventory turns + ABC classification.
+
+**Why it matters**: Flash Reports today shows the P&L. FlashDimensions shows *what to do with it*. Different value prop, justifies higher price tier.
+
+### 5.8 FlashLibrary — practitioner template marketplace
+
+**What it does**: Practitioners build custom analyses (construction WIP, SaaS ARR waterfall, law firm trust accounting, cannabis 280E carve-out). Publish to marketplace. Other practitioners install with one click. Models: free / paid (creator price + Finatical platform fee) / firm-private.
+
+**Why it matters**: Network effects. Once practitioners have built and shared, they don't switch tools. This is the moat play.
+
+### 5.9 FlashConnect — cross-system drill
+
+**What it does**: Drill from P&L line all the way to QBO transaction → customer card → CRM (HubSpot/Salesforce) → last email thread → last meeting transcript → next scheduled call.
+
+**Why it matters**: Cross-system context aggregation. Same dollar of revenue, with the why and what's-next attached. Long-term partnership play.
+
+---
+
+## 6. PRODUCT FEEDBACK FOR THE FOUNDER — granular snapshots
+
+Beyond the platform pitch, there's one concrete piece of feedback that's worth raising directly:
+
+**Current Flash Reports snapshot is workbook-wide.** That's too coarse. It breaks every actual practitioner workflow:
+- Rolling quarter close (Q1 freeze, Q2-Q4 stay live)
+- As-Filed vs Working (one sheet frozen, others live)
+- Projection vs Actual (Q1 projection snapshotted in February, Q1 actual stays live, variance sheet compares)
+- Audit defense (multiple "as of" snapshots in one file)
+
+**Recommended granularity levels**: Workbook (current), Sheet, Column, Row, Named Range, Cell list.
+
+**Most impactful additions**: Column (handles rolling close) and Named Range (handles everything else cleanly).
+
+**Implementation sketch**: User selects scope → snapshot converts formulas → values within that scope only → cells outside scope unchanged → hidden marker records the original formula for "un-snapshot" → Snapshot Manager pane shows all snapshots with timestamp, label, scope.
+
+**This is great founder-meeting feedback** because it's specific, actionable, immediately understandable, and shows Seth has actually used the product in workflow.
+
+**Better long-term answer**: implement FlashCore's central snapshot vault instead of (or in addition to) workbook-embedded granular snapshots. Templates query the vault. Workbooks stay pure view. That's the architectural fix; granular snapshot is the immediate fix.
+
+---
+
+## 7. WHAT'S ALREADY BUILT IN THIS REPO
+
+The 1040 framework. `Master_Pivot_Framework_v5_phase3v24_CC.xlsx` (latest CC version) is the proof of concept for the long-format / pivot-driven architecture that FlashCore would generalize.
+
+Already built and applicable to the FlashCore platform:
+
+- **Long-format Master_Inputs schema** — the template for FlashCore's metadata + snapshot tables
+- **Standardized account / treatment profile mapping** (Tax_Ref tblTreatmentProfileMap) — the template for FlashTaxonomy
+- **Master_Strategies catalog with multi-impact fan-out** — the pattern for storing strategy/event impacts
+- **Per-year calc engine** — the pattern for period-by-period calculation
+- **State tax stack with PTET routing** — applicable to FlashTax M-1 PTET logic
+- **6 LAMBDAs + fn_StrategyMarginal** — the calc engine (TAX_ORD / TAX_CG / TAX_NIIT / TAX_SE / STD_DED / TAX_STATE). FlashTax imports these directly.
+- **QBI bug fix** — J119/K119 (50% W-2 limit, not 20%)
+
+See `docs/REMAINING_EXCEL_WORK.md` for the punch-list to finish the 1040 workbook.
+
+---
+
+## 8. BUILD SEQUENCE FOR THE PROTOTYPE
+
+Phase A — FlashTax MVP (what to build for the meeting):
+
+1. **Scope confirm with Seth**:
+   - Actual Flash Reports formula syntax (`=FR.PL`, `=FLASH.GET`, etc.)
+   - Entity types to support (just 1120S or full set)
+   - Sample client to demo with
+   - Meeting timeline
+2. **Build FlashTax_Prototype_v1_CC.xlsx**:
+   - 10 sheets per Section 5.1 above
+   - Yellow-fill placeholder cells for Flash Reports formulas (Seth pastes real syntax)
+   - Working M-1 reconciliation logic
+   - K-1 Bridge for single-owner case
+   - 5-7 pre-loaded Claude prompts
+3. **Cover sheet = one-page pitch** (pitch text in Section 1 of this doc)
+4. **Optional**: build a tiny `FlashCore_Sketch.xlsx` showing the metadata + snapshot vault tables with sample data — visual aid for the platform conversation
+
+Phase B onward (post-meeting, depending on founder response): K-1 bridge polish, FlashCore service, additional apps.
+
+---
+
+## 9. OPEN QUESTIONS FOR SETH BEFORE BUILDING
+
+1. What's the actual Flash Reports function name? (`=FR.PL`, `=FRGET`, `=FLASH.GET`, other?)
+2. Entity types for the prototype — just 1120S, or full set (1120 / 1120S / 1065 / SchC)?
+3. Sample client to demo with — Cedillo or a real Flash Reports demo client?
+4. K-1 Bridge output — to a file importing into `Master_Pivot_Framework_v5_phase3v24_CC.xlsx`, or just show what output would look like?
+5. When is the founder meeting? (Affects polish vs. speed tradeoff.)
+6. Want a separate `FlashCore_Sketch.xlsx` visual aid alongside FlashTax_Prototype?
+
+---
+
+## 10. PITCH FRAMING FOR THE FOUNDER
+
+### Three-tier pitch structure
+
+| Tier | Concepts | One-line pitch |
 |---|---|---|
-| Account mapping at scale | Every QB file is a snowflake — ~200 accounts per client | AI-suggest + reviewer workflow + audit log |
-| Ownership over time | Sales / restructures change %; historical reports must use period-correct % | Effective-dated records; point-in-time queries |
-| Intercompany detection | Same dollar in two entities; manual ID is painful | Matching algorithm: amount + date proximity + opposite sign + 2 entities in same client |
-| Period alignment | Different fiscal year-ends across entities | Periodization layer; stub periods if needed |
-| Tax ≠ book at every level | Each entity has M-1; consolidated tax ≠ sum of consolidated book | Per-entity M-1, then consolidation, then top-level tax adjustments |
-| Versioning | What CoA / mapping / ownership was in effect when this snapshot was taken? | Snapshot blobs (frozen) + mapping audit log (reproducible) |
+| **Wedge (today)** | FlashTax | "The prototype I brought today — the tax bridge that turns Flash Reports into a tax-ready close" |
+| **Platform (the unlock)** | FlashCore (metadata + snapshot vault) | "The thin service layer that lets a family of add-ons share one source of truth — without storing any GL data" |
+| **Apps (what becomes possible)** | Health / Practice / Snapshot / Consolidate / Taxonomy / Dimensions / Library / Connect | "Every one of these is an app on FlashCore. Build the platform; the apps come naturally" |
 
-### Phasing toward the full vision
+### The platform speech (one paragraph)
 
-| Phase | Scope |
-|---|---|
-| **A — FlashTax MVP** | Single entity, M-1 reconciliation, taxable income output. This handoff. |
-| **B — K-1 Bridge** | Connect pass-through entities to owners' 1040 framework. |
-| **C — Multi-Entity per Client** | Repeat A+B for each entity of a client; manual consolidation for now. |
-| **D — Standard CoA** | Build the dictionary + mapping engine. Onboarding workflow. |
-| **E — Ownership Graph** | tblOwnership + effective-dating. Consolidated K-1 distribution. |
-| **F — Consolidation Engine** | Full/equity/cost method math + intercompany elimination. |
-| **G — Groupings** | Multiple presentation lenses on the same data. |
-| **H — Cross-Client Analytics** | Practice dashboard, industry benchmarking, anomaly detection. |
-| **I — Snapshot / Audit Trail** | Versioning, milestone capture, workpaper export. |
+> "Flash Reports is the live query layer for QBO. That solves one problem. The next problems are: bridging that data to tax, seeing across all my clients at once, freezing history for audit defense, consolidating multi-entity families, and standardizing the chart so all of the above scale. I don't think you need to build all of these. But you DO need one thing — a thin metadata + snapshot service that turns Flash Reports into a multi-client, multi-period platform. That service is small — it doesn't store any GL data, just metadata and milestone snapshots — but it's the keystone every add-on needs. I've sketched it and built FlashTax to prove the architecture. Build the service, and you turn Finatical from a reporting tool into a platform that other people build apps on."
 
-FlashTax (Phase A) is the wedge. Phases B-I are the moat.
+### The granular-snapshot ask (one paragraph)
+
+> "Separately — one specific product ask. Your current snapshot is workbook-wide. In actual workflow that's too coarse. Quarter close needs column-level snapshot. Comparing projection-vs-actual needs sheet-level. Audit defense needs multiple "as of" states in one file. Long-term answer is the centralized snapshot vault I just described — but in the meantime, expanding snapshot to column/sheet/named-range scope is high-value with manageable engineering. Two to three weeks of work, opens a lot of workflows."
 
 ---
 
-## 5. Existing assets in this repo to leverage
+## 11. WHAT NOT TO DO
 
-- `docs/Master_Pivot_Framework_v5_phase3v24_CC.xlsx` — the 1040 calc framework. K-1 outputs from FlashTax should land in this workbook's `Master_Inputs` via cross-workbook reference or VBA push.
-- `docs/REMAINING_EXCEL_WORK.md` — punch list for finishing the 1040 workbook.
-- `Tax_Ref` sheet inside the 1040 workbook — has bracket tables, std ded, NIIT thresholds, state rates, treatment profile map. Can be referenced or duplicated in FlashTax.
-- `Master_Strategies` sheet — strategy catalog with multi-impact fan-out; may be useful for showing tax-planning hooks from financial data.
-- The 7 KISS LAMBDAs (`TAX_ORD`, `TAX_CG`, `TAX_NIIT`, `TAX_SE`, `STD_DED`, `TAX_STATE`, `fn_StrategyMarginal`) — pasted into the 1040 workbook's Name Manager. FlashTax can import these LAMBDAs into its own Name Manager OR cross-reference.
+- **Don't modify** the 1040 workbook in this repo. FlashTax is a separate workbook.
+- **Don't assume Flash Reports formula syntax** — use yellow-fill placeholders, Seth pastes real syntax during the meeting.
+- **Don't build the full database**. The whole point of the brainstorm is that you DON'T need to. Build metadata + snapshot vault only when needed for the demo.
+- **Don't bake LAMBDA syntax via openpyxl** — Excel rejected our openpyxl-written LAMBDAs in the 1040 workbook. Install LAMBDAs natively in Excel during the build, not programmatically.
+- **Don't add macros that auto-run on open** — Excel security will fight you. Button-triggered only.
+- **Don't claim the platform exists when it doesn't yet** — FlashCore is the proposed centerpiece, but FlashTax is the only actually-built piece. Be honest about which is which in the founder conversation.
 
 ---
 
-## 6. Naming convention (this repo's standard)
+## 12. REPO + NAMING CONVENTIONS
+
+```
+/home/user/1040-Comprehnensive/
+├── docs/
+│   ├── Master_Pivot_Framework_v5_phase3v24_CC.xlsx     ← 1040 workbook (latest CC)
+│   ├── REMAINING_EXCEL_WORK.md                          ← Excel-side todo for 1040
+│   ├── FLASHTAX_HANDOFF.md                              ← THIS FILE (comprehensive)
+│   └── EXCEL_PROMPT_*.md                                ← misc handoff prompts
+├── scripts/
+│   └── phase3v*_*.py                                    ← openpyxl build scripts (1040)
+└── CLAUDE.md                                            ← project instructions
+```
+
+### Naming convention
 
 | Suffix | Meaning |
 |---|---|
@@ -333,143 +363,84 @@ FlashTax (Phase A) is the wedge. Phases B-I are the moat.
 | `_SJ` | File built / edited by Seth in Excel |
 | `v{N}` | Iteration version |
 
-So your output should be: `FlashTax_Prototype_v1_CC.xlsx` (or higher iteration).
+Examples:
+- `FlashTax_Prototype_v1_CC.xlsx` — Claude-built initial prototype
+- `FlashTax_Prototype_v1_SJ.xlsx` — Seth's hand-edited polish
+- `FlashCore_Sketch_v1_CC.xlsx` — optional platform visual aid
+
+### Repo + GitHub scope
+
+- GitHub: `smj1058/1040-Comprehnensive`
+- Restricted scope: this repo only
+- Working branch: `claude/pivot-tax-calculations-q4NyZ` or new branch per session
 
 ---
 
-## 7. What NOT to do
+## 13. QUICK-START PROMPT FOR THE NEW SESSION
 
-- **Don't modify** `Master_Pivot_Framework_v5_phase3v*_CC.xlsx`. FlashTax is a separate workbook.
-- **Don't assume Flash Reports formula syntax** — use placeholders (`=FR.PL(...)`) clearly marked. Seth has the actual syntax and will paste it during the meeting.
-- **Don't build the full database** in this prototype. The hierarchy / consolidation / mapping engine is Phase D-F work. FlashTax MVP is single-entity only.
-- **Don't repeat the LAMBDA syntax-error problem** from the 1040 workbook. If you install LAMBDAs in FlashTax, install them with proper `_xlpm.` parameter markers OR (preferred) write them as instructions for Seth to paste into Name Manager manually.
-- **Don't add macros that auto-run on open** — Excel macro security will fight you. All macros should be button-triggered.
-
----
-
-## 8. Suggested build sequence (for the new session)
-
-1. **Scope confirm** — ask Seth for (a) the actual Flash Reports formula function name(s), (b) entity types to support in the prototype, (c) when the meeting is so urgency is calibrated.
-2. **Build skeleton** — 10 sheets per Section 3 above, with named ranges defined on Control_Panel.
-3. **M-1 reconciliation logic** — that's the demo centerpiece. Make it work with manual inputs first (PL_Live cells as placeholder yellow), then swap to Flash Reports formulas.
-4. **K-1 Bridge** — single owner case for the prototype. Multi-owner is Phase C.
-5. **Claude_Prompts sheet** — pre-load the 5-7 prompts so Seth can demo Claude live.
-6. **Cover + one-page pitch** — Seth's handout.
-7. **Test by manually setting Control_Panel ClientID and Year** — verify everything recalcs.
-8. **Deliver via SendUserFile** + commit to repo on a new branch named `claude/flashtax-prototype-XYZ`.
-
----
-
-## 9. Open questions for Seth before building
-
-1. What's the actual Flash Reports function name? (`=FR.PL`, `=FRGET`, `=FLASH.GET`, other?)
-2. What entity types for the prototype — just 1120S, or full set (1120 / 1120S / 1065 / SchC)?
-3. Is there a sample client he wants used (Cedillo? a real Flash Reports demo client?) for the M-1 walkthrough?
-4. Should K-1 Bridge output a file that imports into `Master_Pivot_Framework_v5_phase3v24_CC.xlsx`, or just show what the output would look like?
-5. When is the founder meeting? (Affects polish vs. speed tradeoff.)
-
----
-
-## 10. Repo context
+> Paste this at the top of a fresh Claude Code session (in this repo or in your local MCP_Projects setup):
 
 ```
-/home/user/1040-Comprehnensive/
-├── docs/
-│   ├── Master_Pivot_Framework_v5_phase3v24_CC.xlsx     ← 1040 workbook (LATEST)
-│   ├── REMAINING_EXCEL_WORK.md                          ← Excel-side todo for 1040
-│   ├── FLASHTAX_HANDOFF.md                              ← THIS FILE
-│   └── EXCEL_PROMPT_*.md                                ← misc Excel handoff prompts
-├── scripts/
-│   └── phase3v*_*.py                                    ← openpyxl build scripts (1040 workbook)
-└── CLAUDE.md                                            ← project instructions (mostly for dossier work)
-```
+Read docs/FLASHTAX_HANDOFF.md fully. That's the brief. The architecture
+arc and platform reframe in Sections 3-4 are the keystone — don't skip
+them.
 
-GitHub: `smj1058/1040-Comprehnensive`
-Restricted scope: this repo only.
-
----
-
-## 11. Other add-on concepts in the brainstorm pipeline
-
-> FlashTax is the wedge. These are the broader product family Seth is sketching for Finatical. Mentioned here so a new session understands the bigger picture and avoids decisions that conflict with later ideas.
-
-### FlashTax (Phase 1 — this prototype)
-Book-to-tax bridge sitting next to Flash Reports. M-1 reconciliation, taxable income output, K-1 bridge to 1040.
-
-### FlashPractice (Phase 2 — multi-client roll-up)
-Practice-level Master DB.xlsx that watches a `/clients/` folder of Flash Reports outputs and auto-aggregates via Power Query.
-- Cross-client KPI dashboards (revenue concentration, fee realization, client health)
-- Anomaly flags (revenue ↓ >15% MoM, AR aging >60 days, ratio thresholds)
-- "Across my portfolio, which 3 clients need attention this week?" Claude prompt
-- Industry benchmarking using NAICS-coded entities
-- Removes the single-client constraint that limits Finatical's sales to mid-size firms
-
-### FlashSnapshot (Phase 3 — time-series audit trail)
-Versioning layer on top of any Flash Reports workbook.
-- Captures snapshots at workflow milestones (Extension, S1, As-Filed, Amended, Reviewed)
-- Diff reports between snapshots — what changed, by whom, when
-- Workpaper-ready PDF export
-- Meets PCAOB / SSARS workpaper standards
-- Opens the audit firm market for Finatical (large TAM)
-
-### FlashConsolidate (Phase 4 — multi-entity consolidation)
-Ownership-weighted consolidation for clients with multiple entities.
-- tblOwnership with effective-dated %
-- Full / equity / cost method math
-- Intercompany elimination engine
-- True consolidated P&L + BS for the entire client (vs single-entity reports)
-- Eliminates the manual Excel consolidation work that family offices and multi-entity clients currently pay separately for
-
-### FlashTaxonomy (Phase 5 — standardized chart of accounts)
-The foundation layer that makes everything above scale.
-- Master standardized CoA (~200-400 normalized accounts)
-- Per-entity mapping table (LocalAccountName → StandardAccountID)
-- AI-assisted mapping suggestions on client onboarding
-- Multiple groupings (GAAP / Tax / Mgmt / Lender / Industry / Audit)
-- Once mapped, every report / consolidation / benchmark just works
-- This is the highest-effort phase but the deepest moat — mapping data is hard to replicate
-
-### Connecting concepts
-
-- **FlashTax + FlashPractice** = practice-level tax visibility ("which clients owe estimated tax in 3 weeks?")
-- **FlashPractice + FlashSnapshot** = portfolio history ("show me every quarter-close variance across my book this year")
-- **FlashConsolidate + FlashTaxonomy** = ground truth for multi-entity reporting ("here's the family's true consolidated P&L across all 6 entities")
-- **All five + Claude in Excel** = a tax & advisory practice operating system, not just a reporting tool
-
-### Pitch framing for the founder meeting
-
-> "Flash Reports gives you live QBO data in Excel. That solves the report-generation problem. The next problems are: (1) bridging that to tax, (2) seeing across all my clients, (3) freezing history for audit defense, (4) consolidating multi-entity families, and (5) standardizing the CoA so all of the above scale. I've been thinking through what each of these looks like as a Flash Reports add-on. FlashTax is the prototype I brought today; the others are the roadmap."
-
-This positions Seth not as a feature-suggester but as **product strategy**. The prototype proves he can execute.
-
----
-
-## 12. Note on this handoff doc
-
-This document lives at `docs/FLASHTAX_HANDOFF.md` in the `smj1058/1040-Comprehnensive` repo. Seth will also be adding a copy to his local `MCP_Projects` folder on his computer for reference / cross-context use. The repo version is the source of truth for any Claude Code session picking up this work.
-
-If the doc gets updated in either location, the repo version should be re-sync'd to match.
-
----
-
-## 13. Quick-start prompt for the new session
-
-> Paste at the top of your new Claude Code session:
-
-```
-Read docs/FLASHTAX_HANDOFF.md fully. That's the brief. Then ask Seth the 5
-open questions in Section 9 before building. Once answered, work through
-the build sequence in Section 8.
+Then ask Seth the 6 open questions in Section 9 before building. Once
+answered, work through the build sequence in Section 8.
 
 Deliver as FlashTax_Prototype_v1_CC.xlsx on a new branch
 claude/flashtax-prototype-{your-suffix}. Commit + push at the end.
 Use SendUserFile to deliver the file inline.
 
+If Seth wants a FlashCore visual aid alongside FlashTax, build
+FlashCore_Sketch_v1_CC.xlsx — a small file showing the metadata +
+snapshot vault schema with sample data. Not full-featured, just a
+visualization for the founder conversation.
+
 Do NOT modify Master_Pivot_Framework_v5_phase3v24_CC.xlsx or anything
 else in this repo's existing 1040 workbook.
 
-Section 11 lists 4 follow-on concepts (FlashPractice, FlashSnapshot,
-FlashConsolidate, FlashTaxonomy). Don't build them in this session,
-but be aware of them so design choices in FlashTax don't paint us
-into a corner for later phases.
+Section 5 lists 9 follow-on apps. Don't build them in this session,
+but be aware so design choices in FlashTax don't paint into a corner.
+
+Section 11 is the do-not-list. Read it before any build action.
 ```
+
+---
+
+## 14. STATE OF THE BRAINSTORM AS OF HANDOFF
+
+What's been talked through and locked:
+
+✓ Flash Reports is the live query layer (formula-driven, drill-down, multi-entity)
+✓ Claude in Excel integration exists (March 2026 release)
+✓ FlashTax is the wedge product (tax angle is Seth's expertise)
+✓ Eight other add-on concepts identified (Health, Practice, Snapshot, Consolidate, Taxonomy, Dimensions, Library, Connect)
+✓ The architecture is a **platform**, not a feature collection
+✓ The platform layer (FlashCore) is **metadata + snapshot vault only** — no GL storage
+✓ Templates query Flash Reports (live) OR snapshot vault (frozen) via routing function
+✓ Granular snapshot is a specific Flash Reports product-feedback ask
+✓ All of this fits in Excel — no SQL Server, no data warehouse needed
+
+What's NOT yet locked:
+
+- Exact Flash Reports formula syntax (Seth has, will share)
+- Sample client / entity for the prototype demo
+- Meeting timeline
+- Whether to build FlashCore_Sketch alongside FlashTax_Prototype
+- Pricing model thoughts (mentioned in passing for FlashTax — $50-100/month/practitioner — not validated)
+
+What's deferred to post-meeting:
+
+- Actually building any of the 8 follow-on apps
+- The FlashCore service implementation beyond a sketch
+- Power Query / VBA orchestration of the multi-client refresh + snapshot loop
+- Practitioner template marketplace mechanics
+
+---
+
+## END OF HANDOFF
+
+Total tokens of context captured: 30+ minutes of architecture brainstorm distilled into a self-contained reference document.
+
+Next action: Seth confirms the open questions in Section 9, then a Claude Code session builds the FlashTax prototype + optional FlashCore sketch.
