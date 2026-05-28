@@ -374,6 +374,18 @@ Examples:
 - Restricted scope: this repo only
 - Working branch: `claude/pivot-tax-calculations-q4NyZ` or new branch per session
 
+### Local MCP project folder (Seth's machine)
+
+Seth maintains a local copy of all Flash Reports / FlashTax work at:
+
+```
+C:\Users\SethJohnson\MCP_Projects\flash-tax\
+```
+
+This is where the work lives between cloud sessions — Seth's working area, separate from the cloud container. If a Claude Code CLI session runs against this folder locally (not via the web), this is the path. Files travel between the repo and this folder by manual copy or git pull/push.
+
+**Source-of-truth resolution**: when in doubt, the most recently updated location wins. If Seth edits locally after a session ends, that supersedes the repo. If a new cloud session updates the repo, that supersedes the local copy. Sync manually as needed.
+
 ---
 
 ## 13. QUICK-START PROMPT FOR THE NEW SESSION
