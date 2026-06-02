@@ -136,3 +136,13 @@ python -m execsumm_emails.cli refresh-all           # all clients in the exec su
 
 See `/root/.claude/plans/g-shared-drives-smj-product-development-parallel-blum.md` for
 the full approved design.
+
+## Reference docs
+
+- `docs/DEFINITIONS_LIBRARY.md` — the single lookup reference: every dossier/DB
+  header, file-naming convention, source-tag grammar, status symbol, and domain
+  term defined, plus the three-axis findability model (headers vs. DB
+  properties vs. filename) that explains how the system is searched.
+- `docs/PROJECT_OVERVIEW.md` — architecture and execution model.
+- `docs/BATCH_REFRESH_PROMPT.md` — the per-client invocation contract.
+- `CLAUDE.md` — session rules (auto-loaded).
