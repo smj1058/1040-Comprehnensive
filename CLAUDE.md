@@ -110,6 +110,7 @@ Do not start a new client until the current one is fully through Turn 11. Do not
 9. **Designated branch:** `claude/update-exec-summary-notion-118m7`. Stay on it. Commit + push after every turn (the stop-hook enforces this).
 10. **Commit message format:** `<Client> — Turn N appended (<section>)` with a 2–4 sentence body summarising the additions and key findings.
 11. **Per-turn status line at the end of each turn**: e.g. `§4 done — 12 meetings synthesized, 3 restricted excluded, next: §5`. Then stop.
+12. **Client key on every file (non-negotiable).** Every client `.md` this pipeline creates MUST carry the client key in its §0 header block — `Client #` and `Mango Client ID` — resolved at Turn 1 bootstrap from the **Accounts** record (`Client #` / `Mango Client ID` properties), never invented or retyped. The number is the durable search key (see `docs/DEFINITIONS_LIBRARY.md` §1–§2). If the Account record has no `Client #` assigned, write `— (not populated on Account record)` in the header **and** add a row to §7 Action Items to get it assigned upstream — do not leave the field silently blank and do not fabricate a number. A dossier is not "done" for the turn until the §0 `Client #` and `Mango Client ID` rows are present (real value or the explicit gap flag).
 
 ---
 
