@@ -33,8 +33,11 @@ or use the copy sent to you. Mirror lives in the repo at
 
 - **Client-# audit (all 42 dossiers):** ~30 have a real client number in §0; ~11 say
   "not populated on Account record" (the Notion **Account** itself has no number — an
-  upstream data gap, not a file problem); **1** (`ReneeMuellerJeffCohn/dossier.md`) is
-  missing the `Client #` row entirely.
+  upstream data gap, not a file problem). The earlier "1 missing"
+  (`ReneeMuellerJeffCohn`) was a **false positive** — that dossier carries
+  `Client #: 18051006-01` / Mango `937741` in an **inline `**Client #:**` header
+  style** rather than the `| Client # |` table row the grep matched. Both header
+  styles are valid and carry the key; **no dossier is actually missing its number.**
 - **Tax KB database already exists and is seeded:** **"Tax Technical Knowledgebase"**
   - DB id `857b8e97-7b2f-4b5c-9b0f-6f23300936d4`
   - data source `collection://c1c33884-96fa-42a0-bf6c-6ac7776e26dd`
@@ -54,12 +57,15 @@ or use the copy sent to you. Mirror lives in the repo at
 ## Open decisions / TODO
 
 - [ ] **Merge PR #1** (or keep draft) so the docs land on the default branch.
-- [ ] **Fix** `ReneeMuellerJeffCohn/dossier.md` — add the missing `Client #` §0 row.
+- [x] ~~Fix `ReneeMuellerJeffCohn`~~ — false positive; already has `Client #: 18051006-01`
+      (inline header style). No fix needed.
+- [x] **Added `📄 KB Doc`** URL property to the Tax Technical Knowledgebase
+      (`collection://c1c33884-96fa-42a0-bf6c-6ac7776e26dd`) — DONE 2026-06-02.
 - [ ] **Assign Client #** on the ~11 Accounts in Notion that lack one (then they flow
       into dossiers on next refresh): Aidan McIsaac, Brittany Byma, Daniel Huffman,
       David & Michelle Saward, Gary Aronov, Jeremy Martin, Logan Bowles,
-      Michael Venereo, Michelle Bowles, Renee Mueller Solo, Tommy Harr.
-- [ ] **Approve adding `📄 KB Doc`** URL property to the Tax Technical Knowledgebase.
+      Michael Venereo, Michelle Bowles, Renee Mueller Solo, Tommy Harr. *(Can't be
+      invented — assigned by the firm upstream.)*
 - [ ] **Decide build scope** for the Tax KB MD layer: template/renderer (`tax_kb/`),
       gap+stale detector (modeled on `opportunity_flags.py`), and/or backfill `.md`
       files for the existing seeded rows.
